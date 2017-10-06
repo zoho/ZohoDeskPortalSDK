@@ -7,14 +7,14 @@ MIT License
 Copyright (c) 2017 Zoho
 }
 s.homepage         = "https://www.zoho.com/desk"
-s.author           = { "Zoho" => "support@zoho.com" }
+s.author           = { "Zoho Desk mobile" => "desk-mobile@zohocorp.com"}
 s.source           = { :git => "https://github.com/zoho/ZohoDeskPortalSDK.git", :tag => s.version }
 s.platform         = :ios, '9.0'
 s.requires_arc     = true
 s.source_files     = "native/**/*.{swift}"
 s.public_header_files = "native/**/*.h"
 s.preserve_paths   = "native/ZohoDeskPortalSDK.framework"
-s.vendored_frameworks = "native/ZohoDeskPortalSDKcd .framework"
+s.vendored_frameworks = "native/ZohoDeskPortalSDK.framework"
 s.frameworks       = 'UIKit','Foundation','SystemConfiguration'
 
 end
