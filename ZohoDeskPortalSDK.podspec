@@ -8,7 +8,7 @@ Copyright (c) 2017 Zoho
 }
 s.homepage         = "https://www.zoho.com/desk"
 s.author           = { "Zoho" => "support@zoho.com" }
-#s.source           = { :git => "https://git.csez.zohocorpin.com/zohodesk/desksdk_bot.git", :tag => s.version }
+s.source           = { :git => "https://github.com/zoho/ZohoDeskPortalSDK.git", :tag => s.version }
 s.platform         = :ios, '9.0'
 s.requires_arc     = true
 s.source_files     = "native/**/*.{swift}"
