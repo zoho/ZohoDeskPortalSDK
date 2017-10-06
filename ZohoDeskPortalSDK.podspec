@@ -3,9 +3,9 @@ s.name             = "ZohoDeskPortalSDK"
 s.version          = "0.0.3"
 s.summary          = "A framework for view KB and Submit ticket module for iOS app"
 s.license          = { :type => "MIT", :text=> <<-LICENSE
-MIT License
 Copyright (c) 2017 Zoho
-}
+LICENSE
+}}
 s.homepage         = "https://www.zoho.com/desk"
 s.author           = { "Zoho Desk mobile" => "desk-mobile@zohocorp.com" }
 s.source           = { :git => "https://github.com/zoho/ZohoDeskPortalSDK.git", :tag => s.version }
