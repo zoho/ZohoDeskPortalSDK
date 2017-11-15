@@ -1,0 +1,283 @@
+"DeskPortal.Dashboard.Heading"                                = "Zoho Desk";
+"DeskPortal.Network.failed.error.message"                                  = "Verificar a sua ligação à Internet";
+"DeskPortal.Dashboard.addticket.title"                          = "Submeter pedido de suporte";
+"DeskPortal.Dashboard.addticket.description"                     = "Procurar a ajuda dos nossos agentes";
+"DeskPortal.Dashboard.helpcenter.title"                           = "Base de dados de conhecimento";
+"DeskPortal.Dashboard.helpcenter.description"                 = "Procurar o nosso amplo repositório de artigos de ajuda";
+"DeskPortal.Dashboard.community.title"                             = "Comunidade";
+"DeskPortal.Dashboard.community.description"                         = "Localizar e partilhar soluções com a comunidade de utilizadores";
+"DeskPortal.Dashboard.myticket.title"                             = "Os meus pedidos de suporte";
+"DeskPortal.Dashboard.myticket.description"                     = "Ver e gerir pedidos de suporte que submeteu";
+"DeskPortal.Helpcenter.category.subheading"                             = "Secção";
+"DeskPortal.Helpcenter.article.subheading"                             = "Artigo";
+"DeskPortal.Helpcenter.categories.subheading"                           = "Secções";
+"DeskPortal.Helpcenter.articles.subheading"                             = "Artigos";
+"DeskPortal.Addticket.title"                              = "Adicionar pedido de suporte";
+"DeskPortal.Helpcenter.feedback.title"                                  = "Comentários";
+"DeskPortal.Helpcenter.feedback.description"                                  = "Lamentamos que o artigo não tenha sido útil.";
+"DeskPortal.Helpcenter.article.detail.title"                                    = "Perguntas Frequentes";
+"DeskPortal.Helpcenter.article.detail.vote.description"                        = "Este artigo foi útil?";
+"DeskPortal.Helpcenter.article.detail.relatedtitle"                         = "Artigos relacionados";
+"DeskPortal.Myticket.conversation.option.title"                       = "Ações de conversação";
+"DeskPortal.Myticket.comment.option.title"                            = "Ações de comentário";
+"DeskPortal.Myticket.option.closeticket"                              = "Fechar pedido de suporte";
+"DeskPortal.Myticket.option.editcomment"                              = "Editar comentário";
+"DeskPortal.Error.message.reload"                                = "Tentar novamente";
+
+
+
+"zdsdk.general.powered"                                 = "Desenvolvido pela Zoho";
+
+"zdsdk.general.back"                                    = "Voltar";
+"zdsdk.general.cancel"                                  = "Cancelar";
+"zdsdk.general.submit"                                  = "Enviar";
+"zdsdk.general.email"                                   = "E-mail";
+"zdsdk.attachements.attachements"                       = "Anexos";
+"zdsdk.dashboard.title"                                 = "Bem-vindo(a)!";
+
+"zdsdk.helpcenter.search"                               = "Procurar";
+
+"zdsdk.helpcenter.solutions"                            = "Soluções";
+
+"zdsdk.helpcenter.recentsearch"                         = "Pesquisa recente";
+"zdsdk.helpcenter.results"                              = "Resultados";
+"zdsdk.helpcenter.noarticlesfound"                      = "Nenhum artigo encontrado";
+"zdsdk.helpcenter.nodescription"                        = "Sem descrição";
+
+"zdsdk.addnewticket.successmsg"                         = "Pedido de suporte criado com êxito. Entraremos em contacto assim que possível.";
+"zdsk.addnewticket.validEmail"                          = "Introduzir um endereço de e-mail válido.";
+"zdsk.addnewticket.Emptyfield"                          = "Preencha todos os campos obrigatórios.";
+"zdsk.addnewticket.createError"                         = "Não é possível criar o pedido de suporte.";
+"zdsdk.createTicket.entervalid"                         = "Introduzir um %@ válido";
+"desk.library.newticket.field.error"                    = "%@ não pode estar em branco";
+"desk.library.newticket.date.picker" = "Ou escolha a data mais próxima abaixo";
+"desk.library.newticket.file.size.error" = "O tamanho do ficheiro não deve exceder 20 MB";
+
+//FeedBack Screen
+
+"zdsdk.feedback.barbutton"                              = "Ignorar";
+
+"zdsdk.feedback.feedbackus"                             = "Ajude-nos a melhorar.";
+"zdsdk.feedback.placeholder"                            = "Introduzir comentários aqui";
+"zdsdk.feedback.thanks"                                 = "Obrigado pelas suas sugestões e comentários. Voltaremos a entrar em contacto consigo em breve.";
+
+//Solution Detail Screen
+
+"desk.library.solution.like.count"                      = "1 utilizador gostou deste artigo";
+"desk.library.solution.likes.count"                     = "%@ utilizadores gostaram deste artigo";
+"desk.library.solution.you.only.like.count"             = "Gostou deste artigo";
+"desk.library.solution.you.like.count"                  = "Você e outro utilizador gostaram deste artigo";
+"desk.library.solution.you.likes.count"                 = "Você e %@ outras pessoas gostaram deste artigo";
+
+"zdsdk.Solution.yes"                                    = "Sim";
+"zdsdk.Solution.no"                                     = "Não";
+"zdsdk.Solution.selectyes"                              = "Considerou este artigo útil.";
+"zdsdk.Solution.today"                                  = "Hoje";
+"zdsdk.Solution.Yesterday"                              = "Ontem";
+"zdsdk.Solution.ahour"                                  = "Há 1 hora";
+"zdsdk.Solution.aweek"                                  = "Há 1 semana";
+"zdsdk.Solution.amonth"                                 = "Há 1 mês";
+"zdsdk.Solution.ayear"                                  = "Há 1 ano";
+"zdsdk.Solution.hours"                                  = "Há %@ horas";
+"zdsdk.Solution.days"                                   = "Há %@ dias";
+"zdsdk.Solution.weeks"                                  = "Há %@ semanas";
+"zdsdk.Solution.years"                                  = "Há %@ anos";
+"zdsdk.Solution.months"                                 = "Há %@ meses";
+"zdsdk.Solution.minute"                                 = "Há %@ minutos";
+"zdsdk.Solution.second"                                 = "Há %@ segundos";
+"desk.library.solution.attachment"                      = "1 anexo";
+"desk.library.solution.attachments"                     = "%@ anexos";
+"desk.library.updated.sec.left"                         = "Falta 1 segundo";
+"desk.library.updated.secs.left"                        = "Faltam %@ segundos";
+"desk.library.updated.sec.due.by"                       = "1 segundo de atraso";
+"desk.library.updated.secs.due.by"                      = "%@ segundos de atraso";
+"desk.library.updated.min"                              = "Há 1 minuto";
+"desk.library.updated.min.left"                         = "Falta 1 minuto";
+"desk.library.updated.mins.left"                        = "Faltam %@ minutos";
+"desk.library.updated.min.due.by"                       = "1 minuto de atraso";
+"desk.library.updated.mins.due.by"                      = "%@ minutos de atraso";
+"desk.library.updated.hour.left"                        = "Falta 1 hora";
+"desk.library.updated.hours.left"                       = "Faltam %@ horas";
+"desk.library.updated.hour.due.by"                      = "Uma hora de atraso";
+"desk.library.updated.hours.due.by"                     = "%@ horas de atraso";
+"desk.library.updated.days.left"                        = "Faltam %@ dias";
+"desk.library.updated.day.left"                         = "Falta 1 dia";
+"desk.library.updated.days.due.by"                      = "%@ dias de atraso";
+"desk.library.updated.day.due.by"                       = "1 dia de atraso";
+"desk.library.updated.one.month.left"                   = "Falta 1 mês";
+"desk.library.updated.months.left"                      = "Faltam %@ meses";
+"desk.library.updated.one.month.due_by"                 = "1 mês de atraso";
+"desk.library.updated.months.due.by"                    = "%@ meses de atraso";
+"desk.library.updated.year.left"                        = "Falta 1 ano";
+"desk.library.updated.years.left"                       = "Faltam %@ anos";
+"desk.library.updated.year.due_by"                      = "1 ano de atraso";
+"desk.library.updated.years.due_by"                     = "%@ anos de atraso";
+
+//Community screen
+"zdsdk.community.posts"                                 = "%@ publicações";
+"zdsdk.community.forums"                                = "%@ fóruns";
+"zdsdk.community.changeType"                            = "Tipo de alteração";
+"zdsdk.community.all"                                   = "Tudo";
+"zdsdk.community.questions"                             = "Perguntas";
+"zdsdk.community.problems"                              = "Problemas";
+"zdsdk.community.ideas"                                 = "Ideias";
+"zdsdk.community.allposts"                              = "Todas as publicações";
+"zdsdk.community.comments"                              = "Comentários";
+"zdsdk.community.liked"                                 = "Gostou";
+
+//Ticket List Screen
+"desk.library.from"                                     = "De";
+"desk.library.to"                                       = "Para";
+"desk.library.send"                                     = "Enviar";
+"zdsdk.ticket.comment"                                  = "Comentário";
+"zdsdk.ticket.thread"                                   = "Thread";
+"zdsdk.ticket.ticketAction"                             = "Ações de pedido de suporte";
+
+"zdsdk.ticket.deleteDraft"                              = "Eliminar rascunho";
+"zdsdk.ticket.reply"                                    = "Responder";
+"zdsdk.ticket.editDraft"                                = "Editar rascunho";
+"zdsdk.ticket.sendDraft"                                = "Enviar rascunho";
+"zdsdk.ticket.deleteComment"                            = "Eliminar comentário";
+"zdsdk.ticket.camera"                                   = "Câmara";
+"zdsdk.ticket.photoLibrary"                             = "Biblioteca de fotografias";
+"zdsdk.ticket.attachementTitle"                         = "Origem do anexo";
+"zdsdk.ticket.priorityUpdateMessage"                    = "Prioridade atualizada";
+"zdsdk.ticket.TicketClosedMessage"                      = "Pedido de suporte fechado";
+"zdsdk.ticket.error"                                    = "Algo correu mal.";
+"zdsdk.comment.deleteConfirmation"                      = "Tem a certeza?";
+"zdsdk.comment.deleteSuccessMessage"                    = "Comentário eliminado";
+"zdsdk.comment.emptyDescriptionMessage"                 = "Introduzir descrição do comentário";
+"zdsdk.ticket.addComment"                               = "Adicionar comentário";
+"zdsdk.ticket.deleteTopic"                              = "Eliminar tópico";
+"zdsdk.ticket.editTopic"                                = "Editar tópico";
+"zdsdk.topic.attacheFile"                               = "Anexar ficheiros";
+"zdsdk.topic.addTag"                                    = "Adicionar etiqueta";
+"zdsdk.topic.saveAsDraft"                               = "Guardar como rascunho";
+"zdsdk.topic.createTopic"                               = "Criar tópico";
+"desk.library.priority.change.failed"                   = "Falha ao atualizar a prioridade";
+"desk.library.network.connection"                       = "Ligação de rede perdida";
+"desk.library.ticket.closed"                            = "Fechado";
+"desk.library.select.priority"                          = "Selecionar prioridade";
+"desk.library.thread.attachment.error"                  = "Erro ao carregar o anexo. Tente novamente.";
+
+/////
+"desk.library.community_topics_type_announcement"       = "Anúncios";
+"desk.library.community_topics_all_posts_count"         = "Todas as publicações (%@)";
+"desk.library.community_topics_type_announcement_count" = "Anúncios (%@)";
+"desk.library.community_topics_type_question_count"     = "Perguntas (%@)";
+"desk.library.community_topics_type_idea_count"         = "Ideias (%@)";
+"desk.library.community_topics_type_problem_count"      = "Problemas (%@)";
+"desk.library.community_topics_likes"                   = "%@ gostos";
+"desk.library.community_topics_status_ANSWERED"         = "Respondida";
+"desk.library.community_topics_status_UNANSWERED"       = "Por responder";
+"desk.library.community_topics_status_INPROGRESS"       = "Em curso";
+"desk.library.community_topics_status_IMPLEMENTED"      = "Implementado";
+"desk.library.community_topics_status_UNDERREVIEW"      = "Em revisão";
+"desk.library.community_topics_status_WILLNOTIMPLEMENT" = "Não será implementado";
+"desk.library.community_topics_status_MAYBELATER"       = "Talvez mais tarde";
+"desk.library.community_topics_status_NOTAPROBLEM"      = "Não é problema";
+"desk.library.community_topics_status_TEMPORARYFIX"     = "Correção temporária";
+"desk.library.community_topics_status_SOLVED"           = "Resolvido";
+"desk.library.community_topics_status_UNSOLVED"         = "Por resolver";
+"desk.library.community_topics_status_NEEDMOREINFO"     = "São necessárias mais informações";
+"desk.library.community_topics_status_ANALAYZING"       = "Analisar";
+"desk.library.community_topics_status_WORKINGONIT"      = "Estamos a tratar disso";
+"desk.library.profile"                                  = "Perfil";
+"desk.library.live_chat"                                = "Chat em tempo real";
+"desk.library.community_topic_attachment_download"      = "Transferir";
+"desk.library.community_topic_attachment_view"          = "Ver";
+"desk.library.community_topic_attachment_share"         = "Partilhar";
+"desk.library.no_network_msg"                           = "Sem ligação à Internet";
+
+"desk.library.helpcenter_articles_count"                = "%@ artigos";
+"desk.library_community_show_details"                   = "Mostrar detalhes";
+"desk.library_community_showing_tag"                    = "a mostrar";
+"desk.library_community_hiding_tag"                     = "a ocultar";
+"navigation_drawer_open"                                = "Abrir gaveta de navegação";
+"navigation_drawer_close"                               = "Fechar gaveta de navegação";
+"action_settings"                                       = "Definições";
+"desk_nav_drawer_open"                                  = "Abrir";
+"desk_nav_drawer_close"                                 = "Fechar";
+"desk.library.ticket_information_title"                 = "Informações do pedido de suporte";
+"desk.library.ticket_information_edit"                  = "Editar";
+"desk.library.ticket_information_ticket_details"        = "Dados do pedido de suporte";
+"desk.library.ticket_information_created_date"          = "Data de criação";
+"desk.library.ticket_information_department"            = "Departamento";
+"desk.library.ticket_information_channel"               = "Canal";
+"desk.library.ticket_information_priority"              = "Prioridade";
+"desk.library.ticket_information_status"                = "Estado";
+"desk.library.ticket_information_due_date"              = "Data de vencimento";
+"desk.library.draft"                                    = "Rascunho";
+"desk.library.ticket.add_a_comment"                     = "Adicionar um comentário";
+"desk.library.thread.Conversation"                      = "Conversações";
+"desk_sdk_network_alert"                                = "Perda de rede";
+"desk_community_new_topic_add_a_title"                  = "Adicionar um título";
+"desk_library_community_add_tags"                       = "Adicionar etiquetas";
+"desk_library_community_idea"                           = "Ideia";
+"desk_library_community_problem"                        = "Problema";
+"desk_library_community_question"                       = "Pergunta";
+"desk_library_community_tag_rule"                       = "Inserir uma vírgula para adicionar várias etiquetas";
+"desk_library_alert_ok"                                 = "OK";
+"desk_library_alert_msg_close_ticket"                   = "Tem a certeza de que pretende fechar este pedido de suporte?";
+"desk_library_alert_msg_delete_comment"                 = "Tem a certeza de que pretende eliminar este comentário?";
+"desk_library_community_done"                           = "Concluído";
+"desk.library.follow"                                   = "Seguir";
+"desk.library.following"                                = "A seguir";
+"desk_library_msg_comment_delete_failed"                = "Falha ao eliminar comentário";
+"desk_sdk_community_topic_edit_tag"                     = "Editar etiqueta";
+"desk_library_community_continue"                       = "Continuar";
+"desk_library_community_sub_category"                   = "Subcategoria";
+
+"desk_library_community_discard_alert"                  = "Pretende continuar? Tenha em atenção que perderá as alterações.";
+"desk.library.updated.sec"                              = "Agora mesmo";
+"desk_library_msg_comment_add_success" 			= "Comentário adicionado com êxito";
+"desk_library_msg_attachment_uploading" 		= "Ainda a carregar o(s) anexo(s)";
+
+//New Strings -------------------------------------- >
+
+"desk.library.community_category_comments"              = "%s Comments";
+"desk.library.empty_error_message_email"                = "Email can not be blank";
+"desk.library.feed_back_error_message"                  = "Feedback cannot be blank";
+"desk.library.msg_reply_failed"                         = "Reply added failed";
+"desk.library.msg_reply_success"                        = "Reply added success";
+"desk.library.no_data"                                  = "No Data";
+"desk.library.no_data_msg_articles"                     = "There are no articles here.";
+"desk.library.no_data_msg_tickets"                      = "There are no tickets here.";
+"desk.library.no_data_msg_topics"                       = "There are no topics here.";
+"desk.library.no_data_msg_conversations"                = "There are no conversations here.";
+"desk.library.thread.draft"                             = "Draft @";
+"desk.library.thread.option.delete"                     = "Delete";
+"desk.library.ticket.attachments"                       = "Attachments (%s)";
+"desk.library.ticket.closed.failed"                     = "Ticket failed to Close";
+"desk.library.ticket_information_priority"              = "Priority";
+"desk.library.updated.message"                          = "Last updated about %s";
+"desk_library_community_category"                       = "Category";
+"desk_library_community_content_error"                  = "Please enter content for your topic";
+"desk_library_msg_close_ticket_failed"                  = "Failed to close the ticket";
+"desk_library_msg_comment_add_failed"                   = "Failed to add comment";
+"desk.library.help"                                     = "Zoho Desk Help";
+"desk.library.topic_content_placeholder"                = "Content text";
+
+"zdsdk_topic_alert_delete"                              = "Are you sure want to delete this Topic?";
+"zdsdk_topic_delete_success"                            = "Topic Deleted successfully";
+"zdsdk_topic_delete_Failed"                             = "Failed to delete the Topic.";
+"zdsdk_addTicket_actionsheet_description"               = "Select option for %@";
+"zdsdk_addTicket_actionsheet_fail_description"          = "No %@ Found";
+
+"zdsdk_addTicket_multiselect_empty"                     = "Tap to select values";
+"zdsdk_addTicket_multiselect_selected"                  = "%@ Values";
+"zdsdk_addTicket_validate_error"                        = "Please fill valid inputs";
+
+"zdsdk_createTopic_locked_msg"                          = "All Categories are locked.";
+
+"zdsdk_topic_update"                                    = "Update";
+
+"zdsdk_community_Follow_error"                          = "Unable to follow the category";
+"zdsdk_community_unFollow_error"                        = "Unable to unfollow the category";
+"desk_library_msg_topic_add_failed"                     = "Failed to add the topic";
+
+
+// Need to update
+"desk_library_community_subject_error"                  = "Enter Title"; // old value = "Enter Subject"
+
+

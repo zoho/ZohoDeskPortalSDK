@@ -1,0 +1,283 @@
+"DeskPortal.Dashboard.Heading"                                = "Zoho Desk";
+"DeskPortal.Network.failed.error.message"                                  = "Controleer uw internetverbinding";
+"DeskPortal.Dashboard.addticket.title"                          = "Ticket indienen";
+"DeskPortal.Dashboard.addticket.description"                     = "Hulp vragen aan onze medewerkers";
+"DeskPortal.Dashboard.helpcenter.title"                           = "Knowledge Base";
+"DeskPortal.Dashboard.helpcenter.description"                 = "Bekijk onze uitgebreide opslagplaats met help artikelen";
+"DeskPortal.Dashboard.community.title"                             = "Community";
+"DeskPortal.Dashboard.community.description"                         = "Oplossingen zoeken en delen in de gebruikerscommunity";
+"DeskPortal.Dashboard.myticket.title"                             = "Mijn tickets";
+"DeskPortal.Dashboard.myticket.description"                     = "Tickets die u heeft ingediend weergeven en beheren";
+"DeskPortal.Helpcenter.category.subheading"                             = "Sectie";
+"DeskPortal.Helpcenter.article.subheading"                             = "Artikel";
+"DeskPortal.Helpcenter.categories.subheading"                           = "Secties";
+"DeskPortal.Helpcenter.articles.subheading"                             = "Artikelen";
+"DeskPortal.Addticket.title"                              = "Ticket toevoegen";
+"DeskPortal.Helpcenter.feedback.title"                                  = "Feedback";
+"DeskPortal.Helpcenter.feedback.description"                                  = "Wij betreuren het dat het artikel niet geholpen heeft.";
+"DeskPortal.Helpcenter.article.detail.title"                                    = "Meest gestelde vragen";
+"DeskPortal.Helpcenter.article.detail.vote.description"                        = "Was dit artikel nuttig?";
+"DeskPortal.Helpcenter.article.detail.relatedtitle"                         = "Verwante artikelen";
+"DeskPortal.Myticket.conversation.option.title"                       = "Conversatieacties";
+"DeskPortal.Myticket.comment.option.title"                            = "Opmerkingacties";
+"DeskPortal.Myticket.option.closeticket"                              = "Ticket sluiten";
+"DeskPortal.Myticket.option.editcomment"                              = "Opmerking bewerken";
+"DeskPortal.Error.message.reload"                                      = "Opnieuw proberen";
+
+
+
+"zdsdk.general.powered"                                 = "Powered by Zoho";
+
+"zdsdk.general.back"                                    = "Terug";
+"zdsdk.general.cancel"                                  = "Annuleren";
+"zdsdk.general.submit"                                  = "Indienen";
+"zdsdk.general.email"                                   = "E-mail";
+
+"zdsdk.attachements.attachements"                       = "Bijlagen";
+"zdsdk.dashboard.title"                                 = "Welkom!";
+
+"zdsdk.helpcenter.search"                               = "Zoeken";
+
+"zdsdk.helpcenter.solutions"                            = "Oplossingen";
+
+"zdsdk.helpcenter.recentsearch"                         = "Recente zoekopdracht";
+"zdsdk.helpcenter.results"                              = "Resultaten";
+"zdsdk.helpcenter.noarticlesfound"                      = "Geen artikelen gevonden";
+"zdsdk.helpcenter.nodescription"                        = "Geen beschrijving";
+
+"zdsdk.addnewticket.successmsg"                         = "Ticket is gemaakt. We nemen zo snel mogelijk contact met u op.";
+"zdsk.addnewticket.validEmail"                          = "Voer een geldig e-mailadres in.";
+"zdsk.addnewticket.Emptyfield"                          = "Vul alle verplichte velden in.";
+"zdsk.addnewticket.createError"                         = "Kan ticket niet maken.";
+"zdsdk.createTicket.entervalid"                         = "Voer een geldig(e) %@ in";
+"desk.library.newticket.field.error"                    = "%@ kan niet leeg zijn";
+"desk.library.newticket.date.picker" = "Of kies de dichtstbijzijnde datum hieronder";
+"desk.library.newticket.file.size.error" = "De bestandsgrootte mag niet meer zijn dan 20 MB";
+
+//FeedBack Screen
+
+"zdsdk.feedback.barbutton"                              = "Overslaan";
+
+"zdsdk.feedback.feedbackus"                             = "Help ons met verbeteren.";
+"zdsdk.feedback.placeholder"                            = "Voer hier uw feedback in";
+"zdsdk.feedback.thanks"                                 = "Hartelijk dank voor uw feedback. Wij zullen binnenkort contact met u opnemen.";
+
+//Solution Detail Screen
+
+"desk.library.solution.like.count"                      = "1 gebruiker vindt dit artikel leuk";
+"desk.library.solution.likes.count"                     = "%@ gebruikers vinden dit artikel leuk";
+"desk.library.solution.you.only.like.count"             = "U vindt dit artikel leuk";
+"desk.library.solution.you.like.count"                  = "U en een andere gebruiker vinden dit artikel leuk";
+"desk.library.solution.you.likes.count"                 = "U en %@ anderen vinden dit artikel leuk";
+
+"zdsdk.Solution.yes"                                    = "Ja";
+"zdsdk.Solution.no"                                     = "Nee";
+"zdsdk.Solution.selectyes"                              = "U vond dit artikel nuttig.";
+"zdsdk.Solution.today"                                  = "Vandaag";
+"zdsdk.Solution.Yesterday"                              = "Gisteren";
+"zdsdk.Solution.ahour"                                  = "1 uur geleden";
+"zdsdk.Solution.aweek"                                  = "1 week geleden";
+"zdsdk.Solution.amonth"                                 = "1 maand geleden";
+"zdsdk.Solution.ayear"                                  = "1 jaar geleden";
+"zdsdk.Solution.hours"                                  = "%@ uur geleden";
+"zdsdk.Solution.days"                                   = "%@ dagen geleden";
+"zdsdk.Solution.weeks"                                  = "%@ weken geleden";
+"zdsdk.Solution.years"                                  = "%@ jaar geleden";
+"zdsdk.Solution.months"                                 = "%@ maanden geleden";
+"zdsdk.Solution.minute"                                 = "%@ minuten geleden";
+"zdsdk.Solution.second"                                 = "%@ seconden geleden";
+"desk.library.solution.attachment"                      = "1 bijlage";
+"desk.library.solution.attachments"                     = "%@ bijlagen";
+"desk.library.updated.sec.left"                         = "Nog 1 seconde";
+"desk.library.updated.secs.left"                        = "Nog %@ seconden";
+"desk.library.updated.sec.due.by"                       = "1 seconde te laat";
+"desk.library.updated.secs.due.by"                      = "%@ seconden te laat";
+"desk.library.updated.min"                              = "1 minuut geleden";
+"desk.library.updated.min.left"                         = "Nog 1 minuut";
+"desk.library.updated.mins.left"                        = "Nog %@ minuten";
+"desk.library.updated.min.due.by"                       = "1 minuut te laat";
+"desk.library.updated.mins.due.by"                      = "%@ minuten te laat";
+"desk.library.updated.hour.left"                        = "Nog 1 uur";
+"desk.library.updated.hours.left"                       = "Nog %@ uur";
+"desk.library.updated.hour.due.by"                      = "Een uur te laat";
+"desk.library.updated.hours.due.by"                     = "%@ uur te laat";
+"desk.library.updated.days.left"                        = "Nog %@ dagen";
+"desk.library.updated.day.left"                         = "Nog 1 dag";
+"desk.library.updated.days.due.by"                      = "%@ dagen te laat";
+"desk.library.updated.day.due.by"                       = "1 dag te laat";
+"desk.library.updated.one.month.left"                   = "Nog 1 maand";
+"desk.library.updated.months.left"                      = "Nog %@ maanden";
+"desk.library.updated.one.month.due_by"                 = "1 maand te laat";
+"desk.library.updated.months.due.by"                    = "%@ maanden te laat";
+"desk.library.updated.year.left"                        = "Nog 1 jaar";
+"desk.library.updated.years.left"                       = "Nog %@ jaar";
+"desk.library.updated.year.due_by"                      = "1 jaar te laat";
+"desk.library.updated.years.due_by"                     = "%@ jaar te laat";
+
+//Community screen
+"zdsdk.community.posts"                                 = "%@ berichten";
+"zdsdk.community.forums"                                = "%@ forums";
+"zdsdk.community.changeType"                            = "Wijzigingstype";
+"zdsdk.community.all"                                   = "Alle";
+"zdsdk.community.questions"                             = "Vragen";
+"zdsdk.community.problems"                              = "Problemen";
+"zdsdk.community.ideas"                                 = "Ideeën";
+"zdsdk.community.allposts"                              = "Alle berichten";
+"zdsdk.community.comments"                              = "Opmerkingen";
+"zdsdk.community.liked"                                 = "Vond dit leuk";
+
+//Ticket List Screen
+"desk.library.from"                                     = "Van";
+"desk.library.to"                                       = "Aan";
+"desk.library.send"                                     = "Verzenden";
+"zdsdk.ticket.comment"                                  = "Opmerking";
+"zdsdk.ticket.thread"                                   = "Thread";
+"zdsdk.ticket.ticketAction"                             = "Ticketacties";
+
+"zdsdk.ticket.deleteDraft"                              = "Concept verwijderen";
+"zdsdk.ticket.reply"                                    = "Beantwoorden";
+"zdsdk.ticket.editDraft"                                = "Concept bewerken";
+"zdsdk.ticket.sendDraft"                                = "Concept verzenden";
+"zdsdk.ticket.deleteComment"                            = "Opmerking verwijderen";
+"zdsdk.ticket.camera"                                   = "Camera";
+"zdsdk.ticket.photoLibrary"                             = "Fotobibliotheek";
+"zdsdk.ticket.attachementTitle"                         = "Bron van bijlage";
+"zdsdk.ticket.priorityUpdateMessage"                    = "Prioriteit is bijgewerkt";
+"zdsdk.ticket.TicketClosedMessage"                      = "Ticket is gesloten";
+"zdsdk.ticket.error"                                    = "Er is iets fout gegaan.";
+"zdsdk.comment.deleteConfirmation"                      = "Weet u het zeker?";
+"zdsdk.comment.deleteSuccessMessage"                    = "Opmerking is verwijderd";
+"zdsdk.comment.emptyDescriptionMessage"                 = "Beschrijving van opmerking invoeren";
+"zdsdk.ticket.addComment"                               = "Opmerking toevoegen";
+"zdsdk.ticket.deleteTopic"                              = "Onderwerp verwijderen";
+"zdsdk.ticket.editTopic"                                = "Onderwerp bewerken";
+"zdsdk.topic.attacheFile"                               = "Bestanden bijvoegen";
+"zdsdk.topic.addTag"                                    = "Tag toevoegen";
+"zdsdk.topic.saveAsDraft"                               = "Opslaan als concept";
+"zdsdk.topic.createTopic"                               = "Onderwerp maken";
+"desk.library.priority.change.failed"                   = "Bijwerken van prioriteit is mislukt";
+"desk.library.network.connection"                       = "Netwerkverbinding is verbroken";
+"desk.library.ticket.closed"                            = "Gesloten";
+"desk.library.select.priority"                          = "Prioriteit selecteren";
+"desk.library.thread.attachment.error"                  = "Fout bij het laden van de bijlage. Probeer het opnieuw.";
+
+/////
+"desk.library.community_topics_type_announcement"       = "Aankondigingen";
+"desk.library.community_topics_all_posts_count"         = "Alle berichten (%@)";
+"desk.library.community_topics_type_announcement_count" = "Aankondigingen (%@)";
+"desk.library.community_topics_type_question_count"     = "Vragen (%@)";
+"desk.library.community_topics_type_idea_count"         = "Ideeën (%@)";
+"desk.library.community_topics_type_problem_count"      = "Problemen (%@)";
+"desk.library.community_topics_likes"                   = "%@ vind-ik-leuks";
+"desk.library.community_topics_status_ANSWERED"         = "Beantwoord";
+"desk.library.community_topics_status_UNANSWERED"       = "Niet beantwoord";
+"desk.library.community_topics_status_INPROGRESS"       = "Wordt uitgevoerd";
+"desk.library.community_topics_status_IMPLEMENTED"      = "Geïmplementeerd";
+"desk.library.community_topics_status_UNDERREVIEW"      = "Wordt beoordeeld";
+"desk.library.community_topics_status_WILLNOTIMPLEMENT" = "Wordt niet geïmplementeerd";
+"desk.library.community_topics_status_MAYBELATER"       = "Misschien later";
+"desk.library.community_topics_status_NOTAPROBLEM"      = "Is geen probleem";
+"desk.library.community_topics_status_TEMPORARYFIX"     = "Tijdelijk herstel";
+"desk.library.community_topics_status_SOLVED"           = "Opgelost";
+"desk.library.community_topics_status_UNSOLVED"         = "Niet opgelost";
+"desk.library.community_topics_status_NEEDMOREINFO"     = "Meer informatie nodig";
+"desk.library.community_topics_status_ANALAYZING"       = "Wordt geanalyseerd";
+"desk.library.community_topics_status_WORKINGONIT"      = "Wordt aan gewerkt";
+"desk.library.profile"                                  = "Profiel";
+"desk.library.live_chat"                                = "Live Chat";
+"desk.library.community_topic_attachment_download"      = "Downloaden";
+"desk.library.community_topic_attachment_view"          = "Weergeven";
+"desk.library.community_topic_attachment_share"         = "Delen";
+"desk.library.no_network_msg"                           = "Geen internetverbinding";
+
+"desk.library.helpcenter_articles_count"                = "%@ artikelen";
+"desk.library_community_show_details"                   = "Details tonen";
+"desk.library_community_showing_tag"                    = "wordt getoond";
+"desk.library_community_hiding_tag"                     = "wordt verborgen";
+"navigation_drawer_open"                                = "Uitschuifmenu openen";
+"navigation_drawer_close"                               = "Uitschuifmenu sluiten";
+"action_settings"                                       = "Instellingen";
+"desk_nav_drawer_open"                                  = "Openen";
+"desk_nav_drawer_close"                                 = "Sluiten";
+"desk.library.ticket_information_title"                 = "Ticketinformatie";
+"desk.library.ticket_information_edit"                  = "Bewerken";
+"desk.library.ticket_information_ticket_details"        = "Ticketgegevens";
+"desk.library.ticket_information_created_date"          = "Aanmaakdatum";
+"desk.library.ticket_information_department"            = "Afdeling";
+"desk.library.ticket_information_channel"               = "Kanaal";
+"desk.library.ticket_information_priority"              = "Prioriteit";
+"desk.library.ticket_information_status"                = "Status";
+"desk.library.ticket_information_due_date"              = "Vervaldatum";
+"desk.library.draft"                                    = "Concept";
+"desk.library.ticket.add_a_comment"                     = "Een opmerking toevoegen";
+"desk.library.thread.Conversation"                      = "Conversaties";
+"desk_sdk_network_alert"                                = "Netwerk verloren";
+"desk_community_new_topic_add_a_title"                  = "Een titel toevoegen";
+"desk_library_community_add_tags"                       = "Tags toevoegen";
+"desk_library_community_idea"                           = "Idee";
+"desk_library_community_problem"                        = "Probleem";
+"desk_library_community_question"                       = "Vraag";
+"desk_library_community_tag_rule"                       = "Voeg komma in om meerdere tags toe te voegen";
+"desk_library_alert_ok"                                 = "OK";
+"desk_library_alert_msg_close_ticket"                   = "Weet u zeker dat u dit ticket wilt sluiten?";
+"desk_library_alert_msg_delete_comment"                 = "Weet u zeker dat u deze opmerking wilt verwijderen?";
+"desk_library_community_done"                           = "Voltooid";
+"desk.library.follow"                                   = "Volgen";
+"desk.library.following"                                = "Volgend";
+"desk_library_msg_comment_delete_failed"                = "Verwijderen van opmerking is mislukt";
+"desk_sdk_community_topic_edit_tag"                     = "Tag bewerken";
+"desk_library_community_continue"                       = "Doorgaan";
+"desk_library_community_sub_category"                   = "Subcategorie";
+
+"desk_library_community_discard_alert"                  = "Wilt u doorgaan? Vergeet niet dat wijzigingen verloren gaan.";
+"desk.library.updated.sec"                              = "Alleen nu";
+"desk_library_msg_comment_add_success" 			= "Opmerking is toegevoegd";
+"desk_library_msg_attachment_uploading" 		= "De bijlage(n) moet(en) nog geüpload worden";
+
+//New Strings -------------------------------------- >
+
+"desk.library.community_category_comments"              = "%s Comments";
+"desk.library.empty_error_message_email"                = "Email can not be blank";
+"desk.library.feed_back_error_message"                  = "Feedback cannot be blank";
+"desk.library.msg_reply_failed"                         = "Reply added failed";
+"desk.library.msg_reply_success"                        = "Reply added success";
+"desk.library.no_data"                                  = "No Data";
+"desk.library.no_data_msg_articles"                     = "There are no articles here.";
+"desk.library.no_data_msg_tickets"                      = "There are no tickets here.";
+"desk.library.no_data_msg_topics"                       = "There are no topics here.";
+"desk.library.no_data_msg_conversations"                = "There are no conversations here.";
+"desk.library.thread.draft"                             = "Draft @";
+"desk.library.thread.option.delete"                     = "Delete";
+"desk.library.ticket.attachments"                       = "Attachments (%s)";
+"desk.library.ticket.closed.failed"                     = "Ticket failed to Close";
+"desk.library.ticket_information_priority"              = "Priority";
+"desk.library.updated.message"                          = "Last updated about %s";
+"desk_library_community_category"                       = "Category";
+"desk_library_community_content_error"                  = "Please enter content for your topic";
+"desk_library_msg_close_ticket_failed"                  = "Failed to close the ticket";
+"desk_library_msg_comment_add_failed"                   = "Failed to add comment";
+"desk.library.help"                                     = "Zoho Desk Help";
+"desk.library.topic_content_placeholder"                = "Content text";
+
+"zdsdk_topic_alert_delete"                              = "Are you sure want to delete this Topic?";
+"zdsdk_topic_delete_success"                            = "Topic Deleted successfully";
+"zdsdk_topic_delete_Failed"                             = "Failed to delete the Topic.";
+"zdsdk_addTicket_actionsheet_description"               = "Select option for %@";
+"zdsdk_addTicket_actionsheet_fail_description"          = "No %@ Found";
+
+"zdsdk_addTicket_multiselect_empty"                     = "Tap to select values";
+"zdsdk_addTicket_multiselect_selected"                  = "%@ Values";
+"zdsdk_addTicket_validate_error"                        = "Please fill valid inputs";
+
+"zdsdk_createTopic_locked_msg"                          = "All Categories are locked.";
+
+"zdsdk_topic_update"                                    = "Update";
+
+"zdsdk_community_Follow_error"                          = "Unable to follow the category";
+"zdsdk_community_unFollow_error"                        = "Unable to unfollow the category";
+"desk_library_msg_topic_add_failed"                     = "Failed to add the topic";
+
+
+// Need to update
+"desk_library_community_subject_error"                  = "Enter Title"; // old value = "Enter Subject"
+

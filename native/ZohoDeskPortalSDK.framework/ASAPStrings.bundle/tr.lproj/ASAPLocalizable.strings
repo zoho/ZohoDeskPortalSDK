@@ -1,0 +1,283 @@
+"DeskPortal.Dashboard.Heading"                                = "Zoho Desk";
+"DeskPortal.Network.failed.error.message"                                  = "İnternet bağlantınızı denetleyin";
+"DeskPortal.Dashboard.addticket.title"                          = "Bileti Gönder";
+"DeskPortal.Dashboard.addticket.description"                     = "Temsilcilerimizden yardım isteyin";
+"DeskPortal.Dashboard.helpcenter.title"                           = "Bilgi Bankası";
+"DeskPortal.Dashboard.helpcenter.description"                 = "Kapsamlı yardım makaleleri havuzumuza göz atın";
+"DeskPortal.Dashboard.community.title"                             = "Topluluk";
+"DeskPortal.Dashboard.community.description"                         = "Çözümler bulun ve kullanıcı topluluğu ile paylaşın";
+"DeskPortal.Dashboard.myticket.title"                             = "Biletlerim";
+"DeskPortal.Dashboard.myticket.description"                     = "Gönderdiğiniz biletleri görüntüleyin ve yönetin";
+"DeskPortal.Helpcenter.category.subheading"                             = "Bölüm";
+"DeskPortal.Helpcenter.article.subheading"                             = "Makale";
+"DeskPortal.Helpcenter.categories.subheading"                           = "Bölümler";
+"DeskPortal.Helpcenter.articles.subheading"                             = "Makaleler";
+"DeskPortal.Addticket.title"                              = "Bilet Ekle";
+"DeskPortal.Helpcenter.feedback.title"                                  = "Geri bildirim";
+"DeskPortal.Helpcenter.feedback.description"                                  = "Makalenin faydalı olmamasından dolayı üzüntü duyduk.";
+"DeskPortal.Helpcenter.article.detail.title"                                    = "SSS";
+"DeskPortal.Helpcenter.article.detail.vote.description"                        = "Bu makale size yardımcı oldu mu ?";
+"DeskPortal.Helpcenter.article.detail.relatedtitle"                         = "İlgili Makaleler";
+"DeskPortal.Myticket.conversation.option.title"                       = "Görüşme Eylemleri";
+"DeskPortal.Myticket.comment.option.title"                            = "Yorum Eylemleri";
+"DeskPortal.Myticket.option.closeticket"                              = "Bileti Kapat";
+"DeskPortal.Myticket.option.editcomment"                              = "Yorumu Düzenle";
+"DeskPortal.Error.message.reload"                                = "Yeniden Dene";
+
+
+
+"zdsdk.general.powered"                                 = "Zoho tarafından desteklenmektedir";
+
+"zdsdk.general.back"                                    = "Geri";
+"zdsdk.general.cancel"                                  = "İptal";
+"zdsdk.general.submit"                                  = "Gönder";
+"zdsdk.general.email"                                   = "E-posta";
+
+"zdsdk.attachements.attachements"                       = "Ekler";
+"zdsdk.dashboard.title"                                 = "Hoş geldiniz!";
+
+"zdsdk.helpcenter.search"                               = "Ara";
+"zdsdk.helpcenter.solutions"                            = "Çözümler";
+
+"zdsdk.helpcenter.recentsearch"                         = "Son aramalar";
+"zdsdk.helpcenter.results"                              = "Sonuçlar";
+"zdsdk.helpcenter.noarticlesfound"                      = "Makale bulunamadı";
+"zdsdk.helpcenter.nodescription"                        = "Açıklama yok";
+
+"zdsdk.addnewticket.successmsg"                         = "Bilet başarıyla oluşturuldu. En kısa sürede temasa geçeceğiz.";
+"zdsk.addnewticket.validEmail"                          = "Geçerli bir e-posta adresi girin.";
+"zdsk.addnewticket.Emptyfield"                          = "Lütfen tüm zorunlu alanları doldurun.";
+"zdsk.addnewticket.createError"                         = "Bilet oluşturulamıyor.";
+"zdsdk.createTicket.entervalid"                         = "Geçerli bir %@ gir";
+"desk.library.newticket.field.error"                    = "%@ boş olamaz";
+"desk.library.newticket.date.picker" = "Bunun yerine aşağıdan en yakın tarihi seçin";
+"desk.library.newticket.file.size.error" = "Dosya boyutu 20 MB’ı aşmamalıdır";
+
+//FeedBack Screen
+
+"zdsdk.feedback.barbutton"                              = "Atla";
+
+"zdsdk.feedback.feedbackus"                             = "Hizmetlerimizi geliştirmede bize yardımcı olun.";
+"zdsdk.feedback.placeholder"                            = "Buraya geri bildiriminizi girin";
+"zdsdk.feedback.thanks"                                 = "Geribildiriminiz için teşekkürler. Size en kısa sürede döneceğiz.";
+
+//Solution Detail Screen
+
+"desk.library.solution.like.count"                      = "1 kullanıcı bu makaleyi beğendi";
+"desk.library.solution.likes.count"                     = "%@ kullanıcı bu makaleyi beğendi";
+"desk.library.solution.you.only.like.count"             = "Bu makaleyi beğendiniz";
+"desk.library.solution.you.like.count"                  = "Siz ve başka bir kullanıcı bu makaleyi beğendi";
+"desk.library.solution.you.likes.count"                 = "Siz ve %@ kişi daha bu makaleyi beğendi";
+
+"zdsdk.Solution.yes"                                    = "Evet";
+"zdsdk.Solution.no"                                     = "Hayır";
+"zdsdk.Solution.selectyes"                              = "Bu makaleyi faydalı buldunuz.";
+"zdsdk.Solution.today"                                  = "Bugün";
+"zdsdk.Solution.Yesterday"                              = "Dün";
+"zdsdk.Solution.ahour"                                  = "1 saat önce";
+"zdsdk.Solution.aweek"                                  = "1 hafta önce";
+"zdsdk.Solution.amonth"                                 = "1 ay önce";
+"zdsdk.Solution.ayear"                                  = "1 yıl önce";
+"zdsdk.Solution.hours"                                  = "%@ saat önce";
+"zdsdk.Solution.days"                                   = "%@ gün önce";
+"zdsdk.Solution.weeks"                                  = "%@ hafta önce";
+"zdsdk.Solution.years"                                  = "%@ yıl önce";
+"zdsdk.Solution.months"                                 = "%@ ay önce";
+"zdsdk.Solution.minute"                                 = "%@ dakika önce";
+"zdsdk.Solution.second"                                 = "%@ saniye önce";
+"desk.library.solution.attachment"                      = "1 ek";
+"desk.library.solution.attachments"                     = "%@ ek";
+"desk.library.updated.sec.left"                         = "1 saniye kaldı";
+"desk.library.updated.secs.left"                        = "%@ saniye kaldı";
+"desk.library.updated.sec.due.by"                       = "1 saniye geçti";
+"desk.library.updated.secs.due.by"                      = "%@ saniye geçti";
+"desk.library.updated.min"                              = "1 dakika önce";
+"desk.library.updated.min.left"                         = "1 dakika kaldı";
+"desk.library.updated.mins.left"                        = "%@ dakika kaldı";
+"desk.library.updated.min.due.by"                       = "1 dakika geçti";
+"desk.library.updated.mins.due.by"                      = "%@ dakika geçti";
+"desk.library.updated.hour.left"                        = "1 saat kaldı";
+"desk.library.updated.hours.left"                       = "%@ saat kaldı";
+"desk.library.updated.hour.due.by"                      = "Bir saat geçti";
+"desk.library.updated.hours.due.by"                     = "%@ saat geçti";
+"desk.library.updated.days.left"                        = "%@ gün kaldı";
+"desk.library.updated.day.left"                         = "1 gün kaldı";
+"desk.library.updated.days.due.by"                      = "%@ gün geçti";
+"desk.library.updated.day.due.by"                       = "1 gün geçti";
+"desk.library.updated.one.month.left"                   = "1 ay kaldı";
+"desk.library.updated.months.left"                      = "%@ ay kaldı";
+"desk.library.updated.one.month.due_by"                 = "1 ay geçti";
+"desk.library.updated.months.due.by"                    = "%@ ay geçti";
+"desk.library.updated.year.left"                        = "1 yıl kaldı";
+"desk.library.updated.years.left"                       = "%@ yıl kaldı";
+"desk.library.updated.year.due_by"                      = "1 yıl geçti";
+"desk.library.updated.years.due_by"                     = "%@ yıl geçti";
+
+//Community screen
+"zdsdk.community.posts"                                 = "%@ Posta";
+"zdsdk.community.forums"                                = "%@ Forum";
+"zdsdk.community.changeType"                            = "Değişiklik Türü";
+"zdsdk.community.all"                                   = "Tümü";
+"zdsdk.community.questions"                             = "Sorular";
+"zdsdk.community.problems"                              = "Sorunlar";
+"zdsdk.community.ideas"                                 = "Fikirler";
+"zdsdk.community.allposts"                              = "Bütün Mesajlar";
+"zdsdk.community.comments"                              = "Yorumlar";
+"zdsdk.community.liked"                                 = "Beğendi";
+
+//Ticket List Screen
+"desk.library.from"                                     = "Kaynak";
+"desk.library.to"                                       = "Hedef";
+"desk.library.send"                                     = "Gönder";
+"zdsdk.ticket.comment"                                  = "Yorum";
+"zdsdk.ticket.thread"                                   = "İş Parçacığı";
+"zdsdk.ticket.ticketAction"                             = "Bilet Eylemleri";
+
+"zdsdk.ticket.deleteDraft"                              = "Taslağı Sil";
+"zdsdk.ticket.reply"                                    = "Yanıtla";
+"zdsdk.ticket.editDraft"                                = "Taslak Düzenle";
+"zdsdk.ticket.sendDraft"                                = "Taslak Gönder";
+"zdsdk.ticket.deleteComment"                            = "Yorumu Sil";
+"zdsdk.ticket.camera"                                   = "Kamera";
+"zdsdk.ticket.photoLibrary"                             = "Fotoğraf Kitaplığı";
+"zdsdk.ticket.attachementTitle"                         = "Ek Kaynağı";
+"zdsdk.ticket.priorityUpdateMessage"                    = "Öncelik güncellendi";
+"zdsdk.ticket.TicketClosedMessage"                      = "Bilet kapatıldı";
+"zdsdk.ticket.error"                                    = "Bir sorun oluştu.";
+"zdsdk.comment.deleteConfirmation"                      = "Emin misiniz ?";
+"zdsdk.comment.deleteSuccessMessage"                    = "Yorum silindi";
+"zdsdk.comment.emptyDescriptionMessage"                 = "Yorum tanımını girin";
+"zdsdk.ticket.addComment"                               = "Yorum Ekle";
+"zdsdk.ticket.deleteTopic"                              = "Konuyu Sil";
+"zdsdk.ticket.editTopic"                                = "Konuyu Düzenle";
+"zdsdk.topic.attacheFile"                               = "Dosya Ekle";
+"zdsdk.topic.addTag"                                    = "Etiket Ekle";
+"zdsdk.topic.saveAsDraft"                               = "Taslak olarak Kaydet";
+"zdsdk.topic.createTopic"                               = "Başlık Oluştur";
+"desk.library.priority.change.failed"                   = "Öncelik güncellenemedi";
+"desk.library.network.connection"                       = "Ağ bağlantısı kesildi";
+"desk.library.ticket.closed"                            = "Kapatıldı";
+"desk.library.select.priority"                          = "Öncelik Seç";
+"desk.library.thread.attachment.error"                  = "Ek yüklenirken hata. Lütfen tekrar deneyin.";
+
+/////
+"desk.library.community_topics_type_announcement"       = "Duyurular";
+"desk.library.community_topics_all_posts_count"         = "Tüm Gönderiler (%@)";
+"desk.library.community_topics_type_announcement_count" = "Duyurular (%@)";
+"desk.library.community_topics_type_question_count"     = "Sorular (%@)";
+"desk.library.community_topics_type_idea_count"         = "Fikirler (%@)";
+"desk.library.community_topics_type_problem_count"      = "Sorunlar (%@)";
+"desk.library.community_topics_likes"                   = "%@ beğeni";
+"desk.library.community_topics_status_ANSWERED"         = "Yanıtlandı";
+"desk.library.community_topics_status_UNANSWERED"       = "Yanıtlanmadı";
+"desk.library.community_topics_status_INPROGRESS"       = "Devam ediyor";
+"desk.library.community_topics_status_IMPLEMENTED"      = "Gerçekleştirildi";
+"desk.library.community_topics_status_UNDERREVIEW"      = "İnceleniyor";
+"desk.library.community_topics_status_WILLNOTIMPLEMENT" = "Gerçekleştirilmeyecek";
+"desk.library.community_topics_status_MAYBELATER"       = "Belki Daha Sonra";
+"desk.library.community_topics_status_NOTAPROBLEM"      = "Bu Bir Sorun Değil";
+"desk.library.community_topics_status_TEMPORARYFIX"     = "Geçici Düzeltme";
+"desk.library.community_topics_status_SOLVED"           = "Çözüldü";
+"desk.library.community_topics_status_UNSOLVED"         = "Çözülmedi";
+"desk.library.community_topics_status_NEEDMOREINFO"     = "Daha Fazla Bilgi Gerekiyor";
+"desk.library.community_topics_status_ANALAYZING"       = "Analiz ediliyor";
+"desk.library.community_topics_status_WORKINGONIT"      = "Üzerinde Çalışıyor";
+"desk.library.profile"                                  = "Profil";
+"desk.library.live_chat"                                = "Canlı Sohbet";
+"desk.library.community_topic_attachment_download"      = "İndir";
+"desk.library.community_topic_attachment_view"          = "Görüntüle";
+"desk.library.community_topic_attachment_share"         = "Paylaş";
+"desk.library.no_network_msg"                           = "İnternet bağlantısı yok";
+
+"desk.library.helpcenter_articles_count"                = "%@  Makale";
+"desk.library_community_show_details"                   = "Ayrıntıları Göster";
+"desk.library_community_showing_tag"                    = "gösterme";
+"desk.library_community_hiding_tag"                     = "gizleme";
+"navigation_drawer_open"                                = "Navigasyon çekmecesini aç";
+"navigation_drawer_close"                               = "Navigasyon çekmecesini kapat";
+"action_settings"                                       = "Ayarlar";
+"desk_nav_drawer_open"                                  = "Aç";
+"desk_nav_drawer_close"                                 = "Kapat";
+"desk.library.ticket_information_title"                 = "Bilet Bilgisi";
+"desk.library.ticket_information_edit"                  = "Düzenle";
+"desk.library.ticket_information_ticket_details"        = "Bilet Ayrıntıları";
+"desk.library.ticket_information_created_date"          = "Oluşturma Tarihi";
+"desk.library.ticket_information_department"            = "Departman";
+"desk.library.ticket_information_channel"               = "Kanal";
+"desk.library.ticket_information_priority"              = "Öncelik";
+"desk.library.ticket_information_status"                = "Durum";
+"desk.library.ticket_information_due_date"              = "Süre Dolma Tarihi";
+"desk.library.draft"                                    = "Taslak";
+"desk.library.ticket.add_a_comment"                     = "Yorum ekle";
+"desk.library.thread.Conversation"                      = "Görüşmeler";
+"desk_sdk_network_alert"                                = "Ağ kayboldu";
+"desk_community_new_topic_add_a_title"                  = "Başlık ekleyin";
+"desk_library_community_add_tags"                       = "Etiketleri Ekle";
+"desk_library_community_idea"                           = "Fikir";
+"desk_library_community_problem"                        = "Sorun";
+"desk_library_community_question"                       = "Soru";
+"desk_library_community_tag_rule"                       = "Birden çok etiket eklemek için virgül girin";
+"desk_library_alert_ok"                                 = "TAMAM";
+"desk_library_alert_msg_close_ticket"                   = "Bu bileti kapatmak istediğinizden emin misiniz?";
+"desk_library_alert_msg_delete_comment"                 = "Bu yorumu silmek istediğinizden emin misiniz?";
+"desk_library_community_done"                           = "Bitti";
+"desk.library.follow"                                   = "Takip et";
+"desk.library.following"                                = "Takip ediliyor";
+"desk_library_msg_comment_delete_failed"                = "Yorum silinemedi";
+"desk_sdk_community_topic_edit_tag"                     = "Etiketli Düzenle";
+"desk_library_community_continue"                       = "Devam Et";
+"desk_library_community_sub_category"                   = "Alt Kategori";
+
+"desk_library_community_discard_alert"                  = "Devam etmek istiyor musunuz? Değişiklilerin kaybedileceğini göz önünde bulundurun.";
+"desk.library.updated.sec"                              = "Hemen şimdi";
+"desk_library_msg_comment_add_success" 			= "Yorum başarıyla eklendi";
+"desk_library_msg_attachment_uploading" 		= "Ekler henüz karşıya yüklenmedi";
+
+//New Strings -------------------------------------- >
+
+"desk.library.community_category_comments"              = "%s Comments";
+"desk.library.empty_error_message_email"                = "Email can not be blank";
+"desk.library.feed_back_error_message"                  = "Feedback cannot be blank";
+"desk.library.msg_reply_failed"                         = "Reply added failed";
+"desk.library.msg_reply_success"                        = "Reply added success";
+"desk.library.no_data"                                  = "No Data";
+"desk.library.no_data_msg_articles"                     = "There are no articles here.";
+"desk.library.no_data_msg_tickets"                      = "There are no tickets here.";
+"desk.library.no_data_msg_topics"                       = "There are no topics here.";
+"desk.library.no_data_msg_conversations"                = "There are no conversations here.";
+"desk.library.thread.draft"                             = "Draft @";
+"desk.library.thread.option.delete"                     = "Delete";
+"desk.library.ticket.attachments"                       = "Attachments (%s)";
+"desk.library.ticket.closed.failed"                     = "Ticket failed to Close";
+"desk.library.ticket_information_priority"              = "Priority";
+"desk.library.updated.message"                          = "Last updated about %s";
+"desk_library_community_category"                       = "Category";
+"desk_library_community_content_error"                  = "Please enter content for your topic";
+"desk_library_msg_close_ticket_failed"                  = "Failed to close the ticket";
+"desk_library_msg_comment_add_failed"                   = "Failed to add comment";
+"desk.library.help"                                     = "Zoho Desk Help";
+"desk.library.topic_content_placeholder"                = "Content text";
+
+"zdsdk_topic_alert_delete"                              = "Are you sure want to delete this Topic?";
+"zdsdk_topic_delete_success"                            = "Topic Deleted successfully";
+"zdsdk_topic_delete_Failed"                             = "Failed to delete the Topic.";
+"zdsdk_addTicket_actionsheet_description"               = "Select option for %@";
+"zdsdk_addTicket_actionsheet_fail_description"          = "No %@ Found";
+
+"zdsdk_addTicket_multiselect_empty"                     = "Tap to select values";
+"zdsdk_addTicket_multiselect_selected"                  = "%@ Values";
+"zdsdk_addTicket_validate_error"                        = "Please fill valid inputs";
+
+"zdsdk_createTopic_locked_msg"                          = "All Categories are locked.";
+
+"zdsdk_topic_update"                                    = "Update";
+
+"zdsdk_community_Follow_error"                          = "Unable to follow the category";
+"zdsdk_community_unFollow_error"                        = "Unable to unfollow the category";
+"desk_library_msg_topic_add_failed"                     = "Failed to add the topic";
+
+
+// Need to update
+"desk_library_community_subject_error"                  = "Enter Title"; // old value = "Enter Subject"
+
+

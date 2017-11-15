@@ -1,0 +1,282 @@
+"DeskPortal.Dashboard.Heading"                                = "Zoho Desk";
+"DeskPortal.Network.failed.error.message"                                  = "Проверьте подключение к Интернету";
+"DeskPortal.Dashboard.addticket.title"                          = "Отправить заявку";
+"DeskPortal.Dashboard.addticket.description"                     = "Обращайтесь с вопросами к нашим агентам";
+"DeskPortal.Dashboard.helpcenter.title"                           = "База знаний";
+"DeskPortal.Dashboard.helpcenter.description"                 = "Ищите нужные сведения в нашем обширном архиве справочной информации";
+"DeskPortal.Dashboard.community.title"                             = "Сообщество";
+"DeskPortal.Dashboard.community.description"                         = "Находите решения и делитесь ими с сообществом пользователей";
+"DeskPortal.Dashboard.myticket.title"                             = "Мои заявки";
+"DeskPortal.Dashboard.myticket.description"                     = "Просматривайте отправленные заявки и контролируйте процесс их обработки";
+"DeskPortal.Helpcenter.category.subheading"                             = "Раздел";
+"DeskPortal.Helpcenter.article.subheading"                             = "Статья";
+"DeskPortal.Helpcenter.categories.subheading"                           = "Разделы";
+"DeskPortal.Helpcenter.articles.subheading"                             = "Статьи";
+"DeskPortal.Addticket.title"                              = "Добавить заявку";
+"DeskPortal.Helpcenter.feedback.title"                                  = "Отзывы";
+"DeskPortal.Helpcenter.feedback.description"                                  = "Сожалеем, что статья не помогла вам.";
+"DeskPortal.Helpcenter.article.detail.title"                                    = "Вопросы и ответы";
+"DeskPortal.Helpcenter.article.detail.vote.description"                        = "Была ли эта статья полезной?";
+"DeskPortal.Helpcenter.article.detail.relatedtitle"                         = "Похожие статьи";
+"DeskPortal.Myticket.conversation.option.title"                       = "Действия с беседами";
+"DeskPortal.Myticket.comment.option.title"                            = "Действия с комментариями";
+"DeskPortal.Myticket.option.closeticket"                              = "Закрыть заявку";
+"DeskPortal.Myticket.option.editcomment"                              = "Редактировать комментарий";
+"DeskPortal.Error.message.reload"                                = "Повторить попытку";
+
+
+"zdsdk.general.powered"                                 = "Разработка Zoho";
+
+"zdsdk.general.back"                                    = "Назад";
+"zdsdk.general.cancel"                                  = "Отмена";
+"zdsdk.general.submit"                                  = "Отправить";
+"zdsdk.general.email"                                   = "Эл. почта";
+
+"zdsdk.attachements.attachements"                       = "Вложения";
+"zdsdk.dashboard.title"                                 = "Добро пожаловать!";
+
+"zdsdk.helpcenter.search"                               = "Поиск";
+
+"zdsdk.helpcenter.solutions"                            = "Решения";
+
+"zdsdk.helpcenter.recentsearch"                         = "Последний поиск";
+"zdsdk.helpcenter.results"                              = "Результаты";
+"zdsdk.helpcenter.noarticlesfound"                      = "Статьи не найдены";
+"zdsdk.helpcenter.nodescription"                        = "Нет описания";
+
+"zdsdk.addnewticket.successmsg"                         = "Заявка успешно создана. Мы свяжемся с вами при первой возможности.";
+"zdsk.addnewticket.validEmail"                          = "Введите допустимый адрес эл. почты.";
+"zdsk.addnewticket.Emptyfield"                          = "Пожалуйста, заполните все обязательные поля.";
+"zdsk.addnewticket.createError"                         = "Не удалось создать заявку.";
+"zdsdk.createTicket.entervalid"                         = "Введите допустимый %@";
+"desk.library.newticket.field.error"                    = "Поле %@ не может быть пустым";
+"desk.library.newticket.date.picker" = "Или выберите ближайшую дату из списка ниже";
+"desk.library.newticket.file.size.error" = "Размер файла не должен превышать 20 МБ";
+
+//FeedBack Screen
+
+"zdsdk.feedback.barbutton"                              = "Пропустить";
+
+"zdsdk.feedback.feedbackus"                             = "Помогите нам улучшить наш продукт.";
+"zdsdk.feedback.placeholder"                            = "Введите свой отзыв";
+"zdsdk.feedback.thanks"                                 = "Благодарим вас за отзыв. Мы свяжемся с вами в ближайшее время.";
+
+//Solution Detail Screen
+
+"desk.library.solution.like.count"                      = "Эта статья понравилась 1 пользователю";
+"desk.library.solution.likes.count"                     = "Эта статья понравилась %@ пользователям";
+"desk.library.solution.you.only.like.count"             = "Эта статья понравилась вам";
+"desk.library.solution.you.like.count"                  = "Эта статья понравилась вам и еще одному пользователю";
+"desk.library.solution.you.likes.count"                 = "Эта статья понравилась вам и еще %@ пользователям";
+
+"zdsdk.Solution.yes"                                    = "Да";
+"zdsdk.Solution.no"                                     = "Нет";
+"zdsdk.Solution.selectyes"                              = "Эта статья оказалась вам полезной.";
+"zdsdk.Solution.today"                                  = "Сегодня";
+"zdsdk.Solution.Yesterday"                              = "Вчера";
+"zdsdk.Solution.ahour"                                  = "1 час назад";
+"zdsdk.Solution.aweek"                                  = "1 неделю назад";
+"zdsdk.Solution.amonth"                                 = "1 месяц назад";
+"zdsdk.Solution.ayear"                                  = "1 год назад";
+"zdsdk.Solution.hours"                                  = "%@ ч. назад";
+"zdsdk.Solution.days"                                   = "%@ дн. назад";
+"zdsdk.Solution.weeks"                                  = "%@ нед. назад";
+"zdsdk.Solution.years"                                  = "%@ г./лет назад";
+"zdsdk.Solution.months"                                 = "%@ мес. назад";
+"zdsdk.Solution.minute"                                 = "%@ мин. назад";
+"zdsdk.Solution.second"                                 = "%@ сек. назад";
+"desk.library.solution.attachment"                      = "1 вложение";
+"desk.library.solution.attachments"                     = "Вложения: %@";
+"desk.library.updated.sec.left"                         = "Осталась 1 сек.";
+"desk.library.updated.secs.left"                        = "Осталось %@ сек.";
+"desk.library.updated.sec.due.by"                       = "Задержка на 1 секунду";
+"desk.library.updated.secs.due.by"                      = "Задержка на %@ сек.";
+"desk.library.updated.min"                              = "1 минуту назад";
+"desk.library.updated.min.left"                         = "Осталась 1 минута";
+"desk.library.updated.mins.left"                        = "Осталось %@ мин.";
+"desk.library.updated.min.due.by"                       = "Задержка на 1 минуту";
+"desk.library.updated.mins.due.by"                      = "Задержка на %@ мин.";
+"desk.library.updated.hour.left"                        = "Остался 1 час";
+"desk.library.updated.hours.left"                       = "Осталось %@ ч";
+"desk.library.updated.hour.due.by"                      = "Задержка на 1 час";
+"desk.library.updated.hours.due.by"                     = "Задержка на %@ ч";
+"desk.library.updated.days.left"                        = "Осталось %@ дн.";
+"desk.library.updated.day.left"                         = "Остался 1 день";
+"desk.library.updated.days.due.by"                      = "Задержка на %@ дн.";
+"desk.library.updated.day.due.by"                       = "Задержка на 1 день";
+"desk.library.updated.one.month.left"                   = "Остался 1 месяц";
+"desk.library.updated.months.left"                      = "Осталось %@ мес.";
+"desk.library.updated.one.month.due_by"                 = "Задержка на 1 месяц";
+"desk.library.updated.months.due.by"                    = "Задержка на %@ мес.";
+"desk.library.updated.year.left"                        = "Остался 1 год";
+"desk.library.updated.years.left"                       = "Осталось %@ г./лет";
+"desk.library.updated.year.due_by"                      = "Задержка на 1 год";
+"desk.library.updated.years.due_by"                     = "Задержка на %@ г./лет";
+
+//Community screen
+"zdsdk.community.posts"                                 = "Публикации: %@";
+"zdsdk.community.forums"                                = "Форумы: %@";
+"zdsdk.community.changeType"                            = "Изменить тип";
+"zdsdk.community.all"                                   = "Все";
+"zdsdk.community.questions"                             = "Вопросы";
+"zdsdk.community.problems"                              = "Проблемы";
+"zdsdk.community.ideas"                                 = "Идеи";
+"zdsdk.community.allposts"                              = "Все публикации";
+"zdsdk.community.comments"                              = "Комментарии";
+"zdsdk.community.liked"                                 = "Понравилось";
+
+//Ticket List Screen
+"desk.library.from"                                     = "С";
+"desk.library.to"                                       = "По";
+"desk.library.send"                                     = "Отправить";
+"zdsdk.ticket.comment"                                  = "Комментарий";
+"zdsdk.ticket.thread"                                   = "Ветвь дискуссии";
+"zdsdk.ticket.ticketAction"                             = "Действия с заявками";
+
+"zdsdk.ticket.deleteDraft"                              = "Удалить черновик";
+"zdsdk.ticket.reply"                                    = "Ответ";
+"zdsdk.ticket.editDraft"                                = "Редактировать черновик";
+"zdsdk.ticket.sendDraft"                                = "Отправить черновик";
+"zdsdk.ticket.deleteComment"                            = "Удалить комментарий";
+"zdsdk.ticket.camera"                                   = "Камера";
+"zdsdk.ticket.photoLibrary"                             = "Фотоархив";
+"zdsdk.ticket.attachementTitle"                         = "Источник вложений";
+"zdsdk.ticket.priorityUpdateMessage"                    = "Приоритет обновлен";
+"zdsdk.ticket.TicketClosedMessage"                      = "Заявка закрыта";
+"zdsdk.ticket.error"                                    = "Что-то пошло не так.";
+"zdsdk.comment.deleteConfirmation"                      = "Вы уверены?";
+"zdsdk.comment.deleteSuccessMessage"                    = "Комментарий удален";
+"zdsdk.comment.emptyDescriptionMessage"                 = "Введите описание комментария";
+"zdsdk.ticket.addComment"                               = "Добавить комментарий";
+"zdsdk.ticket.deleteTopic"                              = "Удалить тему";
+"zdsdk.ticket.editTopic"                                = "Редактировать тему";
+"zdsdk.topic.attacheFile"                               = "Вложить файлы";
+"zdsdk.topic.addTag"                                    = "Добавить тег";
+"zdsdk.topic.saveAsDraft"                               = "Сохранить как черновик";
+"zdsdk.topic.createTopic"                               = "Создать тему";
+"desk.library.priority.change.failed"                   = "Не удалось обновить приоритет";
+"desk.library.network.connection"                       = "Отсутствует подключение к сети";
+"desk.library.ticket.closed"                            = "Закрыто";
+"desk.library.select.priority"                          = "Выберите приоритет";
+"desk.library.thread.attachment.error"                  = "Ошибка загрузки вложения. Попробуйте еще раз.";
+
+/////
+"desk.library.community_topics_type_announcement"       = "Объявления";
+"desk.library.community_topics_all_posts_count"         = "Все публикации (%@)";
+"desk.library.community_topics_type_announcement_count" = "Объявления (%@)";
+"desk.library.community_topics_type_question_count"     = "Вопросы (%@)";
+"desk.library.community_topics_type_idea_count"         = "Идеи (%@)";
+"desk.library.community_topics_type_problem_count"      = "Проблемы (%@)";
+"desk.library.community_topics_likes"                   = "Отметки «Нравится»: %@";
+"desk.library.community_topics_status_ANSWERED"         = "С ответами";
+"desk.library.community_topics_status_UNANSWERED"       = "Без ответов";
+"desk.library.community_topics_status_INPROGRESS"       = "Выполняется";
+"desk.library.community_topics_status_IMPLEMENTED"      = "Реализовано";
+"desk.library.community_topics_status_UNDERREVIEW"      = "На рассмотрении";
+"desk.library.community_topics_status_WILLNOTIMPLEMENT" = "Не подлежит реализации";
+"desk.library.community_topics_status_MAYBELATER"       = "Возможно, позже";
+"desk.library.community_topics_status_NOTAPROBLEM"      = "Не является проблемой";
+"desk.library.community_topics_status_TEMPORARYFIX"     = "Временное исправление";
+"desk.library.community_topics_status_SOLVED"           = "Решено";
+"desk.library.community_topics_status_UNSOLVED"         = "Не решено";
+"desk.library.community_topics_status_NEEDMOREINFO"     = "Нужно больше информации";
+"desk.library.community_topics_status_ANALAYZING"       = "Анализируется";
+"desk.library.community_topics_status_WORKINGONIT"      = "Работаем над этим";
+"desk.library.profile"                                  = "Профиль";
+"desk.library.live_chat"                                = "Живой чат";
+"desk.library.community_topic_attachment_download"      = "Загрузить";
+"desk.library.community_topic_attachment_view"          = "Просмотр";
+"desk.library.community_topic_attachment_share"         = "Общий доступ";
+"desk.library.no_network_msg"                           = "Нет подключения к Интернету";
+"desk.library.helpcenter_articles_count"                = "Статьи: %@";
+"desk.library_community_show_details"                   = "Показать сведения";
+"desk.library_community_showing_tag"                    = "отображение";
+"desk.library_community_hiding_tag"                     = "скрытие";
+"navigation_drawer_open"                                = "Открыть панель навигации";
+"navigation_drawer_close"                               = "Закрыть панель навигации";
+"action_settings"                                       = "Настройки";
+"desk_nav_drawer_open"                                  = "Открыть";
+"desk_nav_drawer_close"                                 = "Закрыть";
+"desk.library.ticket_information_title"                 = "Информация о заявке";
+"desk.library.ticket_information_edit"                  = "Редактировать";
+"desk.library.ticket_information_ticket_details"        = "Сведения о заявке";
+"desk.library.ticket_information_created_date"          = "Дата создания";
+"desk.library.ticket_information_department"            = "Отдел";
+"desk.library.ticket_information_channel"               = "Канал";
+"desk.library.ticket_information_priority"              = "Приоритет";
+"desk.library.ticket_information_status"                = "Статус";
+"desk.library.ticket_information_due_date"              = "Срок";
+"desk.library.draft"                                    = "Черновик";
+"desk.library.ticket.add_a_comment"                     = "Добавить комментарий";
+"desk.library.thread.Conversation"                      = "Беседы";
+"desk_sdk_network_alert"                                = "Отсутствует подключение к сети";
+"desk_community_new_topic_add_a_title"                  = "Добавить заголовок";
+"desk_library_community_add_tags"                       = "Добавить теги";
+"desk_library_community_idea"                           = "Идея";
+"desk_library_community_problem"                        = "Проблема";
+"desk_library_community_question"                       = "Вопрос";
+"desk_library_community_tag_rule"                       = "Добавьте теги через запятую";
+"desk_library_alert_ok"                                 = "OK";
+"desk_library_alert_msg_close_ticket"                   = "Вы действительно хотите закрыть эту заявку?";
+"desk_library_alert_msg_delete_comment"                 = "Вы действительно хотите удалить этот комментарий?";
+"desk_library_community_done"                           = "Готово";
+"desk.library.follow"                                   = "Подписаться";
+"desk.library.following"                                = "Подписки";
+"desk_library_msg_comment_delete_failed"                = "Не удалось удалить комментарий";
+"desk_sdk_community_topic_edit_tag"                     = "Редактировать тег";
+"desk_library_community_continue"                       = "Продолжить";
+"desk_library_community_sub_category"                   = "Подкатегория";
+
+"desk_library_community_discard_alert"                  = "Хотите продолжить? Обратите внимание, что изменения будут потеряны.";
+"desk.library.updated.sec"                              = "Только что";
+"desk_library_msg_comment_add_success" 			= "Комментарий успешно добавлен";
+"desk_library_msg_attachment_uploading" 		= "Осталось загрузить вложения";
+
+//New Strings -------------------------------------- >
+
+"desk.library.community_category_comments"              = "%s Comments";
+"desk.library.empty_error_message_email"                = "Email can not be blank";
+"desk.library.feed_back_error_message"                  = "Feedback cannot be blank";
+"desk.library.msg_reply_failed"                         = "Reply added failed";
+"desk.library.msg_reply_success"                        = "Reply added success";
+"desk.library.no_data"                                  = "No Data";
+"desk.library.no_data_msg_articles"                     = "There are no articles here.";
+"desk.library.no_data_msg_tickets"                      = "There are no tickets here.";
+"desk.library.no_data_msg_topics"                       = "There are no topics here.";
+"desk.library.no_data_msg_conversations"                = "There are no conversations here.";
+"desk.library.thread.draft"                             = "Draft @";
+"desk.library.thread.option.delete"                     = "Delete";
+"desk.library.ticket.attachments"                       = "Attachments (%s)";
+"desk.library.ticket.closed.failed"                     = "Ticket failed to Close";
+"desk.library.ticket_information_priority"              = "Priority";
+"desk.library.updated.message"                          = "Last updated about %s";
+"desk_library_community_category"                       = "Category";
+"desk_library_community_content_error"                  = "Please enter content for your topic";
+"desk_library_msg_close_ticket_failed"                  = "Failed to close the ticket";
+"desk_library_msg_comment_add_failed"                   = "Failed to add comment";
+"desk.library.help"                                     = "Zoho Desk Help";
+"desk.library.topic_content_placeholder"                = "Content text";
+
+"zdsdk_topic_alert_delete"                              = "Are you sure want to delete this Topic?";
+"zdsdk_topic_delete_success"                            = "Topic Deleted successfully";
+"zdsdk_topic_delete_Failed"                             = "Failed to delete the Topic.";
+"zdsdk_addTicket_actionsheet_description"               = "Select option for %@";
+"zdsdk_addTicket_actionsheet_fail_description"          = "No %@ Found";
+
+"zdsdk_addTicket_multiselect_empty"                     = "Tap to select values";
+"zdsdk_addTicket_multiselect_selected"                  = "%@ Values";
+"zdsdk_addTicket_validate_error"                        = "Please fill valid inputs";
+
+"zdsdk_createTopic_locked_msg"                          = "All Categories are locked.";
+
+"zdsdk_topic_update"                                    = "Update";
+
+"zdsdk_community_Follow_error"                          = "Unable to follow the category";
+"zdsdk_community_unFollow_error"                        = "Unable to unfollow the category";
+"desk_library_msg_topic_add_failed"                     = "Failed to add the topic";
+
+
+// Need to update
+"desk_library_community_subject_error"                  = "Enter Title"; // old value = "Enter Subject"
+
+

@@ -1,0 +1,285 @@
+"DeskPortal.Dashboard.Heading"                          = "Zoho Desk";
+"DeskPortal.Network.failed.error.message"               = "Kontroller din internetforbindelse";
+"DeskPortal.Dashboard.addticket.title"                  = "Afsend en anmodning";
+"DeskPortal.Dashboard.addticket.description"            = "Søg hjælp hos vores agenter";
+"DeskPortal.Dashboard.helpcenter.title"                 = "Videnbase";
+"DeskPortal.Dashboard.helpcenter.description"           = "Gennemse vores omfattende arkiv med hjælpeartikler";
+"DeskPortal.Dashboard.community.title"                  = "Gruppe";
+"DeskPortal.Dashboard.community.description"            = "Find og del løsninger med vores brugergruppe";
+"DeskPortal.Dashboard.myticket.title"                   = "Mine anmodninger";
+"DeskPortal.Dashboard.myticket.description"             = "Se og administrer anmodninger, som du har sendt";
+"DeskPortal.Helpcenter.category.subheading"             = "Afsnit";
+"DeskPortal.Helpcenter.article.subheading"              = "Artikel";
+"DeskPortal.Helpcenter.categories.subheading"           = "Afsnit";
+"DeskPortal.Helpcenter.articles.subheading"             = "Artikler";
+"DeskPortal.Addticket.title"                            = "Tilføj anmodning";
+"DeskPortal.Helpcenter.feedback.title"                  = "Feedback";
+"DeskPortal.Helpcenter.feedback.description"            = "Vi beklager, at artiklen ikke var nyttig.";
+"DeskPortal.Helpcenter.article.detail.title"            = "Ofte stillede spørgsmål";
+"DeskPortal.Helpcenter.article.detail.vote.description" = "Var denne artikel nyttig?";
+"DeskPortal.Helpcenter.article.detail.relatedtitle"     = "Relaterede artikler";
+"DeskPortal.Myticket.conversation.option.title"         = "Samtalehandlinger";
+"DeskPortal.Myticket.comment.option.title"              = "Kommentarhandlinger";
+"DeskPortal.Myticket.option.closeticket"                = "Luk billet";
+"DeskPortal.Myticket.option.editcomment"                = "Rediger kommentar";
+"DeskPortal.Error.message.reload"                       = "Forsøg igen";
+
+
+
+
+"zdsdk.general.powered"                                 = "Leveret af Zoho";
+
+"zdsdk.general.back"                                    = "Tilbage";
+"zdsdk.general.cancel"                                  = "Annuller";
+"zdsdk.general.submit"                                  = "Indsend";
+"zdsdk.general.email"                                   = "E-mail";
+
+"zdsdk.attachements.attachements"                       = "Vedhæftede filer";
+"zdsdk.dashboard.title"                                 = "Velkommen!";
+
+"zdsdk.helpcenter.search"                               = "Søg";
+
+"zdsdk.helpcenter.solutions"                            = "Løsninger";
+
+"zdsdk.helpcenter.recentsearch"                         = "Nylig søgning";
+"zdsdk.helpcenter.results"                              = "Resultater";
+"zdsdk.helpcenter.noarticlesfound"                      = "Ingen artikler er fundet";
+"zdsdk.helpcenter.nodescription"                        = "Ingen beskrivelse";
+
+"zdsdk.addnewticket.successmsg"                         = "Anmodning blev oprettet. Vi vil kontakte dig hurtigst muligt.";
+"zdsk.addnewticket.validEmail"                          = "Indtast en gyldig e-mail-adresse.";
+"zdsk.addnewticket.Emptyfield"                          = "Udfyld venligst alle obligatoriske felter.";
+"zdsk.addnewticket.createError"                         = "Kan ikke oprette anmodning.";
+"zdsdk.createTicket.entervalid"                         = "Indtast en gyldig %@";
+"desk.library.newticket.field.error"                    = "%@ kan ikke være tom";
+"desk.library.newticket.date.picker"                    = "Eller vælg den nærmeste dato nedenunder";
+"desk.library.newticket.file.size.error"                = "Filstørrelse må ikke overskride 20 MB";
+
+//FeedBack Screen
+
+"zdsdk.feedback.barbutton"                              = "Spring over";
+
+"zdsdk.feedback.feedbackus"                             = "Hjælp os at blive bedre.";
+"zdsdk.feedback.placeholder"                            = "Indtast din feedback her";
+"zdsdk.feedback.thanks"                                 = "Tak for din feedback. Vi vil snart komme tilbage til dig.";
+
+//Solution Detail Screen
+
+"desk.library.solution.like.count"                      = "1 bruger kunne lide denne artikel";
+"desk.library.solution.likes.count"                     = "%@ brugere kunne lide denne artikel";
+"desk.library.solution.you.only.like.count"             = "Du kunne lide denne artikel";
+"desk.library.solution.you.like.count"                  = "Du og en anden bruger kunne lide denne artikel";
+"desk.library.solution.you.likes.count"                 = "Du og %@ andre brugere kunne lide denne artikel";
+
+"zdsdk.Solution.yes"                                    = "Ja";
+"zdsdk.Solution.no"                                     = "Nej";
+"zdsdk.Solution.selectyes"                              = "Du syntes, at denne artikel var nyttig.";
+"zdsdk.Solution.today"                                  = "I dag";
+"zdsdk.Solution.Yesterday"                              = "I går";
+"zdsdk.Solution.ahour"                                  = "1 time siden";
+"zdsdk.Solution.aweek"                                  = "1 uge siden";
+"zdsdk.Solution.amonth"                                 = "1 måned siden";
+"zdsdk.Solution.ayear"                                  = "1 år siden";
+"zdsdk.Solution.hours"                                  = "%@ timer siden";
+"zdsdk.Solution.days"                                   = "%@ dage siden";
+"zdsdk.Solution.weeks"                                  = "%@ uger siden";
+"zdsdk.Solution.years"                                  = "%@ år siden";
+"zdsdk.Solution.months"                                 = "%@ måneder siden";
+"zdsdk.Solution.minute"                                 = "%@ minutter siden";
+"zdsdk.Solution.second"                                 = "%@ sekunder siden";
+"desk.library.solution.attachment"                      = "1 vedhæftet fil";
+"desk.library.solution.attachments"                     = "%@ vedhæftede filer";
+"desk.library.updated.sec.left"                         = "1 sekund tilbage";
+"desk.library.updated.secs.left"                        = "%@ sekunder tilbage";
+"desk.library.updated.sec.due.by"                       = "Forsinket med 1 sekund";
+"desk.library.updated.secs.due.by"                      = "Forsinket med %@ sekunder";
+"desk.library.updated.min"                              = "1 minut siden";
+"desk.library.updated.min.left"                         = "1 minut tilbage";
+"desk.library.updated.mins.left"                        = "%@ minutter tilbage";
+"desk.library.updated.min.due.by"                       = "Forsinket med 1 minut";
+"desk.library.updated.mins.due.by"                      = "Forsinket med %@ minutter";
+"desk.library.updated.hour.left"                        = "1 time tilbage";
+"desk.library.updated.hours.left"                       = "%@ timer tilbage";
+"desk.library.updated.hour.due.by"                      = "Forsinket med en time";
+"desk.library.updated.hours.due.by"                     = "Forsinket med %@ timer";
+"desk.library.updated.days.left"                        = "%@ dage tilbage";
+"desk.library.updated.day.left"                         = "1 dag tilbage";
+"desk.library.updated.days.due.by"                      = "Forsinket med %@ dage";
+"desk.library.updated.day.due.by"                       = "Forsinket med 1 dag";
+"desk.library.updated.one.month.left"                   = "1 måned tilbage";
+"desk.library.updated.months.left"                      = "%@ måneder tilbage";
+"desk.library.updated.one.month.due_by"                 = "Forsinket med 1 måned";
+"desk.library.updated.months.due.by"                    = "Forsinket med %@ måneder";
+"desk.library.updated.year.left"                        = "1 år tilbage";
+"desk.library.updated.years.left"                       = "%@ år tilbage";
+"desk.library.updated.year.due_by"                      = "Forsinket med 1 år";
+"desk.library.updated.years.due_by"                     = "Forsinket med %@ år";
+
+//Community screen
+"zdsdk.community.posts"                                 = "%@ Indlæg";
+"zdsdk.community.forums"                                = "%@ Fora";
+"zdsdk.community.changeType"                            = "Skift type";
+"zdsdk.community.all"                                   = "Alt";
+"zdsdk.community.questions"                             = "Spørgsmål";
+"zdsdk.community.problems"                              = "Problemer";
+"zdsdk.community.ideas"                                 = "Ideer";
+"zdsdk.community.allposts"                              = "Alle posteringer";
+"zdsdk.community.comments"                              = "Kommentar";
+"zdsdk.community.liked"                                 = "Syntes godt om";
+
+//Ticket List Screen
+"desk.library.from"                                     = "Fra";
+"desk.library.to"                                       = "Til";
+"desk.library.send"                                     = "Send";
+"zdsdk.ticket.comment"                                  = "Kommentar";
+"zdsdk.ticket.thread"                                   = "Tråd";
+"zdsdk.ticket.ticketAction"                             = "Handlinger med anmodninger";
+
+"zdsdk.ticket.deleteDraft"                              = "Slet udkast";
+"zdsdk.ticket.reply"                                    = "Svar";
+"zdsdk.ticket.editDraft"                                = "Rediger kladde";
+"zdsdk.ticket.sendDraft"                                = "Send kladde";
+"zdsdk.ticket.deleteComment"                            = "Slet kommentar";
+"zdsdk.ticket.camera"                                   = "Kamera";
+"zdsdk.ticket.photoLibrary"                             = "Fotobibliotek";
+"zdsdk.ticket.attachementTitle"                         = "Kilde til vedhæftet fil";
+"zdsdk.ticket.priorityUpdateMessage"                    = "Prioritet er opdateret";
+"zdsdk.ticket.TicketClosedMessage"                      = "Anmodning er lukket";
+"zdsdk.ticket.error"                                    = "Noget gik galt.";
+"zdsdk.comment.deleteConfirmation"                      = "Er du sikker?";
+"zdsdk.comment.deleteSuccessMessage"                    = "Kommentar er slettet";
+"zdsdk.comment.emptyDescriptionMessage"                 = "Indtast kommentarbeskrivelse";
+"zdsdk.ticket.addComment"                               = "Tilføj kommentar";
+"zdsdk.ticket.deleteTopic"                              = "Slet emne";
+"zdsdk.ticket.editTopic"                                = "Rediger emne";
+"zdsdk.topic.attacheFile"                               = "Vedhæft filer";
+"zdsdk.topic.addTag"                                    = "Tilføj tag";
+"zdsdk.topic.saveAsDraft"                               = "Gem som kladde";
+"zdsdk.topic.createTopic"                               = "Opret emne";
+"desk.library.priority.change.failed"                   = "Kunne ikke opdatere prioritet";
+"desk.library.network.connection"                       = "Netværksforbindelse er afbrudt";
+"desk.library.ticket.closed"                            = "Lukket";
+"desk.library.select.priority"                          = "Vælg prioritet";
+"desk.library.thread.attachment.error"                  = "Fejl under overførsel af vedhæftet fil. Prøv igen.";
+
+/////
+"desk.library.community_topics_type_announcement"       = "Meddelelser";
+"desk.library.community_topics_all_posts_count"         = "Alle indlæg (%@)";
+"desk.library.community_topics_type_announcement_count" = "Meddelelser (%@)";
+"desk.library.community_topics_type_question_count"     = "Spørgsmål (%@)";
+"desk.library.community_topics_type_idea_count"         = "Ideer (%@)";
+"desk.library.community_topics_type_problem_count"      = "Problemer (%@)";
+"desk.library.community_topics_likes"                   = "%@ synes godt om";
+"desk.library.community_topics_status_ANSWERED"         = "Besvaret";
+"desk.library.community_topics_status_UNANSWERED"       = "Ubesvaret";
+"desk.library.community_topics_status_INPROGRESS"       = "I gang";
+"desk.library.community_topics_status_IMPLEMENTED"      = "Implementeret";
+"desk.library.community_topics_status_UNDERREVIEW"      = "Under gennemgang";
+"desk.library.community_topics_status_WILLNOTIMPLEMENT" = "Vil ikke blive implementeret";
+"desk.library.community_topics_status_MAYBELATER"       = "Måske senere";
+"desk.library.community_topics_status_NOTAPROBLEM"      = "Ikke et problem";
+"desk.library.community_topics_status_TEMPORARYFIX"     = "Midlertidig løsning";
+"desk.library.community_topics_status_SOLVED"           = "Løst";
+"desk.library.community_topics_status_UNSOLVED"         = "Ikke løst";
+"desk.library.community_topics_status_NEEDMOREINFO"     = "Har brug for flere oplysninger";
+"desk.library.community_topics_status_ANALAYZING"       = "Analyserer";
+"desk.library.community_topics_status_WORKINGONIT"      = "Arbejder på det";
+"desk.library.profile"                                  = "Profil";
+"desk.library.live_chat"                                = "Live chat";
+"desk.library.community_topic_attachment_download"      = "Hent";
+"desk.library.community_topic_attachment_view"          = "Vis";
+"desk.library.community_topic_attachment_share"         = "Del";
+"desk.library.no_network_msg"                           = "Ingen internetforbindelse";
+
+"desk.library.helpcenter_articles_count"                = "%@  Artikler";
+"desk.library_community_show_details"                   = "Vis oplysninger";
+"desk.library_community_showing_tag"                    = "viser";
+"desk.library_community_hiding_tag"                     = "skjuler";
+"navigation_drawer_open"                                = "Åbn navigationsskuffe";
+"navigation_drawer_close"                               = "Luk navigationsskuffe";
+"action_settings"                                       = "Indstillinger";
+"desk_nav_drawer_open"                                  = "Åbn";
+"desk_nav_drawer_close"                                 = "Luk";
+"desk.library.ticket_information_title"                 = "Anmodningsoplysninger";
+"desk.library.ticket_information_edit"                  = "Rediger";
+"desk.library.ticket_information_ticket_details"        = "Anmodningsdetaljer";
+"desk.library.ticket_information_created_date"          = "Oprettet dato";
+"desk.library.ticket_information_department"            = "Afdeling";
+"desk.library.ticket_information_channel"               = "Kanal";
+"desk.library.ticket_information_priority"              = "Prioritet";
+"desk.library.ticket_information_status"                = "Status";
+"desk.library.ticket_information_due_date"              = "Forfaldsdato";
+"desk.library.draft"                                    = "Kladde";
+"desk.library.ticket.add_a_comment"                     = "Tilføj en kommentar";
+"desk.library.thread.Conversation"                      = "Samtaler";
+"desk_sdk_network_alert"                                = "Netværksforbindelse er tabt";
+"desk_community_new_topic_add_a_title"                  = "Tilføj en titel";
+"desk_library_community_add_tags"                       = "Tilføj mærker";
+"desk_library_community_idea"                           = "Ide";
+"desk_library_community_problem"                        = "Problem";
+"desk_library_community_question"                       = "Spørgsmål";
+"desk_library_community_tag_rule"                       = "Brug komma til at tilføje flere mærker";
+"desk_library_alert_ok"                                 = "OK";
+"desk_library_alert_msg_close_ticket"                   = "Er du sikker på, du vil lukke denne anmodning?";
+"desk_library_alert_msg_delete_comment"                 = "Er du sikker på, du vil slette denne kommentar?";
+"desk_library_community_done"                           = "Færdig";
+"desk.library.follow"                                   = "Følg";
+"desk.library.following"                                = "Følger";
+"desk_library_msg_comment_delete_failed"                = "Kunne ikke slette kommentar";
+"desk_sdk_community_topic_edit_tag"                     = "Rediger mærke";
+"desk_library_community_continue"                       = "Fortsæt";
+"desk_library_community_sub_category"                   = "Underkategori";
+
+"desk_library_community_discard_alert"                  = "Ønsker du at fortsætte? Husk på, at ændringer vil gå tabt.";
+"desk.library.updated.sec"                              = "Lige nu";
+"desk_library_msg_comment_add_success"                  = "Kommentar er tilføjet";
+"desk_library_msg_attachment_uploading"                 = "Endnu ikke overførte filer til vedhæftelse";
+
+//New Strings -------------------------------------- >
+
+"desk.library.community_category_comments"              = "%s Comments";
+"desk.library.empty_error_message_email"                = "Email can not be blank";
+"desk.library.feed_back_error_message"                  = "Feedback cannot be blank";
+"desk.library.msg_reply_failed"                         = "Reply added failed";
+"desk.library.msg_reply_success"                        = "Reply added success";
+"desk.library.no_data"                                  = "No Data";
+"desk.library.no_data_msg_articles"                     = "There are no articles here.";
+"desk.library.no_data_msg_tickets"                      = "There are no tickets here.";
+"desk.library.no_data_msg_topics"                       = "There are no topics here.";
+"desk.library.no_data_msg_conversations"                = "There are no conversations here.";
+"desk.library.thread.draft"                             = "Draft @";
+"desk.library.thread.option.delete"                     = "Delete";
+"desk.library.ticket.attachments"                       = "Attachments (%s)";
+"desk.library.ticket.closed.failed"                     = "Ticket failed to Close";
+"desk.library.ticket_information_priority"              = "Priority";
+"desk.library.updated.message"                          = "Last updated about %s";
+"desk_library_community_category"                       = "Category";
+"desk_library_community_content_error"                  = "Please enter content for your topic";
+"desk_library_msg_close_ticket_failed"                  = "Failed to close the ticket";
+"desk_library_msg_comment_add_failed"                   = "Failed to add comment";
+"desk.library.help"                                     = "Zoho Desk Help";
+"desk.library.topic_content_placeholder"                = "Content text";
+
+"zdsdk_topic_alert_delete"                              = "Are you sure want to delete this Topic?";
+"zdsdk_topic_delete_success"                            = "Topic Deleted successfully";
+"zdsdk_topic_delete_Failed"                             = "Failed to delete the Topic.";
+"zdsdk_addTicket_actionsheet_description"               = "Select option for %@";
+"zdsdk_addTicket_actionsheet_fail_description"          = "No %@ Found";
+
+"zdsdk_addTicket_multiselect_empty"                     = "Tap to select values";
+"zdsdk_addTicket_multiselect_selected"                  = "%@ Values";
+"zdsdk_addTicket_validate_error"                        = "Please fill valid inputs";
+
+"zdsdk_createTopic_locked_msg"                          = "All Categories are locked.";
+
+"zdsdk_topic_update"                                    = "Update";
+
+"zdsdk_community_Follow_error"                          = "Unable to follow the category";
+"zdsdk_community_unFollow_error"                        = "Unable to unfollow the category";
+"desk_library_msg_topic_add_failed"                     = "Failed to add the topic";
+
+
+
+// Need to update
+"desk_library_community_subject_error"                  = "Enter Title";// old value = "Enter Subject"
+

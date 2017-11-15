@@ -1,0 +1,126 @@
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "0D5-LA-E8i"; */
+"0D5-LA-E8i.title" = "Back";
+
+/* Class = "UILabel"; text = "Nov 22"; ObjectID = "0ak-qQ-FFP"; */
+"0ak-qQ-FFP.text" = "Nov 22";
+
+/* Class = "UIButton"; normalTitle = "Priority"; ObjectID = "2Gx-44-JkT"; */
+"2Gx-44-JkT.normalTitle" = "Priority";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7NF-uo-fnA"; */
+"7NF-uo-fnA.text" = "Label";
+
+/* Class = "UILabel"; text = "OverDue"; ObjectID = "DIx-K0-CPf"; */
+"DIx-K0-CPf.text" = "OverDue";
+
+/* Class = "UILabel"; text = "Submit Tickets"; ObjectID = "EHJ-wq-Jml"; */
+"EHJ-wq-Jml.text" = "Submit Tickets";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "Gvq-16-kAf"; */
+"Gvq-16-kAf.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UINavigationItem"; title = "Zoho Desk"; ObjectID = "JIQ-6B-02k"; */
+"JIQ-6B-02k.title" = "Zoho Desk";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "NYm-kG-rFf"; */
+"NYm-kG-rFf.text" = "Label";
+
+/* Class = "UILabel"; text = "Help Center"; ObjectID = "QxY-jO-val"; */
+"QxY-jO-val.text" = "Help Center";
+
+/* Class = "UILabel"; text = "Nov 02 02:257PM"; ObjectID = "RRZ-gf-mT7"; */
+"RRZ-gf-mT7.text" = "Nov 02 02:257PM";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RcU-CS-Z8B"; */
+"RcU-CS-Z8B.text" = "Label";
+
+/* Class = "UILabel"; text = "to me and 2 others"; ObjectID = "SE5-ls-HNB"; */
+"SE5-ls-HNB.text" = "to me and 2 others";
+
+/* Class = "UILabel"; text = "Help Center"; ObjectID = "SIB-9b-xzZ"; */
+"SIB-9b-xzZ.text" = "Help Center";
+
+/* Class = "UITextView"; text = "This is very very natural comment..."; ObjectID = "TY5-3p-UgO"; */
+"TY5-3p-UgO.text" = "This is very very natural comment...";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "TmY-k9-IcA"; */
+"TmY-k9-IcA.text" = "Description";
+
+/* Class = "UILabel"; text = "Gina Davis"; ObjectID = "VoK-aI-QaN"; */
+"VoK-aI-QaN.text" = "Gina Davis";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "VsA-i4-pAT"; */
+"VsA-i4-pAT.text" = "Title";
+
+/* Class = "UILabel"; text = "Subject message Comes here.."; ObjectID = "Yp6-Op-E4O"; */
+"Yp6-Op-E4O.text" = "Subject message Comes here..";
+
+/* Class = "UILabel"; text = "zoho@zoho.com"; ObjectID = "f4b-G7-tMP"; */
+"f4b-G7-tMP.text" = "zoho@zoho.com";
+
+/* Class = "UITextField"; text = "This is text"; ObjectID = "fik-5p-1BJ"; */
+"fik-5p-1BJ.text" = "This is text";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hRv-Iz-CEh"; */
+"hRv-Iz-CEh.text" = "Label";
+
+/* Class = "UILabel"; text = "Display"; ObjectID = "iNp-wp-NSq"; */
+"iNp-wp-NSq.text" = "Display";
+
+/* Class = "UIButton"; normalTitle = "Due date"; ObjectID = "kHt-ZM-kSb"; */
+"kHt-ZM-kSb.normalTitle" = "Due date";
+
+/* Class = "UILabel"; text = "Bool"; ObjectID = "ktu-Jk-t01"; */
+"ktu-Jk-t01.text" = "Bool";
+
+/* Class = "UILabel"; text = "Seek help from Agents"; ObjectID = "lCG-JF-HSd"; */
+"lCG-JF-HSd.text" = "Seek help from Agents";
+
+/* Class = "UILabel"; text = "Invalid Email"; ObjectID = "lFV-tC-sFq"; */
+"lFV-tC-sFq.text" = "Invalid Email";
+
+/* Class = "UILabel"; text = "input"; ObjectID = "n7i-MS-D4t"; */
+"n7i-MS-D4t.text" = "input";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "o1q-sa-vWR"; */
+"o1q-sa-vWR.normalTitle" = "Back";
+
+/* Class = "UILabel"; text = "View your tickets, submit tickets Or manage your exiting tickets"; ObjectID = "p0y-17-BLT"; */
+"p0y-17-BLT.text" = "View your tickets, submit tickets Or manage your exiting tickets";
+
+/* Class = "UILabel"; text = "This In writing or editing, to write (something: either an entire word or text"; ObjectID = "pF3-qg-wNK"; */
+"pF3-qg-wNK.text" = "This In writing or editing, to write (something: either an entire word or text";
+
+/* Class = "UIButton"; normalTitle = "Status"; ObjectID = "plE-bo-Ftj"; */
+"plE-bo-Ftj.normalTitle" = "Status";
+
+/* Class = "UIButton"; normalTitle = "Help Center"; ObjectID = "rSr-0H-NcN"; */
+"rSr-0H-NcN.normalTitle" = "Help Center";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "sed-e9-2zH"; */
+"sed-e9-2zH.title" = "Title";
+
+/* Class = "UILabel"; text = "Info"; ObjectID = "tFL-Tu-sV4"; */
+"tFL-Tu-sV4.text" = "Info";
+
+/* Class = "UILabel"; text = "Info message come here."; ObjectID = "tJH-FM-UTl"; */
+"tJH-FM-UTl.text" = "Info message come here.";
+
+/* Class = "UILabel"; text = "Articles  |  Ideas  |  Questions"; ObjectID = "uhF-yA-4lo"; */
+"uhF-yA-4lo.text" = "Articles  |  Ideas  |  Questions";
+
+/* Class = "UIButton"; normalTitle = "Get Data"; ObjectID = "xUi-Kp-Mdp"; */
+"xUi-Kp-Mdp.normalTitle" = "Get Data";
+
+/* Class = "UIButton"; normalTitle = "New"; ObjectID = "xyD-nQ-v6F"; */
+"xyD-nQ-v6F.normalTitle" = "New";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "y4K-ST-Y29"; */
+"y4K-ST-Y29.title" = "Title";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "ybV-Q5-v2h"; */
+"ybV-Q5-v2h.text" = "Email";
+
+/* Class = "UILabel"; text = "Powered by Zoho Desk"; ObjectID = "zGa-X4-NDM"; */
+"zGa-X4-NDM.text" = "Powered by Zoho Desk";

@@ -1,0 +1,282 @@
+"DeskPortal.Dashboard.Heading"                                = "Zoho Desk";
+"DeskPortal.Network.failed.error.message"                                  = "インターネット接続を確認してください";
+"DeskPortal.Dashboard.addticket.title"                          = "チケットを提出する";
+"DeskPortal.Dashboard.addticket.description"                     = "私たちのエージェントに協力させてください";
+"DeskPortal.Dashboard.helpcenter.title"                           = "知識ベース";
+"DeskPortal.Dashboard.helpcenter.description"                 = "私たちの幅広いFAQ一覧を閲覧";
+"DeskPortal.Dashboard.community.title"                             = "コミュニティ";
+"DeskPortal.Dashboard.community.description"                         = "ソリューションを発見しユーザーコミュニティと共有";
+"DeskPortal.Dashboard.myticket.title"                             = "マイチケット";
+"DeskPortal.Dashboard.myticket.description"                     = "提出したチケットを表示して管理";
+"DeskPortal.Helpcenter.category.subheading"                             = "セクション";
+"DeskPortal.Helpcenter.article.subheading"                             = "項目";
+"DeskPortal.Helpcenter.categories.subheading"                           = "セクション";
+"DeskPortal.Helpcenter.articles.subheading"                             = "項目";
+"DeskPortal.Addticket.title"                              = "チケットを追加";
+"DeskPortal.Helpcenter.feedback.title"                                  = "フィードバック";
+"DeskPortal.Helpcenter.feedback.description"                                  = "申し訳ありません。記事が役に立ちませんでした。";
+"DeskPortal.Helpcenter.article.detail.title"                                    = "FAQs";
+"DeskPortal.Helpcenter.article.detail.vote.description"                        = "この記事は役に立ちましたか?";
+"DeskPortal.Helpcenter.article.detail.relatedtitle"                         = "関連記事";
+"DeskPortal.Myticket.conversation.option.title"                       = "会話アクション";
+"DeskPortal.Myticket.comment.option.title"                            = "コメントアクション";
+"DeskPortal.Myticket.option.closeticket"                              = "チケットを終了";
+"DeskPortal.Myticket.option.editcomment"                              = "コメントを編集";
+"DeskPortal.Error.message.reload"                                = "再試行";
+
+
+
+
+"zdsdk.general.powered"                                 = "Zoho提供";
+
+"zdsdk.general.back"                                    = "戻る";
+"zdsdk.general.cancel"                                  = "キャンセル";
+"zdsdk.general.submit"                                  = "提出";
+"zdsdk.general.email"                                   = "Eメール";
+
+"zdsdk.attachements.attachements"                       = "添付ファイル";
+"zdsdk.dashboard.title"                                 = "ようこそ!";
+
+"zdsdk.helpcenter.search"                               = "検索";
+
+"zdsdk.helpcenter.solutions"                            = "ソリューション";
+
+"zdsdk.helpcenter.recentsearch"                         = "最近の検索";
+"zdsdk.helpcenter.results"                              = "結果";
+"zdsdk.helpcenter.noarticlesfound"                      = "項目が見つかりませんでした";
+"zdsdk.helpcenter.nodescription"                        = "記述がありません";
+
+"zdsdk.addnewticket.successmsg"                         = "チケットの作成に成功しました。できるだけ速やかにご連絡いたします。";
+"zdsk.addnewticket.validEmail"                          = "有効なEメールアドレスを入力してください。";
+"zdsk.addnewticket.Emptyfield"                          = "必須フィールドをすべて入力してください。";
+"zdsk.addnewticket.createError"                         = "チケットを作成することができません。";
+"zdsdk.createTicket.entervalid"                         = "以下の項目を有効なものにしてください: %@";
+"desk.library.newticket.field.error"                    = "%@ 空白にすることができません";
+"desk.library.newticket.date.picker" = "または、以下から最も近い日時を選択してください";
+"desk.library.newticket.file.size.error" = "ファイルサイズの上限は20MBです";
+
+//FeedBack Screen
+"zdsdk.feedback.barbutton"                              = "スキップ";
+"zdsdk.feedback.feedbackus"                             = "改善のためにお力添えください。";
+"zdsdk.feedback.placeholder"                            = "ここにフィードバックを入力してください";
+"zdsdk.feedback.thanks"                                 = "フィードバックをいただきありがとうございます。すぐに折り返しご連絡いたします。";
+
+//Solution Detail Screen
+
+"desk.library.solution.like.count"                      = "1人のユーザーがこの記事をいいねしました";
+"desk.library.solution.likes.count"                     = "%@人のユーザーがこの記事をいいねしました";
+"desk.library.solution.you.only.like.count"             = "あなたはこの記事をいいねしました";
+"desk.library.solution.you.like.count"                  = "あなたと他のユーザーがこの記事をいいねしました";
+"desk.library.solution.you.likes.count"                 = "あなたと %@ のユーザーがこの記事をいいねしました";
+
+"zdsdk.Solution.yes"                                    = "はい";
+"zdsdk.Solution.no"                                     = "いいえ";
+"zdsdk.Solution.selectyes"                              = "この記事が役に立ちました。";
+"zdsdk.Solution.today"                                  = "今日";
+"zdsdk.Solution.Yesterday"                              = "昨日";
+"zdsdk.Solution.ahour"                                  = "1時間前";
+"zdsdk.Solution.aweek"                                  = "1週間前";
+"zdsdk.Solution.amonth"                                 = "1ヶ月前";
+"zdsdk.Solution.ayear"                                  = "1年前";
+"zdsdk.Solution.hours"                                  = "%@時間前";
+"zdsdk.Solution.days"                                   = "%@日前";
+"zdsdk.Solution.weeks"                                  = "%@週間前";
+"zdsdk.Solution.years"                                  = "%@年前";
+"zdsdk.Solution.months"                                 = "%@ヶ月前";
+"zdsdk.Solution.minute"                                 = "%@分前";
+"zdsdk.Solution.second"                                 = "%@秒前";
+"desk.library.solution.attachment"                      = "1個の添付ファイル";
+"desk.library.solution.attachments"                     = "%@個の添付ファイル";
+"desk.library.updated.sec.left"                         = "1秒残っています";
+"desk.library.updated.secs.left"                        = "%@秒残っています";
+"desk.library.updated.sec.due.by"                       = "1秒遅れ";
+"desk.library.updated.secs.due.by"                      = "%@秒遅れ";
+"desk.library.updated.min"                              = "1分前";
+"desk.library.updated.min.left"                         = "1分残っています";
+"desk.library.updated.mins.left"                        = "%@分残っています";
+"desk.library.updated.min.due.by"                       = "1分遅れです";
+"desk.library.updated.mins.due.by"                      = "%@ 分遅れです";
+"desk.library.updated.hour.left"                        = "1時間残っています";
+"desk.library.updated.hours.left"                       = "%@時間残っています";
+"desk.library.updated.hour.due.by"                      = "1時間遅れです";
+"desk.library.updated.hours.due.by"                     = "%@時間遅れです";
+"desk.library.updated.days.left"                        = "%@日残っています";
+"desk.library.updated.day.left"                         = "1日残っています";
+"desk.library.updated.days.due.by"                      = "%@日遅れです";
+"desk.library.updated.day.due.by"                       = "1日遅れです";
+"desk.library.updated.one.month.left"                   = "1ヶ月残っています";
+"desk.library.updated.months.left"                      = "%@ヶ月残っています";
+"desk.library.updated.one.month.due_by"                 = "1ヶ月遅れです";
+"desk.library.updated.months.due.by"                    = "%@ヶ月遅れです";
+"desk.library.updated.year.left"                        = "1年残っています";
+"desk.library.updated.years.left"                       = "%@年残っています";
+"desk.library.updated.year.due_by"                      = "1年遅れです";
+"desk.library.updated.years.due_by"                     = "%@ 年遅れです";
+
+//Community screen
+"zdsdk.community.posts"                                 = "%@投稿";
+"zdsdk.community.forums"                                = "%@フォーラム";
+"zdsdk.community.changeType"                            = "変更の種類";
+"zdsdk.community.all"                                   = "すべて";
+"zdsdk.community.questions"                             = "質問";
+"zdsdk.community.problems"                              = "問題";
+"zdsdk.community.ideas"                                 = "アイデア";
+"zdsdk.community.allposts"                              = "すべての投稿";
+"zdsdk.community.comments"                              = "コメント";
+"zdsdk.community.liked"                                 = "いいねしました";
+
+//Ticket List Screen
+"desk.library.from"                                     = "送信元:";
+"desk.library.to"                                       = "送信先:";
+"desk.library.send"                                     = "送信";
+"zdsdk.ticket.comment"                                  = "コメント";
+"zdsdk.ticket.thread"                                   = "スレッド";
+"zdsdk.ticket.ticketAction"                             = "チケットアクション";
+
+"zdsdk.ticket.deleteDraft"                              = "下書きを削除";
+"zdsdk.ticket.reply"                                    = "返信";
+"zdsdk.ticket.editDraft"                                = "下書きを編集";
+"zdsdk.ticket.sendDraft"                                = "下書きを送信";
+"zdsdk.ticket.deleteComment"                            = "コメントを削除";
+"zdsdk.ticket.camera"                                   = "カメラ";
+"zdsdk.ticket.photoLibrary"                             = "フォトライブラリ";
+"zdsdk.ticket.attachementTitle"                         = "添付ファイルのソース";
+"zdsdk.ticket.priorityUpdateMessage"                    = "優先度が更新されました";
+"zdsdk.ticket.TicketClosedMessage"                      = "チケットが終了されました";
+"zdsdk.ticket.error"                                    = "問題が発生しました。";
+"zdsdk.comment.deleteConfirmation"                      = "よろしいですか?";
+"zdsdk.comment.deleteSuccessMessage"                    = "コメントが削除されました";
+"zdsdk.comment.emptyDescriptionMessage"                 = "コメントの記述を入力";
+"zdsdk.ticket.addComment"                               = "コメントを追加";
+"zdsdk.ticket.deleteTopic"                              = "トピックを削除";
+"zdsdk.ticket.editTopic"                                = "トピックを編集";
+"zdsdk.topic.attacheFile"                               = "ファイルを添付";
+"zdsdk.topic.addTag"                                    = "タグを追加";
+"zdsdk.topic.saveAsDraft"                               = "下書きとして保存";
+"zdsdk.topic.createTopic"                               = "トピックを作成";
+"desk.library.priority.change.failed"                   = "優先度の更新に失敗しました";
+"desk.library.network.connection"                       = "ネットワーク接続が失われました";
+"desk.library.ticket.closed"                            = "終了済み";
+"desk.library.select.priority"                          = "優先度を選択";
+"desk.library.thread.attachment.error"                  = "添付ファイルのロード中にエラーが発生しました。もう一度お試しください。";
+
+/////
+"desk.library.community_topics_type_announcement"       = "通知";
+"desk.library.community_topics_all_posts_count"         = "すべての投稿 (%@)";
+"desk.library.community_topics_type_announcement_count" = "通知 (%@)";
+"desk.library.community_topics_type_question_count"     = "質問 (%@)";
+"desk.library.community_topics_type_idea_count"         = "アイデア (%@)";
+"desk.library.community_topics_type_problem_count"      = "問題 (%@)";
+"desk.library.community_topics_likes"                   = "%@ いいね";
+"desk.library.community_topics_status_ANSWERED"         = "回答済み";
+"desk.library.community_topics_status_UNANSWERED"       = "未回答";
+"desk.library.community_topics_status_INPROGRESS"       = "進行中";
+"desk.library.community_topics_status_IMPLEMENTED"      = "実施済み";
+"desk.library.community_topics_status_UNDERREVIEW"      = "検討中";
+"desk.library.community_topics_status_WILLNOTIMPLEMENT" = "実施しません";
+"desk.library.community_topics_status_MAYBELATER"       = "おそらく後で";
+"desk.library.community_topics_status_NOTAPROBLEM"      = "問題ではありません";
+"desk.library.community_topics_status_TEMPORARYFIX"     = "一時的修正";
+"desk.library.community_topics_status_SOLVED"           = "解決済み";
+"desk.library.community_topics_status_UNSOLVED"         = "未解決";
+"desk.library.community_topics_status_NEEDMOREINFO"     = "詳細な情報が必要です";
+"desk.library.community_topics_status_ANALAYZING"       = "分析中";
+"desk.library.community_topics_status_WORKINGONIT"      = "作業中です";
+"desk.library.profile"                                  = "プロフィール";
+"desk.library.live_chat"                                = "ライブチャット";
+"desk.library.community_topic_attachment_download"      = "ダウンロード";
+"desk.library.community_topic_attachment_view"          = "表示";
+"desk.library.community_topic_attachment_share"         = "共有";
+"desk.library.no_network_msg"                           = "インターネット接続がありません";
+
+"desk.library.helpcenter_articles_count"                = "%@  項目";
+"desk.library_community_show_details"                   = "詳細を表示";
+"desk.library_community_showing_tag"                    = "表示中";
+"desk.library_community_hiding_tag"                     = "非表示";
+"navigation_drawer_open"                                = "ナビゲーションドロワーを開く";
+"navigation_drawer_close"                               = "ナビゲーションドロワーを閉じる";
+"action_settings"                                       = "設定";
+"desk_nav_drawer_open"                                  = "開く";
+"desk_nav_drawer_close"                                 = "閉じる";
+"desk.library.ticket_information_title"                 = "チケットの情報";
+"desk.library.ticket_information_edit"                  = "編集";
+"desk.library.ticket_information_ticket_details"        = "チケットの詳細";
+"desk.library.ticket_information_created_date"          = "作成日時";
+"desk.library.ticket_information_department"            = "部門";
+"desk.library.ticket_information_channel"               = "チャンネル";
+"desk.library.ticket_information_priority"              = "優先度";
+"desk.library.ticket_information_status"                = "状態";
+"desk.library.ticket_information_due_date"              = "期限";
+"desk.library.draft"                                    = "下書き";
+"desk.library.ticket.add_a_comment"                     = "コメントを追加";
+"desk.library.thread.Conversation"                      = "会話";
+"desk_sdk_network_alert"                                = "ネットワークが失われました";
+"desk_community_new_topic_add_a_title"                  = "タイトルを追加";
+"desk_library_community_add_tags"                       = "タグを追加";
+"desk_library_community_idea"                           = "アイデア";
+"desk_library_community_problem"                        = "問題";
+"desk_library_community_question"                       = "質問";
+"desk_library_community_tag_rule"                       = "複数のタグを追加するにはコンマを挿入してください";
+"desk_library_alert_ok"                                 = "OK";
+"desk_library_alert_msg_close_ticket"                   = "このチケットを終了してもよろしいですか?";
+"desk_library_alert_msg_delete_comment"                 = "このコメントを削除してもよろしいですか?";
+"desk_library_community_done"                           = "済み";
+"desk.library.follow"                                   = "フォロー";
+"desk.library.following"                                = "フォロー中";
+"desk_library_msg_comment_delete_failed"                = "コメントの削除に失敗しました";
+"desk_sdk_community_topic_edit_tag"                     = "タグを編集";
+"desk_library_community_continue"                       = "続行";
+"desk_library_community_sub_category"                   = "サブカテゴリ";
+
+"desk_library_community_discard_alert"                  = "続行してもよろしいですか?変更が失われますのでご注意ください。";
+"desk.library.updated.sec"                              = "今すぐ";
+"desk_library_msg_comment_add_success" 			= "コメントの追加に成功しました";
+"desk_library_msg_attachment_uploading" 		= "まだ添付ファイルがアップロードされていません";
+
+//New Strings -------------------------------------- >
+
+"desk.library.community_category_comments"              = "%s Comments";
+"desk.library.empty_error_message_email"                = "Email can not be blank";
+"desk.library.feed_back_error_message"                  = "Feedback cannot be blank";
+"desk.library.msg_reply_failed"                         = "Reply added failed";
+"desk.library.msg_reply_success"                        = "Reply added success";
+"desk.library.no_data"                                  = "No Data";
+"desk.library.no_data_msg_articles"                     = "There are no articles here.";
+"desk.library.no_data_msg_tickets"                      = "There are no tickets here.";
+"desk.library.no_data_msg_topics"                       = "There are no topics here.";
+"desk.library.no_data_msg_conversations"                = "There are no conversations here.";
+"desk.library.thread.draft"                             = "Draft @";
+"desk.library.thread.option.delete"                     = "Delete";
+"desk.library.ticket.attachments"                       = "Attachments (%s)";
+"desk.library.ticket.closed.failed"                     = "Ticket failed to Close";
+"desk.library.ticket_information_priority"              = "Priority";
+"desk.library.updated.message"                          = "Last updated about %s";
+"desk_library_community_category"                       = "Category";
+"desk_library_community_content_error"                  = "Please enter content for your topic";
+"desk_library_msg_close_ticket_failed"                  = "Failed to close the ticket";
+"desk_library_msg_comment_add_failed"                   = "Failed to add comment";
+"desk.library.help"                                     = "Zoho Desk Help";
+"desk.library.topic_content_placeholder"                = "Content text";
+
+"zdsdk_topic_alert_delete"                              = "Are you sure want to delete this Topic?";
+"zdsdk_topic_delete_success"                            = "Topic Deleted successfully";
+"zdsdk_topic_delete_Failed"                             = "Failed to delete the Topic.";
+"zdsdk_addTicket_actionsheet_description"               = "Select option for %@";
+"zdsdk_addTicket_actionsheet_fail_description"          = "No %@ Found";
+
+"zdsdk_addTicket_multiselect_empty"                     = "Tap to select values";
+"zdsdk_addTicket_multiselect_selected"                  = "%@ Values";
+"zdsdk_addTicket_validate_error"                        = "Please fill valid inputs";
+
+"zdsdk_createTopic_locked_msg"                          = "All Categories are locked.";
+
+"zdsdk_topic_update"                                    = "Update";
+
+"zdsdk_community_Follow_error"                          = "Unable to follow the category";
+"zdsdk_community_unFollow_error"                        = "Unable to unfollow the category";
+"desk_library_msg_topic_add_failed"                     = "Failed to add the topic";
+
+
+// Need to update
+"desk_library_community_subject_error"                  = "Enter Title"; // old value = "Enter Subject"
+
