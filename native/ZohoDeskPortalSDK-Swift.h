@@ -172,11 +172,11 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # define SWIFT_DEPRECATED_OBJC(Msg) SWIFT_DEPRECATED_MSG(Msg)
 #endif
 #if __has_feature(modules)
-@import CoreData;
 @import QuartzCore;
 @import ObjectiveC;
 @import Foundation;
 @import UIKit;
+@import CoreData;
 @import QuickLook;
 #endif
 
@@ -189,66 +189,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wnullability"
 
 SWIFT_MODULE_NAMESPACE_PUSH("ZohoDeskPortalSDK")
-@class NSEntityDescription;
-@class NSManagedObjectContext;
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11Attachments")
-@interface Attachments : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class NSDate;
-@class Solutions;
-@class Threads;
-@class TicketComment;
-@class TopicComments;
-@class Topics;
-
-@interface Attachments (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-@property (nonatomic, copy) NSString * _Nullable createdTime;
-@property (nonatomic, copy) NSString * _Nullable filePath;
-@property (nonatomic, copy) NSString * _Nullable id;
-@property (nonatomic, copy) NSString * _Nullable name;
-@property (nonatomic, copy) NSString * _Nullable size;
-@property (nonatomic, strong) NSDate * _Nullable modifiedTimeDate;
-@property (nonatomic, strong) Solutions * _Nullable solution;
-@property (nonatomic, strong) Threads * _Nullable thread;
-@property (nonatomic, strong) TicketComment * _Nullable ticketComments;
-@property (nonatomic, strong) TopicComments * _Nullable topicComments;
-@property (nonatomic, strong) Topics * _Nullable topics;
-@end
 
 
 
-
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK8Catagory")
-@interface Catagory : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class NSSet;
-
-@interface Catagory (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-- (void)addSolutionsObject:(Solutions * _Nonnull)value;
-- (void)removeSolutionsObject:(Solutions * _Nonnull)value;
-- (void)addSolutions:(NSSet * _Nonnull)values;
-- (void)removeSolutions:(NSSet * _Nonnull)values;
-@end
-
-@class Department;
-
-@interface Catagory (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-@property (nonatomic, copy) NSString * _Nullable articleCount;
-@property (nonatomic, copy) NSString * _Nullable departmentId;
-@property (nonatomic, copy) NSString * _Nullable id;
-@property (nonatomic, copy) NSString * _Nullable level;
-@property (nonatomic, copy) NSString * _Nullable name;
-@property (nonatomic, copy) NSString * _Nullable parentCategoryId;
-@property (nonatomic, strong) Department * _Nullable department;
-@property (nonatomic, strong) NSSet * _Nullable solutions;
-@end
 
 
 /// ChatActivityHandler is a NSObject class which contains the event handler methods.
@@ -262,53 +205,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK19ChatActivityHandler")
 @end
 
 
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK9Community")
-@interface Community : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface Community (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-@property (nonatomic, copy) NSString * _Nullable commentCount;
-@property (nonatomic, copy) NSString * _Nullable descriptionString;
-@property (nonatomic, copy) NSString * _Nullable followersCount;
-@property (nonatomic, copy) NSString * _Nullable forumCount;
-@property (nonatomic, copy) NSString * _Nullable id;
-@property (nonatomic, copy) NSString * _Nullable name;
-@property (nonatomic, copy) NSString * _Nullable parentCategoryId;
-@property (nonatomic, copy) NSString * _Nullable photoUrl;
-@property (nonatomic, copy) NSString * _Nullable postCount;
-@property (nonatomic) BOOL isFollow;
-@property (nonatomic) BOOL isLocked;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK8Contacts")
-@interface Contacts : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface Contacts (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-@property (nonatomic, copy) NSString * _Nullable accountId;
-@property (nonatomic, copy) NSString * _Nullable createdTime;
-@property (nonatomic, copy) NSString * _Nullable customFields;
-@property (nonatomic, copy) NSString * _Nullable email;
-@property (nonatomic, copy) NSString * _Nullable facebook;
-@property (nonatomic, copy) NSString * _Nullable firstName;
-@property (nonatomic, copy) NSString * _Nullable id;
-@property (nonatomic, copy) NSString * _Nullable lastName;
-@property (nonatomic, copy) NSString * _Nullable mobile;
-@property (nonatomic, copy) NSString * _Nullable modifiedTime;
-@property (nonatomic, copy) NSString * _Nullable ownerId;
-@property (nonatomic, copy) NSString * _Nullable phone;
-@property (nonatomic, copy) NSString * _Nullable secondaryEmail;
-@property (nonatomic, copy) NSString * _Nullable title;
-@property (nonatomic, copy) NSString * _Nullable twitter;
-@property (nonatomic, copy) NSString * _Nullable type;
-@end
-
-
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12CustomFields")
 @interface CustomFields : NSObject
 @property (nonatomic, copy) NSString * _Nonnull fieldID;
@@ -317,50 +213,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12CustomFields")
 @end
 
 
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK10Department")
-@interface Department : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface Department (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-- (void)addCatagoryObject:(Catagory * _Nonnull)value;
-- (void)removeCatagoryObject:(Catagory * _Nonnull)value;
-- (void)addCatagory:(NSSet * _Nonnull)values;
-- (void)removeCatagory:(NSSet * _Nonnull)values;
-@end
-
-@class Product;
-
-@interface Department (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-- (void)addProductObject:(Product * _Nonnull)value;
-- (void)removeProductObject:(Product * _Nonnull)value;
-- (void)addProduct:(NSSet * _Nonnull)values;
-- (void)removeProduct:(NSSet * _Nonnull)values;
-@end
-
-@class TicketFields;
-
-@interface Department (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-- (void)addTicketFieldsObject:(TicketFields * _Nonnull)value;
-- (void)removeTicketFieldsObject:(TicketFields * _Nonnull)value;
-- (void)addTicketFields:(NSSet * _Nonnull)values;
-- (void)removeTicketFields:(NSSet * _Nonnull)values;
-@end
-
-
-@interface Department (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-@property (nonatomic, copy) NSString * _Nullable descriptionString;
-@property (nonatomic, copy) NSString * _Nullable id;
-@property (nonatomic, copy) NSString * _Nullable name;
-@property (nonatomic, copy) NSString * _Nullable nameInCustomerPortal;
-@property (nonatomic, copy) NSString * _Nullable photoURL;
-@property (nonatomic, strong) NSSet * _Nullable catagory;
-@property (nonatomic, strong) NSSet * _Nullable product;
-@property (nonatomic, strong) NSSet * _Nullable ticketFields;
-@end
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20DepartmentJsonObject")
@@ -443,54 +295,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23NotificationLinkHandler")
 @end
 
 
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK7Product")
-@interface Product : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface Product (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-@property (nonatomic, copy) NSString * _Nullable departmentId;
-@property (nonatomic, copy) NSString * _Nullable id;
-@property (nonatomic, copy) NSString * _Nullable productCode;
-@property (nonatomic, copy) NSString * _Nullable productDescription;
-@property (nonatomic, copy) NSString * _Nullable productName;
-@property (nonatomic, strong) Department * _Nullable department;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK9Solutions")
-@interface Solutions : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface Solutions (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-- (void)addAttachmentsObject:(Attachments * _Nonnull)value;
-- (void)removeAttachmentsObject:(Attachments * _Nonnull)value;
-- (void)addAttachments:(NSSet * _Nonnull)values;
-- (void)removeAttachments:(NSSet * _Nonnull)values;
-@end
-
-
-@interface Solutions (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-@property (nonatomic, copy) NSString * _Nullable answer;
-@property (nonatomic, copy) NSString * _Nullable author;
-@property (nonatomic, copy) NSString * _Nullable categoryId;
-@property (nonatomic, copy) NSString * _Nullable createdTime;
-@property (nonatomic, copy) NSString * _Nullable currentUserVote;
-@property (nonatomic, copy) NSString * _Nullable departmentId;
-@property (nonatomic, copy) NSString * _Nullable dislikeCount;
-@property (nonatomic, copy) NSString * _Nullable id;
-@property (nonatomic, copy) NSString * _Nullable likeCount;
-@property (nonatomic, copy) NSString * _Nullable modifiedTime;
-@property (nonatomic, copy) NSString * _Nullable summary;
-@property (nonatomic, copy) NSString * _Nullable title;
-@property (nonatomic, strong) NSSet * _Nullable attachments;
-@property (nonatomic, strong) Catagory * _Nullable category;
-@end
-
-
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22ThreadDetailJsonObject")
 @interface ThreadDetailJsonObject : NSObject
 @property (nonatomic, copy) NSString * _Nonnull channel;
@@ -527,41 +331,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK16ThreadJsonObject")
 @end
 
 
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK7Threads")
-@interface Threads : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface Threads (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-- (void)addAttachmentObject:(Attachments * _Nonnull)value;
-- (void)removeAttachmentObject:(Attachments * _Nonnull)value;
-- (void)addAttachment:(NSSet * _Nonnull)values;
-- (void)removeAttachment:(NSSet * _Nonnull)values;
-@end
-
-@class Tickets;
-
-@interface Threads (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-@property (nonatomic, copy) NSString * _Nullable channel;
-@property (nonatomic, copy) NSString * _Nullable content;
-@property (nonatomic, copy) NSString * _Nullable createdTime;
-@property (nonatomic, copy) NSString * _Nullable direction;
-@property (nonatomic, copy) NSString * _Nullable fromEmail;
-@property (nonatomic) BOOL hasAttach;
-@property (nonatomic, copy) NSString * _Nullable id;
-@property (nonatomic) BOOL isDraft;
-@property (nonatomic, copy) NSString * _Nullable responderName;
-@property (nonatomic, copy) NSString * _Nullable responderPhotoURL;
-@property (nonatomic, copy) NSString * _Nullable responsderId;
-@property (nonatomic, copy) NSString * _Nullable summary;
-@property (nonatomic, copy) NSString * _Nullable type;
-@property (nonatomic, strong) NSDate * _Nullable createdTimeDate;
-@property (nonatomic, strong) NSSet * _Nullable attachment;
-@property (nonatomic, strong) Tickets * _Nullable ticket;
-@end
-
-
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK17ThreadsJsonObject")
 @interface ThreadsJsonObject : NSObject
 @property (nonatomic) BOOL hasAttach;
@@ -577,36 +346,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK17ThreadsJsonObject")
 @property (nonatomic, copy) NSString * _Nonnull type;
 @property (nonatomic, copy) NSString * _Nonnull direction;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK13TicketComment")
-@interface TicketComment : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface TicketComment (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-- (void)addAttachementsObject:(Attachments * _Nonnull)value;
-- (void)removeAttachementsObject:(Attachments * _Nonnull)value;
-- (void)addAttachements:(NSSet * _Nonnull)values;
-- (void)removeAttachements:(NSSet * _Nonnull)values;
-@end
-
-
-@interface TicketComment (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-@property (nonatomic, copy) NSString * _Nullable commentedTime;
-@property (nonatomic, copy) NSString * _Nullable commenterId;
-@property (nonatomic, copy) NSString * _Nullable commenterName;
-@property (nonatomic, copy) NSString * _Nullable commenterphotoURL;
-@property (nonatomic, copy) NSString * _Nullable content;
-@property (nonatomic, copy) NSString * _Nullable direction;
-@property (nonatomic, copy) NSString * _Nullable id;
-@property (nonatomic, copy) NSString * _Nullable modifiedTime;
-@property (nonatomic, copy) NSString * _Nullable type;
-@property (nonatomic, strong) NSDate * _Nullable modifiedTimeDate;
-@property (nonatomic, strong) NSSet * _Nullable attachements;
-@property (nonatomic, strong) Tickets * _Nullable ticket;
 @end
 
 
@@ -690,32 +429,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK26TicketDetailViewController")
 @end
 
 
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12TicketFields")
-@interface TicketFields : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class NSData;
-
-@interface TicketFields (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-@property (nonatomic, copy) NSString * _Nullable allowedValues;
-@property (nonatomic, copy) NSString * _Nullable decimalPlaces;
-@property (nonatomic, copy) NSString * _Nullable defaultValue;
-@property (nonatomic, strong) NSData * _Nullable dependencyMapping;
-@property (nonatomic, copy) NSString * _Nullable displayLabel;
-@property (nonatomic, copy) NSString * _Nullable id;
-@property (nonatomic) BOOL isCustomField;
-@property (nonatomic) BOOL isMandatory;
-@property (nonatomic) int16_t maxLength;
-@property (nonatomic, copy) NSString * _Nullable name;
-@property (nonatomic) int16_t order;
-@property (nonatomic, strong) NSData * _Nullable statusMapping;
-@property (nonatomic, copy) NSString * _Nullable type;
-@property (nonatomic, copy) NSString * _Nullable departmentId;
-@property (nonatomic, strong) Department * _Nullable department;
-@end
-
-
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketFieldsJsonObject")
 @interface TicketFieldsJsonObject : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -760,145 +473,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK16TicketJsonObject")
 @end
 
 
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK7Tickets")
-@interface Tickets : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface Tickets (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-- (void)addThreadsObject:(Threads * _Nonnull)value;
-- (void)removeThreadsObject:(Threads * _Nonnull)value;
-- (void)addThreads:(NSSet * _Nonnull)values;
-- (void)removeThreads:(NSSet * _Nonnull)values;
-@end
-
-
-@interface Tickets (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-- (void)addTicketCommentsObject:(TicketComment * _Nonnull)value;
-- (void)removeTicketCommentsObject:(TicketComment * _Nonnull)value;
-- (void)addTicketComments:(NSSet * _Nonnull)values;
-- (void)removeTicketComments:(NSSet * _Nonnull)values;
-@end
-
-
-@interface Tickets (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-@property (nonatomic, copy) NSString * _Nullable assigneeId;
-@property (nonatomic, copy) NSString * _Nullable assigneeName;
-@property (nonatomic, copy) NSString * _Nullable assigneephotoURL;
-@property (nonatomic, copy) NSString * _Nullable category;
-@property (nonatomic, copy) NSString * _Nullable channel;
-@property (nonatomic, copy) NSString * _Nullable classification;
-@property (nonatomic, copy) NSString * _Nullable closedTime;
-@property (nonatomic, copy) NSString * _Nullable commentCount;
-@property (nonatomic, copy) NSString * _Nullable contactId;
-@property (nonatomic, copy) NSString * _Nullable createdTime;
-@property (nonatomic, copy) NSString * _Nullable createdTimeDate;
-@property (nonatomic, copy) NSString * _Nullable creatorName;
-@property (nonatomic, copy) NSString * _Nullable creatorPhotoURL;
-@property (nonatomic, copy) NSString * _Nullable departmentId;
-@property (nonatomic, copy) NSString * _Nullable descriptionData;
-@property (nonatomic, copy) NSString * _Nullable dueDate;
-@property (nonatomic, copy) NSString * _Nullable email;
-@property (nonatomic, copy) NSString * _Nullable id;
-@property (nonatomic, copy) NSString * _Nullable modifiedByUserID;
-@property (nonatomic, copy) NSString * _Nullable modifiedByUsername;
-@property (nonatomic, copy) NSString * _Nullable modifiedByUserphotoURL;
-@property (nonatomic, copy) NSString * _Nullable modifiedTime;
-@property (nonatomic, copy) NSString * _Nullable phone;
-@property (nonatomic, copy) NSString * _Nullable priority;
-@property (nonatomic, copy) NSString * _Nullable productId;
-@property (nonatomic, copy) NSString * _Nullable resolution;
-@property (nonatomic, copy) NSString * _Nullable responseDueDate;
-@property (nonatomic, copy) NSString * _Nullable status;
-@property (nonatomic, copy) NSString * _Nullable subject;
-@property (nonatomic, copy) NSString * _Nullable threadCount;
-@property (nonatomic, copy) NSString * _Nullable ticketnumber;
-@property (nonatomic, strong) NSDate * _Nullable createdDate;
-@property (nonatomic, strong) NSSet * _Nullable threads;
-@property (nonatomic, strong) NSSet * _Nullable ticketComments;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK13TopicComments")
-@interface TopicComments : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface TopicComments (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-- (void)addAttachmentsObject:(Attachments * _Nonnull)value;
-- (void)removeAttachmentsObject:(Attachments * _Nonnull)value;
-- (void)addAttachments:(NSSet * _Nonnull)values;
-- (void)removeAttachments:(NSSet * _Nonnull)values;
-@end
-
-
-@interface TopicComments (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-@property (nonatomic, copy) NSString * _Nullable content;
-@property (nonatomic, copy) NSString * _Nullable createdTime;
-@property (nonatomic, copy) NSString * _Nullable creatorId;
-@property (nonatomic, copy) NSString * _Nullable creatorName;
-@property (nonatomic, copy) NSString * _Nullable creatorPhotoUrl;
-@property (nonatomic, copy) NSString * _Nullable id;
-@property (nonatomic, copy) NSString * _Nullable parentId;
-@property (nonatomic, strong) NSSet * _Nullable attachments;
-@property (nonatomic, strong) Topics * _Nullable topic;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK6Topics")
-@interface Topics : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface Topics (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-- (void)addAttachmentsObject:(Attachments * _Nonnull)value;
-- (void)removeAttachmentsObject:(Attachments * _Nonnull)value;
-- (void)addAttachments:(NSSet * _Nonnull)values;
-- (void)removeAttachments:(NSSet * _Nonnull)values;
-@end
-
-
-@interface Topics (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-- (void)addTopicCommentsObject:(TopicComments * _Nonnull)value;
-- (void)removeTopicCommentsObject:(TopicComments * _Nonnull)value;
-- (void)addTopicComments:(NSSet * _Nonnull)values;
-- (void)removeTopicComments:(NSSet * _Nonnull)values;
-@end
-
-
-@interface Topics (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-@property (nonatomic, copy) NSString * _Nullable categoryId;
-@property (nonatomic, copy) NSString * _Nullable commentCount;
-@property (nonatomic, copy) NSString * _Nullable content;
-@property (nonatomic, copy) NSString * _Nullable createdTime;
-@property (nonatomic, copy) NSString * _Nullable creatorId;
-@property (nonatomic, copy) NSString * _Nullable creatorName;
-@property (nonatomic, copy) NSString * _Nullable creatorPhotoUrl;
-@property (nonatomic, copy) NSString * _Nullable id;
-@property (nonatomic, copy) NSString * _Nullable label;
-@property (nonatomic, copy) NSString * _Nullable latestCommenterId;
-@property (nonatomic, copy) NSString * _Nullable latestCommenterName;
-@property (nonatomic, copy) NSString * _Nullable latestCommentTime;
-@property (nonatomic, copy) NSString * _Nullable likeCount;
-@property (nonatomic, strong) NSDate * _Nullable localCreatedTime;
-@property (nonatomic, copy) NSString * _Nullable permalink;
-@property (nonatomic, copy) NSString * _Nullable subject;
-@property (nonatomic, copy) NSString * _Nullable type;
-@property (nonatomic) BOOL isDraft;
-@property (nonatomic) BOOL isFollowing;
-@property (nonatomic) BOOL isVoted;
-@property (nonatomic, copy) NSString * _Nullable followersCount;
-@property (nonatomic, copy) NSString * _Nullable tags;
-@property (nonatomic, strong) NSSet * _Nullable attachments;
-@property (nonatomic, strong) NSSet * _Nullable topicComments;
-@end
-
-
-
-
 
 
 
@@ -924,6 +498,8 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK6Topics")
 @interface UIImageView (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 - (void)downloadImageFromUrl:(NSString * _Nullable)url cacheMinutes:(NSInteger)minutes callBack:(void (^ _Nonnull)(NSString * _Nonnull, UIImage * _Nullable))callBack;
 @end
+
+
 
 
 
@@ -975,17 +551,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK6Topics")
 @end
 
 
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK10UserSearch")
-@interface UserSearch : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface UserSearch (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-@property (nonatomic, copy) NSString * _Nullable userKeyword;
-@end
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK13VisitorObject")
@@ -1079,6 +644,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <ZohoDeskPortalDele
 @end
 
 
+
+
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 @end
 
@@ -1102,8 +669,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enablePoweredByZoho;)
 + (void)setEnablePoweredByZoho:(BOOL)value;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
-
-
 
 
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
