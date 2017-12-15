@@ -250,7 +250,6 @@
 "desk.library.thread.option.delete"                     = "Delete";
 "desk.library.ticket.attachments"                       = "Attachments (%s)";
 "desk.library.ticket.closed.failed"                     = "Ticket failed to Close";
-"desk.library.ticket_information_priority"              = "Priority";
 "desk.library.updated.message"                          = "Last updated about %s";
 "desk_library_community_category"                       = "Category";
 "desk_library_community_content_error"                  = "Please enter content for your topic";
@@ -277,6 +276,15 @@
 "zdsdk_community_unFollow_error"                        = "Unable to unfollow the category";
 "desk_library_msg_topic_add_failed"                     = "Failed to add the topic";
 
+"zdsdk_community_tag_characters_error"                  = "Special characters not allowed";
+"zdsdk.attachement.attachement"                         = "Attachment";
+"desk_library_community_subject_length_error"           = "Title length exceeds the limit";
+"desk.library.newticket.file.error"                     = "Could not upload the attachments";
+"zdsdk_topic_updated_success"                           = "Topic updated ssuccessfully";
+"zdsdk_topic_discard_alert"                             = "Want to discard changes";
+
+"desk_library_msg_topic_add_success"                    = "Topic successfully added";
+"desk_library_tag_limit_error"                          = "You cannot add more than 5 tags";
 // Need to update
 "desk_library_community_subject_error"                  = "Enter Title"; // old value = "Enter Subject"
 

@@ -27,6 +27,8 @@ typedef void (^requestLogoutFailureBlock)(NSError *error);
     NSString* ClientSecret;
     NSString* PortalID;
     NSString *UrlScheme;
+    NSString *ma_portalID;
+    NSString *ma_accountsPortalURL;
 #if !CP_APP__EXTENSION_API_ONLY
     UIWindow *MainWindow;
 #endif
@@ -60,10 +62,16 @@ typedef void (^requestLogoutFailureBlock)(NSError *error);
 
 -(void)clearClientDetailsForFirstLaunch;
 
+-(BOOL)isUserSignedIn;
+
+-(BOOL)isUserSignedInForPortalID:(NSString *)portalID;
+
 - (void)setHavingAppExtensionWithAppGroup:(NSString *)appGroup;
 
 
 -(void)getOauth2Token:(requestSuccessBlock)successBlock failure:(requestFailureBlock)failureBlock;
+
+-(void)getOauth2TokenForPortalID:(NSString *)portalID havingAccountsPortalURL:(NSString *)accountsPortalURL success:(requestSuccessBlock)successBlock failure:(requestFailureBlock)failureBlock;
 
 - (NSDictionary *)giveOAuthDetailsForWatchApp;
 
@@ -71,9 +79,13 @@ typedef void (^requestLogoutFailureBlock)(NSError *error);
 
 - (void) presentInitialViewControllerWithSuccess:(requestSuccessBlock)success andFailure:(requestFailureBlock)failure;
 
+- (void) presentInitialViewControllerForPortalID:(NSString *)portalID havingAccountsPortalURL:(NSString *)accountsPortalURL Success:(requestSuccessBlock)success andFailure:(requestFailureBlock)failure;
+
 - (void) getOAuthTokenForRemoteUser:(NSString *)userToken havingSuccess:(requestSuccessBlock)success andFailure:(requestFailureBlock)failure;
 
 -(void)removeAllScopesWithsuccess:(requestLogoutSuccessBlock)successBlock failure:(requestLogoutFailureBlock)failureBlock;
+
+-(void)removeAllScopesForPortalID:(NSString *)portalID havingAccountsPortalURL:(NSString *)accountsPortalURL success:(requestLogoutSuccessBlock)successBlock failure:(requestLogoutFailureBlock)failureBlock;
 
 
 //Internal Methods

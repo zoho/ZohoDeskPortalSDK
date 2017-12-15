@@ -23,6 +23,10 @@ static const int k_ClientTokenFetchNil = 202;
  */
 static const int k_ClientTokenFetchNothingReceived = 204;
 /**
+ * SFSafari Dismissed.
+ */
+static const int k_ClientSFSafariDismissed = 205;
+/**
  * There is no access token.
  */
 static const int k_ClientNoAccessToken = 302;
@@ -41,7 +45,7 @@ static const int k_ClientRevokeTokenNothingReceived = 804;
 /**
  * Network call failed with unknown error.
  */
-static const int k_ClientGenericError = 901;
+static const int k_ClientGenericError = 900;
 /**
  * Unable to fetch Refresh token from server.
  */

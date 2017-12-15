@@ -242,27 +242,15 @@
 
 //new
 
-"desk.library.community_category_comments"              = "%s Comments";
-"desk.library.empty_error_message_email"                = "Email can not be blank";
-"desk.library.feed_back_error_message"                  = "Feedback cannot be blank";
 "desk.library.msg_reply_failed"                         = "Reply added failed";
 "desk.library.msg_reply_success"                        = "Reply added success";
 "desk.library.no_data"                                  = "No Data";
 "desk.library.no_data_msg_articles"                     = "There are no articles here.";
 "desk.library.no_data_msg_tickets"                      = "There are no tickets here.";
 "desk.library.no_data_msg_topics"                       = "There are no topics here.";
-"desk.library.no_data_msg_conversations"                = "There are no conversations here.";
-"desk.library.thread.draft"                             = "Draft @";
 "desk.library.thread.option.delete"                     = "Delete";
-"desk.library.ticket.attachments"                       = "Attachments (%s)";
-"desk.library.ticket.closed.failed"                     = "Ticket failed to Close";
-"desk.library.ticket_information_priority"              = "Priority";
-"desk.library.updated.message"                          = "Last updated about %s";
-"desk_library_community_category"                       = "Category";
 "desk_library_community_content_error"                  = "Please enter content for your topic";
-"desk_library_msg_close_ticket_failed"                  = "Failed to close the ticket";
 "desk_library_msg_comment_add_failed"                   = "Failed to add comment";
-"desk.library.help"                                     = "Zoho Desk Help";
 "desk.library.topic_content_placeholder"                = "Content text";
 
 "zdsdk_topic_alert_delete"                              = "Are you sure want to delete this Topic?";
@@ -275,7 +263,6 @@
 "zdsdk_addTicket_multiselect_selected"                  = "%@ Values";
 "zdsdk_addTicket_validate_error"                        = "Please fill valid inputs";
 
-"zdsdk_createTopic_locked_msg"                          = "All Categories are locked.";
 
 "zdsdk_topic_update"                                    = "Update";
 
@@ -283,6 +270,18 @@
 "zdsdk_community_Follow_error"                          = "Unable to follow the category";
 "zdsdk_community_unFollow_error"                        = "Unable to unfollow the category";
 "desk_library_msg_topic_add_failed"                     = "Failed to add the topic";
+
+"zdsdk_community_tag_characters_error"                  = "Special characters not allowed";
+
+"zdsdk.attachement.attachement"                         = "Attachment";
+"desk_library_community_subject_length_error"           = "Title length exceeds the limit";
+
+"desk.library.newticket.file.error"                     = "Could not upload the attachments";
+"zdsdk_topic_updated_success"                           = "Topic updated successfully";
+
+"zdsdk_topic_discard_alert"                             = "Want to discard changes";
+"desk_library_msg_topic_add_success"                    = "Topic successfully added";
+"desk_library_tag_limit_error"                          = "You cannot add more than 5 tags";
 
 // Need to update
 "desk_library_community_subject_error"                  = "Enter Title"; // old value = "Enter Subject"
