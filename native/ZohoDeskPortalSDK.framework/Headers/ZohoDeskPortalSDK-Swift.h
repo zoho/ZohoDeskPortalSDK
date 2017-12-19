@@ -294,6 +294,11 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23NotificationLinkHandler")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+typedef SWIFT_ENUM(NSInteger, ThemeType) {
+  ThemeTypeWhite = 0,
+  ThemeTypeDark = 1,
+};
+
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22ThreadDetailJsonObject")
 @interface ThreadDetailJsonObject : NSObject
@@ -576,6 +581,17 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK24ZDCommunityConfiguration")
 @end
 
 
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12ZDCustomFont")
+@interface ZDCustomFont : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, copy) NSString * _Nonnull fontFamilyName;
+@property (nonatomic, copy) NSString * _Nonnull requalarFontName;
+@property (nonatomic, copy) NSString * _Nonnull lightFontName;
+@property (nonatomic, copy) NSString * _Nonnull mediumFontName;
+@property (nonatomic, copy) NSString * _Nonnull boldFontName;
+@end
+
+
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK25ZDHelpCenterConfiguration")
 @interface ZDHelpCenterConfiguration : ZDBaseContollerConfiguration
 @property (nonatomic) BOOL allowUserFeedback;
@@ -634,6 +650,26 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull setS
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK27ZDSolutionPageConfiguration")
 @interface ZDSolutionPageConfiguration : ZDBaseContollerConfiguration
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK7ZDTheme")
+@interface ZDTheme : NSObject
++ (void)applyThemeWithTheme:(enum ThemeType)theme;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14ZDThemeArticle")
+@interface ZDThemeArticle : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) UIColor * _Nonnull tintColor;
+@property (nonatomic, strong) UIColor * _Nonnull primaryTextColor;
+@property (nonatomic, strong) UIColor * _Nonnull secondryTextColor;
+@property (nonatomic, strong) UIColor * _Nonnull primaryBackgroundColor;
+@property (nonatomic, strong) UIColor * _Nonnull secondryBackgroundColor;
+@property (nonatomic, strong) UIColor * _Nonnull cellSeporatorColor;
+@property (nonatomic, strong) UIColor * _Nonnull headerColor;
 @end
 
 
@@ -700,8 +736,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enablePoweredByZoho;)
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 + (void)setWithJwtUserIdentifier:(NSString * _Nonnull)jwtUserIdentifier onComplition:(void (^ _Nonnull)(void))onComplition onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 + (void)logout;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isUserSignedIn;)
-+ (BOOL)isUserSignedIn SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
