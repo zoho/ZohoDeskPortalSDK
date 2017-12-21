@@ -177,7 +177,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import Foundation;
 @import UIKit;
 @import CoreData;
-@import QuickLook;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -205,42 +204,12 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK19ChatActivityHandler")
 @end
 
 
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12CustomFields")
-@interface CustomFields : NSObject
-@property (nonatomic, copy) NSString * _Nonnull fieldID;
-@property (nonatomic, copy) NSString * _Nonnull value;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
 
 
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20DepartmentJsonObject")
-@interface DepartmentJsonObject : NSObject
-@property (nonatomic, copy) NSString * _Nonnull photoURL;
-@property (nonatomic, copy) NSString * _Nonnull departmentId;
-@property (nonatomic, copy) NSString * _Nonnull name;
-@property (nonatomic, copy) NSString * _Nonnull nameInCustomerPortal;
-@property (nonatomic, copy) NSString * _Nonnull descriptionString;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-@class NSBundle;
-@class NSCoder;
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK17InitialController")
-@interface InitialController : UIViewController
-- (void)showHelpCenterController;
-- (void)showAddTicketController;
-- (void)showCommunity;
-- (void)showDashBoard;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
 
 @protocol UIViewControllerAnimatedTransitioning;
+@class NSBundle;
+@class NSCoder;
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22LiveChatViewController")
 @interface LiveChatViewController : UIViewController <UIViewControllerTransitioningDelegate>
@@ -294,188 +263,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23NotificationLinkHandler")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-typedef SWIFT_ENUM(NSInteger, ThemeType) {
-  ThemeTypeWhite = 0,
-  ThemeTypeDark = 1,
-};
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22ThreadDetailJsonObject")
-@interface ThreadDetailJsonObject : NSObject
-@property (nonatomic, copy) NSString * _Nonnull channel;
-@property (nonatomic, copy) NSString * _Nonnull content;
-@property (nonatomic, copy) NSString * _Nonnull createdTime;
-@property (nonatomic, copy) NSString * _Nonnull direction;
-@property (nonatomic) BOOL hasAttach;
-@property (nonatomic, copy) NSString * _Nonnull threadID;
-@property (nonatomic) BOOL isDraft;
-@property (nonatomic, copy) NSString * _Nonnull responderId;
-@property (nonatomic, copy) NSString * _Nonnull summary;
-@property (nonatomic, copy) NSString * _Nonnull responderName;
-@property (nonatomic, copy) NSArray<NSDictionary<NSString *, id> *> * _Nullable attachments;
-@property (nonatomic, copy) NSString * _Nonnull fromEmailId;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK16ThreadJsonObject")
-@interface ThreadJsonObject : NSObject
-@property (nonatomic) BOOL hasAttach;
-@property (nonatomic, copy) NSString * _Nonnull summary;
-@property (nonatomic) BOOL isDraft;
-@property (nonatomic, copy) NSString * _Nonnull channel;
-@property (nonatomic, copy) NSString * _Nonnull responderName;
-@property (nonatomic, copy) NSString * _Nonnull createdTime;
-@property (nonatomic, copy) NSString * _Nonnull responderId;
-@property (nonatomic, copy) NSString * _Nonnull responderPhotoURL;
-@property (nonatomic, copy) NSString * _Nonnull fromEmail;
-@property (nonatomic, copy) NSString * _Nonnull threadId;
-@property (nonatomic, copy) NSString * _Nonnull type;
-@property (nonatomic, copy) NSString * _Nonnull direction;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK17ThreadsJsonObject")
-@interface ThreadsJsonObject : NSObject
-@property (nonatomic) BOOL hasAttach;
-@property (nonatomic, copy) NSString * _Nonnull summary;
-@property (nonatomic) BOOL isDraft;
-@property (nonatomic, copy) NSString * _Nonnull channel;
-@property (nonatomic, copy) NSString * _Nonnull responderName;
-@property (nonatomic, copy) NSString * _Nonnull createdTime;
-@property (nonatomic, copy) NSString * _Nonnull responderId;
-@property (nonatomic, copy) NSString * _Nonnull responderPhotoURL;
-@property (nonatomic, copy) NSString * _Nonnull fromEmail;
-@property (nonatomic, copy) NSString * _Nonnull threadId;
-@property (nonatomic, copy) NSString * _Nonnull type;
-@property (nonatomic, copy) NSString * _Nonnull direction;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23TicketCommentJsonObject")
-@interface TicketCommentJsonObject : NSObject
-@property (nonatomic, copy) NSString * _Nonnull modifiedTime;
-@property (nonatomic, copy) NSArray<NSDictionary<NSString *, id> *> * _Nullable attachments;
-@property (nonatomic, copy) NSString * _Nonnull commentedTime;
-@property (nonatomic, copy) NSString * _Nonnull commentId;
-@property (nonatomic, copy) NSString * _Nonnull type;
-@property (nonatomic, copy) NSString * _Nonnull content;
-@property (nonatomic, copy) NSString * _Nonnull commenterId;
-@property (nonatomic, copy) NSString * _Nonnull commenterphotoURL;
-@property (nonatomic, copy) NSString * _Nonnull commenterName;
-@property (nonatomic, copy) NSString * _Nonnull direction;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketDetailJsonObject")
-@interface TicketDetailJsonObject : NSObject
-@property (nonatomic, copy) NSString * _Nonnull responseDueDate;
-@property (nonatomic, copy) NSString * _Nonnull phone;
-@property (nonatomic, copy) NSString * _Nonnull subject;
-@property (nonatomic, copy) NSString * _Nonnull modifiedByUserID;
-@property (nonatomic, copy) NSString * _Nonnull modifiedByUserphotoURL;
-@property (nonatomic, copy) NSString * _Nonnull modifiedByUsername;
-@property (nonatomic, copy) NSString * _Nonnull ticketNumber;
-@property (nonatomic, copy) NSString * _Nonnull resolution;
-@property (nonatomic, copy) NSString * _Nonnull creatorPhotoURL;
-@property (nonatomic, copy) NSString * _Nonnull creatorName;
-@property (nonatomic, copy) NSString * _Nonnull ticketId;
-@property (nonatomic, copy) NSString * _Nonnull closedTime;
-@property (nonatomic, copy) NSString * _Nonnull descriptionData;
-@property (nonatomic, copy) NSString * _Nonnull priority;
-@property (nonatomic, copy) NSString * _Nonnull assigneeId;
-@property (nonatomic, copy) NSString * _Nonnull dueDate;
-@property (nonatomic, copy) NSString * _Nonnull status;
-@property (nonatomic, copy) NSString * _Nonnull createdTime;
-@property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable customFields;
-@property (nonatomic, copy) NSString * _Nonnull modifiedTime;
-@property (nonatomic, copy) NSString * _Nonnull assigneephotoURL;
-@property (nonatomic, copy) NSString * _Nonnull assigneeName;
-@property (nonatomic, copy) NSString * _Nonnull commentCount;
-@property (nonatomic, copy) NSString * _Nonnull productId;
-@property (nonatomic, copy) NSString * _Nonnull category;
-@property (nonatomic, copy) NSString * _Nonnull contactId;
-@property (nonatomic, copy) NSString * _Nonnull email;
-@property (nonatomic, copy) NSString * _Nonnull threadCount;
-@property (nonatomic, copy) NSString * _Nonnull classification;
-@property (nonatomic, copy) NSString * _Nonnull departmentId;
-@property (nonatomic, copy) NSString * _Nonnull channel;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK26TicketDetailViewController")
-@interface TicketDetailViewController : UIViewController
-- (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
-- (void)didReceiveMemoryWarning;
-- (void)viewDidAppear:(BOOL)animated;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-
-
-
-
-@class QLPreviewController;
-@protocol QLPreviewItem;
-
-@interface TicketDetailViewController (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <QLPreviewControllerDataSource, QLPreviewControllerDelegate>
-- (NSInteger)numberOfPreviewItemsInPreviewController:(QLPreviewController * _Nonnull)controller SWIFT_WARN_UNUSED_RESULT;
-- (id <QLPreviewItem> _Nonnull)previewController:(QLPreviewController * _Nonnull)controller previewItemAtIndex:(NSInteger)index SWIFT_WARN_UNUSED_RESULT;
-- (void)previewControllerWillDismiss:(QLPreviewController * _Nonnull)controller;
-- (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSKeyValueChangeKey, id> * _Nullable)change context:(void * _Nullable)context;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketFieldsJsonObject")
-@interface TicketFieldsJsonObject : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK10TicketForm")
-@interface TicketForm : NSObject
-@property (nonatomic, copy) NSString * _Nonnull emailID;
-@property (nonatomic, copy) NSString * _Nonnull departmentID;
-@property (nonatomic, copy) NSString * _Nonnull productID;
-@property (nonatomic, copy) NSString * _Nonnull subject;
-@property (nonatomic, copy) NSString * _Nonnull content;
-@property (nonatomic, copy) NSString * _Nonnull phone;
-@property (nonatomic, copy) NSString * _Nonnull classification;
-@property (nonatomic, copy) NSString * _Nonnull priority;
-@property (nonatomic, copy) NSString * _Nonnull category;
-@property (nonatomic, copy) NSString * _Nonnull subCategory;
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull uploads;
-@property (nonatomic, copy) NSArray<CustomFields *> * _Nullable customFields;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK16TicketJsonObject")
-@interface TicketJsonObject : NSObject
-@property (nonatomic, copy) NSString * _Nonnull ticketNumber;
-@property (nonatomic, copy) NSString * _Nonnull subject;
-@property (nonatomic, copy) NSString * _Nonnull departmentId;
-@property (nonatomic, copy) NSString * _Nonnull dueDate;
-@property (nonatomic, copy) NSString * _Nonnull channel;
-@property (nonatomic, copy) NSString * _Nonnull createdTime;
-@property (nonatomic, copy) NSString * _Nonnull threadCount;
-@property (nonatomic, copy) NSString * _Nonnull ticketId;
-@property (nonatomic, copy) NSString * _Nonnull assigneeId;
-@property (nonatomic, copy) NSString * _Nonnull status;
-@property (nonatomic, copy) NSString * _Nonnull priority;
-@property (nonatomic, copy) NSString * _Nonnull commentCount;
-@property (nonatomic, copy) NSString * _Nonnull closedTime;
-@property (nonatomic, copy) NSDate * _Nonnull createdTimeDate;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
 
 
 
@@ -499,10 +286,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK16TicketJsonObject")
 
 
 
-
-@interface UIImageView (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-- (void)downloadImageFromUrl:(NSString * _Nullable)url cacheMinutes:(NSInteger)minutes callBack:(void (^ _Nonnull)(NSString * _Nonnull, UIImage * _Nullable))callBack;
-@end
 
 
 
@@ -581,6 +364,14 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK24ZDCommunityConfiguration")
 @end
 
 
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14ZDCustomFields")
+@interface ZDCustomFields : NSObject
+@property (nonatomic, copy) NSString * _Nonnull fieldID;
+@property (nonatomic, copy) NSString * _Nonnull value;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12ZDCustomFont")
 @interface ZDCustomFont : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -652,10 +443,11 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK27ZDSolutionPageConfiguration")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+enum ZDThemeType : NSInteger;
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK7ZDTheme")
 @interface ZDTheme : NSObject
-+ (void)applyThemeWithTheme:(enum ThemeType)theme;
++ (void)applyThemeWithTheme:(enum ZDThemeType)theme;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -672,9 +464,32 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14ZDThemeArticle")
 @property (nonatomic, strong) UIColor * _Nonnull headerColor;
 @end
 
+typedef SWIFT_ENUM(NSInteger, ZDThemeType) {
+  ZDThemeTypeWhite = 0,
+  ZDThemeTypeDark = 1,
+};
+
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK21ZDTicketConfiguration")
 @interface ZDTicketConfiguration : ZDBaseContollerConfiguration
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12ZDTicketForm")
+@interface ZDTicketForm : NSObject
+@property (nonatomic, copy) NSString * _Nonnull emailID;
+@property (nonatomic, copy) NSString * _Nonnull departmentID;
+@property (nonatomic, copy) NSString * _Nonnull productID;
+@property (nonatomic, copy) NSString * _Nonnull subject;
+@property (nonatomic, copy) NSString * _Nonnull content;
+@property (nonatomic, copy) NSString * _Nonnull phone;
+@property (nonatomic, copy) NSString * _Nonnull classification;
+@property (nonatomic, copy) NSString * _Nonnull priority;
+@property (nonatomic, copy) NSString * _Nonnull category;
+@property (nonatomic, copy) NSString * _Nonnull subCategory;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull uploads;
+@property (nonatomic, copy) NSArray<ZDCustomFields *> * _Nullable customFields;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -698,12 +513,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <ZohoDeskPortalDele
 @end
 
 
+
+
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 @end
 
 
-SWIFT_CLASS("_TtCC17ZohoDeskPortalSDK17ZohoDeskPortalSDK22AddtionalConfiguration")
-@interface AddtionalConfiguration : NSObject
+SWIFT_CLASS("_TtCC17ZohoDeskPortalSDK17ZohoDeskPortalSDK24ZDAddtionalConfiguration")
+@interface ZDAddtionalConfiguration : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull LanguageCode;)
 + (NSString * _Nonnull)LanguageCode SWIFT_WARN_UNUSED_RESULT;
 + (void)setLanguageCode:(NSString * _Nonnull)value;
@@ -721,8 +538,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enablePoweredByZoho;)
 + (void)setEnablePoweredByZoho:(BOOL)value;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
-
-
 
 
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
