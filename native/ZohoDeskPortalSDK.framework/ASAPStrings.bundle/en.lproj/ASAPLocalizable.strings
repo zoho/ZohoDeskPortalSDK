@@ -242,8 +242,8 @@
 
 //new
 
-"desk.library.msg_reply_failed"                         = "Reply added failed";
-"desk.library.msg_reply_success"                        = "Reply added success";
+"desk.library.msg_reply_failed"                         = "Failed to add Reply";
+"desk.library.msg_reply_success"                        = "Reply added successfully";
 "desk.library.no_data"                                  = "No Data";
 "desk.library.no_data_msg_articles"                     = "There are no articles here.";
 "desk.library.no_data_msg_tickets"                      = "There are no tickets here.";
@@ -282,6 +282,8 @@
 "zdsdk_topic_discard_alert"                             = "Want to discard changes";
 "desk_library_msg_topic_add_success"                    = "Topic successfully added";
 "desk_library_tag_limit_error"                          = "You cannot add more than 5 tags";
+
+"desk_library_msg_comment_update_success"                  = "Comment successfully updated";
 
 // Need to update
 "desk_library_community_subject_error"                  = "Enter Title"; // old value = "Enter Subject"
