@@ -425,6 +425,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL translucent;)
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK21ZDPortalConfiguration")
 @interface ZDPortalConfiguration : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
++ (void)setGuestUserWithEmail:(NSString * _Nonnull)email displayName:(NSString * _Nullable)displayName phoneNumber:(NSString * _Nullable)phoneNumber;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enableLogMessages;)
 + (BOOL)enableLogMessages SWIFT_WARN_UNUSED_RESULT;
 + (void)setEnableLogMessages:(BOOL)newValue;
@@ -551,6 +552,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enablePoweredByZoho;)
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 + (void)setWithJwtUserIdentifier:(NSString * _Nonnull)jwtUserIdentifier onComplition:(void (^ _Nonnull)(void))onComplition onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 + (void)logout;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDUserSignedIn;)
++ (BOOL)isZDUserSignedIn SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
