@@ -1,4 +1,4 @@
-"DeskPortal.Dashboard.Heading"                          = "Zoho Desk";
+"DeskPortal.Dashboard.Heading"                          = "Customer Support";
 "DeskPortal.Network.failed.error.message"               = "Kontroller din internetforbindelse";
 "DeskPortal.Dashboard.addticket.title"                  = "Afsend en anmodning";
 "DeskPortal.Dashboard.addticket.description"            = "Søg hjælp hos vores agenter";
@@ -23,9 +23,6 @@
 "DeskPortal.Myticket.option.closeticket"                = "Luk billet";
 "DeskPortal.Myticket.option.editcomment"                = "Rediger kommentar";
 "DeskPortal.Error.message.reload"                       = "Forsøg igen";
-
-
-
 
 "zdsdk.general.powered"                                 = "Leveret af Zoho";
 
@@ -289,6 +286,11 @@
 "desk_library_msg_topic_add_success"                    = "Topic successfully added";
 "desk_library_tag_limit_error"                          = "You cannot add more than 5 tags";
 "desk_library_msg_comment_update_success"                  = "Comment successfully updated";
+
+"DeskPortal.Helpcenter.section.subheading"              = "Category";
+"DeskPortal.Helpcenter.sections.subheading"             = "Categories";
+
+"desk_library_tag_dublicate_error"                      = "Tags cannot be dublicate";
 
 // Need to update
 "desk_library_community_subject_error"                  = "Enter Title";// old value = "Enter Subject"

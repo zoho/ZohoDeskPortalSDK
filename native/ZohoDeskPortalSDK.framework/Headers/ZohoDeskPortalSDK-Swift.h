@@ -175,6 +175,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import QuartzCore;
 @import ObjectiveC;
 @import Foundation;
+@import CoreBluetooth;
 @import UIKit;
 @import CoreData;
 #endif
@@ -188,10 +189,35 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wnullability"
 
 SWIFT_MODULE_NAMESPACE_PUSH("ZohoDeskPortalSDK")
+typedef SWIFT_ENUM(NSInteger, APNSMode) {
+  APNSModeSandbox = 0,
+  APNSModeProduction = 1,
+};
+
+/// TimeStyle
+/// \code
+///  case curveLess
+///  case roundedCurve
+///  case boxUpperCurve
+///  case boxLowerCurve
+///
+/// \endcode
+typedef SWIFT_ENUM(NSInteger, BubbleStyle) {
+/// This type is used to display the chat bubble without curve
+  BubbleStyleCurveLess = 0,
+/// This type is used to display the chat bubble with rounded curve
+  BubbleStyleRoundedCurve = 1,
+/// This type is used to display the chat bubble with upper arrow
+  BubbleStyleBoxUpperCurve = 2,
+/// This type is used to display the chat bubble with lower arrow
+  BubbleStyleBoxLowerCurve = 3,
+};
 
 
 
 
+
+@class VisitorChat;
 
 /// ChatActivityHandler is a NSObject class which contains the event handler methods.
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK19ChatActivityHandler")
@@ -200,12 +226,265 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK19ChatActivityHandler")
 /// \param isinternal - Boolean determines whether visitor internal or close the chat window
 ///
 - (void)handleWidgetActionWithIsOpen:(BOOL)isOpen;
+/// This event handler allows you to invoke a method when the user attends the chat initiated by the visitor.
+/// \param visitor - VisitorChat object containing the data <em>Visit Id,Attender Email,Question</em>
+///
+- (void)handleVisitorAttendedWithVisitor:(VisitorChat * _Nonnull)visitor;
+/// This event handler allows you to invoke a method, when the chat initiated by the visitor is not answered by the user or missed.
+/// \param visitor - VisitorChat object containing the data <em>Visit Id,Question</em>
+///
+- (void)handleVisitorMissedWithVisitor:(VisitorChat * _Nonnull)visitor;
+/// This event handler allows you to invoke a method, when the agents are offline. This will be called once after the page is loaded.
+- (void)handleAgentsOffline;
+/// This event handler allows you to invoke a method, when the agents are online. This will be called once after the page is loaded.
+- (void)handleAgentsOnline;
+/// This event handler allows you to invoke a method, when a chat session is completed.
+/// \param visitor - VisitorChat object containing the data <em>Visit Id,Attender Email,Question</em>
+///
+- (void)handleChatCompleteWithVisitor:(VisitorChat * _Nonnull)visitor;
+/// This event handler allows you to invoke a method, on completion of a rating.
+/// \param visitor - VisitorChat object containing the data <em>Visit Id,Attender Email,Question,Rating</em>
+///
+- (void)handleRatingWithVisitor:(VisitorChat * _Nonnull)visitor;
+/// This event handler allows you to invoke a method, on completion of a feedback.
+/// \param visitor - VisitorChat object containing the data <em>Visit Id,Attender Email,Question,Feedback</em>
+///
+- (void)handleFeedbackWithVisitor:(VisitorChat * _Nonnull)visitor;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+/// ChatComponent
+/// \code
+/// case agent
+/// case rating
+/// case feedback
+/// case agentPhotoOnChatIcon
+///
+/// \endcode
+typedef SWIFT_ENUM(NSInteger, ChatComponent) {
+/// This component used to show/hide agent profile photo in chat window
+  ChatComponentAgent = 0,
+/// This component used to show/hide rating window
+  ChatComponentRating = 1,
+/// This component used to show/hide feedback window
+  ChatComponentFeedback = 2,
+/// This component used to show/hide agent photo on chat icon
+  ChatComponentAgentPhotoOnChatIcon = 3,
+};
+
+
+
+
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14LCAdminHandler")
+@interface LCAdminHandler : NSObject
+- (void)setChatHandler:(ChatActivityHandler * _Nonnull)handler;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class LiveChatViewController;
+enum SystemMessage : NSInteger;
+@class UIImage;
+@class UIColor;
+enum TimeStyle : NSInteger;
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK15LCSharedHandler")
+@interface LCSharedHandler : NSObject
+@property (nonatomic, strong) LiveChatViewController * _Null_unspecified lcController;
+/// This API helps you to set title for the SalesIQ chat UI header.
+/// <h2>Usage Example</h2>
+/// \code
+/// ZohoSalesIQ.Chat.setTitle("Zylker Live Support")
+///
+/// \endcodeprecondition:
+/// Title should not be nil
+/// \param title - Chat window title
+///
+- (void)setTitle:(NSString * _Nullable)title;
+/// This API allows you to clear the messages in the chat window.
+/// <h2>Usage Example</h2>
+/// \code
+/// ZohoSalesIQ.Chat.clearMessages()
+///
+/// \endcode
+- (void)clearMessages;
+- (void)clearData;
+- (void)setQuestion:(NSString * _Nullable)question;
+/// This API is used to set a question and initiate a chat. This question will be sent immediately when the chat window is internaled i.e., the Chat will be initiated.
+/// <h2>Usage Example</h2>
+/// \code
+/// ZohoSalesIQ.Chat.startChat(question: "Hello, I need assistance.")
+///
+/// \endcodeprecondition:
+/// Question should not be nil
+/// \param question - String value determines question to initiate the chat
+///
+- (void)startChatWithQuestion:(NSString * _Nullable)question;
+/// This API allows you to set the email address of a particular user to route the chats received from the visitors. If the Email address is provided in the API, then the visitor chats received in the application will be routed only to that specific user.
+/// <h2>Usage Example</h2>
+/// \code
+/// ZohoSalesIQ.Chat.setAgentEmail("patricia@zylker.com")
+///
+/// \endcodenote:
+/// If the User email address is provided in this API, then all the chats received from the visitor will be routed only to the particular user. Other users will not receive any chat notification from the visitors. If the mapped user is offline/Busy/engaged, then the chats will be routed to the other available users.
+/// \param email - Agent email id
+///
+- (void)setAgentEmail:(NSString * _Nullable)email;
+/// This API allows you to set a language for the Chat Widget.The language you would like to set in the chat widget will reflect, if you provide the name of the language in this API.
+/// <h2>Usage Example</h2>
+/// \code
+/// ZohoSalesIQ.Chat.setLanguage(Language.english.languageCodeName())
+///
+///
+/// \endcode\param language - Language name
+///
+- (void)setLanguage:(NSString * _Nullable)language;
+/// This API allows you to display only the required departments in the pre-chat form. All other configured departments will be hidden regardless of their status.
+/// <h2>Usage Example</h2>
+/// \code
+/// ZohoSalesIQ.Chat.setDepartment("ZylkerSales")
+///
+/// \endcodeprecondition:
+/// Department name should not be nil
+/// \param department - Department name
+///
+- (void)setDepartment:(NSString * _Nullable)department;
+- (void)setDepartments:(NSArray<NSString *> * _Nullable)departments;
+/// This API allows you to handle the visibility of User’s photo, Rating, Feedback i.e., you can enable or disable the users photo, rating and feedback in the chat window.
+/// <h2>Usage Example</h2>
+/// \code
+/// ZohoSalesIQ.Chat.SetVisibility(.agent, visible: true)
+///
+/// \endcodenote:
+/// By default, the Rating and feeback will be enabled.
+/// \param component - Enum determines type of ChatComponent (agent,rating,feedback,agentPhotoOnChatIcon)
+///
+/// \param visible - Boolean value determine to show or hide the component
+///
+- (void)setVisibility:(enum ChatComponent)component visible:(BOOL)visible;
+/// This API is used to customize the system messages displayed in the chat widget.
+/// <h2>Usage Example</h2>
+/// \code
+/// ZohoSalesIQ.Chat.setMessage(.chatCompleted, message: "Thank You for contacting us! Please leave us your valuable feedback.")
+///
+/// \endcode\param type - Enum determines type of SystemMessage (chatCompleted,ratingCompleted,feedbackCompleted,ratingAndFeedbackCompleted)
+///
+/// \param message - String value determine message to be displayed for SystemMessage
+///
+- (void)setMessage:(enum SystemMessage)type message:(NSString * _Nullable)message;
+/// This API allows you to display the visitor’s photo in the chat window.
+/// <h2>Usage Example</h2>
+/// \code
+/// ZohoSalesIQ.Chat.setVisitorImage(image: "IMAGENAME")
+///
+/// \endcodeprecondition:
+/// Image should not be nil
+/// \param image - Vistor image
+///
+- (void)setVisitorImage:(UIImage * _Nullable)image;
+/// This API allows you to customize your theme color of the chat window.
+/// <h2>Usage Example</h2>
+/// \code
+/// ZohoSalesIQ.Chat.setThemeColor(UIColor.greenColor())
+///
+/// \endcode\param color - UIColor
+///
+- (void)setThemeColor:(UIColor * _Nonnull)color;
+/// This API allows you to set the backgroundColor of the chat window.
+/// <h2>Usage Example</h2>
+/// \code
+/// ZohoSalesIQ.Chat.setMessageWindowBackgroundColor(UIColor.darkGray)
+///
+/// \endcode\param color - UIColor
+///
+- (void)setMessageWindowBackgroundColor:(UIColor * _Nonnull)color;
+/// This API allows you to set the incomming message backgroundColor.
+/// <h2>Usage Example</h2>
+/// \code
+/// ZohoSalesIQ.Chat.setIncommingMessageBackgroundColor(UIColor.lightGray)
+///
+/// \endcode\param color - UIColor
+///
+- (void)setIncommingMessageBackgroundColor:(UIColor * _Nonnull)color;
+/// This API allows you to set the outgoing message backgroundColor.
+/// <h2>Usage Example</h2>
+/// \code
+/// ZohoSalesIQ.Chat.setOutgoingMessageBackgroundColor(UIColor.blue)
+///
+/// \endcode\param color - UIColor
+///
+- (void)setOutgoingMessageBackgroundColor:(UIColor * _Nonnull)color;
+/// This API allows you to set the time display style of the chat window.
+/// <h2>Usage Example</h2>
+/// \code
+/// ZohoSalesIQ.Chat.setTimeDisplayStyle(.inside)
+///
+/// \endcode\param style - Enum determines type of TimeStyle(inside,outsideSlide)
+///
+- (void)setTimeDisplayStyle:(enum TimeStyle)style;
+/// This API allows you to set the style for chat bubble.
+/// <h2>Usage Example</h2>
+/// \code
+/// ZohoSalesIQ.Chat.setBubbleDisplayStyle(.roundedCurve)
+///
+/// \endcode\param style - Enum determines type of BubbleStyle(curveLess,roundedCurve,boxUpperCurve,boxLowerCurve)
+///
+- (void)setBubbleDisplayStyle:(enum BubbleStyle)style;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+/// This API allows you to show the Chat Window i.e., to internal the chat window automatically.
+/// <h2>Usage Example</h2>
+/// \code
+/// ZohoSalesIQ.Chat.show()
+///
+/// \endcode
+- (void)show:(BOOL)isShow;
 @end
 
 
 
+@class CBCentralManager;
 
+@interface LCSharedHandler (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <CBCentralManagerDelegate>
+- (void)centralManagerDidUpdateState:(CBCentralManager * _Nonnull)central;
+@end
+
+typedef SWIFT_ENUM(NSInteger, Language) {
+  LanguageEnglish = 0,
+  LanguageFrench = 1,
+  LanguageGerman = 2,
+  LanguageSpanish = 3,
+  LanguageDutch = 4,
+  LanguageNorwegian = 5,
+  LanguageTurkish = 6,
+  LanguageRussian = 7,
+  LanguagePortuguese = 8,
+  LanguageItalian = 9,
+  LanguageKorean = 10,
+  LanguageJapanese = 11,
+  LanguageDanish = 12,
+  LanguagePolish = 13,
+  LanguageArabic = 14,
+  LanguageHungarian = 15,
+  LanguageChinese = 16,
+  LanguageHebrew = 17,
+  LanguageIrish = 18,
+  LanguageRomanian = 19,
+  LanguageThai = 20,
+  LanguageSwedish = 21,
+  LanguageGreek = 22,
+  LanguageCzech = 23,
+  LanguageSlovak = 24,
+  LanguageSlovenian = 25,
+  LanguageCroatian = 26,
+};
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12LanguageCode")
+@interface LanguageCode : NSObject
++ (NSString * _Nonnull)name:(enum Language)language SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 @protocol UIViewControllerAnimatedTransitioning;
 @class NSBundle;
@@ -216,6 +495,7 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22LiveChatViewController")
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidDisappear:(BOOL)animated;
+- (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLayoutSubviews;
 - (void)didReceiveMemoryWarning;
 - (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
@@ -262,6 +542,38 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23NotificationLinkHandler")
 @interface NotificationLinkHandler : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+/// ChatComponent
+/// \code
+/// case chatCompleted
+/// case ratingCompleted
+/// case feedbackCompleted
+/// case ratingAndFeedbackCompleted
+///
+/// \endcode
+typedef SWIFT_ENUM(NSInteger, SystemMessage) {
+/// This system type is used to set the message when chat is completed
+  SystemMessageChatCompleted = 0,
+/// This system type is used to set the message when rating is completed
+  SystemMessageRatingCompleted = 1,
+/// This system type is used to set the message when feedback is completed
+  SystemMessageFeedbackCompleted = 2,
+/// This system type is used to set the message when rating and feedback is completed
+  SystemMessageRatingAndFeedbackCompleted = 3,
+};
+
+/// TimeStyle
+/// \code
+/// case inside
+/// case outsideSlide
+///
+/// \endcode
+typedef SWIFT_ENUM(NSInteger, TimeStyle) {
+/// This type is used to display the message time inside the chat bubble
+  TimeStyleInside = 0,
+/// This type is used to display the message time on user sliding the chat message
+  TimeStyleOutsideSlide = 1,
+};
 
 
 
@@ -339,6 +651,17 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23NotificationLinkHandler")
 @end
 
 
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11VisitorChat")
+@interface VisitorChat : NSObject
+@property (nonatomic, copy) NSString * _Nullable visitId;
+@property (nonatomic, copy) NSString * _Nullable question;
+@property (nonatomic, copy) NSString * _Nullable attenderEmail;
+@property (nonatomic, copy) NSString * _Nullable feedback;
+@property (nonatomic, copy) NSString * _Nullable rating;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK13VisitorObject")
@@ -426,6 +749,7 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK21ZDPortalConfiguration")
 @interface ZDPortalConfiguration : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 + (void)setGuestUserWithEmail:(NSString * _Nonnull)email displayName:(NSString * _Nullable)displayName phoneNumber:(NSString * _Nullable)phoneNumber;
++ (void)processConfigurationWithConfig:(ZDPortalConfiguration * _Nonnull)config;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enableLogMessages;)
 + (BOOL)enableLogMessages SWIFT_WARN_UNUSED_RESULT;
 + (void)setEnableLogMessages:(BOOL)newValue;
@@ -433,6 +757,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enableLogMessages;)
 @property (nonatomic) BOOL enableHelpCenter;
 @property (nonatomic) BOOL enableMyTicket;
 @property (nonatomic) BOOL enableCreateTicket;
+@property (nonatomic) BOOL showLeftMenu;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull setSDKLanguage;)
 + (NSString * _Nonnull)setSDKLanguage SWIFT_WARN_UNUSED_RESULT;
 + (void)setSetSDKLanguage:(NSString * _Nonnull)newValue;
@@ -509,11 +834,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <ZohoDeskPortalDele
 + (id <ZohoDeskPortalDelegate> _Nullable)zohoDeskPortalDelegate SWIFT_WARN_UNUSED_RESULT;
 + (void)setZohoDeskPortalDelegate:(id <ZohoDeskPortalDelegate> _Nullable)value;
 + (void)initializeSDK:(NSString * _Nonnull)orgId appId:(NSString * _Nonnull)appId configuration:(ZDPortalConfiguration * _Nonnull)configuration;
++ (void)initializeSDK:(NSString * _Nonnull)orgId appId:(NSString * _Nonnull)appId DCString:(NSString * _Nonnull)DCString;
 - (void)handleWidgetActionWithIsOpen:(BOOL)isOpen;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
-
-
 
 
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
@@ -539,6 +863,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enablePoweredByZoho;)
 + (void)setEnablePoweredByZoho:(BOOL)value;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))

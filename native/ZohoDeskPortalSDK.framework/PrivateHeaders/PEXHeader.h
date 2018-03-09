@@ -310,6 +310,10 @@ typedef enum {
 /**
  Call this method to network unreachable.
  */
+/**
+Call this method to set Multi DC base domain
+*/
++ (void)setDclBaseDomain:(NSString*)name;
 
 + (void)networkFailure;
 /**

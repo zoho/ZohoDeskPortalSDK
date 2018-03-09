@@ -48,4 +48,6 @@ typedef enum {
 - (void)process:(PEXEvent *)request;
 - (BOOL)getConnectionStatus;
 @property(strong) NSString * dclPfx;
+@property(strong) NSString * dclBaseBomain;
+
 @end

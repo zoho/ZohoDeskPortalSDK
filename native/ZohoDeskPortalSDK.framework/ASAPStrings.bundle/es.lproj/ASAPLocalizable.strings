@@ -1,4 +1,4 @@
-"DeskPortal.Dashboard.Heading"                                = "Zoho Desk";
+"DeskPortal.Dashboard.Heading"                                = "Customer Support";
 "DeskPortal.Network.failed.error.message"                                  = "Compruebe su conexión a internet";
 "DeskPortal.Dashboard.addticket.title"                          = "Enviar ticket";
 "DeskPortal.Dashboard.addticket.description"                     = "Reciba ayuda de nuestros agentes";
@@ -285,6 +285,11 @@
 "desk_library_msg_topic_add_success"                    = "Topic successfully added";
 "desk_library_tag_limit_error"                          = "You cannot add more than 5 tags";
 "desk_library_msg_comment_update_success"                  = "Comment successfully updated";
+
+"DeskPortal.Helpcenter.section.subheading"              = "Category";
+"DeskPortal.Helpcenter.sections.subheading"             = "Categories";
+
+"desk_library_tag_dublicate_error"                      = "Tags cannot be dublicate";
 
 // Need to update
 "desk_library_community_subject_error"                  = "Enter Title"; // old value = "Enter Subject"
