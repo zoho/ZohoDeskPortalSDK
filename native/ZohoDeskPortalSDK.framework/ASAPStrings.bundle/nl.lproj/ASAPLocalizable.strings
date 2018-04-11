@@ -1,4 +1,4 @@
-"DeskPortal.Dashboard.Heading"                                = "Customer Support";
+"DeskPortal.Dashboard.Heading" = "Klantondersteuning";
 "DeskPortal.Network.failed.error.message"                                  = "Controleer uw internetverbinding";
 "DeskPortal.Dashboard.addticket.title"                          = "Ticket indienen";
 "DeskPortal.Dashboard.addticket.description"                     = "Hulp vragen aan onze medewerkers";
@@ -24,6 +24,8 @@
 "DeskPortal.Myticket.option.editcomment"                              = "Opmerking bewerken";
 "DeskPortal.Error.message.reload"                                      = "Opnieuw proberen";
 
+"DeskPortal.Helpcenter.sections.subheading" = "Categorieën";
+"DeskPortal.Helpcenter.section.subheading" = "Categorie";
 
 
 "zdsdk.general.powered"                                 = "Powered by Zoho";
@@ -52,7 +54,6 @@
 "zdsdk.createTicket.entervalid"                         = "Voer een geldig(e) %@ in";
 "desk.library.newticket.field.error"                    = "%@ kan niet leeg zijn";
 "desk.library.newticket.date.picker" = "Of kies de dichtstbijzijnde datum hieronder";
-"desk.library.newticket.file.size.error" = "De bestandsgrootte mag niet meer zijn dan 20 MB";
 
 //FeedBack Screen
 
@@ -213,85 +214,109 @@
 "desk.library.thread.Conversation"                      = "Conversaties";
 "desk_sdk_network_alert"                                = "Netwerk verloren";
 "desk_community_new_topic_add_a_title"                  = "Een titel toevoegen";
-"desk_library_community_add_tags"                       = "Tags toevoegen";
 "desk_library_community_idea"                           = "Idee";
 "desk_library_community_problem"                        = "Probleem";
 "desk_library_community_question"                       = "Vraag";
 "desk_library_community_tag_rule"                       = "Voeg komma in om meerdere tags toe te voegen";
 "desk_library_alert_ok"                                 = "OK";
-"desk_library_alert_msg_close_ticket"                   = "Weet u zeker dat u dit ticket wilt sluiten?";
-"desk_library_alert_msg_delete_comment"                 = "Weet u zeker dat u deze opmerking wilt verwijderen?";
-"desk_library_community_done"                           = "Voltooid";
-"desk.library.follow"                                   = "Volgen";
-"desk.library.following"                                = "Volgend";
-"desk_library_msg_comment_delete_failed"                = "Verwijderen van opmerking is mislukt";
-"desk_sdk_community_topic_edit_tag"                     = "Tag bewerken";
-"desk_library_community_continue"                       = "Doorgaan";
-"desk_library_community_sub_category"                   = "Subcategorie";
 
-"desk_library_community_discard_alert"                  = "Wilt u doorgaan? Vergeet niet dat wijzigingen verloren gaan.";
-"desk.library.updated.sec"                              = "Alleen nu";
-"desk_library_msg_comment_add_success" 			= "Opmerking is toegevoegd";
-"desk_library_msg_attachment_uploading" 		= "De bijlage(n) moet(en) nog geüpload worden";
 
 //New Strings -------------------------------------- >
 
-"desk.library.community_category_comments"              = "%s Comments";
-"desk.library.empty_error_message_email"                = "Email can not be blank";
-"desk.library.feed_back_error_message"                  = "Feedback cannot be blank";
-"desk.library.msg_reply_failed"                         = "Failed to add Reply";
-"desk.library.msg_reply_success"                        = "Reply added successfully";
-"desk.library.no_data"                                  = "No Data";
-"desk.library.no_data_msg_articles"                     = "There are no articles here.";
-"desk.library.no_data_msg_tickets"                      = "There are no tickets here.";
-"desk.library.no_data_msg_topics"                       = "There are no topics here.";
-"desk.library.no_data_msg_conversations"                = "There are no conversations here.";
-"desk.library.thread.draft"                             = "Draft @";
-"desk.library.thread.option.delete"                     = "Delete";
-"desk.library.ticket.attachments"                       = "Attachments (%s)";
-"desk.library.ticket.closed.failed"                     = "Ticket failed to Close";
-"desk.library.updated.message"                          = "Last updated about %s";
-"desk_library_community_category"                       = "Category";
-"desk_library_community_content_error"                  = "Please enter content for your topic";
-"desk_library_msg_close_ticket_failed"                  = "Failed to close the ticket";
-"desk_library_msg_comment_add_failed"                   = "Failed to add comment";
-"desk.library.help"                                     = "Zoho Desk Help";
-"desk.library.topic_content_placeholder"                = "Content text";
+"desk_library_msg_topic_update_success" = "Onderwerp is bijgewerkt";
+"desk_library_msg_add_ticket_failed" = "Toevoegen van ticket is mislukt";
+"desk.library.camera" = "Camera openen";
+"desk.library.msg_article_failed" = "Ophalen van het artikel is mislukt";
+"desk.library.msg_upvote_failed" = "Leuk vinden van het artikel is mislukt";
+"desk.library.msg_downvote_failed" = "Niet leuk vinden van het artikel is mislukt";
+"desk_library_kb_section" = "Secties";
+"desk_library_tag_duplicate_error" = "Dubbele tags zijn niet toegestaan";
+"desk_library_msg_comment_update_success" = "Opmerking is bijgewerkt";
+"desk_library_msg_comment_update_failed" = "Bijwerken van de opmerking is mislukt";
+"desk.library.msg_ticket_failed" = "Ophalen van de tickets is mislukt";
+"desk.library.ticket.closed.failed" = "Ticket kon niet gesloten worden";
+"desk.library.ticket.attachments" = "Bijlagen (%s)";
+"desk.library.updated.message" = "Laatste update was %s geleden";
+"desk.library.empty_error_message_email" = "Het e-mailveld kan niet leeg zijn";
+"desk.library.community.create_topic" = "Onderwerp maken";
+"desk_community_new_topic_add_a_title" = "Een titel toevoegen";
+"desk.library.community.saveasdraft" = "Opslaan als concept";
+"desk_library_community_add_tags" = "Tag toevoegen";
+"desk_library_community_attachfiles" = "Bestanden bijvoegen";
+"desk_library_community_cancel" = "Annuleren";
+"desk_library_alert_msg_close_ticket" = "Weet u zeker dat u dit ticket wilt sluiten?";
+"desk_library_alert_msg_delete_comment" = "Weet u zeker dat u deze opmerking wilt verwijderen?";
+"desk_library_community_done" = "Voltooid";
+"desk.library.follow" = "Volgen";
+"desk.library.following" = "Volgend";
+"desk.library.server_error" = "Oeps! Er is iets fout gegaan.";
+"desk_library_msg_comment_delete_success" = "Opmerking is verwijderd";
+"desk_library_msg_comment_delete_failed" = "Verwijderen van opmerking is mislukt";
+"desk_library_msg_comment_add_success" = "Opmerking is toegevoegd";
+"desk_library_msg_close_ticket_success" = "Ticket is gesloten";
+"desk_library_msg_close_ticket_failed" = "Sluiten van het ticket is mislukt";
+"desk_library_msg_attachment_uploading" = "Bijlage(n) om nog te uploaden";
+"desk_sdk_community_topic_edit_tag" = "Tag bewerken";
+"desk_library_community_continue" = "Doorgaan";
+"desk_library_community_sub_category" = "Subcategorie";
 
-"zdsdk_topic_alert_delete"                              = "Are you sure want to delete this Topic?";
-"zdsdk_topic_delete_success"                            = "Topic Deleted successfully";
-"zdsdk_topic_delete_Failed"                             = "Failed to delete the Topic.";
-"zdsdk_addTicket_actionsheet_description"               = "Select option for %@";
-"zdsdk_addTicket_actionsheet_fail_description"          = "No %@ Found";
+"desk_library_community_discard_alert" = "Wilt u doorgaan? Vergeet niet dat de wijzigingen verloren gaan.";
+"desk.library.updated.sec" = "Alleen nu";
+"desk.library.community_comment_empty_error" = "Voer uw opmerking in";
+"desk.library.community_topic_type_description" = "Type wijzigen";
+"desk.library.no_data_msg_community" = "Er zijn hier geen community’s.";
+"desk.library.no_data_msg_conversations" = "Er zijn hier geen conversaties.";
+"desk.library.feed_back_error_message" = "Feedback kan niet leeg zijn";
+"desk_library_msg_priority_update_success" = "Prioriteit is bijgewerkt";
+"desk_library_msg_priority_update_failed" = "Bijwerken van prioriteit is mislukt";
+"desk_library_ticket_content_length_error" = "Lengte van inhoud overschrijdt de opgegeven limiet";
+"desk_library_tag_limit_error" = "U kunt niet meer dan vijf tags toevoegen.";
+"desk_library_msg_topic_add_success" = "Onderwerp is toegevoegd";
+"desk_library_msg_topic_update_failed" = "Bijwerken van het onderwerp is mislukt";
+"desk.library.newticket.file.size.error" = "De bestandsgrootte mag niet meer zijn dan 20 MB.";
+"desk.library.msg_conversation_failed" = "Kon details van ticket niet ophalen";
+"desk_library_community_comments_show_more" = "Meer weergeven";
+"desk.library.community.edit_topic" = "Onderwerp bewerken";
+"desk_library_comment_emoji_character_error" = "Emojis zijn niet toegestaan in opmerkingen";
+"desk_library_msg_attaching_file" = "Uw bestanden worden bijgevoegd";
+"desk.library.msg_reply_failed" = "Reactie was niet toegevoegd";
+"desk.library.msg_reply_success" = "Reactie is toegevoegd";
+"desk.library.no_data" = "Geen gegevens";
+"desk.library.no_data_msg_articles" = "Er zijn hier geen artikelen.";
+"desk.library.no_data_msg_tickets" = "Er zijn hier geen tickets.";
+"desk.library.no_data_msg_topics" = "Er zijn hier geen onderwerpen.";
+"desk.library.thread.option.delete" = "Verwijderen";
+"desk_library_community_content_error" = "Voer iets in voor het onderwerp";
+"desk_library_msg_comment_add_failed" = "Toevoegen van opmerking is mislukt";
+"desk.library.topic_content_placeholder" = "Tekst van inhoud";
+"zdsdk_topic_alert_delete" = "Weet u zeker dat u dit onderwerp wilt verwijderen?";
+"zdsdk_topic_delete_success" = "Onderwerp verwijderd";
+"zdsdk_topic_delete_Failed" = "Verwijderen van het onderwerp is mislukt";
+"zdsdk_addTicket_actionsheet_description" = "%@ optie selecteren";
+"zdsdk_addTicket_actionsheet_fail_description" = "Geen %@ opties gevonden";
+"zdsdk_addTicket_multiselect_empty" = "Tik om waarden te selecteren";
+"zdsdk_addTicket_multiselect_selected" = "%@ waarden geselecteerd";
+"zdsdk_topic_update" = "Update";
+"zdsdk_community_Follow_error" = "Kan de categorie niet volgen";
+"zdsdk_community_unFollow_error" = "Kan de categorie niet niet volgen";
+"desk_library_msg_topic_add_failed" = "Toevoegen van onderwerp is mislukt";
+"zdsdk_community_tag_characters_error" = "Speciale tekens zijn niet toegestaan in tags";
+"zdsdk.attachment.attachment" = "Bijlage";
+"desk_library_community_subject_length_error" = "Lengte van titel overschrijdt de limiet";
+"desk.library.newticket.file.error" = "Kon de bijlagen niet uploaden";
+"zdsdk_topic_updated_success" = "Onderwerp is bijgewerkt";
+"zdsdk_topic_discard_alert" = "Weet u zeker dat u de wijzigingen wilt negeren?";
+"desk_library_community_subject_error" = "Voer een titel voor het onderwerp in";
+"desk.library.community_category_comments" = "%s opmerkingen";
 
-"zdsdk_addTicket_multiselect_empty"                     = "Tap to select values";
-"zdsdk_addTicket_multiselect_selected"                  = "%@ Values";
-"zdsdk_addTicket_validate_error"                        = "Please fill valid inputs";
+"desk_library_msg_topic_delete_success" = "Onderwerp is verwijderd";
+"desk_library_community_title_error" = "Voer titel in";
+"desk_library_tag_spl_character_error" = "Speciale tekens zijn niet toegestaan in tags";
+"desk_library_alert_msg_delete_topic" = "Weet u zeker dat u dit onderwerp wilt verwijderen?";
+"desk.library.msg_comment_failed" = "Toevoegen van opmerking is mislukt";
 
-"zdsdk_createTopic_locked_msg"                          = "All Categories are locked.";
+//"desk_library_community_add_tags"                       = "Tags toevoegen"; -> Add Tags
 
-"zdsdk_topic_update"                                    = "Update";
-
-"zdsdk_community_Follow_error"                          = "Unable to follow the category";
-"zdsdk_community_unFollow_error"                        = "Unable to unfollow the category";
-"desk_library_msg_topic_add_failed"                     = "Failed to add the topic";
-
-"zdsdk_community_tag_characters_error"                  = "Special characters not allowed";
-"zdsdk.attachement.attachement"                         = "Attachment";
-"desk_library_community_subject_length_error"           = "Title length exceeds the limit";
-"desk.library.newticket.file.error"                     = "Could not upload the attachments";
-"zdsdk_topic_updated_success"                           = "Topic updated ssuccessfully";
-"zdsdk_topic_discard_alert"                             = "Want to discard changes";
-
-"desk_library_msg_topic_add_success"                    = "Topic successfully added";
-"desk_library_tag_limit_error"                          = "You cannot add more than 5 tags";
-"desk_library_msg_comment_update_success"                  = "Comment successfully updated";
-
-"DeskPortal.Helpcenter.section.subheading"              = "Category";
-"DeskPortal.Helpcenter.sections.subheading"             = "Categories";
-
-"desk_library_tag_dublicate_error"                      = "Tags cannot be dublicate";
-
-// Need to update
-"desk_library_community_subject_error"                  = "Enter Title"; // old value = "Enter Subject"
+//New Strings
+"zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
 

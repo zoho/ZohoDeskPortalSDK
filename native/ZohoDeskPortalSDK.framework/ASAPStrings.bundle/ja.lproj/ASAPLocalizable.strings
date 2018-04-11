@@ -1,4 +1,4 @@
-"DeskPortal.Dashboard.Heading"                                = "Customer Support";
+"DeskPortal.Dashboard.Heading" = "カスタマーサポート";
 "DeskPortal.Network.failed.error.message"                                  = "インターネット接続を確認してください";
 "DeskPortal.Dashboard.addticket.title"                          = "チケットを提出する";
 "DeskPortal.Dashboard.addticket.description"                     = "私たちのエージェントに協力させてください";
@@ -24,7 +24,8 @@
 "DeskPortal.Myticket.option.editcomment"                              = "コメントを編集";
 "DeskPortal.Error.message.reload"                                = "再試行";
 
-
+"DeskPortal.Helpcenter.sections.subheading" = "カテゴリ";
+"DeskPortal.Helpcenter.section.subheading" = "カテゴリ";
 
 
 "zdsdk.general.powered"                                 = "Zoho提供";
@@ -53,7 +54,6 @@
 "zdsdk.createTicket.entervalid"                         = "以下の項目を有効なものにしてください: %@";
 "desk.library.newticket.field.error"                    = "%@ 空白にすることができません";
 "desk.library.newticket.date.picker" = "または、以下から最も近い日時を選択してください";
-"desk.library.newticket.file.size.error" = "ファイルサイズの上限は20MBです";
 
 //FeedBack Screen
 "zdsdk.feedback.barbutton"                              = "スキップ";
@@ -212,85 +212,109 @@
 "desk.library.thread.Conversation"                      = "会話";
 "desk_sdk_network_alert"                                = "ネットワークが失われました";
 "desk_community_new_topic_add_a_title"                  = "タイトルを追加";
-"desk_library_community_add_tags"                       = "タグを追加";
 "desk_library_community_idea"                           = "アイデア";
 "desk_library_community_problem"                        = "問題";
 "desk_library_community_question"                       = "質問";
 "desk_library_community_tag_rule"                       = "複数のタグを追加するにはコンマを挿入してください";
 "desk_library_alert_ok"                                 = "OK";
-"desk_library_alert_msg_close_ticket"                   = "このチケットを終了してもよろしいですか?";
-"desk_library_alert_msg_delete_comment"                 = "このコメントを削除してもよろしいですか?";
-"desk_library_community_done"                           = "済み";
-"desk.library.follow"                                   = "フォロー";
-"desk.library.following"                                = "フォロー中";
-"desk_library_msg_comment_delete_failed"                = "コメントの削除に失敗しました";
-"desk_sdk_community_topic_edit_tag"                     = "タグを編集";
-"desk_library_community_continue"                       = "続行";
-"desk_library_community_sub_category"                   = "サブカテゴリ";
 
-"desk_library_community_discard_alert"                  = "続行してもよろしいですか?変更が失われますのでご注意ください。";
-"desk.library.updated.sec"                              = "今すぐ";
-"desk_library_msg_comment_add_success" 			= "コメントの追加に成功しました";
-"desk_library_msg_attachment_uploading" 		= "まだ添付ファイルがアップロードされていません";
 
 //New Strings -------------------------------------- >
 
-"desk.library.community_category_comments"              = "%s Comments";
-"desk.library.empty_error_message_email"                = "Email can not be blank";
-"desk.library.feed_back_error_message"                  = "Feedback cannot be blank";
-"desk.library.msg_reply_failed"                         = "Failed to add Reply";
-"desk.library.msg_reply_success"                        = "Reply added successfully";
-"desk.library.no_data"                                  = "No Data";
-"desk.library.no_data_msg_articles"                     = "There are no articles here.";
-"desk.library.no_data_msg_tickets"                      = "There are no tickets here.";
-"desk.library.no_data_msg_topics"                       = "There are no topics here.";
-"desk.library.no_data_msg_conversations"                = "There are no conversations here.";
-"desk.library.thread.draft"                             = "Draft @";
-"desk.library.thread.option.delete"                     = "Delete";
-"desk.library.ticket.attachments"                       = "Attachments (%s)";
-"desk.library.ticket.closed.failed"                     = "Ticket failed to Close";
-"desk.library.updated.message"                          = "Last updated about %s";
-"desk_library_community_category"                       = "Category";
-"desk_library_community_content_error"                  = "Please enter content for your topic";
-"desk_library_msg_close_ticket_failed"                  = "Failed to close the ticket";
-"desk_library_msg_comment_add_failed"                   = "Failed to add comment";
-"desk.library.help"                                     = "Zoho Desk Help";
-"desk.library.topic_content_placeholder"                = "Content text";
+"desk_library_msg_topic_update_success" = "トピックが正常に更新されました";
+"desk_library_msg_add_ticket_failed" = "チケットの追加に失敗しました";
+"desk.library.camera" = "カメラを開く";
+"desk.library.msg_article_failed" = "記事の取得に失敗しました";
+"desk.library.msg_upvote_failed" = "記事を「いいね」するのに失敗しました";
+"desk.library.msg_downvote_failed" = "記事の「ひどいね」するのに失敗しました";
+"desk_library_kb_section" = "セクション";
+"desk_library_tag_duplicate_error" = "タグの複製は許可されていません";
+"desk_library_msg_comment_update_success" = "コメントが正常に更新されました";
+"desk_library_msg_comment_update_failed" = "コメントのアップデートに失敗しました";
+"desk.library.msg_ticket_failed" = "チケットの取得に失敗しました";
+"desk.library.ticket.closed.failed" = "チケットを終了するのに失敗しました";
+"desk.library.ticket.attachments" = "添付 (%s)";
+"desk.library.updated.message" = "最終更新： %s 前";
+"desk.library.empty_error_message_email" = "メールアドレスのフィールドを空白にすることはできません";
+"desk.library.community.create_topic" = "トピックの作成";
+"desk_community_new_topic_add_a_title" = "タイトルの追加";
+"desk.library.community.saveasdraft" = "下書きとして保存";
+"desk_library_community_add_tags" = "タグの追加";
+"desk_library_community_attachfiles" = "ファイルの添付";
+"desk_library_community_cancel" = "キャンセルする";
+"desk_library_alert_msg_close_ticket" = "このチケットを終了してもよろしいですか?";
+"desk_library_alert_msg_delete_comment" = "このコメントを削除してもよろしいですか？?";
+"desk_library_community_done" = "実行済み";
+"desk.library.follow" = "フォロー";
+"desk.library.following" = "フォロー中";
+"desk.library.server_error" = "すみません！何か問題が発生したようです.";
+"desk_library_msg_comment_delete_success" = "コメントが削除されました";
+"desk_library_msg_comment_delete_failed" = "コメントの削除に失敗しました";
+"desk_library_msg_comment_add_success" = "コメントの追加に成功しました";
+"desk_library_msg_close_ticket_success" = "チケットが終了されました";
+"desk_library_msg_close_ticket_failed" = "チケットを終了できませんでした";
+"desk_library_msg_attachment_uploading" = "まだ添付ファイルがアップロードされていません";
+"desk_sdk_community_topic_edit_tag" = "タグの編集";
+"desk_library_community_continue" = "続行";
+"desk_library_community_sub_category" = "サブカテゴリ";
 
-"zdsdk_topic_alert_delete"                              = "Are you sure want to delete this Topic?";
-"zdsdk_topic_delete_success"                            = "Topic Deleted successfully";
-"zdsdk_topic_delete_Failed"                             = "Failed to delete the Topic.";
-"zdsdk_addTicket_actionsheet_description"               = "Select option for %@";
-"zdsdk_addTicket_actionsheet_fail_description"          = "No %@ Found";
+"desk_library_community_discard_alert" = "続行してもよろしいですか? 変更が失われますのでご注意ください.";
+"desk.library.updated.sec" = "今すぐ";
+"desk.library.community_comment_empty_error" = "コメントを入力";
+"desk.library.community_topic_type_description" = "変更の種類";
+"desk.library.no_data_msg_community" = "ここにはコミュニティがありません.";
+"desk.library.no_data_msg_conversations" = "ここには会話がありません.";
+"desk.library.feed_back_error_message" = "フィードバックを空白にすることはできません";
+"desk_library_msg_priority_update_success" = "優先度が正常に更新されました";
+"desk_library_msg_priority_update_failed" = "優先度の更新に失敗しました";
+"desk_library_ticket_content_length_error" = "コンテンツの長さが指定の上限を超過しています";
+"desk_library_tag_limit_error" = "5個以上のタグを追加することはできません.";
+"desk_library_msg_topic_add_success" = "トピックが正常に追加されました";
+"desk_library_msg_topic_update_failed" = "トピックのアップデートに失敗しました";
+"desk.library.newticket.file.size.error" = "ファイルサイズの上限は20 MBです.";
+"desk.library.msg_conversation_failed" = "チケットの詳細を取得できませんでした";
+"desk_library_community_comments_show_more" = "詳細表示";
+"desk.library.community.edit_topic" = "トピックの編集";
+"desk_library_comment_emoji_character_error" = "コメントでは絵文字が許可されていません";
+"desk_library_msg_attaching_file" = "ファイルを添付しています";
+"desk.library.msg_reply_failed" = "返信が追加されませんでした";
+"desk.library.msg_reply_success" = "返信が正常に追加されました";
+"desk.library.no_data" = "データなし";
+"desk.library.no_data_msg_articles" = "ここには記事がありません.";
+"desk.library.no_data_msg_tickets" = "ここにはチケットがありません.";
+"desk.library.no_data_msg_topics" = "ここにはトピックがありません.";
+"desk.library.thread.option.delete" = "削除";
+"desk_library_community_content_error" = "トピックのコンテンツを入力してください";
+"desk_library_msg_comment_add_failed" = "コメントの追加に失敗しました";
+"desk.library.topic_content_placeholder" = "コンテンツテキスト";
+"zdsdk_topic_alert_delete" = "このトピックを削除してもよろしいですか？?";
+"zdsdk_topic_delete_success" = "トピックが正常に削除されました";
+"zdsdk_topic_delete_Failed" = "トピックの削除に失敗しました";
+"zdsdk_addTicket_actionsheet_description" = "%@ オプションの選択";
+"zdsdk_addTicket_actionsheet_fail_description" = "%@ オプションが見つかりません";
+"zdsdk_addTicket_multiselect_empty" = "タップして値を選択してください";
+"zdsdk_addTicket_multiselect_selected" = "%@ の値が選択されました";
+"zdsdk_topic_update" = "更新";
+"zdsdk_community_Follow_error" = "カテゴリをフォローできません";
+"zdsdk_community_unFollow_error" = "カテゴリをフォロー解除できません";
+"desk_library_msg_topic_add_failed" = "トピックの追加に失敗しました";
+"zdsdk_community_tag_characters_error" = "タグでは特殊な文字の使用が許可されていません";
+"zdsdk.attachment.attachment" = "添付ファイル";
+"desk_library_community_subject_length_error" = "件名の長さが上限を超過しています";
+"desk.library.newticket.file.error" = "添付ファイルをアップロードできませんでした";
+"zdsdk_topic_updated_success" = "トピックが正常に更新されました";
+"zdsdk_topic_discard_alert" = "変更を本当に破棄しますか？?";
+"desk_library_community_subject_error" = "トピックのタイトルを入力してください";
+"desk.library.community_category_comments" = "%s コメント";
 
-"zdsdk_addTicket_multiselect_empty"                     = "Tap to select values";
-"zdsdk_addTicket_multiselect_selected"                  = "%@ Values";
-"zdsdk_addTicket_validate_error"                        = "Please fill valid inputs";
+"desk_library_msg_topic_delete_success" = "トピックが削除されました";
+"desk_library_community_title_error" = "タイトルを入力";
+"desk_library_tag_spl_character_error" = "タグでは特殊な文字の使用が許可されていません";
+"desk_library_alert_msg_delete_topic" = "このトピックを削除してもよろしいですか？?";
+"desk.library.msg_comment_failed" = "コメントの追加に失敗しました";
 
-"zdsdk_createTopic_locked_msg"                          = "All Categories are locked.";
+//"desk_library_community_add_tags"                       = "タグを追加"; -> Add Tags
 
-"zdsdk_topic_update"                                    = "Update";
-
-"zdsdk_community_Follow_error"                          = "Unable to follow the category";
-"zdsdk_community_unFollow_error"                        = "Unable to unfollow the category";
-"desk_library_msg_topic_add_failed"                     = "Failed to add the topic";
-
-"zdsdk_community_tag_characters_error"                  = "Special characters not allowed";
-"zdsdk.attachement.attachement"                         = "Attachment";
-"desk_library_community_subject_length_error"           = "Title length exceeds the limit";
-"desk.library.newticket.file.error"                     = "Could not upload the attachments";
-"zdsdk_topic_updated_success"                           = "Topic updated ssuccessfully";
-"zdsdk_topic_discard_alert"                             = "Want to discard changes";
-
-"desk_library_msg_topic_add_success"                    = "Topic successfully added";
-"desk_library_tag_limit_error"                          = "You cannot add more than 5 tags";
-"desk_library_msg_comment_update_success"                  = "Comment successfully updated";
-
-"DeskPortal.Helpcenter.section.subheading"              = "Category";
-"DeskPortal.Helpcenter.sections.subheading"             = "Categories";
-
-"desk_library_tag_dublicate_error"                      = "Tags cannot be dublicate";
-
-// Need to update
-"desk_library_community_subject_error"                  = "Enter Title"; // old value = "Enter Subject"
+//New Strings
+"zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
 

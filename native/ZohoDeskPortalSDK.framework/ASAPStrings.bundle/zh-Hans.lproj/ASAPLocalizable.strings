@@ -1,4 +1,4 @@
-"DeskPortal.Dashboard.Heading"                                = "Customer Support";
+"DeskPortal.Dashboard.Heading" = "客户支持";
 "DeskPortal.Network.failed.error.message"                                  = "检查您的网络连接";
 "DeskPortal.Dashboard.addticket.title"                          = "提交工作单";
 "DeskPortal.Dashboard.addticket.description"                     = "从我们的座席寻求帮助";
@@ -24,6 +24,8 @@
 "DeskPortal.Myticket.option.editcomment"                              = "编辑评论";
 "DeskPortal.Error.message.reload"                                = "重试";
 
+"DeskPortal.Helpcenter.sections.subheading" = "类别";
+"DeskPortal.Helpcenter.section.subheading" = "类别";
 
 
 "zdsdk.general.powered"                                 = "由 Zoho 提供支持";
@@ -52,7 +54,6 @@
 "zdsdk.createTicket.entervalid"                         = "请输入有效 %@。";
 "desk.library.newticket.field.error"                    = "%@ 不能为空";
 "desk.library.newticket.date.picker"                    = "或从以下选取最近的日期";
-"desk.library.newticket.file.size.error"                = "文件大小不应超过 20 MB";
 
 //FeedBack Screen
 
@@ -213,86 +214,109 @@
 "desk.library.thread.Conversation"                      = "会话";
 "desk_sdk_network_alert"                                = "网络丢失";
 "desk_community_new_topic_add_a_title"                  = "添加标题";
-"desk_library_community_add_tags"                       = "添加标签";
 "desk_library_community_idea"                           = "想法";
 "desk_library_community_problem"                        = "故障";
 "desk_library_community_question"                       = "问题";
 "desk_library_community_tag_rule"                       = "插入逗号以添加多个标签";
 "desk_library_alert_ok"                                 = "确定";
-"desk_library_alert_msg_close_ticket"                   = "是否确定想要关闭此工作单？";
-"desk_library_alert_msg_delete_comment"                 = "是否确定要删除此评论？";
-"desk_library_community_done"                           = "完成";
-"desk.library.follow"                                   = "关注";
-"desk.library.following"                                = "正在关注";
-"desk_library_msg_comment_delete_failed"                = "删除评论失败";
-"desk_sdk_community_topic_edit_tag"                     = "编辑标签";
-"desk_library_community_continue"                       = "继续";
-"desk_library_community_sub_category"                   = "子类别";
 
-"desk_library_community_discard_alert"                  = "是否要继续？请记住更改将丢失。";
-"desk.library.updated.sec"                              = "刚才";
-"desk_library_msg_comment_add_success" 			= "添加评论成功";
-"desk_library_msg_attachment_uploading" 		= "仍未上传附件";
 
 //New Strings -------------------------------------- >
 
-"desk.library.community_category_comments"              = "%s Comments";
-"desk.library.empty_error_message_email"                = "Email can not be blank";
-"desk.library.feed_back_error_message"                  = "Feedback cannot be blank";
-"desk.library.msg_reply_failed"                         = "Failed to add Reply";
-"desk.library.msg_reply_success"                        = "Reply added successfully";
-"desk.library.no_data"                                  = "No Data";
-"desk.library.no_data_msg_articles"                     = "There are no articles here.";
-"desk.library.no_data_msg_tickets"                      = "There are no tickets here.";
-"desk.library.no_data_msg_topics"                       = "There are no topics here.";
-"desk.library.no_data_msg_conversations"                = "There are no conversations here.";
-"desk.library.thread.draft"                             = "Draft @";
-"desk.library.thread.option.delete"                     = "Delete";
-"desk.library.ticket.attachments"                       = "Attachments (%s)";
-"desk.library.ticket.closed.failed"                     = "Ticket failed to Close";
-"desk.library.updated.message"                          = "Last updated about %s";
-"desk_library_community_category"                       = "Category";
-"desk_library_community_content_error"                  = "Please enter content for your topic";
-"desk_library_msg_close_ticket_failed"                  = "Failed to close the ticket";
-"desk_library_msg_comment_add_failed"                   = "Failed to add comment";
-"desk.library.help"                                     = "Zoho Desk Help";
-"desk.library.topic_content_placeholder"                = "Content text";
+"desk_library_msg_topic_update_success" = "主题已成功更新";
+"desk_library_msg_add_ticket_failed" = "添加工单失败";
+"desk.library.camera" = "打开摄像头";
+"desk.library.msg_article_failed" = "提取文章失败";
+"desk.library.msg_upvote_failed" = "点赞文章失败";
+"desk.library.msg_downvote_failed" = "取消点赞文章失败";
+"desk_library_kb_section" = "单元";
+"desk_library_tag_duplicate_error" = "不允许使用重复标签";
+"desk_library_msg_comment_update_success" = "评论已成功更新";
+"desk_library_msg_comment_update_failed" = "更新评论失败";
+"desk.library.msg_ticket_failed" = "提取工单失败";
+"desk.library.ticket.closed.failed" = "工单关闭失败";
+"desk.library.ticket.attachments" = "附件 (%s)";
+"desk.library.updated.message" = "上次更新约 %s 前";
+"desk.library.empty_error_message_email" = "电子邮件字段不能留空";
+"desk.library.community.create_topic" = "创建主题";
+"desk_community_new_topic_add_a_title" = "添加标题";
+"desk.library.community.saveasdraft" = "保存为草稿";
+"desk_library_community_add_tags" = "添加标签";
+"desk_library_community_attachfiles" = "附加文件";
+"desk_library_community_cancel" = "取消";
+"desk_library_alert_msg_close_ticket" = "是否确定要关闭此工单？?";
+"desk_library_alert_msg_delete_comment" = "是否确定要删除此评论？?";
+"desk_library_community_done" = "完成";
+"desk.library.follow" = "关注";
+"desk.library.following" = "正在关注";
+"desk.library.server_error" = "哎哟！发生错误.";
+"desk_library_msg_comment_delete_success" = "评论已删除";
+"desk_library_msg_comment_delete_failed" = "删除评论失败";
+"desk_library_msg_comment_add_success" = "添加评论成功";
+"desk_library_msg_close_ticket_success" = "工单已关闭";
+"desk_library_msg_close_ticket_failed" = "关闭工单失败";
+"desk_library_msg_attachment_uploading" = "仍未上传附件";
+"desk_sdk_community_topic_edit_tag" = "编辑标签";
+"desk_library_community_continue" = "继续";
+"desk_library_community_sub_category" = "子类别";
 
-"zdsdk_topic_alert_delete"                              = "Are you sure want to delete this Topic?";
-"zdsdk_topic_delete_success"                            = "Topic Deleted successfully";
-"zdsdk_topic_delete_Failed"                             = "Failed to delete the Topic.";
-"zdsdk_addTicket_actionsheet_description"               = "Select option for %@";
-"zdsdk_addTicket_actionsheet_fail_description"          = "No %@ Found";
+"desk_library_community_discard_alert" = "是否要继续？请记住，该更改将丢失.";
+"desk.library.updated.sec" = "刚才";
+"desk.library.community_comment_empty_error" = "输入您的评论";
+"desk.library.community_topic_type_description" = "更改类型";
+"desk.library.no_data_msg_community" = "此处无社区.";
+"desk.library.no_data_msg_conversations" = "此处无对话.";
+"desk.library.feed_back_error_message" = "反馈不能为空";
+"desk_library_msg_priority_update_success" = "优先级已成功更新";
+"desk_library_msg_priority_update_failed" = "更新优先级失败";
+"desk_library_ticket_content_length_error" = "内容长度超出所定义的限制";
+"desk_library_tag_limit_error" = "您无法添加五个以上的标签.";
+"desk_library_msg_topic_add_success" = "主题已成功添加";
+"desk_library_msg_topic_update_failed" = "更新主题失败";
+"desk.library.newticket.file.size.error" = "文件大小不应超过 20 MB.";
+"desk.library.msg_conversation_failed" = "无法提取详情";
+"desk_library_community_comments_show_more" = "显示更多";
+"desk.library.community.edit_topic" = "编辑主题";
+"desk_library_comment_emoji_character_error" = "评论中不允许使用表情符号";
+"desk_library_msg_attaching_file" = "正在附上您的文件…";
+"desk.library.msg_reply_failed" = "回复未添加";
+"desk.library.msg_reply_success" = "回复已成功添加";
+"desk.library.no_data" = "无数据";
+"desk.library.no_data_msg_articles" = "此处无文章.";
+"desk.library.no_data_msg_tickets" = "此处无工单.";
+"desk.library.no_data_msg_topics" = "此处无主题.";
+"desk.library.thread.option.delete" = "删除";
+"desk_library_community_content_error" = "请输入该主题的内容";
+"desk_library_msg_comment_add_failed" = "添加评论失败";
+"desk.library.topic_content_placeholder" = "内容文本";
+"zdsdk_topic_alert_delete" = "是否确定要删除此主题？?";
+"zdsdk_topic_delete_success" = "主题已成功删除";
+"zdsdk_topic_delete_Failed" = "删除主题失败";
+"zdsdk_addTicket_actionsheet_description" = "选择 %@ 选项";
+"zdsdk_addTicket_actionsheet_fail_description" = "未找到 %@ 选项";
+"zdsdk_addTicket_multiselect_empty" = "点击以选择值";
+"zdsdk_addTicket_multiselect_selected" = "%@ 值已选择";
+"zdsdk_topic_update" = "更新";
+"zdsdk_community_Follow_error" = "无法关注该类别";
+"zdsdk_community_unFollow_error" = "无法取消关注该类别";
+"desk_library_msg_topic_add_failed" = "添加主题失败";
+"zdsdk_community_tag_characters_error" = "标签中不允许使用特殊字符";
+"zdsdk.attachment.attachment" = "附件";
+"desk_library_community_subject_length_error" = "标题长度超出限制";
+"desk.library.newticket.file.error" = "无法上传附件";
+"zdsdk_topic_updated_success" = "主题已成功更新";
+"zdsdk_topic_discard_alert" = "是否确定要放弃更改？?";
+"desk_library_community_subject_error" = "输入该主题的标题";
+"desk.library.community_category_comments" = "%s 条评论";
 
-"zdsdk_addTicket_multiselect_empty"                     = "Tap to select values";
-"zdsdk_addTicket_multiselect_selected"                  = "%@ Values";
-"zdsdk_addTicket_validate_error"                        = "Please fill valid inputs";
+"desk_library_msg_topic_delete_success" = "主题已删除";
+"desk_library_community_title_error" = "输入标题";
+"desk_library_tag_spl_character_error" = "标签中不允许使用特殊字符";
+"desk_library_alert_msg_delete_topic" = "是否确定要删除此主题？?";
+"desk.library.msg_comment_failed" = "添加评论失败";
 
-"zdsdk_createTopic_locked_msg"                          = "All Categories are locked.";
+//"desk_library_community_add_tags"                       = "添加标签"; -> Add Tags
 
-"zdsdk_topic_update"                                    = "Update";
-
-"zdsdk_community_Follow_error"                          = "Unable to follow the category";
-"zdsdk_community_unFollow_error"                        = "Unable to unfollow the category";
-"desk_library_msg_topic_add_failed"                     = "Failed to add the topic";
-
-"zdsdk_community_tag_characters_error"                  = "Special characters not allowed";
-"zdsdk.attachement.attachement"                         = "Attachment";
-"desk_library_community_subject_length_error"           = "Title length exceeds the limit";
-"desk.library.newticket.file.error"                     = "Could not upload the attachments";
-"zdsdk_topic_updated_success"                           = "Topic updated ssuccessfully";
-"zdsdk_topic_discard_alert"                             = "Want to discard changes";
-
-"desk_library_msg_topic_add_success"                    = "Topic successfully added";
-"desk_library_tag_limit_error"                          = "You cannot add more than 5 tags";
-"desk_library_msg_comment_update_success"                  = "Comment successfully updated";
-
-"DeskPortal.Helpcenter.section.subheading"              = "Category";
-"DeskPortal.Helpcenter.sections.subheading"             = "Categories";
-
-"desk_library_tag_dublicate_error"                      = "Tags cannot be dublicate";
-
-// Need to update
-"desk_library_community_subject_error"                  = "Enter Title"; // old value = "Enter Subject"
-
+//New Strings
+"zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
 

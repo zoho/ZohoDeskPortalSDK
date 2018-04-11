@@ -1,4 +1,4 @@
-"DeskPortal.Dashboard.Heading"                                = "Customer Support";
+"DeskPortal.Dashboard.Heading" = "Поддержка клиентов";
 "DeskPortal.Network.failed.error.message"                                  = "Проверьте подключение к Интернету";
 "DeskPortal.Dashboard.addticket.title"                          = "Отправить заявку";
 "DeskPortal.Dashboard.addticket.description"                     = "Обращайтесь с вопросами к нашим агентам";
@@ -23,6 +23,9 @@
 "DeskPortal.Myticket.option.closeticket"                              = "Закрыть заявку";
 "DeskPortal.Myticket.option.editcomment"                              = "Редактировать комментарий";
 "DeskPortal.Error.message.reload"                                = "Повторить попытку";
+
+"DeskPortal.Helpcenter.sections.subheading" = "Категории";
+"DeskPortal.Helpcenter.section.subheading" = "Категория";
 
 
 "zdsdk.general.powered"                                 = "Разработка Zoho";
@@ -51,7 +54,6 @@
 "zdsdk.createTicket.entervalid"                         = "Введите допустимый %@";
 "desk.library.newticket.field.error"                    = "Поле %@ не может быть пустым";
 "desk.library.newticket.date.picker" = "Или выберите ближайшую дату из списка ниже";
-"desk.library.newticket.file.size.error" = "Размер файла не должен превышать 20 МБ";
 
 //FeedBack Screen
 
@@ -211,86 +213,109 @@
 "desk.library.thread.Conversation"                      = "Беседы";
 "desk_sdk_network_alert"                                = "Отсутствует подключение к сети";
 "desk_community_new_topic_add_a_title"                  = "Добавить заголовок";
-"desk_library_community_add_tags"                       = "Добавить теги";
 "desk_library_community_idea"                           = "Идея";
 "desk_library_community_problem"                        = "Проблема";
 "desk_library_community_question"                       = "Вопрос";
 "desk_library_community_tag_rule"                       = "Добавьте теги через запятую";
 "desk_library_alert_ok"                                 = "OK";
-"desk_library_alert_msg_close_ticket"                   = "Вы действительно хотите закрыть эту заявку?";
-"desk_library_alert_msg_delete_comment"                 = "Вы действительно хотите удалить этот комментарий?";
-"desk_library_community_done"                           = "Готово";
-"desk.library.follow"                                   = "Подписаться";
-"desk.library.following"                                = "Подписки";
-"desk_library_msg_comment_delete_failed"                = "Не удалось удалить комментарий";
-"desk_sdk_community_topic_edit_tag"                     = "Редактировать тег";
-"desk_library_community_continue"                       = "Продолжить";
-"desk_library_community_sub_category"                   = "Подкатегория";
 
-"desk_library_community_discard_alert"                  = "Хотите продолжить? Обратите внимание, что изменения будут потеряны.";
-"desk.library.updated.sec"                              = "Только что";
-"desk_library_msg_comment_add_success" 			= "Комментарий успешно добавлен";
-"desk_library_msg_attachment_uploading" 		= "Осталось загрузить вложения";
 
 //New Strings -------------------------------------- >
 
-"desk.library.community_category_comments"              = "%s Comments";
-"desk.library.empty_error_message_email"                = "Email can not be blank";
-"desk.library.feed_back_error_message"                  = "Feedback cannot be blank";
-"desk.library.msg_reply_failed"                         = "Failed to add Reply";
-"desk.library.msg_reply_success"                        = "Reply added successfully";
-"desk.library.no_data"                                  = "No Data";
-"desk.library.no_data_msg_articles"                     = "There are no articles here.";
-"desk.library.no_data_msg_tickets"                      = "There are no tickets here.";
-"desk.library.no_data_msg_topics"                       = "There are no topics here.";
-"desk.library.no_data_msg_conversations"                = "There are no conversations here.";
-"desk.library.thread.draft"                             = "Draft @";
-"desk.library.thread.option.delete"                     = "Delete";
-"desk.library.ticket.attachments"                       = "Attachments (%s)";
-"desk.library.ticket.closed.failed"                     = "Ticket failed to Close";
-"desk.library.updated.message"                          = "Last updated about %s";
-"desk_library_community_category"                       = "Category";
-"desk_library_community_content_error"                  = "Please enter content for your topic";
-"desk_library_msg_close_ticket_failed"                  = "Failed to close the ticket";
-"desk_library_msg_comment_add_failed"                   = "Failed to add comment";
-"desk.library.help"                                     = "Zoho Desk Help";
-"desk.library.topic_content_placeholder"                = "Content text";
+"desk_library_msg_topic_update_success" = "Тема успешно обновлена";
+"desk_library_msg_add_ticket_failed" = "Не удалось добавить заявку";
+"desk.library.camera" = "Открыть камеру";
+"desk.library.msg_article_failed" = "Не удалось получить статью";
+"desk.library.msg_upvote_failed" = "Не удалось отметить статью как понравившуюся";
+"desk.library.msg_downvote_failed" = "Не удалось отметить статью как непонравившуюся";
+"desk_library_kb_section" = "Разделы";
+"desk_library_tag_duplicate_error" = "Повторяющиеся теги не допускаются";
+"desk_library_msg_comment_update_success" = "Комментарий успешно обновлен";
+"desk_library_msg_comment_update_failed" = "Не удалось обновить комментарий";
+"desk.library.msg_ticket_failed" = "Не удалось получить заявки";
+"desk.library.ticket.closed.failed" = "Не удалось закрыть заявку";
+"desk.library.ticket.attachments" = "Вложения (%s)";
+"desk.library.updated.message" = "Последнее обновление примерно %s назад";
+"desk.library.empty_error_message_email" = "Поле адреса эл. почты не должно быть пустым";
+"desk.library.community.create_topic" = "Создать тему";
+"desk_community_new_topic_add_a_title" = "Добавить заголовок";
+"desk.library.community.saveasdraft" = "Сохранить как черновик";
+"desk_library_community_add_tags" = "Добавить тег";
+"desk_library_community_attachfiles" = "Вложить файлы";
+"desk_library_community_cancel" = "Отмена";
+"desk_library_alert_msg_close_ticket" = "Действительно закрыть эту заявку?";
+"desk_library_alert_msg_delete_comment" = "Действительно удалить этот комментарий?";
+"desk_library_community_done" = "Готово";
+"desk.library.follow" = "Подписаться на обновления";
+"desk.library.following" = "Подписка на обновления";
+"desk.library.server_error" = "Ошибка! Что-то пошло не так.";
+"desk_library_msg_comment_delete_success" = "Комментарий удален";
+"desk_library_msg_comment_delete_failed" = "Не удалось удалить комментарий";
+"desk_library_msg_comment_add_success" = "Комментарий успешно добавлен";
+"desk_library_msg_close_ticket_success" = "Заявка закрыта";
+"desk_library_msg_close_ticket_failed" = "Не удалось закрыть заявку";
+"desk_library_msg_attachment_uploading" = "Осталось загрузить вложения";
+"desk_sdk_community_topic_edit_tag" = "Редактировать тег";
+"desk_library_community_continue" = "Продолжить";
+"desk_library_community_sub_category" = "Подкатегория";
 
-"zdsdk_topic_alert_delete"                              = "Are you sure want to delete this Topic?";
-"zdsdk_topic_delete_success"                            = "Topic Deleted successfully";
-"zdsdk_topic_delete_Failed"                             = "Failed to delete the Topic.";
-"zdsdk_addTicket_actionsheet_description"               = "Select option for %@";
-"zdsdk_addTicket_actionsheet_fail_description"          = "No %@ Found";
+"desk_library_community_discard_alert" = "Продолжить? Обратите внимание, что изменения будут потеряны.";
+"desk.library.updated.sec" = "Только что";
+"desk.library.community_comment_empty_error" = "Введите свой комментарий";
+"desk.library.community_topic_type_description" = "Тип изменения";
+"desk.library.no_data_msg_community" = "Нет сообществ.";
+"desk.library.no_data_msg_conversations" = "Нет бесед.";
+"desk.library.feed_back_error_message" = "Необходимо указать отзыв";
+"desk_library_msg_priority_update_success" = "Приоритет успешно обновлен";
+"desk_library_msg_priority_update_failed" = "Не удалось обновить приоритет";
+"desk_library_ticket_content_length_error" = "Длина содержимого превышает заданное ограничение";
+"desk_library_tag_limit_error" = "Можно добавить не более пяти тегов.";
+"desk_library_msg_topic_add_success" = "Тема успешно добавлена";
+"desk_library_msg_topic_update_failed" = "Не удалось обновить тему";
+"desk.library.newticket.file.size.error" = "Размер файла не должен превышать 20 МБ.";
+"desk.library.msg_conversation_failed" = "Не удалось получить сведения о заявке";
+"desk_library_community_comments_show_more" = "Показать еще";
+"desk.library.community.edit_topic" = "Редактировать тему";
+"desk_library_comment_emoji_character_error" = "В комментариях не допускаются эмодзи";
+"desk_library_msg_attaching_file" = "Идет вложение файлов…";
+"desk.library.msg_reply_failed" = "Ответ не был добавлен";
+"desk.library.msg_reply_success" = "Ответ успешно добавлен";
+"desk.library.no_data" = "Нет данных";
+"desk.library.no_data_msg_articles" = "Нет статей.";
+"desk.library.no_data_msg_tickets" = "Нет заявок.";
+"desk.library.no_data_msg_topics" = "Нет тем.";
+"desk.library.thread.option.delete" = "Удалить";
+"desk_library_community_content_error" = "Введите содержимое темы";
+"desk_library_msg_comment_add_failed" = "Не удалось добавить комментарий";
+"desk.library.topic_content_placeholder" = "Текст содержимого";
+"zdsdk_topic_alert_delete" = "Действительно удалить эту тему?";
+"zdsdk_topic_delete_success" = "Тема успешно удалена";
+"zdsdk_topic_delete_Failed" = "Не удалось удалить тему";
+"zdsdk_addTicket_actionsheet_description" = "Выберите вариант %@";
+"zdsdk_addTicket_actionsheet_fail_description" = "Варианты %@ не найдены";
+"zdsdk_addTicket_multiselect_empty" = "Нажмите для выбора значений";
+"zdsdk_addTicket_multiselect_selected" = "Выбрано значений: %@";
+"zdsdk_topic_update" = "Обновить";
+"zdsdk_community_Follow_error" = "Невозможно подписаться на обновления категории";
+"zdsdk_community_unFollow_error" = "Невозможно отказаться от подписки на обновления категории";
+"desk_library_msg_topic_add_failed" = "Не удалось добавить тему";
+"zdsdk_community_tag_characters_error" = "В тегах не допускаются специальные символы";
+"zdsdk.attachment.attachment" = "Вложение";
+"desk_library_community_subject_length_error" = "Длина заголовка превышает заданное ограничение";
+"desk.library.newticket.file.error" = "Не удалось отправить вложения";
+"zdsdk_topic_updated_success" = "Тема успешно обновлена";
+"zdsdk_topic_discard_alert" = "Действительно отменить изменения?";
+"desk_library_community_subject_error" = "Введите заголовок темы";
+"desk.library.community_category_comments" = "Комментарии: %s";
 
-"zdsdk_addTicket_multiselect_empty"                     = "Tap to select values";
-"zdsdk_addTicket_multiselect_selected"                  = "%@ Values";
-"zdsdk_addTicket_validate_error"                        = "Please fill valid inputs";
+"desk_library_msg_topic_delete_success" = "Тема удалена";
+"desk_library_community_title_error" = "Введите заголовок";
+"desk_library_tag_spl_character_error" = "В тегах не допускаются специальные символы";
+"desk_library_alert_msg_delete_topic" = "Действительно удалить эту тему?";
+"desk.library.msg_comment_failed" = "Не удалось добавить комментарий";
 
-"zdsdk_createTopic_locked_msg"                          = "All Categories are locked.";
+//"desk_library_community_add_tags"                       = "Добавить теги"; -> Add Tags
 
-"zdsdk_topic_update"                                    = "Update";
-
-"zdsdk_community_Follow_error"                          = "Unable to follow the category";
-"zdsdk_community_unFollow_error"                        = "Unable to unfollow the category";
-"desk_library_msg_topic_add_failed"                     = "Failed to add the topic";
-
-"zdsdk_community_tag_characters_error"                  = "Special characters not allowed";
-"zdsdk.attachement.attachement"                         = "Attachment";
-"desk_library_community_subject_length_error"           = "Title length exceeds the limit";
-"desk.library.newticket.file.error"                     = "Could not upload the attachments";
-"zdsdk_topic_updated_success"                           = "Topic updated ssuccessfully";
-"zdsdk_topic_discard_alert"                             = "Want to discard changes";
-
-"desk_library_msg_topic_add_success"                    = "Topic successfully added";
-"desk_library_tag_limit_error"                          = "You cannot add more than 5 tags";
-"desk_library_msg_comment_update_success"                  = "Comment successfully updated";
-
-"DeskPortal.Helpcenter.section.subheading"              = "Category";
-"DeskPortal.Helpcenter.sections.subheading"             = "Categories";
-
-"desk_library_tag_dublicate_error"                      = "Tags cannot be dublicate";
-
-// Need to update
-"desk_library_community_subject_error"                  = "Enter Title"; // old value = "Enter Subject"
-
+//New Strings
+"zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
 

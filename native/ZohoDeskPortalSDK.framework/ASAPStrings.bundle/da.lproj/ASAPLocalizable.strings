@@ -1,4 +1,4 @@
-"DeskPortal.Dashboard.Heading"                          = "Customer Support";
+"DeskPortal.Dashboard.Heading"                          = "Kundesupport";
 "DeskPortal.Network.failed.error.message"               = "Kontroller din internetforbindelse";
 "DeskPortal.Dashboard.addticket.title"                  = "Afsend en anmodning";
 "DeskPortal.Dashboard.addticket.description"            = "Søg hjælp hos vores agenter";
@@ -23,6 +23,11 @@
 "DeskPortal.Myticket.option.closeticket"                = "Luk billet";
 "DeskPortal.Myticket.option.editcomment"                = "Rediger kommentar";
 "DeskPortal.Error.message.reload"                       = "Forsøg igen";
+
+"DeskPortal.Helpcenter.sections.subheading"             = "Kategorier";
+"DeskPortal.Helpcenter.section.subheading" = "Kategori";
+
+
 
 "zdsdk.general.powered"                                 = "Leveret af Zoho";
 
@@ -50,7 +55,6 @@
 "zdsdk.createTicket.entervalid"                         = "Indtast en gyldig %@";
 "desk.library.newticket.field.error"                    = "%@ kan ikke være tom";
 "desk.library.newticket.date.picker"                    = "Eller vælg den nærmeste dato nedenunder";
-"desk.library.newticket.file.size.error"                = "Filstørrelse må ikke overskride 20 MB";
 
 //FeedBack Screen
 
@@ -211,87 +215,111 @@
 "desk.library.thread.Conversation"                      = "Samtaler";
 "desk_sdk_network_alert"                                = "Netværksforbindelse er tabt";
 "desk_community_new_topic_add_a_title"                  = "Tilføj en titel";
-"desk_library_community_add_tags"                       = "Tilføj mærker";
+
 "desk_library_community_idea"                           = "Ide";
 "desk_library_community_problem"                        = "Problem";
 "desk_library_community_question"                       = "Spørgsmål";
 "desk_library_community_tag_rule"                       = "Brug komma til at tilføje flere mærker";
 "desk_library_alert_ok"                                 = "OK";
 "desk_library_alert_msg_close_ticket"                   = "Er du sikker på, du vil lukke denne anmodning?";
-"desk_library_alert_msg_delete_comment"                 = "Er du sikker på, du vil slette denne kommentar?";
-"desk_library_community_done"                           = "Færdig";
-"desk.library.follow"                                   = "Følg";
-"desk.library.following"                                = "Følger";
-"desk_library_msg_comment_delete_failed"                = "Kunne ikke slette kommentar";
-"desk_sdk_community_topic_edit_tag"                     = "Rediger mærke";
-"desk_library_community_continue"                       = "Fortsæt";
-"desk_library_community_sub_category"                   = "Underkategori";
-
-"desk_library_community_discard_alert"                  = "Ønsker du at fortsætte? Husk på, at ændringer vil gå tabt.";
-"desk.library.updated.sec"                              = "Lige nu";
-"desk_library_msg_comment_add_success"                  = "Kommentar er tilføjet";
-"desk_library_msg_attachment_uploading"                 = "Endnu ikke overførte filer til vedhæftelse";
 
 //New Strings -------------------------------------- >
 
-"desk.library.community_category_comments"              = "%s Comments";
-"desk.library.empty_error_message_email"                = "Email can not be blank";
-"desk.library.feed_back_error_message"                  = "Feedback cannot be blank";
-"desk.library.msg_reply_failed"                         = "Failed to add Reply";
-"desk.library.msg_reply_success"                        = "Reply added successfully";
-"desk.library.no_data"                                  = "No Data";
-"desk.library.no_data_msg_articles"                     = "There are no articles here.";
-"desk.library.no_data_msg_tickets"                      = "There are no tickets here.";
-"desk.library.no_data_msg_topics"                       = "There are no topics here.";
-"desk.library.no_data_msg_conversations"                = "There are no conversations here.";
-"desk.library.thread.draft"                             = "Draft @";
-"desk.library.thread.option.delete"                     = "Delete";
-"desk.library.ticket.attachments"                       = "Attachments (%s)";
-"desk.library.ticket.closed.failed"                     = "Ticket failed to Close";
-"desk.library.updated.message"                          = "Last updated about %s";
-"desk_library_community_category"                       = "Category";
-"desk_library_community_content_error"                  = "Please enter content for your topic";
-"desk_library_msg_close_ticket_failed"                  = "Failed to close the ticket";
-"desk_library_msg_comment_add_failed"                   = "Failed to add comment";
-"desk.library.help"                                     = "Zoho Desk Help";
-"desk.library.topic_content_placeholder"                = "Content text";
+"desk_library_msg_topic_update_success" = "Emnet blev opdateret";
+"desk_library_msg_add_ticket_failed" = "Kan ikke tilføje anmodning";
+"desk.library.camera" = "Åbn kamera";
+"desk.library.msg_article_failed" = "Kunne ikke hente artiklen";
+"desk.library.msg_upvote_failed" = "Kunne ikke synes godt om artiklen";
+"desk.library.msg_downvote_failed" = "Kunne ikke ikke synes godt om artiklen";
+"desk_library_kb_section" = "Afsnit";
+"desk_library_tag_duplicate_error" = "Duplikerede tags er ikke tilladt";
+"desk_library_msg_comment_update_success" = "Kommentaren blev opdateret";
+"desk_library_msg_comment_update_failed" = "Kommentaren kunne ikke opdateres";
+"desk.library.msg_ticket_failed" = "Kunne ikke hente anmodninger";
+"desk.library.ticket.closed.failed" = "Anmodningen kunne ikke lukkes";
+"desk.library.ticket.attachments" = "Vedhæftede filer (%s)";
+"desk.library.updated.message" = "Sidst opdateret omkring %s siden";
+"desk.library.empty_error_message_email" = "E-mail feltet må ikke være tomt";
 
-"zdsdk_topic_alert_delete"                              = "Are you sure want to delete this Topic?";
-"zdsdk_topic_delete_success"                            = "Topic Deleted successfully";
-"zdsdk_topic_delete_Failed"                             = "Failed to delete the Topic.";
-"zdsdk_addTicket_actionsheet_description"               = "Select option for %@";
-"zdsdk_addTicket_actionsheet_fail_description"          = "No %@ Found";
+"desk.library.community.create_topic" = "Opret emne";
+"desk_community_new_topic_add_a_title" = "Tilføj en titel";
+"desk.library.community.saveasdraft" = "Gem som kladde";
+"desk_library_community_add_tags" = "Tilføj tag";
+"desk_library_community_attachfiles" = "Vedhæft filer";
+"desk_library_community_cancel" = "Annuller";
+"desk_library_alert_msg_delete_comment" = "Er du sikker på, at du vil slette denne kommentar?";
+"desk_library_community_done" = "Udført";
+"desk.library.follow" = "Følg";
+"desk.library.following" = "Følger";
+"desk.library.server_error" = "Hov! Noget gik galt.";
+"desk_library_msg_comment_delete_success" = "Kommentar er slettet";
+"desk_library_msg_comment_delete_failed" = "Kunne ikke slette kommentar";
+"desk_library_msg_comment_add_success" = "Kommentar er tilføjet";
+"desk_library_msg_close_ticket_success" = "Anmodning er lukket";
+"desk_library_msg_close_ticket_failed" = "Kan ikke lukke anmodningen";
+"desk_library_msg_attachment_uploading" = "Endnu ikke overførte filer til vedhæftelse";
+"desk_sdk_community_topic_edit_tag" = "Rediger mærke";
+"desk_library_community_continue" = "Fortsæt";
+"desk_library_community_sub_category" = "Underkategori";
 
-"zdsdk_addTicket_multiselect_empty"                     = "Tap to select values";
-"zdsdk_addTicket_multiselect_selected"                  = "%@ Values";
-"zdsdk_addTicket_validate_error"                        = "Please fill valid inputs";
+"desk_library_community_discard_alert" = "Vil du fortsætte? Husk på, at ændringerne vil gå tabt.";
+"desk.library.updated.sec" = "Lige nu";
+"desk.library.community_comment_empty_error" = "Indtast din kommentar";
+"desk.library.community_topic_type_description" = "Skift type";
+"desk.library.no_data_msg_community" = "Der er ingen fællesskaber her.";
+"desk.library.no_data_msg_conversations" = "Der er ingen samtaler her.";
+"desk.library.feed_back_error_message" = "Feedback må ikke være tom";
+"desk_library_msg_priority_update_success" = "Prioritet blev opdateret";
+"desk_library_msg_priority_update_failed" = "Kunne ikke opdatere prioritet";
+"desk_library_ticket_content_length_error" = "Indholdslængde overskrider den definerede grænse";
+"desk_library_tag_limit_error" = "Du kan ikke tilføje mere end fem mærker.";
+"desk_library_msg_topic_add_success" = "Emnet blev tilføjet";
+"desk_library_msg_topic_update_failed" = "Emnet kunne ikke opdateres";
+"desk.library.newticket.file.size.error" = "Filstørrelse må ikke overskride 20 MB.";
+"desk.library.msg_conversation_failed" = "Kunne ikke hente anmodningsdetaljer";
+"desk_library_community_comments_show_more" = "Vis mere";
+"desk.library.community.edit_topic" = "Rediger emne";
+"desk_library_comment_emoji_character_error" = "Emojis er ikke not tilladt i kommentarer";
+"desk_library_msg_attaching_file" = "Vedhæfter dine filer…";
+"desk.library.msg_reply_failed" = "Svar blev ikke tilføjet";
+"desk.library.msg_reply_success" = "Svar blev tilføjet";
+"desk.library.no_data" = "Ingen data";
+"desk.library.no_data_msg_articles" = "Der er ingen artikler her.";
+"desk.library.no_data_msg_tickets" = "Der er ingen anmodninger her.";
+"desk.library.no_data_msg_topics" = "Der er ingen emner her.";
+"desk.library.thread.option.delete" = "Slet";
+"desk_library_community_content_error" = "Indtast indhold for emnet";
+"desk_library_msg_comment_add_failed" = "Kan ikke tilføje kommentar";
+"desk.library.topic_content_placeholder" = "Indholdstekst";
+"zdsdk_topic_alert_delete" = "Er du sikker på, du vil slette dette emne?";
+"zdsdk_topic_delete_success" = "Emnet blev slettet";
+"zdsdk_topic_delete_Failed" = "Emnet kunne ikke slette";
+"zdsdk_addTicket_actionsheet_description" = "Vælg %@ indstillinger";
+"zdsdk_addTicket_actionsheet_fail_description" = "Ingen %@ indstillinger fundet";
+"zdsdk_addTicket_multiselect_empty" = "Tryk for at vælge værdier";
+"zdsdk_addTicket_multiselect_selected" = "%@ værdier er valgt";
+"zdsdk_topic_update" = "Opdater";
+"zdsdk_community_Follow_error" = "Kunne ikke følge kategorien";
+"zdsdk_community_unFollow_error" = "Kunne ikke stoppe med at følge kategorien";
+"desk_library_msg_topic_add_failed" = "Kan ikke tilføje emne";
+"zdsdk_community_tag_characters_error" = "Specialtegn er ikke tilladt i mærker";
+"zdsdk.attachment.attachment" = "Vedhæftet fil";
+"desk_library_community_subject_length_error" = "Titellængde overskrider grænsen";
+"desk.library.newticket.file.error" = "Kunne ikke overføre vedhæftede filer";
+"zdsdk_topic_updated_success" = "Emne blev opdateret";
+"zdsdk_topic_discard_alert" = "Er du sikker på, du vil kassere ændringerne?";
+"desk_library_community_subject_error" = "Indtast en titel for emnet";
+"desk.library.community_category_comments" = "%s kommentarer";
 
-"zdsdk_createTopic_locked_msg"                          = "All Categories are locked.";
+"desk_library_msg_topic_delete_success" = "Emnet er slettet";
+"desk_library_community_title_error" = "Indtast titel";
+"desk_library_tag_spl_character_error" = "Specialtegn er ikke tilladt i mærker";
+"desk_library_alert_msg_delete_topic" = "Er du sikker på, du vil slette dette emne?";
+"desk.library.msg_comment_failed" = "Kan ikke tilføje kommentar";
 
-"zdsdk_topic_update"                                    = "Update";
 
-"zdsdk_community_Follow_error"                          = "Unable to follow the category";
-"zdsdk_community_unFollow_error"                        = "Unable to unfollow the category";
-"desk_library_msg_topic_add_failed"                     = "Failed to add the topic";
+//"desk_library_community_add_tags"                       = "Tilføj mærker"; -> Add Tags
 
-"zdsdk_community_tag_characters_error"                  = "Special characters not allowed";
-"zdsdk.attachement.attachement"                         = "Attachment";
-"desk_library_community_subject_length_error"           = "Title length exceeds the limit";
-"desk.library.newticket.file.error"                     = "Could not upload the attachments";
-"zdsdk_topic_updated_success"                           = "Topic updated ssuccessfully";
-"zdsdk_topic_discard_alert"                             = "Want to discard changes";
-
-"zdsdk_topic_discard_alert"                             = "Want to discard changes";
-
-"desk_library_msg_topic_add_success"                    = "Topic successfully added";
-"desk_library_tag_limit_error"                          = "You cannot add more than 5 tags";
-"desk_library_msg_comment_update_success"                  = "Comment successfully updated";
-
-"DeskPortal.Helpcenter.section.subheading"              = "Category";
-"DeskPortal.Helpcenter.sections.subheading"             = "Categories";
-
-"desk_library_tag_dublicate_error"                      = "Tags cannot be dublicate";
-
-// Need to update
-"desk_library_community_subject_error"                  = "Enter Title";// old value = "Enter Subject"
+//New Strings
+"zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
 

@@ -1,4 +1,4 @@
-"DeskPortal.Dashboard.Heading"                                = "Customer Support";
+"DeskPortal.Dashboard.Heading"                              = "Kundensupport";
 "DeskPortal.Network.failed.error.message"                                  = "Internetverbindung prüfen";
 "DeskPortal.Dashboard.addticket.title"                          = "Ticket übermitteln";
 "DeskPortal.Dashboard.addticket.description"                     = "Unterstützung durch unsere Agenten";
@@ -24,8 +24,8 @@
 "DeskPortal.Myticket.option.editcomment"                              = "Kommentar bearbeiten";
 "DeskPortal.Error.message.reload"                                = "Wiederholen";
 
-
-
+"DeskPortal.Helpcenter.sections.subheading" = "Kategorien";
+"DeskPortal.Helpcenter.section.subheading" = "Kategorie";
 
 
 "zdsdk.general.powered"                                 = "Powered by Zoho";
@@ -54,7 +54,6 @@
 "zdsdk.createTicket.entervalid"                         = "%@ korrekt eingeben";
 "desk.library.newticket.field.error"                    = "%@ darf nicht leer sein";
 "desk.library.newticket.date.picker" = "Oder passendstes Datum nachstehend wählen";
-"desk.library.newticket.file.size.error" = "Dateigröße darf 20 MB nicht überschreiten";
 
 //FeedBack Screen
 
@@ -214,86 +213,109 @@
 "desk.library.thread.Conversation"                      = "Konversationen";
 "desk_sdk_network_alert"                                = "Netzwerkverbindung unterbrochen";
 "desk_community_new_topic_add_a_title"                  = "Titel hinzufügen";
-"desk_library_community_add_tags"                       = "Tags hinzufügen";
 "desk_library_community_idea"                           = "Idee";
 "desk_library_community_problem"                        = "Problem";
 "desk_library_community_question"                       = "Frage";
 "desk_library_community_tag_rule"                       = "Mehrere Tags mit Kommas trennen";
 "desk_library_alert_ok"                                 = "OK";
 "desk_library_alert_msg_close_ticket"                   = "Möchten Sie dieses Ticket wirklich schließen?";
-"desk_library_alert_msg_delete_comment"                 = "Möchten Sie diesen Kommentar wirklich löschen?";
-"desk_library_community_done"                           = "Fertig";
-"desk.library.follow"                                   = "Verfolgen";
-"desk.library.following"                                = "Folgen";
-"desk_library_msg_comment_delete_failed"                = "Kommentar konnte nicht gelöscht werden";
-"desk_sdk_community_topic_edit_tag"                     = "Tag bearbeiten";
-"desk_library_community_continue"                       = "Fortsetzen";
-"desk_library_community_sub_category"                   = "Unterkategorie";
-
-"desk_library_community_discard_alert"                  = "Möchten Sie fortfahren? Vergessen Sie nicht, dass Änderungen verloren gehen.";
-"desk.library.updated.sec"                              = "Jetzt gerade";
-"desk_library_msg_comment_add_success" 			= "Kommentar erfolgreich hinzugefügt";
-"desk_library_msg_attachment_uploading" 		= "Anhänge werden noch hochgeladen";
 
 //New Strings -------------------------------------- >
 
-"desk.library.community_category_comments"              = "%s Comments";
-"desk.library.empty_error_message_email"                = "Email can not be blank";
-"desk.library.feed_back_error_message"                  = "Feedback cannot be blank";
-"desk.library.msg_reply_failed"                         = "Failed to add Reply";
-"desk.library.msg_reply_success"                        = "Reply added successfully";
-"desk.library.no_data"                                  = "No Data";
-"desk.library.no_data_msg_articles"                     = "There are no articles here.";
-"desk.library.no_data_msg_tickets"                      = "There are no tickets here.";
-"desk.library.no_data_msg_topics"                       = "There are no topics here.";
-"desk.library.no_data_msg_conversations"                = "There are no conversations here.";
-"desk.library.thread.draft"                             = "Draft @";
-"desk.library.thread.option.delete"                     = "Delete";
-"desk.library.ticket.attachments"                       = "Attachments (%s)";
-"desk.library.ticket.closed.failed"                     = "Ticket failed to Close";
-"desk.library.updated.message"                          = "Last updated about %s";
-"desk_library_community_category"                       = "Category";
-"desk_library_community_content_error"                  = "Please enter content for your topic";
-"desk_library_msg_close_ticket_failed"                  = "Failed to close the ticket";
-"desk_library_msg_comment_add_failed"                   = "Failed to add comment";
-"desk.library.help"                                     = "Zoho Desk Help";
-"desk.library.topic_content_placeholder"                = "Content text";
+"desk_library_msg_topic_update_success" = "Thema erfolgreich aktualisiert";
+"desk_library_msg_add_ticket_failed" = "Ticket konnte nicht zugefügt werden";
+"desk.library.camera" = "Kamera öffnen";
+"desk.library.msg_article_failed" = "Artikel konnte nicht abgerufen werden";
+"desk.library.msg_upvote_failed" = "Artikel konnte nicht als „Gefällt mir“ markiert werden";
+"desk.library.msg_downvote_failed" = "Artikel konnte nicht als „Gefällt mir nicht“ markiert werden";
+"desk_library_kb_section" = "Abschnitte";
+"desk_library_tag_duplicate_error" = "Duplizieren von Tags nicht erlaubt";
+"desk_library_msg_comment_update_success" = "Kommentar erfolgreich aktualisiert";
+"desk_library_msg_comment_update_failed" = "Kommentar konnte nicht aktualisiert werden";
+"desk.library.msg_ticket_failed" = "Tickets konnten nicht abgerufen werden";
+"desk.library.ticket.closed.failed" = "Ticket konnte nicht geschlossen werden";
+"desk.library.ticket.attachments" = "Anhänge (%s)";
+"desk.library.updated.message" = "Letzte Aktualisierung vor ca. %s";
+"desk.library.empty_error_message_email" = "Das Feld E-mail darf nicht leer sein";
+"desk.library.community.create_topic" = "Thema erstellen";
+"desk_community_new_topic_add_a_title" = "Titel hinzufügen";
+"desk.library.community.saveasdraft" = "Als Entwurf speichern";
+"desk_library_community_add_tags" = "Tag hinzufügen";
+"desk_library_community_attachfiles" = "Dateien anhängen";
+"desk_library_community_cancel" = "Abbrechen";
+"desk_library_alert_msg_delete_comment" = "Möchten Sie diesen Kommentar wirklich löschen?";
+"desk_library_community_done" = "Fertig";
+"desk.library.follow" = "Verfolgen";
+"desk.library.following" = "Folge";
+"desk.library.server_error" = "Ups! Es ist ein Fehler aufgetreten.";
+"desk_library_msg_comment_delete_success" = "Kommentar gelöscht";
+"desk_library_msg_comment_delete_failed" = "Kommentar konnte nicht gelöscht werden";
+"desk_library_msg_comment_add_success" = "Kommentar erfolgreich hinzugefügt";
+"desk_library_msg_close_ticket_success" = "Ticket geschlossen";
+"desk_library_msg_close_ticket_failed" = "Ticket konnte nicht geschlossen werden";
+"desk_library_msg_attachment_uploading" = "Anhänge werden noch hochgeladen";
+"desk_sdk_community_topic_edit_tag" = "Tag bearbeiten";
+"desk_library_community_continue" = "Fortfahren";
+"desk_library_community_sub_category" = "Unterkategorie";
 
-"zdsdk_topic_alert_delete"                              = "Are you sure want to delete this Topic?";
-"zdsdk_topic_delete_success"                            = "Topic Deleted successfully";
-"zdsdk_topic_delete_Failed"                             = "Failed to delete the Topic.";
-"zdsdk_addTicket_actionsheet_description"               = "Select option for %@";
-"zdsdk_addTicket_actionsheet_fail_description"          = "No %@ Found";
+"desk_library_community_discard_alert" = "Möchten Sie fortfahren? Vergessen Sie nicht, dass Änderungen verloren gehen.";
+"desk.library.updated.sec" = "Gerade jetzt";
+"desk.library.community_comment_empty_error" = "Kommentar eingeben";
+"desk.library.community_topic_type_description" = "Typ ändern";
+"desk.library.no_data_msg_community" = "Hier sind keine Communities vorhanden.";
+"desk.library.no_data_msg_conversations" = "Hier sind keine Unterhaltungen vorhanden.";
+"desk.library.feed_back_error_message" = "Feedback darf nicht Leer sein";
+"desk_library_msg_priority_update_success" = "Priorität erfolgreich aktualisiert";
+"desk_library_msg_priority_update_failed" = "Aktualisierung der Priorität fehlgeschlagen";
+"desk_library_ticket_content_length_error" = "Inhaltslänge übersteigt das definierte Limit";
+"desk_library_tag_limit_error" = "Sie können nicht mehr als fünf Tags hinzufügen.";
+"desk_library_msg_topic_add_success" = "Thema erfolgreich hinzugefügt";
+"desk_library_msg_topic_update_failed" = "Thema konnte nicht aktualisiert werden";
+"desk.library.newticket.file.size.error" = "Die Dateigröße darf 20 MB nicht überschreiten.";
+"desk.library.msg_conversation_failed" = "Konnte Ticketdetails nicht abrufen";
+"desk_library_community_comments_show_more" = "Mehr anzeigen";
+"desk.library.community.edit_topic" = "Thema bearbeiten";
+"desk_library_comment_emoji_character_error" = "Emojis sind in den Kommentaren nicht erlaubt";
+"desk_library_msg_attaching_file" = "Ihre Dateien werden angehängt…";
+"desk.library.msg_reply_failed" = "Antwort wurde nicht hinzugefügt";
+"desk.library.msg_reply_success" = "Antwort erfolgreich hinzugefügt";
+"desk.library.no_data" = "Keine Daten";
+"desk.library.no_data_msg_articles" = "Hier sind keine Artikel vorhanden.";
+"desk.library.no_data_msg_tickets" = "Hier sind keine Tickets vorhanden.";
+"desk.library.no_data_msg_topics" = "Hier sind keine Themen vorhanden.";
+"desk.library.thread.option.delete" = "Löschen";
+"desk_library_community_content_error" = "Bitte Inhalt des Themas eingeben";
+"desk_library_msg_comment_add_failed" = "Kommentar hinzufügen fehlgeschlagen";
+"desk.library.topic_content_placeholder" = "Inhaltstext";
+"zdsdk_topic_alert_delete" = "Sind Sie sicher, dass Sie dieses Thema löschen möchten?";
+"zdsdk_topic_delete_success" = "Thema erfolgreich gelöscht";
+"zdsdk_topic_delete_Failed" = "Thema löschen fehlgeschlagen";
+"zdsdk_addTicket_actionsheet_description" = "%@-Option auswählen";
+"zdsdk_addTicket_actionsheet_fail_description" = "Keine %@-Optionen gefunden";
+"zdsdk_addTicket_multiselect_empty" = "Zur Auswahl von Werten tippen";
+"zdsdk_addTicket_multiselect_selected" = "%@ Werte ausgewählt";
+"zdsdk_topic_update" = "Aktualisieren";
+"zdsdk_community_Follow_error" = "Kategorie kann nicht verfolgt werden";
+"zdsdk_community_unFollow_error" = "Verfolgung der Kategorie konnte nicht aufgehoben werden";
+"desk_library_msg_topic_add_failed" = "Thema hochladen fehlgeschlagen";
+"zdsdk_community_tag_characters_error" = "In Tags sind keine Sonderzeichen erlaubt";
+"zdsdk.attachment.attachment" = "Anhang";
+"desk_library_community_subject_length_error" = "Titellänge übersteigt das definierte Limit";
+"desk.library.newticket.file.error" = "Hochladen der Anhänge fehlgeschlagen";
+"zdsdk_topic_updated_success" = "Thema erfolgreich aktualisiert";
+"zdsdk_topic_discard_alert" = "Möchten Sie die Änderung wirklich verwerfen?";
+"desk_library_community_subject_error" = "Geben Sie einen Titel für das Thema ein";
+"desk.library.community_category_comments" = "%s Kommentare";
 
-"zdsdk_addTicket_multiselect_empty"                     = "Tap to select values";
-"zdsdk_addTicket_multiselect_selected"                  = "%@ Values";
-"zdsdk_addTicket_validate_error"                        = "Please fill valid inputs";
+"desk_library_msg_topic_delete_success" = "Thema gelöscht";
+"desk_library_community_title_error" = "Titel eingeben";
+"desk_library_tag_spl_character_error" = "In Tags sind keine Sonderzeichen erlaubt";
+"desk_library_alert_msg_delete_topic" = "Sind Sie sicher, dass Sie dieses Thema löschen möchten?";
+"desk.library.msg_comment_failed" = "Kommentar hinzufügen fehlgeschlagen";
 
-"zdsdk_createTopic_locked_msg"                          = "All Categories are locked.";
 
-"zdsdk_topic_update"                                    = "Update";
+//"desk_library_community_add_tags"                       = "Tags hinzufügen"; -> Add Tags
 
-"zdsdk_community_Follow_error"                          = "Unable to follow the category";
-"zdsdk_community_unFollow_error"                        = "Unable to unfollow the category";
-"desk_library_msg_topic_add_failed"                     = "Failed to add the topic";
-
-"zdsdk_community_tag_characters_error"                  = "Special characters not allowed";
-"zdsdk.attachement.attachement"                         = "Attachment";
-"desk_library_community_subject_length_error"           = "Title length exceeds the limit";
-"desk.library.newticket.file.error"                     = "Could not upload the attachments";
-"zdsdk_topic_updated_success"                           = "Topic updated ssuccessfully";
-"zdsdk_topic_discard_alert"                             = "Want to discard changes";
-
-"desk_library_msg_topic_add_success"                    = "Topic successfully added";
-"desk_library_tag_limit_error"                          = "You cannot add more than 5 tags";
-"desk_library_msg_comment_update_success"                  = "Comment successfully updated";
-
-"DeskPortal.Helpcenter.section.subheading"              = "Category";
-"DeskPortal.Helpcenter.sections.subheading"             = "Categories";
-
-"desk_library_tag_dublicate_error"                      = "Tags cannot be dublicate";
-
-// Need to update
-"desk_library_community_subject_error"                  = "Enter Title"; // old value = "Enter Subject"
-
+//New Strings
+"zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
 

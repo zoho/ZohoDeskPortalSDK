@@ -1,4 +1,4 @@
-"DeskPortal.Dashboard.Heading"                                = "Customer Support";
+"DeskPortal.Dashboard.Heading" = "Müşteri Desteği";
 "DeskPortal.Network.failed.error.message"                                  = "İnternet bağlantınızı denetleyin";
 "DeskPortal.Dashboard.addticket.title"                          = "Bileti Gönder";
 "DeskPortal.Dashboard.addticket.description"                     = "Temsilcilerimizden yardım isteyin";
@@ -24,6 +24,8 @@
 "DeskPortal.Myticket.option.editcomment"                              = "Yorumu Düzenle";
 "DeskPortal.Error.message.reload"                                = "Yeniden Dene";
 
+"DeskPortal.Helpcenter.sections.subheading" = "Kategoriler";
+"DeskPortal.Helpcenter.section.subheading" = "Kategori";
 
 
 "zdsdk.general.powered"                                 = "Zoho tarafından desteklenmektedir";
@@ -51,7 +53,6 @@
 "zdsdk.createTicket.entervalid"                         = "Geçerli bir %@ gir";
 "desk.library.newticket.field.error"                    = "%@ boş olamaz";
 "desk.library.newticket.date.picker" = "Bunun yerine aşağıdan en yakın tarihi seçin";
-"desk.library.newticket.file.size.error" = "Dosya boyutu 20 MB’ı aşmamalıdır";
 
 //FeedBack Screen
 
@@ -212,86 +213,109 @@
 "desk.library.thread.Conversation"                      = "Görüşmeler";
 "desk_sdk_network_alert"                                = "Ağ kayboldu";
 "desk_community_new_topic_add_a_title"                  = "Başlık ekleyin";
-"desk_library_community_add_tags"                       = "Etiketleri Ekle";
 "desk_library_community_idea"                           = "Fikir";
 "desk_library_community_problem"                        = "Sorun";
 "desk_library_community_question"                       = "Soru";
 "desk_library_community_tag_rule"                       = "Birden çok etiket eklemek için virgül girin";
 "desk_library_alert_ok"                                 = "TAMAM";
-"desk_library_alert_msg_close_ticket"                   = "Bu bileti kapatmak istediğinizden emin misiniz?";
-"desk_library_alert_msg_delete_comment"                 = "Bu yorumu silmek istediğinizden emin misiniz?";
-"desk_library_community_done"                           = "Bitti";
-"desk.library.follow"                                   = "Takip et";
-"desk.library.following"                                = "Takip ediliyor";
-"desk_library_msg_comment_delete_failed"                = "Yorum silinemedi";
-"desk_sdk_community_topic_edit_tag"                     = "Etiketli Düzenle";
-"desk_library_community_continue"                       = "Devam Et";
-"desk_library_community_sub_category"                   = "Alt Kategori";
 
-"desk_library_community_discard_alert"                  = "Devam etmek istiyor musunuz? Değişiklilerin kaybedileceğini göz önünde bulundurun.";
-"desk.library.updated.sec"                              = "Hemen şimdi";
-"desk_library_msg_comment_add_success" 			= "Yorum başarıyla eklendi";
-"desk_library_msg_attachment_uploading" 		= "Ekler henüz karşıya yüklenmedi";
 
 //New Strings -------------------------------------- >
 
-"desk.library.community_category_comments"              = "%s Comments";
-"desk.library.empty_error_message_email"                = "Email can not be blank";
-"desk.library.feed_back_error_message"                  = "Feedback cannot be blank";
-"desk.library.msg_reply_failed"                         = "Failed to add Reply";
-"desk.library.msg_reply_success"                        = "Reply added successfully";
-"desk.library.no_data"                                  = "No Data";
-"desk.library.no_data_msg_articles"                     = "There are no articles here.";
-"desk.library.no_data_msg_tickets"                      = "There are no tickets here.";
-"desk.library.no_data_msg_topics"                       = "There are no topics here.";
-"desk.library.no_data_msg_conversations"                = "There are no conversations here.";
-"desk.library.thread.draft"                             = "Draft @";
-"desk.library.thread.option.delete"                     = "Delete";
-"desk.library.ticket.attachments"                       = "Attachments (%s)";
-"desk.library.ticket.closed.failed"                     = "Ticket failed to Close";
-"desk.library.updated.message"                          = "Last updated about %s";
-"desk_library_community_category"                       = "Category";
-"desk_library_community_content_error"                  = "Please enter content for your topic";
-"desk_library_msg_close_ticket_failed"                  = "Failed to close the ticket";
-"desk_library_msg_comment_add_failed"                   = "Failed to add comment";
-"desk.library.help"                                     = "Zoho Desk Help";
-"desk.library.topic_content_placeholder"                = "Content text";
+"desk_library_msg_topic_update_success" = "Konu başarıyla güncellendi";
+"desk_library_msg_add_ticket_failed" = "Bilet eklenemedi";
+"desk.library.camera" = "Kamerayı aç";
+"desk.library.msg_article_failed" = "Makale alınamadı";
+"desk.library.msg_upvote_failed" = "Makale beğenilemedi";
+"desk.library.msg_downvote_failed" = "Makale beğenilmedi olarak işaretlenemedi";
+"desk_library_kb_section" = "Bölümler";
+"desk_library_tag_duplicate_error" = "Yinelenen etiketlere izin verilmiyor";
+"desk_library_msg_comment_update_success" = "Yorum başarıyla güncellendi";
+"desk_library_msg_comment_update_failed" = "Yorum güncellendi";
+"desk.library.msg_ticket_failed" = "Biletler alınamadı";
+"desk.library.ticket.closed.failed" = "Bilet kapatılamadı";
+"desk.library.ticket.attachments" = "Ekler (%s)";
+"desk.library.updated.message" = "Yaklaşık %s önce güncellendi";
+"desk.library.empty_error_message_email" = "E-posta alanı boş olamaz";
+"desk.library.community.create_topic" = "Konu oluştur";
+"desk_community_new_topic_add_a_title" = "Başlık ekle";
+"desk.library.community.saveasdraft" = "Taslak olarak kaydet";
+"desk_library_community_add_tags" = "Etiket ekle";
+"desk_library_community_attachfiles" = "Dosya ekle";
+"desk_library_community_cancel" = "İptal";
+"desk_library_alert_msg_close_ticket" = "Bu bileti kapatmak istediğinizden emin misiniz?";
+"desk_library_alert_msg_delete_comment" = "Bu yorumu silmek istediğinizden emin misiniz?";
+"desk_library_community_done" = "Bitti";
+"desk.library.follow" = "Takip Et";
+"desk.library.following" = "Takip ediliyor";
+"desk.library.server_error" = "Hay aksi! Bazı şeyler yanlış gitti.";
+"desk_library_msg_comment_delete_success" = "Yorum silindi";
+"desk_library_msg_comment_delete_failed" = "Yorum silinemedi";
+"desk_library_msg_comment_add_success" = "Yorum başarıyla eklendi";
+"desk_library_msg_close_ticket_success" = "Bilet kapatıldı";
+"desk_library_msg_close_ticket_failed" = "Bilet kapatılamadı";
+"desk_library_msg_attachment_uploading" = "Ekler henüz karşı yüklenmedi";
+"desk_sdk_community_topic_edit_tag" = "Etiketi düzenle";
+"desk_library_community_continue" = "Devam Et";
+"desk_library_community_sub_category" = "Alt Kategori";
 
-"zdsdk_topic_alert_delete"                              = "Are you sure want to delete this Topic?";
-"zdsdk_topic_delete_success"                            = "Topic Deleted successfully";
-"zdsdk_topic_delete_Failed"                             = "Failed to delete the Topic.";
-"zdsdk_addTicket_actionsheet_description"               = "Select option for %@";
-"zdsdk_addTicket_actionsheet_fail_description"          = "No %@ Found";
+"desk_library_community_discard_alert" = "Devam etmek istiyor musunuz? Değişikliklerin kaybolacağını unutmayın.";
+"desk.library.updated.sec" = "Hemen şimdi";
+"desk.library.community_comment_empty_error" = "Yorumunuzu girin";
+"desk.library.community_topic_type_description" = "Değişiklik türü";
+"desk.library.no_data_msg_community" = "Burada hiçbir topluluk yok.";
+"desk.library.no_data_msg_conversations" = "Burada hiçbir görüşme yok.";
+"desk.library.feed_back_error_message" = "Geri bildirim boş olamaz";
+"desk_library_msg_priority_update_success" = "Öncelik başarıyla güncellendi";
+"desk_library_msg_priority_update_failed" = "Öncelik güncellenemedi";
+"desk_library_ticket_content_length_error" = "İçerik uzunluğu belirlenen sınırı aşıyor";
+"desk_library_tag_limit_error" = "Beşten fazla etiket ekleyemezsiniz.";
+"desk_library_msg_topic_add_success" = "Konu başarıyla eklendi";
+"desk_library_msg_topic_update_failed" = "Konu güncellendi";
+"desk.library.newticket.file.size.error" = "Dosya boyutu 20 MB’ı aşmamalıdır.";
+"desk.library.msg_conversation_failed" = "Bilet ayrıntıları alınamadı";
+"desk_library_community_comments_show_more" = "Daha fazla göster";
+"desk.library.community.edit_topic" = "Konuyu Düzenle";
+"desk_library_comment_emoji_character_error" = "Yorumlarda emojilere izin verimemektedir";
+"desk_library_msg_attaching_file" = "Dosyalarınız ekleniyor…";
+"desk.library.msg_reply_failed" = "Yanıt eklenemedi";
+"desk.library.msg_reply_success" = "Yanıt başarıyla eklendi";
+"desk.library.no_data" = "Veri yok";
+"desk.library.no_data_msg_articles" = "Burada hiçbir makale yok.";
+"desk.library.no_data_msg_tickets" = "Burada hiçbir bilet yok.";
+"desk.library.no_data_msg_topics" = "Burada hiçbir konu yok.";
+"desk.library.thread.option.delete" = "Sil";
+"desk_library_community_content_error" = "Lütfen konu için içerik girin";
+"desk_library_msg_comment_add_failed" = "Yorum eklenemedi";
+"desk.library.topic_content_placeholder" = "İçerik metni";
+"zdsdk_topic_alert_delete" = "Bu konuyu silmek istediğinizden emin misiniz?";
+"zdsdk_topic_delete_success" = "Konu başarıyla silindi";
+"zdsdk_topic_delete_Failed" = "Konu silinemedi";
+"zdsdk_addTicket_actionsheet_description" = "%@ seçenek belirleyin";
+"zdsdk_addTicket_actionsheet_fail_description" = "Hiçbir %@ seçenek bulunamadı";
+"zdsdk_addTicket_multiselect_empty" = "Değerleri seçmek için dokunun";
+"zdsdk_addTicket_multiselect_selected" = "%@ değerleri seçildi";
+"zdsdk_topic_update" = "Güncelleştir";
+"zdsdk_community_Follow_error" = "Kategori takip edilemedi";
+"zdsdk_community_unFollow_error" = "Kategori takibi bırakılamadı";
+"desk_library_msg_topic_add_failed" = "Konu eklenemedi";
+"zdsdk_community_tag_characters_error" = "Etiketlerde özel karakterlere izin verilmemektedir";
+"zdsdk.attachment.attachment" = "Ek";
+"desk_library_community_subject_length_error" = "Başlık uzunluğu sınırı aşıyor";
+"desk.library.newticket.file.error" = "Ekler yüklenemedi";
+"zdsdk_topic_updated_success" = "Konu başarıyla güncelleştirildi";
+"zdsdk_topic_discard_alert" = "Değişiklikleri atmak istediğinizden emin misiniz ?";
+"desk_library_community_subject_error" = "Konu için bir başlık girin";
+"desk.library.community_category_comments" = "%s yorumlar";
 
-"zdsdk_addTicket_multiselect_empty"                     = "Tap to select values";
-"zdsdk_addTicket_multiselect_selected"                  = "%@ Values";
-"zdsdk_addTicket_validate_error"                        = "Please fill valid inputs";
+"desk_library_msg_topic_delete_success" = "Konu silindi";
+"desk_library_community_title_error" = "Başlık gir";
+"desk_library_tag_spl_character_error" = "Etiketlerde özel karakterlere izin verilmemektedir";
+"desk_library_alert_msg_delete_topic" = "Bu konuyu silmek istediğinizden emin misiniz?";
+"desk.library.msg_comment_failed" = "Yorum eklenemedi";
 
-"zdsdk_createTopic_locked_msg"                          = "All Categories are locked.";
+//"desk_library_community_add_tags"                       = "Etiketleri Ekle"; -> Add Tags
 
-"zdsdk_topic_update"                                    = "Update";
-
-"zdsdk_community_Follow_error"                          = "Unable to follow the category";
-"zdsdk_community_unFollow_error"                        = "Unable to unfollow the category";
-"desk_library_msg_topic_add_failed"                     = "Failed to add the topic";
-
-"zdsdk_community_tag_characters_error"                  = "Special characters not allowed";
-"zdsdk.attachement.attachement"                         = "Attachment";
-"desk_library_community_subject_length_error"           = "Title length exceeds the limit";
-"desk.library.newticket.file.error"                     = "Could not upload the attachments";
-"zdsdk_topic_updated_success"                           = "Topic updated ssuccessfully";
-"zdsdk_topic_discard_alert"                             = "Want to discard changes";
-
-"desk_library_msg_topic_add_success"                    = "Topic successfully added";
-"desk_library_tag_limit_error"                          = "You cannot add more than 5 tags";
-"desk_library_msg_comment_update_success"                  = "Comment successfully updated";
-
-"DeskPortal.Helpcenter.section.subheading"              = "Category";
-"DeskPortal.Helpcenter.sections.subheading"             = "Categories";
-
-"desk_library_tag_dublicate_error"                      = "Tags cannot be dublicate";
-
-// Need to update
-"desk_library_community_subject_error"                  = "Enter Title"; // old value = "Enter Subject"
-
+//New Strings
+"zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
 
