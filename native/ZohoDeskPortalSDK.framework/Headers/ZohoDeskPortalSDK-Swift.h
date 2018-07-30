@@ -163,8 +163,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # define SWIFT_DEPRECATED_OBJC(Msg) SWIFT_DEPRECATED_MSG(Msg)
 #endif
 #if __has_feature(modules)
-@import QuartzCore;
 @import ObjectiveC;
+@import QuartzCore;
 @import Foundation;
 @import UIKit;
 @import CoreData;
@@ -190,6 +190,16 @@ typedef SWIFT_ENUM(NSInteger, APNSMode) {
   APNSModeProduction = 1,
 };
 
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20AttachmentJsonObject")
+@interface AttachmentJsonObject : NSObject
+@property (nonatomic, copy) NSString * _Nonnull name;
+@property (nonatomic, copy) NSString * _Nonnull createdTime;
+@property (nonatomic, copy) NSString * _Nonnull size;
+@property (nonatomic, copy) NSString * _Nonnull attachmentId;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 /// TimeStyle
 /// \code
 ///  case curveLess
@@ -208,6 +218,8 @@ typedef SWIFT_ENUM(NSInteger, BubbleStyle) {
 /// This type is used to display the chat bubble with lower arrow
   BubbleStyleBoxLowerCurve = 3,
 };
+
+
 
 
 
@@ -269,6 +281,17 @@ typedef SWIFT_ENUM(NSInteger, ChatComponent) {
 };
 
 
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20DepartmentJsonObject")
+@interface DepartmentJsonObject : NSObject
+@property (nonatomic, copy) NSString * _Nonnull photoURL;
+@property (nonatomic, copy) NSString * _Nonnull departmentId;
+@property (nonatomic, copy) NSString * _Nonnull name;
+@property (nonatomic, copy) NSString * _Nonnull nameInCustomerPortal;
+@property (nonatomic, copy) NSString * _Nonnull descriptionString;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
 
@@ -373,6 +396,17 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23NotificationLinkHandler")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK17ProductJsonObject")
+@interface ProductJsonObject : NSObject
+@property (nonatomic, copy) NSString * _Nonnull departmentId;
+@property (nonatomic, copy) NSString * _Nonnull productName;
+@property (nonatomic, copy) NSString * _Nonnull descriptionText;
+@property (nonatomic, copy) NSString * _Nonnull productCode;
+@property (nonatomic, copy) NSString * _Nonnull productId;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 /// ChatComponent
 /// \code
 /// case chatCompleted
@@ -391,6 +425,63 @@ typedef SWIFT_ENUM(NSInteger, SystemMessage) {
 /// This system type is used to set the message when rating and feedback is completed
   SystemMessageRatingAndFeedbackCompleted = 3,
 };
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketDetailJsonObject")
+@interface TicketDetailJsonObject : NSObject
+@property (nonatomic, copy) NSString * _Nonnull responseDueDate;
+@property (nonatomic, copy) NSString * _Nonnull phone;
+@property (nonatomic, copy) NSString * _Nonnull subject;
+@property (nonatomic, copy) NSString * _Nonnull modifiedByUserID;
+@property (nonatomic, copy) NSString * _Nonnull modifiedByUserphotoURL;
+@property (nonatomic, copy) NSString * _Nonnull modifiedByUsername;
+@property (nonatomic, copy) NSString * _Nonnull ticketNumber;
+@property (nonatomic, copy) NSString * _Nonnull resolution;
+@property (nonatomic, copy) NSString * _Nonnull creatorPhotoURL;
+@property (nonatomic, copy) NSString * _Nonnull creatorName;
+@property (nonatomic, copy) NSString * _Nonnull ticketId;
+@property (nonatomic, copy) NSString * _Nonnull closedTime;
+@property (nonatomic, copy) NSString * _Nonnull descriptionData;
+@property (nonatomic, copy) NSString * _Nonnull priority;
+@property (nonatomic, copy) NSString * _Nonnull assigneeId;
+@property (nonatomic, copy) NSString * _Nonnull dueDate;
+@property (nonatomic, copy) NSString * _Nonnull status;
+@property (nonatomic, copy) NSString * _Nonnull createdTime;
+@property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable customFields;
+@property (nonatomic, copy) NSString * _Nonnull modifiedTime;
+@property (nonatomic, copy) NSString * _Nonnull assigneephotoURL;
+@property (nonatomic, copy) NSString * _Nonnull assigneeName;
+@property (nonatomic, copy) NSString * _Nonnull commentCount;
+@property (nonatomic, copy) NSString * _Nonnull productId;
+@property (nonatomic, copy) NSString * _Nonnull category;
+@property (nonatomic, copy) NSString * _Nonnull contactId;
+@property (nonatomic, copy) NSString * _Nonnull email;
+@property (nonatomic, copy) NSString * _Nonnull threadCount;
+@property (nonatomic, copy) NSString * _Nonnull classification;
+@property (nonatomic, copy) NSString * _Nonnull departmentId;
+@property (nonatomic, copy) NSString * _Nonnull channel;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketFieldsJsonObject")
+@interface TicketFieldsJsonObject : NSObject
+@property (nonatomic, copy) NSString * _Nonnull displayLabel;
+@property (nonatomic, copy) NSString * _Nonnull name;
+@property (nonatomic, copy) NSString * _Nonnull ticketFieldId;
+@property (nonatomic, copy) NSString * _Nonnull type;
+@property (nonatomic) BOOL isMandatory;
+@property (nonatomic, copy) NSString * _Nonnull maxLength;
+@property (nonatomic, copy) NSString * _Nonnull allowedValues;
+@property (nonatomic, copy) NSString * _Nonnull defaultValue;
+@property (nonatomic) BOOL isCustomField;
+@property (nonatomic) NSInteger order;
+@property (nonatomic, copy) NSString * _Nonnull decimalPlaces;
+@property (nonatomic) BOOL isReadOnly;
+@property (nonatomic, copy) NSData * _Nullable dependencyMapping;
+@property (nonatomic, copy) NSData * _Nullable statusMapping;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 /// TimeStyle
 /// \code
@@ -436,6 +527,8 @@ typedef SWIFT_ENUM(NSInteger, TimeStyle) {
 
 
 
+
+
 @interface UINavigationController (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 @property (nonatomic, readonly, strong) UIViewController * _Nullable childViewControllerForStatusBarStyle;
 @end
@@ -444,6 +537,8 @@ typedef SWIFT_ENUM(NSInteger, TimeStyle) {
 @interface UITextField (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 - (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
 @end
+
+
 
 
 
@@ -539,11 +634,17 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12ZDCustomFont")
 @interface ZDCustomFont : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, copy) NSString * _Nonnull fontFamilyName;
-@property (nonatomic, copy) NSString * _Nonnull requalarFontName;
+@property (nonatomic, copy) NSString * _Nonnull regularFontName;
 @property (nonatomic, copy) NSString * _Nonnull lightFontName;
 @property (nonatomic, copy) NSString * _Nonnull mediumFontName;
 @property (nonatomic, copy) NSString * _Nonnull boldFontName;
 @end
+
+typedef SWIFT_ENUM(NSInteger, ZDDataCenter) {
+  ZDDataCenterUS = 0,
+  ZDDataCenterCN = 1,
+  ZDDataCenterEU = 2,
+};
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK25ZDHelpCenterConfiguration")
@@ -607,6 +708,38 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull setS
 + (void)setSetSDKLanguage:(NSString * _Nonnull)newValue;
 @end
 
+@class ZDTicketForm;
+
+/// This class provoide all apis
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDProvoider")
+@interface ZDProvoider : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDProvoider * _Nonnull sharedInstance;)
++ (ZDProvoider * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+/// This method list all department for the specific department
+/// \param onComplition Array of departments or error
+///
+- (void)getDepartmentsOnCompletion:(void (^ _Nonnull)(NSArray<DepartmentJsonObject *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+/// This method list all Product for the specific department
+/// \param onComplition Array of Product or error
+///
+- (void)getProductsFor:(NSString * _Nonnull)departmentId onCompletion:(void (^ _Nonnull)(NSArray<ProductJsonObject *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+/// Get Ticket Form for the Create new Ticker
+/// \param onCompletion Array of Ticket Fields or error
+///
+- (void)getTicketForm:(NSString * _Nonnull)departmentId onCompletion:(void (^ _Nonnull)(NSArray<TicketFieldsJsonObject *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+/// Upload Ticket Attachement
+/// \param onCompletion Responce from server
+///
+- (void)uploadTicketAttachment:(NSString * _Nonnull)filePath onCompletion:(void (^ _Nonnull)(AttachmentJsonObject * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+/// This method will create ticket
+/// \param form ticket form object its contain user inut values
+///
+/// \param onCompletion created ticket detail or error.
+///
+- (void)createTicketWithForm:(ZDTicketForm * _Nonnull)form onCompletion:(void (^ _Nonnull)(TicketDetailJsonObject * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK27ZDSolutionPageConfiguration")
 @interface ZDSolutionPageConfiguration : ZDBaseContollerConfiguration
@@ -652,14 +785,16 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12ZDTicketForm")
 @property (nonatomic, copy) NSString * _Nonnull departmentID;
 @property (nonatomic, copy) NSString * _Nonnull productID;
 @property (nonatomic, copy) NSString * _Nonnull subject;
-@property (nonatomic, copy) NSString * _Nonnull content;
+@property (nonatomic, copy) NSString * _Nonnull descriptionText;
 @property (nonatomic, copy) NSString * _Nonnull phone;
 @property (nonatomic, copy) NSString * _Nonnull classification;
 @property (nonatomic, copy) NSString * _Nonnull priority;
 @property (nonatomic, copy) NSString * _Nonnull category;
 @property (nonatomic, copy) NSString * _Nonnull subCategory;
+@property (nonatomic, copy) NSString * _Nonnull contactName;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull uploads;
 @property (nonatomic, copy) NSArray<ZDCustomFields *> * _Nullable customFields;
+@property (nonatomic, copy) NSArray<NSString *> * _Nullable attachements;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -677,8 +812,8 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK17ZohoDeskPortalSDK")
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <ZohoDeskPortalDelegate> _Nullable zohoDeskPortalDelegate;)
 + (id <ZohoDeskPortalDelegate> _Nullable)zohoDeskPortalDelegate SWIFT_WARN_UNUSED_RESULT;
 + (void)setZohoDeskPortalDelegate:(id <ZohoDeskPortalDelegate> _Nullable)value;
++ (void)initializeSDK:(NSString * _Nonnull)orgId appId:(NSString * _Nonnull)appId dataCenter:(enum ZDDataCenter)dataCenter configuration:(ZDPortalConfiguration * _Nonnull)configuration;
 + (void)initializeSDK:(NSString * _Nonnull)orgId appId:(NSString * _Nonnull)appId configuration:(ZDPortalConfiguration * _Nonnull)configuration;
-+ (void)initializeSDK:(NSString * _Nonnull)orgId appId:(NSString * _Nonnull)appId DCString:(NSString * _Nonnull)DCString;
 - (void)handleWidgetActionWithIsOpen:(BOOL)isOpen;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -709,8 +844,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enablePoweredByZoho;)
 @end
 
 
-
-
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 + (void)enablePushNotificationWithDeviceToken:(NSString * _Nonnull)deviceToken isTestDevice:(BOOL)isTestDevice mode:(enum APNSMode)mode;
 + (void)processRemoteNotificationWithUserInfo:(NSDictionary * _Nonnull)userInfo;
@@ -739,12 +872,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDUserSignedI
 
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 + (void)showHomePageWithController:(UIViewController * _Nonnull)controller withConfiguration:(ZDPortalConfiguration * _Nonnull)withConfiguration;
-+ (void)showHelpCenterWithController:(UIViewController * _Nonnull)controller with:(ZDHelpCenterConfiguration * _Nonnull)configuration;
++ (void)showHelpCenterWithController:(UIViewController * _Nonnull)controller;
 + (void)showArticleListForCategoryId:(NSString * _Nonnull)categoryId controller:(UIViewController * _Nonnull)controller with:(ZDHelpCenterConfiguration * _Nonnull)configuration;
-+ (void)showLiveChatWithController:(UIViewController * _Nonnull)controller with:(ZDLiveChatConfiguration * _Nonnull)configuration;
-+ (void)showCommunityWithController:(UIViewController * _Nonnull)controller with:(ZDCommunityConfiguration * _Nonnull)configuration;
-+ (void)ticketListWithController:(UIViewController * _Nonnull)controller with:(ZDTicketConfiguration * _Nonnull)configuration;
-+ (void)addTicketWithController:(UIViewController * _Nonnull)controller with:(ZDTicketConfiguration * _Nonnull)configuration;
++ (void)showLiveChatWithController:(UIViewController * _Nonnull)controller;
++ (void)showCommunityWithController:(UIViewController * _Nonnull)controller;
++ (void)ticketListWithController:(UIViewController * _Nonnull)controller;
++ (void)addTicketWithController:(UIViewController * _Nonnull)controller;
 + (void)showHelpPageForArticleId:(NSString * _Nonnull)articleId controller:(UIViewController * _Nonnull)controller with:(ZDSolutionPageConfiguration * _Nonnull)configuration;
 + (void)showHelpPageForArticleUrl:(NSURL * _Nonnull)articleLink controller:(UIViewController * _Nonnull)controller with:(ZDSolutionPageConfiguration * _Nonnull)configuration;
 @end

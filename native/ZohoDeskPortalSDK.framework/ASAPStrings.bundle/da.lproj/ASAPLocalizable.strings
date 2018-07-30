@@ -23,7 +23,6 @@
 "DeskPortal.Myticket.option.closeticket"                = "Luk billet";
 "DeskPortal.Myticket.option.editcomment"                = "Rediger kommentar";
 "DeskPortal.Error.message.reload"                       = "Forsøg igen";
-
 "DeskPortal.Helpcenter.sections.subheading"             = "Kategorier";
 "DeskPortal.Helpcenter.section.subheading" = "Kategori";
 
@@ -223,8 +222,6 @@
 "desk_library_alert_ok"                                 = "OK";
 "desk_library_alert_msg_close_ticket"                   = "Er du sikker på, du vil lukke denne anmodning?";
 
-//New Strings -------------------------------------- >
-
 "desk_library_msg_topic_update_success" = "Emnet blev opdateret";
 "desk_library_msg_add_ticket_failed" = "Kan ikke tilføje anmodning";
 "desk.library.camera" = "Åbn kamera";
@@ -322,4 +319,5 @@
 
 //New Strings
 "zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
+"desk.library.followers" = "Followers";
 

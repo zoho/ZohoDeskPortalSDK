@@ -220,8 +220,6 @@
 "desk_library_alert_ok"                                 = "OK";
 
 
-//New Strings -------------------------------------- >
-
 "desk_library_msg_topic_update_success" = "Тема успешно обновлена";
 "desk_library_msg_add_ticket_failed" = "Не удалось добавить заявку";
 "desk.library.camera" = "Открыть камеру";
@@ -318,4 +316,4 @@
 
 //New Strings
 "zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
-
+"desk.library.followers" = "Followers";

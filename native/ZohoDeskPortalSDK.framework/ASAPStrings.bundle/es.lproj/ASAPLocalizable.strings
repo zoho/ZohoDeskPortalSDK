@@ -221,8 +221,6 @@
 "desk_library_alert_msg_close_ticket"                   = "¿Está seguro de que desea cerrar este ticket?";
 
 
-//New Strings -------------------------------------- >
-
 "desk_library_msg_topic_update_success" = "Tema actualizado correctamente";
 "desk_library_msg_add_ticket_failed" = "No fue posible agregar el ticket";
 "desk.library.camera" = "Abrir cámara";
@@ -318,3 +316,4 @@
 
 //New Strings
 "zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
+"desk.library.followers" = "Followers";

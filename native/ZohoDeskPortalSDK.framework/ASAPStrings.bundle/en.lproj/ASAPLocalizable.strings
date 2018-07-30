@@ -1,4 +1,3 @@
-
 "DeskPortal.Dashboard.Heading"                                     = "Customer Support";
 "DeskPortal.Network.failed.error.message"                          = "Check your internet connection";
 "DeskPortal.Dashboard.addticket.title"                             = "Submit Ticket";
@@ -7,7 +6,6 @@
 "DeskPortal.Dashboard.helpcenter.description"                      = "Browse our extensive repository of help articles";
 "DeskPortal.Dashboard.community.title"                             = "Community";
 "DeskPortal.Dashboard.community.description"                       = "Find and share solutions with the user community";
-
 "DeskPortal.Dashboard.myticket.title"                              = "My Tickets";
 "DeskPortal.Dashboard.myticket.description"                        = "View and manage tickets that you submitted";
 "DeskPortal.Helpcenter.category.subheading"                        = "Section";
@@ -25,9 +23,8 @@
 "DeskPortal.Myticket.option.closeticket"                           = "Close Ticket";
 "DeskPortal.Myticket.option.editcomment"                           = "Edit Comment";
 "DeskPortal.Error.message.reload"                                  = "Retry";
-
-"DeskPortal.Helpcenter.sections.subheading" = "Categories";
-"DeskPortal.Helpcenter.section.subheading" = "Category";
+"DeskPortal.Helpcenter.sections.subheading"                        = "Categories";
+"DeskPortal.Helpcenter.section.subheading"                         = "Category";
 //
 
 
@@ -321,4 +318,6 @@
 
 //New Strings
 "zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
+"desk.library.followers" = "Followers";
+
 

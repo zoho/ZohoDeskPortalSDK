@@ -221,8 +221,6 @@
 "desk_library_alert_ok"                                 = "确定";
 
 
-//New Strings -------------------------------------- >
-
 "desk_library_msg_topic_update_success" = "主题已成功更新";
 "desk_library_msg_add_ticket_failed" = "添加工单失败";
 "desk.library.camera" = "打开摄像头";
@@ -319,4 +317,4 @@
 
 //New Strings
 "zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
-
+"desk.library.followers" = "Followers";

@@ -23,7 +23,6 @@
 "DeskPortal.Myticket.option.closeticket"                              = "Ticket schließen";
 "DeskPortal.Myticket.option.editcomment"                              = "Kommentar bearbeiten";
 "DeskPortal.Error.message.reload"                                = "Wiederholen";
-
 "DeskPortal.Helpcenter.sections.subheading" = "Kategorien";
 "DeskPortal.Helpcenter.section.subheading" = "Kategorie";
 
@@ -220,8 +219,6 @@
 "desk_library_alert_ok"                                 = "OK";
 "desk_library_alert_msg_close_ticket"                   = "Möchten Sie dieses Ticket wirklich schließen?";
 
-//New Strings -------------------------------------- >
-
 "desk_library_msg_topic_update_success" = "Thema erfolgreich aktualisiert";
 "desk_library_msg_add_ticket_failed" = "Ticket konnte nicht zugefügt werden";
 "desk.library.camera" = "Kamera öffnen";
@@ -318,4 +315,4 @@
 
 //New Strings
 "zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
-
+"desk.library.followers" = "Followers";
