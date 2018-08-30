@@ -16,7 +16,7 @@ FOUNDATION_EXPORT const unsigned char LiveChatEmbedVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <LiveChatEmbed/PublicHeader.h>
 
-#import <LiveChatEmbed/LCReachability.h>
+/*#import <LiveChatEmbed/LCReachability.h>
 #import <LiveChatEmbed/PEXHeader.h>
 #import <LiveChatEmbed/WmsConfig.h>
 #import <LiveChatEmbed/MessageHandler.h>
@@ -25,4 +25,4 @@ FOUNDATION_EXPORT const unsigned char LiveChatEmbedVersionString[];
 #import <LiveChatEmbed/Chathandler.h>
 #import <LiveChatEmbed/SwiftTryCatch.h>
 #import <LiveChatEmbed/asl.h>
-#import <LiveChatEmbed/ApiHeaders.h>
+#import <LiveChatEmbed/ApiHeaders.h>*/

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = "ZohoDeskPortalSDK"
-s.version          = "0.1.5"
+s.version          = "0.1.6"
 s.summary          = "A framework for view KB and Submit ticket module for iOS app"
 s.license          = { :type => "MIT", :text=> <<-LICENSE
 MIT License

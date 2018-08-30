@@ -700,6 +700,7 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK21ZDPortalConfiguration")
 @interface ZDPortalConfiguration : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 + (void)setGuestUserWithEmail:(NSString * _Nonnull)email displayName:(NSString * _Nullable)displayName phoneNumber:(NSString * _Nullable)phoneNumber;
++ (void)disableZDKnowledgeBaseCategoriesWithCategoryIds:(NSArray<NSString *> * _Nonnull)CategoryIds;
 + (void)processConfigurationWithConfig:(ZDPortalConfiguration * _Nonnull)config;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enableLogMessages;)
 + (BOOL)enableLogMessages SWIFT_WARN_UNUSED_RESULT;
