@@ -535,16 +535,6 @@ typedef SWIFT_ENUM(NSInteger, TimeStyle) {
 @end
 
 
-@interface UITextField (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-@interface UITextView (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
 
 
 
@@ -705,9 +695,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK21ZDPortalConfiguration")
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enableLogMessages;)
 + (BOOL)enableLogMessages SWIFT_WARN_UNUSED_RESULT;
 + (void)setEnableLogMessages:(BOOL)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL isDisableCopyPaste;)
-+ (BOOL)isDisableCopyPaste SWIFT_WARN_UNUSED_RESULT;
-+ (void)setIsDisableCopyPaste:(BOOL)value;
 @property (nonatomic) BOOL enableCommunity;
 @property (nonatomic) BOOL enableHelpCenter;
 @property (nonatomic) BOOL enableMyTicket;
