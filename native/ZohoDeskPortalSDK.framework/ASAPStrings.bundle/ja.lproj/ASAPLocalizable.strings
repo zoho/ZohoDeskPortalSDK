@@ -231,7 +231,7 @@
 "desk_library_msg_comment_update_failed" = "コメントのアップデートに失敗しました";
 "desk.library.msg_ticket_failed" = "チケットの取得に失敗しました";
 "desk.library.ticket.closed.failed" = "チケットを終了するのに失敗しました";
-"desk.library.ticket.attachments" = "添付 (%s)";
+"desk.library.ticket.attachments" = "添付 (%@)";
 "desk.library.updated.message" = "最終更新： %s 前";
 "desk.library.empty_error_message_email" = "メールアドレスのフィールドを空白にすることはできません";
 "desk.library.community.create_topic" = "トピックの作成";
@@ -316,3 +316,4 @@
 //New Strings
 "zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
 "desk.library.followers" = "Followers";
+"desk.library.helpcenter_article_count" = "%@ Article";

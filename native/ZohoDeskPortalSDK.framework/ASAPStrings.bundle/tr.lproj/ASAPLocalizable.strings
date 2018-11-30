@@ -232,7 +232,7 @@
 "desk_library_msg_comment_update_failed" = "Yorum güncellendi";
 "desk.library.msg_ticket_failed" = "Biletler alınamadı";
 "desk.library.ticket.closed.failed" = "Bilet kapatılamadı";
-"desk.library.ticket.attachments" = "Ekler (%s)";
+"desk.library.ticket.attachments" = "Ekler (%@)";
 "desk.library.updated.message" = "Yaklaşık %s önce güncellendi";
 "desk.library.empty_error_message_email" = "E-posta alanı boş olamaz";
 "desk.library.community.create_topic" = "Konu oluştur";
@@ -317,3 +317,4 @@
 //New Strings
 "zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
 "desk.library.followers" = "Followers";
+"desk.library.helpcenter_article_count" = "%@ Article";

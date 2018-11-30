@@ -231,7 +231,7 @@
 "desk_library_msg_comment_update_failed" = "Kommentar konnte nicht aktualisiert werden";
 "desk.library.msg_ticket_failed" = "Tickets konnten nicht abgerufen werden";
 "desk.library.ticket.closed.failed" = "Ticket konnte nicht geschlossen werden";
-"desk.library.ticket.attachments" = "Anhänge (%s)";
+"desk.library.ticket.attachments" = "Anhänge (%@)";
 "desk.library.updated.message" = "Letzte Aktualisierung vor ca. %s";
 "desk.library.empty_error_message_email" = "Das Feld E-mail darf nicht leer sein";
 "desk.library.community.create_topic" = "Thema erstellen";
@@ -316,3 +316,4 @@
 //New Strings
 "zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
 "desk.library.followers" = "Followers";
+"desk.library.helpcenter_article_count" = "%@ Article";

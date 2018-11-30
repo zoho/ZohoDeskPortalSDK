@@ -235,7 +235,7 @@
 "desk_library_msg_comment_update_failed" = "Failed to update the comment";
 "desk.library.msg_ticket_failed" = "Failed to fetch the tickets";
 "desk.library.ticket.closed.failed" = "Ticket failed to close";
-"desk.library.ticket.attachments" = "Attachments (%s)";
+"desk.library.ticket.attachments" = "Attachments (%@)";
 "desk.library.updated.message" = "Last updated about %s ago";
 "desk.library.empty_error_message_email" = "The email field cannot be blank";
 "desk.library.community.create_topic" = "Create topic";
@@ -319,5 +319,6 @@
 //New Strings
 "zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
 "desk.library.followers" = "Followers";
+"desk.library.helpcenter_article_count" = "%@ Article";
 
 

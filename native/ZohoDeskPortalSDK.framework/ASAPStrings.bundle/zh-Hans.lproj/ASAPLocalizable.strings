@@ -233,7 +233,7 @@
 "desk_library_msg_comment_update_failed" = "更新评论失败";
 "desk.library.msg_ticket_failed" = "提取工单失败";
 "desk.library.ticket.closed.failed" = "工单关闭失败";
-"desk.library.ticket.attachments" = "附件 (%s)";
+"desk.library.ticket.attachments" = "附件 (%@)";
 "desk.library.updated.message" = "上次更新约 %s 前";
 "desk.library.empty_error_message_email" = "电子邮件字段不能留空";
 "desk.library.community.create_topic" = "创建主题";
@@ -318,3 +318,4 @@
 //New Strings
 "zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
 "desk.library.followers" = "Followers";
+"desk.library.helpcenter_article_count" = "%@ Article";

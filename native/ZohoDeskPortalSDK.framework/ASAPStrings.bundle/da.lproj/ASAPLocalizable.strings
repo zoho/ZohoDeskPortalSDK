@@ -234,7 +234,7 @@
 "desk_library_msg_comment_update_failed" = "Kommentaren kunne ikke opdateres";
 "desk.library.msg_ticket_failed" = "Kunne ikke hente anmodninger";
 "desk.library.ticket.closed.failed" = "Anmodningen kunne ikke lukkes";
-"desk.library.ticket.attachments" = "Vedhæftede filer (%s)";
+"desk.library.ticket.attachments" = "Vedhæftede filer (%@)";
 "desk.library.updated.message" = "Sidst opdateret omkring %s siden";
 "desk.library.empty_error_message_email" = "E-mail feltet må ikke være tomt";
 
@@ -320,4 +320,5 @@
 //New Strings
 "zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
 "desk.library.followers" = "Followers";
+"desk.library.helpcenter_article_count" = "%@ Article";
 

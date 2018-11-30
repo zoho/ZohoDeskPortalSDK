@@ -232,7 +232,7 @@
 "desk_library_msg_comment_update_failed" = "Не удалось обновить комментарий";
 "desk.library.msg_ticket_failed" = "Не удалось получить заявки";
 "desk.library.ticket.closed.failed" = "Не удалось закрыть заявку";
-"desk.library.ticket.attachments" = "Вложения (%s)";
+"desk.library.ticket.attachments" = "Вложения (%@)";
 "desk.library.updated.message" = "Последнее обновление примерно %s назад";
 "desk.library.empty_error_message_email" = "Поле адреса эл. почты не должно быть пустым";
 "desk.library.community.create_topic" = "Создать тему";
@@ -317,3 +317,4 @@
 //New Strings
 "zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
 "desk.library.followers" = "Followers";
+"desk.library.helpcenter_article_count" = "%@ Article";
