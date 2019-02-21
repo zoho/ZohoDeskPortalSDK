@@ -306,7 +306,7 @@
 "zdsdk_topic_updated_success" = "Topic updated successfully";
 "zdsdk_topic_discard_alert" = "Are you sure you want to discard the changes?";
 "desk_library_community_subject_error" = "Enter a title for the topic";
-"desk.library.community_category_comments" = "%s comments";
+"desk.library.community_category_comments" = "%@ comments";
 
 "desk_library_msg_topic_delete_success" = "Topic deleted";
 "desk_library_community_title_error" = "Enter title";

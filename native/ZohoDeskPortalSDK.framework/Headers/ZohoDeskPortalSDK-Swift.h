@@ -575,6 +575,8 @@ typedef SWIFT_ENUM(NSInteger, TimeStyle) {
 
 
 
+
+
 @interface UIWindow (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 @property (nonatomic, readonly, strong) UIViewController * _Nullable visibleViewControllerFromWindow;
 + (UIViewController * _Nullable)getVisibleViewControllerfromParent:(UIViewController * _Nullable)vc SWIFT_WARN_UNUSED_RESULT;
@@ -664,6 +666,11 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23ZDLiveChatConfiguration")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+typedef SWIFT_ENUM(NSInteger, ZDNavigationBackButtonStyle) {
+  ZDNavigationBackButtonStyleText = 0,
+  ZDNavigationBackButtonStyleIcon = 1,
+};
+
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK17ZDNavigationTheme")
 @interface ZDNavigationTheme : NSObject
@@ -684,6 +691,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL translucent;)
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) UIStatusBarStyle statusBarApperance;)
 + (UIStatusBarStyle)statusBarApperance SWIFT_WARN_UNUSED_RESULT;
 + (void)setStatusBarApperance:(UIStatusBarStyle)newValue;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum ZDNavigationBackButtonStyle backButtonStyle;)
++ (enum ZDNavigationBackButtonStyle)backButtonStyle SWIFT_WARN_UNUSED_RESULT;
++ (void)setBackButtonStyle:(enum ZDNavigationBackButtonStyle)newValue;
 @end
 
 
@@ -852,7 +862,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enablePoweredByZoho;)
 
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 - (void)setVisitorWithName:(NSString * _Nonnull)name image:(UIImage * _Nullable)image;
-+ (void)showLiveChat;
 + (void)setMessageWindowWithColor:(UIColor * _Nonnull)color;
 + (void)setIncomingMessageBackgroundColorWithColor:(UIColor * _Nonnull)color;
 + (void)setOutgoingMessageBackgroundColorWithColor:(UIColor * _Nonnull)color;
