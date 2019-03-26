@@ -573,10 +573,6 @@ typedef SWIFT_ENUM(NSInteger, TimeStyle) {
 
 
 
-
-
-
-
 @interface UIWindow (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 @property (nonatomic, readonly, strong) UIViewController * _Nullable visibleViewControllerFromWindow;
 + (UIViewController * _Nullable)getVisibleViewControllerfromParent:(UIViewController * _Nullable)vc SWIFT_WARN_UNUSED_RESULT;
