@@ -1,13 +1,13 @@
 //
-//  ClientUtilConstants.h
+//  ZohoPortalAuthUtilConstants.h
 //  ZohoSSO
 //
 //  Created by Kumareshwaran on 1/25/16.
 //  Copyright © 2016 Dhanasekar K. All rights reserved.
 //
 
-#ifndef ClientUtilConstants_h
-#define ClientUtilConstants_h
+#ifndef ZohoPortalAuthUtilConstants_h
+#define ZohoPortalAuthUtilConstants_h
 
 #ifdef DEBUG
 #	define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
@@ -21,4 +21,4 @@
 #define kServiceKeychainItem @"com.zoho.client.oauth"
 
 
-#endif /* ClientUtilConstants_h */
+#endif /* ZohoPortalAuthUtilConstants_h */

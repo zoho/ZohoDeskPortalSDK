@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#include "ClientConstants.h"
+#include "ZohoPortalAuthConstants.h"
+#import "ZohoPortalAuthToken.h"
+
+static const long wmsTimeCheckMargin = 420000 ;
 
 typedef void (^requestSuccessBlock)(NSString *token);
+typedef void (^requestWMSSuccessBlock)(NSString *token,long expiresMillis);
 
 typedef void (^requestFailureBlock)(NSError *error);
 
@@ -17,7 +21,7 @@ typedef void (^requestLogoutSuccessBlock)();
 typedef void (^requestLogoutFailureBlock)(NSError *error);
 
 
-@interface ClientZIAMUtil :NSObject
+@interface ZohoPortalAuthZIAMUtil :NSObject
 {
 @public
     NSString* Scopes;
@@ -34,12 +38,18 @@ typedef void (^requestLogoutFailureBlock)(NSError *error);
 #endif
     requestSuccessBlock finalSuccessBlock;
     requestFailureBlock finalFailureBlock;
+    BOOL isLoadingInWebview;
+    NSString* UrlParams;
+    
+    NSString *ScopeEnhancementUrl;
+    NSString *ScopeEnhancementPortalID;
+    NSString *ScopeEnhancementAccountsPortalURL;
     
 }
 @property NSString *ExtensionAppGroup;
 
 
-+ (ClientZIAMUtil *)sharedUtil;
++ (ZohoPortalAuthZIAMUtil *)sharedUtil;
 -(BOOL)handleURL:url sourceApplication:sourceApplication annotation:annotation;
 
 
@@ -73,11 +83,16 @@ typedef void (^requestLogoutFailureBlock)(NSError *error);
 
 -(void)getOauth2TokenForPortalID:(NSString *)portalID havingAccountsPortalURL:(NSString *)accountsPortalURL success:(requestSuccessBlock)successBlock failure:(requestFailureBlock)failureBlock;
 
+- (void) getTokenForWMSWithSuccess:(requestWMSSuccessBlock)success andFailure:(requestFailureBlock)failure;
+-(ZohoPortalAuthToken *)getSyncOAuthToken;
+
 - (NSDictionary *)giveOAuthDetailsForWatchApp;
 
 -(void)setOAuthDeteailsInKeychainForWatchApp:(NSDictionary *)OAuthDetails;
 
 - (void) presentInitialViewControllerWithSuccess:(requestSuccessBlock)success andFailure:(requestFailureBlock)failure;
+
+- (void) presentInitialViewControllerWithCustomParams:(NSString *)urlParams success:(requestSuccessBlock)success andFailure:(requestFailureBlock)failure;
 
 - (void) presentInitialViewControllerForPortalID:(NSString *)portalID havingAccountsPortalURL:(NSString *)accountsPortalURL Success:(requestSuccessBlock)success andFailure:(requestFailureBlock)failure;
 
@@ -87,10 +102,16 @@ typedef void (^requestLogoutFailureBlock)(NSError *error);
 
 -(void)removeAllScopesForPortalID:(NSString *)portalID havingAccountsPortalURL:(NSString *)accountsPortalURL success:(requestLogoutSuccessBlock)successBlock failure:(requestLogoutFailureBlock)failureBlock;
 
+-(NSString *)getIAMSignInURLForLoadingInWebView;
+-(void)continueLoginFromWebviewHavingURL:(NSURL *)url WithSuccess:(requestSuccessBlock)success andFailure:(requestFailureBlock)failure;
+
+-(void)enhanceScopesWithSuccess:(requestSuccessBlock)success andFailure:(requestFailureBlock)failure;
+-(void)enhanceScopesForPortalID:(NSString *)portalID havingAccountsPortalURL:(NSString *)accountsPortalURL success:(requestSuccessBlock)successBlock failure:(requestFailureBlock)failureBlock;
 
 //Internal Methods
 -(void)showNetworkActivityIndicator;
 -(void)hideNetworkActivityIndicator;
 -(NSString *) getUserAgentString;
+-(void)fetchAccessTokenFromServerForPortalID:(NSString *)portalID havingAccountsPortalURL:(NSString *)accountsPortalURL success:(requestSuccessBlock)successBlock failure:(requestFailureBlock)failureBlock;
 
 @end

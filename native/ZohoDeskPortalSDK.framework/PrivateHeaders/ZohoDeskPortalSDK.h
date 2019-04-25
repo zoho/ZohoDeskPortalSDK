@@ -30,7 +30,7 @@ FOUNDATION_EXPORT const unsigned char ZohoDeskPortalSDKVersionString[];
     //#import <ZohoDeskSDK/ClinetEnums.h>
 
 
-    #import <ZohoDeskPortalSDK/ClientZIAMUtil.h>
+    #import <ZohoDeskPortalSDK/ZohoPortalAuthZIAMUtil.h>
     //#import <ZohoDeskSDK/ApiHeaders.h>
     //#import <ZohoDeskSDK/ApiHeaders.h>
     //#import <ZohoDeskSDK/ApiHeaders.h>

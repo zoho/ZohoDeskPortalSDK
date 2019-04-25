@@ -1,5 +1,5 @@
 //
-//  ClientNetworkManager.h
+//  ZohoPortalAuthNetworkManager.h
 //  Client_Demo
 //
 //  Created by Abinaya Ravichandran on 07/02/17.
@@ -21,9 +21,9 @@ typedef NS_ENUM(NSInteger, ClientInternalError) {
     Client_ERR_NOTHING_WAS_RECEIVED
 };
 
-@interface ClientNetworkManager : NSObject
+@interface ZohoPortalAuthNetworkManager : NSObject
 
-+(ClientNetworkManager*)sharedManager;
++(ZohoPortalAuthNetworkManager*)sharedManager;
 
 -(void)sendPOSTRequestForURL:(NSString*)urlString
          parameters:(NSDictionary*)params

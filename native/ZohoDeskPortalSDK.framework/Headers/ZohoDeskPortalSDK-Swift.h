@@ -578,6 +578,8 @@ typedef SWIFT_ENUM(NSInteger, TimeStyle, closed) {
 
 
 
+
+
 @interface UIWindow (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 @property (nonatomic, readonly, strong) UIViewController * _Nullable visibleViewControllerFromWindow SWIFT_DEPRECATED_OBJC("Swift property 'UIWindow.visibleViewControllerFromWindow' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 + (UIViewController * _Nullable)getVisibleViewControllerfromParent:(UIViewController * _Nullable)vc SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIWindow.getVisibleViewControllerfromParent(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
@@ -605,6 +607,26 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK13VisitorObject")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+enum ZDAnalyticsTrackingType : NSInteger;
+enum ZDPortalControllers : NSInteger;
+enum ZDPortalUIAction : NSInteger;
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDAnalytics")
+@interface ZDAnalytics : NSObject
+- (enum ZDAnalyticsTrackingType)getTrackingType SWIFT_WARN_UNUSED_RESULT;
+- (enum ZDPortalControllers)getEventScreen SWIFT_WARN_UNUSED_RESULT;
+- (enum ZDPortalControllers)getEventSource SWIFT_WARN_UNUSED_RESULT;
+- (enum ZDPortalUIAction)getEventAction SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)getlabelValue SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(NSInteger, ZDAnalyticsTrackingType, closed) {
+  ZDAnalyticsTrackingTypeEvent = 0,
+  ZDAnalyticsTrackingTypeLaunch = 1,
+};
+
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK28ZDBaseContollerConfiguration")
 @interface ZDBaseContollerConfiguration : NSObject
@@ -615,8 +637,67 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK28ZDBaseContollerConfiguration")
 @end
 
 
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDChatTheme")
+@interface ZDChatTheme : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull themeColor;)
++ (UIColor * _Nonnull)themeColor SWIFT_WARN_UNUSED_RESULT;
++ (void)setThemeColor:(UIColor * _Nonnull)newValue;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull outgoingMessageBackgroundColor;)
++ (UIColor * _Nonnull)outgoingMessageBackgroundColor SWIFT_WARN_UNUSED_RESULT;
++ (void)setOutgoingMessageBackgroundColor:(UIColor * _Nonnull)newValue;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull incommingMessageBackgroundColor;)
++ (UIColor * _Nonnull)incommingMessageBackgroundColor SWIFT_WARN_UNUSED_RESULT;
++ (void)setIncommingMessageBackgroundColor:(UIColor * _Nonnull)newValue;
+@end
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK19ZDCommunityCategory")
+@interface ZDCommunityCategory : NSObject
+@property (nonatomic, copy) NSString * _Nonnull photoUrl SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.photoUrl' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull name SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.name' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull postCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.postCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull descriptionText SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.descriptionText' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull parentCategoryId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.parentCategoryId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull categoryId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.categoryId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull commentCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.commentCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull followersCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.followersCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull forumsCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.forumsCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic) BOOL isFollow SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.isFollow' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic) BOOL isLocked SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.isLocked' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSArray<ZDCommunityCategory *> * _Nullable child SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.child' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK24ZDCommunityConfiguration")
 @interface ZDCommunityConfiguration : ZDBaseContollerConfiguration
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK16ZDCommunityTopic")
+@interface ZDCommunityTopic : NSObject
+@property (nonatomic, copy) NSString * _Nonnull creatorPhotoUrl SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.creatorPhotoUrl' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull creatorName SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.creatorName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull creatorId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.creatorId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull creatorType SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.creatorType' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull content SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.content' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull createdTime SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.createdTime' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull topicId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.topicId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull type SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.type' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull label SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.label' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull subject SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.subject' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull permalink SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.permalink' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull likeCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.likeCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull latestCommentTime SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.latestCommentTime' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull latestCommenterId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.latestCommenterId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull latestCommenterName SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.latestCommenterName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull latestCommenterType SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.latestCommenterType' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull commentCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.commentCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull categoryId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.categoryId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic) BOOL isVoted SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.isVoted' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -637,6 +718,21 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12ZDCustomFont")
 @property (nonatomic, copy) NSString * _Nonnull lightFontName;
 @property (nonatomic, copy) NSString * _Nonnull mediumFontName;
 @property (nonatomic, copy) NSString * _Nonnull boldFontName;
+@end
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK13ZDCustomTheme")
+@interface ZDCustomTheme : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) UIColor * _Nonnull tintColor;
+@property (nonatomic, strong) UIColor * _Nonnull primaryTextColor;
+@property (nonatomic, strong) UIColor * _Nonnull secondryTextColor;
+@property (nonatomic, strong) UIColor * _Nonnull primaryBackgroundColor;
+@property (nonatomic, strong) UIColor * _Nonnull secondryBackgroundColor;
+@property (nonatomic, strong) UIColor * _Nonnull cellSeporatorColor;
+@property (nonatomic, strong) UIColor * _Nonnull headerColor;
+@property (nonatomic, strong) UIColor * _Nonnull accentColor;
+@property (nonatomic, strong) UIColor * _Nonnull mandatoryTextColor;
 @end
 
 typedef SWIFT_ENUM(NSInteger, ZDDataCenter, closed) {
@@ -666,6 +762,11 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23ZDLiveChatConfiguration")
 @property (nonatomic) BOOL showFeedback;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+typedef SWIFT_ENUM(NSInteger, ZDNavigation, closed) {
+  ZDNavigationPush = 0,
+  ZDNavigationPresent = 1,
+};
 
 typedef SWIFT_ENUM(NSInteger, ZDNavigationBackButtonStyle, closed) {
   ZDNavigationBackButtonStyleText = 0,
@@ -717,6 +818,60 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull setS
 + (void)setSetSDKLanguage:(NSString * _Nonnull)newValue;
 @end
 
+typedef SWIFT_ENUM(NSInteger, ZDPortalControllers, closed) {
+  ZDPortalControllersDashBoard = 0,
+  ZDPortalControllersKBCategoryList = 1,
+  ZDPortalControllersKBChildCategoryList = 2,
+  ZDPortalControllersKBSearchList = 3,
+  ZDPortalControllersKBArticleList = 4,
+  ZDPortalControllersKBArticleDetail = 5,
+  ZDPortalControllersKBRelatedArticles = 6,
+  ZDPortalControllersFeedBack = 7,
+  ZDPortalControllersKBDeeplinking = 8,
+  ZDPortalControllersCommunityCatagories = 9,
+  ZDPortalControllersCommunityTopicsList = 10,
+  ZDPortalControllersCommunityTopicDetail = 11,
+  ZDPortalControllersCommunityCreateTopic = 12,
+  ZDPortalControllersCommunityTopicReply = 13,
+  ZDPortalControllersDirectlyOpenFromApplication = 14,
+  ZDPortalControllersNil = 15,
+};
+
+typedef SWIFT_ENUM(NSInteger, ZDPortalUIAction, closed) {
+  ZDPortalUIActionDashBoardKBClicked = 0,
+  ZDPortalUIActionDashBoardCommunityClicked = 1,
+  ZDPortalUIActionDashBoardMyTicketClicked = 2,
+  ZDPortalUIActionDashBoardCreateTicketClicked = 3,
+  ZDPortalUIActionKBCategoryClicked = 4,
+  ZDPortalUIActionKBChildCategoryClicked = 5,
+  ZDPortalUIActionKBArticleClicked = 6,
+  ZDPortalUIActionKBRelatedArticleClicked = 7,
+  ZDPortalUIActionKBSearchedArticleClicked = 8,
+  ZDPortalUIActionKBSearchedCategoryClicked = 9,
+  ZDPortalUIActionKBArticleUpVoted = 10,
+  ZDPortalUIActionKBArticleDownVoted = 11,
+  ZDPortalUIActionKBArticleFeedBackSent = 12,
+  ZDPortalUIActionKBArticleFeedBackSkip = 13,
+  ZDPortalUIActionCommunityCategoryClicked = 14,
+  ZDPortalUIActionCommunityCategoryFollow = 15,
+  ZDPortalUIActionCommunityCategoryUnFollow = 16,
+  ZDPortalUIActionCommunityTopicClicked = 17,
+  ZDPortalUIActionCommunityForumClicked = 18,
+  ZDPortalUIActionCommunityTopicTypeFilter = 19,
+  ZDPortalUIActionCommunityTopicFollow = 20,
+  ZDPortalUIActionCommunityTopicUnFollow = 21,
+  ZDPortalUIActionCommunityTopicLiked = 22,
+  ZDPortalUIActionCommunityTopicCommentAction = 23,
+  ZDPortalUIActionCommunityTopicCommentSent = 24,
+  ZDPortalUIActionCommunityTopicCommentCreateCancel = 25,
+  ZDPortalUIActionCommunityTopicDeleted = 26,
+  ZDPortalUIActionCommunityTopicEdited = 27,
+  ZDPortalUIActionCommunityTopicCreated = 28,
+  ZDPortalUIActionCommunityTopicCreateCancel = 29,
+  ZDPortalUIActionCommunityTopicSavedAsDraft = 30,
+  ZDPortalUIActionNil = 31,
+};
+
 @class ZDTicketForm;
 
 /// This class provoide all apis
@@ -732,7 +887,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDProvoider 
 /// \param onComplition Array of Product or error
 ///
 - (void)getProductsFor:(NSString * _Nonnull)departmentId from:(NSInteger)from limit:(NSInteger)limit onCompletion:(void (^ _Nonnull)(NSArray<ProductJsonObject *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
-/// Get Ticket Form for the Create new Ticker
+/// This method to Get dynamic Ticket Form
 /// \param onCompletion Array of Ticket Fields or error
 ///
 - (void)getTicketForm:(NSString * _Nonnull)departmentId onCompletion:(void (^ _Nonnull)(NSArray<TicketFieldsJsonObject *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
@@ -746,6 +901,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDProvoider 
 /// \param onCompletion created ticket detail or error.
 ///
 - (void)createTicketWithForm:(ZDTicketForm * _Nonnull)form onCompletion:(void (^ _Nonnull)(TicketDetailJsonObject * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+/// This method list all department for the specific department
+/// \param onComplition Array of departments or error
+///
+- (void)getZDCommunityCategoriesOnCompletion:(void (^ _Nonnull)(NSArray<ZDCommunityCategory *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (void)getZDMostPopularCommunityTopicsForCategory:(NSString * _Nullable)categoryId filterType:(NSString * _Nonnull)filterType from:(NSInteger)from limit:(NSInteger)limit includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (void)getZDMostDiscussedCommunityTopicsForCategory:(NSString * _Nullable)categoryId filterType:(NSString * _Nonnull)filterType from:(NSInteger)from limit:(NSInteger)limit includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -761,19 +922,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK7ZDTheme")
 @interface ZDTheme : NSObject
 + (void)applyThemeWithTheme:(enum ZDThemeType)theme;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14ZDThemeArticle")
-@interface ZDThemeArticle : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, strong) UIColor * _Nonnull tintColor;
-@property (nonatomic, strong) UIColor * _Nonnull primaryTextColor;
-@property (nonatomic, strong) UIColor * _Nonnull secondryTextColor;
-@property (nonatomic, strong) UIColor * _Nonnull primaryBackgroundColor;
-@property (nonatomic, strong) UIColor * _Nonnull secondryBackgroundColor;
-@property (nonatomic, strong) UIColor * _Nonnull cellSeporatorColor;
-@property (nonatomic, strong) UIColor * _Nonnull headerColor;
 @end
 
 typedef SWIFT_ENUM(NSInteger, ZDThemeType, closed) {
@@ -806,6 +954,14 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12ZDTicketForm")
 @property (nonatomic, copy) NSArray<NSString *> * _Nullable attachements SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.attachements' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+typedef SWIFT_ENUM(NSInteger, ZDTopicType, closed) {
+  ZDTopicTypeIdea = 0,
+  ZDTopicTypeQuestion = 1,
+  ZDTopicTypeProblem = 2,
+  ZDTopicTypeAnnouncement = 3,
+  ZDTopicTypeAllTypes = 4,
+};
 
 
 SWIFT_PROTOCOL("_TtP17ZohoDeskPortalSDK22ZohoDeskPortalDelegate_")
@@ -875,11 +1031,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enablePoweredByZoho SWIFT
 + (void)logout;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDUserSignedIn;)
 + (BOOL)isZDUserSignedIn SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDSDKMigratedTo1_0;)
++ (BOOL)isZDSDKMigratedTo1_0 SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 + (void)showHomePageWithController:(UIViewController * _Nonnull)controller withConfiguration:(ZDPortalConfiguration * _Nonnull)withConfiguration;
++ (void)showHomePageWithController:(UIViewController * _Nonnull)controller navigationType:(enum ZDNavigation)navigationType withConfiguration:(ZDPortalConfiguration * _Nonnull)withConfiguration;
 + (void)showHelpCenterWithController:(UIViewController * _Nonnull)controller;
 + (void)showArticleListForCategoryId:(NSString * _Nonnull)categoryId controller:(UIViewController * _Nonnull)controller with:(ZDHelpCenterConfiguration * _Nonnull)configuration;
 + (void)showLiveChatWithController:(UIViewController * _Nonnull)controller;
@@ -889,6 +1048,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDUserSignedI
 + (void)addTicketWithController:(UIViewController * _Nonnull)controller onCompletion:(void (^ _Nonnull)(TicketDetailJsonObject * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 + (void)showHelpPageForArticleId:(NSString * _Nonnull)articleId controller:(UIViewController * _Nonnull)controller with:(ZDSolutionPageConfiguration * _Nonnull)configuration;
 + (void)showHelpPageForArticleUrl:(NSURL * _Nonnull)articleLink controller:(UIViewController * _Nonnull)controller with:(ZDSolutionPageConfiguration * _Nonnull)configuration;
++ (void)ZDAnalyticsTrackerOnCompletion:(void (^ _Nonnull)(ZDAnalytics * _Nullable))onCompletion;
++ (void)showTopicDetailForTopicId:(NSString * _Nonnull)topicId controller:(UIViewController * _Nonnull)controller;
 @end
 
 
@@ -1477,6 +1638,8 @@ typedef SWIFT_ENUM(NSInteger, TimeStyle, closed) {
 
 
 
+
+
 @interface UIWindow (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 @property (nonatomic, readonly, strong) UIViewController * _Nullable visibleViewControllerFromWindow SWIFT_DEPRECATED_OBJC("Swift property 'UIWindow.visibleViewControllerFromWindow' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 + (UIViewController * _Nullable)getVisibleViewControllerfromParent:(UIViewController * _Nullable)vc SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIWindow.getVisibleViewControllerfromParent(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
@@ -1504,6 +1667,26 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK13VisitorObject")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+enum ZDAnalyticsTrackingType : NSInteger;
+enum ZDPortalControllers : NSInteger;
+enum ZDPortalUIAction : NSInteger;
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDAnalytics")
+@interface ZDAnalytics : NSObject
+- (enum ZDAnalyticsTrackingType)getTrackingType SWIFT_WARN_UNUSED_RESULT;
+- (enum ZDPortalControllers)getEventScreen SWIFT_WARN_UNUSED_RESULT;
+- (enum ZDPortalControllers)getEventSource SWIFT_WARN_UNUSED_RESULT;
+- (enum ZDPortalUIAction)getEventAction SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)getlabelValue SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(NSInteger, ZDAnalyticsTrackingType, closed) {
+  ZDAnalyticsTrackingTypeEvent = 0,
+  ZDAnalyticsTrackingTypeLaunch = 1,
+};
+
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK28ZDBaseContollerConfiguration")
 @interface ZDBaseContollerConfiguration : NSObject
@@ -1514,8 +1697,67 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK28ZDBaseContollerConfiguration")
 @end
 
 
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDChatTheme")
+@interface ZDChatTheme : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull themeColor;)
++ (UIColor * _Nonnull)themeColor SWIFT_WARN_UNUSED_RESULT;
++ (void)setThemeColor:(UIColor * _Nonnull)newValue;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull outgoingMessageBackgroundColor;)
++ (UIColor * _Nonnull)outgoingMessageBackgroundColor SWIFT_WARN_UNUSED_RESULT;
++ (void)setOutgoingMessageBackgroundColor:(UIColor * _Nonnull)newValue;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull incommingMessageBackgroundColor;)
++ (UIColor * _Nonnull)incommingMessageBackgroundColor SWIFT_WARN_UNUSED_RESULT;
++ (void)setIncommingMessageBackgroundColor:(UIColor * _Nonnull)newValue;
+@end
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK19ZDCommunityCategory")
+@interface ZDCommunityCategory : NSObject
+@property (nonatomic, copy) NSString * _Nonnull photoUrl SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.photoUrl' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull name SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.name' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull postCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.postCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull descriptionText SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.descriptionText' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull parentCategoryId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.parentCategoryId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull categoryId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.categoryId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull commentCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.commentCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull followersCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.followersCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull forumsCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.forumsCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic) BOOL isFollow SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.isFollow' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic) BOOL isLocked SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.isLocked' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSArray<ZDCommunityCategory *> * _Nullable child SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.child' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK24ZDCommunityConfiguration")
 @interface ZDCommunityConfiguration : ZDBaseContollerConfiguration
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK16ZDCommunityTopic")
+@interface ZDCommunityTopic : NSObject
+@property (nonatomic, copy) NSString * _Nonnull creatorPhotoUrl SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.creatorPhotoUrl' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull creatorName SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.creatorName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull creatorId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.creatorId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull creatorType SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.creatorType' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull content SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.content' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull createdTime SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.createdTime' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull topicId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.topicId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull type SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.type' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull label SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.label' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull subject SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.subject' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull permalink SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.permalink' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull likeCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.likeCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull latestCommentTime SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.latestCommentTime' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull latestCommenterId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.latestCommenterId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull latestCommenterName SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.latestCommenterName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull latestCommenterType SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.latestCommenterType' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull commentCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.commentCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull categoryId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.categoryId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic) BOOL isVoted SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.isVoted' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1536,6 +1778,21 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12ZDCustomFont")
 @property (nonatomic, copy) NSString * _Nonnull lightFontName;
 @property (nonatomic, copy) NSString * _Nonnull mediumFontName;
 @property (nonatomic, copy) NSString * _Nonnull boldFontName;
+@end
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK13ZDCustomTheme")
+@interface ZDCustomTheme : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) UIColor * _Nonnull tintColor;
+@property (nonatomic, strong) UIColor * _Nonnull primaryTextColor;
+@property (nonatomic, strong) UIColor * _Nonnull secondryTextColor;
+@property (nonatomic, strong) UIColor * _Nonnull primaryBackgroundColor;
+@property (nonatomic, strong) UIColor * _Nonnull secondryBackgroundColor;
+@property (nonatomic, strong) UIColor * _Nonnull cellSeporatorColor;
+@property (nonatomic, strong) UIColor * _Nonnull headerColor;
+@property (nonatomic, strong) UIColor * _Nonnull accentColor;
+@property (nonatomic, strong) UIColor * _Nonnull mandatoryTextColor;
 @end
 
 typedef SWIFT_ENUM(NSInteger, ZDDataCenter, closed) {
@@ -1565,6 +1822,11 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23ZDLiveChatConfiguration")
 @property (nonatomic) BOOL showFeedback;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+typedef SWIFT_ENUM(NSInteger, ZDNavigation, closed) {
+  ZDNavigationPush = 0,
+  ZDNavigationPresent = 1,
+};
 
 typedef SWIFT_ENUM(NSInteger, ZDNavigationBackButtonStyle, closed) {
   ZDNavigationBackButtonStyleText = 0,
@@ -1616,6 +1878,60 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull setS
 + (void)setSetSDKLanguage:(NSString * _Nonnull)newValue;
 @end
 
+typedef SWIFT_ENUM(NSInteger, ZDPortalControllers, closed) {
+  ZDPortalControllersDashBoard = 0,
+  ZDPortalControllersKBCategoryList = 1,
+  ZDPortalControllersKBChildCategoryList = 2,
+  ZDPortalControllersKBSearchList = 3,
+  ZDPortalControllersKBArticleList = 4,
+  ZDPortalControllersKBArticleDetail = 5,
+  ZDPortalControllersKBRelatedArticles = 6,
+  ZDPortalControllersFeedBack = 7,
+  ZDPortalControllersKBDeeplinking = 8,
+  ZDPortalControllersCommunityCatagories = 9,
+  ZDPortalControllersCommunityTopicsList = 10,
+  ZDPortalControllersCommunityTopicDetail = 11,
+  ZDPortalControllersCommunityCreateTopic = 12,
+  ZDPortalControllersCommunityTopicReply = 13,
+  ZDPortalControllersDirectlyOpenFromApplication = 14,
+  ZDPortalControllersNil = 15,
+};
+
+typedef SWIFT_ENUM(NSInteger, ZDPortalUIAction, closed) {
+  ZDPortalUIActionDashBoardKBClicked = 0,
+  ZDPortalUIActionDashBoardCommunityClicked = 1,
+  ZDPortalUIActionDashBoardMyTicketClicked = 2,
+  ZDPortalUIActionDashBoardCreateTicketClicked = 3,
+  ZDPortalUIActionKBCategoryClicked = 4,
+  ZDPortalUIActionKBChildCategoryClicked = 5,
+  ZDPortalUIActionKBArticleClicked = 6,
+  ZDPortalUIActionKBRelatedArticleClicked = 7,
+  ZDPortalUIActionKBSearchedArticleClicked = 8,
+  ZDPortalUIActionKBSearchedCategoryClicked = 9,
+  ZDPortalUIActionKBArticleUpVoted = 10,
+  ZDPortalUIActionKBArticleDownVoted = 11,
+  ZDPortalUIActionKBArticleFeedBackSent = 12,
+  ZDPortalUIActionKBArticleFeedBackSkip = 13,
+  ZDPortalUIActionCommunityCategoryClicked = 14,
+  ZDPortalUIActionCommunityCategoryFollow = 15,
+  ZDPortalUIActionCommunityCategoryUnFollow = 16,
+  ZDPortalUIActionCommunityTopicClicked = 17,
+  ZDPortalUIActionCommunityForumClicked = 18,
+  ZDPortalUIActionCommunityTopicTypeFilter = 19,
+  ZDPortalUIActionCommunityTopicFollow = 20,
+  ZDPortalUIActionCommunityTopicUnFollow = 21,
+  ZDPortalUIActionCommunityTopicLiked = 22,
+  ZDPortalUIActionCommunityTopicCommentAction = 23,
+  ZDPortalUIActionCommunityTopicCommentSent = 24,
+  ZDPortalUIActionCommunityTopicCommentCreateCancel = 25,
+  ZDPortalUIActionCommunityTopicDeleted = 26,
+  ZDPortalUIActionCommunityTopicEdited = 27,
+  ZDPortalUIActionCommunityTopicCreated = 28,
+  ZDPortalUIActionCommunityTopicCreateCancel = 29,
+  ZDPortalUIActionCommunityTopicSavedAsDraft = 30,
+  ZDPortalUIActionNil = 31,
+};
+
 @class ZDTicketForm;
 
 /// This class provoide all apis
@@ -1631,7 +1947,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDProvoider 
 /// \param onComplition Array of Product or error
 ///
 - (void)getProductsFor:(NSString * _Nonnull)departmentId from:(NSInteger)from limit:(NSInteger)limit onCompletion:(void (^ _Nonnull)(NSArray<ProductJsonObject *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
-/// Get Ticket Form for the Create new Ticker
+/// This method to Get dynamic Ticket Form
 /// \param onCompletion Array of Ticket Fields or error
 ///
 - (void)getTicketForm:(NSString * _Nonnull)departmentId onCompletion:(void (^ _Nonnull)(NSArray<TicketFieldsJsonObject *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
@@ -1645,6 +1961,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDProvoider 
 /// \param onCompletion created ticket detail or error.
 ///
 - (void)createTicketWithForm:(ZDTicketForm * _Nonnull)form onCompletion:(void (^ _Nonnull)(TicketDetailJsonObject * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+/// This method list all department for the specific department
+/// \param onComplition Array of departments or error
+///
+- (void)getZDCommunityCategoriesOnCompletion:(void (^ _Nonnull)(NSArray<ZDCommunityCategory *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (void)getZDMostPopularCommunityTopicsForCategory:(NSString * _Nullable)categoryId filterType:(NSString * _Nonnull)filterType from:(NSInteger)from limit:(NSInteger)limit includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (void)getZDMostDiscussedCommunityTopicsForCategory:(NSString * _Nullable)categoryId filterType:(NSString * _Nonnull)filterType from:(NSInteger)from limit:(NSInteger)limit includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1660,19 +1982,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK7ZDTheme")
 @interface ZDTheme : NSObject
 + (void)applyThemeWithTheme:(enum ZDThemeType)theme;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14ZDThemeArticle")
-@interface ZDThemeArticle : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, strong) UIColor * _Nonnull tintColor;
-@property (nonatomic, strong) UIColor * _Nonnull primaryTextColor;
-@property (nonatomic, strong) UIColor * _Nonnull secondryTextColor;
-@property (nonatomic, strong) UIColor * _Nonnull primaryBackgroundColor;
-@property (nonatomic, strong) UIColor * _Nonnull secondryBackgroundColor;
-@property (nonatomic, strong) UIColor * _Nonnull cellSeporatorColor;
-@property (nonatomic, strong) UIColor * _Nonnull headerColor;
 @end
 
 typedef SWIFT_ENUM(NSInteger, ZDThemeType, closed) {
@@ -1705,6 +2014,14 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12ZDTicketForm")
 @property (nonatomic, copy) NSArray<NSString *> * _Nullable attachements SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.attachements' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+typedef SWIFT_ENUM(NSInteger, ZDTopicType, closed) {
+  ZDTopicTypeIdea = 0,
+  ZDTopicTypeQuestion = 1,
+  ZDTopicTypeProblem = 2,
+  ZDTopicTypeAnnouncement = 3,
+  ZDTopicTypeAllTypes = 4,
+};
 
 
 SWIFT_PROTOCOL("_TtP17ZohoDeskPortalSDK22ZohoDeskPortalDelegate_")
@@ -1774,11 +2091,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enablePoweredByZoho SWIFT
 + (void)logout;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDUserSignedIn;)
 + (BOOL)isZDUserSignedIn SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDSDKMigratedTo1_0;)
++ (BOOL)isZDSDKMigratedTo1_0 SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 + (void)showHomePageWithController:(UIViewController * _Nonnull)controller withConfiguration:(ZDPortalConfiguration * _Nonnull)withConfiguration;
++ (void)showHomePageWithController:(UIViewController * _Nonnull)controller navigationType:(enum ZDNavigation)navigationType withConfiguration:(ZDPortalConfiguration * _Nonnull)withConfiguration;
 + (void)showHelpCenterWithController:(UIViewController * _Nonnull)controller;
 + (void)showArticleListForCategoryId:(NSString * _Nonnull)categoryId controller:(UIViewController * _Nonnull)controller with:(ZDHelpCenterConfiguration * _Nonnull)configuration;
 + (void)showLiveChatWithController:(UIViewController * _Nonnull)controller;
@@ -1788,6 +2108,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDUserSignedI
 + (void)addTicketWithController:(UIViewController * _Nonnull)controller onCompletion:(void (^ _Nonnull)(TicketDetailJsonObject * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 + (void)showHelpPageForArticleId:(NSString * _Nonnull)articleId controller:(UIViewController * _Nonnull)controller with:(ZDSolutionPageConfiguration * _Nonnull)configuration;
 + (void)showHelpPageForArticleUrl:(NSURL * _Nonnull)articleLink controller:(UIViewController * _Nonnull)controller with:(ZDSolutionPageConfiguration * _Nonnull)configuration;
++ (void)ZDAnalyticsTrackerOnCompletion:(void (^ _Nonnull)(ZDAnalytics * _Nullable))onCompletion;
++ (void)showTopicDetailForTopicId:(NSString * _Nonnull)topicId controller:(UIViewController * _Nonnull)controller;
 @end
 
 
