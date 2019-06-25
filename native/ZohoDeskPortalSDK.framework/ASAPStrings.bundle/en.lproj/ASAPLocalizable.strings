@@ -320,5 +320,8 @@
 "zdsdk.message.ASAP.Disabled" = "The help center app is currently unavailable. Please contact the Administrator.";
 "desk.library.followers" = "Followers";
 "desk.library.helpcenter_article_count" = "%@ Article";
-
+"zdsdk.ticket.replies" = "Replies";
+"zdsdk.ticket.attachment.uploading" = "File attachment is in progress";
+"zdsdk.community.discussion" = "Discussions";
+"zdsdk.community.discussion.Count" = "Discussions (%@)";
 
