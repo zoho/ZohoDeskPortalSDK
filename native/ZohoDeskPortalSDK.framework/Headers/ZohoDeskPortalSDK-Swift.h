@@ -484,6 +484,7 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketFieldsJsonObject")
 @property (nonatomic) NSInteger order SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.order' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 @property (nonatomic, copy) NSString * _Nonnull decimalPlaces SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.decimalPlaces' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 @property (nonatomic) BOOL isReadOnly SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.isReadOnly' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull apiName SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.apiName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 @property (nonatomic, copy) NSData * _Nullable dependencyMapping SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.dependencyMapping' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 @property (nonatomic, copy) NSData * _Nullable statusMapping SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.statusMapping' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -538,6 +539,10 @@ typedef SWIFT_ENUM(NSInteger, TimeStyle, closed) {
 @interface UINavigationController (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 @property (nonatomic, readonly, strong) UIViewController * _Nullable childViewControllerForStatusBarStyle;
 @end
+
+
+
+
 
 
 
@@ -644,9 +649,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDChatTheme")
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull themeColor;)
 + (UIColor * _Nonnull)themeColor SWIFT_WARN_UNUSED_RESULT;
 + (void)setThemeColor:(UIColor * _Nonnull)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull barColor;)
-+ (UIColor * _Nonnull)barColor SWIFT_WARN_UNUSED_RESULT;
-+ (void)setBarColor:(UIColor * _Nonnull)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull outgoingMessageBackgroundColor;)
 + (UIColor * _Nonnull)outgoingMessageBackgroundColor SWIFT_WARN_UNUSED_RESULT;
 + (void)setOutgoingMessageBackgroundColor:(UIColor * _Nonnull)newValue;
@@ -704,6 +706,16 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK16ZDCommunityTopic")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class ZDVisibleTicketField;
+@class ZDCustomizedTicketForm;
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK27ZDCreateTicketConfiguration")
+@interface ZDCreateTicketConfiguration : NSObject
++ (void)setFieldsListTobeShownWithFields:(NSArray<ZDVisibleTicketField *> * _Nonnull)fields;
++ (void)preFillTicketFieldsForForms:(NSArray<ZDCustomizedTicketForm *> * _Nonnull)forms;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14ZDCustomFields")
 @interface ZDCustomFields : NSObject
@@ -736,6 +748,26 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK13ZDCustomTheme")
 @property (nonatomic, strong) UIColor * _Nonnull headerColor;
 @property (nonatomic, strong) UIColor * _Nonnull accentColor;
 @property (nonatomic, strong) UIColor * _Nonnull mandatoryTextColor;
+@end
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23ZDCustomizedTicketField")
+@interface ZDCustomizedTicketField : NSObject
+@property (nonatomic, copy) NSString * _Nullable fieldName SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomizedTicketField.fieldName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nullable value SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomizedTicketField.value' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (nonnull instancetype)initWithFieldName:(NSString * _Nonnull)fieldName value:(NSString * _Nonnull)value isEditable:(BOOL)isEditable OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_OBJC("Swift initializer 'ZDCustomizedTicketField.init(fieldName:value:isEditable:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22ZDCustomizedTicketForm")
+@interface ZDCustomizedTicketForm : NSObject
+@property (nonatomic, copy) NSString * _Nullable departmentId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomizedTicketForm.departmentId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSArray<ZDCustomizedTicketField *> * _Nullable customizedTicketFields SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomizedTicketForm.customizedTicketFields' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (nonnull instancetype)initWithDepartmentId:(NSString * _Nullable)departmentId fields:(NSArray<ZDCustomizedTicketField *> * _Nonnull)fields OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_OBJC("Swift initializer 'ZDCustomizedTicketForm.init(departmentId:fields:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 typedef SWIFT_ENUM(NSInteger, ZDDataCenter, closed) {
@@ -965,6 +997,16 @@ typedef SWIFT_ENUM(NSInteger, ZDTopicType, closed) {
   ZDTopicTypeAnnouncement = 3,
   ZDTopicTypeAllTypes = 4,
 };
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20ZDVisibleTicketField")
+@interface ZDVisibleTicketField : NSObject
+@property (nonatomic, copy) NSString * _Nullable departmentId SWIFT_DEPRECATED_OBJC("Swift property 'ZDVisibleTicketField.departmentId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull fieldNames SWIFT_DEPRECATED_OBJC("Swift property 'ZDVisibleTicketField.fieldNames' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (nonnull instancetype)initWithDepartmentId:(NSString * _Nullable)departmentId fieldNames:(NSArray<NSString *> * _Nonnull)fieldNames OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_OBJC("Swift initializer 'ZDVisibleTicketField.init(departmentId:fieldNames:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
 
 
 SWIFT_PROTOCOL("_TtP17ZohoDeskPortalSDK22ZohoDeskPortalDelegate_")
@@ -1547,6 +1589,7 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketFieldsJsonObject")
 @property (nonatomic) NSInteger order SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.order' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 @property (nonatomic, copy) NSString * _Nonnull decimalPlaces SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.decimalPlaces' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 @property (nonatomic) BOOL isReadOnly SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.isReadOnly' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nonnull apiName SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.apiName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 @property (nonatomic, copy) NSData * _Nullable dependencyMapping SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.dependencyMapping' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 @property (nonatomic, copy) NSData * _Nullable statusMapping SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.statusMapping' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -1601,6 +1644,10 @@ typedef SWIFT_ENUM(NSInteger, TimeStyle, closed) {
 @interface UINavigationController (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 @property (nonatomic, readonly, strong) UIViewController * _Nullable childViewControllerForStatusBarStyle;
 @end
+
+
+
+
 
 
 
@@ -1707,9 +1754,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDChatTheme")
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull themeColor;)
 + (UIColor * _Nonnull)themeColor SWIFT_WARN_UNUSED_RESULT;
 + (void)setThemeColor:(UIColor * _Nonnull)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull barColor;)
-+ (UIColor * _Nonnull)barColor SWIFT_WARN_UNUSED_RESULT;
-+ (void)setBarColor:(UIColor * _Nonnull)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull outgoingMessageBackgroundColor;)
 + (UIColor * _Nonnull)outgoingMessageBackgroundColor SWIFT_WARN_UNUSED_RESULT;
 + (void)setOutgoingMessageBackgroundColor:(UIColor * _Nonnull)newValue;
@@ -1767,6 +1811,16 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK16ZDCommunityTopic")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class ZDVisibleTicketField;
+@class ZDCustomizedTicketForm;
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK27ZDCreateTicketConfiguration")
+@interface ZDCreateTicketConfiguration : NSObject
++ (void)setFieldsListTobeShownWithFields:(NSArray<ZDVisibleTicketField *> * _Nonnull)fields;
++ (void)preFillTicketFieldsForForms:(NSArray<ZDCustomizedTicketForm *> * _Nonnull)forms;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14ZDCustomFields")
 @interface ZDCustomFields : NSObject
@@ -1799,6 +1853,26 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK13ZDCustomTheme")
 @property (nonatomic, strong) UIColor * _Nonnull headerColor;
 @property (nonatomic, strong) UIColor * _Nonnull accentColor;
 @property (nonatomic, strong) UIColor * _Nonnull mandatoryTextColor;
+@end
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23ZDCustomizedTicketField")
+@interface ZDCustomizedTicketField : NSObject
+@property (nonatomic, copy) NSString * _Nullable fieldName SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomizedTicketField.fieldName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSString * _Nullable value SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomizedTicketField.value' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (nonnull instancetype)initWithFieldName:(NSString * _Nonnull)fieldName value:(NSString * _Nonnull)value isEditable:(BOOL)isEditable OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_OBJC("Swift initializer 'ZDCustomizedTicketField.init(fieldName:value:isEditable:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22ZDCustomizedTicketForm")
+@interface ZDCustomizedTicketForm : NSObject
+@property (nonatomic, copy) NSString * _Nullable departmentId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomizedTicketForm.departmentId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSArray<ZDCustomizedTicketField *> * _Nullable customizedTicketFields SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomizedTicketForm.customizedTicketFields' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (nonnull instancetype)initWithDepartmentId:(NSString * _Nullable)departmentId fields:(NSArray<ZDCustomizedTicketField *> * _Nonnull)fields OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_OBJC("Swift initializer 'ZDCustomizedTicketForm.init(departmentId:fields:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 typedef SWIFT_ENUM(NSInteger, ZDDataCenter, closed) {
@@ -2028,6 +2102,16 @@ typedef SWIFT_ENUM(NSInteger, ZDTopicType, closed) {
   ZDTopicTypeAnnouncement = 3,
   ZDTopicTypeAllTypes = 4,
 };
+
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20ZDVisibleTicketField")
+@interface ZDVisibleTicketField : NSObject
+@property (nonatomic, copy) NSString * _Nullable departmentId SWIFT_DEPRECATED_OBJC("Swift property 'ZDVisibleTicketField.departmentId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull fieldNames SWIFT_DEPRECATED_OBJC("Swift property 'ZDVisibleTicketField.fieldNames' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (nonnull instancetype)initWithDepartmentId:(NSString * _Nullable)departmentId fieldNames:(NSArray<NSString *> * _Nonnull)fieldNames OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_OBJC("Swift initializer 'ZDVisibleTicketField.init(departmentId:fieldNames:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
 
 
 SWIFT_PROTOCOL("_TtP17ZohoDeskPortalSDK22ZohoDeskPortalDelegate_")
