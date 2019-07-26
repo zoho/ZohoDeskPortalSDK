@@ -190,318 +190,46 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-typedef SWIFT_ENUM(NSInteger, APNSMode, closed) {
-  APNSModeSandbox = 0,
-  APNSModeProduction = 1,
-};
-
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20AttachmentJsonObject")
 @interface AttachmentJsonObject : NSObject
-@property (nonatomic, copy) NSString * _Nonnull name SWIFT_DEPRECATED_OBJC("Swift property 'AttachmentJsonObject.name' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull createdTime SWIFT_DEPRECATED_OBJC("Swift property 'AttachmentJsonObject.createdTime' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull size SWIFT_DEPRECATED_OBJC("Swift property 'AttachmentJsonObject.size' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull attachmentId SWIFT_DEPRECATED_OBJC("Swift property 'AttachmentJsonObject.attachmentId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-/// TimeStyle
-/// \code
-///  case curveLess
-///  case roundedCurve
-///  case boxUpperCurve
-///  case boxLowerCurve
-///
-/// \endcode
-typedef SWIFT_ENUM(NSInteger, BubbleStyle, closed) {
-/// This type is used to display the chat bubble without curve
-  BubbleStyleCurveLess = 0,
-/// This type is used to display the chat bubble with rounded curve
-  BubbleStyleRoundedCurve = 1,
-/// This type is used to display the chat bubble with upper arrow
-  BubbleStyleBoxUpperCurve = 2,
-/// This type is used to display the chat bubble with lower arrow
-  BubbleStyleBoxLowerCurve = 3,
-};
 
-
-
-
-
-
-
-@class VisitorChat;
-
-/// ChatActivityHandler is a NSObject class which contains the event handler methods.
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK19ChatActivityHandler")
-@interface ChatActivityHandler : NSObject
-/// This event handler allows you to invoke a method when the visitor enters/exits the chat window.
-/// \param isinternal - Boolean determines whether visitor internal or close the chat window 
-///
-- (void)handleWidgetActionWithIsOpen:(BOOL)isOpen SWIFT_DEPRECATED_OBJC("Swift method 'ChatActivityHandler.handleWidgetAction(isOpen:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// This event handler allows you to invoke a method when the user attends the chat initiated by the visitor.
-/// \param visitor - VisitorChat object containing the data <em>Visit Id,Attender Email,Question</em>
-///
-- (void)handleVisitorAttendedWithVisitor:(VisitorChat * _Nonnull)visitor SWIFT_DEPRECATED_OBJC("Swift method 'ChatActivityHandler.handleVisitorAttended(visitor:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// This event handler allows you to invoke a method, when the chat initiated by the visitor is not answered by the user or missed.
-/// \param visitor - VisitorChat object containing the data <em>Visit Id,Question</em>
-///
-- (void)handleVisitorMissedWithVisitor:(VisitorChat * _Nonnull)visitor SWIFT_DEPRECATED_OBJC("Swift method 'ChatActivityHandler.handleVisitorMissed(visitor:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// This event handler allows you to invoke a method, when the agents are offline. This will be called once after the page is loaded.
-- (void)handleAgentsOffline SWIFT_DEPRECATED_OBJC("Swift method 'ChatActivityHandler.handleAgentsOffline()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// This event handler allows you to invoke a method, when the agents are online. This will be called once after the page is loaded.
-- (void)handleAgentsOnline SWIFT_DEPRECATED_OBJC("Swift method 'ChatActivityHandler.handleAgentsOnline()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// This event handler allows you to invoke a method, when a chat session is completed.
-/// \param visitor - VisitorChat object containing the data <em>Visit Id,Attender Email,Question</em>
-///
-- (void)handleChatCompleteWithVisitor:(VisitorChat * _Nonnull)visitor SWIFT_DEPRECATED_OBJC("Swift method 'ChatActivityHandler.handleChatComplete(visitor:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// This event handler allows you to invoke a method, on completion of a rating.
-/// \param visitor - VisitorChat object containing the data <em>Visit Id,Attender Email,Question,Rating</em>
-///
-- (void)handleRatingWithVisitor:(VisitorChat * _Nonnull)visitor SWIFT_DEPRECATED_OBJC("Swift method 'ChatActivityHandler.handleRating(visitor:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// This event handler allows you to invoke a method, on completion of a feedback.
-/// \param visitor - VisitorChat object containing the data <em>Visit Id,Attender Email,Question,Feedback</em>
-///
-- (void)handleFeedbackWithVisitor:(VisitorChat * _Nonnull)visitor SWIFT_DEPRECATED_OBJC("Swift method 'ChatActivityHandler.handleFeedback(visitor:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-/// ChatComponent
-/// \code
-/// case agent
-/// case rating
-/// case feedback
-/// case agentPhotoOnChatIcon
-///
-/// \endcode
-typedef SWIFT_ENUM(NSInteger, ChatComponent, closed) {
-/// This component used to show/hide agent profile photo in chat window
-  ChatComponentAgent = 0,
-/// This component used to show/hide rating window
-  ChatComponentRating = 1,
-/// This component used to show/hide feedback window
-  ChatComponentFeedback = 2,
-/// This component used to show/hide agent photo on chat icon
-  ChatComponentAgentPhotoOnChatIcon = 3,
-};
 
 
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20DepartmentJsonObject")
 @interface DepartmentJsonObject : NSObject
-@property (nonatomic, copy) NSString * _Nonnull photoURL SWIFT_DEPRECATED_OBJC("Swift property 'DepartmentJsonObject.photoURL' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull departmentId SWIFT_DEPRECATED_OBJC("Swift property 'DepartmentJsonObject.departmentId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull name SWIFT_DEPRECATED_OBJC("Swift property 'DepartmentJsonObject.name' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull nameInCustomerPortal SWIFT_DEPRECATED_OBJC("Swift property 'DepartmentJsonObject.nameInCustomerPortal' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull descriptionString SWIFT_DEPRECATED_OBJC("Swift property 'DepartmentJsonObject.descriptionString' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 
 
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14LCAdminHandler")
-@interface LCAdminHandler : NSObject
-- (void)setChatHandler:(ChatActivityHandler * _Nonnull)handler SWIFT_DEPRECATED_OBJC("Swift method 'LCAdminHandler.setChatHandler(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-typedef SWIFT_ENUM(NSInteger, Language, closed) {
-  LanguageEnglish = 0,
-  LanguageFrench = 1,
-  LanguageGerman = 2,
-  LanguageSpanish = 3,
-  LanguageDutch = 4,
-  LanguageNorwegian = 5,
-  LanguageTurkish = 6,
-  LanguageRussian = 7,
-  LanguagePortuguese = 8,
-  LanguageItalian = 9,
-  LanguageKorean = 10,
-  LanguageJapanese = 11,
-  LanguageDanish = 12,
-  LanguagePolish = 13,
-  LanguageArabic = 14,
-  LanguageHungarian = 15,
-  LanguageChinese = 16,
-  LanguageHebrew = 17,
-  LanguageIrish = 18,
-  LanguageRomanian = 19,
-  LanguageThai = 20,
-  LanguageSwedish = 21,
-  LanguageGreek = 22,
-  LanguageCzech = 23,
-  LanguageSlovak = 24,
-  LanguageSlovenian = 25,
-  LanguageCroatian = 26,
-};
 
 
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12LanguageCode")
-@interface LanguageCode : NSObject
-+ (NSString * _Nonnull)name:(enum Language)language SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'LanguageCode.name(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@protocol UIViewControllerAnimatedTransitioning;
-@class NSBundle;
-@class NSCoder;
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22LiveChatViewController")
-@interface LiveChatViewController : UIViewController <UIViewControllerTransitioningDelegate>
-- (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
-- (void)viewDidDisappear:(BOOL)animated;
-- (void)viewDidAppear:(BOOL)animated;
-- (void)viewDidLayoutSubviews;
-- (void)didReceiveMemoryWarning;
-- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
-- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForPresentedController:(UIViewController * _Nonnull)presented presentingController:(UIViewController * _Nonnull)presenting sourceController:(UIViewController * _Nonnull)source SWIFT_WARN_UNUSED_RESULT;
-- (void)didMoveToParentViewController:(UIViewController * _Nullable)parent;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-@class UITextView;
-
-@interface LiveChatViewController (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UITextViewDelegate>
-- (BOOL)textView:(UITextView * _Nonnull)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString * _Nonnull)text SWIFT_WARN_UNUSED_RESULT;
-- (void)textViewDidChange:(UITextView * _Nonnull)textView;
-- (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSKeyValueChangeKey, id> * _Nullable)change context:(void * _Nullable)context;
-@end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23NotificationLinkHandler")
-@interface NotificationLinkHandler : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK17ProductJsonObject")
 @interface ProductJsonObject : NSObject
-@property (nonatomic, copy) NSString * _Nonnull departmentId SWIFT_DEPRECATED_OBJC("Swift property 'ProductJsonObject.departmentId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull productName SWIFT_DEPRECATED_OBJC("Swift property 'ProductJsonObject.productName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull descriptionText SWIFT_DEPRECATED_OBJC("Swift property 'ProductJsonObject.descriptionText' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull productCode SWIFT_DEPRECATED_OBJC("Swift property 'ProductJsonObject.productCode' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull productId SWIFT_DEPRECATED_OBJC("Swift property 'ProductJsonObject.productId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
-
-/// ChatComponent
-/// \code
-/// case chatCompleted
-/// case ratingCompleted
-/// case feedbackCompleted
-/// case ratingAndFeedbackCompleted
-///
-/// \endcode
-typedef SWIFT_ENUM(NSInteger, SystemMessage, closed) {
-/// This system type is used to set the message when chat is completed
-  SystemMessageChatCompleted = 0,
-/// This system type is used to set the message when rating is completed
-  SystemMessageRatingCompleted = 1,
-/// This system type is used to set the message when feedback is completed
-  SystemMessageFeedbackCompleted = 2,
-/// This system type is used to set the message when rating and feedback is completed
-  SystemMessageRatingAndFeedbackCompleted = 3,
-};
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketDetailJsonObject")
 @interface TicketDetailJsonObject : NSObject
-@property (nonatomic, copy) NSString * _Nonnull responseDueDate SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.responseDueDate' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull phone SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.phone' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull subject SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.subject' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull modifiedByUserID SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.modifiedByUserID' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull modifiedByUserphotoURL SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.modifiedByUserphotoURL' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull modifiedByUsername SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.modifiedByUsername' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull ticketNumber SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.ticketNumber' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull resolution SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.resolution' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull creatorPhotoURL SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.creatorPhotoURL' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull creatorName SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.creatorName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull ticketId SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.ticketId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull closedTime SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.closedTime' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull descriptionData SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.descriptionData' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull priority SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.priority' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull assigneeId SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.assigneeId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull dueDate SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.dueDate' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull status SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.status' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull createdTime SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.createdTime' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable customFields SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.customFields' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull modifiedTime SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.modifiedTime' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull assigneephotoURL SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.assigneephotoURL' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull assigneeName SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.assigneeName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull commentCount SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.commentCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull productId SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.productId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull category SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.category' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull contactId SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.contactId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull email SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.email' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull threadCount SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.threadCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull classification SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.classification' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull departmentId SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.departmentId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull channel SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.channel' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL hasBlueprint SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.hasBlueprint' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketFieldsJsonObject")
 @interface TicketFieldsJsonObject : NSObject
-@property (nonatomic, copy) NSString * _Nonnull displayLabel SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.displayLabel' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull name SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.name' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull ticketFieldId SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.ticketFieldId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull type SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.type' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL isMandatory SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.isMandatory' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull maxLength SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.maxLength' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull allowedValues SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.allowedValues' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull defaultValue SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.defaultValue' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL isCustomField SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.isCustomField' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) NSInteger order SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.order' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull decimalPlaces SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.decimalPlaces' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL isReadOnly SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.isReadOnly' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull apiName SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.apiName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSData * _Nullable dependencyMapping SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.dependencyMapping' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSData * _Nullable statusMapping SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.statusMapping' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-/// TimeStyle
-/// \code
-/// case inside
-/// case outsideSlide
-///
-/// \endcode
-typedef SWIFT_ENUM(NSInteger, TimeStyle, closed) {
-/// This type is used to display the message time inside the chat bubble
-  TimeStyleInside = 0,
-/// This type is used to display the message time on user sliding the chat message
-  TimeStyleOutsideSlide = 1,
-};
 
 
 
@@ -514,27 +242,7 @@ typedef SWIFT_ENUM(NSInteger, TimeStyle, closed) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@class UIViewController;
 
 @interface UINavigationController (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 @property (nonatomic, readonly, strong) UIViewController * _Nullable childViewControllerForStatusBarStyle;
@@ -574,44 +282,6 @@ typedef SWIFT_ENUM(NSInteger, TimeStyle, closed) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-@interface UIWindow (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-@property (nonatomic, readonly, strong) UIViewController * _Nullable visibleViewControllerFromWindow SWIFT_DEPRECATED_OBJC("Swift property 'UIWindow.visibleViewControllerFromWindow' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (UIViewController * _Nullable)getVisibleViewControllerfromParent:(UIViewController * _Nullable)vc SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIWindow.getVisibleViewControllerfromParent(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@end
-
-
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11VisitorChat")
-@interface VisitorChat : NSObject
-@property (nonatomic, copy) NSString * _Nullable visitId SWIFT_DEPRECATED_OBJC("Swift property 'VisitorChat.visitId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nullable question SWIFT_DEPRECATED_OBJC("Swift property 'VisitorChat.question' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nullable attenderEmail SWIFT_DEPRECATED_OBJC("Swift property 'VisitorChat.attenderEmail' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nullable feedback SWIFT_DEPRECATED_OBJC("Swift property 'VisitorChat.feedback' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nullable rating SWIFT_DEPRECATED_OBJC("Swift property 'VisitorChat.rating' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK13VisitorObject")
-@interface VisitorObject : NSObject
-@property (nonatomic, copy) NSString * _Nullable name SWIFT_DEPRECATED_OBJC("Swift property 'VisitorObject.name' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nullable email SWIFT_DEPRECATED_OBJC("Swift property 'VisitorObject.email' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
 enum ZDAnalyticsTrackingType : NSInteger;
 enum ZDPortalControllers : NSInteger;
 enum ZDPortalUIAction : NSInteger;
@@ -635,74 +305,32 @@ typedef SWIFT_ENUM(NSInteger, ZDAnalyticsTrackingType, closed) {
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK28ZDBaseContollerConfiguration")
 @interface ZDBaseContollerConfiguration : NSObject
-@property (nonatomic) BOOL showLeftMenu SWIFT_DEPRECATED_OBJC("Swift property 'ZDBaseContollerConfiguration.showLeftMenu' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL enableControllerTransactionAnimation SWIFT_DEPRECATED_OBJC("Swift property 'ZDBaseContollerConfiguration.enableControllerTransactionAnimation' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL enableFullScreenIniPad SWIFT_DEPRECATED_OBJC("Swift property 'ZDBaseContollerConfiguration.enableFullScreenIniPad' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDChatTheme")
-@interface ZDChatTheme : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull themeColor;)
-+ (UIColor * _Nonnull)themeColor SWIFT_WARN_UNUSED_RESULT;
-+ (void)setThemeColor:(UIColor * _Nonnull)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull outgoingMessageBackgroundColor;)
-+ (UIColor * _Nonnull)outgoingMessageBackgroundColor SWIFT_WARN_UNUSED_RESULT;
-+ (void)setOutgoingMessageBackgroundColor:(UIColor * _Nonnull)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull incommingMessageBackgroundColor;)
-+ (UIColor * _Nonnull)incommingMessageBackgroundColor SWIFT_WARN_UNUSED_RESULT;
-+ (void)setIncommingMessageBackgroundColor:(UIColor * _Nonnull)newValue;
 @end
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK19ZDCommunityCategory")
 @interface ZDCommunityCategory : NSObject
-@property (nonatomic, copy) NSString * _Nonnull photoUrl SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.photoUrl' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull name SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.name' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull postCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.postCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull descriptionText SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.descriptionText' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull parentCategoryId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.parentCategoryId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull categoryId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.categoryId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull commentCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.commentCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull followersCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.followersCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull forumsCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.forumsCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL isFollow SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.isFollow' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL isLocked SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.isLocked' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSArray<ZDCommunityCategory *> * _Nullable child SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.child' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK24ZDCommunityConfiguration")
-@interface ZDCommunityConfiguration : ZDBaseContollerConfiguration
+@interface ZDCommunityConfiguration : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ZDCommunityConfiguration * _Nonnull configure;)
++ (ZDCommunityConfiguration * _Nonnull)configure SWIFT_WARN_UNUSED_RESULT;
++ (void)setConfigure:(ZDCommunityConfiguration * _Nonnull)value;
+@property (nonatomic) BOOL isTopicEditAllowed;
+@property (nonatomic) BOOL isTopicDeleteAllowed;
+@property (nonatomic) BOOL isReplyAllowed;
+@property (nonatomic) BOOL isReplyEditAllowed;
+@property (nonatomic) BOOL isReplyDeleteAllowed;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK16ZDCommunityTopic")
 @interface ZDCommunityTopic : NSObject
-@property (nonatomic, copy) NSString * _Nonnull creatorPhotoUrl SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.creatorPhotoUrl' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull creatorName SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.creatorName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull creatorId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.creatorId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull creatorType SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.creatorType' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull content SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.content' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull createdTime SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.createdTime' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull topicId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.topicId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull type SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.type' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull label SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.label' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull subject SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.subject' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull permalink SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.permalink' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull likeCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.likeCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull latestCommentTime SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.latestCommentTime' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull latestCommenterId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.latestCommenterId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull latestCommenterName SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.latestCommenterName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull latestCommenterType SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.latestCommenterType' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull commentCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.commentCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull categoryId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.categoryId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL isVoted SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.isVoted' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -719,8 +347,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK27ZDCreateTicketConfiguration")
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14ZDCustomFields")
 @interface ZDCustomFields : NSObject
-@property (nonatomic, copy) NSString * _Nonnull fieldID SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomFields.fieldID' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull value SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomFields.value' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -753,9 +379,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK13ZDCustomTheme")
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23ZDCustomizedTicketField")
 @interface ZDCustomizedTicketField : NSObject
-@property (nonatomic, copy) NSString * _Nullable fieldName SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomizedTicketField.fieldName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nullable value SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomizedTicketField.value' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)initWithFieldName:(NSString * _Nonnull)fieldName value:(NSString * _Nonnull)value isEditable:(BOOL)isEditable OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_OBJC("Swift initializer 'ZDCustomizedTicketField.init(fieldName:value:isEditable:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -763,9 +386,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23ZDCustomizedTicketField")
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22ZDCustomizedTicketForm")
 @interface ZDCustomizedTicketForm : NSObject
-@property (nonatomic, copy) NSString * _Nullable departmentId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomizedTicketForm.departmentId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSArray<ZDCustomizedTicketField *> * _Nullable customizedTicketFields SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomizedTicketForm.customizedTicketFields' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)initWithDepartmentId:(NSString * _Nullable)departmentId fields:(NSArray<ZDCustomizedTicketField *> * _Nonnull)fields OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_OBJC("Swift initializer 'ZDCustomizedTicketForm.init(departmentId:fields:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -912,8 +532,6 @@ typedef SWIFT_ENUM(NSInteger, ZDPortalUIAction, closed) {
 /// This class provoide all apis
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDProvoider")
 @interface ZDProvoider : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDProvoider * _Nonnull sharedInstance SWIFT_DEPRECATED_OBJC("Swift property 'ZDProvoider.sharedInstance' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");)
-+ (ZDProvoider * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift property 'ZDProvoider.sharedInstance' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 /// This method list all department for the specific department
 /// \param onComplition Array of departments or error
 ///
@@ -942,6 +560,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDProvoider 
 - (void)getZDCommunityCategoriesOnCompletion:(void (^ _Nonnull)(NSArray<ZDCommunityCategory *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (void)getZDMostPopularCommunityTopicsForCategory:(NSString * _Nullable)categoryId filterType:(NSString * _Nonnull)filterType from:(NSInteger)from limit:(NSInteger)limit includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (void)getZDMostDiscussedCommunityTopicsForCategory:(NSString * _Nullable)categoryId filterType:(NSString * _Nonnull)filterType from:(NSInteger)from limit:(NSInteger)limit includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (void)getZDCommunityCategoryByPermalink:(NSString * _Nonnull)permalink :(void (^ _Nonnull)(ZDCommunityCategory * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -973,20 +592,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK21ZDTicketConfiguration")
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12ZDTicketForm")
 @interface ZDTicketForm : NSObject
-@property (nonatomic, copy) NSString * _Nonnull emailID SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.emailID' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull departmentID SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.departmentID' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull productID SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.productID' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull subject SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.subject' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull descriptionText SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.descriptionText' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull phone SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.phone' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull classification SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.classification' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull priority SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.priority' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull category SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.category' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull subCategory SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.subCategory' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull contactName SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.contactName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull uploads SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.uploads' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSArray<ZDCustomFields *> * _Nullable customFields SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.customFields' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSArray<NSString *> * _Nullable attachements SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.attachements' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1001,9 +606,6 @@ typedef SWIFT_ENUM(NSInteger, ZDTopicType, closed) {
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20ZDVisibleTicketField")
 @interface ZDVisibleTicketField : NSObject
-@property (nonatomic, copy) NSString * _Nullable departmentId SWIFT_DEPRECATED_OBJC("Swift property 'ZDVisibleTicketField.departmentId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull fieldNames SWIFT_DEPRECATED_OBJC("Swift property 'ZDVisibleTicketField.fieldNames' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)initWithDepartmentId:(NSString * _Nullable)departmentId fieldNames:(NSArray<NSString *> * _Nonnull)fieldNames OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_OBJC("Swift initializer 'ZDVisibleTicketField.init(departmentId:fieldNames:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -1018,13 +620,7 @@ SWIFT_PROTOCOL("_TtP17ZohoDeskPortalSDK22ZohoDeskPortalDelegate_")
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK17ZohoDeskPortalSDK")
-@interface ZohoDeskPortalSDK : ChatActivityHandler
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <ZohoDeskPortalDelegate> _Nullable zohoDeskPortalDelegate SWIFT_DEPRECATED_OBJC("Swift property 'ZohoDeskPortalSDK.zohoDeskPortalDelegate' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");)
-+ (id <ZohoDeskPortalDelegate> _Nullable)zohoDeskPortalDelegate SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift property 'ZohoDeskPortalSDK.zohoDeskPortalDelegate' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)setZohoDeskPortalDelegate:(id <ZohoDeskPortalDelegate> _Nullable)value SWIFT_DEPRECATED_OBJC("Swift property 'ZohoDeskPortalSDK.zohoDeskPortalDelegate' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)initializeSDK:(NSString * _Nonnull)orgId appId:(NSString * _Nonnull)appId dataCenter:(enum ZDDataCenter)dataCenter configuration:(ZDPortalConfiguration * _Nonnull)configuration SWIFT_DEPRECATED_OBJC("Swift method 'ZohoDeskPortalSDK.initializeSDK(_:appId:dataCenter:configuration:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)initializeSDK:(NSString * _Nonnull)orgId appId:(NSString * _Nonnull)appId configuration:(ZDPortalConfiguration * _Nonnull)configuration SWIFT_DEPRECATED_OBJC("Swift method 'ZohoDeskPortalSDK.initializeSDK(_:appId:configuration:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)handleWidgetActionWithIsOpen:(BOOL)isOpen;
+@interface ZohoDeskPortalSDK : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1035,45 +631,23 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <ZohoDeskPortalDele
 
 SWIFT_CLASS("_TtCC17ZohoDeskPortalSDK17ZohoDeskPortalSDK24ZDAddtionalConfiguration")
 @interface ZDAddtionalConfiguration : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull LanguageCode SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.LanguageCode' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");)
-+ (NSString * _Nonnull)LanguageCode SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.LanguageCode' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)setLanguageCode:(NSString * _Nonnull)value SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.LanguageCode' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enableComunity SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableComunity' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");)
-+ (BOOL)enableComunity SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableComunity' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)setEnableComunity:(BOOL)value SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableComunity' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enableHelpCenter SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableHelpCenter' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");)
-+ (BOOL)enableHelpCenter SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableHelpCenter' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)setEnableHelpCenter:(BOOL)value SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableHelpCenter' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enableChat SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableChat' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");)
-+ (BOOL)enableChat SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableChat' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)setEnableChat:(BOOL)value SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableChat' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enablePoweredByZoho SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enablePoweredByZoho' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");)
-+ (BOOL)enablePoweredByZoho SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enablePoweredByZoho' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)setEnablePoweredByZoho:(BOOL)value SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enablePoweredByZoho' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-+ (void)enablePushNotificationWithDeviceToken:(NSString * _Nonnull)deviceToken isTestDevice:(BOOL)isTestDevice mode:(enum APNSMode)mode SWIFT_DEPRECATED_OBJC("Swift method 'ZohoDeskPortalSDK.enablePushNotification(deviceToken:isTestDevice:mode:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)processRemoteNotificationWithUserInfo:(NSDictionary * _Nonnull)userInfo SWIFT_DEPRECATED_OBJC("Swift method 'ZohoDeskPortalSDK.processRemoteNotification(userInfo:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@end
-
-
-
-
-@interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 - (void)setVisitorWithName:(NSString * _Nonnull)name image:(UIImage * _Nullable)image;
-+ (void)setMessageWindowWithColor:(UIColor * _Nonnull)color;
-+ (void)setIncomingMessageBackgroundColorWithColor:(UIColor * _Nonnull)color;
-+ (void)setOutgoingMessageBackgroundColorWithColor:(UIColor * _Nonnull)color;
 @end
 
 
+
+
+
+
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-+ (void)setWithJwtUserIdentifier:(NSString * _Nonnull)jwtUserIdentifier onComplition:(void (^ _Nonnull)(void))onComplition onError:(void (^ _Nonnull)(NSError * _Nullable))onError SWIFT_DEPRECATED_OBJC("Swift method 'ZohoDeskPortalSDK.set(jwtUserIdentifier:onComplition:onError:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 + (void)clearAllLocalData;
 + (void)logout;
++ (void)logoutOnComplition:(void (^ _Nonnull)(void))onComplition onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDUserSignedIn;)
 + (BOOL)isZDUserSignedIn SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDSDKMigratedTo1_0;)
@@ -1095,9 +669,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDSDKMigrated
 + (void)showHelpPageForArticleUrl:(NSURL * _Nonnull)articleLink controller:(UIViewController * _Nonnull)controller with:(ZDSolutionPageConfiguration * _Nonnull)configuration;
 + (void)ZDAnalyticsTrackerOnCompletion:(void (^ _Nonnull)(ZDAnalytics * _Nullable))onCompletion;
 + (void)showTopicDetailForTopicId:(NSString * _Nonnull)topicId controller:(UIViewController * _Nonnull)controller;
++ (void)showCatgoryByPermalinkForPermaLink:(NSString * _Nonnull)permaLink controller:(UIViewController * _Nonnull)controller;
 @end
-
-
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
@@ -1295,318 +868,46 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-typedef SWIFT_ENUM(NSInteger, APNSMode, closed) {
-  APNSModeSandbox = 0,
-  APNSModeProduction = 1,
-};
-
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20AttachmentJsonObject")
 @interface AttachmentJsonObject : NSObject
-@property (nonatomic, copy) NSString * _Nonnull name SWIFT_DEPRECATED_OBJC("Swift property 'AttachmentJsonObject.name' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull createdTime SWIFT_DEPRECATED_OBJC("Swift property 'AttachmentJsonObject.createdTime' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull size SWIFT_DEPRECATED_OBJC("Swift property 'AttachmentJsonObject.size' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull attachmentId SWIFT_DEPRECATED_OBJC("Swift property 'AttachmentJsonObject.attachmentId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-/// TimeStyle
-/// \code
-///  case curveLess
-///  case roundedCurve
-///  case boxUpperCurve
-///  case boxLowerCurve
-///
-/// \endcode
-typedef SWIFT_ENUM(NSInteger, BubbleStyle, closed) {
-/// This type is used to display the chat bubble without curve
-  BubbleStyleCurveLess = 0,
-/// This type is used to display the chat bubble with rounded curve
-  BubbleStyleRoundedCurve = 1,
-/// This type is used to display the chat bubble with upper arrow
-  BubbleStyleBoxUpperCurve = 2,
-/// This type is used to display the chat bubble with lower arrow
-  BubbleStyleBoxLowerCurve = 3,
-};
 
-
-
-
-
-
-
-@class VisitorChat;
-
-/// ChatActivityHandler is a NSObject class which contains the event handler methods.
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK19ChatActivityHandler")
-@interface ChatActivityHandler : NSObject
-/// This event handler allows you to invoke a method when the visitor enters/exits the chat window.
-/// \param isinternal - Boolean determines whether visitor internal or close the chat window 
-///
-- (void)handleWidgetActionWithIsOpen:(BOOL)isOpen SWIFT_DEPRECATED_OBJC("Swift method 'ChatActivityHandler.handleWidgetAction(isOpen:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// This event handler allows you to invoke a method when the user attends the chat initiated by the visitor.
-/// \param visitor - VisitorChat object containing the data <em>Visit Id,Attender Email,Question</em>
-///
-- (void)handleVisitorAttendedWithVisitor:(VisitorChat * _Nonnull)visitor SWIFT_DEPRECATED_OBJC("Swift method 'ChatActivityHandler.handleVisitorAttended(visitor:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// This event handler allows you to invoke a method, when the chat initiated by the visitor is not answered by the user or missed.
-/// \param visitor - VisitorChat object containing the data <em>Visit Id,Question</em>
-///
-- (void)handleVisitorMissedWithVisitor:(VisitorChat * _Nonnull)visitor SWIFT_DEPRECATED_OBJC("Swift method 'ChatActivityHandler.handleVisitorMissed(visitor:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// This event handler allows you to invoke a method, when the agents are offline. This will be called once after the page is loaded.
-- (void)handleAgentsOffline SWIFT_DEPRECATED_OBJC("Swift method 'ChatActivityHandler.handleAgentsOffline()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// This event handler allows you to invoke a method, when the agents are online. This will be called once after the page is loaded.
-- (void)handleAgentsOnline SWIFT_DEPRECATED_OBJC("Swift method 'ChatActivityHandler.handleAgentsOnline()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// This event handler allows you to invoke a method, when a chat session is completed.
-/// \param visitor - VisitorChat object containing the data <em>Visit Id,Attender Email,Question</em>
-///
-- (void)handleChatCompleteWithVisitor:(VisitorChat * _Nonnull)visitor SWIFT_DEPRECATED_OBJC("Swift method 'ChatActivityHandler.handleChatComplete(visitor:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// This event handler allows you to invoke a method, on completion of a rating.
-/// \param visitor - VisitorChat object containing the data <em>Visit Id,Attender Email,Question,Rating</em>
-///
-- (void)handleRatingWithVisitor:(VisitorChat * _Nonnull)visitor SWIFT_DEPRECATED_OBJC("Swift method 'ChatActivityHandler.handleRating(visitor:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// This event handler allows you to invoke a method, on completion of a feedback.
-/// \param visitor - VisitorChat object containing the data <em>Visit Id,Attender Email,Question,Feedback</em>
-///
-- (void)handleFeedbackWithVisitor:(VisitorChat * _Nonnull)visitor SWIFT_DEPRECATED_OBJC("Swift method 'ChatActivityHandler.handleFeedback(visitor:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-/// ChatComponent
-/// \code
-/// case agent
-/// case rating
-/// case feedback
-/// case agentPhotoOnChatIcon
-///
-/// \endcode
-typedef SWIFT_ENUM(NSInteger, ChatComponent, closed) {
-/// This component used to show/hide agent profile photo in chat window
-  ChatComponentAgent = 0,
-/// This component used to show/hide rating window
-  ChatComponentRating = 1,
-/// This component used to show/hide feedback window
-  ChatComponentFeedback = 2,
-/// This component used to show/hide agent photo on chat icon
-  ChatComponentAgentPhotoOnChatIcon = 3,
-};
 
 
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20DepartmentJsonObject")
 @interface DepartmentJsonObject : NSObject
-@property (nonatomic, copy) NSString * _Nonnull photoURL SWIFT_DEPRECATED_OBJC("Swift property 'DepartmentJsonObject.photoURL' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull departmentId SWIFT_DEPRECATED_OBJC("Swift property 'DepartmentJsonObject.departmentId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull name SWIFT_DEPRECATED_OBJC("Swift property 'DepartmentJsonObject.name' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull nameInCustomerPortal SWIFT_DEPRECATED_OBJC("Swift property 'DepartmentJsonObject.nameInCustomerPortal' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull descriptionString SWIFT_DEPRECATED_OBJC("Swift property 'DepartmentJsonObject.descriptionString' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 
 
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14LCAdminHandler")
-@interface LCAdminHandler : NSObject
-- (void)setChatHandler:(ChatActivityHandler * _Nonnull)handler SWIFT_DEPRECATED_OBJC("Swift method 'LCAdminHandler.setChatHandler(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-typedef SWIFT_ENUM(NSInteger, Language, closed) {
-  LanguageEnglish = 0,
-  LanguageFrench = 1,
-  LanguageGerman = 2,
-  LanguageSpanish = 3,
-  LanguageDutch = 4,
-  LanguageNorwegian = 5,
-  LanguageTurkish = 6,
-  LanguageRussian = 7,
-  LanguagePortuguese = 8,
-  LanguageItalian = 9,
-  LanguageKorean = 10,
-  LanguageJapanese = 11,
-  LanguageDanish = 12,
-  LanguagePolish = 13,
-  LanguageArabic = 14,
-  LanguageHungarian = 15,
-  LanguageChinese = 16,
-  LanguageHebrew = 17,
-  LanguageIrish = 18,
-  LanguageRomanian = 19,
-  LanguageThai = 20,
-  LanguageSwedish = 21,
-  LanguageGreek = 22,
-  LanguageCzech = 23,
-  LanguageSlovak = 24,
-  LanguageSlovenian = 25,
-  LanguageCroatian = 26,
-};
 
 
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12LanguageCode")
-@interface LanguageCode : NSObject
-+ (NSString * _Nonnull)name:(enum Language)language SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'LanguageCode.name(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@protocol UIViewControllerAnimatedTransitioning;
-@class NSBundle;
-@class NSCoder;
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22LiveChatViewController")
-@interface LiveChatViewController : UIViewController <UIViewControllerTransitioningDelegate>
-- (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
-- (void)viewDidDisappear:(BOOL)animated;
-- (void)viewDidAppear:(BOOL)animated;
-- (void)viewDidLayoutSubviews;
-- (void)didReceiveMemoryWarning;
-- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
-- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForPresentedController:(UIViewController * _Nonnull)presented presentingController:(UIViewController * _Nonnull)presenting sourceController:(UIViewController * _Nonnull)source SWIFT_WARN_UNUSED_RESULT;
-- (void)didMoveToParentViewController:(UIViewController * _Nullable)parent;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-@class UITextView;
-
-@interface LiveChatViewController (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UITextViewDelegate>
-- (BOOL)textView:(UITextView * _Nonnull)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString * _Nonnull)text SWIFT_WARN_UNUSED_RESULT;
-- (void)textViewDidChange:(UITextView * _Nonnull)textView;
-- (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSKeyValueChangeKey, id> * _Nullable)change context:(void * _Nullable)context;
-@end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23NotificationLinkHandler")
-@interface NotificationLinkHandler : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK17ProductJsonObject")
 @interface ProductJsonObject : NSObject
-@property (nonatomic, copy) NSString * _Nonnull departmentId SWIFT_DEPRECATED_OBJC("Swift property 'ProductJsonObject.departmentId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull productName SWIFT_DEPRECATED_OBJC("Swift property 'ProductJsonObject.productName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull descriptionText SWIFT_DEPRECATED_OBJC("Swift property 'ProductJsonObject.descriptionText' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull productCode SWIFT_DEPRECATED_OBJC("Swift property 'ProductJsonObject.productCode' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull productId SWIFT_DEPRECATED_OBJC("Swift property 'ProductJsonObject.productId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
-
-/// ChatComponent
-/// \code
-/// case chatCompleted
-/// case ratingCompleted
-/// case feedbackCompleted
-/// case ratingAndFeedbackCompleted
-///
-/// \endcode
-typedef SWIFT_ENUM(NSInteger, SystemMessage, closed) {
-/// This system type is used to set the message when chat is completed
-  SystemMessageChatCompleted = 0,
-/// This system type is used to set the message when rating is completed
-  SystemMessageRatingCompleted = 1,
-/// This system type is used to set the message when feedback is completed
-  SystemMessageFeedbackCompleted = 2,
-/// This system type is used to set the message when rating and feedback is completed
-  SystemMessageRatingAndFeedbackCompleted = 3,
-};
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketDetailJsonObject")
 @interface TicketDetailJsonObject : NSObject
-@property (nonatomic, copy) NSString * _Nonnull responseDueDate SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.responseDueDate' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull phone SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.phone' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull subject SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.subject' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull modifiedByUserID SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.modifiedByUserID' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull modifiedByUserphotoURL SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.modifiedByUserphotoURL' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull modifiedByUsername SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.modifiedByUsername' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull ticketNumber SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.ticketNumber' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull resolution SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.resolution' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull creatorPhotoURL SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.creatorPhotoURL' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull creatorName SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.creatorName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull ticketId SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.ticketId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull closedTime SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.closedTime' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull descriptionData SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.descriptionData' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull priority SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.priority' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull assigneeId SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.assigneeId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull dueDate SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.dueDate' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull status SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.status' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull createdTime SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.createdTime' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable customFields SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.customFields' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull modifiedTime SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.modifiedTime' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull assigneephotoURL SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.assigneephotoURL' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull assigneeName SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.assigneeName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull commentCount SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.commentCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull productId SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.productId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull category SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.category' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull contactId SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.contactId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull email SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.email' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull threadCount SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.threadCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull classification SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.classification' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull departmentId SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.departmentId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull channel SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.channel' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL hasBlueprint SWIFT_DEPRECATED_OBJC("Swift property 'TicketDetailJsonObject.hasBlueprint' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketFieldsJsonObject")
 @interface TicketFieldsJsonObject : NSObject
-@property (nonatomic, copy) NSString * _Nonnull displayLabel SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.displayLabel' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull name SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.name' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull ticketFieldId SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.ticketFieldId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull type SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.type' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL isMandatory SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.isMandatory' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull maxLength SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.maxLength' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull allowedValues SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.allowedValues' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull defaultValue SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.defaultValue' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL isCustomField SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.isCustomField' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) NSInteger order SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.order' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull decimalPlaces SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.decimalPlaces' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL isReadOnly SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.isReadOnly' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull apiName SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.apiName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSData * _Nullable dependencyMapping SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.dependencyMapping' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSData * _Nullable statusMapping SWIFT_DEPRECATED_OBJC("Swift property 'TicketFieldsJsonObject.statusMapping' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-/// TimeStyle
-/// \code
-/// case inside
-/// case outsideSlide
-///
-/// \endcode
-typedef SWIFT_ENUM(NSInteger, TimeStyle, closed) {
-/// This type is used to display the message time inside the chat bubble
-  TimeStyleInside = 0,
-/// This type is used to display the message time on user sliding the chat message
-  TimeStyleOutsideSlide = 1,
-};
 
 
 
@@ -1619,27 +920,7 @@ typedef SWIFT_ENUM(NSInteger, TimeStyle, closed) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@class UIViewController;
 
 @interface UINavigationController (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 @property (nonatomic, readonly, strong) UIViewController * _Nullable childViewControllerForStatusBarStyle;
@@ -1679,44 +960,6 @@ typedef SWIFT_ENUM(NSInteger, TimeStyle, closed) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-@interface UIWindow (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-@property (nonatomic, readonly, strong) UIViewController * _Nullable visibleViewControllerFromWindow SWIFT_DEPRECATED_OBJC("Swift property 'UIWindow.visibleViewControllerFromWindow' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (UIViewController * _Nullable)getVisibleViewControllerfromParent:(UIViewController * _Nullable)vc SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIWindow.getVisibleViewControllerfromParent(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@end
-
-
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11VisitorChat")
-@interface VisitorChat : NSObject
-@property (nonatomic, copy) NSString * _Nullable visitId SWIFT_DEPRECATED_OBJC("Swift property 'VisitorChat.visitId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nullable question SWIFT_DEPRECATED_OBJC("Swift property 'VisitorChat.question' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nullable attenderEmail SWIFT_DEPRECATED_OBJC("Swift property 'VisitorChat.attenderEmail' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nullable feedback SWIFT_DEPRECATED_OBJC("Swift property 'VisitorChat.feedback' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nullable rating SWIFT_DEPRECATED_OBJC("Swift property 'VisitorChat.rating' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK13VisitorObject")
-@interface VisitorObject : NSObject
-@property (nonatomic, copy) NSString * _Nullable name SWIFT_DEPRECATED_OBJC("Swift property 'VisitorObject.name' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nullable email SWIFT_DEPRECATED_OBJC("Swift property 'VisitorObject.email' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
 enum ZDAnalyticsTrackingType : NSInteger;
 enum ZDPortalControllers : NSInteger;
 enum ZDPortalUIAction : NSInteger;
@@ -1740,74 +983,32 @@ typedef SWIFT_ENUM(NSInteger, ZDAnalyticsTrackingType, closed) {
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK28ZDBaseContollerConfiguration")
 @interface ZDBaseContollerConfiguration : NSObject
-@property (nonatomic) BOOL showLeftMenu SWIFT_DEPRECATED_OBJC("Swift property 'ZDBaseContollerConfiguration.showLeftMenu' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL enableControllerTransactionAnimation SWIFT_DEPRECATED_OBJC("Swift property 'ZDBaseContollerConfiguration.enableControllerTransactionAnimation' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL enableFullScreenIniPad SWIFT_DEPRECATED_OBJC("Swift property 'ZDBaseContollerConfiguration.enableFullScreenIniPad' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDChatTheme")
-@interface ZDChatTheme : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull themeColor;)
-+ (UIColor * _Nonnull)themeColor SWIFT_WARN_UNUSED_RESULT;
-+ (void)setThemeColor:(UIColor * _Nonnull)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull outgoingMessageBackgroundColor;)
-+ (UIColor * _Nonnull)outgoingMessageBackgroundColor SWIFT_WARN_UNUSED_RESULT;
-+ (void)setOutgoingMessageBackgroundColor:(UIColor * _Nonnull)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull incommingMessageBackgroundColor;)
-+ (UIColor * _Nonnull)incommingMessageBackgroundColor SWIFT_WARN_UNUSED_RESULT;
-+ (void)setIncommingMessageBackgroundColor:(UIColor * _Nonnull)newValue;
 @end
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK19ZDCommunityCategory")
 @interface ZDCommunityCategory : NSObject
-@property (nonatomic, copy) NSString * _Nonnull photoUrl SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.photoUrl' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull name SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.name' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull postCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.postCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull descriptionText SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.descriptionText' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull parentCategoryId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.parentCategoryId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull categoryId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.categoryId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull commentCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.commentCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull followersCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.followersCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull forumsCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.forumsCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL isFollow SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.isFollow' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL isLocked SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.isLocked' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSArray<ZDCommunityCategory *> * _Nullable child SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityCategory.child' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK24ZDCommunityConfiguration")
-@interface ZDCommunityConfiguration : ZDBaseContollerConfiguration
+@interface ZDCommunityConfiguration : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ZDCommunityConfiguration * _Nonnull configure;)
++ (ZDCommunityConfiguration * _Nonnull)configure SWIFT_WARN_UNUSED_RESULT;
++ (void)setConfigure:(ZDCommunityConfiguration * _Nonnull)value;
+@property (nonatomic) BOOL isTopicEditAllowed;
+@property (nonatomic) BOOL isTopicDeleteAllowed;
+@property (nonatomic) BOOL isReplyAllowed;
+@property (nonatomic) BOOL isReplyEditAllowed;
+@property (nonatomic) BOOL isReplyDeleteAllowed;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK16ZDCommunityTopic")
 @interface ZDCommunityTopic : NSObject
-@property (nonatomic, copy) NSString * _Nonnull creatorPhotoUrl SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.creatorPhotoUrl' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull creatorName SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.creatorName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull creatorId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.creatorId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull creatorType SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.creatorType' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull content SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.content' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull createdTime SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.createdTime' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull topicId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.topicId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull type SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.type' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull label SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.label' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull subject SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.subject' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull permalink SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.permalink' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull likeCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.likeCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull latestCommentTime SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.latestCommentTime' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull latestCommenterId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.latestCommenterId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull latestCommenterName SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.latestCommenterName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull latestCommenterType SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.latestCommenterType' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull commentCount SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.commentCount' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull categoryId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.categoryId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL isVoted SWIFT_DEPRECATED_OBJC("Swift property 'ZDCommunityTopic.isVoted' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1824,8 +1025,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK27ZDCreateTicketConfiguration")
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14ZDCustomFields")
 @interface ZDCustomFields : NSObject
-@property (nonatomic, copy) NSString * _Nonnull fieldID SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomFields.fieldID' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull value SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomFields.value' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1858,9 +1057,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK13ZDCustomTheme")
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23ZDCustomizedTicketField")
 @interface ZDCustomizedTicketField : NSObject
-@property (nonatomic, copy) NSString * _Nullable fieldName SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomizedTicketField.fieldName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nullable value SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomizedTicketField.value' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)initWithFieldName:(NSString * _Nonnull)fieldName value:(NSString * _Nonnull)value isEditable:(BOOL)isEditable OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_OBJC("Swift initializer 'ZDCustomizedTicketField.init(fieldName:value:isEditable:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -1868,9 +1064,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK23ZDCustomizedTicketField")
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22ZDCustomizedTicketForm")
 @interface ZDCustomizedTicketForm : NSObject
-@property (nonatomic, copy) NSString * _Nullable departmentId SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomizedTicketForm.departmentId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSArray<ZDCustomizedTicketField *> * _Nullable customizedTicketFields SWIFT_DEPRECATED_OBJC("Swift property 'ZDCustomizedTicketForm.customizedTicketFields' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)initWithDepartmentId:(NSString * _Nullable)departmentId fields:(NSArray<ZDCustomizedTicketField *> * _Nonnull)fields OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_OBJC("Swift initializer 'ZDCustomizedTicketForm.init(departmentId:fields:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -2017,8 +1210,6 @@ typedef SWIFT_ENUM(NSInteger, ZDPortalUIAction, closed) {
 /// This class provoide all apis
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDProvoider")
 @interface ZDProvoider : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDProvoider * _Nonnull sharedInstance SWIFT_DEPRECATED_OBJC("Swift property 'ZDProvoider.sharedInstance' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");)
-+ (ZDProvoider * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift property 'ZDProvoider.sharedInstance' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 /// This method list all department for the specific department
 /// \param onComplition Array of departments or error
 ///
@@ -2047,6 +1238,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDProvoider 
 - (void)getZDCommunityCategoriesOnCompletion:(void (^ _Nonnull)(NSArray<ZDCommunityCategory *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (void)getZDMostPopularCommunityTopicsForCategory:(NSString * _Nullable)categoryId filterType:(NSString * _Nonnull)filterType from:(NSInteger)from limit:(NSInteger)limit includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (void)getZDMostDiscussedCommunityTopicsForCategory:(NSString * _Nullable)categoryId filterType:(NSString * _Nonnull)filterType from:(NSInteger)from limit:(NSInteger)limit includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (void)getZDCommunityCategoryByPermalink:(NSString * _Nonnull)permalink :(void (^ _Nonnull)(ZDCommunityCategory * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -2078,20 +1270,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK21ZDTicketConfiguration")
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12ZDTicketForm")
 @interface ZDTicketForm : NSObject
-@property (nonatomic, copy) NSString * _Nonnull emailID SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.emailID' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull departmentID SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.departmentID' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull productID SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.productID' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull subject SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.subject' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull descriptionText SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.descriptionText' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull phone SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.phone' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull classification SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.classification' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull priority SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.priority' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull category SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.category' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull subCategory SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.subCategory' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSString * _Nonnull contactName SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.contactName' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull uploads SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.uploads' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSArray<ZDCustomFields *> * _Nullable customFields SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.customFields' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSArray<NSString *> * _Nullable attachements SWIFT_DEPRECATED_OBJC("Swift property 'ZDTicketForm.attachements' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -2106,9 +1284,6 @@ typedef SWIFT_ENUM(NSInteger, ZDTopicType, closed) {
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20ZDVisibleTicketField")
 @interface ZDVisibleTicketField : NSObject
-@property (nonatomic, copy) NSString * _Nullable departmentId SWIFT_DEPRECATED_OBJC("Swift property 'ZDVisibleTicketField.departmentId' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull fieldNames SWIFT_DEPRECATED_OBJC("Swift property 'ZDVisibleTicketField.fieldNames' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)initWithDepartmentId:(NSString * _Nullable)departmentId fieldNames:(NSArray<NSString *> * _Nonnull)fieldNames OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_OBJC("Swift initializer 'ZDVisibleTicketField.init(departmentId:fieldNames:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -2123,13 +1298,7 @@ SWIFT_PROTOCOL("_TtP17ZohoDeskPortalSDK22ZohoDeskPortalDelegate_")
 
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK17ZohoDeskPortalSDK")
-@interface ZohoDeskPortalSDK : ChatActivityHandler
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <ZohoDeskPortalDelegate> _Nullable zohoDeskPortalDelegate SWIFT_DEPRECATED_OBJC("Swift property 'ZohoDeskPortalSDK.zohoDeskPortalDelegate' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");)
-+ (id <ZohoDeskPortalDelegate> _Nullable)zohoDeskPortalDelegate SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift property 'ZohoDeskPortalSDK.zohoDeskPortalDelegate' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)setZohoDeskPortalDelegate:(id <ZohoDeskPortalDelegate> _Nullable)value SWIFT_DEPRECATED_OBJC("Swift property 'ZohoDeskPortalSDK.zohoDeskPortalDelegate' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)initializeSDK:(NSString * _Nonnull)orgId appId:(NSString * _Nonnull)appId dataCenter:(enum ZDDataCenter)dataCenter configuration:(ZDPortalConfiguration * _Nonnull)configuration SWIFT_DEPRECATED_OBJC("Swift method 'ZohoDeskPortalSDK.initializeSDK(_:appId:dataCenter:configuration:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)initializeSDK:(NSString * _Nonnull)orgId appId:(NSString * _Nonnull)appId configuration:(ZDPortalConfiguration * _Nonnull)configuration SWIFT_DEPRECATED_OBJC("Swift method 'ZohoDeskPortalSDK.initializeSDK(_:appId:configuration:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)handleWidgetActionWithIsOpen:(BOOL)isOpen;
+@interface ZohoDeskPortalSDK : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -2140,45 +1309,23 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <ZohoDeskPortalDele
 
 SWIFT_CLASS("_TtCC17ZohoDeskPortalSDK17ZohoDeskPortalSDK24ZDAddtionalConfiguration")
 @interface ZDAddtionalConfiguration : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull LanguageCode SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.LanguageCode' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");)
-+ (NSString * _Nonnull)LanguageCode SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.LanguageCode' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)setLanguageCode:(NSString * _Nonnull)value SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.LanguageCode' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enableComunity SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableComunity' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");)
-+ (BOOL)enableComunity SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableComunity' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)setEnableComunity:(BOOL)value SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableComunity' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enableHelpCenter SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableHelpCenter' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");)
-+ (BOOL)enableHelpCenter SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableHelpCenter' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)setEnableHelpCenter:(BOOL)value SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableHelpCenter' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enableChat SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableChat' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");)
-+ (BOOL)enableChat SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableChat' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)setEnableChat:(BOOL)value SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enableChat' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enablePoweredByZoho SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enablePoweredByZoho' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");)
-+ (BOOL)enablePoweredByZoho SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enablePoweredByZoho' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)setEnablePoweredByZoho:(BOOL)value SWIFT_DEPRECATED_OBJC("Swift property 'ZDAddtionalConfiguration.enablePoweredByZoho' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-+ (void)enablePushNotificationWithDeviceToken:(NSString * _Nonnull)deviceToken isTestDevice:(BOOL)isTestDevice mode:(enum APNSMode)mode SWIFT_DEPRECATED_OBJC("Swift method 'ZohoDeskPortalSDK.enablePushNotification(deviceToken:isTestDevice:mode:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)processRemoteNotificationWithUserInfo:(NSDictionary * _Nonnull)userInfo SWIFT_DEPRECATED_OBJC("Swift method 'ZohoDeskPortalSDK.processRemoteNotification(userInfo:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@end
-
-
-
-
-@interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 - (void)setVisitorWithName:(NSString * _Nonnull)name image:(UIImage * _Nullable)image;
-+ (void)setMessageWindowWithColor:(UIColor * _Nonnull)color;
-+ (void)setIncomingMessageBackgroundColorWithColor:(UIColor * _Nonnull)color;
-+ (void)setOutgoingMessageBackgroundColorWithColor:(UIColor * _Nonnull)color;
 @end
 
 
+
+
+
+
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
-+ (void)setWithJwtUserIdentifier:(NSString * _Nonnull)jwtUserIdentifier onComplition:(void (^ _Nonnull)(void))onComplition onError:(void (^ _Nonnull)(NSError * _Nullable))onError SWIFT_DEPRECATED_OBJC("Swift method 'ZohoDeskPortalSDK.set(jwtUserIdentifier:onComplition:onError:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 + (void)clearAllLocalData;
 + (void)logout;
++ (void)logoutOnComplition:(void (^ _Nonnull)(void))onComplition onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDUserSignedIn;)
 + (BOOL)isZDUserSignedIn SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDSDKMigratedTo1_0;)
@@ -2200,9 +1347,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDSDKMigrated
 + (void)showHelpPageForArticleUrl:(NSURL * _Nonnull)articleLink controller:(UIViewController * _Nonnull)controller with:(ZDSolutionPageConfiguration * _Nonnull)configuration;
 + (void)ZDAnalyticsTrackerOnCompletion:(void (^ _Nonnull)(ZDAnalytics * _Nullable))onCompletion;
 + (void)showTopicDetailForTopicId:(NSString * _Nonnull)topicId controller:(UIViewController * _Nonnull)controller;
++ (void)showCatgoryByPermalinkForPermaLink:(NSString * _Nonnull)permaLink controller:(UIViewController * _Nonnull)controller;
 @end
-
-
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
