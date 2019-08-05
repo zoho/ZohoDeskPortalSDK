@@ -603,6 +603,16 @@ typedef SWIFT_ENUM(NSInteger, ZDTopicType, closed) {
   ZDTopicTypeAllTypes = 4,
 };
 
+typedef SWIFT_ENUM(NSInteger, ZDViewController, closed) {
+  ZDViewControllerDashBoard = 0,
+  ZDViewControllerKBCategoryList = 1,
+  ZDViewControllerKBArticleDetail = 2,
+  ZDViewControllerCommunityCatagories = 3,
+  ZDViewControllerCommunityTopicDetail = 4,
+  ZDViewControllerMyTicketList = 5,
+  ZDViewControllerCreateTicket = 6,
+};
+
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20ZDVisibleTicketField")
 @interface ZDVisibleTicketField : NSObject
@@ -668,6 +678,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDSDKMigrated
 + (void)showHelpPageForArticleId:(NSString * _Nonnull)articleId controller:(UIViewController * _Nonnull)controller with:(ZDSolutionPageConfiguration * _Nonnull)configuration;
 + (void)showHelpPageForArticleUrl:(NSURL * _Nonnull)articleLink controller:(UIViewController * _Nonnull)controller with:(ZDSolutionPageConfiguration * _Nonnull)configuration;
 + (void)ZDAnalyticsTrackerOnCompletion:(void (^ _Nonnull)(ZDAnalytics * _Nullable))onCompletion;
++ (void)dismissControllerOnCompletion:(void (^ _Nonnull)(enum ZDViewController))onCompletion;
 + (void)showTopicDetailForTopicId:(NSString * _Nonnull)topicId controller:(UIViewController * _Nonnull)controller;
 + (void)showCatgoryByPermalinkForPermaLink:(NSString * _Nonnull)permaLink controller:(UIViewController * _Nonnull)controller;
 @end
@@ -1281,6 +1292,16 @@ typedef SWIFT_ENUM(NSInteger, ZDTopicType, closed) {
   ZDTopicTypeAllTypes = 4,
 };
 
+typedef SWIFT_ENUM(NSInteger, ZDViewController, closed) {
+  ZDViewControllerDashBoard = 0,
+  ZDViewControllerKBCategoryList = 1,
+  ZDViewControllerKBArticleDetail = 2,
+  ZDViewControllerCommunityCatagories = 3,
+  ZDViewControllerCommunityTopicDetail = 4,
+  ZDViewControllerMyTicketList = 5,
+  ZDViewControllerCreateTicket = 6,
+};
+
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20ZDVisibleTicketField")
 @interface ZDVisibleTicketField : NSObject
@@ -1346,6 +1367,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDSDKMigrated
 + (void)showHelpPageForArticleId:(NSString * _Nonnull)articleId controller:(UIViewController * _Nonnull)controller with:(ZDSolutionPageConfiguration * _Nonnull)configuration;
 + (void)showHelpPageForArticleUrl:(NSURL * _Nonnull)articleLink controller:(UIViewController * _Nonnull)controller with:(ZDSolutionPageConfiguration * _Nonnull)configuration;
 + (void)ZDAnalyticsTrackerOnCompletion:(void (^ _Nonnull)(ZDAnalytics * _Nullable))onCompletion;
++ (void)dismissControllerOnCompletion:(void (^ _Nonnull)(enum ZDViewController))onCompletion;
 + (void)showTopicDetailForTopicId:(NSString * _Nonnull)topicId controller:(UIViewController * _Nonnull)controller;
 + (void)showCatgoryByPermalinkForPermaLink:(NSString * _Nonnull)permaLink controller:(UIViewController * _Nonnull)controller;
 @end

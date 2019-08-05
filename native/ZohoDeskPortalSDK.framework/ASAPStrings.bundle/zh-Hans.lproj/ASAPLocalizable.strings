@@ -322,3 +322,6 @@
 
 "DeskPortal.Community.sub_forum_filter.all" = "全部";
 "DeskPortal.Label.back_press_alert_msg"                             = "Are you sure you want to proceed? Keep in mind that all changes will be lost.";
+
+"DeskPortal.Label.storage_permission_msg" = "This Application does not have access to Photos. To enable access please go to the device's Settings > Privacy > Photos > %@";
+"DeskPortal.Label.camera_permission_msg" = "This Application does not have access to Camera. To enable access please go to the device's Settings > Privacy > Camera > %@";
