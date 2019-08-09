@@ -24,12 +24,6 @@ typedef void (^requestLogoutFailureBlock)(NSError *error);
 @interface ZohoPortalAuthZIAMUtil :NSObject
 {
 @public
-    NSString* Scopes;
-    NSString* AppName;
-    NSString* BaseUrl;
-    NSString* ClientID;
-    NSString* ClientSecret;
-    NSString* PortalID;
     NSString *UrlScheme;
     NSString *ma_portalID;
     NSString *ma_accountsPortalURL;
@@ -46,7 +40,13 @@ typedef void (^requestLogoutFailureBlock)(NSError *error);
     NSString *ScopeEnhancementAccountsPortalURL;
     
 }
-@property NSString *ExtensionAppGroup;
+@property(nonatomic, strong) NSString *ExtensionAppGroup;
+@property(nonatomic, strong) NSString* BaseUrl;
+@property(nonatomic, strong) NSString* PortalID;
+@property(nonatomic, strong) NSString* ClientSecret;
+@property(nonatomic, strong) NSString* ClientID;
+@property(nonatomic, strong) NSString* Scopes;
+@property(nonatomic, strong) NSString* AppName;
 
 
 + (ZohoPortalAuthZIAMUtil *)sharedUtil;
