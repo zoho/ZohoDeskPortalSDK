@@ -561,6 +561,9 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDProvoider")
 - (void)getZDMostPopularCommunityTopicsForCategory:(NSString * _Nullable)categoryId filterType:(NSString * _Nonnull)filterType from:(NSInteger)from limit:(NSInteger)limit includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (void)getZDMostDiscussedCommunityTopicsForCategory:(NSString * _Nullable)categoryId filterType:(NSString * _Nonnull)filterType from:(NSInteger)from limit:(NSInteger)limit includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (void)getZDCommunityCategoryByPermalink:(NSString * _Nonnull)permalink :(void (^ _Nonnull)(ZDCommunityCategory * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+/// Method used for update user information.
+/// @param userInfo - Need to send the key value pair you have to update.
+- (void)UpdateUserInformationWithUserInfo:(NSDictionary<NSString *, id> * _Nonnull)userInfo :(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1250,6 +1253,9 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDProvoider")
 - (void)getZDMostPopularCommunityTopicsForCategory:(NSString * _Nullable)categoryId filterType:(NSString * _Nonnull)filterType from:(NSInteger)from limit:(NSInteger)limit includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (void)getZDMostDiscussedCommunityTopicsForCategory:(NSString * _Nullable)categoryId filterType:(NSString * _Nonnull)filterType from:(NSInteger)from limit:(NSInteger)limit includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (void)getZDCommunityCategoryByPermalink:(NSString * _Nonnull)permalink :(void (^ _Nonnull)(ZDCommunityCategory * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+/// Method used for update user information.
+/// @param userInfo - Need to send the key value pair you have to update.
+- (void)UpdateUserInformationWithUserInfo:(NSDictionary<NSString *, id> * _Nonnull)userInfo :(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
