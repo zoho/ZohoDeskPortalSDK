@@ -167,6 +167,35 @@
 "DeskPortal.Label.camera_permission_msg" = "This Application does not have access to Camera. To enable access please go to the device's Settings > Privacy > Camera > %@";
 
 
+// modified by Imthath M on 01/08/19
+
+"DeskPortal.Label.storage_permission_msg" = "%@ does not have access to Photos. To enable access please go to the device's Settings > Privacy > Photos > %@";
+"DeskPortal.Label.camera_permission_msg" = "%@ does not have access to Camera. To enable access please go to the device's Settings > Privacy > Camera > %@";
+
+// added by Imthath M on 01/08/19
+"DeskPortal.Options.continue" = "Continue";
+"DeskPortal.Options.keep" = "Keep";
+"DeskPortal.Options.alert" = "Alert";
+"DeskPortal.Options.close" = "Close";
+"DeskPortal.Options.dismiss" = "Dismiss";
+"DeskPortal.Options.discard" = "Discard";
+"DeskPortal.Options.delete" = "Delete";
+
+"DeskPortal.Attachment.mb" = "MB";
+"DeskPortal.Attachment.photos" = "Photos";
+"DeskPortal.Attachment.files" = "Files";
+"DeskPortal.Attachment.uploadFail" = "Upload failed";
+"DeskPortal.Attachment.capturedImageJPEG" = "Captured Image.JPEG";
+"DeskPortal.Attachment.cameraUnavailable" = "We cannot find Camera in your device. Kindly check your camera is working fine and continue.";
+"DeskPortal.Attachment.countExceedAlert" = "More than %@ files can not be selected";
+"DeskPortal.Attachment.totalSizeExceedAlert" = "Total File size should not exceed %@ MB";
+"DeskPortal.Attachment.uploadInBGorCancel" = "Your attachments are being uploaded. Do you wish to Cancel or Continue in Background?";
+"DeskPortal.Attachment.uploadCompleted" = "Your attachments are uploaded successfully. Do you wish to Discard or Keep them?";
+"DeskPortal.Attachment.selectMessage" = "Select Photos, Videos or Files to upload";
+
+// added by Imthath M on 05/08/19
+"DeskPortal.Attachment.uploadCompletedToast" = "%@ attachments uploaded successfully";
+
 // Un-Used Strings
 
 "zdsdk.general.powered"                                 = "Powered by Zoho";

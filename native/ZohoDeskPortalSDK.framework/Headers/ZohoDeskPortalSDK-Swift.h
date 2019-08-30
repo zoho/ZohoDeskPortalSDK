@@ -169,8 +169,10 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreData;
+@import CoreGraphics;
 @import Foundation;
 @import ObjectiveC;
+@import Photos;
 @import QuartzCore;
 @import UIKit;
 #endif
@@ -196,6 +198,72 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20AttachmentJsonObject")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UITouch;
+@class UIEvent;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14AttachmentView")
+@interface AttachmentView : UIView
+- (void)awakeFromNib;
+- (void)layoutSubviews;
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+
+@class UICollectionView;
+
+@interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UICollectionViewDelegate>
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+
+
+@class UITableView;
+@class UITableViewRowAction;
+
+@interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UITableViewDelegate>
+- (NSArray<UITableViewRowAction *> * _Nullable)tableView:(UITableView * _Nonnull)tableView editActionsForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UICollectionViewLayout;
+
+@interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UICollectionViewDelegateFlowLayout>
+- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UICollectionViewCell;
+
+@interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UICollectionViewDataSource>
+- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UITableViewCell;
+
+@interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UITableViewDataSource>
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+
+@class UIDocumentPickerViewController;
+@class UIImagePickerController;
+
+@interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UIDocumentPickerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+- (void)documentPicker:(UIDocumentPickerViewController * _Nonnull)controller didPickDocumentsAtURLs:(NSArray<NSURL *> * _Nonnull)urls;
+- (void)documentPicker:(UIDocumentPickerViewController * _Nonnull)controller didPickDocumentAtURL:(NSURL * _Nonnull)url;
+- (void)imagePickerControllerDidCancel:(UIImagePickerController * _Nonnull)picker;
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
+@end
+
 
 
 
@@ -209,6 +277,21 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20DepartmentJsonObject")
 
 
 
+
+
+
+
+
+@class NSURLSession;
+@class NSURLSessionTask;
+
+/// Use NetworkUploaderDelegate to stream the progress and get the percentage of file uploaded
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK15NetworkUploader")
+@interface NetworkUploader : NSObject <NSURLSessionTaskDelegate>
+- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
 
 
 
@@ -229,6 +312,14 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketFieldsJsonObject")
 @interface TicketFieldsJsonObject : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
+
+
+
+
+
+
 
 
 
@@ -282,6 +373,12 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketFieldsJsonObject")
 
 
 
+
+
+
+
+
+
 enum ZDAnalyticsTrackingType : NSInteger;
 enum ZDPortalControllers : NSInteger;
 enum ZDPortalUIAction : NSInteger;
@@ -293,6 +390,7 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDAnalytics")
 - (enum ZDPortalControllers)getEventSource SWIFT_WARN_UNUSED_RESULT;
 - (enum ZDPortalUIAction)getEventAction SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nullable)getlabelValue SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)getItemId SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -511,20 +609,23 @@ typedef SWIFT_ENUM(NSInteger, ZDPortalUIAction, closed) {
   ZDPortalUIActionCommunityCategoryFollow = 15,
   ZDPortalUIActionCommunityCategoryUnFollow = 16,
   ZDPortalUIActionCommunityTopicClicked = 17,
-  ZDPortalUIActionCommunityForumClicked = 18,
-  ZDPortalUIActionCommunityTopicTypeFilter = 19,
-  ZDPortalUIActionCommunityTopicFollow = 20,
-  ZDPortalUIActionCommunityTopicUnFollow = 21,
-  ZDPortalUIActionCommunityTopicLiked = 22,
-  ZDPortalUIActionCommunityTopicCommentAction = 23,
-  ZDPortalUIActionCommunityTopicCommentSent = 24,
-  ZDPortalUIActionCommunityTopicCommentCreateCancel = 25,
-  ZDPortalUIActionCommunityTopicDeleted = 26,
-  ZDPortalUIActionCommunityTopicEdited = 27,
-  ZDPortalUIActionCommunityTopicCreated = 28,
-  ZDPortalUIActionCommunityTopicCreateCancel = 29,
-  ZDPortalUIActionCommunityTopicSavedAsDraft = 30,
-  ZDPortalUIActionNil = 31,
+  ZDPortalUIActionCommunitySearchedTopicClicked = 18,
+  ZDPortalUIActionCommunityForumClicked = 19,
+  ZDPortalUIActionCommunityTopicTypeFilter = 20,
+  ZDPortalUIActionCommunityTopicFollow = 21,
+  ZDPortalUIActionCommunityTopicUnFollow = 22,
+  ZDPortalUIActionCommunityTopicLiked = 23,
+  ZDPortalUIActionCommunityTopicReplyAction = 24,
+  ZDPortalUIActionCommunityTopicCommentAction = 25,
+  ZDPortalUIActionCommunityTopicCreateAction = 26,
+  ZDPortalUIActionCommunityTopicCommentSent = 27,
+  ZDPortalUIActionCommunityTopicCommentCreateCancel = 28,
+  ZDPortalUIActionCommunityTopicDeleted = 29,
+  ZDPortalUIActionCommunityTopicEdited = 30,
+  ZDPortalUIActionCommunityTopicCreated = 31,
+  ZDPortalUIActionCommunityTopicCreateCancel = 32,
+  ZDPortalUIActionCommunityTopicSavedAsDraft = 33,
+  ZDPortalUIActionNil = 34,
 };
 
 @class ZDTicketForm;
@@ -532,6 +633,8 @@ typedef SWIFT_ENUM(NSInteger, ZDPortalUIAction, closed) {
 /// This class provoide all apis
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDProvoider")
 @interface ZDProvoider : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDProvoider * _Nonnull sharedInstance;)
++ (ZDProvoider * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
 /// This method list all department for the specific department
 /// \param onComplition Array of departments or error
 ///
@@ -589,6 +692,14 @@ typedef SWIFT_ENUM(NSInteger, ZDThemeType, closed) {
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK21ZDTicketConfiguration")
 @interface ZDTicketConfiguration : ZDBaseContollerConfiguration
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ZDTicketConfiguration * _Nonnull configure;)
++ (ZDTicketConfiguration * _Nonnull)configure SWIFT_WARN_UNUSED_RESULT;
++ (void)setConfigure:(ZDTicketConfiguration * _Nonnull)value;
+@property (nonatomic) BOOL isReplyAllowed;
+@property (nonatomic) BOOL isCommentAllowed;
+@property (nonatomic) BOOL isTicketUpdateAllowed;
+@property (nonatomic) BOOL isCommentEditAllowed;
+@property (nonatomic) BOOL isCommentDeleteAllowed;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -614,6 +725,7 @@ typedef SWIFT_ENUM(NSInteger, ZDViewController, closed) {
   ZDViewControllerCommunityTopicDetail = 4,
   ZDViewControllerMyTicketList = 5,
   ZDViewControllerCreateTicket = 6,
+  ZDViewControllerChat = 7,
 };
 
 
@@ -634,6 +746,11 @@ SWIFT_PROTOCOL("_TtP17ZohoDeskPortalSDK22ZohoDeskPortalDelegate_")
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK17ZohoDeskPortalSDK")
 @interface ZohoDeskPortalSDK : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <ZohoDeskPortalDelegate> _Nullable zohoDeskPortalDelegate;)
++ (id <ZohoDeskPortalDelegate> _Nullable)zohoDeskPortalDelegate SWIFT_WARN_UNUSED_RESULT;
++ (void)setZohoDeskPortalDelegate:(id <ZohoDeskPortalDelegate> _Nullable)value;
++ (void)initializeSDK:(NSString * _Nonnull)orgId appId:(NSString * _Nonnull)appId dataCenter:(enum ZDDataCenter)dataCenter configuration:(ZDPortalConfiguration * _Nonnull)configuration;
++ (void)initializeSDK:(NSString * _Nonnull)orgId appId:(NSString * _Nonnull)appId configuration:(ZDPortalConfiguration * _Nonnull)configuration;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -648,11 +765,11 @@ SWIFT_CLASS("_TtCC17ZohoDeskPortalSDK17ZohoDeskPortalSDK24ZDAddtionalConfigurati
 @end
 
 
+
+
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 - (void)setVisitorWithName:(NSString * _Nonnull)name image:(UIImage * _Nullable)image;
 @end
-
-
 
 
 
@@ -678,8 +795,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDSDKMigrated
 + (void)ticketListWithController:(UIViewController * _Nonnull)controller;
 + (void)addTicketWithController:(UIViewController * _Nonnull)controller;
 + (void)addTicketWithController:(UIViewController * _Nonnull)controller onCompletion:(void (^ _Nonnull)(TicketDetailJsonObject * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
-+ (void)showHelpPageForArticleId:(NSString * _Nonnull)articleId controller:(UIViewController * _Nonnull)controller with:(ZDSolutionPageConfiguration * _Nonnull)configuration;
-+ (void)showHelpPageForArticleUrl:(NSURL * _Nonnull)articleLink controller:(UIViewController * _Nonnull)controller with:(ZDSolutionPageConfiguration * _Nonnull)configuration;
++ (void)showHelpPageForArticleId:(NSString * _Nonnull)articleId controller:(UIViewController * _Nonnull)controller;
++ (void)showHelpPageForPermaLink:(NSString * _Nonnull)permaLink controller:(UIViewController * _Nonnull)controller;
 + (void)ZDAnalyticsTrackerOnCompletion:(void (^ _Nonnull)(ZDAnalytics * _Nullable))onCompletion;
 + (void)dismissControllerOnCompletion:(void (^ _Nonnull)(enum ZDViewController))onCompletion;
 + (void)showTopicDetailForTopicId:(NSString * _Nonnull)topicId controller:(UIViewController * _Nonnull)controller;
@@ -861,8 +978,10 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreData;
+@import CoreGraphics;
 @import Foundation;
 @import ObjectiveC;
+@import Photos;
 @import QuartzCore;
 @import UIKit;
 #endif
@@ -888,6 +1007,72 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20AttachmentJsonObject")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UITouch;
+@class UIEvent;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14AttachmentView")
+@interface AttachmentView : UIView
+- (void)awakeFromNib;
+- (void)layoutSubviews;
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+
+@class UICollectionView;
+
+@interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UICollectionViewDelegate>
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+
+
+@class UITableView;
+@class UITableViewRowAction;
+
+@interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UITableViewDelegate>
+- (NSArray<UITableViewRowAction *> * _Nullable)tableView:(UITableView * _Nonnull)tableView editActionsForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UICollectionViewLayout;
+
+@interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UICollectionViewDelegateFlowLayout>
+- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UICollectionViewCell;
+
+@interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UICollectionViewDataSource>
+- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UITableViewCell;
+
+@interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UITableViewDataSource>
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+
+@class UIDocumentPickerViewController;
+@class UIImagePickerController;
+
+@interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UIDocumentPickerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+- (void)documentPicker:(UIDocumentPickerViewController * _Nonnull)controller didPickDocumentsAtURLs:(NSArray<NSURL *> * _Nonnull)urls;
+- (void)documentPicker:(UIDocumentPickerViewController * _Nonnull)controller didPickDocumentAtURL:(NSURL * _Nonnull)url;
+- (void)imagePickerControllerDidCancel:(UIImagePickerController * _Nonnull)picker;
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
+@end
+
 
 
 
@@ -901,6 +1086,21 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK20DepartmentJsonObject")
 
 
 
+
+
+
+
+
+@class NSURLSession;
+@class NSURLSessionTask;
+
+/// Use NetworkUploaderDelegate to stream the progress and get the percentage of file uploaded
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK15NetworkUploader")
+@interface NetworkUploader : NSObject <NSURLSessionTaskDelegate>
+- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
 
 
 
@@ -921,6 +1121,14 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketFieldsJsonObject")
 @interface TicketFieldsJsonObject : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
+
+
+
+
+
+
 
 
 
@@ -974,6 +1182,12 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketFieldsJsonObject")
 
 
 
+
+
+
+
+
+
 enum ZDAnalyticsTrackingType : NSInteger;
 enum ZDPortalControllers : NSInteger;
 enum ZDPortalUIAction : NSInteger;
@@ -985,6 +1199,7 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDAnalytics")
 - (enum ZDPortalControllers)getEventSource SWIFT_WARN_UNUSED_RESULT;
 - (enum ZDPortalUIAction)getEventAction SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nullable)getlabelValue SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)getItemId SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -1203,20 +1418,23 @@ typedef SWIFT_ENUM(NSInteger, ZDPortalUIAction, closed) {
   ZDPortalUIActionCommunityCategoryFollow = 15,
   ZDPortalUIActionCommunityCategoryUnFollow = 16,
   ZDPortalUIActionCommunityTopicClicked = 17,
-  ZDPortalUIActionCommunityForumClicked = 18,
-  ZDPortalUIActionCommunityTopicTypeFilter = 19,
-  ZDPortalUIActionCommunityTopicFollow = 20,
-  ZDPortalUIActionCommunityTopicUnFollow = 21,
-  ZDPortalUIActionCommunityTopicLiked = 22,
-  ZDPortalUIActionCommunityTopicCommentAction = 23,
-  ZDPortalUIActionCommunityTopicCommentSent = 24,
-  ZDPortalUIActionCommunityTopicCommentCreateCancel = 25,
-  ZDPortalUIActionCommunityTopicDeleted = 26,
-  ZDPortalUIActionCommunityTopicEdited = 27,
-  ZDPortalUIActionCommunityTopicCreated = 28,
-  ZDPortalUIActionCommunityTopicCreateCancel = 29,
-  ZDPortalUIActionCommunityTopicSavedAsDraft = 30,
-  ZDPortalUIActionNil = 31,
+  ZDPortalUIActionCommunitySearchedTopicClicked = 18,
+  ZDPortalUIActionCommunityForumClicked = 19,
+  ZDPortalUIActionCommunityTopicTypeFilter = 20,
+  ZDPortalUIActionCommunityTopicFollow = 21,
+  ZDPortalUIActionCommunityTopicUnFollow = 22,
+  ZDPortalUIActionCommunityTopicLiked = 23,
+  ZDPortalUIActionCommunityTopicReplyAction = 24,
+  ZDPortalUIActionCommunityTopicCommentAction = 25,
+  ZDPortalUIActionCommunityTopicCreateAction = 26,
+  ZDPortalUIActionCommunityTopicCommentSent = 27,
+  ZDPortalUIActionCommunityTopicCommentCreateCancel = 28,
+  ZDPortalUIActionCommunityTopicDeleted = 29,
+  ZDPortalUIActionCommunityTopicEdited = 30,
+  ZDPortalUIActionCommunityTopicCreated = 31,
+  ZDPortalUIActionCommunityTopicCreateCancel = 32,
+  ZDPortalUIActionCommunityTopicSavedAsDraft = 33,
+  ZDPortalUIActionNil = 34,
 };
 
 @class ZDTicketForm;
@@ -1224,6 +1442,8 @@ typedef SWIFT_ENUM(NSInteger, ZDPortalUIAction, closed) {
 /// This class provoide all apis
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDProvoider")
 @interface ZDProvoider : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDProvoider * _Nonnull sharedInstance;)
++ (ZDProvoider * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
 /// This method list all department for the specific department
 /// \param onComplition Array of departments or error
 ///
@@ -1281,6 +1501,14 @@ typedef SWIFT_ENUM(NSInteger, ZDThemeType, closed) {
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK21ZDTicketConfiguration")
 @interface ZDTicketConfiguration : ZDBaseContollerConfiguration
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ZDTicketConfiguration * _Nonnull configure;)
++ (ZDTicketConfiguration * _Nonnull)configure SWIFT_WARN_UNUSED_RESULT;
++ (void)setConfigure:(ZDTicketConfiguration * _Nonnull)value;
+@property (nonatomic) BOOL isReplyAllowed;
+@property (nonatomic) BOOL isCommentAllowed;
+@property (nonatomic) BOOL isTicketUpdateAllowed;
+@property (nonatomic) BOOL isCommentEditAllowed;
+@property (nonatomic) BOOL isCommentDeleteAllowed;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1306,6 +1534,7 @@ typedef SWIFT_ENUM(NSInteger, ZDViewController, closed) {
   ZDViewControllerCommunityTopicDetail = 4,
   ZDViewControllerMyTicketList = 5,
   ZDViewControllerCreateTicket = 6,
+  ZDViewControllerChat = 7,
 };
 
 
@@ -1326,6 +1555,11 @@ SWIFT_PROTOCOL("_TtP17ZohoDeskPortalSDK22ZohoDeskPortalDelegate_")
 
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK17ZohoDeskPortalSDK")
 @interface ZohoDeskPortalSDK : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <ZohoDeskPortalDelegate> _Nullable zohoDeskPortalDelegate;)
++ (id <ZohoDeskPortalDelegate> _Nullable)zohoDeskPortalDelegate SWIFT_WARN_UNUSED_RESULT;
++ (void)setZohoDeskPortalDelegate:(id <ZohoDeskPortalDelegate> _Nullable)value;
++ (void)initializeSDK:(NSString * _Nonnull)orgId appId:(NSString * _Nonnull)appId dataCenter:(enum ZDDataCenter)dataCenter configuration:(ZDPortalConfiguration * _Nonnull)configuration;
++ (void)initializeSDK:(NSString * _Nonnull)orgId appId:(NSString * _Nonnull)appId configuration:(ZDPortalConfiguration * _Nonnull)configuration;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1340,11 +1574,11 @@ SWIFT_CLASS("_TtCC17ZohoDeskPortalSDK17ZohoDeskPortalSDK24ZDAddtionalConfigurati
 @end
 
 
+
+
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 - (void)setVisitorWithName:(NSString * _Nonnull)name image:(UIImage * _Nullable)image;
 @end
-
-
 
 
 
@@ -1370,8 +1604,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDSDKMigrated
 + (void)ticketListWithController:(UIViewController * _Nonnull)controller;
 + (void)addTicketWithController:(UIViewController * _Nonnull)controller;
 + (void)addTicketWithController:(UIViewController * _Nonnull)controller onCompletion:(void (^ _Nonnull)(TicketDetailJsonObject * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
-+ (void)showHelpPageForArticleId:(NSString * _Nonnull)articleId controller:(UIViewController * _Nonnull)controller with:(ZDSolutionPageConfiguration * _Nonnull)configuration;
-+ (void)showHelpPageForArticleUrl:(NSURL * _Nonnull)articleLink controller:(UIViewController * _Nonnull)controller with:(ZDSolutionPageConfiguration * _Nonnull)configuration;
++ (void)showHelpPageForArticleId:(NSString * _Nonnull)articleId controller:(UIViewController * _Nonnull)controller;
++ (void)showHelpPageForPermaLink:(NSString * _Nonnull)permaLink controller:(UIViewController * _Nonnull)controller;
 + (void)ZDAnalyticsTrackerOnCompletion:(void (^ _Nonnull)(ZDAnalytics * _Nullable))onCompletion;
 + (void)dismissControllerOnCompletion:(void (^ _Nonnull)(enum ZDViewController))onCompletion;
 + (void)showTopicDetailForTopicId:(NSString * _Nonnull)topicId controller:(UIViewController * _Nonnull)controller;
