@@ -22,6 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE
 LICENSE
 }
+
 s.homepage         = "https://www.zoho.com/desk"
 s.author           = { "Zoho Desk mobile" => "desk-mobile@zohocorp.com" }
 s.source           = { :git => "https://git.csez.zohocorpin.com/zohodesk/desksdk_bot.git", :tag => s.version }
@@ -32,7 +33,7 @@ s.public_header_files = "native/**/*.h"
 s.preserve_paths   = "native/ZohoDeskPortalSDK.framework"
 s.vendored_frameworks = "native/ZohoDeskPortalSDK.framework"
 s.frameworks       = 'UIKit','Foundation','SystemConfiguration'
-s.dependency 'Mobilisten_Desk'
+s.dependency 'MobilistenBeta', '0.02'
 
 end
 
