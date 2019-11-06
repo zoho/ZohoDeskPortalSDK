@@ -652,6 +652,7 @@ typedef SWIFT_ENUM(NSInteger, ZDPortalUIAction, closed) {
 };
 
 @class ZDTicketForm;
+@class ZDTopicComment;
 
 /// This class provoide all apis
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDProvoider")
@@ -686,6 +687,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDProvoider 
 - (void)getZDCommunityCategoriesOnCompletion:(void (^ _Nonnull)(NSArray<ZDCommunityCategory *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (void)getZDMostPopularCommunityTopicsForCategory:(NSString * _Nullable)categoryId filterType:(NSString * _Nonnull)filterType from:(NSInteger)from limit:(NSInteger)limit includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (void)getZDMostDiscussedCommunityTopicsForCategory:(NSString * _Nullable)categoryId filterType:(NSString * _Nonnull)filterType from:(NSInteger)from limit:(NSInteger)limit includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (void)getZDCommunityTopicsForCategory:(NSString * _Nullable)categoryId from:(NSInteger)from limit:(NSInteger)limit isSticky:(BOOL)isSticky filterType:(NSString * _Nonnull)filterType tagName:(NSString * _Nonnull)tagName label:(NSString * _Nonnull)label includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (void)getZDCommunityTopicForTopic:(NSString * _Nonnull)topicId :(void (^ _Nonnull)(ZDCommunityTopic * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (void)getZDTopicsCommentsForTopic:(NSString * _Nonnull)topicId from:(NSInteger)from limit:(NSInteger)limit isDescending:(BOOL)isDescending :(void (^ _Nonnull)(NSArray<ZDTopicComment *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (void)getZDTopicAttachementContentWithTopicId:(NSString * _Nonnull)topicId attachmentId:(NSString * _Nonnull)attachmentId :(void (^ _Nonnull)(NSData * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (void)getZDTopicCommentAttachementContentWithTopicId:(NSString * _Nonnull)topicId commentId:(NSString * _Nonnull)commentId attachmentId:(NSString * _Nonnull)attachmentId :(void (^ _Nonnull)(NSData * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (void)getZDCommunityCategoryByPermalink:(NSString * _Nonnull)permalink :(void (^ _Nonnull)(ZDCommunityCategory * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 /// Method used for update user information.
 /// @param userInfo - Need to send the key value pair you have to update.
@@ -732,12 +738,20 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12ZDTicketForm")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+/// This Intermediate Json Object between Json responce and coredata Objects. To avoid Crash
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14ZDTopicComment")
+@interface ZDTopicComment : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 typedef SWIFT_ENUM(NSInteger, ZDTopicType, closed) {
   ZDTopicTypeIdea = 0,
   ZDTopicTypeQuestion = 1,
   ZDTopicTypeProblem = 2,
   ZDTopicTypeAnnouncement = 3,
-  ZDTopicTypeAllTypes = 4,
+  ZDTopicTypeDisscussion = 4,
+  ZDTopicTypeAllTypes = 5,
 };
 
 typedef SWIFT_ENUM(NSInteger, ZDViewController, closed) {
@@ -788,11 +802,11 @@ SWIFT_CLASS("_TtCC17ZohoDeskPortalSDK17ZohoDeskPortalSDK24ZDAddtionalConfigurati
 @end
 
 
-
-
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 - (void)setVisitorWithName:(NSString * _Nonnull)name image:(UIImage * _Nullable)image;
 @end
+
+
 
 
 
@@ -1485,6 +1499,7 @@ typedef SWIFT_ENUM(NSInteger, ZDPortalUIAction, closed) {
 };
 
 @class ZDTicketForm;
+@class ZDTopicComment;
 
 /// This class provoide all apis
 SWIFT_CLASS("_TtC17ZohoDeskPortalSDK11ZDProvoider")
@@ -1519,6 +1534,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDProvoider 
 - (void)getZDCommunityCategoriesOnCompletion:(void (^ _Nonnull)(NSArray<ZDCommunityCategory *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (void)getZDMostPopularCommunityTopicsForCategory:(NSString * _Nullable)categoryId filterType:(NSString * _Nonnull)filterType from:(NSInteger)from limit:(NSInteger)limit includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (void)getZDMostDiscussedCommunityTopicsForCategory:(NSString * _Nullable)categoryId filterType:(NSString * _Nonnull)filterType from:(NSInteger)from limit:(NSInteger)limit includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (void)getZDCommunityTopicsForCategory:(NSString * _Nullable)categoryId from:(NSInteger)from limit:(NSInteger)limit isSticky:(BOOL)isSticky filterType:(NSString * _Nonnull)filterType tagName:(NSString * _Nonnull)tagName label:(NSString * _Nonnull)label includeCount:(BOOL)includeCount :(void (^ _Nonnull)(NSArray<ZDCommunityTopic *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (void)getZDCommunityTopicForTopic:(NSString * _Nonnull)topicId :(void (^ _Nonnull)(ZDCommunityTopic * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (void)getZDTopicsCommentsForTopic:(NSString * _Nonnull)topicId from:(NSInteger)from limit:(NSInteger)limit isDescending:(BOOL)isDescending :(void (^ _Nonnull)(NSArray<ZDTopicComment *> * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (void)getZDTopicAttachementContentWithTopicId:(NSString * _Nonnull)topicId attachmentId:(NSString * _Nonnull)attachmentId :(void (^ _Nonnull)(NSData * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
+- (void)getZDTopicCommentAttachementContentWithTopicId:(NSString * _Nonnull)topicId commentId:(NSString * _Nonnull)commentId attachmentId:(NSString * _Nonnull)attachmentId :(void (^ _Nonnull)(NSData * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 - (void)getZDCommunityCategoryByPermalink:(NSString * _Nonnull)permalink :(void (^ _Nonnull)(ZDCommunityCategory * _Nullable))onCompletion onError:(void (^ _Nonnull)(NSError * _Nullable))onError;
 /// Method used for update user information.
 /// @param userInfo - Need to send the key value pair you have to update.
@@ -1565,12 +1585,20 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK12ZDTicketForm")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+/// This Intermediate Json Object between Json responce and coredata Objects. To avoid Crash
+SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14ZDTopicComment")
+@interface ZDTopicComment : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 typedef SWIFT_ENUM(NSInteger, ZDTopicType, closed) {
   ZDTopicTypeIdea = 0,
   ZDTopicTypeQuestion = 1,
   ZDTopicTypeProblem = 2,
   ZDTopicTypeAnnouncement = 3,
-  ZDTopicTypeAllTypes = 4,
+  ZDTopicTypeDisscussion = 4,
+  ZDTopicTypeAllTypes = 5,
 };
 
 typedef SWIFT_ENUM(NSInteger, ZDViewController, closed) {
@@ -1621,11 +1649,11 @@ SWIFT_CLASS("_TtCC17ZohoDeskPortalSDK17ZohoDeskPortalSDK24ZDAddtionalConfigurati
 @end
 
 
-
-
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 - (void)setVisitorWithName:(NSString * _Nonnull)name image:(UIImage * _Nullable)image;
 @end
+
+
 
 
 
