@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
 s.name             = "ZohoDeskPortalSDK"
-s.version          = "1.1.5"
+s.version          = "1.1.8"
 s.summary          = "A framework for view KB, Community and Submited tickets module for iOS app"
 s.license          = { :type => "MIT", :text=> <<-LICENSE
 MIT License
-Copyright (c) 2017 Zoho
+Copyright (c) 2019 Zoho
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -24,7 +24,7 @@ LICENSE
 }
 s.homepage         = "https://www.zoho.com/desk"
 s.author           = { "Zoho Desk mobile" => "desk-mobile@zohocorp.com" }
-s.source           = { :git => "https://git.csez.zohocorpin.com/zohodesk/desksdk_bot.git", :tag => s.version }
+s.source           = { :git => "https://github.com/zoho/ZohoDeskPortalSDK.git", :tag => s.version }
 s.platform         = :ios, '9.0'
 s.requires_arc     = true
 s.source_files     = "native/**/*.{swift}"
