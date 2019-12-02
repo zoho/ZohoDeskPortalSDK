@@ -33,7 +33,7 @@ s.public_header_files = "native/**/*.h"
 s.preserve_paths   = "native/ZohoDeskPortalSDK.framework"
 s.vendored_frameworks = "native/ZohoDeskPortalSDK.framework"
 s.frameworks       = 'UIKit','Foundation','SystemConfiguration'
-s.dependency 'MobilistenBeta', '0.07'
+s.dependency 'MobilistenBeta', '0.09'
 
 end
 

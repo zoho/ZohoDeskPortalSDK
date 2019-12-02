@@ -238,18 +238,18 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14AttachmentView")
 
 
 
-@class UICollectionViewLayout;
-
-@interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UICollectionViewDelegateFlowLayout>
-- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (CGFloat)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-@end
-
 @class UITableView;
 @class UITableViewRowAction;
 
 @interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UITableViewDelegate>
 - (NSArray<UITableViewRowAction *> * _Nullable)tableView:(UITableView * _Nonnull)tableView editActionsForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UICollectionViewLayout;
+
+@interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UICollectionViewDelegateFlowLayout>
+- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 @end
 
 @class UITableViewCell;
@@ -327,8 +327,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketFieldsJsonObject")
 @interface TicketFieldsJsonObject : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
-
-
 
 
 
@@ -802,11 +800,11 @@ SWIFT_CLASS("_TtCC17ZohoDeskPortalSDK17ZohoDeskPortalSDK24ZDAddtionalConfigurati
 @end
 
 
+
+
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 - (void)setVisitorWithName:(NSString * _Nonnull)name image:(UIImage * _Nullable)image;
 @end
-
-
 
 
 
@@ -839,6 +837,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDSDKMigrated
 + (void)dismissControllerOnCompletion:(void (^ _Nonnull)(enum ZDViewController))onCompletion;
 + (void)showTopicDetailForTopicId:(NSString * _Nonnull)topicId controller:(UIViewController * _Nonnull)controller;
 + (void)showCatgoryByPermalinkForPermaLink:(NSString * _Nonnull)permaLink controller:(UIViewController * _Nonnull)controller;
++ (UIViewController * _Nonnull)getZDTicketListController SWIFT_WARN_UNUSED_RESULT;
 @end
 
 #if __has_attribute(external_source_symbol)
@@ -1085,18 +1084,18 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK14AttachmentView")
 
 
 
-@class UICollectionViewLayout;
-
-@interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UICollectionViewDelegateFlowLayout>
-- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (CGFloat)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-@end
-
 @class UITableView;
 @class UITableViewRowAction;
 
 @interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UITableViewDelegate>
 - (NSArray<UITableViewRowAction *> * _Nullable)tableView:(UITableView * _Nonnull)tableView editActionsForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UICollectionViewLayout;
+
+@interface AttachmentView (SWIFT_EXTENSION(ZohoDeskPortalSDK)) <UICollectionViewDelegateFlowLayout>
+- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 @end
 
 @class UITableViewCell;
@@ -1174,8 +1173,6 @@ SWIFT_CLASS("_TtC17ZohoDeskPortalSDK22TicketFieldsJsonObject")
 @interface TicketFieldsJsonObject : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
-
-
 
 
 
@@ -1649,11 +1646,11 @@ SWIFT_CLASS("_TtCC17ZohoDeskPortalSDK17ZohoDeskPortalSDK24ZDAddtionalConfigurati
 @end
 
 
+
+
 @interface ZohoDeskPortalSDK (SWIFT_EXTENSION(ZohoDeskPortalSDK))
 - (void)setVisitorWithName:(NSString * _Nonnull)name image:(UIImage * _Nullable)image;
 @end
-
-
 
 
 
@@ -1686,6 +1683,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDSDKMigrated
 + (void)dismissControllerOnCompletion:(void (^ _Nonnull)(enum ZDViewController))onCompletion;
 + (void)showTopicDetailForTopicId:(NSString * _Nonnull)topicId controller:(UIViewController * _Nonnull)controller;
 + (void)showCatgoryByPermalinkForPermaLink:(NSString * _Nonnull)permaLink controller:(UIViewController * _Nonnull)controller;
++ (UIViewController * _Nonnull)getZDTicketListController SWIFT_WARN_UNUSED_RESULT;
 @end
 
 #if __has_attribute(external_source_symbol)
