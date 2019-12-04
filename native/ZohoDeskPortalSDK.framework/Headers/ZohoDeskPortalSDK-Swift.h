@@ -837,6 +837,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDSDKMigrated
 + (void)dismissControllerOnCompletion:(void (^ _Nonnull)(enum ZDViewController))onCompletion;
 + (void)showTopicDetailForTopicId:(NSString * _Nonnull)topicId controller:(UIViewController * _Nonnull)controller;
 + (void)showCatgoryByPermalinkForPermaLink:(NSString * _Nonnull)permaLink controller:(UIViewController * _Nonnull)controller;
++ (void)showCategoryForCategoryId:(NSString * _Nonnull)categoryId controller:(UIViewController * _Nonnull)controller;
 + (UIViewController * _Nonnull)getZDTicketListController SWIFT_WARN_UNUSED_RESULT;
 @end
 
@@ -1683,6 +1684,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isZDSDKMigrated
 + (void)dismissControllerOnCompletion:(void (^ _Nonnull)(enum ZDViewController))onCompletion;
 + (void)showTopicDetailForTopicId:(NSString * _Nonnull)topicId controller:(UIViewController * _Nonnull)controller;
 + (void)showCatgoryByPermalinkForPermaLink:(NSString * _Nonnull)permaLink controller:(UIViewController * _Nonnull)controller;
++ (void)showCategoryForCategoryId:(NSString * _Nonnull)categoryId controller:(UIViewController * _Nonnull)controller;
 + (UIViewController * _Nonnull)getZDTicketListController SWIFT_WARN_UNUSED_RESULT;
 @end
 
