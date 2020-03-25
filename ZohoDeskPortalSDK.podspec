@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = "ZohoDeskPortalSDK"
-s.version          = "1.1.10"
+s.version          = "1.1.11"
 s.summary          = "A framework for view KB, Community and Submited tickets module for iOS app"
 s.license          = { :type => "MIT", :text=> <<-LICENSE
 MIT License
@@ -32,7 +32,7 @@ s.public_header_files = "native/**/*.h"
 s.preserve_paths   = "native/ZohoDeskPortalSDK.framework"
 s.vendored_frameworks = "native/ZohoDeskPortalSDK.framework"
 s.frameworks       = 'UIKit','Foundation','SystemConfiguration'
-s.dependency 'MobilistenBeta', '1.10'
+s.dependency 'MobilistenBeta', '1.26'
 
 
 end
