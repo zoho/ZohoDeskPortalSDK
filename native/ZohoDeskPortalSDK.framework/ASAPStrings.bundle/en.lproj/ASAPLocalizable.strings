@@ -163,9 +163,6 @@
 "DeskPortal.Community.sub_forum_filter.all"                         = "All";
 "DeskPortal.Label.back_press_alert_msg"                             = "Are you sure you want to proceed? Keep in mind that all changes will be lost.";
 
-"DeskPortal.Label.storage_permission_msg" = "This Application does not have access to Photos. To enable access please go to the device's Settings > Privacy > Photos > %@";
-"DeskPortal.Label.camera_permission_msg" = "This Application does not have access to Camera. To enable access please go to the device's Settings > Privacy > Camera > %@";
-
 
 // modified by Imthath M on 01/08/19
 
@@ -173,8 +170,7 @@
 "DeskPortal.Label.camera_permission_msg" = "%@ does not have access to Camera. To enable access please go to the device's Settings > Privacy > Camera > %@";
 
 // added by Imthath M on 01/08/19
-"DeskPortal.Options.continue" = "Continue";
-"DeskPortal.Options.keep" = "Keep";
+
 "DeskPortal.Options.alert" = "Alert";
 "DeskPortal.Options.close" = "Close";
 "DeskPortal.Options.dismiss" = "Dismiss";
@@ -195,139 +191,3 @@
 
 // added by Imthath M on 05/08/19
 "DeskPortal.Attachment.uploadCompletedToast" = "%@ attachments uploaded successfully";
-
-// Un-Used Strings
-
-"zdsdk.general.powered"                                 = "Powered by Zoho";
-"zdsdk.general.back"                                    = "Back";
-"zdsdk.dashboard.title"                                 = "Welcome!";
-"zdsdk.helpcenter.solutions"                            = "Solutions";
-"zdsdk.helpcenter.noarticlesfound"                      = "No articles found";
-"zdsdk.helpcenter.nodescription"                        = "No description";
-"zdsk.addnewticket.Emptyfield"                          = "Please fill in all mandatory fields.";
-"desk.library.newticket.field.error"                    = "%@ cannot be blank";
-"desk.library.newticket.date.picker"                    = "Or pick the nearest date from below";
-"zdsdk.Solution.selectyes"                              = "You found this article helpful.";
-"zdsdk.Solution.today"                                  = "Today";
-"zdsdk.Solution.aweek"                                  = "1 week ago";
-"zdsdk.Solution.weeks"                                  = "%@ weeks ago";
-"zdsdk.Solution.second"                                 = "%@ seconds ago";
-"desk.library.solution.attachment"                      = "1 attachment";
-"desk.library.solution.attachments"                     = "%@ attachments";
-"desk.library.updated.sec.left"                         = "1 second left";
-"desk.library.updated.secs.left"                        = "%@ seconds left";
-"desk.library.updated.sec.due.by"                       = "Late by 1 second";
-"desk.library.updated.secs.due.by"                      = "Late by %@ seconds";
-"desk.library.updated.min.left"                         = "1 minute left";
-"desk.library.updated.mins.left"                        = "%@ minutes left";
-"desk.library.updated.min.due.by"                       = "Late by 1 minute";
-"desk.library.updated.mins.due.by"                      = "Late by %@ minutes";
-"desk.library.updated.hour.left"                        = "1 hour left";
-"desk.library.updated.hours.left"                       = "%@ hours left";
-"desk.library.updated.hour.due.by"                      = "Late by an hour";
-"desk.library.updated.hours.due.by"                     = "Late by %@ hours";
-"desk.library.updated.days.left"                        = "%@ days left";
-"desk.library.updated.day.left"                         = "1 day left";
-"desk.library.updated.days.due.by"                      = "Late by %@ days";
-"desk.library.updated.day.due.by"                       = "Late by 1 day";
-"desk.library.updated.one.month.left"                   = "1 month left";
-"desk.library.updated.months.left"                      = "%@ months left";
-"desk.library.updated.one.month.due_by"                 = "Late by 1 month";
-"desk.library.updated.months.due.by"                    = "Late by %@ months";
-"desk.library.updated.year.left"                        = "1 year left";
-"desk.library.updated.years.left"                       = "%@ years left";
-"desk.library.updated.year.due_by"                      = "Late by 1 year";
-"desk.library.updated.years.due_by"                     = "Late by %@ years";
-"zdsdk.community.allposts"                              = "All Posts";
-"zdsdk.community.comments"                              = "Comments";
-"zdsdk.community.liked"                                 = "Liked";
-"desk.library.to"                                       = "To";
-"desk.library.send"                                     = "Send";
-"zdsdk.ticket.thread"                                   = "Thread";
-"zdsdk.ticket.deleteDraft"                              = "Delete Draft";
-"zdsdk.ticket.addComment"                               = "Add Comment";
-"zdsdk.topic.addTag"                                    = "Add Tag";
-"desk.library.priority.change.failed"                   = "Failed to update priority";
-"desk.library.network.connection"                       = "Network connection lost";
-"desk.library.ticket.closed"                            = "Closed";
-"desk.library.thread.attachment.error"                  = "Error loading attachment. Please try again.";
-"desk.library.community_topics_all_posts_count"         = "All Posts (%@)";
-"desk.library.community_topics_type_announcement_count" = "Announcements (%@)";
-"desk.library.community_topics_type_question_count"     = "Questions (%@)";
-"desk.library.community_topics_type_idea_count"         = "Ideas (%@)";
-"desk.library.community_topics_type_problem_count"      = "Problems (%@)";
-"desk.library.community_topics_likes"                   = "%@ likes";
-"desk.library.profile"                                  = "Profile";
-"desk.library.community_topic_attachment_download"      = "Download";
-"desk.library.community_topic_attachment_view"          = "View";
-"desk.library.community_topic_attachment_share"         = "Share";
-"desk.library.no_network_msg"                           = "No Internet connection";
-"desk.library_community_show_details"                   = "Show Details";
-"desk.library_community_showing_tag"                    = "showing";
-"desk.library_community_hiding_tag"                     = "hiding";
-"navigation_drawer_open"                                = "Open navigation drawer";
-"navigation_drawer_close"                               = "Close navigation drawer";
-"action_settings"                                       = "Settings";
-"desk_nav_drawer_open"                                  = "Open";
-"desk_nav_drawer_close"                                 = "Close";
-"desk.library.ticket_information_title"                 = "Ticket Information";
-"desk.library.ticket_information_edit"                  = "Edit";
-"desk.library.ticket_information_ticket_details"        = "Ticket Details";
-"desk.library.ticket_information_created_date"          = "Created Date";
-"desk.library.ticket_information_department"            = "Department";
-"desk.library.ticket_information_channel"               = "Channel";
-"desk.library.ticket_information_priority"              = "Priority";
-"desk.library.ticket_information_status"                = "Status";
-"desk.library.ticket_information_due_date"              = "Due Date";
-"desk.library.draft"                                    = "Draft";
-"desk.library.ticket.add_a_comment"                     = "Add a Comment";
-"desk.library.thread.Conversation"                      = "Conversations";
-"desk_sdk_network_alert"                                = "Network lost";
-"desk_library_community_idea"                           = "Idea";
-"desk_library_community_problem"                        = "Problem";
-"desk_library_community_question"                       = "Question";
-"desk_library_alert_ok"                                 = "OK";
-"desk_library_msg_topic_update_success" = "Topic successfully updated";
-"desk_library_msg_add_ticket_failed" = "Failed to add ticket";
-"desk.library.camera" = "Open camera";
-"desk.library.msg_article_failed" = "Failed to fetch the article";
-"desk.library.msg_upvote_failed" = "Failed to like the article";
-"desk.library.msg_downvote_failed" = "Failed to dislike the article";
-"desk_library_kb_section" = "Sections";
-"desk_library_msg_comment_update_failed" = "Failed to update the comment";
-"desk.library.msg_ticket_failed" = "Failed to fetch the tickets";
-"desk.library.ticket.closed.failed" = "Ticket failed to close";
-"desk.library.updated.message" = "Last updated about %s ago";
-"desk.library.empty_error_message_email" = "The email field cannot be blank";
-"desk.library.community.create_topic" = "Create topic";
-"desk.library.community.saveasdraft" = "Save as draft";
-"desk_library_community_attachfiles" = "Attach files";
-"desk_library_community_cancel" = "Cancel";
-"desk_library_alert_msg_delete_comment" = "Are you sure you want to delete this comment?";
-"desk.library.server_error" = "Oops! Something went wrong.";
-"desk_library_msg_comment_delete_success" = "Comment deleted";
-"desk_library_msg_close_ticket_success" = "Ticket closed";
-"desk_library_msg_close_ticket_failed" = "Failed to close the ticket";
-"desk_library_msg_attachment_uploading" = "Yet to upload the attachment(s)";
-"desk_library_community_continue" = "Continue";
-"desk_library_community_sub_category" = "Sub-Category";
-"desk_library_community_discard_alert" = "Do you want to proceed? Keep in mind that the changes will be lost.";
-"desk.library.community_comment_empty_error" = "Enter your comment";
-"desk.library.community_topic_type_description" = "Change type";
-"desk.library.no_data_msg_community" = "There are no communities here.";
-"desk_library_msg_priority_update_success" = "Priority updated successfully";
-"desk_library_msg_priority_update_failed" = "Failed to update Priority";
-"desk_library_ticket_content_length_error" = "Content length exceeds the limit defined";
-"desk_library_msg_topic_update_failed" = "Failed to update the topic";
-"desk.library.msg_conversation_failed" = "Could not fetch ticket details";
-"desk_library_community_comments_show_more" = "Show more";
-"desk.library.community.edit_topic" = "Edit topic";
-"desk_library_comment_emoji_character_error" = "Emojis not allowed in comments";
-"desk_library_msg_attaching_file" = "Attaching your files…";
-"desk.library.community_category_comments" = "%@ comments";
-"desk_library_msg_topic_delete_success" = "Topic deleted";
-"desk_library_community_title_error" = "Enter title";
-"desk_library_tag_spl_character_error" = "Special characters not allowed in tags";
-"desk_library_alert_msg_delete_topic" = "Are you sure you want to delete this topic?";
-"desk.library.msg_comment_failed" = "Failed to add comment";
-"zdsdk.community.discussion.Count" = "Discussions (%@)";
