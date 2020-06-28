@@ -1,0 +1,1033 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2 (swiftlang-1103.0.32.1 clang-1103.0.32.29)
+// swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZohoDeskPortalAPIKit
+import Foundation
+import Swift
+import WebKit
+@_exported import ZohoDeskPortalAPIKit
+@objc @_inheritsConvenienceInitializers @objcMembers public class ZohoDeskPortalSDK : ObjectiveC.NSObject {
+  @objc public static func initialize(orgID: Swift.String, appID: Swift.String, dataCenter: ZohoDeskPortalAPIKit.ZDPDataCenter = .US)
+  @objc public static var isUserLoggedIn: Swift.Bool {
+    @objc get
+  }
+  @_inheritsConvenienceInitializers @objc(ZohoDeskPortalSDKArticle) public class Article : ObjectiveC.NSObject {
+    @objc deinit
+    @objc override dynamic public init()
+  }
+  @_inheritsConvenienceInitializers @objc(ZohoDeskPortalSDKTicket) public class Ticket : ObjectiveC.NSObject {
+    @objc deinit
+    @objc override dynamic public init()
+  }
+  @_inheritsConvenienceInitializers @objc(ZohoDeskPortalSDKCommunity) public class Community : ObjectiveC.NSObject {
+    @objc deinit
+    @objc override dynamic public init()
+  }
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension ZohoDeskPortalSDK {
+  @objc public static func disableLogs()
+  @objc public static func login(withUserToken identifier: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func getUserInformation(onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPortal.Profile?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func updateUserInformation(with dict: [Swift.String : Swift.String], onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPortal.Profile?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func logout(onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func clearAllLocalData()
+  @objc public static func getDepartments(onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPortal.Department]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getProducts(inDepartmentID deptID: Swift.String, params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPortal.Product]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getContent(from url: Swift.String, onCompletion handler: @escaping (Foundation.Data?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func syncSettings(onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPortal.Settings?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func enablePushNotification(deviceToken: Swift.String, isTestDevice: Swift.Bool = false, mode: ZohoDeskPortalAPIKit.APNSmode)
+  @objc public static func disablePushNotifications(deviceToken: Swift.String, mode: ZohoDeskPortalAPIKit.APNSmode, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+}
+extension ZohoDeskPortalSDK.Article {
+  @objc public static func get(forID articleID: Swift.String, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPArticleDetail?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getList(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPArticle]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func get(withLink permalink: Swift.String, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPArticleDetail?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getRelated(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPArticle]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getAttachments(forArticleID articleID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPArticleAttachment]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getContent(ofAttachmentID attachmentID: Swift.String, inArticleID articleID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Foundation.Data?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func like(_ articleID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func dislike(_ articleID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func post(_ feedback: ZohoDeskPortalAPIKit.ZDPArticle.Feedback, forArticleID articleID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func search(_ keyword: Swift.String, inCategoryID categoryID: Swift.String?, _ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPArticle]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getCategories(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPArticle.CategoryDetail]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getCategoriesByPermalink(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPArticle.CategoryDetail]?, Foundation.NSError?) -> Swift.Void)
+}
+extension ZohoDeskPortalSDK.Ticket {
+  @objc public static func getLayouts(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPTicket.Layout]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getForm(_ params: [Swift.String : Any]?, headers: [Swift.String : Swift.String]?, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPTicket.Form?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getTemplates(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPTicket.Template]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getTemplate(withID templateID: Swift.String, onCompletion handler: @escaping ([Swift.String : Any]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getFields(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPTicket.Field]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getLayoutRules(params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPTicket.LayoutRule]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getValidationRules(params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPTicket.ValidationRule]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func add(withFields fields: [Swift.String : Any], onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPTicket?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func addAsGuest(withFields fields: [Swift.String : Any], onCompletion handler: @escaping (Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func updateTicket(withID id: Swift.String, priority: Swift.String?, isClosed: Swift.Bool, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPTicket?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getList(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPTicket]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func get(forID ticketID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPTicket?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getThreads(forTicketID ticketID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping ([[Swift.String : Any]]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getThread(withID threadID: Swift.String, forTicketID ticketID: Swift.String, onCompletion handler: @escaping ([Swift.String : Any]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func reply(_ thread: [Swift.String : Any], toTicketID ticketID: Swift.String, onCompletion handler: @escaping ([Swift.String : Any]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func edit(_ thread: [Swift.String : Any], withID threadID: Swift.String, inTicketID ticketID: Swift.String, onCompletion handler: @escaping ([Swift.String : Any]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getConversations(forTicketID ticketID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping ([[Swift.String : Any]]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getComments(forTicketID ticketID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping ([[Swift.String : Any]]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func add(_ comment: [Swift.String : Any], toTicketID ticketID: Swift.String, onCompletion handler: @escaping ([Swift.String : Any]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func edit(_ comment: [Swift.String : Any], withID commentID: Swift.String, toTicketID ticketID: Swift.String, onCompletion handler: @escaping ([Swift.String : Any]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func addAttachment(with data: Foundation.Data, andName fileName: Swift.String, using delegate: ZohoDeskPortalAPIKit.ZDPUploaderDelegate? = nil, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPortal.Attachment?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getContent(ofAttachmentID attachmentID: Swift.String, forCommentID commentID: Swift.String, inTicketID ticketID: Swift.String, onCompletion handler: @escaping (Foundation.Data?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getContent(ofAttachmentID attachmentID: Swift.String, forthreadID threadID: Swift.String, inTicketID ticketID: Swift.String, onCompletion handler: @escaping (Foundation.Data?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func deleteComment(withID commentID: Swift.String, forTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+}
+extension ZohoDeskPortalSDK.Community {
+  @objc public static func getCategories(onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPCommunityCategoryDetail]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func followCategory(withID categoryID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func unfollowCategory(withID categoryID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func getTopics(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPCommunity.TopicDetail]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getMostDisuccedTopics(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPCommunity.TopicDetail]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getMostPopularTopics(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPCommunity.TopicDetail]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getTopic(withID topicID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.TopicDetail?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func add(_ topic: ZohoDeskPortalAPIKit.ZDPCommunity.TopicData, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.TopicDetail?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func moveDraft(withID topicID: Swift.String, toCategoryID categoryID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func edit(_ topic: ZohoDeskPortalAPIKit.ZDPCommunity.TopicData, withID topicID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.TopicDetail?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func followTopic(withID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func unfollowTopic(withID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func likeTopic(withID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func deleteTopic(withID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func getTopicDrafts(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPCommunity.Topic]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getComments(ofTopicID topicID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPCommunity.Comment]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func postComment(_ comment: ZohoDeskPortalAPIKit.ZDPCommunityCommentData, forTopicID topicID: Swift.String, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.Comment?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func updateComment(_ comment: ZohoDeskPortalAPIKit.ZDPCommunityCommentData, withID id: Swift.String, forTopicID topicID: Swift.String, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.Comment?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func deleteComment(withID id: Swift.String, forTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func postReply(_ data: ZohoDeskPortalAPIKit.ZDPCommunityCommentData, forCommentID commentID: Swift.String, inTopicID topicID: Swift.String, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.Comment?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func updateReply(_ comment: ZohoDeskPortalAPIKit.ZDPCommunityCommentData, withID id: Swift.String, forCommentID commentID: Swift.String, inTopicID topicID: Swift.String, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.Comment?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func deleteReply(withID id: Swift.String, forCommentID commentID: Swift.String, inTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func addAttachment(with data: Foundation.Data, andName fileName: Swift.String, using delegate: ZohoDeskPortalAPIKit.ZDPUploaderDelegate? = nil, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPortal.Attachment?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getContent(ofAttachmentID attachmentID: Swift.String, forCommentID commentID: Swift.String?, inTopicID topicID: Swift.String, onCompletion handler: @escaping (Foundation.Data?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func searchTopics(keyword: Swift.String, otherParams: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPCommunity.TopicDetail]?, Foundation.NSError?) -> Swift.Void)
+  @objc public static func getPreferences(onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.TopicPreferences?, Foundation.NSError?) -> Swift.Void)
+}
+@objc public class ZDPTicket : ObjectiveC.NSObject, Swift.Codable {
+  public typealias Dependency = [Swift.String : [Swift.String : [Swift.String]]]
+  @objc public var ticketNumber: Swift.String, modifiedTime: Swift.String
+  @objc public var creator: ZohoDeskPortalAPIKit.ZDPortal.User
+  @objc public var subject: Swift.String
+  @objc public var dueDate: Swift.String?
+  @objc public var departmentID: Swift.String, channel: Swift.String, threadCount: Swift.String
+  @objc public var onholdTime: Swift.String?
+  @objc public var priority: Swift.String?
+  @objc public var assigneeID: Swift.String?, closedTime: Swift.String?
+  @objc public var assignee: ZohoDeskPortalAPIKit.ZDPortal.User?
+  @objc public var commentCount: Swift.String, createdTime: Swift.String, id: Swift.String, status: Swift.String
+  @objc public var tickeDescription: Swift.String?
+  @objc public var resolution: Swift.String?, responseDueDate: Swift.String?
+  @objc public var modifiedBy: ZohoDeskPortalAPIKit.ZDPortal.User?
+  @objc public var email: Swift.String?
+  @objc public var productID: Swift.String?
+  @objc public var contactID: Swift.String?, classification: Swift.String?
+  @objc public var teamID: Swift.String?
+  @objc public var phone: Swift.String?
+  @objc public var hasBlueprint: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  public init(ticketNumber: Swift.String, modifiedTime: Swift.String, creator: ZohoDeskPortalAPIKit.ZDPortal.User, subject: Swift.String, dueDate: Swift.String?, departmentID: Swift.String, channel: Swift.String, threadCount: Swift.String, onholdTime: Swift.String?, priority: Swift.String, assigneeID: Swift.String?, closedTime: Swift.String?, commentCount: Swift.String, createdTime: Swift.String, id: Swift.String, status: Swift.String, tickeDescription: Swift.String?, resolution: Swift.String?, responseDueDate: Swift.String?, modifiedBy: ZohoDeskPortalAPIKit.ZDPortal.User?, email: Swift.String?, productID: Swift.String?, contactID: Swift.String?, classification: Swift.String?, teamID: Swift.String?, assignee: ZohoDeskPortalAPIKit.ZDPortal.User?, hasBlueprint: Swift.Bool?)
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension ZDPTicket {
+  @objc public class Data : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var departmentID: Swift.String, subject: Swift.String
+    @objc public var productID: Swift.String?, phone: Swift.String?
+    @objc public var ticketDescription: Swift.String?, priority: Swift.String?, classification: Swift.String?
+    public init(subject: Swift.String, departmentID: Swift.String)
+    public init(productID: Swift.String?, phone: Swift.String?, subject: Swift.String, departmentID: Swift.String, ticketDescription: Swift.String?, priority: Swift.String?, classification: Swift.String?)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @_hasMissingDesignatedInitializers @objc public class Form : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var sections: [ZohoDeskPortalAPIKit.ZDPTicket.Section]
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class Section : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var sectionName: Swift.String
+    @objc public var fields: [ZohoDeskPortalAPIKit.ZDPTicket.Field]
+    public init(sectionName: Swift.String, fields: [ZohoDeskPortalAPIKit.ZDPTicket.Field])
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc(ZDTicketField) final public class Field : ObjectiveC.NSObject {
+    @objc final public var displayLabel: Swift.String?
+    @objc final public var i18NLabel: Swift.String?, apiName: Swift.String?
+    @objc final public var id: Swift.String?
+    @objc final public var name: Swift.String?
+    @objc final public var type: Swift.String
+    @objc final public var isMandatory: Swift.Bool
+    @objc final public var allowedValues: [Swift.String]?
+    @objc final public var dependency: ZohoDeskPortalAPIKit.ZDPTicket.Dependency?
+    @objc final public var defaultValue: Swift.String?, toolTip: Swift.String?, toolTipType: Swift.String?, sortBy: Swift.String?
+    @objc final public var statusMapping: [ZohoDeskPortalAPIKit.ZDPTicket.StatusMap]?
+    @objc final public var restoreOnReplyValues: [Swift.String]?
+    @objc final public var roundingOption: Swift.String?
+    @objc final public var fieldName: Swift.String?
+    @objc final public var uploadAttachment: Swift.String?, captchaURL: Swift.String?
+    @objc final public var isVisible: Swift.Bool {
+      @objc get
+      @objc set
+    }
+    @objc final public var maxLength: Swift.Int {
+      @objc get
+      @objc set
+    }
+    @objc final public var precison: Swift.Int {
+      @objc get
+      @objc set
+    }
+    @objc final public var decimals: Swift.Int {
+      @objc get
+      @objc set
+    }
+    @objc final public var isReadOnly: Swift.Bool {
+      @objc get
+      @objc set
+    }
+    @objc final public var isCustomField: Swift.Bool {
+      @objc get
+      @objc set
+    }
+    public init(displayLabel: Swift.String?, apiName: Swift.String?, isReadOnly: Swift.Bool?, isCustomField: Swift.Bool?, i18NLabel: Swift.String?, name: Swift.String?, id: Swift.String?, isVisible: Swift.Bool?, type: Swift.String, maxLength: Swift.Int?, isMandatory: Swift.Bool, allowedValues: [Swift.String]?, dependency: ZohoDeskPortalAPIKit.ZDPTicket.Dependency?, defaultValue: Swift.String?, toolTip: Swift.String?, toolTipType: Swift.String?, sortBy: Swift.String?, statusMapping: [ZohoDeskPortalAPIKit.ZDPTicket.StatusMap]?, restoreOnReplyValues: [Swift.String]?, roundingPrecision: Swift.Int?, decimalPlaces: Swift.Int?, roundingOption: Swift.String?, uploadAttachment: Swift.String?, captchaURL: Swift.String?, fieldName: Swift.String?)
+    public init(type: Swift.String, isMandatory: Swift.Bool)
+    @objc deinit
+    @objc override dynamic public init()
+  }
+  @_hasMissingDesignatedInitializers @objc public class StatusMap : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var mappingValue: Swift.String
+    @objc public var name: Swift.String
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class Template : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var ticketTemplateName: Swift.String, id: Swift.String
+    public init(ticketTemplateName: Swift.String, id: Swift.String)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class TemplateDetail : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var customFields: [Swift.String : Swift.String]?
+    @objc public var productID: Swift.String?, contactID: Swift.String?, subject: Swift.String?
+    @objc public var departmentID: Swift.String
+    @objc public var dueDate: Swift.String?, channel: Swift.String?, templateDescription: Swift.String?
+    @objc public var priority: Swift.String
+    @objc public var assigneeID: Swift.String?, resolution: Swift.String?, teamID: Swift.String?
+    @objc public var email: Swift.String, status: Swift.String
+    public init(customFields: [Swift.String : Swift.String]?, productID: Swift.String?, contactID: Swift.String?, subject: Swift.String?, departmentID: Swift.String, dueDate: Swift.String?, channel: Swift.String?, templateDescription: Swift.String?, priority: Swift.String, assigneeID: Swift.String?, resolution: Swift.String?, teamID: Swift.String?, email: Swift.String, status: Swift.String)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public enum CommentContentType : Swift.Int {
+    case html
+    case plainText
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public class Layout : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var departmentID: Swift.String
+    @objc public var hasLogo: Swift.Bool
+    @objc public var id: Swift.String
+    @objc public var isDefaultLayout: Swift.Bool, isStandardLayout: Swift.Bool
+    @objc public var layoutDesc: Swift.String, layoutName: Swift.String, module: Swift.String
+    public init(departmentID: Swift.String, hasLogo: Swift.Bool, id: Swift.String, isDefaultLayout: Swift.Bool, isStandardLayout: Swift.Bool, layoutDesc: Swift.String, layoutName: Swift.String, module: Swift.String)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+}
+extension ZDPTicket.Field : Swift.Codable {
+  final public func encode(to encoder: Swift.Encoder) throws
+  convenience public init(from decoder: Swift.Decoder) throws
+}
+@objc public enum ZDPDataCenter : Swift.Int {
+  case US
+  case CN
+  case IN
+  case EU
+  case AU
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension UserDefaults {
+  public func parse<AnyDecodable>(forKey key: Swift.String) -> AnyDecodable? where AnyDecodable : Swift.Decodable, AnyDecodable : Swift.Encodable
+}
+@_hasMissingDesignatedInitializers public class ZDPNotification {
+  public static var userLoggedOut: Foundation.Notification {
+    get
+  }
+  public static var userLoggedIn: Foundation.Notification {
+    get
+  }
+  @objc deinit
+}
+public struct PNConstants {
+  #warning("remove public and change implementation before release")
+  public static var bundleName: Swift.String
+}
+public struct ZDPIcon {
+  public static var fontName: Swift.String {
+    get
+  }
+}
+@objc public enum APNSmode : Swift.Int {
+  case sandbox
+  case production
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ZDPCache {
+  public static var profile: ZohoDeskPortalAPIKit.ZDPortal.Profile?
+  public static var settings: ZohoDeskPortalAPIKit.ZDPortal.Settings?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class ZDPDefaults : ObjectiveC.NSObject {
+  public static var shared: ZohoDeskPortalAPIKit.ZDPDefaults
+  @ZohoDeskPortalAPIKit.ZDPDefault public var isForumsVisible: Swift.Bool {
+    get
+    set
+    _modify
+  }
+  @ZohoDeskPortalAPIKit.ZDPDefault public var isKBvisible: Swift.Bool {
+    get
+    set
+    _modify
+  }
+  @ZohoDeskPortalAPIKit.ZDPDefault public var isHelpCenterPublic: Swift.Bool {
+    get
+    set
+    _modify
+  }
+  @ZohoDeskPortalAPIKit.ZDPDefault public var userID: Swift.String? {
+    get
+    set
+    _modify
+  }
+  public var canShowCommunity: Swift.Bool {
+    get
+  }
+  public var canShowKB: Swift.Bool {
+    get
+  }
+  public var canShowHelpCenter: Swift.Bool {
+    get
+  }
+  public var dataCenter: ZohoDeskPortalAPIKit.ZDPDataCenter {
+    get
+    set
+  }
+  @objc deinit
+}
+@propertyWrapper public struct ZDPDefault<T> {
+  public var wrappedValue: T {
+    get
+    set
+  }
+}
+public class DPAuthenticator {
+  public init(clientID: Swift.String, clientSecret: Swift.String, portalID: Swift.String, scope: [Swift.String], urlScheme: Swift.String, accountsPortalURL: Swift.String)
+  public func getFirstTimeToken(withUserToken identifier: Swift.String, onCompletion handler: @escaping (Swift.Result<Swift.String, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  public func getOAuthToken(onCompletion handler: @escaping (Swift.Result<Swift.String, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  public func isUserLoggedIn() -> Swift.Bool
+  public func logout(onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
+}
+@objc public protocol ZDPLoggable {
+  @objc func log(_ message: Swift.String)
+}
+@_hasMissingDesignatedInitializers public class ZDPLogger : ZohoDeskPortalAPIKit.ZDPLoggable {
+  public static var shared: ZohoDeskPortalAPIKit.ZDPLoggable
+  @objc public func log(_ message: Swift.String)
+  @objc deinit
+}
+extension ZDPTicket {
+  @objc public class LayoutRule : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let fieldConditions: [ZohoDeskPortalAPIKit.ZDPTicket.LayoutFD]
+    @objc final public let modifiedTime: Swift.String, fieldName: Swift.String, createdBy: Swift.String, name: Swift.String
+    @objc final public let datumDescription: Swift.String, createdTime: Swift.String, modifiedBy: Swift.String, id: Swift.String
+    @objc final public let layoutID: Swift.String, status: Swift.String
+    public init(fieldConditions: [ZohoDeskPortalAPIKit.ZDPTicket.LayoutFD], modifiedTime: Swift.String, fieldName: Swift.String, createdBy: Swift.String, name: Swift.String, datumDescription: Swift.String, createdTime: Swift.String, modifiedBy: Swift.String, id: Swift.String, layoutID: Swift.String, status: Swift.String)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class ValidationRule : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let fieldConditions: [ZohoDeskPortalAPIKit.ZDPTicket.ValidationFD]
+    @objc final public let modifiedTime: Swift.String, fieldName: Swift.String, createdBy: Swift.String, createdTime: Swift.String
+    @objc final public let modifiedBy: Swift.String, id: Swift.String, layoutID: Swift.String, status: Swift.String
+    public init(fieldConditions: [ZohoDeskPortalAPIKit.ZDPTicket.ValidationFD], modifiedTime: Swift.String, fieldName: Swift.String, createdBy: Swift.String, createdTime: Swift.String, modifiedBy: Swift.String, id: Swift.String, layoutID: Swift.String, status: Swift.String)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class LayoutFD : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let name: Swift.String, pattern: Swift.String
+    @objc final public let conditions: [ZohoDeskPortalAPIKit.ZDPTicket.Condition]
+    @objc final public let actions: ZohoDeskPortalAPIKit.ZDPTicket.LayoutActions
+    public init(name: Swift.String, pattern: Swift.String, conditions: [ZohoDeskPortalAPIKit.ZDPTicket.Condition], actions: ZohoDeskPortalAPIKit.ZDPTicket.LayoutActions)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class ValidationFD : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let name: Swift.String, pattern: Swift.String
+    @objc final public let conditions: [ZohoDeskPortalAPIKit.ZDPTicket.Condition]
+    @objc final public let actions: ZohoDeskPortalAPIKit.ZDPTicket.ValidationActions
+    public init(name: Swift.String, pattern: Swift.String, conditions: [ZohoDeskPortalAPIKit.ZDPTicket.Condition], actions: ZohoDeskPortalAPIKit.ZDPTicket.ValidationActions)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class LayoutActions : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let showSections: [Swift.String], showFields: [Swift.String], setMandatoryFields: [Swift.String]
+    public init(showSections: [Swift.String], showFields: [Swift.String], setMandatoryFields: [Swift.String])
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class ValidationActions : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let alert: Swift.String
+    public init(alert: Swift.String)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class Condition : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let displayValue: [Swift.String]
+    @objc final public let condition: Swift.String, fieldName: Swift.String
+    @objc final public let value: [Swift.String]
+    public init(displayValue: [Swift.String], condition: Swift.String, fieldName: Swift.String, value: [Swift.String])
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+}
+@_inheritsConvenienceInitializers @objc public class ZDPCommunity : ObjectiveC.NSObject {
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension ZDPCommunity {
+  @objc public class TopicData : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var categoryID: Swift.String, subject: Swift.String, content: Swift.String
+    @objc public var attachmentIDs: [Swift.String]?
+    @objc public var tags: [Swift.String]?
+    @objc public var topicType: ZohoDeskPortalAPIKit.ZDPCTopicType {
+      @objc get
+      @objc set
+    }
+    @objc public var isDraft: Swift.Bool {
+      @objc get
+      @objc set
+    }
+    @objc public var notifyMe: Swift.Bool {
+      @objc get
+      @objc set
+    }
+    public init(subject: Swift.String, content: Swift.String, type: ZohoDeskPortalAPIKit.ZDPCTopicType, categoryID: Swift.String)
+    public init(subject: Swift.String, isDraft: Swift.Bool, attachmentIDS: [Swift.String], type: ZohoDeskPortalAPIKit.ZDPCTopicType, content: Swift.String, categoryID: Swift.String, tags: [Swift.String], notifyMe: Swift.Bool)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class Topic : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var id: Swift.String, subject: Swift.String, type: Swift.String
+    public init(id: Swift.String, subject: Swift.String, type: Swift.String)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc(ZDPCommunityTopic) public class TopicDetail : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var id: Swift.String, subject: Swift.String, content: Swift.String
+    @objc public var creator: ZohoDeskPortalAPIKit.ZDPortal.User
+    @objc public var status: Swift.String, label: Swift.String, permalink: Swift.String, type: Swift.String
+    @objc public var createdTime: Swift.String, commentCount: Swift.String, likeCount: Swift.String
+    @objc public var isVoted: Swift.Bool
+    @objc public var categoryID: Swift.String
+    @objc public var lastCommenter: ZohoDeskPortalAPIKit.ZDPortal.User?
+    @objc public var latestCommentTime: Swift.String?
+    @objc public var attachments: [ZohoDeskPortalAPIKit.ZDPortal.Attachment] {
+      @objc get
+      @objc set
+    }
+    @objc public var viewCount: Swift.String?
+    @objc public var followersCount: Swift.String?
+    @objc public var isFollowing: Swift.Bool {
+      @objc get
+    }
+    @objc public var isSticky: Swift.Bool {
+      @objc get
+    }
+    @objc public var isDraft: Swift.Bool {
+      @objc get
+    }
+    @objc public var isLocked: Swift.Bool {
+      @objc get
+    }
+    @objc public var notifyMe: Swift.Bool {
+      @objc get
+    }
+    @objc public var ticket: ZohoDeskPortalAPIKit.ZDPCTicket?
+    @objc public var tags: [ZohoDeskPortalAPIKit.ZDPCommunity.Tag] {
+      @objc get
+      @objc set
+    }
+    public init(id: Swift.String, subject: Swift.String, content: Swift.String, creator: ZohoDeskPortalAPIKit.ZDPortal.User, status: Swift.String, label: Swift.String, permalink: Swift.String, type: Swift.String, createdTime: Swift.String, latestCommentTime: Swift.String, commentCount: Swift.String, likeCount: Swift.String, isVoted: Swift.Bool, categoryID: Swift.String, lastCommenter: ZohoDeskPortalAPIKit.ZDPortal.User, attachments: [ZohoDeskPortalAPIKit.ZDPortal.Attachment])
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class Tag : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var name: Swift.String, permalink: Swift.String
+    public init(name: Swift.String, permalink: Swift.String)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class Comment : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var id: Swift.String, status: Swift.String
+    @objc public var content: Swift.String, createdTime: Swift.String, modifiedTime: Swift.String
+    @objc public var attachments: [ZohoDeskPortalAPIKit.ZDPortal.Attachment]
+    @objc public var creator: ZohoDeskPortalAPIKit.ZDPortal.User
+    @objc public var replies: [ZohoDeskPortalAPIKit.ZDPCommunity.Comment] {
+      @objc get
+      @objc set
+    }
+    public init(id: Swift.String, status: Swift.String, replies: [ZohoDeskPortalAPIKit.ZDPCommunity.Comment]?, content: Swift.String, createdTime: Swift.String, modifiedTime: Swift.String, attachments: [ZohoDeskPortalAPIKit.ZDPortal.Attachment], creator: ZohoDeskPortalAPIKit.ZDPortal.User)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class TopicPreferences : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var defaultTopicType: Swift.String
+    @objc public var topicTypes: [Swift.String]
+    public init(defaultTopicType: Swift.String, topicTypes: [Swift.String])
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+}
+@objc public class ZDPCommunityCommentData : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var attachmentIDs: [Swift.String]
+  @objc public var content: Swift.String
+  public init(attachmentIDs: [Swift.String], content: Swift.String)
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc public class ZDPCommunityCategory : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var name: Swift.String, id: Swift.String
+  public init(name: Swift.String, id: Swift.String)
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc public class ZDPCommunityCategoryDetail : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var isFollowing: Swift.Bool
+  @objc public var categoryDescription: Swift.String, commentCount: Swift.String
+  @objc public var photoURL: Swift.String?
+  @objc public var isLocked: Swift.Bool
+  @objc public var name: Swift.String, postCount: Swift.String
+  @objc public var parentCategoryID: Swift.String?
+  @objc public var id: Swift.String, position: Swift.String, followersCount: Swift.String, permalink: Swift.String
+  @objc public var subCategories: [ZohoDeskPortalAPIKit.ZDPCommunityCategoryDetail]
+  public init(isFollowing: Swift.Bool, categoryDescription: Swift.String, commentCount: Swift.String, photoURL: Swift.String?, isLocked: Swift.Bool, name: Swift.String, postCount: Swift.String, parentCategoryID: Swift.String?, id: Swift.String, position: Swift.String, followersCount: Swift.String, permalink: Swift.String, child: [ZohoDeskPortalAPIKit.ZDPCommunityCategoryDetail])
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc public enum ZDPCTopicType : Swift.Int, Swift.Codable {
+  case question
+  case problem
+  case idea
+  case discussion
+  case announcement
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class ZDPCTicket : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var number: Swift.String, id: Swift.String
+  public init(number: Swift.String, id: Swift.String)
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+open class ZDPortalBase {
+  required public init()
+  open func configure()
+  open func clearData()
+  open func initializeChat()
+  open func didUpdateUserInformation()
+  open func enableChatNotification(deviceToken: Swift.String, isTestDevice: Swift.Bool, mode: ZohoDeskPortalAPIKit.APNSmode)
+  @objc deinit
+}
+extension String {
+  public func getClassFromBundle(withID bundleID: Swift.String) -> Swift.AnyClass?
+}
+@objc public protocol ZDPUploaderDelegate : AnyObject {
+  @objc func uploaded(fraction: Swift.Float)
+}
+@objc public class ZDPArticle : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var summary: Swift.String, id: Swift.String, title: Swift.String, categoryID: Swift.String
+  @objc public var permalink: Swift.String
+  @objc public var category: ZohoDeskPortalAPIKit.ZDPArticleCategory?
+  @objc public var createdTime: Swift.String?, modifiedTime: Swift.String?
+  @objc public var webURL: Swift.String
+  public init(summary: Swift.String, id: Swift.String, title: Swift.String, categoryID: Swift.String, permalink: Swift.String, category: ZohoDeskPortalAPIKit.ZDPArticleCategory, createdTime: Swift.String, modifiedTime: Swift.String, webURL: Swift.String)
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension ZDPArticle {
+  @objc public class CategoryDetail : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var articlesCount: Swift.Int
+    @objc public var level: Swift.String
+    @objc public var order: Swift.String?
+    @objc public var categoryDescription: Swift.String?
+    @objc public var articleViewType: Swift.String?
+    @objc public var smartViewArticle: Swift.String?
+    @objc public var id: Swift.String, name: Swift.String
+    @objc public var parentCategoryID: Swift.String?, departmentID: Swift.String?
+    @objc public var permalink: Swift.String
+    @objc public var logoURL: Swift.String?
+    @objc public var visibility: Swift.String
+    @objc public var associatedDepartments: [Swift.String]?
+    @objc public var eworkspaceID: Swift.String?, workspaceID: Swift.String?
+    @objc public var webURL: Swift.String?
+    @objc public var subCategories: [ZohoDeskPortalAPIKit.ZDPArticle.CategoryDetail] {
+      @objc get
+      @objc set
+    }
+    @objc public var featuredCategory: Swift.Bool {
+      @objc get
+      @objc set
+    }
+    @objc public var helpcenterID: Swift.String? {
+      @objc get
+      @objc set
+    }
+    public init(level: Swift.String, categoryDescription: Swift.String?, featuredCategory: Swift.Bool, articleViewType: Swift.String?, smartViewArticle: Swift.String?, articlesCount: Swift.Int, id: Swift.String, name: Swift.String, parentCategoryID: Swift.String?, permalink: Swift.String, order: Swift.String, logoURL: Swift.String?, child: [ZohoDeskPortalAPIKit.ZDPArticle.CategoryDetail], visibility: Swift.String, departmentID: Swift.String?)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class Feedback : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var message: Swift.String
+    @objc public var email: Swift.String?
+    public init(message: Swift.String, email: Swift.String?)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+}
+@objc public class ZDPArticleDetail : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var next: ZohoDeskPortalAPIKit.ZDPArticleDetail.DPArticle?
+  @objc public var modifiedTime: Swift.String
+  @objc public var myVote: Swift.String?
+  @objc public var author: ZohoDeskPortalAPIKit.ZDPortal.User
+  @objc public var departmentID: Swift.String
+  @objc public var prev: ZohoDeskPortalAPIKit.ZDPArticleDetail.DPArticle?
+  @objc public var dislikeCount: Swift.String, likeCount: Swift.String, title: Swift.String
+  @objc public var tags: [Swift.String]
+  @objc public var answer: Swift.String
+  @objc public var webURL: Swift.String
+  @objc public var createdTime: Swift.String, id: Swift.String, permalink: Swift.String
+  @objc public var seo: ZohoDeskPortalAPIKit.SearchEngineOptimisation?
+  @objc public var categoryID: Swift.String
+  public init(next: ZohoDeskPortalAPIKit.ZDPArticleDetail.DPArticle?, modifiedTime: Swift.String, myVote: Swift.String?, author: ZohoDeskPortalAPIKit.ZDPortal.User, departmentID: Swift.String, prev: ZohoDeskPortalAPIKit.ZDPArticleDetail.DPArticle?, dislikeCount: Swift.String, likeCount: Swift.String, title: Swift.String, tags: [Swift.String], answer: Swift.String, webURL: Swift.String, createdTime: Swift.String, id: Swift.String, permalink: Swift.String, seo: ZohoDeskPortalAPIKit.SearchEngineOptimisation, categoryID: Swift.String)
+  @objc public class DPArticle : ObjectiveC.NSObject, Swift.Codable {
+    public init(id: Swift.String, title: Swift.String)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class SearchEngineOptimisation : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var keywords: Swift.String?, seoDescription: Swift.String?, title: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc public class ZDPArticleAttachment : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var contentURL: Swift.String
+  @objc public var size: Swift.String, name: Swift.String, createdTime: Swift.String
+  @objc public var inlineURL: Swift.String
+  @objc public var id: Swift.String
+  public init(contentURL: Swift.String, size: Swift.String, name: Swift.String, createdTime: Swift.String, inlineURL: Swift.String, id: Swift.String)
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc public class ZDPArticleCategory : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var name: Swift.String, id: Swift.String
+  public init(name: Swift.String, id: Swift.String)
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum ZDPError : Swift.Error {
+  case badURL
+  case noInternet(Foundation.NSError)
+  case internalServerError(Foundation.NSError)
+  case badRequest(Foundation.NSError)
+  case timedOut(Foundation.NSError)
+  case notFound(Foundation.NSError)
+  case accessDenied(Foundation.NSError)
+  case badResponse(Foundation.NSError)
+  case noData(Foundation.NSError)
+  case invalidStatusCode(Swift.Int)
+  case decodingFailed(Foundation.Data, Swift.Error)
+  case unknownError(Foundation.NSError)
+}
+@_hasMissingDesignatedInitializers public class ZohoDeskPortalKit {
+  public static func initialize(orgID: Swift.String, appID: Swift.String, dataCenter: ZohoDeskPortalAPIKit.ZDPDataCenter = .US)
+  @objc deinit
+}
+extension ZohoDeskPortalKit {
+  public static var isLogEnabled: Swift.Bool
+  public static func disableLogs()
+  public static func login(withUserToken token: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  public static var isUserLoggedIn: Swift.Bool {
+    get
+  }
+  public static func logout(onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  public static func clearAllLocalData()
+  public static func getUserInformation(onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPortal.Profile, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  public static func updateUserInformation(with dict: [Swift.String : Swift.String], onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPortal.Profile, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  public static func getDepartments(onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPortal.Department], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  public static func getProducts(inDepartmentID deptID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPortal.Product], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  public static func getContent(from url: Swift.String, onCompletion handler: @escaping (Swift.Result<Foundation.Data, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  public static func syncSettings(onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPortal.Settings, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  public static func enablePushNotifications(deviceToken: Swift.String, isTestDevice: Swift.Bool = false, mode: ZohoDeskPortalAPIKit.APNSmode)
+  public static func disablePushNotifications(deviceToken: Swift.String, mode: ZohoDeskPortalAPIKit.APNSmode, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+}
+extension ZohoDeskPortalKit {
+  @_hasMissingDesignatedInitializers public class Article {
+    public static func get(forID articleID: Swift.String, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPArticleDetail, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getList(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPArticle], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func get(withLink permalink: Swift.String, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPArticleDetail, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getRelated(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPArticle], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getAttachments(forArticleID articleID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPArticleAttachment], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getContent(ofAttachmentID attachmentID: Swift.String, inArticleID articleID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<Foundation.Data, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func like(articleID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func dislike(articleID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func post(_ feedback: ZohoDeskPortalAPIKit.ZDPArticle.Feedback, forArticleID articleID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func search(keyword: Swift.String, inCategoryID categoryID: Swift.String?, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPArticle], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getCategories(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPArticle.CategoryDetail], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getCategoriesByPermalink(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPArticle.CategoryDetail], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    @objc deinit
+  }
+}
+extension ZohoDeskPortalKit {
+  @_hasMissingDesignatedInitializers public class Ticket {
+    public static func getLayouts(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPTicket.Layout], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getForm(_ params: [Swift.String : Any]?, headers: [Swift.String : Swift.String]?, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPTicket.Form, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getTemplates(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPTicket.Template], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getTemplate(withID templateID: Swift.String, onCompletion handler: @escaping (Swift.Result<[Swift.String : Any], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getFields(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPTicket.Field], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getLayoutRules(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPTicket.LayoutRule], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getValidationRules(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPTicket.ValidationRule], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func add(withFields fields: [Swift.String : Any], onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPTicket, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func addAsGuest(withFields fields: [Swift.String : Any], onCompletion handler: @escaping (Swift.Result<Swift.String, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func updateTicket(withID id: Swift.String, priority: Swift.String?, isClosed: Swift.Bool, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPTicket, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getList(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPTicket], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func get(forID ticketID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPTicket, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getThreads(forTicketID ticketID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[[Swift.String : Any]], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getThread(withID threadID: Swift.String, forTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Result<[Swift.String : Any], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func reply(_ body: [Swift.String : Any], toTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Result<[Swift.String : Any], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func edit(_ body: [Swift.String : Any], withID threadID: Swift.String, inTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Result<[Swift.String : Any], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getConversations(forTicketID ticketID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[[Swift.String : Any]], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getComments(forTicketID ticketID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[[Swift.String : Any]], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func add(_ comment: [Swift.String : Any], toTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Result<[Swift.String : Any], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func edit(_ comment: [Swift.String : Any], withID commentID: Swift.String, toTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Result<[Swift.String : Any], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func addAttachment(with data: Foundation.Data, andName fileName: Swift.String, using delegate: ZohoDeskPortalAPIKit.ZDPUploaderDelegate? = nil, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPortal.Attachment, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getContent(ofAttachmentID attachmentID: Swift.String, forCommentID commentID: Swift.String, inTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Result<Foundation.Data, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getContent(ofAttachmentID attachmentID: Swift.String, forthreadID threadID: Swift.String, inTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Result<Foundation.Data, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func deleteComment(withID commentID: Swift.String, forTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    @objc deinit
+  }
+}
+extension ZohoDeskPortalKit {
+  @_hasMissingDesignatedInitializers public class Community {
+    public static func getCategories(onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunityCategoryDetail], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func followCategory(withID categoryID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func unfollowCategory(withID categoryID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func getTopics(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.TopicDetail], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getMostDiscussedTopics(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.TopicDetail], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getMostPopularTopics(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.TopicDetail], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func searchTopics(keyword: Swift.String, otherParams: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.TopicDetail], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getTopic(withID topicID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.TopicDetail, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func add(_ topic: ZohoDeskPortalAPIKit.ZDPCommunity.TopicData, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.TopicDetail, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func moveDraft(withID topicID: Swift.String, toCategoryID categoryID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func edit(_ topic: ZohoDeskPortalAPIKit.ZDPCommunity.TopicData, withID topicID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.TopicDetail, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func followTopic(withID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func unfollowTopic(withID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func likeTopic(withID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func deleteTopic(withID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func getTopicDrafts(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.Topic], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getFollowedCategories(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunityCategory], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getComments(ofTopicID topicID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.Comment], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func postComment(_ comment: ZohoDeskPortalAPIKit.ZDPCommunityCommentData, forTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.Comment, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func updateComment(_ comment: ZohoDeskPortalAPIKit.ZDPCommunityCommentData, withID id: Swift.String, forTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.Comment, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func deleteComment(withID id: Swift.String, forTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func postReply(_ data: ZohoDeskPortalAPIKit.ZDPCommunityCommentData, forCommentID commentID: Swift.String, inTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.Comment, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func updateReply(_ comment: ZohoDeskPortalAPIKit.ZDPCommunityCommentData, withID id: Swift.String, forCommentID commentID: Swift.String, inTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.Comment, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func deleteReply(withID id: Swift.String, forCommentID commentID: Swift.String, inTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func addAttachment(with data: Foundation.Data, andName fileName: Swift.String, using delegate: ZohoDeskPortalAPIKit.ZDPUploaderDelegate? = nil, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPortal.Attachment, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getContent(ofAttachmentID attachmentID: Swift.String, forCommentID commentID: Swift.String?, inTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Result<Foundation.Data, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    public static func getPreferences(onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.TopicPreferences, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    @objc deinit
+  }
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortal : ObjectiveC.NSObject {
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension ZDPortal {
+  @objc public class Profile : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var displayName: Swift.String
+    @objc public var facebook: Swift.String?, mobile: Swift.String?
+    @objc public var timeZone: Swift.String, fullName: Swift.String, emailID: Swift.String, countryLocale: Swift.String
+    @objc public var photoURL: Swift.String?, twitter: Swift.String?, phone: Swift.String?
+    @objc public var joiningTime: Swift.String
+    @objc public var groupIDS: [Swift.String]
+    @objc public var id: Swift.String
+    @objc public var email: [ZohoDeskPortalAPIKit.ZDPortal.Email]
+    public init(displayName: Swift.String, facebook: Swift.String?, mobile: Swift.String?, timeZone: Swift.String, fullName: Swift.String, emailID: Swift.String, countryLocale: Swift.String, photoURL: Swift.String?, twitter: Swift.String?, phone: Swift.String?, joiningTime: Swift.String, groupIDS: [Swift.String], id: Swift.String, email: [ZohoDeskPortalAPIKit.ZDPortal.Email])
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class Email : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var emailAddress: Swift.String
+    @objc public var isVerified: Swift.Bool, isPrimary: Swift.Bool
+    public init(emailAddress: Swift.String, isVerified: Swift.Bool, isPrimary: Swift.Bool)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class Department : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var photoURL: Swift.String?, deptDescription: Swift.String?
+    @objc public var name: Swift.String, id: Swift.String, nameInCustomerPortal: Swift.String
+    public init(photoURL: Swift.String, name: Swift.String, deptDescription: Swift.String, id: Swift.String, nameInCustomerPortal: Swift.String)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class User : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var photoURL: Swift.String?, type: Swift.String?, label: Swift.String?
+    @objc public var name: Swift.String?, id: Swift.String?
+    public init(photoURL: Swift.String?, name: Swift.String, id: Swift.String, type: Swift.String?, label: Swift.String?)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class Product : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var departmentIDS: [Swift.String]
+    @objc public var productName: Swift.String
+    @objc public var productDescription: Swift.String?, productCode: Swift.String?
+    @objc public var id: Swift.String
+    public init(departmentIDS: [Swift.String], productName: Swift.String, productDescription: Swift.String?, productCode: Swift.String?, id: Swift.String)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc(ZDPortalAttachment) public class Attachment : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var id: Swift.String, name: Swift.String, size: Swift.String
+    @objc public var downloadURL: Swift.String?
+    public init(id: Swift.String, name: Swift.String, size: Swift.String)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id, name, size
+    case downloadURL
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+    public init?(stringValue: Swift.String)
+    public var intValue: Swift.Int? {
+      get
+    }
+    public init?(intValue: Swift.Int)
+  }
+}
+extension ZDPortal {
+  @_hasMissingDesignatedInitializers @objc public class Settings : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var modifiedTime: Swift.String
+    @objc public var portalID: Swift.Int64
+    @objc public var preferences: ZohoDeskPortalAPIKit.ZDPortal.Preferences
+    @objc public var language: Swift.String
+    @objc public var portalName: Swift.String
+    @objc public var staticVersion: Swift.String, name: Swift.String, appSecretID: Swift.String
+    @objc public var asapPreferences: ZohoDeskPortalAPIKit.ZDPortal.ASAPsettings?
+    @objc public var ziaSkillSetInfo: [Swift.String : Swift.String]?
+    @objc public var chatAppKey: ZohoDeskPortalAPIKit.ZDPortal.ChatKitKey?
+    @objc public var chatAppKeyWithDC: ZohoDeskPortalAPIKit.ZDPortal.ChatKitKey?
+    @objc public var ziaPortalID: Swift.String?
+    @objc public var chatAccessKey: ZohoDeskPortalAPIKit.ZDPortal.ChatKitKey?
+    @objc public var businessHours: ZohoDeskPortalAPIKit.ZDPortal.BusinessHours?
+    @objc public var chatPreferences: ZohoDeskPortalAPIKit.ZDPortal.ChatKitSettings?
+    @objc public var clientAuthDomain: Swift.String?
+    @objc public var deskDomain: Swift.String?
+    @objc public var clientID: Swift.String?
+    @objc public var clientSecret: Swift.String?
+    @objc public var forumCategoryID: Swift.String? {
+      @objc get
+      @objc set
+    }
+    @objc public var departmentID: Swift.String? {
+      @objc get
+      @objc set
+    }
+    @objc public var kbCategoryID: Swift.String? {
+      @objc get
+      @objc set
+    }
+    public init(modifiedTime: Swift.String, portalID: Swift.Int64, preferences: ZohoDeskPortalAPIKit.ZDPortal.Preferences, language: Swift.String, portalName: Swift.String, staticVersion: Swift.String, name: Swift.String, appSecretID: Swift.String, asapPreferences: ZohoDeskPortalAPIKit.ZDPortal.ASAPsettings)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class ASAPsettings : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var isPushNotificationEnabled: Swift.Bool, isAgentPhotoEnabled: Swift.Bool, isLiveChatEnabled: Swift.Bool
+    public init(isPushNotificationEnabled: Swift.Bool, isAgentPhotoEnabled: Swift.Bool, isLiveChatEnabled: Swift.Bool)
+    @objc deinit
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class BusinessHours : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var timeZone: Swift.String
+    @objc public var holidayList: [Swift.String]
+    @objc public var isActive: Swift.Bool
+    @objc public var type: Swift.String
+    @objc public var timeDetails: [Swift.String : Swift.String]?
+    public init(timeZone: Swift.String, holidayList: [Swift.String], isActive: Swift.Bool, type: Swift.String, timeDetails: [Swift.String : Swift.String]?)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class ChatKitSettings : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var ios: ZohoDeskPortalAPIKit.ZDPortal.ChatSettings?, android: ZohoDeskPortalAPIKit.ZDPortal.ChatSettings?
+    public init(ios: ZohoDeskPortalAPIKit.ZDPortal.ChatSettings, android: ZohoDeskPortalAPIKit.ZDPortal.ChatSettings)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class ChatSettings : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var isAgentPhotoEnabled: Swift.Int, isPushNotificationEnabled: Swift.Int, isChatEnabled: Swift.Int
+    public init(isAgentPhotoEnabled: Swift.Int, isPushNotificationEnabled: Swift.Int, isChatEnabled: Swift.Int)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @objc public class ChatKitKey : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var ios: Swift.String?, android: Swift.String?
+    public init(ios: Swift.String, android: Swift.String)
+    @objc deinit
+    @objc override dynamic public init()
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  @_inheritsConvenienceInitializers @objc public class Preferences : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var isHelpCenterPublic: Swift.Bool, isForumsVisible: Swift.Bool, isSelfSignUpEnabled: Swift.Bool, isAccountTicketsVisible: Swift.Bool
+    @objc public var isTagsVisible: Swift.Bool, isKBVisible: Swift.Bool
+    public init(isHelpCenterPublic: Swift.Bool, isForumsVisible: Swift.Bool, isSelfSignUpEnabled: Swift.Bool, isAccountTicketsVisible: Swift.Bool, isTagsVisible: Swift.Bool, isKBVisible: Swift.Bool)
+    @objc override dynamic public init()
+    @objc deinit
+    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.CommentContentType : Swift.Equatable {}
+extension ZohoDeskPortalAPIKit.ZDPTicket.CommentContentType : Swift.Hashable {}
+extension ZohoDeskPortalAPIKit.ZDPTicket.CommentContentType : Swift.RawRepresentable {}
+extension ZohoDeskPortalAPIKit.ZDPDataCenter : Swift.Equatable {}
+extension ZohoDeskPortalAPIKit.ZDPDataCenter : Swift.Hashable {}
+extension ZohoDeskPortalAPIKit.ZDPDataCenter : Swift.RawRepresentable {}
+extension ZohoDeskPortalAPIKit.APNSmode : Swift.Equatable {}
+extension ZohoDeskPortalAPIKit.APNSmode : Swift.Hashable {}
+extension ZohoDeskPortalAPIKit.APNSmode : Swift.RawRepresentable {}
+extension ZohoDeskPortalAPIKit.ZDPCTopicType : Swift.Equatable {}
+extension ZohoDeskPortalAPIKit.ZDPCTopicType : Swift.Hashable {}
+extension ZohoDeskPortalAPIKit.ZDPCTopicType : Swift.RawRepresentable {}
+extension ZohoDeskPortalAPIKit.ZDPortal.CodingKeys : Swift.Equatable {}
+extension ZohoDeskPortalAPIKit.ZDPortal.CodingKeys : Swift.Hashable {}
+extension ZohoDeskPortalAPIKit.ZDPortal.CodingKeys : Swift.RawRepresentable {}
