@@ -27,9 +27,9 @@ s.author           = { "Zoho Desk mobile" => "desk-mobile@zohocorp.com" }
 s.source           = { :git => "https://github.com/zoho/ZohoDeskPortalSDK.git", :tag => s.version }
 s.platform         = :ios, '9.0'
 s.requires_arc     = true
-s.source_files     = "native/ZohoDeskPortalSDK.framework/**/*.{h,m,swift}"
+s.source_files     = "native/ZohoDeskPortalAPIKit.xcframework/*/ZohoDeskPortalAPIKit.framework/Headers/*.{h,m,swift}"
 s.public_header_files = "native/**/*.h"
-s.preserve_paths   = "native/ZohoDeskPortalSDK.framework"
+s.preserve_paths   = "native/ZohoDeskPortalAPIKit.xcframework"
 s.vendored_frameworks = "native/ZohoDeskPortalAPIKit.xcframework"
 s.frameworks       = 'UIKit','Foundation','SystemConfiguration'
 
