@@ -1,0 +1,17 @@
+{
+    "ZDSDKColor" : {
+        "applicationColor" : "#386CFB",
+        
+        "navigationBarBackgroundColor" : "#16181A",
+        "navigationBarTitleColor" : "#C9CFD8",
+        "navigationBarButtonColor" : "386CFB",
+        
+        "primaryBackgroundColor" : "#000000",
+        "secondaryBackgroundColor" : "#1C1C1E",
+        "tertiaryBackgroundColor" : "#2C2C2E",
+        
+        "primaryTextColor" : "#C9CFD8",
+        "secondaryTextColor" : "#676F79",
+        "tertiaryTextColor" : "#3E4348"
+    }
+}

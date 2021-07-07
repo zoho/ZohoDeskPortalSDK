@@ -1,0 +1,11 @@
+framework module ZohoDeskPortalAPIKit {
+  umbrella header "ZohoDeskPortalAPIKit.h"
+
+  export *
+  module * { export * }
+}
+
+module ZohoDeskPortalAPIKit.Swift {
+    header "ZohoDeskPortalAPIKit-Swift.h"
+    requires objc
+}

@@ -1,0 +1,42 @@
+#editor{
+        focus{ outline:none };
+        border-color: transparent !important;
+        object-fit:contain !important;
+        min-height: 100%;
+        max-width: 100% !important;
+        display: block;
+        font-size: 13pt;
+/*       display: inline-flex !important;*/
+        border-color: rgba(111,111,111,0.2) transparent;
+        max-width: 100% !important;
+        transform: translateZ(0);
+        will-change: transform;
+        background-color: transparent;
+        -webkit-filter: invert(100%) !important;
+        filter: invert(100%) !important;
+    }
+
+    a {
+        color: #01AA70 !important;
+         -webkit-filter: invert(100%) !important;
+         filter: invert(100%) !important;
+    }
+
+    img {
+        max-width: 100% !important;
+        object-fit: contain !important;
+        -webkit-filter: invert(100%) !important;
+        filter: invert(100%) !important;
+    }
+    div {
+        outline: none !important;
+        word-wrap: break-word;
+    }
+    [contentEditable=true]:empty::before {
+        content: attr(placeholder);
+        color:grey;
+        font-style:italic;
+        outline: 0px solid transparent;
+    }
+
+

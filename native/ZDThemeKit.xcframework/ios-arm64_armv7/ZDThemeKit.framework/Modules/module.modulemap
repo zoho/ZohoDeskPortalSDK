@@ -1,0 +1,11 @@
+framework module ZDThemeKit {
+  umbrella header "ZDThemeKit.h"
+
+  export *
+  module * { export * }
+}
+
+module ZDThemeKit.Swift {
+    header "ZDThemeKit-Swift.h"
+    requires objc
+}
