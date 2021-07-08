@@ -1,0 +1,11 @@
+framework module ZohoDeskPortalChat {
+  umbrella header "ZohoDeskPortalChat.h"
+
+  export *
+  module * { export * }
+}
+
+module ZohoDeskPortalChat.Swift {
+    header "ZohoDeskPortalChat-Swift.h"
+    requires objc
+}
