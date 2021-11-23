@@ -1,0 +1,23 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZohoDeskPortalChat
+import Foundation
+import Mobilisten
+import Swift
+import ZDThemeKit
+import ZohoDeskPortalAPIKit
+@_exported import ZohoDeskPortalChat
+import ZohoDeskPortalConfiguration
+extension ZDPortalChat {
+  public static func setColors()
+}
+extension ZDPortalChat {
+  public static func isWorkingTime() -> Swift.Bool
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortalChat : ObjectiveC.NSObject {
+  @objc public static func show()
+  @objc public static func setGuestUser(email: Swift.String, displayName: Swift.String?, phoneNumber: Swift.String?)
+  @objc public static func setLangage(identifier: Swift.String)
+  @objc deinit
+  @objc override dynamic public init()
+}

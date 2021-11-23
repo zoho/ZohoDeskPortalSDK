@@ -1,0 +1,1074 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target armv7-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Mobilisten
+import AVFoundation
+import AVKit
+import AddressBook
+import AssetsLibrary
+import AudioToolbox
+import Contacts
+import CoreData
+import CoreGraphics
+import CoreLocation
+import CoreServices
+import CoreTelephony
+import Dispatch
+import EventKit
+import Foundation
+import ImageIO
+import Intents
+import MapKit
+import MediaPlayer
+import MobileCoreServices
+@_exported import Mobilisten
+import ObjectiveC
+import Photos
+import QuartzCore
+import QuickLook
+import Swift
+import UIKit.UIGestureRecognizerSubclass
+import UIKit
+import UserNotifications
+import WebKit
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class SIQFAQCategory : ObjectiveC.NSObject {
+  @objc open var id: Swift.String
+  @objc open var name: Swift.String?
+  @objc open var articleCount: Swift.Int
+  @objc deinit
+}
+extension String {
+  public func urlEncode() -> Swift.String
+}
+extension UIWindow {
+  public var visibleViewControllerFromWindow: UIKit.UIViewController? {
+    get
+  }
+  public static func getVisibleViewControllerfromParent(_ vc: UIKit.UIViewController?) -> UIKit.UIViewController?
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class LCSharedHandler : ObjectiveC.NSObject {
+  @objc weak public var delegate: Mobilisten.ZohoSalesIQChatDelegate?
+  @objc public func setTitle(_ title: Swift.String?)
+  @objc public func clearMessages()
+  @objc public func clearData()
+  @objc public func setQuestion(_ question: Swift.String?)
+  @objc public func startChat(question: Swift.String)
+  @objc public var isEnabled: Swift.Bool {
+    @objc get
+  }
+  @objc public func setAgentEmail(_ email: Swift.String?)
+  @objc public func setLanguage(_ language: Mobilisten.Language)
+  @objc public func setLanguageWithCode(_ languageCode: Swift.String)
+  @objc public func getList(filter: Mobilisten.ChatStatus = .all, completion: Mobilisten.ConversationListFetchCompletionBlock? = nil)
+  @objc public func getDepartments(completion: Mobilisten.DepartmentListFetchCompletionBlock? = nil)
+  @objc public var multipleOpenRestricted: Swift.Bool {
+    @objc get
+  }
+  @objc public func setDepartment(_ department: Swift.String?)
+  @objc public func setDepartments(_ departments: [Swift.String]?)
+  @objc public func setVisibility(_ component: Mobilisten.ChatComponent, visible: Swift.Bool)
+  @objc public func setMessage(_ type: Mobilisten.SystemMessage, message: Swift.String?)
+  @objc public func setCustomChatIcon(image: UIKit.UIImage?, isTemplateImage: Swift.Bool = true)
+  @available(iOS, unavailable, message: "This method has been depricated.")
+  @objc public func setVisitorImage(_ image: UIKit.UIImage?)
+  @available(*, deprecated, message: "Customize the themeColor using `customTheme.themeColor` property in object from ZohoSalesIQ.Theme.baseTheme and set the custom theme using the ZohoSalesIQ.Theme.setTheme method")
+  @objc public func setThemeColor(_ color: UIKit.UIColor?)
+  @available(*, deprecated, message: "Customize in theme object using `customTheme.Navigation.backgroundColor` from ZohoSalesIQ.Theme.baseTheme and set the theme using the ZohoSalesIQ.Theme.setTheme method.")
+  @objc public func setBarColor(_ color: UIKit.UIColor)
+  @available(*, deprecated, message: "Customize in theme object using `customTheme.Navigation.tintColor` from ZohoSalesIQ.Theme.baseTheme and set the theme using the ZohoSalesIQ.Theme.setTheme method.")
+  @objc public func setBarTintColor(_ color: UIKit.UIColor)
+  @available(*, deprecated, message: "Customize in theme object using `customTheme.Navigation.titleColor` from ZohoSalesIQ.Theme.baseTheme and set the theme using the ZohoSalesIQ.Theme.setTheme method.")
+  @objc public func setBarTitleColor(_ color: UIKit.UIColor)
+  @available(*, deprecated)
+  @objc public func setSearchTintColor(_ color: UIKit.UIColor)
+  @available(iOS, unavailable, message: "This API is under construction.")
+  @objc public func setBarTitleFont(_ font: UIKit.UIFont)
+  @available(*, deprecated, message: "Customize in theme object using `customTheme.Chat.backgroundColor` from ZohoSalesIQ.Theme.baseTheme and set the customized theme using the ZohoSalesIQ.Theme.setTheme method.")
+  @objc public func setMessageWindowBackgroundColor(_ color: UIKit.UIColor)
+  @available(*, deprecated, message: "Customize in theme object using `customTheme.Chat.Message.Common.incomingBackgroundColor` from ZohoSalesIQ.Theme.baseTheme and set the customized theme using the ZohoSalesIQ.Theme.setTheme method.")
+  @objc public func setIncommingMessageBackgroundColor(_ color: UIKit.UIColor)
+  @available(*, deprecated, message: "Customize in theme object using `customTheme.Chat.Message.Common.outgoingBackgroundColor` from ZohoSalesIQ.Theme.baseTheme and set the customized theme using the ZohoSalesIQ.Theme.setTheme method.")
+  @objc public func setOutgoingMessageBackgroundColor(_ color: UIKit.UIColor)
+  @available(iOS, unavailable, message: "This method has been depricated.")
+  @objc public func setTimeDisplayStyle(_ style: Mobilisten.TimeStyle)
+  @objc public func setFAQDepartmentVisibility(_ visible: Swift.Bool)
+  @objc public func setFAQCategoryVisibility(_ visible: Swift.Bool)
+  @objc public func getUnreadMessageCount() -> Swift.Int
+  @objc public func endSession(referenceID: Swift.String)
+  @objc public func showOfflineMessage(_ show: Swift.Bool)
+  @objc public func setOfflineMessage(_ message: Swift.String?)
+  @objc public func fetchAttenderImage(chat: Mobilisten.SIQVisitorChat, fetchDefaultImage: Swift.Bool = true, completion: Mobilisten.AttenderImageFetchCompletionBlock? = nil)
+  @objc public func show(referenceID: Swift.String? = nil, new: Swift.Bool = false)
+  @objc deinit
+}
+public enum ShowinListType {
+  case `default`
+  case selected
+  case both
+  public static func == (a: Mobilisten.ShowinListType, b: Mobilisten.ShowinListType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension LiveChatViewController : UIKit.UITextViewDelegate {
+  @objc dynamic public func textView(_ textView: UIKit.UITextView, shouldChangeTextIn range: Foundation.NSRange, replacementText text: Swift.String) -> Swift.Bool
+  @objc dynamic public func textViewDidChange(_ textView: UIKit.UITextView)
+  @objc dynamic public func textViewDidBeginEditing(_ textView: UIKit.UITextView)
+  @objc dynamic public func textViewDidChangeSelection(_ textView: UIKit.UITextView)
+  @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+}
+@objc @_inheritsConvenienceInitializers public class LiveChatViewController : Mobilisten.SIQViewController, UIKit.UIViewControllerTransitioningDelegate, UIKit.UIGestureRecognizerDelegate {
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public var title: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidLayoutSubviews()
+  @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+    @objc get
+  }
+  @objc override dynamic public var preferredInterfaceOrientationForPresentation: UIKit.UIInterfaceOrientation {
+    @objc get
+  }
+  @objc override dynamic public var shouldAutorotate: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public func didReceiveMemoryWarning()
+  @objc public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+  @objc public func animationController(forDismissed dismissed: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
+  @objc public func animationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController, source: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
+  @objc override dynamic public func didMove(toParent parent: UIKit.UIViewController?)
+  @objc deinit
+  @objc public func textViewDidEndEditing(_ textView: UIKit.UITextView)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension LiveChatViewController : UIKit.UITextFieldDelegate {
+  @objc dynamic public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+}
+extension LiveChatViewController : UIKit.UIPopoverPresentationControllerDelegate {
+  @objc dynamic public func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController) -> Swift.Bool
+}
+extension LiveChatViewController : UIKit.UIDocumentPickerDelegate {
+  @objc dynamic public func documentPicker(_ controller: UIKit.UIDocumentPickerViewController, didPickDocumentsAt urls: [Foundation.URL])
+}
+extension UIImage {
+  convenience public init?(color: UIKit.UIColor, size: CoreGraphics.CGSize = CGSize(width: 1, height: 1))
+}
+@objc public enum BubbleStyle : Swift.Int {
+  case curveLess
+  case roundedCurve
+  case boxUpperCurve
+  case boxLowerCurve
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum TimeStyle : Swift.Int {
+  case inside
+  case outsideSlide
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ChatComponent : Swift.Int {
+  @available(*, deprecated, message: "Use ZohoSalesIQ.Conversation.setVisibility API")
+  case conversationHistory
+  case preChatForm
+  case visitorName
+  case attenderImageInChat
+  case attenderImageOnLauncher
+  case screenshotOption
+  case photoLibrary
+  case mediaCapture
+  @available(*, unavailable, message: "Toggling the voice messages function using the ZohoSalesIQ.setVisibility API is no longer supported. To enable voice messages, navigate to Brand configurations on the SalesIQ Portal and enable the toggle for \"Voice Notes\" if supported by your current plan.")
+  case voiceMessages
+  case fileSharing
+  case inAppNotifications
+  case emailTranscript
+  case rating
+  case feedback
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum SuggestionStyle : Swift.Int {
+  case vertical = 0
+  case horizontal = 1
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ChatStatus : Swift.Int {
+  case open
+  case triggered
+  case proactive
+  case connected
+  case waiting
+  case missed
+  case closed
+  case ended
+  case all
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum SystemMessage : Swift.Int {
+  case chatCompleted
+  case chatMissed
+  case ratingCompleted
+  case feedbackCompleted
+  case ratingAndFeedbackCompleted
+  case inputQuestionPlaceholder
+  case inputMessagePlaceholder
+  case typingIndicatorMessage
+  case networkWaitingMessage
+  case chatWaiting
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum Language : Swift.Int {
+  case english
+  case french
+  case german
+  case spanish
+  case dutch
+  case norwegian
+  case turkish
+  case russian
+  case portuguese
+  case italian
+  case korean
+  case japanese
+  case danish
+  case polish
+  case arabic
+  case hungarian
+  case chinese
+  case hebrew
+  case irish
+  case romanian
+  case thai
+  case swedish
+  case greek
+  case czech
+  case slovak
+  case slovenian
+  case croatian
+  case instance
+  public func languageCodeName() -> Swift.String
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class LanguageCode : ObjectiveC.NSObject {
+  @objc public class func name(_ language: Mobilisten.Language) -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum APNSMode : Swift.Int {
+  case sandbox
+  case production
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SheetViewController : UIKit.UIViewController {
+  public var childViewController: UIKit.UIViewController! {
+    get
+  }
+  final public let containerView: UIKit.UIView
+  final public let pullBarView: UIKit.UIView
+  final public let handleView: UIKit.UIView
+  public var handleColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var handleSize: CoreGraphics.CGSize
+  public var handleTopEdgeInset: CoreGraphics.CGFloat
+  public var handleBottomEdgeInset: CoreGraphics.CGFloat
+  public var dismissOnBackgroundTap: Swift.Bool
+  public var dismissOnPan: Swift.Bool
+  public var controllerAppeared: Swift.Bool
+  public var dismissable: Swift.Bool {
+    get
+    set
+  }
+  public var extendBackgroundBehindHandle: Swift.Bool {
+    get
+    set
+  }
+  public var adjustForBottomSafeArea: Swift.Bool
+  public var blurBottomSafeArea: Swift.Bool
+  public var solidBottomSafeArea: UIKit.UIColor?
+  public var topCornersRadius: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  public var overlayColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var willDismiss: ((Mobilisten.SheetViewController) -> Swift.Void)?
+  public var didDismiss: ((Mobilisten.SheetViewController) -> Swift.Void)?
+  @available(*, deprecated, message: "Use the init(controller:, sizes:) initializer")
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  convenience public init(controller: UIKit.UIViewController, sizes: [Mobilisten.SheetSize] = [])
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  public func setSizes(_ sizes: [Mobilisten.SheetSize], animated: Swift.Bool = true)
+  public func resize(to size: Mobilisten.SheetSize, animated: Swift.Bool = true)
+  public func closeSheet(completion: (() -> Swift.Void)? = nil)
+  @objc override dynamic public func dismiss(animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  public func handleScrollView(_ scrollView: UIKit.UIScrollView)
+  @objc deinit
+}
+extension SheetViewController : UIKit.UIGestureRecognizerDelegate {
+  @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldReceive touch: UIKit.UITouch) -> Swift.Bool
+  @objc dynamic public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers open class NotificationLinkHandler : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQActionRegistry : ObjectiveC.NSObject {
+  @objc final public func register(action: Mobilisten.SIQChatAction)
+  @objc final public func unregisterWithName(name: Swift.String)
+  @objc final public func unregisterAll()
+  @objc final public func setTimeout(_ timeout: Swift.Double)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class SIQChatAction : ObjectiveC.NSObject {
+  @objc public init(name: Swift.String, action: @escaping (Mobilisten.SIQChatActionArguments, Mobilisten.SIQActionHandler) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class SIQChatActionArguments : ObjectiveC.NSObject {
+  @objc public var type: Swift.String
+  @objc public var label: Swift.String
+  @objc public var identifier: Swift.String
+  @objc public var elementID: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class SIQActionHandler : ObjectiveC.NSObject {
+  @objc final public func success(message: Swift.String? = nil)
+  @objc final public func faliure(message: Swift.String? = nil)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIViewController {
+  public var sheetViewController: Mobilisten.SheetViewController? {
+    get
+  }
+}
+public enum SheetSize {
+  case fixed(CoreGraphics.CGFloat)
+  case halfScreen
+  case fullScreen
+}
+@objc @_inheritsConvenienceInitializers public class SIQViewController : UIKit.UIViewController {
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers open class SIQFAQClass : ObjectiveC.NSObject {
+  @objc weak public var delegate: Mobilisten.ZohoSalesIQFAQDelegate?
+  @objc public var isEnabled: Swift.Bool {
+    @objc get
+  }
+  @objc public func setRecentShowLimit(_ limit: Swift.Int)
+  @objc public func getCategories(_ completion: Mobilisten.FAQCategoryListFetchCompletionBlock? = nil)
+  @objc public func setVisibility(_ visible: Swift.Bool)
+  @objc public func getArticles(categoryID: Swift.String? = nil, _ completion: Mobilisten.FAQArticleListFetchCompletionBlock? = nil)
+  @objc public func openArticle(articleID: Swift.String, _ completion: Mobilisten.FAQArticleOpenCompletionBlock? = nil)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension FAQCategoryEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<Mobilisten.FAQCategoryEntity>
+  @objc @NSManaged dynamic public var count: Foundation.NSNumber? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var crc_value: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var current_server_time: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var categoryid: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var categoryname: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+public enum ObserveType {
+  case updated
+  case inserted
+  case deleted
+  case refreshed
+  public static func == (a: Mobilisten.ObserveType, b: Mobilisten.ObserveType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc open class SIQConversationsClass : ObjectiveC.NSObject {
+  @objc public func setVisibility(_ visible: Swift.Bool)
+  @objc public func setTitle(_ title: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct SIQSizeUnits {
+  public let bytes: Swift.Int64
+  public var kilobytes: Swift.Double {
+    get
+  }
+  public var megabytes: Swift.Double {
+    get
+  }
+  public var gigabytes: Swift.Double {
+    get
+  }
+  public init(bytes: Swift.Int64)
+  public func getReadableUnit() -> Swift.String
+}
+extension UISearchBar {
+  public var textField: UIKit.UITextField? {
+    get
+  }
+  public var activityIndicator: UIKit.UIActivityIndicatorView? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable open class SIQTextView : UIKit.UITextView {
+  final public let placeholderLabel: UIKit.UILabel
+  @objc @IBInspectable open var placeholder: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable open var placeholderColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic open var font: UIKit.UIFont! {
+    @objc get
+    @objc set
+  }
+  open var placeholderFont: UIKit.UIFont? {
+    get
+    set
+  }
+  @objc override dynamic open var textAlignment: UIKit.NSTextAlignment {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic open var text: Swift.String! {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic open var attributedText: Foundation.NSAttributedString! {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic open var textContainerInset: UIKit.UIEdgeInsets {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect, textContainer: UIKit.NSTextContainer?)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func layoutSubviews()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class VisitorObject : ObjectiveC.NSObject {
+  open var name: Swift.String?
+  open var email: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class FAQCategoryEntity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension UIColor {
+  convenience public init?(_ r: CoreGraphics.CGFloat, _ g: CoreGraphics.CGFloat, _ b: CoreGraphics.CGFloat, alpha: CoreGraphics.CGFloat = 1)
+  convenience public init?(hex: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers open class TrackingClass : ObjectiveC.NSObject {
+  @objc open func setPageTitle(_ title: Swift.String)
+  @objc open func setCustomAction(_ actionname: Swift.String?)
+  @objc open func setCustomAction(_ actionname: Swift.String?, action: Swift.AnyObject?)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class VisitorTrackingInterface : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class VisitorClass : ObjectiveC.NSObject {
+  @objc open func setName(_ name: Swift.String?)
+  @objc public func setLocation(_ location: Mobilisten.SIQVisitorLocation?)
+  @objc open func setEmail(_ email: Swift.String?)
+  @objc open func setContactNumber(_ number: Swift.String?)
+  @objc open func addInfo(_ key: Swift.String?, value: Swift.String?)
+  @objc open func setQuestion(_ question: Swift.String?)
+  @objc open func performCustomAction(_ name: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public typealias ZSIQActionCompletionBlock = (Swift.Bool) -> Swift.Void
+public typealias ZSIQActionErrorCompletionBlock = (Foundation.NSError?) -> Swift.Void
+public typealias ConversationListFetchCompletionBlock = (Foundation.NSError?, [Mobilisten.SIQVisitorChat]?) -> Swift.Void
+public typealias DepartmentListFetchCompletionBlock = (Foundation.NSError?, [Mobilisten.SIQDepartment]?) -> Swift.Void
+public typealias FAQCategoryListFetchCompletionBlock = (Foundation.NSError?, [Mobilisten.SIQFAQCategory]?) -> Swift.Void
+public typealias FAQArticleListFetchCompletionBlock = (Foundation.NSError?, [Mobilisten.SIQFAQArticle]?) -> Swift.Void
+public typealias FAQArticleOpenCompletionBlock = (Foundation.NSError?) -> Swift.Void
+public typealias AttenderImageFetchCompletionBlock = (Foundation.NSError?, UIKit.UIImage?) -> Swift.Void
+@objc public protocol ZohoSalesIQFAQDelegate {
+  @objc func articleOpened(id: Swift.String?)
+  @objc func articleClosed(id: Swift.String?)
+  @objc func articleLiked(id: Swift.String?)
+  @objc func articleDisliked(id: Swift.String?)
+}
+@objc public protocol ZohoSalesIQChatDelegate {
+  @objc func chatOpened(chat: Mobilisten.SIQVisitorChat?)
+  @objc func chatAttended(chat: Mobilisten.SIQVisitorChat?)
+  @objc func chatMissed(chat: Mobilisten.SIQVisitorChat?)
+  @objc func chatClosed(chat: Mobilisten.SIQVisitorChat?)
+  @objc func chatReopened(chat: Mobilisten.SIQVisitorChat?)
+  @objc func chatRatingRecieved(chat: Mobilisten.SIQVisitorChat?)
+  @objc func chatFeedbackRecieved(chat: Mobilisten.SIQVisitorChat?)
+  @objc func chatQueuePositionChanged(chat: Mobilisten.SIQVisitorChat?)
+  @objc func unreadCountChanged(_ count: Swift.Int)
+}
+@objc public protocol ZohoSalesIQDelegate {
+  @objc func agentsOnline()
+  @objc func agentsOffline()
+  @objc func supportOpened()
+  @objc func supportClosed()
+  @objc func chatViewOpened(id: Swift.String?)
+  @objc func chatViewClosed(id: Swift.String?)
+  @objc func homeViewOpened()
+  @objc func homeViewClosed()
+  @objc func visitorIPBlocked()
+  @objc func handleTrigger(name: Swift.String, visitorInformation: Mobilisten.SIQVisitor)
+}
+@objc @_inheritsConvenienceInitializers open class ZohoSalesIQ : ObjectiveC.NSObject {
+  @objc public static var Chat: Mobilisten.LCSharedHandler
+  @objc public static var Admin: Mobilisten.LCAdminHandler
+  @objc public static var Visitor: Mobilisten.VisitorClass
+  @objc public static var Tracking: Mobilisten.TrackingClass
+  @objc public static var Theme: Mobilisten.ThemeConfig
+  @objc public static var ChatActions: Mobilisten.SIQActionRegistry
+  @objc public static var FAQ: Mobilisten.SIQFAQClass
+  @objc public static var Conversation: Mobilisten.SIQConversationsClass
+  @objc public static var apiDefinedPageTitle: Swift.String?
+  @objc weak public static var delegate: Mobilisten.ZohoSalesIQDelegate?
+  public static var embedInTab: Swift.Bool {
+    get
+    set
+  }
+  @objc public static var deviceToken: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public static func registerVisitor(_ id: Swift.String?, completion: Mobilisten.ZSIQActionCompletionBlock? = nil)
+  @objc public static func unregisterVisitor(completion: Mobilisten.ZSIQActionCompletionBlock? = nil)
+  @objc public static var running_platform: Swift.String
+  @objc public static func setPlatform(platform: Swift.String?)
+  public static func disableTracking()
+  public static func enableTracking()
+  @objc public static func initWithAppKey(_ appKey: Swift.String, accessKey: Swift.String, completion: Mobilisten.ZSIQActionCompletionBlock? = nil)
+  public static func setChatControllerLeftBarButton(_ image: UIKit.UIImage?, title: Swift.String?)
+  @available(*, unavailable, renamed: "showLauncher")
+  @objc public static func showLiveChat(_ show: Swift.Bool)
+  @objc public static func showLauncher(_ show: Swift.Bool)
+  @objc public static func enablePush(_ regid: Swift.String, isTestDevice: Swift.Bool, mode: Mobilisten.APNSMode)
+  @objc public static func processNotificationWithInfo(_ info: [Swift.AnyHashable : Any]?)
+  @objc public static func handleNotificationResponse(_ info: [Swift.AnyHashable : Any]?)
+  @objc public static func isMobilistenNotification(_ info: [Swift.AnyHashable : Any]?) -> Swift.Bool
+  @objc public static func handleNotificationAction(_ userInfo: [Swift.AnyHashable : Any]?, response: Swift.String?)
+  @objc public static func setVisitorTrackingInterfaceHandler(_ handler: Mobilisten.VisitorTrackingInterface?)
+  @objc public static func setNotificationLinkHandler(_ handler: Mobilisten.NotificationLinkHandler?)
+  @objc public static func showInAppNotification(title: Swift.String, subtitle: Swift.String, duration: Swift.Double = 3.65, image: UIKit.UIImage?, action: @escaping () -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@available(iOS 10.0, *)
+extension ZohoSalesIQ : UserNotifications.UNUserNotificationCenterDelegate {
+  @available(iOS 10.0, *)
+  @objc dynamic public func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, didReceive response: UserNotifications.UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void)
+  @objc dynamic public func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, willPresent notification: UserNotifications.UNNotification, withCompletionHandler completionHandler: @escaping (UserNotifications.UNNotificationPresentationOptions) -> Swift.Void)
+}
+@objc @_inheritsConvenienceInitializers open class LCAdminHandler : ObjectiveC.NSObject {
+  @available(*, unavailable, message: "Use ZohoSalesIQDelegate [ZohoSalesIQ.delegate] for tracking events.")
+  @objc public func setChatHandler(_ handler: Mobilisten.ChatActivityHandler)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class SIQFAQArticle : ObjectiveC.NSObject {
+  @objc open var id: Swift.String
+  @objc open var name: Swift.String
+  @objc open var isRated: Swift.Bool
+  @objc open var viewCount: Swift.Int
+  @objc open var likeCount: Swift.Int
+  @objc open var dislikeCount: Swift.Int
+  @objc open var categoryName: Swift.String
+  @objc open var categoryID: Swift.String
+  @objc open var createdTime: Foundation.Date?
+  @objc open var lastModifiedTime: Foundation.Date?
+  @objc deinit
+}
+@objc public class SIQDepartment : ObjectiveC.NSObject {
+  @objc public init(id: Swift.String, name: Swift.String, available: Swift.Bool)
+  @objc open var id: Swift.String
+  @objc open var name: Swift.String
+  @objc open var available: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class SIQVisitorChat : ObjectiveC.NSObject {
+  @objc open var attenderEmail: Swift.String?
+  @objc open var attenderID: Swift.String?
+  @objc open var attenderName: Swift.String?
+  @objc open var departmentName: Swift.String?
+  @objc open var feedback: Swift.String?
+  @objc open var isBotAttender: Swift.Bool
+  @objc open var lastMessage: Swift.String?
+  @objc open var lastMessageSender: Swift.String?
+  @objc open var question: Swift.String?
+  @objc open var rating: Swift.String?
+  @objc open var referenceID: Swift.String?
+  @objc open var status: Mobilisten.ChatStatus
+  @objc open var lastMessageTime: Foundation.Date?
+  @objc open var unreadCount: Swift.Int
+  @objc open var queuePosition: Swift.Int
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQVisitor : ObjectiveC.NSObject {
+  @objc open var name: Swift.String?
+  @objc open var email: Swift.String?
+  @objc open var phone: Swift.String?
+  @objc open var browser: Swift.String?
+  @objc open var os: Swift.String?
+  @objc open var ip: Swift.String?
+  @objc open var countryCode: Swift.String?
+  @objc open var searchEngine: Swift.String?
+  @objc open var searchQuery: Swift.String?
+  @objc open var region: Swift.String?
+  @objc open var state: Swift.String?
+  @objc open var city: Swift.String?
+  @objc open var numberOfChats: Foundation.NSNumber?
+  @objc open var numberOfVisits: Foundation.NSNumber?
+  @objc open var noOfDaysVisited: Foundation.NSNumber?
+  @objc open var totalTimeSpent: Foundation.NSNumber?
+  @objc open var firstVisitTime: Foundation.Date?
+  @objc open var lastVisitTime: Foundation.Date?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQVisitorLocation : ObjectiveC.NSObject {
+  @objc open var countryCode: Swift.String?
+  @objc open var latitude: Foundation.NSNumber?
+  @objc open var longitude: Foundation.NSNumber?
+  @objc open var city: Swift.String?
+  @objc open var zipCode: Swift.String?
+  @objc open var state: Swift.String?
+  @objc open var country: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQTheme : ObjectiveC.NSObject {
+  @objc public var themeColor: UIKit.UIColor!
+  @objc public var Launcher: Mobilisten.SIQLauncherTheme
+  @objc public var TabBar: Mobilisten.SIQTabBarTheme
+  @objc public var Navigation: Mobilisten.SIQNavigationTheme
+  @objc public var EmptyView: Mobilisten.SIQEmptyViewTheme
+  @objc public var OfflineBanner: Mobilisten.SIQOfflineBannerTheme
+  @objc public var NetworkWaitingBanner: Mobilisten.SIQNoNetworkBannnerTheme
+  @objc public var Conversation: Mobilisten.SIQConversationTheme
+  @objc public var FAQ: Mobilisten.SIQFAQTheme
+  @objc public var Chat: Mobilisten.SIQChatWindowTheme
+  @objc public var Form: Mobilisten.SIQChatFormTheme
+  @objc public var Feedback: Mobilisten.SIQFeedbackTheme
+  @objc public var InAppNotification: Mobilisten.SIQInAppNotificationTheme
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQFeedbackTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var primaryTextColor: UIKit.UIColor!
+  @objc public var secondaryTextColor: UIKit.UIColor!
+  @objc public var skipButtonTextColor: UIKit.UIColor!
+  @objc public var submitButtonTextColor: UIKit.UIColor!
+  @objc public var submitButtonBackgroundColor: UIKit.UIColor!
+  @objc public var feedbackTextFieldTintColor: UIKit.UIColor!
+  @objc public var feedbackPlaceholderTextColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQLauncherTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var iconColor: UIKit.UIColor!
+  @objc public var UnreadBadge: Mobilisten.SIQLauncherUnreadBadgeTheme
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQLauncherUnreadBadgeTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var textColor: UIKit.UIColor!
+  @objc public var borderColor: UIKit.UIColor!
+  @objc public var borderWidth: Foundation.NSNumber!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQTabBarTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var activeTabColor: UIKit.UIColor!
+  @objc public var inactiveTabColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQNavigationTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var titleColor: UIKit.UIColor!
+  @objc public var tintColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQEmptyViewTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var chatButtonBackgroundColor: UIKit.UIColor!
+  @objc public var chatButtonTitleColor: UIKit.UIColor!
+  @objc public var textColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQOfflineBannerTheme : ObjectiveC.NSObject {
+  @objc public var textColor: UIKit.UIColor!
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQConversationTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var ListItem: Mobilisten.SIQConversationListItemTheme
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQFAQTheme : ObjectiveC.NSObject {
+  @objc public var ListItem: Mobilisten.SIQFAQListItemTheme
+  @objc public var headerTextColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQChatWindowTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var backgroundImage: UIKit.UIImage!
+  @objc public var Message: Mobilisten.SIQMessageTheme
+  @objc public var HandOffBanner: Mobilisten.SIQHandOffBannerTheme
+  @objc public var QueueBanner: Mobilisten.SIQQueueBannerTheme
+  @objc public var Input: Mobilisten.SIQChatInputTheme
+  @objc public var ScrollButton: Mobilisten.SIQChatScrollButtonTheme
+  @objc public var EmailTranscript: Mobilisten.SIQEmailTranscriptTheme
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQChatInputTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var audioRecordHintBackgroundColor: UIKit.UIColor!
+  @objc public var audioRecordHintTextColor: UIKit.UIColor!
+  @objc public var textFieldBorderColor: UIKit.UIColor!
+  @objc public var textFieldTintColor: UIKit.UIColor!
+  @objc public var textFieldBackgroundColor: UIKit.UIColor!
+  @objc public var textFieldPlaceholderColor: UIKit.UIColor!
+  @objc public var textFieldTextColor: UIKit.UIColor!
+  @objc public var attachmentButtonBackgroundColor: UIKit.UIColor!
+  @objc public var recordButtonBackgroundColor: UIKit.UIColor!
+  @objc public var recordSoundPulseBackgroundColor: UIKit.UIColor!
+  @objc public var sendButtonBackgroundColor: UIKit.UIColor!
+  @objc public var buttonDisabledBackgroundColor: UIKit.UIColor!
+  @objc public var recordTimerBackgroundColor: UIKit.UIColor!
+  @objc public var recordTimerTextColor: UIKit.UIColor!
+  @objc public var recordTimerIndicatorColor: UIKit.UIColor!
+  @objc public var recordSlideTextColor: UIKit.UIColor!
+  @objc public var recordSlideIconColor: UIKit.UIColor!
+  @objc public var recordCancelTextColor: UIKit.UIColor!
+  @objc public var moreIconColor: UIKit.UIColor!
+  @objc public var sendIconColor: UIKit.UIColor!
+  @objc public var recordIconColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQChatScrollButtonTheme : ObjectiveC.NSObject {
+  @objc public var iconColor: UIKit.UIColor!
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var UnreadBadge: Mobilisten.SIQLauncherUnreadBadgeTheme
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQEmailTranscriptTheme : ObjectiveC.NSObject {
+  @objc public var textFieldTintColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQChatFormTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var textFieldBackgroundColor: UIKit.UIColor!
+  @objc public var textFieldTextColor: UIKit.UIColor!
+  @objc public var textFieldTintColor: UIKit.UIColor!
+  @objc public var textFieldPlaceholderColor: UIKit.UIColor!
+  @objc public var textFieldTitleColor: UIKit.UIColor!
+  @objc public var textFieldRequiredIndicatorColor: UIKit.UIColor!
+  @objc public var errorColor: UIKit.UIColor!
+  @objc public var submitButtonBackgroundColor: UIKit.UIColor!
+  @objc public var submitButtonTextColor: UIKit.UIColor!
+  @objc public var campaignOptInTextColor: UIKit.UIColor!
+  @objc public var checkboxCheckedColor: UIKit.UIColor!
+  @objc public var checkboxUncheckedColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQNoNetworkBannnerTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var textColor: UIKit.UIColor!
+  @objc public var loaderColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQConversationListItemTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var timerTextColor: UIKit.UIColor!
+  @objc public var timerIconColor: UIKit.UIColor!
+  @objc public var titleTextColor: UIKit.UIColor!
+  @objc public var subtitleTextColor: UIKit.UIColor!
+  @objc public var timeTextColor: UIKit.UIColor!
+  @objc public var openBadgeBackgroundColor: UIKit.UIColor!
+  @objc public var openBadgeBorderColor: UIKit.UIColor!
+  @objc public var openBadgeTextColor: UIKit.UIColor!
+  @objc public var separatorColor: UIKit.UIColor!
+  @objc public var UnreadBadge: Mobilisten.SIQLauncherUnreadBadgeTheme
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQFAQListItemTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var titleTextColor: UIKit.UIColor!
+  @objc public var subtitleTextColor: UIKit.UIColor!
+  @objc public var subtitlePartitionColor: UIKit.UIColor!
+  @objc public var likePendingColor: UIKit.UIColor!
+  @objc public var likedColor: UIKit.UIColor!
+  @objc public var separatorColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQMessageTheme : ObjectiveC.NSObject {
+  @objc public var Common: Mobilisten.SIQMessageCommonTheme
+  @objc public var Suggestion: Mobilisten.SIQSuggestionTheme
+  @objc public var SkipActionButton: Mobilisten.SIQSkipActionButtonTheme
+  @objc public var AudioPlayer: Mobilisten.SIQAudioPlayerTheme
+  @objc public var Selection: Mobilisten.SIQSelectionComponentTheme
+  @objc public var InputCard: Mobilisten.SIQInputCardTheme
+  @objc public var Slider: Mobilisten.SIQSliderCardTheme
+  @objc public var InfoMessage: Mobilisten.SIQInfoMessageTheme
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQInfoMessageTheme : ObjectiveC.NSObject {
+  @objc public var textColor: UIKit.UIColor!
+  @objc public var lineColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQInAppNotificationTheme : ObjectiveC.NSObject {
+  @objc public var titleColor: UIKit.UIColor!
+  @objc public var subtitleColor: UIKit.UIColor!
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var imageBackgroundColor: UIKit.UIColor!
+  @objc public var cornerRadius: Foundation.NSNumber!
+  @objc public var imageCornerRadius: Foundation.NSNumber!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQAudioPlayerTheme : ObjectiveC.NSObject {
+  @objc public var thumbColor: UIKit.UIColor!
+  @objc public var playButtonBackgroundColor: UIKit.UIColor!
+  @objc public var incomingTrackColor: UIKit.UIColor!
+  @objc public var outgoingTrackColor: UIKit.UIColor!
+  @objc public var incomingButtonIconColor: UIKit.UIColor!
+  @objc public var outgoingButtonIconColor: UIKit.UIColor!
+  @objc public var outgoingDurationTextColor: UIKit.UIColor!
+  @objc public var incomingDurationTextColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQSelectionComponentTheme : ObjectiveC.NSObject {
+  @objc public var textColor: UIKit.UIColor!
+  @objc public var accessoryColor: UIKit.UIColor!
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var selectionBackgroundColor: UIKit.UIColor!
+  @objc public var buttonTextColor: UIKit.UIColor!
+  @objc public var buttonBackgroundColor: UIKit.UIColor!
+  @objc public var linkTextColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQInputCardTheme : ObjectiveC.NSObject {
+  @objc public var titleColor: UIKit.UIColor!
+  @objc public var textFieldTextColor: UIKit.UIColor!
+  @objc public var textFieldBackgroundColor: UIKit.UIColor!
+  @objc public var textFieldPlaceholderColor: UIKit.UIColor!
+  @objc public var sendButtonBackgroudColor: UIKit.UIColor!
+  @objc public var sendButtonIconColor: UIKit.UIColor!
+  @objc public var separatorColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQSliderCardTheme : ObjectiveC.NSObject {
+  @objc public var thumbBorderColor: UIKit.UIColor!
+  @objc public var selectedTrackColor: UIKit.UIColor!
+  @objc public var selectedValueTextColor: UIKit.UIColor!
+  @objc public var unSelectedTrackColor: UIKit.UIColor!
+  @objc public var thumbBackgroundColor: UIKit.UIColor!
+  @objc public var minRangeTextColor: UIKit.UIColor!
+  @objc public var maxRangeTextColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQQueueBannerTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var titleColor: UIKit.UIColor!
+  @objc public var subtitleColor: UIKit.UIColor!
+  @objc public var subtitleTimeColor: UIKit.UIColor!
+  @objc public var positionTextColor: UIKit.UIColor!
+  @objc public var positionSubtitleColor: UIKit.UIColor!
+  @objc public var positionContainerBackgroundColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQHandOffBannerTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var textColor: UIKit.UIColor!
+  @objc public var buttonTitleColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQMessageCommonTheme : ObjectiveC.NSObject {
+  @objc public var botTypingIndicatorStyle: Foundation.NSNumber!
+  @objc public var messageSenderNameColor: UIKit.UIColor!
+  @objc public var outgoingBackgroundColor: UIKit.UIColor!
+  @objc public var outgoingTextColor: UIKit.UIColor!
+  @objc public var outgoingBorderColor: UIKit.UIColor!
+  @objc public var outgoingTimeTextColor: UIKit.UIColor!
+  @objc public var outgoingTimeIconColor: UIKit.UIColor!
+  @objc public var incomingBackgroundColor: UIKit.UIColor!
+  @objc public var incomingTextColor: UIKit.UIColor!
+  @objc public var incomingBorderColor: UIKit.UIColor!
+  @objc public var incomingTimeTextColor: UIKit.UIColor!
+  @objc public var incomingTimeIconColor: UIKit.UIColor!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQSkipActionButtonTheme : ObjectiveC.NSObject {
+  @objc public var textColor: UIKit.UIColor!
+  @objc public var borderColor: UIKit.UIColor!
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var cornerRadius: Foundation.NSNumber!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQSuggestionTheme : ObjectiveC.NSObject {
+  @objc public var textColor: UIKit.UIColor!
+  @objc public var borderColor: UIKit.UIColor!
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var cornerRadius: Foundation.NSNumber!
+  @objc public var displayStyle: Foundation.NSNumber!
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class ChatActivityHandler : ObjectiveC.NSObject {
+  @objc open func handleWidgetAction(isOpen: Swift.Bool)
+  @objc open func handleVisitorAttended(visitor: Mobilisten.SIQVisitorChat)
+  @objc open func handleVisitorMissed(visitor: Mobilisten.SIQVisitorChat)
+  @objc open func handleAgentsOffline()
+  @objc open func handleAgentsOnline()
+  @objc open func handleChatComplete(visitor: Mobilisten.SIQVisitorChat)
+  @objc open func handleChatReopen(visitor: Mobilisten.SIQVisitorChat)
+  @objc open func handleRating(visitor: Mobilisten.SIQVisitorChat)
+  @objc open func handleFeedback(visitor: Mobilisten.SIQVisitorChat)
+  @objc open func updateUnreadMessages(count: Swift.Int)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class ThemeConfig : ObjectiveC.NSObject {
+  @objc public var baseTheme: Mobilisten.SIQTheme {
+    @objc get
+  }
+  @objc public var currentCustomTheme: Mobilisten.SIQTheme {
+    @objc get
+  }
+  @available(iOS 13.0, *)
+  @objc public func forceUserInterfaceStyle(style: UIKit.UIUserInterfaceStyle)
+  @objc public func setTheme(theme: Mobilisten.SIQTheme)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Mobilisten.ShowinListType : Swift.Equatable {}
+extension Mobilisten.ShowinListType : Swift.Hashable {}
+extension Mobilisten.BubbleStyle : Swift.Equatable {}
+extension Mobilisten.BubbleStyle : Swift.Hashable {}
+extension Mobilisten.BubbleStyle : Swift.RawRepresentable {}
+extension Mobilisten.TimeStyle : Swift.Equatable {}
+extension Mobilisten.TimeStyle : Swift.Hashable {}
+extension Mobilisten.TimeStyle : Swift.RawRepresentable {}
+extension Mobilisten.ChatComponent : Swift.Equatable {}
+extension Mobilisten.ChatComponent : Swift.Hashable {}
+extension Mobilisten.ChatComponent : Swift.RawRepresentable {}
+extension Mobilisten.SuggestionStyle : Swift.Equatable {}
+extension Mobilisten.SuggestionStyle : Swift.Hashable {}
+extension Mobilisten.SuggestionStyle : Swift.RawRepresentable {}
+extension Mobilisten.ChatStatus : Swift.Equatable {}
+extension Mobilisten.ChatStatus : Swift.Hashable {}
+extension Mobilisten.ChatStatus : Swift.RawRepresentable {}
+extension Mobilisten.SystemMessage : Swift.Equatable {}
+extension Mobilisten.SystemMessage : Swift.Hashable {}
+extension Mobilisten.SystemMessage : Swift.RawRepresentable {}
+extension Mobilisten.Language : Swift.Equatable {}
+extension Mobilisten.Language : Swift.Hashable {}
+extension Mobilisten.Language : Swift.RawRepresentable {}
+extension Mobilisten.APNSMode : Swift.Equatable {}
+extension Mobilisten.APNSMode : Swift.Hashable {}
+extension Mobilisten.APNSMode : Swift.RawRepresentable {}
+extension Mobilisten.ObserveType : Swift.Equatable {}
+extension Mobilisten.ObserveType : Swift.Hashable {}
