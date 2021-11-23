@@ -1,0 +1,1902 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZohoDeskPortalConfiguration
+import CoreData
+import Foundation
+import MobileCoreServices
+import ObjectiveC
+import Photos
+import PhotosUI
+import QuickLook
+import SafariServices
+import Swift
+import UIKit
+import UniformTypeIdentifiers
+import WebKit
+import ZDThemeKit
+import ZohoDeskPortalAPIKit
+@_exported import ZohoDeskPortalConfiguration
+@objc public protocol ZDPNavigationBarThemeProtocol {
+  @objc var titleColor: UIKit.UIColor { get }
+  @objc var backgroundColor: UIKit.UIColor? { get }
+  @objc var buttonColor: UIKit.UIColor { get }
+  @objc var badgeColor: UIKit.UIColor { get }
+  @objc var searchFieldColor: UIKit.UIColor? { get }
+  @objc var isTranslucent: Swift.Bool { get }
+}
+@_hasMissingDesignatedInitializers public class ZDPCurrentNavBarTheme : ZohoDeskPortalConfiguration.ZDPNavigationBarThemeProtocol {
+  public static let shared: ZohoDeskPortalConfiguration.ZDPCurrentNavBarTheme
+  @objc public var titleColor: UIKit.UIColor {
+    @objc get
+  }
+  @objc public var backgroundColor: UIKit.UIColor? {
+    @objc get
+  }
+  @objc public var buttonColor: UIKit.UIColor {
+    @objc get
+  }
+  @objc public var badgeColor: UIKit.UIColor {
+    @objc get
+  }
+  @objc public var searchFieldColor: UIKit.UIColor? {
+    @objc get
+  }
+  @objc public var isTranslucent: Swift.Bool {
+    @objc get
+  }
+  @objc deinit
+}
+extension UINavigationController {
+  public func applyCurrentThemeInASAP()
+}
+extension ZDRichEditorView {
+  @objc override dynamic open func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+}
+extension ZDRichEditorView : WebKit.WKNavigationDelegate {
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+}
+extension ZDRichEditorView : WebKit.WKScriptMessageHandler {
+  @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+}
+extension ZDRichEditorView : WebKit.WKUIDelegate {
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
+}
+extension Bundle {
+  public static var appName: Swift.String {
+    get
+  }
+}
+public protocol Defaultable {
+  static var baseValue: Self { get }
+}
+extension String : ZohoDeskPortalConfiguration.Defaultable {
+  public static var baseValue: Swift.String {
+    get
+  }
+}
+extension Bool : ZohoDeskPortalConfiguration.Defaultable {
+  public static var baseValue: Swift.Bool {
+    get
+  }
+}
+extension Int : ZohoDeskPortalConfiguration.Defaultable {
+  public static var baseValue: Swift.Int {
+    get
+  }
+}
+extension Float : ZohoDeskPortalConfiguration.Defaultable {
+  public static var baseValue: Swift.Float {
+    get
+  }
+}
+extension Double : ZohoDeskPortalConfiguration.Defaultable {
+  public static var baseValue: Swift.Double {
+    get
+  }
+}
+extension Optional where Wrapped : ZohoDeskPortalConfiguration.Defaultable {
+  public var defaultUnwrap: Swift.Optional<Wrapped> {
+    get
+  }
+}
+extension Optional {
+  public func safeUnwrap(to object: inout Wrapped?)
+  public func safeUnwrap(to object: inout Wrapped)
+  public var isNil: Swift.Bool {
+    get
+  }
+}
+extension Optional where Wrapped : ZohoDeskPortalConfiguration.Defaultable {
+  public var _safelyUnwrap: Wrapped {
+    get
+  }
+  public func _safelyUnwrap(with val: Wrapped) -> Wrapped
+}
+extension Optional where Wrapped == Swift.String {
+  public var number: Swift.Int {
+    get
+  }
+}
+extension Optional {
+  public var hasValue: Swift.Bool {
+    get
+  }
+}
+public protocol Shareable : UIKit.UIViewController {
+  func share(items: [Any])
+}
+extension Shareable {
+  public func share(items: [Any])
+}
+extension Array where Element : Swift.Equatable {
+  public func firstMatch(of element: Element) -> Element?
+  public func isSameAs(_ other: [Element]) -> Swift.Bool
+  public mutating func removeFirstOccurence(of item: Element)
+}
+extension Array where Element : Swift.Hashable {
+  public var hasDuplicates: Swift.Bool {
+    get
+  }
+}
+extension Array where Element == Foundation.IndexPath {
+  public init(section: Swift.Int, with range: Swift.ClosedRange<Swift.Int>)
+}
+extension Array {
+  public subscript(safe index: Swift.Int) -> Element? {
+    get
+  }
+  public func element(at index: Swift.Int) -> Element?
+  public func seperate(by condition: (Element) -> Swift.Bool) -> ([Element], [Element])
+}
+extension Encodable {
+  public var jsonData: Foundation.Data? {
+    get
+  }
+}
+extension Comparable {
+  public func isEquals(to item2: Self) -> Swift.Bool
+  public func isGreaterThan(_ item2: Self) -> Swift.Bool
+  public func isLessThan(_ item2: Self) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers open class DPViewController : UIKit.UIViewController, ZohoDeskPortalConfiguration.Themable {
+  public var messageView: UIKit.UIStackView {
+    get
+    set
+  }
+  public var messageLabel: ZohoDeskPortalConfiguration.DPLabel {
+    get
+    set
+  }
+  public var errorImage: UIKit.UIImageView {
+    get
+    set
+  }
+  public func layoutMessageView()
+  open func alignMessageView()
+  public func showErrorView(basedOn error: ZohoDeskPortalConfiguration.ZDPortalError?, notFoundText: Swift.String, isInitCall: Swift.Bool = false)
+  public func syncSettings(errorText: Swift.String, andPerform operation: @escaping () -> Swift.Void)
+  open func setColors()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension DPViewController {
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic open func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+}
+@objc @_inheritsConvenienceInitializers open class DPTableViewController : UIKit.UITableViewController, ZohoDeskPortalConfiguration.Themable {
+  open func registerCells()
+  open func setColors()
+  @objc deinit
+  @objc override dynamic public init(style: UIKit.UITableView.Style)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension DPTableViewController {
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic open func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+}
+extension UIViewController {
+  public func getErrorImageAndText(for error: ZohoDeskPortalConfiguration.ZDPortalError?, notFoundText: Swift.String, isInitCall: Swift.Bool = false) -> (UIKit.UIImage?, Swift.String)
+}
+@objc @_inheritsConvenienceInitializers public class ZDPWebView : WebKit.WKWebView {
+  @objc override dynamic public init(frame: CoreGraphics.CGRect, configuration: WebKit.WKWebViewConfiguration)
+  public func setContent(_ content: Swift.String?, isTicket: Swift.Bool = false)
+  @objc deinit
+}
+extension ZDPWebView : UIKit.UIScrollViewDelegate {
+  @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+}
+extension WKNavigationAction {
+  public func decidePolicy(onCompletion decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class DPAttachmentCell : ZohoDeskPortalConfiguration.DPInteractiveCell {
+  public static let identifier: Swift.String
+  public var attachment: ZohoDeskPortalConfiguration.DPAttachment?
+  public var isLastAttachment: Swift.Bool
+  public var offsetLeading: Swift.Bool
+  public var icon: ZohoDeskPortalConfiguration.DPIconLabel {
+    get
+    set
+  }
+  public var name: ZohoDeskPortalConfiguration.DPLabel {
+    get
+    set
+  }
+  public var size: ZohoDeskPortalConfiguration.DPLabel {
+    get
+    set
+  }
+  convenience public init(attachment object: ZohoDeskPortalConfiguration.DPAttachment, isLastCell: Swift.Bool = false, offsetLeading: Swift.Bool = false)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  open func alignIconLeading()
+  override public func setColors()
+  @objc deinit
+}
+extension DPAttachment : ZohoDeskPortalConfiguration.ListItemProtocol {
+  public func getCell(at indexPath: Foundation.IndexPath, of tableView: UIKit.UITableView) -> UIKit.UITableViewCell
+}
+@objc @_inheritsConvenienceInitializers open class DPSideMenuVC : ZohoDeskPortalConfiguration.DPViewController {
+  open var isSideMenuEnabled: Swift.Bool {
+    get
+  }
+  open var selectedModule: ZohoDeskPortalConfiguration.ASAPModule? {
+    get
+  }
+  open func addSideMenuButton()
+  public var sideMenuButton: UIKit.UIBarButtonItem {
+    get
+  }
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func viewWillTransition(to size: CoreGraphics.CGSize, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension DPSideMenuVC {
+  @objc dynamic public func toggleSideMenu()
+}
+@objc open class DPPreviewController : QuickLook.QLPreviewController {
+  public init(attachments: [ZohoDeskPortalConfiguration.DPAttachment], index: Swift.Int)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  open func download(_ item: ZohoDeskPortalConfiguration.DPPreviewItem, at index: Swift.Int)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension DPPreviewController : QuickLook.QLPreviewControllerDataSource {
+  @objc dynamic public func numberOfPreviewItems(in controller: QuickLook.QLPreviewController) -> Swift.Int
+  @objc dynamic public func previewController(_ controller: QuickLook.QLPreviewController, previewItemAt index: Swift.Int) -> QuickLook.QLPreviewItem
+  public func handle(_ result: Swift.Result<Foundation.Data, ZohoDeskPortalConfiguration.ZDPortalError>, for item: ZohoDeskPortalConfiguration.DPPreviewItem, at index: Swift.Int)
+}
+@objc @_hasMissingDesignatedInitializers public class DPPreviewItem : ObjectiveC.NSObject, QuickLook.QLPreviewItem {
+  public var attachment: ZohoDeskPortalConfiguration.DPAttachment
+  @objc public var previewItemURL: Foundation.URL?
+  @objc public var previewItemTitle: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension UIAlertController {
+  public static func perfromExitCheck(on viewController: UIKit.UIViewController)
+}
+extension Cancellable {
+  public func addCancelButton()
+}
+extension UIViewController {
+  @objc dynamic public func defaultCancelAction()
+}
+extension UIImageView {
+  open func setImage(string: Swift.String?, color: UIKit.UIColor? = nil, circular: Swift.Bool = false, textAttributes: [Foundation.NSAttributedString.Key : Any]? = nil)
+}
+extension UIColor {
+  public static var random: UIKit.UIColor {
+    get
+  }
+}
+public enum DPContentMode {
+  case add
+  case edit
+  public static func == (a: ZohoDeskPortalConfiguration.DPContentMode, b: ZohoDeskPortalConfiguration.DPContentMode) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public protocol DPContentDelegate : AnyObject {
+  func postContent(_ content: Swift.String, with attachments: [ZohoDeskPortalConfiguration.DPAttachment], mode: ZohoDeskPortalConfiguration.DPContentMode, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+}
+@objc public class DPContentVC : ZohoDeskPortalConfiguration.DPViewController {
+  weak public var delegate: ZohoDeskPortalConfiguration.DPContentDelegate?
+  final public let module: ZohoDeskPortalConfiguration.DPModule
+  public var mode: ZohoDeskPortalConfiguration.DPContentMode
+  public init(module: ZohoDeskPortalConfiguration.DPModule, delegate: ZohoDeskPortalConfiguration.DPContentDelegate?, content: Swift.String? = nil, attachments: [ZohoDeskPortalConfiguration.DPAttachment] = [])
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc override dynamic public func viewDidLoad()
+  override public func setColors()
+  public func set(_ content: Swift.String)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension DPContentVC : ZohoDeskPortalConfiguration.AttachmentControllerDelegate {
+  public func completedUploading(_ attachments: [ZohoDeskPortalConfiguration.DPAttachment])
+  public func closed(afterSelecting items: [ZohoDeskPortalConfiguration.AttachableItem]?, andUploading attachments: [ZohoDeskPortalConfiguration.DPAttachment]?)
+  public func cancelled()
+}
+extension DPContentVC : ZohoDeskPortalConfiguration.Cancellable {
+  public var stateChanged: Swift.Bool {
+    get
+  }
+}
+extension DPContentVC : ZohoDeskPortalConfiguration.ZDRichEditorDelegate {
+  @objc dynamic public func richEditorDidLoad(_ editor: ZohoDeskPortalConfiguration.ZDRichEditorView)
+}
+extension ZDRichEditorView {
+  @objc dynamic public func updatePrivacyConfiguration()
+}
+extension ZDPNotification {
+  public static var themeChanged: Foundation.NSNotification.Name {
+    get
+  }
+}
+extension CGFloat {
+  public static var one: CoreGraphics.CGFloat {
+    get
+  }
+  public static var five: CoreGraphics.CGFloat {
+    get
+  }
+  public static var ten: CoreGraphics.CGFloat {
+    get
+  }
+  public static var sixteen: CoreGraphics.CGFloat {
+    get
+  }
+  public static var twentyTwo: CoreGraphics.CGFloat {
+    get
+  }
+  public static var twentySix: CoreGraphics.CGFloat {
+    get
+  }
+  public static var hundred: CoreGraphics.CGFloat {
+    get
+  }
+  public static var averageTouchSize: CoreGraphics.CGFloat {
+    get
+  }
+  public static var seperatorThickness: CoreGraphics.CGFloat {
+    get
+  }
+}
+extension CGRect {
+  public static func square(of side: CoreGraphics.CGFloat) -> CoreGraphics.CGRect
+}
+extension ZDPIcon {
+  public static var verticalDots: Swift.String {
+    get
+  }
+  public static var horizontalDots: Swift.String {
+    get
+  }
+  public static var dropDown: Swift.String {
+    get
+  }
+  public static var comment: Swift.String {
+    get
+  }
+  public static var thumbsUp: Swift.String {
+    get
+  }
+  public static var search: Swift.String {
+    get
+  }
+  public static var chat: Swift.String {
+    get
+  }
+  public static var globe: Swift.String {
+    get
+  }
+  public static var smallSize: CoreGraphics.CGFloat {
+    get
+  }
+  public static var mediumSize: CoreGraphics.CGFloat {
+    get
+  }
+  public static var rightArrow: Swift.String {
+    get
+  }
+  public static var leftArrow: Swift.String {
+    get
+  }
+  public static var forwardArrow: Swift.String {
+    get
+  }
+}
+public struct ZDPFont {
+  public static var extraLargeTitle: UIKit.UIFont {
+    get
+  }
+  public static var largeTitle: UIKit.UIFont {
+    get
+  }
+  public static var title: UIKit.UIFont {
+    get
+  }
+  public static var primary: UIKit.UIFont {
+    get
+  }
+  public static var secondary: UIKit.UIFont {
+    get
+  }
+  public static var footnote: UIKit.UIFont {
+    get
+  }
+  public static func get(for textStyle: UIKit.UIFont.TextStyle) -> UIKit.UIFont
+}
+@_hasMissingDesignatedInitializers public class ZDPImage {
+  public static var plus: UIKit.UIImage? {
+    get
+  }
+  public static var attachment: UIKit.UIImage? {
+    get
+  }
+  public static var draft: UIKit.UIImage? {
+    get
+  }
+  public static var knowledgeBase: UIKit.UIImage? {
+    get
+  }
+  public static var community: UIKit.UIImage? {
+    get
+  }
+  public static var myTickets: UIKit.UIImage? {
+    get
+  }
+  public static var submitTicket: UIKit.UIImage? {
+    get
+  }
+  public static var menu: UIKit.UIImage? {
+    get
+  }
+  public static var chat: UIKit.UIImage? {
+    get
+  }
+  public static var noInternet: UIKit.UIImage? {
+    get
+  }
+  public static var generalError: UIKit.UIImage? {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class ZDPAnalytics : ObjectiveC.NSObject {
+  @objc public func getTrackingType() -> ZohoDeskPortalConfiguration.ZDPAnalyticsTrackingType
+  @objc public func getEventScreen() -> ZohoDeskPortalConfiguration.ZDPortalControllers
+  @objc public func getEventSource() -> ZohoDeskPortalConfiguration.ZDPortalControllers
+  @objc public func getEventAction() -> ZohoDeskPortalConfiguration.ZDPortalUIAction
+  @objc public func getlabelValue() -> Swift.String?
+  @objc public func getItemId() -> Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public enum ZDPAnalyticsTrackingType : Swift.Int {
+  case Event
+  case Launch
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ZDPViewController : Swift.Int {
+  case DashBoard, KBCategoryList, KBArticleDetail, CommunityCatagories, CommunityTopics, CommunityTopicDetail, MyTicketList, CreateTicket, Chat
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ZDPortalControllers : Swift.Int {
+  case DashBoard = 0
+  case KBCategoryList
+  case KBChildCategoryList
+  case KBSearchList
+  case KBArticleList
+  case KBArticleDetail
+  case KBRelatedArticles
+  case FeedBack
+  case KBDeeplinking
+  case CommunityCatagories
+  case CommunityTopicsList
+  case CommunityTopicDetail
+  case CommunityCreateTopic
+  case CommunityTopicReply
+  case DirectlyOpenFromApplication
+  case Nil
+  public typealias RawValue = Swift.String
+  public var rawValue: ZohoDeskPortalConfiguration.ZDPortalControllers.RawValue {
+    get
+  }
+  public init?(rawValue: ZohoDeskPortalConfiguration.ZDPortalControllers.RawValue)
+}
+@objc public enum ZDPortalUIAction : Swift.Int {
+  case DashBoardKBClicked
+  case DashBoardCommunityClicked
+  case DashBoardMyTicketClicked
+  case DashBoardCreateTicketClicked
+  case KBCategoryClicked
+  case KBChildCategoryClicked
+  case KBArticleClicked
+  case KBRelatedArticleClicked
+  case KBSearchedArticleClicked
+  case KBSearchedCategoryClicked
+  case KBArticleUpVoted
+  case KBArticleDownVoted
+  case KBArticleFeedBackSent
+  case KBArticleFeedBackSkip
+  case CommunityCategoryClicked
+  case CommunityCategoryFollow
+  case CommunityCategoryUnFollow
+  case CommunityTopicClicked
+  case CommunitySearchedTopicClicked
+  case CommunityForumClicked
+  case CommunityTopicTypeFilter
+  case CommunityTopicFollow
+  case CommunityTopicUnFollow
+  case CommunityTopicLiked
+  case CommunityTopicReplyAction
+  case CommunityTopicCommentAction
+  case CommunityTopicCreateAction
+  case CommunityTopicCommentSent
+  case CommunityTopicCommentCreateCancel
+  case CommunityTopicDeleted
+  case CommunityTopicEdited
+  case CommunityTopicCreated
+  case CommunityTopicCreateCancel
+  case CommunityTopicSavedAsDraft
+  case Nil
+  public typealias RawValue = Swift.String
+  public var rawValue: ZohoDeskPortalConfiguration.ZDPortalUIAction.RawValue {
+    get
+  }
+  public init?(rawValue: ZohoDeskPortalConfiguration.ZDPortalUIAction.RawValue)
+}
+extension ZDPAnalytics {
+  public static func trackEvent(from source: ZohoDeskPortalConfiguration.ZDPortalControllers? = nil, on screen: ZohoDeskPortalConfiguration.ZDPortalControllers, for action: ZohoDeskPortalConfiguration.ZDPortalUIAction? = nil, trackerType: ZohoDeskPortalConfiguration.ZDPAnalyticsTrackingType = .Event, label: Swift.String? = nil, itemId: Swift.String? = nil)
+}
+extension UIView {
+  public func _makeToast(_ message: Swift.String?, duration: Foundation.TimeInterval = _DPToastManager.shared.duration, position: ZohoDeskPortalConfiguration._DPToastPosition = _DPToastManager.shared.position, title: Swift.String? = nil, image: UIKit.UIImage? = nil, style: ZohoDeskPortalConfiguration._DPToastStyle = _DPToastManager.shared.style, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  public func _makeToast(_ message: Swift.String?, duration: Foundation.TimeInterval = _DPToastManager.shared.duration, point: CoreGraphics.CGPoint, title: Swift.String?, image: UIKit.UIImage?, style: ZohoDeskPortalConfiguration._DPToastStyle = _DPToastManager.shared.style, completion: ((Swift.Bool) -> Swift.Void)?)
+  public func _showToast(_ toast: UIKit.UIView, duration: Foundation.TimeInterval = _DPToastManager.shared.duration, position: ZohoDeskPortalConfiguration._DPToastPosition = _DPToastManager.shared.position, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  public func _showToast(_ toast: UIKit.UIView, duration: Foundation.TimeInterval = _DPToastManager.shared.duration, point: CoreGraphics.CGPoint, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  public func _hideToast()
+  public func _hideToast(_ toast: UIKit.UIView)
+  public func _hideAllToasts(includeActivity: Swift.Bool = false, clearQueue: Swift.Bool = true)
+  public func _clearToastQueue()
+  public func _makeToastActivity(_ position: ZohoDeskPortalConfiguration._DPToastPosition, adjustingCenterHeight flag: Swift.Bool = true, frame: CoreGraphics.CGRect = _DPToastManager.shared.style.activityFrame)
+  public func _makeToastActivity(_ point: CoreGraphics.CGPoint, frame: CoreGraphics.CGRect = _DPToastManager.shared.style.activityFrame)
+  public func _hideToastActivity()
+  public func _toastViewForMessage(_ message: Swift.String?, title: Swift.String?, image: UIKit.UIImage?, style: ZohoDeskPortalConfiguration._DPToastStyle) throws -> UIKit.UIView
+}
+public struct _DPToastStyle {
+  public var activityFrame: CoreGraphics.CGRect {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class _DPToastManager {
+  public static let shared: ZohoDeskPortalConfiguration._DPToastManager
+  public var style: ZohoDeskPortalConfiguration._DPToastStyle
+  public var duration: Swift.Double
+  public var position: ZohoDeskPortalConfiguration._DPToastPosition
+  @objc deinit
+}
+public enum _DPToastPosition {
+  case top
+  case center
+  case bottom
+  public static func == (a: ZohoDeskPortalConfiguration._DPToastPosition, b: ZohoDeskPortalConfiguration._DPToastPosition) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public enum ASAPModule {
+  case knowledgeBase
+  case community
+  case addTicket
+  case myTickets
+  case chat
+  public static func == (a: ZohoDeskPortalConfiguration.ASAPModule, b: ZohoDeskPortalConfiguration.ASAPModule) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+@objc @_inheritsConvenienceInitializers open class DPSideMenuListVC : ZohoDeskPortalConfiguration.DPListViewController {
+  open var isSideMenuEnabled: Swift.Bool {
+    get
+  }
+  open var selectedModule: ZohoDeskPortalConfiguration.ASAPModule? {
+    get
+  }
+  open func addSideMenuButton()
+  public var sideMenuButton: UIKit.UIBarButtonItem {
+    get
+  }
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func viewWillTransition(to size: CoreGraphics.CGSize, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  @objc deinit
+  @objc override dynamic public init(style: UIKit.UITableView.Style)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension DPSideMenuListVC {
+  @objc dynamic public func toggleSideMenu()
+}
+@objc @_hasMissingDesignatedInitializers public class DPSideMenu : UIKit.UIView {
+  public var highlightedModule: ZohoDeskPortalConfiguration.ASAPModule?
+  public init(frame: CoreGraphics.CGRect, highlightedModule: ZohoDeskPortalConfiguration.ASAPModule?)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc deinit
+}
+public protocol DPSideMenuItemDelegate : AnyObject {
+  func openModule()
+}
+public class DPSideMenuItem {
+  public init(module: ZohoDeskPortalConfiguration.ASAPModule, delegate: ZohoDeskPortalConfiguration.DPSideMenuItemDelegate?)
+  @objc deinit
+}
+extension DPSideMenuItem : ZohoDeskPortalConfiguration.ListItemProtocol {
+  public var displayTitle: Swift.String {
+    get
+  }
+  public func getCell(at indexPath: Foundation.IndexPath, of tableView: UIKit.UITableView) -> UIKit.UITableViewCell
+  public func onSelect()
+}
+public protocol AttachmentViewDelegate : AnyObject {
+  func photosPermissionError()
+  func cameraPermissionError()
+  func enableDone()
+  func disableDone()
+  func updateNavigationBar(title: Swift.String)
+  func completedUploading(_ attachments: [ZohoDeskPortalConfiguration.DPAttachment])
+}
+extension AttachmentView : UIKit.UICollectionViewDataSource {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+extension AttachmentView : UIKit.UICollectionViewDelegate {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+}
+extension AttachmentView : UIKit.UICollectionViewDelegateFlowLayout {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+}
+extension AttachmentView : UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGFloat
+}
+extension AttachmentView : UIKit.UITableViewDelegate {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, editActionsForRowAt indexPath: Foundation.IndexPath) -> [UIKit.UITableViewRowAction]?
+}
+extension AttachmentView : UIKit.UIImagePickerControllerDelegate, UIKit.UINavigationControllerDelegate, UIKit.UIDocumentPickerDelegate {
+  @objc dynamic public func documentPicker(_ controller: UIKit.UIDocumentPickerViewController, didPickDocumentsAt urls: [Foundation.URL])
+  @objc dynamic public func documentPicker(_ controller: UIKit.UIDocumentPickerViewController, didPickDocumentAt url: Foundation.URL)
+  @objc dynamic public func imagePickerControllerDidCancel(_ picker: UIKit.UIImagePickerController)
+  @objc dynamic public func imagePickerController(_ picker: UIKit.UIImagePickerController, didFinishPickingMediaWithInfo info: [UIKit.UIImagePickerController.InfoKey : Any])
+}
+extension UIView {
+  @discardableResult
+  public func align(_ type1: UIKit.NSLayoutConstraint.Attribute, with view: UIKit.UIView? = nil, on type2: UIKit.NSLayoutConstraint.Attribute? = nil, offset constant: CoreGraphics.CGFloat = 0, priority: Swift.Float? = nil) -> UIKit.NSLayoutConstraint?
+  public func alignEdges(with view: UIKit.UIView? = nil, offset constant: CoreGraphics.CGFloat = 0)
+  public func align(greaterThanHeight height: CoreGraphics.CGFloat)
+  public func alignHorizontally(with view: UIKit.UIView? = nil, offset constant: CoreGraphics.CGFloat = 0)
+  public func alignVertically(with view: UIKit.UIView? = nil, offset constant: CoreGraphics.CGFloat = 0)
+  public func alignTop(with view: UIKit.UIView? = nil, offset constant: CoreGraphics.CGFloat = 0)
+  public func alignBottom(with view: UIKit.UIView? = nil, offset constant: CoreGraphics.CGFloat = 0)
+  public func alignCenter(with view: UIKit.UIView? = nil, offset constant: CoreGraphics.CGFloat = 0)
+  public func alignLeading(with view: UIKit.UIView? = nil, offset constant: CoreGraphics.CGFloat = 0)
+  public func alignTrailing(with view: UIKit.UIView? = nil, offset constant: CoreGraphics.CGFloat = 0)
+  public func align(_ attributes: [UIKit.NSLayoutConstraint.Attribute], with view: UIKit.UIView? = nil, offset constant: CoreGraphics.CGFloat = 0)
+}
+extension UIView {
+  public enum SizeAttribute {
+    case height
+    case width
+    public static func == (a: UIKit.UIView.SizeAttribute, b: UIKit.UIView.SizeAttribute) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public func fixSize(_ size: CoreGraphics.CGSize)
+  public func fixWidth(_ width: CoreGraphics.CGFloat)
+  public func fixHeight(_ height: CoreGraphics.CGFloat)
+  public func minWidth(_ width: CoreGraphics.CGFloat)
+  public func maxWidth(_ width: CoreGraphics.CGFloat)
+  public func minHeight(_ width: CoreGraphics.CGFloat)
+  public func maxHeight(_ width: CoreGraphics.CGFloat)
+  public func setContentSize(along axis: UIKit.NSLayoutConstraint.Axis)
+  public func make(_ sizeAttribute: UIKit.UIView.SizeAttribute, fraction multiplier: CoreGraphics.CGFloat = 1, as view: UIKit.UIView, offset: CoreGraphics.CGFloat = 0)
+  public func updateLayoutDirection()
+  public static var isForcedRTL: Swift.Bool {
+    get
+  }
+}
+extension UIView {
+  public func alignSafe(with view: UIKit.UIView)
+  public func alignTopSafe(with view: UIKit.UIView)
+  public func alignBottomSafe(with view: UIKit.UIView)
+  public func alignLeadingSafe(with view: UIKit.UIView)
+  public func alignTrailingSafe(with view: UIKit.UIView)
+  public func getLayoutGuide() -> UIKit.UILayoutGuide
+  public var safeRect: CoreGraphics.CGRect {
+    get
+  }
+  public var safeHeight: CoreGraphics.CGFloat {
+    get
+  }
+  public var safeWidth: CoreGraphics.CGFloat {
+    get
+  }
+  public var smallSide: CoreGraphics.CGFloat {
+    get
+  }
+}
+public protocol DPDataManagerProtocol {
+  func getData(from url: Swift.String, onCompletion handler: @escaping (Swift.Result<Foundation.Data, ZohoDeskPortalConfiguration.ZDPortalError>) -> Swift.Void)
+}
+public class DPDataManager : ZohoDeskPortalConfiguration.DPDataManagerProtocol {
+  public init()
+  public func getData(from url: Swift.String, onCompletion handler: @escaping (Swift.Result<Foundation.Data, ZohoDeskPortalConfiguration.ZDPortalError>) -> Swift.Void)
+  @objc deinit
+}
+public class ZDPStoreManager {
+  public init(dbName: Swift.String, bundle: Foundation.Bundle)
+  public var managedObjectModel: CoreData.NSManagedObjectModel {
+    get
+    set
+  }
+  public var persistentStoreCoordinator: CoreData.NSPersistentStoreCoordinator {
+    get
+    set
+  }
+  public var managedObjectContext: CoreData.NSManagedObjectContext {
+    get
+    set
+  }
+  public func removeExistingDatabase()
+  public func saveContext()
+  @objc deinit
+}
+public protocol DPStringProtocol {
+  var general: ZohoDeskPortalConfiguration.ZDPStringProtocol { get }
+  var date: ZohoDeskPortalConfiguration.ZDPDateStringProtocol { get }
+}
+public protocol ZDPStringProtocol {
+  var knowledgeBase: Swift.String { get }
+  var email: Swift.String { get }
+  var done: Swift.String { get }
+  var yes: Swift.String { get }
+  var no: Swift.String { get }
+  var alert: Swift.String { get }
+  var cancel: Swift.String { get }
+  var dismiss: Swift.String { get }
+  var delete: Swift.String { get }
+  var save: Swift.String { get }
+  var submit: Swift.String { get }
+  var skip: Swift.String { get }
+  var update: Swift.String { get }
+  var backPressAlert: Swift.String { get }
+  var deleteAlertTitle: Swift.String { get }
+  var deleteAlertMessage: Swift.String { get }
+  var noInternet: Swift.String { get }
+  var generalError: Swift.String { get }
+  var helpcenterUnavailable: Swift.String { get }
+}
+public protocol ZDPResponseString {
+  var reply: Swift.String { get }
+  var replies: Swift.String { get }
+  var replyAdded: Swift.String { get }
+  var replyFailed: Swift.String { get }
+  var editReply: Swift.String { get }
+  var deleteReply: Swift.String { get }
+  var replyDeleteFailed: Swift.String { get }
+  var comment: Swift.String { get }
+  var commentAdded: Swift.String { get }
+  var commentUpdated: Swift.String { get }
+  var commentFailed: Swift.String { get }
+  var editComment: Swift.String { get }
+  var deleteComment: Swift.String { get }
+  var commentDeleted: Swift.String { get }
+  var commentDeleteFailed: Swift.String { get }
+}
+public protocol ZDPDateStringProtocol {
+  var justNow: Swift.String { get }
+  var minuteAgo: Swift.String { get }
+  var minutesAgo: Swift.String { get }
+  var hourAgo: Swift.String { get }
+  var hoursAgo: Swift.String { get }
+  var yesterday: Swift.String { get }
+  var daysAgo: Swift.String { get }
+  var monthAgo: Swift.String { get }
+  var monthsAgo: Swift.String { get }
+  var yearAgo: Swift.String { get }
+  var yearsAgo: Swift.String { get }
+}
+public protocol ZDPAttachmentStringProtocol {
+  var camera: Swift.String { get }
+  var photos: Swift.String { get }
+  var files: Swift.String { get }
+  var selectMessage: Swift.String { get }
+  var attachment: Swift.String { get }
+  var attachments: Swift.String { get }
+  var attachmentsWithCount: Swift.String { get }
+  var inProgress: Swift.String { get }
+  var uploadFail: Swift.String { get }
+  var cameraUnavailable: Swift.String { get }
+  var countExceedAlert: Swift.String { get }
+  var eachSizeExceedAlert: Swift.String { get }
+  var totalSizeExceedAlert: Swift.String { get }
+  var photosPermissionError: Swift.String { get }
+  var cameraPermissionError: Swift.String { get }
+}
+@_hasMissingDesignatedInitializers public class DPString {
+  public static var general: ZohoDeskPortalConfiguration.ZDPStringProtocol
+  public static var date: ZohoDeskPortalConfiguration.ZDPDateStringProtocol
+  public static var attachment: ZohoDeskPortalConfiguration.ZDPAttachmentStringProtocol
+  public static var response: ZohoDeskPortalConfiguration.ZDPResponseString
+  @objc deinit
+}
+@objc public protocol ZDRichEditorDelegate : AnyObject {
+  @objc optional func richEditor(_ editor: ZohoDeskPortalConfiguration.ZDRichEditorView, heightDidChange height: Swift.Int)
+  @objc optional func richEditor(_ editor: ZohoDeskPortalConfiguration.ZDRichEditorView, sizeDidChange size: CoreGraphics.CGSize)
+  @objc optional func richEditor(_ editor: ZohoDeskPortalConfiguration.ZDRichEditorView, contentDidChange content: Swift.String)
+  @objc optional func richEditorTookFocus(_ editor: ZohoDeskPortalConfiguration.ZDRichEditorView)
+  @objc optional func richEditorLostFocus(_ editor: ZohoDeskPortalConfiguration.ZDRichEditorView)
+  @objc optional func richEditorDidLoad(_ editor: ZohoDeskPortalConfiguration.ZDRichEditorView)
+  @objc optional func richEditor(_ editor: ZohoDeskPortalConfiguration.ZDRichEditorView, shouldInteractWith url: Foundation.URL) -> Swift.Bool
+  @objc optional func richEditor(_ editor: ZohoDeskPortalConfiguration.ZDRichEditorView, handle action: Swift.String)
+  @objc optional func richEditor(_ editor: ZohoDeskPortalConfiguration.ZDRichEditorView, progressDidChange progress: CoreGraphics.CGFloat)
+  @objc optional func richEditor(_ editor: ZohoDeskPortalConfiguration.ZDRichEditorView, relativeCaretYPosition position: Swift.Int)
+}
+public protocol DPPickerDelegate : AnyObject {
+  func canSelect<AnyChoosable>(_ choice: AnyChoosable) -> Swift.Bool where AnyChoosable : ZohoDeskPortalConfiguration.Choosable
+  func selected<AnyChoosable>(_ choice: AnyChoosable, withTag tag: Swift.Int) where AnyChoosable : ZohoDeskPortalConfiguration.Choosable
+}
+extension DPPickerDelegate {
+  public func canSelect<AnyChoosable>(_ choice: AnyChoosable) -> Swift.Bool where AnyChoosable : ZohoDeskPortalConfiguration.Choosable
+}
+@_hasMissingDesignatedInitializers public class DPPicker<Element> : UIKit.UIButton, ZohoDeskPortalConfiguration.Themable, UIKit.UIPickerViewDataSource, UIKit.UIPickerViewDelegate where Element : Swift.Equatable, Element : ZohoDeskPortalConfiguration.Choosable {
+  @objc override dynamic public var inputView: UIKit.UIView? {
+    @objc get
+  }
+  @objc override dynamic public var inputAccessoryView: UIKit.UIView? {
+    @objc get
+  }
+  @objc override dynamic public var canBecomeFirstResponder: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public var isEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  public var choices: [Element]
+  weak public var delegate: ZohoDeskPortalConfiguration.DPPickerDelegate?
+  public init(choices: [Element], selected: Element? = nil, delegate: ZohoDeskPortalConfiguration.DPPickerDelegate? = nil, isChoosable: Swift.Bool = true, frame: CoreGraphics.CGRect = .square(of: .hundred), tag: Swift.Int = 1)
+  @discardableResult
+  public func updateSelection(with choice: Element?) -> Swift.Bool
+  public func update(_ choices: [Element], choosingFirst chooseFirst: Swift.Bool = true)
+  @objc public func showPicker()
+  @objc public func dismiss()
+  public func setColors()
+  @objc public func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
+  @objc public func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+  @objc public func pickerView(_ pickerView: UIKit.UIPickerView, attributedTitleForRow row: Swift.Int, forComponent component: Swift.Int) -> Foundation.NSAttributedString?
+  @objc public func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DPIconPicker<Element> : ZohoDeskPortalConfiguration.DPPicker<Element> where Element : Swift.Equatable, Element : ZohoDeskPortalConfiguration.Choosable, Element : ZohoDeskPortalConfiguration.Iconable {
+  @objc override public func pickerView(_ pickerView: UIKit.UIPickerView, attributedTitleForRow row: Swift.Int, forComponent component: Swift.Int) -> Foundation.NSAttributedString?
+  @objc deinit
+  override public init(choices: [Element], selected: Element? = super, delegate: ZohoDeskPortalConfiguration.DPPickerDelegate? = super, isChoosable: Swift.Bool = super, frame: CoreGraphics.CGRect = super, tag: Swift.Int = super)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DPLocalePicker : ZohoDeskPortalConfiguration.DPPicker<ZohoDeskPortalConfiguration.DPLanguage> {
+  @objc override public func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
+  @objc override public func dismiss()
+  public func set(_ locale: ZohoDeskPortalConfiguration.DPLanguage)
+  @objc deinit
+  override public init(choices: [ZohoDeskPortalConfiguration.DPLanguage], selected: ZohoDeskPortalConfiguration.DPLanguage? = super, delegate: ZohoDeskPortalConfiguration.DPPickerDelegate? = super, isChoosable: Swift.Bool = super, frame: CoreGraphics.CGRect = super, tag: Swift.Int = super)
+}
+public struct DPLanguage : ZohoDeskPortalConfiguration.Choosable, Swift.Equatable {
+  public var displayString: Swift.String
+  public var identifier: Swift.String
+  public static func == (lhs: ZohoDeskPortalConfiguration.DPLanguage, rhs: ZohoDeskPortalConfiguration.DPLanguage) -> Swift.Bool
+}
+extension ZDPortal.Language {
+  public var customLanguage: ZohoDeskPortalConfiguration.DPLanguage {
+    get
+  }
+}
+extension ZDPortal.Settings {
+  public var languages: [ZohoDeskPortalConfiguration.DPLanguage] {
+    get
+  }
+  public var primaryLanguage: ZohoDeskPortalConfiguration.DPLanguage {
+    get
+  }
+}
+extension ZDPortal.Settings {
+  public var availableLanguage: ZohoDeskPortalConfiguration.DPLanguage {
+    get
+  }
+}
+extension UIAlertAction {
+  @inlinable internal func dismiss(from controller: UIKit.UIAlertController) {
+        DispatchQueue.main.async {
+            controller.dismiss(animated: true)
+        }
+    }
+}
+extension UIViewController {
+  @inlinable internal func showDissmissableAlert(withTitle title: Swift.String, message: Swift.String?, andAction action: Swift.String) {
+        let alert = UIAlertController.initialize(title: title, message: message, preferredStyle: .alert)
+        alert.addDismissAction(withTitle: action)
+        presentInMainQueue(alert, animated: true)
+    }
+  @inlinable public func dismissInMainQueue(animated flag: Swift.Bool = true, onCompletion handler: (() -> Swift.Void)? = nil) {
+        DispatchQueue.main.async {
+            self.dismiss(animated: flag, completion: handler)
+        }
+    }
+  @inlinable internal func presentInMainQueue(_ viewController: UIKit.UIViewController, animated flag: Swift.Bool, onCompletion handler: (() -> Swift.Void)? = nil) {
+        DispatchQueue.main.async {
+            self.present(viewController, animated: flag, completion: handler)
+        }
+    }
+}
+extension CGFloat : ZohoDeskPortalConfiguration.Defaultable {
+  public static var baseValue: CoreGraphics.CGFloat {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ZDPTheme {
+  public static var isDark: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+public enum ZDPColor {
+  case primaryText, secondaryText, placeholderText
+  case primaryBG, secondaryBG, placeholderBG
+  case border, interactive
+  public var value: UIKit.UIColor {
+    get
+  }
+  public static func == (a: ZohoDeskPortalConfiguration.ZDPColor, b: ZohoDeskPortalConfiguration.ZDPColor) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+extension ZDPTheme {
+  public static var primaryBackGroundColor: UIKit.UIColor? {
+    get
+  }
+  public static var secondaryBackGroundColor: UIKit.UIColor? {
+    get
+  }
+  public static var placeholderBackGroundColor: UIKit.UIColor? {
+    get
+  }
+  public static var primaryTextColor: UIKit.UIColor {
+    get
+  }
+  public static var secondaryTextColor: UIKit.UIColor {
+    get
+  }
+  public static var placeholderTextColor: UIKit.UIColor {
+    get
+  }
+  public static var interactiveColor: UIKit.UIColor {
+    get
+  }
+  public static var borderColor: UIKit.UIColor {
+    get
+  }
+  public static var successColor: UIKit.UIColor {
+    get
+  }
+  public static var failureColor: UIKit.UIColor {
+    get
+  }
+  public static var navBar: ZohoDeskPortalConfiguration.ZDPNavigationBarThemeProtocol {
+    get
+  }
+}
+public protocol AttachmentSize {
+  var maximumCount: Swift.Int { get }
+  var maximumTotalSize: Swift.Int { get }
+  var maximumSingleSize: Swift.Int { get }
+  var useTotalFileSize: Swift.Bool { get }
+}
+public struct AttachmentConfiguration {
+  public init(module: ZohoDeskPortalConfiguration.DPModule)
+  public init(strings: ZohoDeskPortalConfiguration.DisplayStrings, size: ZohoDeskPortalConfiguration.AttachmentSize, module: ZohoDeskPortalConfiguration.DPModule)
+}
+public protocol ZUsecase : AnyObject {
+  associatedtype ZRequest
+  associatedtype ZResponse
+  func execute(_ request: Self.ZRequest, and callback: @escaping (Self.ZResponse) -> Swift.Void)
+  func executeSync(_ request: Self.ZRequest, and callback: @escaping (Self.ZResponse) -> Swift.Void)
+  func invoke(_ callback: @escaping (Self.ZResponse) -> Swift.Void, using result: Self.ZResponse)
+}
+extension ZUsecase {
+  public func execute(_ request: Self.ZRequest, and callback: @escaping (Self.ZResponse) -> Swift.Void)
+  public func invoke(_ callback: @escaping (Self.ZResponse) -> Swift.Void, using result: Self.ZResponse)
+}
+public enum ZDPortalError : Swift.Error {
+  case networkError(ZohoDeskPortalAPIKit.ZDPError)
+  case coreDataError
+  case noResultSearch(keyword: Swift.String)
+  case nothingFound
+  case validationFailed
+  public func whenAccessDenied(_ action: () -> Swift.Void)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class ZDRichEditorView : UIKit.UIView, UIKit.UIScrollViewDelegate, UIKit.UIWebViewDelegate, UIKit.UIGestureRecognizerDelegate {
+  @objc weak public var delegate: ZohoDeskPortalConfiguration.ZDRichEditorDelegate?
+  @objc public var webView: WebKit.WKWebView! {
+    get
+  }
+  @objc public var isClearWebview: Swift.Bool
+  @objc public var progress: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc public var isScrollEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var isEditingEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var isDarkModeEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var contentHTML: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc open var editorHeight: Swift.Int {
+    @objc get
+  }
+  @objc public var relativeCaretYPosition: Swift.Int {
+    @objc get
+    @objc set
+  }
+  @objc public var clientHeight: Swift.Int {
+    @objc get
+    @objc set
+  }
+  @objc public var clientWidth: Swift.Int
+  @objc public var text: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @objc public func setupEditor(baseURL: Swift.String)
+  @objc public func runJS(_ js: Swift.String, completionHandler: ((Any?, Swift.Error?) -> Swift.Void)? = nil)
+  @objc public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @objc public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+  @objc override dynamic open func becomeFirstResponder() -> Swift.Bool
+  @objc override dynamic open func resignFirstResponder() -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers public class DPRecentSearchCell : ZohoDeskPortalConfiguration.DPInteractiveCell {
+  public func configureViews(_ searchResult: Swift.String)
+  override public func setColors()
+  @objc deinit
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+public typealias DPResultsController = UIKit.UIViewController & UIKit.UISearchResultsUpdating
+public protocol DPSearchableController : UIKit.UIViewController {
+  var resultsController: ZohoDeskPortalConfiguration.DPResultsController { get }
+  var searchController: ZohoDeskPortalConfiguration.ZDPSearchController { get }
+  var searchBoxPlaceholder: Swift.String { get }
+  var tableView: UIKit.UITableView? { get }
+  func configureSearchController()
+  func setColorsToSearchField()
+}
+@objc @_inheritsConvenienceInitializers public class ZDPSearchController : UIKit.UISearchController {
+  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(searchResultsController: UIKit.UIViewController?)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension DPSearchableController {
+  public var tableView: UIKit.UITableView? {
+    get
+  }
+  public func configureSearchController()
+  public func setColorsToSearchField()
+  public var searchField: UIKit.UITextField? {
+    get
+  }
+}
+public protocol DPSearchable : AnyObject {
+  var titleToSearch: Swift.String { get }
+  var searchKeyword: Swift.String? { get set }
+  func setKeyword(_ keyword: Swift.String)
+  func highlightedKeyword(with color: UIKit.UIColor) -> Foundation.NSAttributedString
+}
+extension DPSearchable {
+  public func setKeyword(_ keyword: Swift.String)
+  public func highlightedKeyword(with color: UIKit.UIColor) -> Foundation.NSAttributedString
+}
+public protocol DPStorable {
+  var mainContext: CoreData.NSManagedObjectContext { get }
+  var privateContextWithParent: CoreData.NSManagedObjectContext { get }
+  var currentContext: CoreData.NSManagedObjectContext { get }
+  func saveCurrentContext()
+}
+extension DPStorable {
+  public var currentContext: CoreData.NSManagedObjectContext {
+    get
+  }
+  public func saveCurrentContext()
+}
+extension NSManagedObjectContext {
+  convenience public init?(modelName: Swift.String, in bundle: Foundation.Bundle)
+  public func update()
+  public var privateChildContext: CoreData.NSManagedObjectContext {
+    get
+  }
+  public func clearAllObjects(forEntityNames entityNames: [Swift.String])
+  public func clearObjects(withName entityName: Swift.String, using predicate: Foundation.NSPredicate? = nil)
+  @discardableResult
+  public func savePrivateAndParent() -> Swift.Bool
+  @discardableResult
+  public func saveChanges(inContextName context: Swift.String = "Context") -> Swift.Bool
+  public func fetchAndWait<ManagedObject>(_ request: CoreData.NSFetchRequest<ManagedObject>) -> [ManagedObject] where ManagedObject : CoreData.NSFetchRequestResult
+}
+extension UIColor {
+  convenience public init(hexCode: Swift.String)
+  convenience public init(rbg: Swift.Int, alpha: CoreGraphics.CGFloat = 1)
+  public var hexCode: Swift.String? {
+    get
+  }
+}
+extension NSTextAlignment {
+  public mutating func updateForLanguage()
+}
+extension UIView {
+  @inlinable public func hideInASAP() {
+        self.isHidden = true
+    }
+  @inlinable public func showInASAP() {
+        self.isHidden = false
+    }
+  @inlinable public func fillet(by radius: CoreGraphics.CGFloat) {
+        layer.cornerRadius = radius
+        layer.masksToBounds = true
+    }
+  @inlinable public func makeFillet() {
+        if frame.size.height != frame.size.width {
+            assertionFailure("can't make round when height is not equal to width")
+        }
+
+        layer.cornerRadius = frame.size.width * 0.5
+    }
+}
+extension CGRect {
+  public init(width: Swift.Int = 0, height: Swift.Int = 0, x: Swift.Int = 0, y: Swift.Int = 0)
+  public init(width: CoreGraphics.CGFloat = 0, height: CoreGraphics.CGFloat = 0, x: CoreGraphics.CGFloat = 0, y: CoreGraphics.CGFloat = 0)
+}
+extension UIEdgeInsets {
+  public static func allSides(by padding: CoreGraphics.CGFloat) -> UIKit.UIEdgeInsets
+}
+extension IndexPath {
+  public func isLastCell(of tableView: UIKit.UITableView) -> Swift.Bool
+}
+extension UITableView {
+  public func dequeueReusableCell<T>(for indexPath: Foundation.IndexPath) -> T where T : UIKit.UITableViewCell
+  public func showLoaderInFooter()
+  public func hideLoaderInFooter()
+}
+extension UITableViewCell {
+  public static var reuseIdentifier: Swift.String {
+    get
+  }
+}
+extension UIBarButtonItem {
+  convenience public init(image: UIKit.UIImage?, action: ObjectiveC.Selector, target: Any)
+  public func setCount(_ count: Swift.Int, withColor color: UIKit.UIColor)
+  public func setBadge(text: Swift.String?, withOffsetFromTopRight offset: CoreGraphics.CGPoint = CGPoint.zero, andColor color: UIKit.UIColor = UIColor.red, andFilled filled: Swift.Bool = true, andFontSize fontSize: CoreGraphics.CGFloat = 11)
+  public func removeBadge()
+}
+extension UIButton {
+  public func alignContentLeading()
+  public func alignContentTrailing()
+  public func enable()
+  public func disable()
+}
+extension UISearchBar {
+  public func updateSearchIconInASAP()
+  public func showLoaderInLeftView()
+  public func setSearchIconOnLeftView()
+  public var isLoading: Swift.Bool {
+    get
+    set
+  }
+}
+extension UIAlertController {
+  public static func initialize(title: Swift.String?, message: Swift.String?, preferredStyle: UIKit.UIAlertController.Style) -> UIKit.UIAlertController
+  @objc dynamic public func setColors()
+}
+public protocol Reusable {
+  static var reuseIdentifier: Swift.String { get }
+}
+public protocol Registerable : UIKit.UITableViewCell {
+  static func register(to tableView: UIKit.UITableView)
+}
+public protocol Themable {
+  func setColors()
+}
+@objc public protocol AccessibleView {
+  @objc func setAccessibilityIdentifiers()
+}
+public protocol Choosable {
+  var displayString: Swift.String { get }
+}
+public protocol Iconable {
+  var selectionText: Swift.String { get }
+  var iconString: Swift.String { get }
+  var color: UIKit.UIColor { get }
+}
+public protocol Updatable : AnyObject {
+  func executeUpdates(_ updates: @autoclosure () -> Swift.Void)
+  func executeWithoutAnimation(_ updates: @autoclosure () -> Swift.Void)
+}
+public protocol Cancellable : UIKit.UIViewController {
+  var stateChanged: Swift.Bool { get }
+  func addCancelButton()
+}
+public protocol Imitable : Swift.Decodable, Swift.Encodable {
+  var copy: Self? { get }
+}
+extension Imitable {
+  public var copy: Self? {
+    get
+  }
+}
+extension Registerable {
+  public static func register(to tableView: UIKit.UITableView)
+}
+public protocol Dismissable : UIKit.UIViewController {
+  var viewController: ZohoDeskPortalConfiguration.ZDPViewController { get }
+  var callBackOnDismiss: Swift.Bool { get set }
+}
+extension UITableView : ZohoDeskPortalConfiguration.Updatable {
+  public func executeUpdates(_ updates: @autoclosure () -> Swift.Void)
+  public func executeWithoutAnimation(_ updates: @autoclosure () -> Swift.Void)
+}
+@objc open class DPSectionHeaderView : UIKit.UITableViewHeaderFooterView, ZohoDeskPortalConfiguration.Themable {
+  public init(header: Swift.String?, textColor: ZohoDeskPortalConfiguration.ZDPColor, font: UIKit.UIFont, contentBackground: ZohoDeskPortalConfiguration.ZDPColor? = .primaryBG)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc public func setColors()
+  @objc deinit
+  @objc override dynamic public init(reuseIdentifier: Swift.String?)
+}
+@objc @_inheritsConvenienceInitializers open class DPSeperatedSectionHeader : ZohoDeskPortalConfiguration.DPSectionHeaderView {
+  @objc override public func setColors()
+  @objc deinit
+  override public init(header: Swift.String?, textColor: ZohoDeskPortalConfiguration.ZDPColor, font: UIKit.UIFont, contentBackground: ZohoDeskPortalConfiguration.ZDPColor? = super)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc open class DPIconButton : UIKit.UIButton {
+  public init(icon: Swift.String, size: CoreGraphics.CGFloat = .twentyTwo)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+@objc open class DPRoundedIconButton : ZohoDeskPortalConfiguration.DPIconButton, ZohoDeskPortalConfiguration.Themable {
+  public init(icon: Swift.String, color: ZohoDeskPortalConfiguration.ZDPColor, backgroundColor: ZohoDeskPortalConfiguration.ZDPColor, size: CoreGraphics.CGFloat = .twentyTwo)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  public func setColors()
+  @objc deinit
+  override public init(icon: Swift.String, size: CoreGraphics.CGFloat = super)
+}
+@objc open class DPIconLabel : ZohoDeskPortalConfiguration.DPLabel {
+  public init(color: ZohoDeskPortalConfiguration.ZDPColor, title: Swift.String? = nil, size: CoreGraphics.CGFloat = ZDPIcon.mediumSize)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  override public init(color: ZohoDeskPortalConfiguration.ZDPColor, title: Swift.String? = super, frame: CoreGraphics.CGRect = super, font: UIKit.UIFont? = super)
+  @objc deinit
+}
+@objc open class DPLabel : UIKit.UILabel, ZohoDeskPortalConfiguration.Themable {
+  public init(color: ZohoDeskPortalConfiguration.ZDPColor, title: Swift.String? = nil, frame: CoreGraphics.CGRect = .zero, font: UIKit.UIFont? = nil)
+  public func setColors()
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc deinit
+}
+@objc open class DPSpacedLabel : ZohoDeskPortalConfiguration.DPLabel {
+  public init(color: ZohoDeskPortalConfiguration.ZDPColor, title: Swift.String? = nil, frame: CoreGraphics.CGRect = .zero, font: UIKit.UIFont? = nil, horizontal: CoreGraphics.CGFloat = .ten, vertical: CoreGraphics.CGFloat = .five)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  public func increaseContentSize(alongX horizontal: CoreGraphics.CGFloat, alongY vertical: CoreGraphics.CGFloat)
+  @objc override dynamic public var intrinsicContentSize: CoreGraphics.CGSize {
+    @objc get
+  }
+  @objc deinit
+  override public init(color: ZohoDeskPortalConfiguration.ZDPColor, title: Swift.String? = super, frame: CoreGraphics.CGRect = super, font: UIKit.UIFont? = super)
+}
+@objc @_inheritsConvenienceInitializers open class DPInteractiveCell : UIKit.UITableViewCell, ZohoDeskPortalConfiguration.Registerable, ZohoDeskPortalConfiguration.Themable {
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  open func setColors()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class DPIconCell : ZohoDeskPortalConfiguration.DPInteractiveCell {
+  public var icon: UIKit.UIImageView
+  public var currentIconURL: Swift.String?
+  open func setIcon(fromURL url: Swift.String?, forName name: Swift.String, using usecase: ZohoDeskPortalConfiguration.DPContent)
+  open func updateImage(from url: Swift.String?, using usecase: ZohoDeskPortalConfiguration.DPContent, forName name: Swift.String)
+  @objc deinit
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers open class DPNonInteractiveCell : UIKit.UITableViewCell, ZohoDeskPortalConfiguration.Registerable {
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class DPTableView : UIKit.UITableView, ZohoDeskPortalConfiguration.Themable {
+  @objc override dynamic public init(frame: CoreGraphics.CGRect = .square(of: .hundred), style: UIKit.UITableView.Style = .plain)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  public func setColors()
+  @objc deinit
+}
+extension UITableView {
+  public func setColorsForVisibleCells()
+}
+extension UICollectionView {
+  public func setColorsForVisibleCells()
+}
+@objc open class DPTextField : UIKit.UITextField {
+  public init(placeholder: Swift.String? = nil, leftPadding: CoreGraphics.CGFloat = .zero)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+extension DPTextField : ZohoDeskPortalConfiguration.Themable {
+  public func setColors()
+}
+@objc open class DPTextView : UIKit.UITextView {
+  public init(placeholder: Swift.String, font: UIKit.UIFont = ZDPFont.secondary, useCustomColors: Swift.Bool = false, useCustomDelegate: Swift.Bool = false)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  public var enteredText: Swift.String? {
+    get
+  }
+  @objc deinit
+  @available(iOS 7.0, *)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect, textContainer: UIKit.NSTextContainer?)
+}
+extension DPTextView : ZohoDeskPortalConfiguration.Themable {
+  public func setColors()
+}
+extension DPTextView : UIKit.UITextViewDelegate {
+  @objc dynamic public func textViewDidBeginEditing(_ textView: UIKit.UITextView)
+  @objc dynamic public func textViewDidEndEditing(_ textView: UIKit.UITextView)
+}
+extension UIFont {
+  @inlinable internal func getScaledFont(forStyle fontStyle: UIKit.UIFont.TextStyle) -> UIKit.UIFont {
+        return self.withSize(UIFontDescriptor.preferredFontDescriptor(withTextStyle: fontStyle).pointSize)
+    }
+}
+@_hasMissingDesignatedInitializers public class ZDPResultHandler {
+  public static func update<T>(_ result: Swift.Result<T, ZohoDeskPortalConfiguration.ZDPortalError>, perform: (inout T) -> Swift.Void, onCompletion handler: @escaping (Swift.Result<T, ZohoDeskPortalConfiguration.ZDPortalError>) -> Swift.Void)
+  public static func process<T, S>(_ result: Swift.Result<T, ZohoDeskPortalAPIKit.ZDPError>, transform: (T) -> S, onCompletion handler: @escaping (Swift.Result<S, ZohoDeskPortalConfiguration.ZDPortalError>) -> Swift.Void)
+  @objc deinit
+}
+extension Locale {
+  public static var preferred: Foundation.Locale {
+    get
+  }
+  public var displayString: Swift.String {
+    get
+  }
+  public func updateLayoutDirection()
+}
+extension Date {
+  public var relativeTimeString: Swift.String? {
+    get
+  }
+  @available(iOS 13.0, *)
+  public func relativeTime(in locale: Foundation.Locale) -> Swift.String
+  @available(iOS, introduced: 9.0, deprecated: 13.0)
+  public func relativeTime(using dateString: ZohoDeskPortalConfiguration.ZDPDateStringProtocol) -> Swift.String?
+}
+extension Int {
+  public var isZero: Swift.Bool {
+    get
+  }
+  public func spellOut(singular: Swift.String, plural: Swift.String) -> Swift.String?
+  public func replaceCount(word: Swift.String) -> Swift.String?
+  public func suffix(singular: Swift.String, plural: Swift.String) -> Swift.String?
+}
+extension ZDRichEditorView {
+  @objc dynamic public func setContent(_ content: Swift.String?)
+}
+extension Numeric {
+  public static var one: Self {
+    get
+  }
+}
+extension Array {
+  public static var empty: Swift.Array<Element> {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers open class DPListViewController : ZohoDeskPortalConfiguration.DPTableViewController {
+  public var messageView: UIKit.UIStackView {
+    get
+    set
+  }
+  public var messageLabel: ZohoDeskPortalConfiguration.DPLabel {
+    get
+    set
+  }
+  public var errorImage: UIKit.UIImageView {
+    get
+    set
+  }
+  public var sections: [ZohoDeskPortalConfiguration.SectionItem] {
+    get
+    set
+  }
+  public func layoutMessageView()
+  open func alignMessageView()
+  public func showErrorView(basedOn error: ZohoDeskPortalConfiguration.ZDPortalError?, notFoundText: Swift.String)
+  public func syncSettings(errorText: Swift.String, andPerform operation: @escaping () -> Swift.Void)
+  open var isEmptyList: Swift.Bool {
+    get
+  }
+  override open func setColors()
+  @objc override dynamic public init(style: UIKit.UITableView.Style)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension DPListViewController {
+  @objc override dynamic open func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @objc override dynamic open func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc override dynamic open func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension DPListViewController {
+  @objc override dynamic open func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGFloat
+  @objc override dynamic open func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreGraphics.CGFloat
+  @objc override dynamic open func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @objc override dynamic open func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+public protocol ListItemProtocol {
+  var height: CoreGraphics.CGFloat { get }
+  func getCell(at indexPath: Foundation.IndexPath, of tableView: UIKit.UITableView) -> UIKit.UITableViewCell
+  func onSelect()
+}
+extension ListItemProtocol {
+  public var height: CoreGraphics.CGFloat {
+    get
+  }
+  public func onSelect()
+}
+public class SectionItem {
+  final public let id: Swift.String
+  public var header: Swift.String?
+  public var items: [ZohoDeskPortalConfiguration.ListItemProtocol]
+  public init(id: Swift.String, header: Swift.String?, items: [ZohoDeskPortalConfiguration.ListItemProtocol])
+  @objc deinit
+}
+public protocol AttachableItemDelegate : AnyObject {
+  func uploaded(fraction: Swift.Float)
+  func uploadCompleted(of attachment: ZohoDeskPortalConfiguration.DPAttachment, in item: ZohoDeskPortalConfiguration.AttachableItem)
+  func uploadFailed()
+}
+@_hasMissingDesignatedInitializers public class AttachableItem {
+  public var attachment: ZohoDeskPortalConfiguration.DPAttachment?
+  public var state: ZohoDeskPortalConfiguration.AttachableItem.UploadState
+  public enum UploadState : Swift.Int {
+    case yetToUpload, uploading, failed, completed
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum ItemType : Swift.Equatable {
+    case asset(Photos.PHAsset)
+    case file(Foundation.URL)
+    case image(Foundation.Data, Swift.String)
+    case unknown(Foundation.Data?, Swift.String)
+    public static func == (a: ZohoDeskPortalConfiguration.AttachableItem.ItemType, b: ZohoDeskPortalConfiguration.AttachableItem.ItemType) -> Swift.Bool
+  }
+  @objc deinit
+}
+public enum DPModule {
+  case ticket
+  case community
+  public static func == (a: ZohoDeskPortalConfiguration.DPModule, b: ZohoDeskPortalConfiguration.DPModule) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+extension AttachableItem : ZohoDeskPortalAPIKit.ZDPUploaderDelegate {
+  @objc dynamic public func uploaded(fraction: Swift.Float)
+}
+extension AttachableItem : Swift.Equatable {
+  public static func == (lhs: ZohoDeskPortalConfiguration.AttachableItem, rhs: ZohoDeskPortalConfiguration.AttachableItem) -> Swift.Bool
+}
+extension DPAttachment {
+  convenience public init(_ attachment: ZohoDeskPortalAPIKit.ZDPortal.Attachment)
+}
+extension ZDRichEditorView {
+  @objc dynamic public func setTextColor(_ color: UIKit.UIColor)
+  @objc dynamic public func setEditorBackgroundColor(_ color: UIKit.UIColor)
+  @objc dynamic public func setFontSize(_ size: Swift.Int)
+  @objc dynamic public func bold()
+  @objc dynamic public func italic()
+  @objc dynamic public func strikethrough()
+  @objc dynamic public func underline()
+  @objc dynamic public func orderedList()
+  @objc dynamic public func unorderedList()
+  @objc dynamic public func insertImage(_ url: Swift.String, alt: Swift.String)
+  @objc dynamic public func insertLink(_ href: Swift.String, title: Swift.String)
+}
+extension ZDRichEditorView {
+  @objc dynamic public func operationOnDidLoad()
+  @objc dynamic public func setHTML(html: Swift.String)
+  @objc dynamic public func loadFreshHTML(html: Swift.String, textColor: UIKit.UIColor)
+  @objc dynamic public func setPlaceholderText(text: Swift.String)
+  @objc dynamic public func loadCustomCSS(url: Swift.String)
+  @objc dynamic public func removeFormat()
+  @objc dynamic public func reFocus()
+  @objc dynamic public func undo()
+  @objc dynamic public func redo()
+  @objc dynamic public func subscriptText()
+  @objc dynamic public func superscript()
+  @objc dynamic public func setEditorFontColor(_ color: UIKit.UIColor)
+  @objc dynamic public func setTextBackgroundColor(_ color: UIKit.UIColor)
+  @objc dynamic public func header(_ h: Swift.Int)
+  @objc dynamic public func indent()
+  @objc dynamic public func outdent()
+  @objc dynamic public func blockquote()
+  @objc dynamic public func alignLeft()
+  @objc dynamic public func alignCenter()
+  @objc dynamic public func alignRight()
+  @objc dynamic public func insertHTML(_ html: Swift.String)
+  @objc dynamic public func restoreRange()
+  @objc dynamic public func focusAtEnd()
+  @objc dynamic public func focus()
+  @objc dynamic public func focus(at: CoreGraphics.CGPoint)
+  @objc dynamic public func blur()
+  @objc dynamic public func reloadData()
+}
+public protocol PushNotification : AnyObject {
+  func processRemoteNotification(userInfo: [Swift.AnyHashable : Any])
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortalConfiguration : ObjectiveC.NSObject {
+  weak public static var ticketDelegate: ZohoDeskPortalConfiguration.PushNotification?
+  weak public static var chatDelegate: ZohoDeskPortalConfiguration.PushNotification?
+  public static var SDKLanguage: Swift.String {
+    get
+  }
+  @objc public static func processRemoteNotification(userInfo: [Swift.AnyHashable : Any])
+  @objc public static func setSDKLanguage(_ languageCode: Swift.String)
+  @objc public static func analyticsTracker(onCompletion: @escaping ((ZohoDeskPortalConfiguration.ZDPAnalytics?) -> ()))
+  @objc public static func updateLayoutDirection()
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc extension ZDPortalConfiguration {
+  @objc public static var customFontName: Swift.String?
+  @objc public static var navigationMode: ZohoDeskPortalConfiguration.ZDPNavigationMode
+  @objc public static var prefersLargeTitle: Swift.Bool
+  @objc public static var pushOnActiveState: Swift.Bool
+  @objc public static var modalPresentationStyle: UIKit.UIModalPresentationStyle
+  @objc public static var delegate: ZohoDeskPortalConfiguration.ZDPortalDelegate?
+}
+@objc public protocol ZDPortalDelegate {
+  @objc optional func dismissed(viewController: ZohoDeskPortalConfiguration.ZDPViewController)
+  @objc optional func languageChanged(to languageIdentifier: Swift.String, in screen: ZohoDeskPortalConfiguration.ZDPLanguageChangeScreen)
+}
+@objc public enum ZDPLanguageChangeScreen : Swift.Int {
+  case dashboard
+  case kbRootCategories
+  case kbArticleDetail
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ZDPNavigationMode : Swift.Int {
+  case push
+  case present
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ZDPortalConfiguration {
+  public static var availableModules: [ZohoDeskPortalConfiguration.ASAPModule]
+  public static var sideMenuItems: [ZohoDeskPortalConfiguration.DPSideMenuItem]
+}
+public struct ZDPortalString {
+}
+extension ZDPortalString {
+  public static var addTicketTitle: Swift.String {
+    get
+  }
+  public static var addTicketDescription: Swift.String {
+    get
+  }
+  public static var communityTitle: Swift.String {
+    get
+  }
+  public static var communityDescription: Swift.String {
+    get
+  }
+  public static var kbTitle: Swift.String {
+    get
+  }
+  public static var kbDescription: Swift.String {
+    get
+  }
+  public static var myTicketTitle: Swift.String {
+    get
+  }
+  public static var myTicketDescription: Swift.String {
+    get
+  }
+  public static var chat: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class Utility {
+  public static func getString(key: Swift.String) -> Swift.String
+  @objc deinit
+}
+extension ZDPortalConfiguration {
+  public static var privacy: ZohoDeskPortalConfiguration.ZDPPrivacyConfiguration {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class ZDPPrivacyConfiguration : ObjectiveC.NSObject {
+  public static let shared: ZohoDeskPortalConfiguration.ZDPPrivacyConfiguration
+  public var autoCorrectionVisibility: Swift.Bool
+  public var clipboardInteraction: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@available(iOS 14, *)
+extension AttachmentView : PhotosUI.PHPickerViewControllerDelegate {
+  public func picker(_ picker: PhotosUI.PHPickerViewController, didFinishPicking results: [PhotosUI.PHPickerResult])
+}
+@objc @_inheritsConvenienceInitializers public class WKWebViewIBWrapper : WebKit.WKWebView {
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect, configuration: WebKit.WKWebViewConfiguration)
+}
+extension WKWebView {
+  public func zoom(to zoomAmount: CoreGraphics.CGFloat)
+}
+public protocol AttachmentControllerDelegate : AnyObject {
+  func completedUploading(_ attachments: [ZohoDeskPortalConfiguration.DPAttachment])
+  func closed(afterSelecting items: [ZohoDeskPortalConfiguration.AttachableItem]?, andUploading attachments: [ZohoDeskPortalConfiguration.DPAttachment]?)
+  func cancelled()
+}
+@objc @_hasMissingDesignatedInitializers public class AttachmentController : ZohoDeskPortalConfiguration.DPViewController, ZohoDeskPortalConfiguration.Cancellable {
+  weak public var delegate: ZohoDeskPortalConfiguration.AttachmentControllerDelegate?
+  public var pendingAttachmentsUpload: Swift.Bool
+  public var selectedCount: Swift.Int {
+    get
+  }
+  public var stateChanged: Swift.Bool
+  public init(with config: ZohoDeskPortalConfiguration.AttachmentConfiguration, attachments: [ZohoDeskPortalConfiguration.DPAttachment]? = nil, items: [ZohoDeskPortalConfiguration.AttachableItem]? = nil)
+  @objc override dynamic public func viewDidLoad()
+  override public func setColors()
+  @objc deinit
+  public func getTitle() -> Swift.String
+  @objc @IBAction public func cancel()
+  @objc @IBAction public func done()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension AttachmentController : ZohoDeskPortalConfiguration.AttachmentViewDelegate {
+  public func photosPermissionError()
+  public func cameraPermissionError()
+  public func enableDone()
+  public func disableDone()
+  public func updateNavigationBar(title: Swift.String)
+  public func completedUploading(_ attachments: [ZohoDeskPortalConfiguration.DPAttachment])
+}
+public class DPContent : ZohoDeskPortalConfiguration.ZUsecase {
+  public typealias ZRequest = Swift.String
+  public typealias ZResponse = Swift.Result<Foundation.Data, ZohoDeskPortalConfiguration.ZDPortalError>
+  public init(dataManager: ZohoDeskPortalConfiguration.DPDataManagerProtocol)
+  public func executeSync(_ request: Swift.String, and callback: @escaping (Swift.Result<Foundation.Data, ZohoDeskPortalConfiguration.ZDPortalError>) -> Swift.Void)
+  @objc deinit
+}
+@objc public class DPAttachment : ObjectiveC.NSObject, Swift.Codable {
+  public var id: Swift.String
+  public var name: Swift.String
+  public var url: Swift.String?
+  public var size: Swift.String
+  public var data: Foundation.Data?
+  public init(size: Swift.String, url: Swift.String?, id: Swift.String, name: Swift.String)
+  public init(id: Swift.String, size: Swift.String, name: Swift.String, href: Swift.String?, data: Foundation.Data? = nil)
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public protocol DisplayStrings {
+  var common: ZohoDeskPortalConfiguration.ZDPStringProtocol { get }
+  var attachment: ZohoDeskPortalConfiguration.ZDPAttachmentStringProtocol { get }
+}
+extension String {
+  public var withoutExtension: Swift.String {
+    get
+  }
+  public var isEmptyOrWhitespaces: Swift.Bool {
+    get
+  }
+  public var prependedDot: Swift.String {
+    get
+  }
+  public var isAlphanumeric: Swift.Bool {
+    get
+  }
+  public var encoded: Swift.String? {
+    get
+  }
+  public var extn: Swift.String {
+    get
+  }
+  public var isNumber: Swift.Bool {
+    get
+  }
+  public var byteSize: Swift.String {
+    get
+  }
+  public var isValidEmail: Swift.Bool {
+    get
+  }
+  public var number: Swift.Int {
+    get
+  }
+  public var isPhoneNumber: Swift.Bool {
+    get
+  }
+  public func add(attributes: [Foundation.NSAttributedString.Key : Any]) -> Foundation.NSAttributedString
+  public func regexMatch(with string: Swift.String) -> Swift.Bool
+  public func prependIcon(_ icon: Swift.String, size: CoreGraphics.CGFloat = .ten) -> Foundation.NSAttributedString
+  public func appendIcon(_ icon: Swift.String, size: CoreGraphics.CGFloat = .ten) -> Foundation.NSAttributedString
+  public func applyIconFont(to icon: Swift.String, size: CoreGraphics.CGFloat = .ten) -> Foundation.NSAttributedString
+  public func apply(font: UIKit.UIFont, to text: Swift.String) -> Foundation.NSAttributedString
+  public func withColor(_ color: UIKit.UIColor, forText text: Swift.String) -> Foundation.NSAttributedString
+  public func date(withFormat format: Swift.String) -> Foundation.Date?
+}
+@objc @_inheritsConvenienceInitializers public class AttachmentView : UIKit.UIView {
+  public var uploadedItems: [ZohoDeskPortalConfiguration.AttachableItem] {
+    get
+  }
+  weak public var delegate: ZohoDeskPortalConfiguration.AttachmentViewDelegate? {
+    get
+    set
+  }
+  public var uploadedAttachments: [ZohoDeskPortalConfiguration.DPAttachment] {
+    get
+  }
+  final public var isUploadComplete: Swift.Bool {
+    get
+  }
+  @objc override dynamic public func awakeFromNib()
+  @objc override dynamic public func layoutSubviews()
+  @objc override dynamic public func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension AttachmentView {
+  public class func initialize(in frame: CoreGraphics.CGRect, with config: ZohoDeskPortalConfiguration.AttachmentConfiguration, items: [ZohoDeskPortalConfiguration.AttachableItem]? = nil, attachments: [ZohoDeskPortalConfiguration.DPAttachment]? = nil) -> ZohoDeskPortalConfiguration.AttachmentView
+}
+extension AttachmentView : ZohoDeskPortalConfiguration.Themable {
+  public func setColors()
+}
+public enum AttachmentSource : Swift.Int {
+  case photos, camera, files
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+}
+extension UIApplication {
+  public static var topController: UIKit.UIViewController? {
+    get
+  }
+  public static func pushOrPresent(_ viewController: UIKit.UIViewController, as style: UIKit.UIModalPresentationStyle = ZDPortalConfiguration.modalPresentationStyle, animated flag: Swift.Bool = true, withTitle title: Swift.String? = nil, canCancel addCancel: Swift.Bool = true, mode: ZohoDeskPortalConfiguration.ZDPNavigationMode = ZDPortalConfiguration.navigationMode)
+  public static func present(_ viewController: UIKit.UIViewController, as style: UIKit.UIModalPresentationStyle = ZDPortalConfiguration.modalPresentationStyle, animated flag: Swift.Bool = true, withTitle title: Swift.String? = nil, onCompletion handler: (() -> Swift.Void)? = nil, canCancel addCancel: Swift.Bool = true)
+  public static func requestDeleteConfirmation(onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  public static func requestConfirmation(withTitle title: Swift.String, andMessage message: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func dismiss()
+  public static var isKeyboardPresented: Swift.Bool {
+    get
+  }
+}
+extension UIAlertController {
+  public func addAction(withTitle title: Swift.String, completion: @escaping (UIKit.UIAlertAction) -> Swift.Void)
+  @inlinable public func addDismissAction(withTitle title: Swift.String) {
+        DispatchQueue.main.async {
+            self.addAction(UIAlertAction(title: title, style: .cancel, handler: nil))
+        }        
+    }
+}
+extension UIViewController {
+  public func enableNavigationBarButtons(_ flag: Swift.Bool)
+  public func updateNativeTheme()
+  public func showViewController(_ viewController: UIKit.UIViewController, as style: UIKit.UIModalPresentationStyle = ZDPortalConfiguration.modalPresentationStyle, animated flag: Swift.Bool = true, withTitle title: Swift.String? = nil, canCancel addCancel: Swift.Bool = true, onCompletion handler: (() -> Swift.Void)? = nil)
+  public func showLoaderInASAP()
+  public func hideLoaderInASAP()
+  public func showToastInASAP(withMessage message: Swift.String, forDuration seconds: Swift.Double = 2)
+  public func enableLargeTitleInASAP()
+  public func disableLargeTitleInASAP()
+}
+extension UIView {
+  public func showToastInASAP(withMessage message: Swift.String, forDuration seconds: Swift.Double = 2)
+}
+extension ZohoDeskPortalConfiguration.DPContentMode : Swift.Equatable {}
+extension ZohoDeskPortalConfiguration.DPContentMode : Swift.Hashable {}
+extension ZohoDeskPortalConfiguration.ZDPAnalyticsTrackingType : Swift.Equatable {}
+extension ZohoDeskPortalConfiguration.ZDPAnalyticsTrackingType : Swift.Hashable {}
+extension ZohoDeskPortalConfiguration.ZDPAnalyticsTrackingType : Swift.RawRepresentable {}
+extension ZohoDeskPortalConfiguration.ZDPViewController : Swift.Equatable {}
+extension ZohoDeskPortalConfiguration.ZDPViewController : Swift.Hashable {}
+extension ZohoDeskPortalConfiguration.ZDPViewController : Swift.RawRepresentable {}
+extension ZohoDeskPortalConfiguration.ZDPortalControllers : Swift.Equatable {}
+extension ZohoDeskPortalConfiguration.ZDPortalControllers : Swift.Hashable {}
+extension ZohoDeskPortalConfiguration.ZDPortalControllers : Swift.RawRepresentable {}
+extension ZohoDeskPortalConfiguration.ZDPortalUIAction : Swift.Equatable {}
+extension ZohoDeskPortalConfiguration.ZDPortalUIAction : Swift.Hashable {}
+extension ZohoDeskPortalConfiguration.ZDPortalUIAction : Swift.RawRepresentable {}
+extension ZohoDeskPortalConfiguration._DPToastPosition : Swift.Equatable {}
+extension ZohoDeskPortalConfiguration._DPToastPosition : Swift.Hashable {}
+extension ZohoDeskPortalConfiguration.ASAPModule : Swift.Equatable {}
+extension ZohoDeskPortalConfiguration.ASAPModule : Swift.Hashable {}
+extension UIKit.UIView.SizeAttribute : Swift.Equatable {}
+extension UIKit.UIView.SizeAttribute : Swift.Hashable {}
+extension ZohoDeskPortalConfiguration.ZDPColor : Swift.Equatable {}
+extension ZohoDeskPortalConfiguration.ZDPColor : Swift.Hashable {}
+extension ZohoDeskPortalConfiguration.AttachableItem.UploadState : Swift.Equatable {}
+extension ZohoDeskPortalConfiguration.AttachableItem.UploadState : Swift.Hashable {}
+extension ZohoDeskPortalConfiguration.AttachableItem.UploadState : Swift.RawRepresentable {}
+extension ZohoDeskPortalConfiguration.DPModule : Swift.Equatable {}
+extension ZohoDeskPortalConfiguration.DPModule : Swift.Hashable {}
+extension ZohoDeskPortalConfiguration.ZDPLanguageChangeScreen : Swift.Equatable {}
+extension ZohoDeskPortalConfiguration.ZDPLanguageChangeScreen : Swift.Hashable {}
+extension ZohoDeskPortalConfiguration.ZDPLanguageChangeScreen : Swift.RawRepresentable {}
+extension ZohoDeskPortalConfiguration.ZDPNavigationMode : Swift.Equatable {}
+extension ZohoDeskPortalConfiguration.ZDPNavigationMode : Swift.Hashable {}
+extension ZohoDeskPortalConfiguration.ZDPNavigationMode : Swift.RawRepresentable {}
+extension ZohoDeskPortalConfiguration.AttachmentSource : Swift.Equatable {}
+extension ZohoDeskPortalConfiguration.AttachmentSource : Swift.Hashable {}
+extension ZohoDeskPortalConfiguration.AttachmentSource : Swift.RawRepresentable {}

@@ -1,0 +1,616 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZohoDeskPortalTicket
+import CoreData
+import Foundation
+import Swift
+import UIKit
+import WebKit
+import ZohoDeskPortalAPIKit
+import ZohoDeskPortalConfiguration
+@_exported import ZohoDeskPortalTicket
+extension String : ZohoDeskPortalConfiguration.Choosable {
+  public var displayString: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class ZDPTicketConfiguration : ObjectiveC.NSObject {
+  @objc public static var configure: ZohoDeskPortalTicket.ZDPTicketConfiguration
+  @objc public var isReplyAllowed: Swift.Bool
+  @objc public var isCommentAllowed: Swift.Bool
+  @objc public var isTicketUpdateAllowed: Swift.Bool
+  @objc public var isCommentEditAllowed: Swift.Bool
+  @objc public var isCommentDeleteAllowed: Swift.Bool
+  @objc deinit
+  @objc override dynamic public init()
+}
+public enum TFType : Swift.String {
+  case LookUp, Email, Phone, Text, Number, Textarea, Picklist, Percent, Decimal, Currency, Date, DateTime, URL, Boolean, Multiselect, NativePicker, PickerControl, Attachment
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc public class ZDCustomizedTicketField : ObjectiveC.NSObject {
+  public var fieldName: Swift.String?
+  public var value: Swift.String?
+  public var isEditable: Swift.Bool?
+  required public init(fieldName: Swift.String, value: Swift.String, isEditable: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public class ZDCustomizedTicketForm : ObjectiveC.NSObject {
+  public var departmentId: Swift.String?
+  public var customizedTicketFields: [ZohoDeskPortalTicket.ZDCustomizedTicketField]?
+  required public init(departmentId: Swift.String? = nil, fields: [ZohoDeskPortalTicket.ZDCustomizedTicketField])
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public class ZDVisibleTicketField : ObjectiveC.NSObject {
+  public var departmentId: Swift.String?
+  public var fieldNames: [Swift.String]
+  required public init(departmentId: Swift.String? = nil, fieldNames: [Swift.String])
+  @objc deinit
+  @objc override dynamic public init()
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortalSubmitTicket : ObjectiveC.NSObject {
+  @objc public static func showAddTicketForm(withTitle title: Swift.String? = nil, navigationMode: ZohoDeskPortalConfiguration.ZDPNavigationMode = ZDPortalConfiguration.navigationMode, completion: @escaping ((ZohoDeskPortalAPIKit.ZDPTicket) -> ()), onError: @escaping ((Swift.Error?) -> ()))
+  @objc public static func show(withTitle title: Swift.String? = nil, navigationMode: ZohoDeskPortalConfiguration.ZDPNavigationMode = ZDPortalConfiguration.navigationMode)
+  @objc public static var viewController: UIKit.UIViewController {
+    @objc get
+  }
+  @objc public static func setFieldsListTobeShown(fields: [ZohoDeskPortalTicket.ZDVisibleTicketField])
+  @objc public static func preFillTicketFields(forForms forms: [ZohoDeskPortalTicket.ZDCustomizedTicketForm])
+  @objc deinit
+  @objc override dynamic public init()
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortalTicket : ObjectiveC.NSObject {
+  public static var isSideMenuEnabled: Swift.Bool
+  @objc public static func show(withTitle title: Swift.String? = nil, navigationMode: ZohoDeskPortalConfiguration.ZDPNavigationMode = ZDPortalConfiguration.navigationMode)
+  @objc public static var viewController: UIKit.UIViewController {
+    @objc get
+  }
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc open class DPInteractionHeaderView : UIKit.UIView, ZohoDeskPortalConfiguration.Themable {
+  public init(frame: CoreGraphics.CGRect, header: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc public func setColors()
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+@objc @_inheritsConvenienceInitializers public class Attachment : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension Attachment {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalTicket.Attachment>
+  @objc @NSManaged dynamic public var createdTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var filePath: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var modifiedTimeDate: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var order: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var size: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var ticketComment: ZohoDeskPortalTicket.TicketComment? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var ticketThread: ZohoDeskPortalTicket.TicketThread? {
+    @objc get
+    @objc set
+  }
+}
+@objc @_inheritsConvenienceInitializers public class Ticket : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension Ticket {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalTicket.Ticket>
+  @objc @NSManaged dynamic public var assigneeId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var assigneeName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var assigneephotoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var channel: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var classification: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var closedTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var commentCount: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var contactId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var createdDate: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var createdTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var createdTimeDate: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var creatorName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var creatorPhotoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var departmentId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var dueDate: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var email: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var modifiedByUserID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var modifiedByUsername: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var modifiedByUserphotoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var modifiedTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var order: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var priority: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var productId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var resolution: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var responseDueDate: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var status: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var subject: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var threadCount: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var ticketnumber: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var comment: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var threads: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+}
+extension Ticket {
+  @objc(addCommentObject:) @NSManaged dynamic public func addToComment(_ value: ZohoDeskPortalTicket.TicketComment)
+  @objc(removeCommentObject:) @NSManaged dynamic public func removeFromComment(_ value: ZohoDeskPortalTicket.TicketComment)
+  @objc(addComment:) @NSManaged dynamic public func addToComment(_ values: Foundation.NSSet)
+  @objc(removeComment:) @NSManaged dynamic public func removeFromComment(_ values: Foundation.NSSet)
+}
+extension Ticket {
+  @objc(addThreadsObject:) @NSManaged dynamic public func addToThreads(_ value: ZohoDeskPortalTicket.TicketThread)
+  @objc(removeThreadsObject:) @NSManaged dynamic public func removeFromThreads(_ value: ZohoDeskPortalTicket.TicketThread)
+  @objc(addThreads:) @NSManaged dynamic public func addToThreads(_ values: Foundation.NSSet)
+  @objc(removeThreads:) @NSManaged dynamic public func removeFromThreads(_ values: Foundation.NSSet)
+}
+@objc @_inheritsConvenienceInitializers public class TicketComment : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension TicketComment {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalTicket.TicketComment>
+  @objc @NSManaged dynamic public var commentedTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var commenterId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var commenterName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var commenterphotoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var content: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var direction: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var modifiedTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var modifiedTimeDate: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var attachment: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var ticket: ZohoDeskPortalTicket.Ticket? {
+    @objc get
+    @objc set
+  }
+}
+extension TicketComment {
+  @objc(addAttachmentObject:) @NSManaged dynamic public func addToAttachment(_ value: ZohoDeskPortalTicket.Attachment)
+  @objc(removeAttachmentObject:) @NSManaged dynamic public func removeFromAttachment(_ value: ZohoDeskPortalTicket.Attachment)
+  @objc(addAttachment:) @NSManaged dynamic public func addToAttachment(_ values: Foundation.NSSet)
+  @objc(removeAttachment:) @NSManaged dynamic public func removeFromAttachment(_ values: Foundation.NSSet)
+}
+@objc @_inheritsConvenienceInitializers public class TicketThread : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension TicketThread {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalTicket.TicketThread>
+  @objc @NSManaged dynamic public var channel: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var content: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var createdTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var createdTimeDate: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var direction: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var fromEmail: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var hasAttach: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var isDraft: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var responderName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var responderPhotoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var responsderId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var summary: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var attachment: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var ticket: ZohoDeskPortalTicket.Ticket? {
+    @objc get
+    @objc set
+  }
+}
+extension TicketThread {
+  @objc(addAttachmentObject:) @NSManaged dynamic public func addToAttachment(_ value: ZohoDeskPortalTicket.Attachment)
+  @objc(removeAttachmentObject:) @NSManaged dynamic public func removeFromAttachment(_ value: ZohoDeskPortalTicket.Attachment)
+  @objc(addAttachment:) @NSManaged dynamic public func addToAttachment(_ values: Foundation.NSSet)
+  @objc(removeAttachment:) @NSManaged dynamic public func removeFromAttachment(_ values: Foundation.NSSet)
+}
+@_inheritsConvenienceInitializers @objc(ZDPDepartment) public class ZDPDepartment : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension ZDPDepartment {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalTicket.ZDPDepartment>
+  @objc @NSManaged dynamic public var deptDescription: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var nameInCustomerPortal: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var order: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var photoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(ZDPTicketField) public class ZDPTicketField : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension ZDPTicketField {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalTicket.ZDPTicketField>
+  @objc @NSManaged dynamic public var allowedValues: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var allowedValuesServer: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var apiName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var captchaURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var decimals: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var defaultValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var departmentID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var dependency: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var displayLabel: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var fieldName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var fieldOrder: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var i18NLabel: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var initialValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var initialValueByClient: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var isCustomField: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var isMandatory: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var isMandatoryForLocal: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var isReadOnly: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var isReadOnlyByClient: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var isValueChanged: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var isVisible: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var isVisibleByClient: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var maxLength: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var modifiedDate: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var precison: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var restoreOnReplyValues: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var roundingOption: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var sectionName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var sectionOrder: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var showField: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var showSection: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var sortBy: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var statusMapping: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var toolTip: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var toolTipType: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var uploadAttachment: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var userInput: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var validationError: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+extension ZohoDeskPortalTicket.TFType : Swift.Equatable {}
+extension ZohoDeskPortalTicket.TFType : Swift.Hashable {}
+extension ZohoDeskPortalTicket.TFType : Swift.RawRepresentable {}

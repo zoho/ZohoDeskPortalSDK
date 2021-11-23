@@ -1,0 +1,239 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZohoDeskPortalKB
+import CoreData
+import Foundation
+import QuickLook
+import Swift
+import UIKit
+import WebKit
+import ZohoDeskPortalAPIKit
+import ZohoDeskPortalConfiguration
+@_exported import ZohoDeskPortalKB
+public protocol KBStringProtocol {
+  var kb: ZohoDeskPortalKB.ZDPArticleProtocol { get }
+  var feedback: ZohoDeskPortalKB.ZDPFeedbackStringProtocol { get }
+}
+public protocol ZDPArticleProtocol {
+  var articleTitle: Swift.String { get }
+  var search: Swift.String { get }
+  var oneCategory: Swift.String { get }
+  var categories: Swift.String { get }
+  var oneSection: Swift.String { get }
+  var sections: Swift.String { get }
+  var oneArticle: Swift.String { get }
+  var articles: Swift.String { get }
+  var oneUserLiked: Swift.String { get }
+  var usersLiked: Swift.String { get }
+  var youLiked: Swift.String { get }
+  var youAndOneUserLiked: Swift.String { get }
+  var youAndManyUsersLiked: Swift.String { get }
+  var oneAttachment: Swift.String { get }
+  var attachments: Swift.String { get }
+  var relatedArticles: Swift.String { get }
+  var articleHelpful: Swift.String { get }
+  var feedback: Swift.String { get }
+  var noArticles: Swift.String { get }
+}
+public protocol ZDPFeedbackStringProtocol {
+  var feedbackPlaceholder: Swift.String { get }
+  var improve: Swift.String { get }
+  var articleNotHelpful: Swift.String { get }
+  var feedbackEmpty: Swift.String { get }
+  var emailEmpty: Swift.String { get }
+  var feedbackPostFailed: Swift.String { get }
+  var feedbackPostSuccess: Swift.String { get }
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortalKB : ObjectiveC.NSObject {
+  public static var enableSideMenu: Swift.Bool
+  @objc public static func show(withTitle title: Swift.String? = nil, navigationMode: ZohoDeskPortalConfiguration.ZDPNavigationMode = ZDPortalConfiguration.navigationMode)
+  @objc public static var viewController: UIKit.UIViewController {
+    @objc get
+  }
+  @objc public static func showArticle(withPermalink permalink: Swift.String, withTitle title: Swift.String? = nil)
+  @objc public static func showCategory(withPermalink permalink: Swift.String, withTitle title: Swift.String? = nil)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortalKBConfiguration : ObjectiveC.NSObject {
+  @objc public enum ZDPortalKBSearchPreference : Swift.Int {
+    case global, category, section
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum ZDPortalKBRelatedArticlePreference : Swift.Int {
+    case hidden, category, section
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public static var searchPreference: ZohoDeskPortalKB.ZDPortalKBConfiguration.ZDPortalKBSearchPreference {
+    get
+    set
+  }
+  public static var relatedArticlePreference: ZohoDeskPortalKB.ZDPortalKBConfiguration.ZDPortalKBRelatedArticlePreference
+  @objc public static func exclude(categories: [Swift.String])
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension String : ZohoDeskPortalConfiguration.ListItemProtocol {
+  public func getCell(at indexPath: Foundation.IndexPath, of tableView: UIKit.UITableView) -> UIKit.UITableViewCell
+  public var height: CoreGraphics.CGFloat {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc(CDArticle) public class CDArticle : CoreData.NSManagedObject {
+  @objc deinit
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+}
+extension CDArticle {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalKB.CDArticle>
+  @objc @NSManaged dynamic public var categoryID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var createdTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var summary: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var title: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(CDAttachment) public class CDAttachment : CoreData.NSManagedObject {
+  @objc deinit
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+}
+extension CDAttachment {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalKB.CDAttachment>
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var size: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var webURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(CDKBCategory) public class CDKBCategory : CoreData.NSManagedObject {
+  @objc deinit
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+}
+extension CDKBCategory {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalKB.CDKBCategory>
+  @objc @NSManaged dynamic public var articlesCount: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var createdTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var departmentID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var desc: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var locale: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var logoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var parentID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var permalink: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var rootCategoryId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var sectionsCount: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var translatedName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var parent: ZohoDeskPortalKB.CDKBCategory? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var subCategories: Foundation.NSOrderedSet? {
+    @objc get
+    @objc set
+  }
+}
+extension CDKBCategory {
+  @objc(insertObject:inSubCategoriesAtIndex:) @NSManaged dynamic public func insertIntoSubCategories(_ value: ZohoDeskPortalKB.CDKBCategory, at idx: Swift.Int)
+  @objc(removeObjectFromSubCategoriesAtIndex:) @NSManaged dynamic public func removeFromSubCategories(at idx: Swift.Int)
+  @objc(insertSubCategories:atIndexes:) @NSManaged dynamic public func insertIntoSubCategories(_ values: [ZohoDeskPortalKB.CDKBCategory], at indexes: Foundation.NSIndexSet)
+  @objc(removeSubCategoriesAtIndexes:) @NSManaged dynamic public func removeFromSubCategories(at indexes: Foundation.NSIndexSet)
+  @objc(replaceObjectInSubCategoriesAtIndex:withObject:) @NSManaged dynamic public func replaceSubCategories(at idx: Swift.Int, with value: ZohoDeskPortalKB.CDKBCategory)
+  @objc(replaceSubCategoriesAtIndexes:withSubCategories:) @NSManaged dynamic public func replaceSubCategories(at indexes: Foundation.NSIndexSet, with values: [ZohoDeskPortalKB.CDKBCategory])
+  @objc(addSubCategoriesObject:) @NSManaged dynamic public func addToSubCategories(_ value: ZohoDeskPortalKB.CDKBCategory)
+  @objc(removeSubCategoriesObject:) @NSManaged dynamic public func removeFromSubCategories(_ value: ZohoDeskPortalKB.CDKBCategory)
+  @objc(addSubCategories:) @NSManaged dynamic public func addToSubCategories(_ values: Foundation.NSOrderedSet)
+  @objc(removeSubCategories:) @NSManaged dynamic public func removeFromSubCategories(_ values: Foundation.NSOrderedSet)
+}
+@_inheritsConvenienceInitializers @objc(KBSearch) public class KBSearch : CoreData.NSManagedObject {
+  @objc deinit
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+}
+extension KBSearch {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalKB.KBSearch>
+  @objc @NSManaged dynamic public var keyword: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var time: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+}
+extension ZohoDeskPortalKB.ZDPortalKBConfiguration.ZDPortalKBSearchPreference : Swift.Equatable {}
+extension ZohoDeskPortalKB.ZDPortalKBConfiguration.ZDPortalKBSearchPreference : Swift.Hashable {}
+extension ZohoDeskPortalKB.ZDPortalKBConfiguration.ZDPortalKBSearchPreference : Swift.RawRepresentable {}
+extension ZohoDeskPortalKB.ZDPortalKBConfiguration.ZDPortalKBRelatedArticlePreference : Swift.Equatable {}
+extension ZohoDeskPortalKB.ZDPortalKBConfiguration.ZDPortalKBRelatedArticlePreference : Swift.Hashable {}
+extension ZohoDeskPortalKB.ZDPortalKBConfiguration.ZDPortalKBRelatedArticlePreference : Swift.RawRepresentable {}

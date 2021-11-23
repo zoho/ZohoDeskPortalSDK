@@ -1,0 +1,11 @@
+framework module ZohoDeskPortalTicket {
+  umbrella header "ZohoDeskPortalTicket.h"
+
+  export *
+  module * { export * }
+}
+
+module ZohoDeskPortalTicket.Swift {
+    header "ZohoDeskPortalTicket-Swift.h"
+    requires objc
+}

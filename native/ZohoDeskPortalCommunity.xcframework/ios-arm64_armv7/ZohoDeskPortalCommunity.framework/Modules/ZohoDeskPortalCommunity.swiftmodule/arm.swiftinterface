@@ -1,0 +1,403 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZohoDeskPortalCommunity
+import CoreData
+import Foundation
+import Swift
+import UIKit
+import WebKit
+import ZohoDeskPortalAPIKit
+@_exported import ZohoDeskPortalCommunity
+import ZohoDeskPortalConfiguration
+extension String : ZohoDeskPortalConfiguration.ListItemProtocol {
+  public func getCell(at indexPath: Foundation.IndexPath, of tableView: UIKit.UITableView) -> UIKit.UITableViewCell
+  public var height: CoreGraphics.CGFloat {
+    get
+  }
+}
+public protocol CategoryString {
+  var follow: Swift.String { get }
+  var following: Swift.String { get }
+  var followError: Swift.String { get }
+  var unfollowError: Swift.String { get }
+  var postsCount: Swift.String { get }
+  var forumsCount: Swift.String { get }
+}
+public protocol TopicString {
+  var allForums: Swift.String { get }
+  var allTypes: Swift.String { get }
+  var searchPlaceholder: Swift.String { get }
+  var topicsMissing: Swift.String { get }
+  var loadFailed: Swift.String { get }
+  var editTopic: Swift.String { get }
+  var deleteTopic: Swift.String { get }
+  var deleteTopicAlert: Swift.String { get }
+  var topicDeleted: Swift.String { get }
+  var topicDeleteFailed: Swift.String { get }
+  var followFailed: Swift.String { get }
+  var follow: Swift.String { get }
+  var countFollowing: Swift.String { get }
+  var countFollowers: Swift.String { get }
+  var likeFailed: Swift.String { get }
+  var searchResults: Swift.String { get }
+}
+public protocol TopicStatusString {
+  var needMoreInfo: Swift.String { get }
+  var answered: Swift.String { get }
+  var workingOnIt: Swift.String { get }
+  var unAnswered: Swift.String { get }
+  var inProgress: Swift.String { get }
+  var implemented: Swift.String { get }
+  var underReview: Swift.String { get }
+  var willNotBeImplement: Swift.String { get }
+  var mayBeLater: Swift.String { get }
+  var notProblem: Swift.String { get }
+  var temporaryFix: Swift.String { get }
+  var solved: Swift.String { get }
+  var unSolved: Swift.String { get }
+  var analayzing: Swift.String { get }
+  var published: Swift.String { get }
+  var awaitingApproval: Swift.String { get }
+}
+public protocol TopicTypeString {
+  var announcement: Swift.String { get }
+  var discussion: Swift.String { get }
+  var idea: Swift.String { get }
+  var question: Swift.String { get }
+  var problem: Swift.String { get }
+  var announcements: Swift.String { get }
+  var discussions: Swift.String { get }
+  var ideas: Swift.String { get }
+  var questions: Swift.String { get }
+  var problems: Swift.String { get }
+}
+@_hasMissingDesignatedInitializers public class CategoryEnglish : ZohoDeskPortalCommunity.CategoryString {
+  public var follow: Swift.String {
+    get
+  }
+  public var following: Swift.String {
+    get
+  }
+  public var followError: Swift.String {
+    get
+  }
+  public var unfollowError: Swift.String {
+    get
+  }
+  public var postsCount: Swift.String {
+    get
+  }
+  public var forumsCount: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class TopicEnglish : ZohoDeskPortalCommunity.TopicString {
+  public var allForums: Swift.String {
+    get
+  }
+  public var allTypes: Swift.String {
+    get
+  }
+  public var searchResults: Swift.String {
+    get
+  }
+  public var countFollowing: Swift.String {
+    get
+  }
+  public var countFollowers: Swift.String {
+    get
+  }
+  public var loadFailed: Swift.String {
+    get
+  }
+  public var followFailed: Swift.String {
+    get
+  }
+  public var likeFailed: Swift.String {
+    get
+  }
+  public var searchPlaceholder: Swift.String {
+    get
+  }
+  public var follow: Swift.String {
+    get
+  }
+  public var topicsMissing: Swift.String {
+    get
+  }
+  public var editTopic: Swift.String {
+    get
+  }
+  public var deleteTopic: Swift.String {
+    get
+  }
+  public var deleteTopicAlert: Swift.String {
+    get
+  }
+  public var topicDeleted: Swift.String {
+    get
+  }
+  public var topicDeleteFailed: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class NewTopicEnglish {
+  public var tagsPlaceholder: Swift.String {
+    get
+  }
+  public var noNewLine: Swift.String {
+    get
+  }
+  public var tagMinChar: Swift.String {
+    get
+  }
+  public var contentEmpty: Swift.String {
+    get
+  }
+  public var selectDraft: Swift.String {
+    get
+  }
+  public var deleteDraftFailed: Swift.String {
+    get
+  }
+  public var createTopic: Swift.String {
+    get
+  }
+  public var editTopic: Swift.String {
+    get
+  }
+  public var titlePlaceholder: Swift.String {
+    get
+  }
+  public var contentPlaceholder: Swift.String {
+    get
+  }
+  public var addTags: Swift.String {
+    get
+  }
+  public var editTags: Swift.String {
+    get
+  }
+  public var addTagsHint: Swift.String {
+    get
+  }
+  public var noSplChars: Swift.String {
+    get
+  }
+  public var duplicateTags: Swift.String {
+    get
+  }
+  public var maxTags: Swift.String {
+    get
+  }
+  public var topicAdded: Swift.String {
+    get
+  }
+  public var topicUpdated: Swift.String {
+    get
+  }
+  public var topicSavedAsDraft: Swift.String {
+    get
+  }
+  public var topicAwaitingApproval: Swift.String {
+    get
+  }
+  public var saveFailed: Swift.String {
+    get
+  }
+  public var titleEmpty: Swift.String {
+    get
+  }
+  public var saveDraft: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class TopicStatusEnglish : ZohoDeskPortalCommunity.TopicStatusString {
+  public var willNotBeImplement: Swift.String {
+    get
+  }
+  public var published: Swift.String {
+    get
+  }
+  public var awaitingApproval: Swift.String {
+    get
+  }
+  public var needMoreInfo: Swift.String {
+    get
+  }
+  public var answered: Swift.String {
+    get
+  }
+  public var workingOnIt: Swift.String {
+    get
+  }
+  public var unAnswered: Swift.String {
+    get
+  }
+  public var inProgress: Swift.String {
+    get
+  }
+  public var implemented: Swift.String {
+    get
+  }
+  public var underReview: Swift.String {
+    get
+  }
+  public var mayBeLater: Swift.String {
+    get
+  }
+  public var notProblem: Swift.String {
+    get
+  }
+  public var temporaryFix: Swift.String {
+    get
+  }
+  public var solved: Swift.String {
+    get
+  }
+  public var unSolved: Swift.String {
+    get
+  }
+  public var analayzing: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class TopicTypeEnglish : ZohoDeskPortalCommunity.TopicTypeString {
+  public var announcement: Swift.String {
+    get
+  }
+  public var discussion: Swift.String {
+    get
+  }
+  public var idea: Swift.String {
+    get
+  }
+  public var question: Swift.String {
+    get
+  }
+  public var problem: Swift.String {
+    get
+  }
+  public var announcements: Swift.String {
+    get
+  }
+  public var discussions: Swift.String {
+    get
+  }
+  public var ideas: Swift.String {
+    get
+  }
+  public var questions: Swift.String {
+    get
+  }
+  public var problems: Swift.String {
+    get
+  }
+  @objc deinit
+}
+extension String : ZohoDeskPortalConfiguration.Choosable {
+  public var displayString: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortalCommunity : ObjectiveC.NSObject {
+  public static var isSideMenuEnabled: Swift.Bool
+  @objc public static func show(withTitle title: Swift.String? = nil, navigationMode: ZohoDeskPortalConfiguration.ZDPNavigationMode = ZDPortalConfiguration.navigationMode)
+  @objc public static var viewController: UIKit.UIViewController {
+    @objc get
+  }
+  @objc public static func showTopic(withID topicID: Swift.String)
+  @objc public static func showTopic(withPermaLink permaLink: Swift.String, andTitle title: Swift.String? = nil)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@_inheritsConvenienceInitializers @objc public class ZDPCommunityConfiguration : ObjectiveC.NSObject {
+  @objc public static var isTopicEditAllowed: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public static var isTopicDeleteAllowed: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public static var isReplyAllowed: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public static var isReplyEditAllowed: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public static var isReplyDeleteAllowed: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(CDCategory) public class CDCategory : CoreData.NSManagedObject {
+  @objc deinit
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+}
+extension CDCategory {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalCommunity.CDCategory>
+  @objc @NSManaged dynamic public var desc: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var isFollowing: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var isLocked: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var parentID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var permissions: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var photoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var position: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var postCount: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(CDSearch) public class CDSearch : CoreData.NSManagedObject {
+  @objc deinit
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+}
+extension CDSearch {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalCommunity.CDSearch>
+  @objc @NSManaged dynamic public var keyword: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var time: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+}

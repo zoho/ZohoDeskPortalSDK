@@ -1,0 +1,34 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZohoDeskPortalCore
+import Foundation
+import Swift
+import UIKit
+import ZohoDeskPortalAPIKit
+import ZohoDeskPortalCommunity
+import ZohoDeskPortalConfiguration
+@_exported import ZohoDeskPortalCore
+import ZohoDeskPortalKB
+import ZohoDeskPortalTicket
+@_inheritsConvenienceInitializers @objc open class ZDPortalHome : ObjectiveC.NSObject {
+  @objc required override dynamic public init()
+  @objc public static func show(withConfiguration config: ZohoDeskPortalCore.ZDPHomeConfiguration? = ZDPHomeConfiguration(), andTitle title: Swift.String? = nil, navigationMode: ZohoDeskPortalConfiguration.ZDPNavigationMode = ZDPortalConfiguration.navigationMode)
+  @objc public static func get(withConfiguration config: ZohoDeskPortalCore.ZDPHomeConfiguration? = ZDPHomeConfiguration()) -> UIKit.UIViewController
+  @objc deinit
+}
+open class DTHome {
+  required public init()
+  open func showChat()
+  open func isBussinessHours() -> Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ZDPHomeConfiguration : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc public var enableCommunity: Swift.Bool
+  @objc public var enableHelpCenter: Swift.Bool
+  @objc public var enableMyTicket: Swift.Bool
+  @objc public var enableCreateTicket: Swift.Bool
+  @objc public var showRightMenu: Swift.Bool
+  @objc public var showChat: Swift.Bool
+  @objc deinit
+}

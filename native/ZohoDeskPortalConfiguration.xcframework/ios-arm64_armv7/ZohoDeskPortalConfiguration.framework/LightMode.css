@@ -1,0 +1,33 @@
+#editor{
+    border-color: coral;
+    object-fit:contain !important;
+/*    min-height: 100%;*/
+/*    max-width: 100% !important;*/
+/*    display: inline-flex !important;*/
+    min-height:100%;
+    font-size: 13pt;
+    background-color: transparent;
+    border-color: rgba(111,111,111,0.2) transparent;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+a {
+    color: #01AA70 !important;
+}
+
+img {
+    max-width: 100% !important;
+    object-fit: contain !important;
+}
+div {
+    outline: none !important;
+    word-wrap: break-word;
+    color:white !important:
+}
+[contentEditable=true]:empty::before {
+    content: attr(placeholder);
+    color:grey;
+    font-style:italic;
+}
+
