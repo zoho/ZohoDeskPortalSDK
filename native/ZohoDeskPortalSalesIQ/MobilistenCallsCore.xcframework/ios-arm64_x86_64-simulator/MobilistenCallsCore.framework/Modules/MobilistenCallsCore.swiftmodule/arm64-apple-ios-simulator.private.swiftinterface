@@ -1,0 +1,185 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name MobilistenCallsCore
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import Foundation
+@_exported import MobilistenCallsCore
+import MobilistenCore
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc public enum CallErrorAction : Swift.Int {
+  case end
+  case accept
+  case reject
+  case none
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class CallError : ObjectiveC.NSObject {
+  @objc final public let action: MobilistenCallsCore.CallErrorAction
+  @objc public var code: Swift.Int {
+    @objc get
+  }
+  @objc public var message: Swift.String {
+    @objc get
+  }
+  @objc public init(error: MobilistenCallsCore.CallErrorCode, customMessage: Swift.String = "", action: MobilistenCallsCore.CallErrorAction = .none)
+  @objc deinit
+}
+@objc public enum CallErrorCode : Swift.Int {
+  case creationFailed
+  case actionFailed
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol ZohoSalesIQCallDelegate : ObjectiveC.NSObjectProtocol {
+  @objc func queuePositionDidChange(for conversationID: Swift.String, position: Swift.Int)
+  @objc func callStateDidChange(for state: MobilistenCallsCore.SalesIQCallState)
+  @objc func callScreenDidAppear()
+  @objc func callScreenDidDisappear()
+  @objc func callScreenDidEnterPiPMode()
+  @objc func callScreenDidEnterFullScreenMode()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc optional func didFailWithError(call: MobilistenCore.SIQVisitorChat?, error: MobilistenCallsCore.CallError)
+  #endif
+}
+@objc public enum CallComponent : Swift.Int {
+  case operatorName
+  case operatorImage
+  case preChatForm
+  case queuePosition
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public typealias CallConversationFetchCompletion = (_ error: (any MobilistenCore.SIQError)?, _ conversations: [MobilistenCore.SalesIQConversation]) -> Swift.Void
+@objc public enum SalesIQCallStatus : Swift.Int {
+  case none = 0
+  case calling = 1
+  case ringing = 2
+  case connecting = 3
+  case connected = 4
+  case reconnecting = 5
+  case ended = 6
+  case missed = 7
+  case cancelled = 8
+  case declined = 9
+  case failed = 10
+  case queue = 11
+  case invalid = 12
+  public var stringValue: Swift.String {
+    get
+  }
+  public var isCallActive: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum SIQCallAction : Swift.Int {
+  case accept
+  case decline
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_Concurrency.MainActor public protocol ZohoSalesIQCallsProtocol {
+  @_Concurrency.MainActor var isEnabled: Swift.Bool { get }
+  @_Concurrency.MainActor func switchToFloatingScreen()
+  @_Concurrency.MainActor func switchToFullScreen()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func end(completion: MobilistenCore.ZSIQCallCompletion?)
+  #endif
+  @_Concurrency.MainActor func setVisibility(_ component: MobilistenCallsCore.CallComponent, visible: Swift.Bool)
+  @_Concurrency.MainActor var currentState: MobilistenCallsCore.SalesIQCallState { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func start(id: Swift.String?, attributes: [MobilistenCore.SalesIQConversationAttributes]?, displayActiveCall: Swift.Bool, completion: MobilistenCore.ZSIQCallCompletion?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func start(id: Swift.String?, name: Swift.String?, additionalInfo: Swift.String?, displayImage: Any?, departments: [MobilistenCore.SIQDepartment], displayActiveCall: Swift.Bool, completion: MobilistenCore.ZSIQCallCompletion?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func getList(completion: @escaping ((any MobilistenCore.SIQError)?, [MobilistenCore.SalesIQConversation]) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func setTitle(online: Swift.String?, offline: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var currentCallID: Swift.String? { get }
+  #endif
+  @_Concurrency.MainActor func enableVoIP(_ token: Swift.String, isTestDevice: Swift.Bool, mode: MobilistenCore.APNSMode)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func handleVOIPNotificationAction(_ info: [Swift.AnyHashable : Any]?, completion: @escaping () -> Swift.Void)
+  #endif
+  @_Concurrency.MainActor func setCallKitIcon(icon: Any)
+}
+@_hasMissingDesignatedInitializers public class ZohoSalesIQCallsService {
+  public static var delegate: (any MobilistenCallsCore.ZohoSalesIQCallDelegate)?
+  @objc deinit
+}
+@objc public class SalesIQCallState : ObjectiveC.NSObject {
+  @objc public var status: MobilistenCallsCore.SalesIQCallStatus
+  @objc public var direction: MobilistenCallsCore.SalesIQCallDirection
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(status: MobilistenCallsCore.SalesIQCallStatus = .none, direction: MobilistenCallsCore.SalesIQCallDirection? = nil)
+  #endif
+  @objc deinit
+}
+@objc public enum SalesIQCallDirection : Swift.Int {
+  case incoming
+  case outgoing
+  case none
+  public var stringValue: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension MobilistenCallsCore.CallErrorAction : Swift.Equatable {}
+extension MobilistenCallsCore.CallErrorAction : Swift.Hashable {}
+extension MobilistenCallsCore.CallErrorAction : Swift.RawRepresentable {}
+extension MobilistenCallsCore.CallErrorCode : Swift.Equatable {}
+extension MobilistenCallsCore.CallErrorCode : Swift.Hashable {}
+extension MobilistenCallsCore.CallErrorCode : Swift.RawRepresentable {}
+extension MobilistenCallsCore.CallComponent : Swift.Equatable {}
+extension MobilistenCallsCore.CallComponent : Swift.Hashable {}
+extension MobilistenCallsCore.CallComponent : Swift.RawRepresentable {}
+extension MobilistenCallsCore.SalesIQCallStatus : Swift.Equatable {}
+extension MobilistenCallsCore.SalesIQCallStatus : Swift.Hashable {}
+extension MobilistenCallsCore.SalesIQCallStatus : Swift.RawRepresentable {}
+extension MobilistenCallsCore.SIQCallAction : Swift.Equatable {}
+extension MobilistenCallsCore.SIQCallAction : Swift.Hashable {}
+extension MobilistenCallsCore.SIQCallAction : Swift.RawRepresentable {}
+extension MobilistenCallsCore.SalesIQCallDirection : Swift.Equatable {}
+extension MobilistenCallsCore.SalesIQCallDirection : Swift.Hashable {}
+extension MobilistenCallsCore.SalesIQCallDirection : Swift.RawRepresentable {}

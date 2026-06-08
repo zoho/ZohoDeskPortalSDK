@@ -1,0 +1,6 @@
+framework module ZDOneChatSDK {
+  umbrella header "ZDOneChatSDK.h"
+  export *
+
+  module * { export * }
+}

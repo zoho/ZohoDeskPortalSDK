@@ -1,0 +1,270 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZDAttachmentUploader
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import Foundation
+import MobileCoreServices
+import Photos
+import QuickLook
+import Swift
+import UIKit
+@_exported import ZDAttachmentUploader
+import ZDHelperKit
+import ZohoDeskPlatformDataBridge
+import ZohoDeskPlatformUIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class ZDCAttachmentPreviewBinder {
+  public var currentPreviewItemIndex: Swift.Int
+  public init(attachments: [ZDAttachmentUploader.ZDCAttachment], index: Swift.Int)
+  open func download(_ item: ZDAttachmentUploader.ZDCPreviewItem, at index: Swift.Int)
+  @objc deinit
+}
+extension ZDAttachmentUploader.ZDCAttachmentPreviewBinder : ZohoDeskPlatformDataBridge.ZBUtilPreviewProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var modalPresentationStyle: ZohoDeskPlatformDataBridge.ZPPresentationStyle? {
+    get
+  }
+  #endif
+  public var navigationIdentifier: Swift.String {
+    get
+  }
+  public func getPreviewItems() -> [any ZohoDeskPlatformDataBridge.ZPPreviewItem]
+  public var presentItemIndex: Swift.Int {
+    get
+  }
+}
+extension ZDAttachmentUploader.ZDCPreviewItem : ZohoDeskPlatformDataBridge.ZPPreviewItem {
+}
+extension ZDAttachmentUploader.ZDCAttachment {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var localURL: Foundation.URL? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public func writeToLocal() -> Foundation.URL?
+  #endif
+}
+@objc public class ZDCPreviewItem : ObjectiveC.NSObject, QuickLook.QLPreviewItem {
+  public var attachment: ZDAttachmentUploader.ZDCAttachment
+  public init(attachment: ZDAttachmentUploader.ZDCAttachment)
+  @objc public var previewItemURL: Foundation.URL?
+  @objc public var previewItemTitle: Swift.String?
+  @objc deinit
+}
+public enum UploadState : Swift.Int {
+  case yetToUpload, uploading, failed, completed
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ZDCAttachableItem {
+  public var attachment: ZDAttachmentUploader.ZDCAttachment?
+  public var state: ZDAttachmentUploader.UploadState
+  public enum ItemType : Swift.Equatable {
+    case asset(Photos.PHAsset)
+    case file(Foundation.URL)
+    case image(Foundation.Data, Swift.String)
+    case unknown(Foundation.Data?, Swift.String)
+    public static func == (a: ZDAttachmentUploader.ZDCAttachableItem.ItemType, b: ZDAttachmentUploader.ZDCAttachableItem.ItemType) -> Swift.Bool
+  }
+  @objc deinit
+}
+extension ZDAttachmentUploader.ZDCAttachableItem : Swift.Equatable {
+  public static func == (lhs: ZDAttachmentUploader.ZDCAttachableItem, rhs: ZDAttachmentUploader.ZDCAttachableItem) -> Swift.Bool
+}
+extension ZDAttachmentUploader.ZDCAttachableItem : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ZDAttachmentUploader.ZDCAttachableItem : ZDAttachmentUploader.ZDCAttachmentUploaderDelegate {
+  public func uploadCompleted(attachment: any ZDAttachmentUploader.ZDAttachmentModal)
+  public func uploadFailed()
+  public func uploaded(fraction: Swift.Float)
+}
+public enum AttachmentBinderActions {
+  public enum actionIdentifier : Swift.String {
+    case zpCancelAction
+    case zpBackAction
+    case zpDeleteAction
+    case zpReloadAction
+    case zpDoneAction
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.String)
+    #endif
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+public enum ZDPresentationStyle {
+  case push, present
+  public static func == (a: ZDAttachmentUploader.ZDPresentationStyle, b: ZDAttachmentUploader.ZDPresentationStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ZDCAttachmentNavigationType {
+  case native
+  case custom
+  public static func == (a: ZDAttachmentUploader.ZDCAttachmentNavigationType, b: ZDAttachmentUploader.ZDCAttachmentNavigationType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ZDCAttachmentActionStyle {
+  case actionSheet(ZDAttachmentUploader.ZDCAttachmentNavigationType), alert
+}
+public protocol ZDCAttachmentDelegate : AnyObject {
+  var navigationType: ZDAttachmentUploader.ZDCAttachmentNavigationType { get }
+  var actionsheetType: ZDAttachmentUploader.ZDCAttachmentActionStyle { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  func uploadedAttachments(andUploading attachments: [ZDAttachmentUploader.ZDCAttachment]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func noDataImage(for type: ZDAttachmentUploader.ZDAttachmentErrorStates) -> UIKit.UIImage?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func localizeString(for key: ZDAttachmentUploader.ZDAttachmentStringKeys?, language: Swift.String) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func fetchImage(from url: Foundation.URL, completion: ((Foundation.Data?) -> ())?)
+  #endif
+  var maximumCountLimit: Swift.Int { get }
+  var maximumSizeLimit: Swift.Int { get }
+  var eachSizeLimit: Swift.Int { get }
+  var needThumbnailImage: Swift.Bool { get }
+  var languageCode: Swift.String { get }
+}
+extension ZDAttachmentUploader.ZDCAttachmentDelegate {
+  public var navigationType: ZDAttachmentUploader.ZDCAttachmentNavigationType {
+    get
+  }
+  public var actionsheetType: ZDAttachmentUploader.ZDCAttachmentActionStyle {
+    get
+  }
+  public var needThumbnailImage: Swift.Bool {
+    get
+  }
+}
+public protocol ZDCAttachmentUploaderDelegate {
+  func uploaded(fraction: Swift.Float)
+  func uploadCompleted(attachment: any ZDAttachmentUploader.ZDAttachmentModal)
+  func uploadFailed()
+}
+public protocol ZDCAttachmentNetworkCalls : AnyObject {
+  func uploadAttachment(data: Foundation.Data, fileName: Swift.String, attachmentModifier: any ZDAttachmentUploader.ZDCAttachmentUploaderDelegate)
+}
+public protocol ZDAttachmentModal {
+  var id: Swift.String { get }
+  var name: Swift.String { get }
+  var attachmentSize: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var downloadAttachmentURL: Swift.String? { get }
+  #endif
+}
+@objc public class ZDCAttachment : ObjectiveC.NSObject, Swift.Codable {
+  public var id: Swift.String
+  public var name: Swift.String
+  public var url: Swift.String?
+  public var size: Swift.String
+  public var data: Foundation.Data?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(size: Swift.String, url: Swift.String?, id: Swift.String, name: Swift.String, data: Foundation.Data? = nil)
+  #endif
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public struct AttachmentIcon {
+}
+public enum ZDAttachmentErrorStates {
+  case noData, noNetwork, permissionDenied, dataError, loader, noDataSearch(keyword: Swift.String), clearLoader
+}
+public class ZohoDeskAttachmentUploader {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(delegate: any ZDAttachmentUploader.ZDCAttachmentDelegate, network: (any ZDAttachmentUploader.ZDCAttachmentNetworkCalls)?, presentationStyle: ZDAttachmentUploader.ZDPresentationStyle)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func openAttachmentScreen(onCompletion: ((UIKit.UIViewController) -> ())?)
+  #endif
+  public static func getJsons(addStyle: Swift.Bool = false, isCustomNavigation: Swift.Bool = false) -> [Foundation.Data]
+  @objc deinit
+}
+public class AttachmentUploader {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(delegate: (any ZDAttachmentUploader.ZDCAttachmentDelegate)?, network: (any ZDAttachmentUploader.ZDCAttachmentNetworkCalls)?, presentationStyle: ZDAttachmentUploader.ZDPresentationStyle)
+  #endif
+  public var binder: any ZohoDeskPlatformDataBridge.ZDPScreen {
+    get
+  }
+  public func getPreviewBinder(with model: [ZDAttachmentUploader.ZDCAttachment], index: Swift.Int) -> any ZohoDeskPlatformDataBridge.ZPAssetPreviewUtility & ZohoDeskPlatformDataBridge.ZPNavigationDataSource
+  public var selectedCount: Swift.Int {
+    get
+  }
+  public var isUploadCompleted: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+public enum ZDAttachmentStringKeys : Swift.String {
+  case alertAccept
+  case alertReject
+  case done
+  case cancel
+  case serverErrorGeneral
+  case discardConfirmation
+  case discard
+  case tryAgain
+  case noInternet
+  case backButton
+  case accessDenied
+  case permissionDeniedDescription
+  case alert
+  case maxAttachmentLimit
+  case camera
+  case attachmentPhotos
+  case attachmentFiles
+  case attachmentsLabel
+  case cameraUnavailable
+  case uploadFail
+  case attachmentAlreadyExists
+  case uploadAttachmentSizeExceeded
+  case storagePermissionMessage
+  case cameraPermissionMessage
+  case noAttachments
+  case attachmentLimitReached
+  case totalAttachmentLimitReached
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension ZDAttachmentUploader.UploadState : Swift.Equatable {}
+extension ZDAttachmentUploader.UploadState : Swift.Hashable {}
+extension ZDAttachmentUploader.UploadState : Swift.RawRepresentable {}
+extension ZDAttachmentUploader.AttachmentBinderActions.actionIdentifier : Swift.Equatable {}
+extension ZDAttachmentUploader.AttachmentBinderActions.actionIdentifier : Swift.Hashable {}
+extension ZDAttachmentUploader.AttachmentBinderActions.actionIdentifier : Swift.RawRepresentable {}
+extension ZDAttachmentUploader.ZDPresentationStyle : Swift.Equatable {}
+extension ZDAttachmentUploader.ZDPresentationStyle : Swift.Hashable {}
+extension ZDAttachmentUploader.ZDCAttachmentNavigationType : Swift.Equatable {}
+extension ZDAttachmentUploader.ZDCAttachmentNavigationType : Swift.Hashable {}
+extension ZDAttachmentUploader.ZDAttachmentStringKeys : Swift.Equatable {}
+extension ZDAttachmentUploader.ZDAttachmentStringKeys : Swift.Hashable {}
+extension ZDAttachmentUploader.ZDAttachmentStringKeys : Swift.RawRepresentable {}

@@ -1,0 +1,37 @@
+
+{
+  "appId": "424608000001371001",
+  "message": {
+    "actor": {
+      "id": "274000000333001",
+      "name": "Zia",
+      "photoUrl": "https://static.zohocdn.com/zohoim/images/gcBot.a31ab330fa4a59dc22d4.png",
+      "service": "DESK_GC_BOT",
+      "type": "BOT"
+    },
+    "createdTime": "2022-04-18T04:48:06.000Z",
+    "direction": "out",
+    "displayMessage": "Hello!",
+    "id": "274000000504092_",
+    "index": 1,
+    "layout": {
+      "rows": [
+        {
+          "arrangement": "list",
+          "columns": [
+            {
+              "html": {
+                "source": "<html>\n <head></head> \n <body>\n   Sorry! I don't have enough info to answer this query.\n </body>\n</html>"
+              },
+              "id": "3796000000208553",
+              "type": "HTML"
+            }
+          ]
+        }
+      ]
+    },
+    "status": "SAVED",
+    "type": "LAYOUT"
+  },
+  "type": "imTalk"
+}

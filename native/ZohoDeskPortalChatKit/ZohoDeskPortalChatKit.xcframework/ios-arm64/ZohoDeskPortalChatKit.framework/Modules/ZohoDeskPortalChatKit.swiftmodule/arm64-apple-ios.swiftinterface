@@ -1,0 +1,59 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZohoDeskPortalChatKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import Swift
+import UIKit
+import ZDChat
+import ZDOneChatSDK
+import ZohoDeskPortalAPIKit
+import ZohoDeskPortalConfiguration
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @objc public class ZDPortalGCConfiguration : ObjectiveC.NSObject {
+  public static var enabelLanguagePicker: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortalBMConfiguration : ObjectiveC.NSObject {
+  @objc public static func setMoreOptionVisibility(isVisible: Swift.Bool)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortalChatKit : ObjectiveC.NSObject {
+  @objc public static func syncGCLanguage(disable: Swift.Bool)
+  @objc public static func hideEndChatPopupWindow(disable: Swift.Bool)
+  @objc public static func updateGCSessionVariable(sessionVariables: [[Swift.String : Any]])
+  @objc public static func setGCSessionVariable(sessionVariables: [[Swift.String : Any]])
+  @objc public static func setContactInfo(name: Swift.String, phone: Swift.String, email: Swift.String, additionalInfo: [Swift.String : Swift.String] = [:])
+  @objc public static func updateBMSessionVariable(sessionVariables: [[Swift.String : Any]])
+  @objc public static func setBMSessionVariable(sessionVariables: [[Swift.String : Any]])
+  @objc public static func showGC()
+  @objc public static func showAnswerBot()
+  @objc public static func showBM()
+  @objc public static func disableBMAgentTransfer(isdisable: Swift.Bool = true)
+  @objc public static func clearGCData()
+  @objc public static func clearAnswerBotData()
+  @objc public static func clearBMData()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ZDPortalGCService : ZohoDeskPortalConfiguration.DTHome {
+  override public func showChat()
+  override public func isBussinessHours() -> Swift.Bool
+  required public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ZDPortalAnswerBotService : ZohoDeskPortalConfiguration.DTHome {
+  override public func showChat()
+  override public func isBussinessHours() -> Swift.Bool
+  required public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ZDPortalBMService : ZohoDeskPortalConfiguration.DTHome {
+  override public func showChat()
+  override public func isBussinessHours() -> Swift.Bool
+  required public init()
+  @objc deinit
+}

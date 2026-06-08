@@ -1,0 +1,337 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZohoDeskPortalKB
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import AVFAudio
+import CoreData
+import Foundation
+import Swift
+import UIKit
+import WebKit
+import ZDHelperKit
+import ZohoDeskPlatformDataBridge
+import ZohoDeskPlatformUIKit
+import ZohoDeskPortalAPIKit
+import ZohoDeskPortalConfiguration
+@_exported import ZohoDeskPortalKB
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol KBStringProtocol {
+  var kb: any ZohoDeskPortalKB.ZDPArticleProtocol { get }
+}
+public protocol ZDPArticleProtocol {
+  var search: Swift.String { get }
+  var articles: Swift.String { get }
+  var attachments: Swift.String { get }
+  var relatedArticles: Swift.String { get }
+  var noArticles: Swift.String { get }
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortalKB : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func show(withTitle title: Swift.String? = nil, navigationMode: ZohoDeskPortalConfiguration.ZDPNavigationMode = ZDPortalConfiguration.navigationMode)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func showArticle(withPermalink permalink: Swift.String, showSideMenu: Swift.Bool = true, withTitle title: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func showCategory(withPermalink permalink: Swift.String, withTitle title: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getKbBinder() -> ZohoDeskPlatformDataBridge.ZBCoreBridgeBinderProtocols<Any>?
+  #endif
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortalKBConfiguration : ObjectiveC.NSObject {
+  @objc public static var disableArticleLike: Swift.Bool
+  @objc public static var disableArticleDislike: Swift.Bool
+  @objc public enum ZDPortalKBSearchPreference : Swift.Int {
+    case global, category, section
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.Int)
+    #endif
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public static var isShareArticleAllowed: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public static var disableArticleDetailSearch: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public enum ZDPortalKBRelatedArticlePreference : Swift.Int {
+    case hidden, category, section
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.Int)
+    #endif
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public static var searchPreference: ZohoDeskPortalKB.ZDPortalKBConfiguration.ZDPortalKBSearchPreference {
+    get
+    set
+  }
+  public static var disableTextReader: Swift.Bool
+  public static var disableKeySearcher: Swift.Bool
+  public static var relatedArticlePreference: ZohoDeskPortalKB.ZDPortalKBConfiguration.ZDPortalKBRelatedArticlePreference
+  @objc public static func exclude(categories: [Swift.String])
+  @objc override dynamic public init()
+  @objc deinit
+}
+public typealias CDArticleCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(CDArticle) nonisolated public class CDArticle : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias CDArticleCoreDataPropertiesSet = Foundation.NSSet
+extension ZohoDeskPortalKB.CDArticle {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalKB.CDArticle>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var categoryID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var createdTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var languageID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var orderBy: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var permalink: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var summary: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var title: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZohoDeskPortalKB.CDArticle : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias CDAttachmentCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(CDAttachment) nonisolated public class CDAttachment : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias CDAttachmentCoreDataPropertiesSet = Foundation.NSSet
+extension ZohoDeskPortalKB.CDAttachment {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalKB.CDAttachment>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var size: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var webURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZohoDeskPortalKB.CDAttachment : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias CDKBCategoryCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(CDKBCategory) nonisolated public class CDKBCategory : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias CDKBCategoryCoreDataPropertiesSet = Foundation.NSSet
+extension ZohoDeskPortalKB.CDKBCategory {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalKB.CDKBCategory>
+  @objc @NSManaged nonisolated dynamic public var articlesCount: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var createdTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var departmentID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var desc: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var languageID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var locale: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var logoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var parentID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var permalink: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var rootCategoryId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var sectionsCount: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var translatedName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var parent: ZohoDeskPortalKB.CDKBCategory? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var subCategories: Foundation.NSOrderedSet? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZohoDeskPortalKB.CDKBCategory {
+  @objc(insertObject:inSubCategoriesAtIndex:) @NSManaged nonisolated dynamic public func insertIntoSubCategories(_ value: ZohoDeskPortalKB.CDKBCategory, at idx: Swift.Int)
+  @objc(removeObjectFromSubCategoriesAtIndex:) @NSManaged nonisolated dynamic public func removeFromSubCategories(at idx: Swift.Int)
+  @objc(insertSubCategories:atIndexes:) @NSManaged nonisolated dynamic public func insertIntoSubCategories(_ values: [ZohoDeskPortalKB.CDKBCategory], at indexes: Foundation.NSIndexSet)
+  @objc(removeSubCategoriesAtIndexes:) @NSManaged nonisolated dynamic public func removeFromSubCategories(at indexes: Foundation.NSIndexSet)
+  @objc(replaceObjectInSubCategoriesAtIndex:withObject:) @NSManaged nonisolated dynamic public func replaceSubCategories(at idx: Swift.Int, with value: ZohoDeskPortalKB.CDKBCategory)
+  @objc(replaceSubCategoriesAtIndexes:withSubCategories:) @NSManaged nonisolated dynamic public func replaceSubCategories(at indexes: Foundation.NSIndexSet, with values: [ZohoDeskPortalKB.CDKBCategory])
+  @objc(addSubCategoriesObject:) @NSManaged nonisolated dynamic public func addToSubCategories(_ value: ZohoDeskPortalKB.CDKBCategory)
+  @objc(removeSubCategoriesObject:) @NSManaged nonisolated dynamic public func removeFromSubCategories(_ value: ZohoDeskPortalKB.CDKBCategory)
+  @objc(addSubCategories:) @NSManaged nonisolated dynamic public func addToSubCategories(_ values: Foundation.NSOrderedSet)
+  @objc(removeSubCategories:) @NSManaged nonisolated dynamic public func removeFromSubCategories(_ values: Foundation.NSOrderedSet)
+}
+extension ZohoDeskPortalKB.CDKBCategory : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias KBSearchCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(KBSearch) nonisolated public class KBSearch : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias KBSearchCoreDataPropertiesSet = Foundation.NSSet
+extension ZohoDeskPortalKB.KBSearch {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalKB.KBSearch>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var keyword: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var time: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZohoDeskPortalKB.KBSearch : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+public typealias ZDPKnowledgeBaseFoundationFrameworkSet = Foundation.NSSet
+public typealias ZDPKnowledgeBaseCoreDataFrameworkManagedObject = CoreData.NSManagedObject
+extension ZohoDeskPortalKB.ZDPortalKBConfiguration.ZDPortalKBRelatedArticlePreference : Swift.Equatable {}
+extension ZohoDeskPortalKB.ZDPortalKBConfiguration.ZDPortalKBRelatedArticlePreference : Swift.Hashable {}
+extension ZohoDeskPortalKB.ZDPortalKBConfiguration.ZDPortalKBRelatedArticlePreference : Swift.RawRepresentable {}
+extension ZohoDeskPortalKB.ZDPortalKBConfiguration.ZDPortalKBSearchPreference : Swift.Equatable {}
+extension ZohoDeskPortalKB.ZDPortalKBConfiguration.ZDPortalKBSearchPreference : Swift.Hashable {}
+extension ZohoDeskPortalKB.ZDPortalKBConfiguration.ZDPortalKBSearchPreference : Swift.RawRepresentable {}

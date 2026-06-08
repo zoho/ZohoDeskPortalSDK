@@ -1,0 +1,920 @@
+{
+    "conditionalStyles":[
+        {
+            "uid": "userImgStyles",
+            "options": [
+                {
+                    "value": "emptyState",
+                    "condition": "is",
+                    "style": {
+                        "imageStyle": {
+                            "contentType": "fill"
+                        },
+                        "tintColor_id": "tintClr",
+                        "cornerRadius": {
+                            "all": 18
+                        },
+                        "textStyle": {
+                            "textColor_id": "primaryTxtClr",
+                            "fontStyle_id": "body",
+                            "alignment": "center"
+                        },
+                        "borderStyle": {
+                            "borderColor_id":"borderColor",
+                            "borderWidth": 0
+                        }
+                    }
+                },
+                {
+                    "value": "withBorder",
+                    "condition": "is",
+                    "style": {
+                        "imageStyle": {
+                            "contentType": "fill"
+                        },
+                        "tintColor_id": "tintClr",
+                        "cornerRadius": {
+                            "all": 18
+                        },
+                        "textStyle": {
+                            "textColor_id": "primaryTxtClr",
+                            "fontStyle_id": "body",
+                            "alignment": "center"
+                        },
+                        "borderStyle": {
+                            "borderColor_id":"borderColor",
+                            "borderWidth": 1
+                        }
+                    }
+                },
+                {
+                    "value": "withOutBorder",
+                    "condition": "is",
+                    "style": {
+                        "imageStyle": {
+                            "contentType": "fill"
+                        },
+                        "tintColor_id": "tintClr",
+                        "cornerRadius": {
+                            "all": 18
+                        },
+                        "textStyle": {
+                            "textColor_id": "primaryTxtClr",
+                            "fontStyle_id": "body",
+                            "alignment": "center"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "agentIconStyle",
+            "options": [
+                {
+                    "value": "enable",
+                    "condition": "is",
+                    "style": {
+                        "tintColor_id": "tintClr",
+                        "imageStyle": {
+                            "contentType": "contain"
+                        }
+                    }
+                },
+                {
+                    "value": "disable",
+                    "condition": "is",
+                    "style": {
+                        "tintColor_id": "disableBG",
+                        "imageStyle": {
+                            "contentType": "contain"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "replyURLParamsHolderStyles",
+            "options": [
+                {
+                    "value": "in",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "primaryBG",
+                        "cornerRadius": {
+                            "all": 6
+                        }
+                    }
+                },
+                {
+                    "value": "out",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "secondaryBG",
+                        "cornerRadius": {
+                            "all": 6
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "replyURLDescStyles",
+            "options": [
+                {
+                    "value": "in",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "body",
+                            "textColor_id": "primaryTxtClr",
+                            "maxLines": 0
+                        }
+                    }
+                },
+                {
+                    "value": "out",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "body",
+                            "textColor_id": "white",
+                            "maxLines": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "replyAttachmentDisplayStyles",
+            "options": [
+                {
+                    "value": "white",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id":"subhead",
+                            "textColor_id":"white",
+                            "maxLines": 0
+                        }
+                    }
+                },
+                {
+                    "value": "dark",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id":"subhead",
+                            "textColor_id":"primaryTxtClr",
+                            "maxLines": 0
+                        }
+                    }
+                },
+                {
+                    "value": "whiteTruncated",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id":"subhead",
+                            "textColor_id":"white",
+                            "maxLines": 5
+                        }
+                    }
+                },
+                {
+                    "value": "darkTruncated",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id":"subhead",
+                            "textColor_id":"primaryTxtClr",
+                            "maxLines": 5
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "retryLabelStyles",
+            "options": [
+                {
+                    "value": "failed",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "caption1Regular",
+                            "textColor_id":"error",
+                            "maxLines": 0,
+                            "alignment": "right"
+                        }
+                    }
+                },
+                {
+                    "value": "normal",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "caption1Regular",
+                            "textColor_id":"secondaryTxtClr",
+                            "maxLines": 1,
+                            "alignment": "right"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "retryLabelInStyles",
+            "options": [
+                {
+                    "value": "failed",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "caption1Regular",
+                            "textColor_id":"error",
+                            "maxLines": 0
+                        }
+                    }
+                },
+                {
+                    "value": "normal",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "caption1Regular",
+                            "textColor_id":"secondaryTxtClr",
+                            "maxLines": 1
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "voteBtnStyles",
+            "options": [
+                {
+                    "value": "selected",
+                    "condition": "is",
+                    "style": {
+                        "cornerRadius": {
+                            "all": 8
+                        },
+                        "borderStyle": {
+                            "borderColor_id": "tintClr",
+                            "borderWidth": 1
+                        }
+                    }
+                },
+                {
+                    "value": "notSelected",
+                    "condition": "is",
+                    "style": {
+                        "cornerRadius": {
+                            "all": 8
+                        },
+                        "borderStyle": {
+                            "borderColor_id": "borderColor",
+                            "borderWidth": 1
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "keyboardState",
+            "options": [
+                {
+                    "value": "disable",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "isEditable": false,
+                            "fontStyle_id": "body",
+                            "textColor_id": "primaryTxtClr"
+                        },
+                        "scrollStyle": {
+                            "isScrollEnabled": true,
+                            "isShowHorizontalScrollIndicator": false
+                        }
+                    }
+                },
+                {
+                    "value": "enable",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "isEditable": true,
+                            "fontStyle_id": "body",
+                            "textColor_id": "primaryTxtClr"
+                        },
+                        "scrollStyle": {
+                            "isScrollEnabled": true,
+                            "isShowHorizontalScrollIndicator": false
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "cardAndcarouselSelectionBg",
+            "options": [
+                {
+                    "value": "selected",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id":"primaryBG",
+                        "cornerRadius": {
+                            "all": 10
+                        },
+                        "borderStyle": {
+                            "borderColor_id": "tintClr",
+                            "borderWidth": 1
+                        }
+                    }
+                },
+                {
+                    "value": "unselected",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id":"primaryBG",
+                        "cornerRadius": {
+                            "all": 10
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "cardsTextStyles",
+            "options": [
+                {
+                    "value": "title",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "textColor_id": "primaryTxtClr",
+                            "fontStyle_id": "calloutMedium",
+                            "maxLines": 0
+                        }
+                    }
+                },
+                {
+                    "value": "subTitle",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "textColor_id": "primaryTxtClr",
+                            "fontStyle_id": "subhead",
+                            "maxLines": 0
+                        }
+                    }
+                },
+                {
+                    "value": "description",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "textColor_id": "primaryTxtClr",
+                            "fontStyle_id": "footnote",
+                            "maxLines": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "textInputState",
+            "options": [
+                {
+                    "value": "enabled",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "subhead",
+                            "textColor_id": "primaryTxtClr",
+                            "maxLines": 0,
+                            "isEditable": true
+                        },
+                        "scrollStyle": {
+                            "isScrollEnabled": true
+                        }
+                    }
+                },
+                {
+                    "value": "disable",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "subhead",
+                            "textColor_id": "primaryTxtClr",
+                            "maxLines": 0,
+                            "isEditable": false
+                        },
+                        "scrollStyle": {
+                            "isScrollEnabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "textInputDateState",
+            "options": [
+                {
+                    "value": "enabled",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "subhead",
+                            "textColor_id": "primaryTxtClr",
+                            "maxLines": 0,
+                            "isEditable": true
+                        },
+                        "scrollStyle": {
+                            "isScrollEnabled": false
+                        },
+                        "pickerStyle": {
+                            "pickerMode": "date",
+                            "pickerType": "wheel"
+                        }
+                    }
+                },
+                {
+                    "value": "disable",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "subhead",
+                            "textColor_id": "primaryTxtClr",
+                            "maxLines": 0,
+                            "isEditable": false
+                        },
+                        "scrollStyle": {
+                            "isScrollEnabled": false
+                        },
+                        "pickerStyle": {
+                            "pickerMode": "date",
+                            "pickerType": "wheel"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "textInputDateTimeState",
+            "options": [
+                {
+                    "value": "enabled",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "subhead",
+                            "textColor_id": "primaryTxtClr",
+                            "maxLines": 0,
+                            "isEditable": true
+                        },
+                        "scrollStyle": {
+                            "isScrollEnabled": false
+                        },
+                        "pickerStyle": {
+                            "pickerMode": "dateTime",
+                            "pickerType": "wheel"
+                        }
+                    }
+                },
+                {
+                    "value": "disable",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "subhead",
+                            "textColor_id": "primaryTxtClr",
+                            "maxLines": 0,
+                            "isEditable": false
+                        },
+                        "scrollStyle": {
+                            "isScrollEnabled": false
+                        },
+                        "pickerStyle": {
+                            "pickerMode": "dateTime",
+                            "pickerType": "wheel"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "sliderStyle",
+            "options": [
+                {
+                    "value" : "ZPSLIDER_INFO_ONCHANGE",
+                    "condition" : "is",
+                    "style" : {
+                        "bgColor_id" : "tintClr",
+                        "textStyle": {
+                            "fontStyle_id" : "subHead",
+                            "textColor_id" : "white",
+                            "alignment" : "center",
+                            "maxLines" : 1
+                        }
+                    }
+                },
+                {
+                    "value" : "ZPSLIDER_INFO_STATIC",
+                    "condition" : "is",
+                    "style" : {
+                        "textStyle": {
+                            "fontStyle_id" : "subHead",
+                            "textColor_id" : "secondaryTxtClr",
+                            "alignment" : "center",
+                            "maxLines" : 1
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "textInputBGStyles",
+            "options":[
+                {
+                    "value": "errorState",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "primaryBG",
+                        "cornerRadius": {
+                            "all": 6
+                        },
+                        "borderStyle": {
+                            "borderColor_id":"error",
+                            "borderWidth":1
+                        }
+                    }
+                },
+                {
+                    "value": "normalState",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "primaryBG",
+                        "cornerRadius": {
+                            "all": 6
+                        },
+                        "borderStyle": {
+                            "borderColor_id":"borderColor",
+                            "borderWidth": 1
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "skipBtnBgStyles",
+            "options":[
+                {
+                    "value": "enabled",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "primaryBG",
+                        "borderStyle": {
+                            "borderColor_id": "tintClr",
+                            "borderWidth": 1
+                        },
+                        "cornerRadius": {
+                            "all": 18
+                        }
+                    }
+                },
+                {
+                    "value": "tapped",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "tintClr",
+                        "cornerRadius": {
+                            "all": 18
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "skipBtnStyles",
+            "options": [
+                {
+                    "value": "enabled",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id":"subhead",
+                            "textColor_id":"tintClr"
+                        }
+                    }
+                },
+                {
+                    "value": "tapped",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id":"subhead",
+                            "textColor_id":"white"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "submitBtnBgStyles",
+            "options": [
+                {
+                    "value": "enable",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "tintClr",
+                        "cornerRadius": {
+                            "all": 18
+                        }
+                    }
+                },
+                {
+                    "value": "disable",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "disableClr",
+                        "cornerRadius": {
+                            "all": 18
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "submitBtnStyles",
+            "options": [
+                {
+                    "value": "enable",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "textColor_id": "white",
+                            "fontStyle_id":"subheadMedium"
+                        }
+                    }
+                },
+                {
+                    "value": "disable",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "textColor_id": "disableTxtClr",
+                            "fontStyle_id":"subheadMedium"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "messageGeneratorStyles",
+            "options": [
+                {
+                    "value": "both",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id":"secondaryBG",
+                        "cornerRadius": {
+                            "topLeft": 0,
+                            "topRight": 10,
+                            "bottomRight": 10,
+                            "bottomLeft": 10
+                        },
+                        "borderStyle": {
+                            "borderColor_id": "borderColor",
+                            "borderWidth": 0.5
+                        }
+                    }
+                },
+                {
+                    "value": "top",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id":"secondaryBG",
+                        "cornerRadius": {
+                            "topLeft": 0,
+                            "topRight": 10,
+                            "bottomRight": 10,
+                            "bottomLeft": 10
+                        },
+                        "borderStyle": {
+                            "borderColor_id": "borderColor",
+                            "borderWidth": 0.5
+                        }
+                    }
+                },
+                {
+                    "value": "bottom",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id":"secondaryBG",
+                        "cornerRadius": {
+                            "topLeft": 10,
+                            "topRight": 10,
+                            "bottomRight": 10,
+                            "bottomLeft": 10
+                        },
+                        "borderStyle": {
+                            "borderColor_id": "borderColor",
+                            "borderWidth": 0.5
+                        }
+                    }
+                },
+                {
+                    "value": "middle",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id":"secondaryBG",
+                        "cornerRadius": {
+                            "topLeft": 10,
+                            "topRight": 10,
+                            "bottomRight": 10,
+                            "bottomLeft": 10
+                        },
+                        "borderStyle": {
+                            "borderColor_id": "borderColor",
+                            "borderWidth": 0.5
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "messageGeneratorOutStyles",
+            "options": [
+                {
+                    "value": "both",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id":"tintClr",
+                        "cornerRadius": {
+                            "topLeft": 10,
+                            "topRight": 0,
+                            "bottomRight": 10,
+                            "bottomLeft": 10
+                        }
+                    }
+                },
+                {
+                    "value": "top",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id":"tintClr",
+                        "cornerRadius": {
+                            "topLeft": 10,
+                            "topRight": 0,
+                            "bottomRight": 10,
+                            "bottomLeft": 10
+                        }
+                    }
+                },
+                {
+                    "value": "bottom",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id":"tintClr",
+                        "cornerRadius": {
+                            "topLeft": 10,
+                            "topRight": 10,
+                            "bottomRight": 10,
+                            "bottomLeft": 10
+                        }
+                    }
+                },
+                {
+                    "value": "middle",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id":"tintClr",
+                        "cornerRadius": {
+                            "topLeft": 10,
+                            "topRight": 10,
+                            "bottomRight": 10,
+                            "bottomLeft": 10
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "listViewCellStyles",
+            "options": [
+                {
+                    "value": "selected",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id":"primaryBG",
+                        "cornerRadius": {
+                            "all": 7
+                        },
+                        "borderStyle": {
+                            "borderColor_id": "tintClr",
+                            "borderWidth": 1
+                        }
+                    }
+                },
+                {
+                    "value": "unselected",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id":"primaryBG",
+                        "cornerRadius": {
+                            "all": 7
+                        },
+                        "shadowStyle": {
+                            "shadowColor_id": "elementShadowClr",
+                            "shadowRadius": 3,
+                            "shadowOpacity": 0.2,
+                            "offset": {
+                                "width": 0,
+                                "height": 0
+                            }
+                        },
+                        "borderStyle": {
+                            "borderColor_id": "borderColor",
+                            "borderWidth": 0.5
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "selectionIconBGStyles",
+            "options": [
+                {
+                    "value": "selected",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "tintClr",
+                        "cornerRadius": {
+                            "all": 9
+                        },
+                        "borderStyle": {
+                            "borderColor_id": "tintClr",
+                            "borderWidth": 2
+                        }
+                    }
+                },
+                {
+                    "value": "unselected",
+                    "condition": "is",
+                    "style": {
+                        "cornerRadius": {
+                            "all": 9
+                        },
+                        "borderStyle": {
+                            "borderColor_id": "borderColor",
+                            "borderWidth": 2
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "cardViewCellStyles",
+            "options": [
+                {
+                    "value": "selected",
+                    "condition": "is",
+                    "style": {
+                        "borderStyle": {
+                            "borderColor_id": "tintClr",
+                            "borderWidth": 1
+                        },
+                        "bgColor_id": "primaryBG",
+                        "cornerRadius": {
+                            "all": 10
+                        }
+                    }
+                },
+                {
+                    "value": "unselected",
+                    "condition": "is",
+                    "style": {
+                        "shadowStyle": {
+                            "shadowColor_id": "shadowClr",
+                            "shadowRadius": 4,
+                            "shadowOpacity": 1,
+                            "offset": {
+                                "width": 2,
+                                "height": 2
+                            }
+                        },
+                        "borderStyle": {
+                            "borderColor_id": "borderColor",
+                            "borderWidth": 0.5
+                        },
+                        "bgColor_id": "primaryBG",
+                        "cornerRadius": {
+                            "all": 10
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

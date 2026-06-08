@@ -1,0 +1,41 @@
+body {
+    font: -apple-system-body;
+}
+
+div {
+   outline: none !important;
+   word-wrap: break-word;
+   max-width: 100% !important;
+   overflow-wrap : break-word;
+}
+
+table {
+    width: 100% !important;
+    word-break: break-word;
+}
+
+#editor[contentEditable=true]:empty:before {
+  content: attr(data-text);
+  color: inherit;
+  opacity: 0.3;
+}
+
+.center {
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+}
+
+.red {
+    color: #DE3535
+}
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}

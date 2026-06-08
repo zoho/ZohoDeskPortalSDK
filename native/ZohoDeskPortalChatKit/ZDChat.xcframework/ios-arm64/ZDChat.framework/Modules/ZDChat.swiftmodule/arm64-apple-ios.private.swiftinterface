@@ -1,0 +1,2561 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZDChat
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import AVFAudio
+import AVFoundation
+import CoreData
+import CoreImage
+import DeveloperToolsSupport
+import Foundation
+import LinkPresentation
+import MapKit
+import MobileCoreServices
+import Network
+import PDFKit
+import Photos
+import QuickLook
+import SafariServices
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import Vision
+import VisionKit
+import WebKit
+@_exported import ZDChat
+import ZDHelperKit
+import ZohoDeskPlatformDataBridge
+import ZohoDeskPlatformUIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct CoreDataContextObserverState : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public static let inserted: ZDChat.CoreDataContextObserverState
+  public static let updated: ZDChat.CoreDataContextObserverState
+  public static let deleted: ZDChat.CoreDataContextObserverState
+  public static let refreshed: ZDChat.CoreDataContextObserverState
+  public static let all: ZDChat.CoreDataContextObserverState
+  public typealias ArrayLiteralElement = ZDChat.CoreDataContextObserverState
+  public typealias Element = ZDChat.CoreDataContextObserverState
+  public typealias RawValue = Swift.Int
+}
+public enum CoreDataObserverObjectChange {
+  case updated(CoreData.NSManagedObject)
+  case refreshed(CoreData.NSManagedObject)
+  case inserted(CoreData.NSManagedObject)
+  case deleted(CoreData.NSManagedObject)
+  public func managedObject() -> CoreData.NSManagedObject
+}
+public struct CoreDataObserverAction<T> where T : CoreData.NSManagedObject {
+}
+public class CoreDataContextObserver<T> where T : CoreData.NSManagedObject {
+  public typealias CompletionBlock = (CoreData.NSManagedObject, ZDChat.CoreDataContextObserverState) -> ()
+  public typealias ContextChangeBlock = (_ notification: Foundation.NSNotification, _ changedObjects: [ZDChat.CoreDataObserverObjectChange]) -> ()
+  public var enabled: Swift.Bool
+  public var contextChangeBlock: ZDChat.CoreDataContextObserver<T>.ContextChangeBlock?
+  @objc deinit
+  public init(context: CoreData.NSManagedObjectContext)
+  public func observeObject(object: T, state: ZDChat.CoreDataContextObserverState = .all, completionBlock: @escaping (T, ZDChat.CoreDataContextObserverState) -> ())
+  public func unobserveObject(object: CoreData.NSManagedObject, forState state: ZDChat.CoreDataContextObserverState = .all)
+  public func unobserveAllObjects()
+}
+extension Swift.Dictionary where Key == UIKit.UIImagePickerController.InfoKey {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var jpegData: Foundation.Data? {
+    get
+  }
+  #endif
+}
+public enum ZDChatStates {
+  case disable, enable, hide, show
+  public static func == (a: ZDChat.ZDChatStates, b: ZDChat.ZDChatStates) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ZDChatElementVisibility {
+  case show, hide
+  public static func == (a: ZDChat.ZDChatElementVisibility, b: ZDChat.ZDChatElementVisibility) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum BMMoreButton {
+  case endOnly, endWithRestart
+  public static func == (a: ZDChat.BMMoreButton, b: ZDChat.BMMoreButton) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ZDDefaultElements {
+  case agentTransfer, reload, attachment, languageButton, moreButton, bmMoreButton(ZDChat.BMMoreButton)
+}
+public protocol ZDChatManager : AnyObject {
+  func updateKeyboardState(_ state: ZDChat.ZDChatStates)
+  func updateElement(to: ZDChat.ZDDefaultElements, state: ZDChat.ZDChatStates)
+  func showLoader(isShow: Swift.Bool)
+  func showToast(_ text: Swift.String)
+  func clearChat()
+  func updateNoData(visibility: ZDChat.ZDChatElementVisibility)
+  func updateScreenTitle(title: Swift.String)
+  func reloadChat()
+  func reloadBottomNav()
+  func updateScreenLanguage(languageCode: Swift.String)
+  func reload(segment: ZohoDeskPlatformDataBridge.ZPScreenSegmentType)
+}
+@objc public enum ZDChatAction : Swift.Int {
+  case skip, reinitate, bottransfer, invokearticle, rate, resend, invokechat, end, invokeTicket, send_temp, attachmentLocal, transferToAgent, msgToAgent, flowInvocation, languageSelection, deleteChat, retainAndRestart, bm_reload, bm_endChat
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol ZDUserInput {
+  var isResend: Swift.Bool { get set }
+  var input: any ZDChat.ZDChatMessage { get set }
+  var type: ZDChat.ZDInputType { get set }
+  var sessionid: Swift.String { get set }
+  var index: Swift.Double { get set }
+  var parentId: Swift.String { get set }
+}
+public struct UserInputHandler : ZDChat.ZDUserInput {
+  public var input: any ZDChat.ZDChatMessage
+  public var type: ZDChat.ZDInputType
+  public var index: Swift.Double
+  public var sessionid: Swift.String
+  public var isResend: Swift.Bool
+  public var parentId: Swift.String
+  public var isAttachment: Swift.String
+  public init(input: any ZDChat.ZDChatMessage, type: ZDChat.ZDInputType, sessionid: Swift.String, index: Swift.Double)
+}
+extension ZDChat.Messages : ZDChat.ZDChatMessage {
+  nonisolated public var textMessage: Swift.String {
+    get
+  }
+  nonisolated public var msgIndex: Swift.Double {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  nonisolated public var tempId: Swift.String? {
+    get
+    set
+  }
+  #endif
+}
+public class ZDCLanguageOption {
+  public init(displayName: Swift.String, code: Swift.String, isSelected: Swift.Bool)
+  @objc deinit
+}
+extension ZDChat.PlatformGC {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public class func headless(communication: (any ZDChat.ZDChatDelegate)?, comp: @escaping (Swift.Result<UIKit.UIView, any Swift.Error>) -> Swift.Void)
+  #endif
+}
+public protocol GCHeadlessViewDelegate {
+  func sendTapped(msg: any ZDChat.ZDChatMessage, input: any ZDChat.ZDUserInput)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func skipped(msgId: Swift.String?)
+  #endif
+}
+@_hasMissingDesignatedInitializers public class PlatformGCHeadLess {
+  public class func getBuilder() -> ZohoDeskPlatformUIKit.ZDPBuilderSDK
+  public class func getHeadLessView(input msg: ZDChat.Messages, delegate: any ZDChat.GCHeadlessViewDelegate) -> UIKit.UIView
+  @objc deinit
+}
+extension ZDChat.Messages {
+  public static func getIMUserSelectedAnswer(id: Swift.String = UUID().description, text: Swift.String, index: Swift.Double) -> any ZDChat.ZDChatMessage
+  public static func getIMUserSelectedAttachment(text: Swift.String, index: Swift.Double, attachment: ZDChat.LocalAttachment, displayName: Swift.String) -> any ZDChat.ZDChatMessage
+  nonisolated public func getUserSelectedAnswer(id: Swift.String = UUID().description) -> any ZDChat.ZDChatMessage
+  nonisolated public func setUserSelection(value: Swift.String, displyValue: Swift.String)
+  nonisolated public func setUserInputAttachment(attachment: any ZDChat.ZDChatAttachment)
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public func addActionSheetForiPad(actionSheet: UIKit.UIAlertController)
+}
+extension UIKit.UIButton {
+  @_Concurrency.MainActor @preconcurrency public func spacing(spacing: CoreFoundation.CGFloat)
+}
+extension UIKit.UIStackView {
+  @_Concurrency.MainActor @preconcurrency public func customize(corners: UIKit.UIRectCorner = .allCorners, backgroundColor: UIKit.UIColor = .clear, radiusSize: CoreFoundation.CGFloat = 0, reduceHeight: CoreFoundation.CGFloat = 0)
+  @_Concurrency.MainActor @preconcurrency public func removeAllSubview()
+}
+extension Swift.Array {
+  public static var empty: Swift.Array<Element> {
+    get
+  }
+}
+public enum LoadMoreDirection {
+  case up, down
+  public static func == (a: ZDChat.LoadMoreDirection, b: ZDChat.LoadMoreDirection) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol ZDChatDelegate : AnyObject {
+  var chatStrings: any ZDChat.ZDChatStringProtocol { get }
+  var strings: any ZDChat.ZDChatStringsProto { get }
+  var chatTimeZones: any ZDChat.ZDChatTimeZonesProtocol { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getStrings(language: Swift.String, onCompletion: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getTimeZones(onCompletion: @escaping (Swift.Result<any ZDChat.ZDChatTimeZones, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var chatManager: (any ZDChat.ZDChatManager)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var configuration: (any ZDChat.ZDChatScreenConfigurations)? { get }
+  #endif
+  func initialize(onCompletion: @escaping (_ status: Swift.Bool) -> Swift.Void)
+  func isChatEnabled() -> Swift.Bool
+  func isZiaEnabled() -> Swift.Bool
+  func sendMessage(sessionId: Swift.String, message: any ZDChat.ZDUserInput)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func chatAction(session: any ZDChat.ZDChatSession, action: ZDChat.ZDChatAction, message: (any ZDChat.ZDUserInput)?, info: [Swift.String : Swift.AnyObject]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func loadMoreMessages(index: Swift.Int, direction: ZDChat.LoadMoreDirection, onCompletion: @escaping (_ error: (any Swift.Error)?, _ statusCode: Swift.Int) -> Swift.Void)
+  #endif
+  func createTicket(session: any ZDChat.ZDChatSession, message: any ZDChat.ZDChatMessage, info: [Swift.String : Swift.AnyObject], onCompletion: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  func downloadAttachemnet(url: Swift.String, session: any ZDChat.ZDChatSession, onCompletion: @escaping (Foundation.Data?, (any Swift.Error)?, Swift.Int) -> Swift.Void) -> Foundation.URLRequest?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  func uploadAttachment(attachment: any ZDChat.ZDChatAttachment, session: any ZDChat.ZDChatSession, onCompletion: @escaping (_ responce: (any ZDChat.ZDChatAttachment)?, _ error: (any Swift.Error)?, _ statusCode: Swift.Int) -> Swift.Void) -> Foundation.URLRequest?
+  #endif
+  func removeReference()
+  func isFullReload() -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getFooterContent() -> Foundation.NSAttributedString?
+  #endif
+  func isAuthendicated(comp: @escaping (Swift.Bool) -> Swift.Void)
+}
+extension ZDChat.ZDChatDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var chatManager: (any ZDChat.ZDChatManager)? {
+    get
+    set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var configuration: (any ZDChat.ZDChatScreenConfigurations)? {
+    get
+  }
+  #endif
+}
+public enum ZDCChatMode : Swift.String {
+  case gcMode, botMode, gcInitalMode, agentMode
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZDChatThemeType {
+  case system, light, dark
+  public static func == (a: ZDChat.ZDChatThemeType, b: ZDChat.ZDChatThemeType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class ChatUIKit : ObjectiveC.NSObject {
+  public static var chatMode: ZDChat.ZDCChatMode {
+    get
+    set
+  }
+  public static var isLogEnabled: Swift.Bool
+  public static var isQuickAgentTransferVisible: Swift.Bool
+  public static var needBackButton: Swift.Bool
+  public static var hasLoadMore: Swift.Bool
+  public static var shouldShowKeyboard: Swift.Bool
+  public static var shouldEnableAttachmentUpload: Swift.Bool
+  public static var isIMChat: Swift.Bool
+  public static var isBotConversation: Swift.Bool
+  public static var isMessageBegingRecived: Swift.Bool
+  public static var supportedLanguages: [ZDChat.ZDCLanguageOption]
+  public static var isMessageBegingSent: Swift.Bool {
+    get
+    set
+  }
+  public static var session: (any ZDChat.ZDChatSession)!
+  public static var chatService: Swift.String
+  public static var delegate: (any ZDChat.ZDChatDelegate)!
+  public static var gcProfileURL: Swift.String?
+  public static func removeRefernce()
+  public static func updateColors(lightTheme: any ZDChat.ZDChatColors, darkTheme: any ZDChat.ZDChatColors, themeType: ZDChat.ZDChatThemeType)
+  public static func noDataFound(session: any ZDChat.ZDChatSession) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func showPlatformController(session: (any ZDChat.ZDChatSession)? = nil, delegate: any ZDChat.ZDChatDelegate)
+  #endif
+  public static func getHeadlessView(message: any ZDChat.ZDChatMessage, delegate: any ZDChat.GCHeadlessViewDelegate) -> UIKit.UIView
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func platformHeadLess(delegate: any ZDChat.ZDChatDelegate, comp: @escaping (Swift.Result<UIKit.UIView, any Swift.Error>) -> Swift.Void)
+  #endif
+  public static func setSession(session: any ZDChat.ZDChatSession)
+  public static func updateSession(old id: Swift.String, new session: any ZDChat.ZDChatSession)
+  public static func dismissVC()
+  public static func clearChat()
+  public static func invalidLanguageError()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func showNodata(errorCode: Swift.Int?)
+  #endif
+  public static func showNoData(show: Swift.Bool)
+  public static func reloadChat()
+  public static func deletaAllChat()
+  public static func retainAndRestartChat()
+  public static func clearChatOnly()
+  public static func serviceConnectionStatus(isConnected: Swift.Bool)
+  public static func invokeIntractor()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func deleteAllMessage(sessionId: Swift.String, done: (() -> Swift.Void)? = nil)
+  #endif
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension ZDChat.ChatUIKit {
+  public static func saveConfig(key: Swift.String, value: Swift.String)
+}
+extension ZDChat.ChatUIKit {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func insertNewMessages(messages: [any ZDChat.ZDChatMessage], session: (any ZDChat.ZDChatSession)? = nil)
+  #endif
+  public static func setMessageError(msgId: Swift.String, errorMsg: Swift.String)
+  public static func setActionFailed(msgId: Swift.String, errorMsg: Swift.String)
+  public static func showLoading(incoming: Swift.Bool)
+  public static func vote(msgId: Swift.String, vote: Swift.String)
+  public static func hideLoading()
+  public static func deleteMessage(id: Swift.String)
+  public static func getLastIndex() -> Swift.Double
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getLastMsg() -> ZDChat.Messages?
+  #endif
+}
+@_hasMissingDesignatedInitializers public class ZDChatNativeActionSheet {
+  public static func show(title: Swift.String, msg: Swift.String, actions: [UIKit.UIAlertAction], presentedType: UIKit.UIAlertController.Style = .alert)
+  @objc deinit
+}
+@objc public enum ZDChatScreenPresentationStyle : Swift.Int {
+  case push, present
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol ZDChatScreenConfigurations {
+  @objc optional var title: Swift.String { get }
+  @objc optional var screenPresentationStyle: ZDChat.ZDChatScreenPresentationStyle { get }
+}
+extension ZDChat.ZDChatScreenConfigurations {
+  public var title: Swift.String {
+    get
+  }
+  public var screenPresentationStyle: ZDChat.ZDChatScreenPresentationStyle {
+    get
+  }
+}
+public enum ReachabilityError : Swift.Error {
+  case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
+  case failedToCreateWithHostname(Swift.String, Swift.Int32)
+  case unableToSetCallback(Swift.Int32)
+  case unableToSetDispatchQueue(Swift.Int32)
+  case unableToGetFlags(Swift.Int32)
+}
+@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
+public let ReachabilityChangedNotification: Foundation.NSNotification.Name
+extension Foundation.NSNotification.Name {
+  public static let reachabilityChanged: Foundation.Notification.Name
+}
+public class ZDChatReachability {
+  public typealias NetworkReachable = (ZDChat.ZDChatReachability) -> ()
+  public typealias NetworkUnreachable = (ZDChat.ZDChatReachability) -> ()
+  @available(*, unavailable, renamed: "Connection")
+  public enum NetworkStatus : Swift.CustomStringConvertible, Swift.Equatable {
+    case notReachable, reachableViaWiFi, reachableViaWWAN
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: ZDChat.ZDChatReachability.NetworkStatus, b: ZDChat.ZDChatReachability.NetworkStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Connection : Swift.CustomStringConvertible {
+    @available(*, deprecated, renamed: "unavailable")
+    case none
+    case unavailable, wifi, cellular
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: ZDChat.ZDChatReachability.Connection, b: ZDChat.ZDChatReachability.Connection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var whenReachable: ZDChat.ZDChatReachability.NetworkReachable?
+  public var whenUnreachable: ZDChat.ZDChatReachability.NetworkUnreachable?
+  @available(*, deprecated, renamed: "allowsCellularConnection")
+  final public let reachableOnWWAN: Swift.Bool
+  public var allowsCellularConnection: Swift.Bool
+  public var notificationCenter: Foundation.NotificationCenter
+  @available(*, deprecated, renamed: "connection.description")
+  public var currentReachabilityString: Swift.String {
+    get
+  }
+  @available(*, unavailable, renamed: "connection")
+  public var currentReachabilityStatus: ZDChat.ZDChatReachability.Connection {
+    get
+  }
+  public var connection: ZDChat.ZDChatReachability.Connection {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  convenience public init(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  convenience public init(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  #endif
+  @objc deinit
+}
+extension ZDChat.ZDChatReachability {
+  public func startNotifier() throws
+  public func stopNotifier()
+  @available(*, deprecated, message: "Please use `connection != .none`")
+  public var isReachable: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .cellular`")
+  public var isReachableViaWWAN: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .wifi`")
+  public var isReachableViaWiFi: Swift.Bool {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class PlatformGC {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public class func showGC(communication: (any ZDChat.ZDChatDelegate)?)
+  #endif
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ZDChatProvider : ZohoDeskPlatformDataBridge.ZDBinderProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getDetailDataSource(_ identifier: Swift.String) -> (any ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDErrorBinderDataSource & ZohoDeskPlatformDataBridge.ZDInitializeDataSource & ZohoDeskPlatformDataBridge.ZDPageDatasoure & ZohoDeskPlatformDataBridge.ZDSearchResultsUpdater & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource & ZohoDeskPlatformDataBridge.ZPDetailUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPNavigationDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getReplayDataSource(_ identifier: Swift.String) -> (any ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDErrorBinderDataSource & ZohoDeskPlatformDataBridge.ZDInitializeDataSource & ZohoDeskPlatformDataBridge.ZDListCountDataSource & ZohoDeskPlatformDataBridge.ZDSearchResultsUpdater & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource & ZohoDeskPlatformDataBridge.ZPNavigationDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getListDataSource(_ identifier: Swift.String) -> (any ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDErrorBinderDataSource & ZohoDeskPlatformDataBridge.ZDInitializeDataSource & ZohoDeskPlatformDataBridge.ZDListMetaDataSource & ZohoDeskPlatformDataBridge.ZDSearchResultsUpdater & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource & ZohoDeskPlatformDataBridge.ZPNavigationDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getChatDataSource(_ identifier: Swift.String) -> (any ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDErrorBinderDataSource & ZohoDeskPlatformDataBridge.ZDInitializeDataSource & ZohoDeskPlatformDataBridge.ZDListMetaDataSource & ZohoDeskPlatformDataBridge.ZDSearchResultsUpdater & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource & ZohoDeskPlatformDataBridge.ZPNavigationDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getBinder(for identifier: Swift.String) -> ZohoDeskPlatformDataBridge.ZPBinderModel
+  #endif
+  public func prepareBuilderJSONS(onCompletion: @escaping ([Foundation.Data]) -> Swift.Void)
+  @objc deinit
+}
+extension ZDChat.ZDChatProvider {
+  public var ZPEnableSystemAccessibility: Swift.Bool {
+    get
+  }
+  public var ZPThemeType: ZohoDeskPlatformDataBridge.ZPBuilderThemeType {
+    get
+  }
+  public var ZPEnableLog: Swift.Bool {
+    get
+  }
+}
+public enum ZDMessageType : Swift.String {
+  case TEXT, LAYOUT, LOADING, preview, ATTACHMENT, INFO, LOADMORE, EXTERNAL_INFO, HTML, ACTION
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZDMessagePattern {
+  case Web, text, button(ZDChat.ZDButtonPattern), input(ZDChat.ZDInputPattern), Loading, attachment
+}
+public enum ZDButtonPattern : Swift.String {
+  case text, image, video, audio, smiley, feedback, url
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZDInputPattern : Swift.String {
+  case text, file, slider, email, url, currency, date, datetime, number
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZDMessageAction : Swift.String {
+  case none, select, reply, text
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZDColumnType : Swift.String {
+  case HTML, BUTTON, EMOJI, URL, SUBMIT, INPUT, TEXT, SKIP, submit, URL_BUTTON
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZDInputType : Swift.String {
+  case none, TEXT, NUMBER, URL, EMAIL, DATE, DATETIME, TIME, FILE, SLIDER, CURRENCY, LOCATION
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZDCMessagStatus : Swift.String {
+  case QUEUED, SENT, ISFAILED, ISSENDING, SAVED, LOCKED
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZDLayoutArrangement : Swift.String {
+  case list, carousel, card
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol ZDChatSession {
+  var id: Swift.String { get }
+  var name: Swift.String { get }
+  var service: Swift.String { get }
+  var isNeedBackBtn: Swift.Bool { get }
+  var isNeedNavReloadBtn: Swift.Bool { get }
+}
+extension ZDChat.ZDChatSession {
+  public var isNeedBackBtn: Swift.Bool {
+    get
+  }
+  public var isNeedNavReloadBtn: Swift.Bool {
+    get
+  }
+}
+public protocol ZDChatMessage {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var viewLayout: (any ZDChat.ZDLayout)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var zdactor: (any ZDChat.ZDActorInfo)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var id: Swift.String? { get set }
+  #endif
+  var zdtype: ZDChat.ZDMessageType { get }
+  var isIncoming: Swift.Bool { get }
+  var zdcMessageStatus: ZDChat.ZDCMessagStatus { get }
+  var textMessage: Swift.String { get }
+  var zdcreatedTime: Foundation.Date { get }
+  var msgIndex: Swift.Double { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var metaInfo: (any ZDChat.ZDMeta)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var externalConfigutaion: (any ZDChat.ZDExternalConfiguration)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var previewMetaInfo: (any ZDChat.ZDPreviewMeta)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var zdcAttachment: (any ZDChat.ZDChatAttachment)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var messagePatten: ZDChat.ZDMessagePattern? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var questionId: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tempId: Swift.String? { get set }
+  #endif
+}
+public protocol ZDPreviewMeta {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var type: Swift.String? { get }
+  #endif
+}
+public protocol ZDMeta {
+  var value: Swift.String { get }
+  var name: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var displayValue: Swift.String? { get }
+  #endif
+  var isAttachment: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var attachmentDesc: Swift.String? { get }
+  #endif
+}
+public struct ZDMetaObject : ZDChat.ZDMeta {
+  public var value: Swift.String
+  public var name: Swift.String
+  public var displayValue: Swift.String?
+  public var isAttachment: Swift.Bool
+  public var attachmentDesc: Swift.String?
+}
+public protocol ZDActorInfo {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var name: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var id: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var type: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var photoURLStr: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var service: Swift.String? { get }
+  #endif
+}
+public protocol ZDLayout {
+  var type: Swift.String { get }
+  var ZDRows: [any ZDChat.ZDRows] { get }
+}
+public protocol ZDRows {
+  var arrangement: Swift.String { get }
+  var ZDColumns: [any ZDChat.ZDColumns] { get }
+}
+public protocol ZDExternalConfiguration {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var externalConfAction: Swift.String? { get }
+  #endif
+}
+public protocol ZDCard {
+  var cardAction: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var cardSource: (any ZDChat.ZDSource)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var text: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var value: Swift.String? { get }
+  #endif
+  var isSelected: Swift.Bool { get }
+}
+public protocol ZDSource {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var sourceRows: [any ZDChat.ZDRows]? { get }
+  #endif
+}
+public protocol ZDColumns {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var id: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var type: Swift.String? { get }
+  #endif
+  var displayValue: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var chatinput: (any ZDChat.ZDInput)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var textDisplay: (any ZDChat.ZDCText)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var buttonActionDisplay: (any ZDChat.ZDButtonAction)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var mediaActionDisplay: (any ZDChat.ZDMediaAction)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var sliderDisplay: (any ZDChat.ZDCSlider)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var fileInputDisplay: (any ZDChat.ZDCFileInput)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var webView: (any ZDChat.ZDWebview)? { get }
+  #endif
+  var action: ZDChat.ZDMessageAction { get }
+  var isSelected: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var cardDisplay: (any ZDChat.ZDCard)? { get }
+  #endif
+}
+public protocol ZDCFileInput {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var type: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var size: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var accept: Swift.String? { get }
+  #endif
+}
+public protocol ZDCSlider {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var minimum: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var maximum: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var defaultValue: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var minDisplayValue: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var maxDisplayValue: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var step: Swift.String? { get }
+  #endif
+}
+public protocol ZDInput {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var placeHolder: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var defaultValue: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var type: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var step: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var inputLabels: [Swift.String : Swift.String]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var displayFormatter: Swift.String? { get }
+  #endif
+}
+public protocol ZDWebview {
+  var html: Swift.String { get }
+  var id: Swift.String { get }
+}
+public protocol ZDCText {
+  var text: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var style: Swift.String? { get }
+  #endif
+}
+public protocol ZDButtonAction {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var value: Swift.String? { get }
+  #endif
+  var id: Swift.String { get }
+  var displayValue: Swift.String { get }
+  var action: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var emoji: Swift.String? { get }
+  #endif
+  var isSelfSizing: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var actionSource: Swift.String? { get }
+  #endif
+}
+public protocol ZDMediaAction : ZDChat.ZDButtonAction {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var mediaSourceURL: Swift.String? { get }
+  #endif
+}
+public protocol ZDChatAttachment {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var size: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var name: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var createdTime: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var id: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var type: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var mimeType: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var downloadURL: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var localFilePath: Swift.String? { get }
+  #endif
+}
+public protocol ZDChati18 {
+  var strings: [Swift.String : Swift.String] { get }
+  var version: Swift.UInt8 { get }
+}
+public protocol ZDChatTimeZones {
+  var timeZones: [Swift.String] { get }
+  var version: Swift.UInt8 { get }
+}
+extension ZDChat.ZDChatMessage {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var previewMetaInfo: (any ZDChat.ZDPreviewMeta)? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var externalConfigutaion: (any ZDChat.ZDExternalConfiguration)? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var messagePatten: ZDChat.ZDMessagePattern? {
+    get
+  }
+  #endif
+  public var zdcreatedTime: Foundation.Date {
+    get
+  }
+  public var isIncoming: Swift.Bool {
+    get
+  }
+  public var zdtype: ZDChat.ZDMessageType {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var viewLayout: (any ZDChat.ZDLayout)? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var zdactor: (any ZDChat.ZDActorInfo)? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var zdcAttachment: (any ZDChat.ZDChatAttachment)? {
+    get
+  }
+  #endif
+  public var zdcMessageStatus: ZDChat.ZDCMessagStatus {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var metaInfo: (any ZDChat.ZDMeta)? {
+    get
+  }
+  #endif
+}
+public class MessageInput : ZDChat.ZDChatMessage {
+  public var id: Swift.String?
+  public var tempId: Swift.String?
+  public var questionId: Swift.String?
+  public var isIncoming: Swift.Bool
+  public var textMessage: Swift.String
+  public var msgIndex: Swift.Double
+  public var zdcAttachment: (any ZDChat.ZDChatAttachment)?
+  public var metaInfo: (any ZDChat.ZDMeta)?
+  public var zdtype: ZDChat.ZDMessageType
+  public init(textMessage: Swift.String, index: Swift.Double)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class LocalAttachment : ZDChat.ZDChatAttachment {
+  public var size: Swift.String?
+  public var name: Swift.String?
+  public var createdTime: Swift.String?
+  public var id: Swift.String?
+  public var type: Swift.String?
+  public var mimeType: Swift.String?
+  public var downloadURL: Swift.String?
+  public var localFilePath: Swift.String?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ChatMessageHandler {
+  @objc deinit
+}
+extension Swift.String {
+  public var localized: Swift.String {
+    get
+  }
+}
+public protocol ZDChatStringProtocol {
+  var confirm: Swift.String { get }
+  var tapToResendAction: Swift.String { get }
+  var cancel: Swift.String { get }
+  var skip: Swift.String { get }
+  var skipped: Swift.String { get }
+  var delete: Swift.String { get }
+  var resend: Swift.String { get }
+  var messageSendFailed: Swift.String { get }
+  var tapToResend: Swift.String { get }
+  var sending: Swift.String { get }
+  var uploadImage: Swift.String { get }
+  var uploadAudio: Swift.String { get }
+  var uploadVideo: Swift.String { get }
+  var you: Swift.String { get }
+  var wasItHelpful: Swift.String { get }
+  var thanksForRating: Swift.String { get }
+  var likeToSubmitATicket: Swift.String { get }
+  var submitTicket: Swift.String { get }
+  var timeZone: Swift.String { get }
+  var askMeSomething: Swift.String { get }
+  var enterValidText: Swift.String { get }
+  var enterValidNumber: Swift.String { get }
+  var enterValidURL: Swift.String { get }
+  var enterValidEmail: Swift.String { get }
+  var enterValidDate: Swift.String { get }
+  var enterValidDateAndTime: Swift.String { get }
+  var enterValidCurrency: Swift.String { get }
+  var enterValidTime: Swift.String { get }
+  var searchPlaceHolder: Swift.String { get }
+  var camera: Swift.String { get }
+  var library: Swift.String { get }
+  var tapToStart: Swift.String { get }
+  var fileApp: Swift.String { get }
+  var loaMoreConvo: Swift.String { get }
+  var chatNow: Swift.String { get }
+  var tryAgain: Swift.String { get }
+  var showMore: Swift.String { get }
+  var showLess: Swift.String { get }
+  var textPlaceHolder: Swift.String { get }
+  var urlTextFieldPlaceHolder: Swift.String { get }
+  var currentTextFieldPlaceHolder: Swift.String { get }
+  var emailTextFieldPlaceHolder: Swift.String { get }
+}
+public protocol ZDChatTimeZonesProtocol {
+  var timeZones: [Swift.String] { get }
+}
+public protocol ZDChatStringsProto {
+  var feedbackPositive: Swift.String { get }
+  var feedbackNegative: Swift.String { get }
+  var submitTicket: Swift.String { get }
+  var chatWithAgent: Swift.String { get }
+  var ticketCreatedSuccessfully: Swift.String { get }
+  var feedbackQuestion: Swift.String { get }
+  var ticketNoAnswer: Swift.String { get }
+  var tapToResend: Swift.String { get }
+  var msgFailedError: Swift.String { get }
+  var chatDisabled: Swift.String { get }
+  var chatTextViewPlaceHolder: Swift.String { get }
+  var agentChatNow: Swift.String { get }
+  var msgFailedErrorInfo: Swift.String { get }
+  var sessionRestart: Swift.String { get }
+  var resend: Swift.String { get }
+  var camera: Swift.String { get }
+  var sessionExpired: Swift.String { get }
+  var chatEndUser: Swift.String { get }
+  var chatScreenTitle: Swift.String { get }
+  var delete: Swift.String { get }
+  var sessionTransfer: Swift.String { get }
+  var files: Swift.String { get }
+  var msgBetweenLoad: Swift.String { get }
+  var connectAgent: Swift.String { get }
+  var error: Swift.String { get }
+  var library: Swift.String { get }
+  var noOptionsFound: Swift.String { get }
+  var sending: Swift.String { get }
+  var urlLengthValidate: Swift.String { get }
+  var selectTime: Swift.String { get }
+  var uploadFile: Swift.String { get }
+  var cancel: Swift.String { get }
+  var skip: Swift.String { get }
+  var attachmentValidate: Swift.String { get }
+  var timeZoneNotMatch: Swift.String { get }
+  var endChat: Swift.String { get }
+  var attachmentPlaceholder: Swift.String { get }
+  var emptyUpload: Swift.String { get }
+  var selectTimeZone: Swift.String { get }
+  var showLess: Swift.String { get }
+  var urlPlaceHolder: Swift.String { get }
+  var emptyTxtValidate: Swift.String { get }
+  var emailValidate: Swift.String { get }
+  var remove: Swift.String { get }
+  var emojiValidate: Swift.String { get }
+  var currencyValidate: Swift.String { get }
+  var retry: Swift.String { get }
+  var textValidate: Swift.String { get }
+  var cardValidate: Swift.String { get }
+  var uploadVideo: Swift.String { get }
+  var nameValidate: Swift.String { get }
+  var attachmentBtnValidate: Swift.String { get }
+  var attachmentMaxSize: Swift.String { get }
+  var urlValidate: Swift.String { get }
+  var textBtnValidate: Swift.String { get }
+  var locationValidate: Swift.String { get }
+  var skipped: Swift.String { get }
+  var selectDate: Swift.String { get }
+  var uploadImage: Swift.String { get }
+  var dateValidate: Swift.String { get }
+  var attachmentSize: Swift.String { get }
+  var textPlaceholder: Swift.String { get }
+  var textLengthValidate: Swift.String { get }
+  var imageUnavailable: Swift.String { get }
+  var timeValidate: Swift.String { get }
+  var poweredBy: Swift.String { get }
+  var submit: Swift.String { get }
+  var timePlaceHolderInHr: Swift.String { get }
+  var numberValidate: Swift.String { get }
+  var brandName: Swift.String { get }
+  var attachmentUploadError: Swift.String { get }
+  var timePlaceHolderInMin: Swift.String { get }
+  var showMore: Swift.String { get }
+  var confirm: Swift.String { get }
+  var currencyPlaceholder: Swift.String { get }
+  var timeZone: Swift.String { get }
+  var uploadAudio: Swift.String { get }
+  var attachmentFileSizeValidate: Swift.String { get }
+  var attachmentAcceptedType: Swift.String { get }
+  var emailLengthValidate: Swift.String { get }
+  var emailPlaceholder: Swift.String { get }
+  var searchPlaceHolder: Swift.String { get }
+  var attachmentPreview: Swift.String { get }
+  var dateTimeValidate: Swift.String { get }
+  var viewAll: Swift.String { get }
+  var multiSelectInfo: Swift.String { get }
+  var supportedFormates: Swift.String { get }
+  var done: Swift.String { get }
+  var locationPlaceHolder: Swift.String { get }
+  var failedImgText: Swift.String { get }
+  var failedImgRetry: Swift.String { get }
+  var choiceCardSelect: Swift.String { get }
+  var choiceCardSelected: Swift.String { get }
+  var locationShare: Swift.String { get }
+  var nodataDesc: Swift.String { get }
+  var nodataTitle: Swift.String { get }
+  var numberPlaceholder: Swift.String { get }
+  var decimalPlaceHolder: Swift.String { get }
+  var uploadedString: Swift.String { get }
+  var close: Swift.String { get }
+  var proceed: Swift.String { get }
+  var brokenURLTitle: Swift.String { get }
+  var brokenURLDesc: Swift.String { get }
+  var cameraPermissionMissing: Swift.String { get }
+  var libraryPermissionMissing: Swift.String { get }
+  var permissionDenied: Swift.String { get }
+  var viewSelection: Swift.String { get }
+  var clearSelection: Swift.String { get }
+  var selectAll: Swift.String { get }
+  var viewAllScreenSelectionsTitle: Swift.String { get }
+  var locationInfoTitle: Swift.String { get }
+  var mapScreenTitle: Swift.String { get }
+  var selected: Swift.String { get }
+  var downloading: Swift.String { get }
+  var languageScreenTitle: Swift.String { get }
+  var languageUnAvailable: Swift.String { get }
+  var chooseLanguage: Swift.String { get }
+  var reloadChat: Swift.String { get }
+  var exportChat: Swift.String { get }
+  var agentTransferring: Swift.String { get }
+  var endChatTitle: Swift.String { get }
+  var endChatDesc: Swift.String { get }
+  var viewAllScreenTitle: Swift.String { get }
+  var startANewSession: Swift.String { get }
+  var retainAndRestartSession: Swift.String { get }
+  var endChatDescription: Swift.String { get }
+  var endChatClose: Swift.String { get }
+  var endChatInfo: Swift.String { get }
+  var deleteSessionAlertTitle: Swift.String { get }
+  var deleteSessionAlertDesc: Swift.String { get }
+  var languageMismatchAlertTitle: Swift.String { get }
+  var languageMismatchAlertSubTitle: Swift.String { get }
+  var restartSessionAlertTitle: Swift.String { get }
+  var restartSessionAlertSubTitle: Swift.String { get }
+  var languageChangeAlertTitle: Swift.String { get }
+  var languageChangeAlertSubTitle: Swift.String { get }
+  var bmEndChatTitle: Swift.String { get }
+  var bmEndChatCancel: Swift.String { get }
+  var bmEndChatProceed: Swift.String { get }
+  var bmAuthConnectionEndChatDesc: Swift.String { get }
+  var bmGuestConnectionEndChatDesc: Swift.String { get }
+}
+extension ZDChat.Attachement : ZDChat.ZDChatAttachment {
+}
+@_hasMissingDesignatedInitializers open class CacheRecord {
+  open var key: Swift.String!
+  open var object: Swift.AnyObject?
+  open var cacheMinutes: Swift.Int
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class CacheManager {
+  open func save(_ record: ZDChat.CacheRecord)
+  #if compiler(>=5.3) && $NonescapableTypes
+  open func saveObject(_ object: Swift.AnyObject?, forKey key: Swift.String, forMinutes minutes: Swift.Int)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  open func fetchObject<T>(forKey key: Swift.String) -> T?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  open func fetch(forKey key: Swift.String) -> ZDChat.CacheRecord?
+  #endif
+  open func removeObject(keys: [Swift.String])
+  @objc deinit
+}
+extension CoreData.NSManagedObject {
+  public class func createInContext(_ entityName: Swift.String, context: CoreData.NSManagedObjectContext) -> Swift.AnyObject
+  #if compiler(>=5.3) && $NonescapableTypes
+  public class func findAllInContext(_ entityName: Swift.String, context: CoreData.NSManagedObjectContext, id: Swift.String = "") -> [Swift.AnyObject]?
+  #endif
+}
+public protocol ZDChatColors {
+  var screenBg: UIKit.UIColor { get }
+  var interactiveColor: UIKit.UIColor { get }
+  var navBarColor: UIKit.UIColor { get }
+  var primaryTextColor: UIKit.UIColor { get }
+  var secondaryTextColor: UIKit.UIColor { get }
+  var placeholderTextColor: UIKit.UIColor { get }
+  var primaryBackGroundColor: UIKit.UIColor { get }
+  var secondaryBackGroundColor: UIKit.UIColor { get }
+  var placeholderBackGroundColor: UIKit.UIColor { get }
+  var isDark: Swift.Bool { get }
+  var navBarTitleColor: UIKit.UIColor { get }
+  var navBarButtonColor: UIKit.UIColor { get }
+  var errorColor: UIKit.UIColor { get }
+}
+public typealias ActorCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(Actor) nonisolated public class Actor : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias ActorCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.Actor {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.Actor>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var photourl: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var service: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var message: ZDChat.Messages? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var reaction: ZDChat.Reaction? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.Actor : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias AttachementCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(Attachement) nonisolated public class Attachement : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias AttachementCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.Attachement {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.Attachement>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var createdTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var downloadURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var index: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var isAudio: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isDownloaded: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isFailed: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isPlayed: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isUploaded: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isUserInput: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isVideo: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var localFilePath: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var mimeType: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var playedProgress: Swift.Double {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var size: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var thumpURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var button: ZDChat.ButtonDisplay? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var layout: ZDChat.Columns? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var message: ZDChat.Messages? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var upload: ZDChat.FileInputDisplay? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.Attachement : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias ButtonDisplayCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(ButtonDisplay) nonisolated public class ButtonDisplay : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias ButtonDisplayCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.ButtonDisplay {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.ButtonDisplay>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var action: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var displayValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var emoji: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var source: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var value: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var attachment: ZDChat.Attachement? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var column: ZDChat.Columns? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var properties: ZDChat.ViewProperties? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.ButtonDisplay : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias CardCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(Card) nonisolated public class Card : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias CardCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.Card {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.Card>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var action: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var isEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var text: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var value: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var column: ZDChat.Columns? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var rows: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.Card {
+  @objc(addRowsObject:) @NSManaged nonisolated dynamic public func addToRows(_ value: ZDChat.Rows)
+  @objc(removeRowsObject:) @NSManaged nonisolated dynamic public func removeFromRows(_ value: ZDChat.Rows)
+  @objc(addRows:) @NSManaged nonisolated dynamic public func addToRows(_ values: Foundation.NSSet)
+  @objc(removeRows:) @NSManaged nonisolated dynamic public func removeFromRows(_ values: Foundation.NSSet)
+}
+extension ZDChat.Card : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+public typealias ChatInputCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(ChatInput) nonisolated public class ChatInput : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias ChatInputCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.ChatInput {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.ChatInput>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var accept: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var currencyType: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var defaultValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var displayFormat: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var max: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var min: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var size: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var step: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var column: ZDChat.Columns? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var message: ZDChat.Messages? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.ChatInput : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+public typealias ColumnsCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(Columns) nonisolated public class Columns : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias ColumnsCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.Columns {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.Columns>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var action: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var height: Swift.Double {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var idforView: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var index: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isHeightCalculated: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var text: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var value: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var width: Swift.Double {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var attachements: ZDChat.Attachement? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var buttonDisplay: ZDChat.ButtonDisplay? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var card: ZDChat.Card? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var fileInputDisplay: ZDChat.FileInputDisplay? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var input: ZDChat.ChatInput? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var labelDisplay: ZDChat.LabelDisplay? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var row: ZDChat.Rows? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var sliderDisplay: ZDChat.SliderDisplay? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var webDisplay: ZDChat.WebDisplay? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.Columns : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias ConfigurationCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(Configuration) nonisolated public class Configuration : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias ConfigurationCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.Configuration {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.Configuration>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var value: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.Configuration : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias ExternalConfigurationCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(ExternalConfiguration) nonisolated public class ExternalConfiguration : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias ExternalConfigurationCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.ExternalConfiguration {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.ExternalConfiguration>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var action: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var message: ZDChat.Messages? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.ExternalConfiguration : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+public typealias FileInputDisplayCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(FileInputDisplay) nonisolated public class FileInputDisplay : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias FileInputDisplayCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.FileInputDisplay {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.FileInputDisplay>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var accept: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var size: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var attachement: ZDChat.Attachement? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var column: ZDChat.Columns? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.FileInputDisplay : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+public typealias LabelDisplayCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(LabelDisplay) nonisolated public class LabelDisplay : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias LabelDisplayCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.LabelDisplay {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.LabelDisplay>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var displayValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var style: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var value: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var column: ZDChat.Columns? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var properties: ZDChat.ViewProperties? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.LabelDisplay : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias LayoutsCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(Layouts) nonisolated public class Layouts : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias LayoutsCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.Layouts {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.Layouts>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var userInput: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var message: ZDChat.Messages? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var rows: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.Layouts {
+  @objc(addRowsObject:) @NSManaged nonisolated dynamic public func addToRows(_ value: ZDChat.Rows)
+  @objc(removeRowsObject:) @NSManaged nonisolated dynamic public func removeFromRows(_ value: ZDChat.Rows)
+  @objc(addRows:) @NSManaged nonisolated dynamic public func addToRows(_ values: Foundation.NSSet)
+  @objc(removeRows:) @NSManaged nonisolated dynamic public func removeFromRows(_ values: Foundation.NSSet)
+}
+extension ZDChat.Layouts : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+public typealias MessagesCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(Messages) nonisolated public class Messages : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias MessagesCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.Messages {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.Messages>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var actionfailed: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var chatInput: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var index: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isEnd: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isHeightCalculated: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isIncoming: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isMultiSelection: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isSkipped: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isSupportEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isUserInput: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var localID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var messageHeight: Swift.Double {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var messagepattern: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var messagePostion: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var messageStatus: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var messageWidth: Swift.Double {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var modifiedTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var questionId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var refreshId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var summary: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var uniqueId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var value: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var vote: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var actor: ZDChat.Actor? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var attachments: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var externalConfiguration: ZDChat.ExternalConfiguration? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var input: ZDChat.ChatInput? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var layouts: ZDChat.Layouts? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var meta: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var previewMeta: ZDChat.PreviewMeta? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var reaction: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var repliedMessage: ZDChat.Messages? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var sessions: ZDChat.Sessions? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var userInput: ZDChat.Messages? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.Messages {
+  @objc(addAttachmentsObject:) @NSManaged nonisolated dynamic public func addToAttachments(_ value: ZDChat.Attachement)
+  @objc(removeAttachmentsObject:) @NSManaged nonisolated dynamic public func removeFromAttachments(_ value: ZDChat.Attachement)
+  @objc(addAttachments:) @NSManaged nonisolated dynamic public func addToAttachments(_ values: Foundation.NSSet)
+  @objc(removeAttachments:) @NSManaged nonisolated dynamic public func removeFromAttachments(_ values: Foundation.NSSet)
+}
+extension ZDChat.Messages {
+  @objc(addMetaObject:) @NSManaged nonisolated dynamic public func addToMeta(_ value: ZDChat.Meta)
+  @objc(removeMetaObject:) @NSManaged nonisolated dynamic public func removeFromMeta(_ value: ZDChat.Meta)
+  @objc(addMeta:) @NSManaged nonisolated dynamic public func addToMeta(_ values: Foundation.NSSet)
+  @objc(removeMeta:) @NSManaged nonisolated dynamic public func removeFromMeta(_ values: Foundation.NSSet)
+}
+extension ZDChat.Messages {
+  @objc(addReactionObject:) @NSManaged nonisolated dynamic public func addToReaction(_ value: ZDChat.Reaction)
+  @objc(removeReactionObject:) @NSManaged nonisolated dynamic public func removeFromReaction(_ value: ZDChat.Reaction)
+  @objc(addReaction:) @NSManaged nonisolated dynamic public func addToReaction(_ values: Foundation.NSSet)
+  @objc(removeReaction:) @NSManaged nonisolated dynamic public func removeFromReaction(_ values: Foundation.NSSet)
+}
+extension ZDChat.Messages : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias MetaCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(Meta) nonisolated public class Meta : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias MetaCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.Meta {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.Meta>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var displayValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var value: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var message: ZDChat.Messages? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.Meta : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+public typealias PreviewMetaCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(PreviewMeta) nonisolated public class PreviewMeta : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias PreviewMetaCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.PreviewMeta {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.PreviewMeta>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var message: ZDChat.Messages? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.PreviewMeta : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+public typealias ReactionCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(Reaction) nonisolated public class Reaction : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias ReactionCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.Reaction {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.Reaction>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var reactedTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var actor: ZDChat.Actor? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var message: ZDChat.Messages? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.Reaction : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias RowsCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(Rows) nonisolated public class Rows : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias RowsCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.Rows {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.Rows>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var action: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var arrangement: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var displayValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var height: Swift.Double {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var index: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var value: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var width: Swift.Double {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var card: ZDChat.Card? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var coloumns: Foundation.NSOrderedSet? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var layouts: ZDChat.Layouts? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.Rows {
+  @objc(insertObject:inColoumnsAtIndex:) @NSManaged nonisolated dynamic public func insertIntoColoumns(_ value: ZDChat.Columns, at idx: Swift.Int)
+  @objc(removeObjectFromColoumnsAtIndex:) @NSManaged nonisolated dynamic public func removeFromColoumns(at idx: Swift.Int)
+  @objc(insertColoumns:atIndexes:) @NSManaged nonisolated dynamic public func insertIntoColoumns(_ values: [ZDChat.Columns], at indexes: Foundation.NSIndexSet)
+  @objc(removeColoumnsAtIndexes:) @NSManaged nonisolated dynamic public func removeFromColoumns(at indexes: Foundation.NSIndexSet)
+  @objc(replaceObjectInColoumnsAtIndex:withObject:) @NSManaged nonisolated dynamic public func replaceColoumns(at idx: Swift.Int, with value: ZDChat.Columns)
+  @objc(replaceColoumnsAtIndexes:withColoumns:) @NSManaged nonisolated dynamic public func replaceColoumns(at indexes: Foundation.NSIndexSet, with values: [ZDChat.Columns])
+  @objc(addColoumnsObject:) @NSManaged nonisolated dynamic public func addToColoumns(_ value: ZDChat.Columns)
+  @objc(removeColoumnsObject:) @NSManaged nonisolated dynamic public func removeFromColoumns(_ value: ZDChat.Columns)
+  @objc(addColoumns:) @NSManaged nonisolated dynamic public func addToColoumns(_ values: Foundation.NSOrderedSet)
+  @objc(removeColoumns:) @NSManaged nonisolated dynamic public func removeFromColoumns(_ values: Foundation.NSOrderedSet)
+}
+extension ZDChat.Rows : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias SessionsCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(Sessions) nonisolated public class Sessions : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias SessionsCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.Sessions {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.Sessions>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var service: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var messages: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.Sessions {
+  @objc(addMessagesObject:) @NSManaged nonisolated dynamic public func addToMessages(_ value: ZDChat.Messages)
+  @objc(removeMessagesObject:) @NSManaged nonisolated dynamic public func removeFromMessages(_ value: ZDChat.Messages)
+  @objc(addMessages:) @NSManaged nonisolated dynamic public func addToMessages(_ values: Foundation.NSSet)
+  @objc(removeMessages:) @NSManaged nonisolated dynamic public func removeFromMessages(_ values: Foundation.NSSet)
+}
+extension ZDChat.Sessions : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias SliderDisplayCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(SliderDisplay) nonisolated public class SliderDisplay : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias SliderDisplayCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.SliderDisplay {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.SliderDisplay>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var defaultValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var maxDisplayValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var maximum: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var minDisplayValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var minimum: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var step: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var userInput: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var column: ZDChat.Columns? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.SliderDisplay : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+public typealias TextMessageCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(TextMessage) nonisolated public class TextMessage : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias TextMessageCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.TextMessage {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.TextMessage>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var messageContent: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var message: ZDChat.Messages? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.TextMessage : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias ViewPropertiesCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(ViewProperties) nonisolated public class ViewProperties : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias ViewPropertiesCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.ViewProperties {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.ViewProperties>
+  @objc @NSManaged nonisolated dynamic public var height: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isSelfSizing: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var width: Swift.Double {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var buttonDisplay: ZDChat.ButtonDisplay? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var labelDisplay: ZDChat.LabelDisplay? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var webview: ZDChat.WebDisplay? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.ViewProperties : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+public typealias WebDisplayCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(WebDisplay) nonisolated public class WebDisplay : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias WebDisplayCoreDataPropertiesSet = Foundation.NSSet
+extension ZDChat.WebDisplay {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDChat.WebDisplay>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var html: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var column: ZDChat.Columns? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var properties: ZDChat.ViewProperties? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDChat.WebDisplay : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias ZDChatFoundationFrameworkSet = Foundation.NSSet
+public typealias ZDChatCoreDataFrameworkManagedObject = CoreData.NSManagedObject
+extension ZDChat.ZDChatStates : Swift.Equatable {}
+extension ZDChat.ZDChatStates : Swift.Hashable {}
+extension ZDChat.ZDChatElementVisibility : Swift.Equatable {}
+extension ZDChat.ZDChatElementVisibility : Swift.Hashable {}
+extension ZDChat.BMMoreButton : Swift.Equatable {}
+extension ZDChat.BMMoreButton : Swift.Hashable {}
+extension ZDChat.ZDChatAction : Swift.Equatable {}
+extension ZDChat.ZDChatAction : Swift.Hashable {}
+extension ZDChat.ZDChatAction : Swift.RawRepresentable {}
+extension ZDChat.LoadMoreDirection : Swift.Equatable {}
+extension ZDChat.LoadMoreDirection : Swift.Hashable {}
+extension ZDChat.ZDCChatMode : Swift.Equatable {}
+extension ZDChat.ZDCChatMode : Swift.Hashable {}
+extension ZDChat.ZDCChatMode : Swift.RawRepresentable {}
+extension ZDChat.ZDChatThemeType : Swift.Equatable {}
+extension ZDChat.ZDChatThemeType : Swift.Hashable {}
+extension ZDChat.ZDChatScreenPresentationStyle : Swift.Equatable {}
+extension ZDChat.ZDChatScreenPresentationStyle : Swift.Hashable {}
+extension ZDChat.ZDChatScreenPresentationStyle : Swift.RawRepresentable {}
+@available(*, unavailable, renamed: "Connection")
+extension ZDChat.ZDChatReachability.NetworkStatus : Swift.Hashable {}
+extension ZDChat.ZDChatReachability.Connection : Swift.Equatable {}
+extension ZDChat.ZDChatReachability.Connection : Swift.Hashable {}
+extension ZDChat.ZDMessageType : Swift.Equatable {}
+extension ZDChat.ZDMessageType : Swift.Hashable {}
+extension ZDChat.ZDMessageType : Swift.RawRepresentable {}
+extension ZDChat.ZDButtonPattern : Swift.Equatable {}
+extension ZDChat.ZDButtonPattern : Swift.Hashable {}
+extension ZDChat.ZDButtonPattern : Swift.RawRepresentable {}
+extension ZDChat.ZDInputPattern : Swift.Equatable {}
+extension ZDChat.ZDInputPattern : Swift.Hashable {}
+extension ZDChat.ZDInputPattern : Swift.RawRepresentable {}
+extension ZDChat.ZDMessageAction : Swift.Equatable {}
+extension ZDChat.ZDMessageAction : Swift.Hashable {}
+extension ZDChat.ZDMessageAction : Swift.RawRepresentable {}
+extension ZDChat.ZDColumnType : Swift.Equatable {}
+extension ZDChat.ZDColumnType : Swift.Hashable {}
+extension ZDChat.ZDColumnType : Swift.RawRepresentable {}
+extension ZDChat.ZDInputType : Swift.Equatable {}
+extension ZDChat.ZDInputType : Swift.Hashable {}
+extension ZDChat.ZDInputType : Swift.RawRepresentable {}
+extension ZDChat.ZDCMessagStatus : Swift.Equatable {}
+extension ZDChat.ZDCMessagStatus : Swift.Hashable {}
+extension ZDChat.ZDCMessagStatus : Swift.RawRepresentable {}
+extension ZDChat.ZDLayoutArrangement : Swift.Equatable {}
+extension ZDChat.ZDLayoutArrangement : Swift.Hashable {}
+extension ZDChat.ZDLayoutArrangement : Swift.RawRepresentable {}

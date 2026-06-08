@@ -1,0 +1,89 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target x86_64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZohoDeskPortalCore
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import AppKit
+import DeveloperToolsSupport
+import Foundation
+import Swift
+import SwiftUI
+import UIKit
+import ZDHelperKit
+import ZohoDeskPlatformDataBridge
+import ZohoDeskPlatformUIKit
+import ZohoDeskPortalAPIKit
+import ZohoDeskPortalCommunity
+import ZohoDeskPortalConfiguration
+@_exported import ZohoDeskPortalCore
+import ZohoDeskPortalKB
+import ZohoDeskPortalTicket
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension ZohoDeskPortalAPIKit.ZDPortal.WidgetCard {
+  @objc override dynamic public func copy() -> Any
+}
+extension ZohoDeskPortalAPIKit.ZDPortalModule : ZohoDeskPortalConfiguration.DPLocalizable {
+  public typealias StringsType = ZohoDeskPortalCore.PortalWidgetStrings.List
+}
+@_inheritsConvenienceInitializers @objc open class ZDPortalHome : ObjectiveC.NSObject {
+  @objc required override dynamic public init()
+  public static var shared: ZohoDeskPortalCore.ZDPortalHome {
+    get
+  }
+  weak public var actionDelegate: (any ZohoDeskPortalCore.ZDPHomeProviderDelegate)?
+  public var agentChat: ZohoDeskPortalConfiguration.DTHome?
+  public var gc: ZohoDeskPortalConfiguration.DTHome?
+  public var answerBot: ZohoDeskPortalConfiguration.DTHome?
+  public var bm: ZohoDeskPortalConfiguration.DTHome?
+  @objc public static func updateConfiguration(with config: ZohoDeskPortalCore.ZDPHomeConfiguration)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func show(withTitle title: Swift.String? = nil, navigationMode: ZohoDeskPortalConfiguration.ZDPNavigationMode = ZDPortalConfiguration.navigationMode)
+  #endif
+  @objc public static func openGlobalSearch(navigationMode: ZohoDeskPortalConfiguration.ZDPNavigationMode = ZDPortalConfiguration.navigationMode)
+  @objc deinit
+}
+@objc public protocol ZDPHomeProviderDelegate {
+  @objc func backButtonTapped()
+}
+@_inheritsConvenienceInitializers @objc public class ZDPHomeConfiguration : ObjectiveC.NSObject {
+  @objc public var enableCommunity: Swift.Bool
+  @objc public var enableHelpCenter: Swift.Bool
+  @objc public var enableMyTicket: Swift.Bool
+  @objc public var enableCreateTicket: Swift.Bool
+  @objc public var enableAddTopic: Swift.Bool
+  @objc public var showChat: Swift.Bool
+  @objc public var showGC: Swift.Bool
+  @objc public var showAnswerBot: Swift.Bool
+  @objc public var showBM: Swift.Bool
+  @objc public var enableHeaderLogo: Swift.Bool
+  public var orderedModules: [ZohoDeskPortalAPIKit.ZDPortalModule]?
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct PortalWidgetStrings {
+  public class Navigation : ZohoDeskPortalConfiguration.Initializeable {
+    @ZohoDeskPortalConfiguration.DPLocalizer public var cancel: Swift.String {
+      get
+    }
+    required public init()
+    @objc deinit
+  }
+  public class List : ZohoDeskPortalConfiguration.Initializeable {
+    required public init()
+    @objc deinit
+  }
+}
+extension ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic : ZohoDeskPortalConfiguration.ZPSimpleListItem {
+  public var title: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var icon: Foundation.NSAttributedString? {
+    get
+  }
+  #endif
+  public var uuid: Swift.String {
+    get
+  }
+}

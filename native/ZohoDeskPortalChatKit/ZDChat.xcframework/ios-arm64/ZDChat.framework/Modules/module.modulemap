@@ -1,0 +1,11 @@
+framework module ZDChat {
+  umbrella header "ZDChat.h"
+  export *
+
+  module * { export * }
+}
+
+module ZDChat.Swift {
+  header "ZDChat-Swift.h"
+  requires objc
+}

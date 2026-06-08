@@ -1,0 +1,335 @@
+{
+    "screens" : [
+        {
+            "uid": "ZPNativeAlert",
+            "screenType": "alert",
+            "r_uid": "zpNativeAlert",
+            "segments": [
+                {
+                    "segmentType" : "container",
+                    "configuration" : {
+                        "isNative" : true
+                    },
+                    "patterns" : [
+                        {
+                            "key" : "ZDPALERTTITLE",
+                            "itemType" : "label"
+                        },
+                        {
+                            "key" : "ZDPALERTMESSAGE",
+                            "itemType" : "label"
+                        }
+                    ]
+                },
+                {
+                    "segmentType" : "listItem",
+                    "patterns" : [
+                        {
+                            "key" : "ZDPDEFAULT",
+                            "itemType" : "label",
+                            "actions" : [
+                                {
+                                    "actionKey" : "alertTapped",
+                                    "uiActionType": "tap",
+                                    "navigationIDs": [
+                                        "goBack",
+                                        "asapPicker"
+                                    ]
+                                    
+                                }
+                            ]
+                        },
+                        {
+                            "key" : "ZDPDESTRUCTIVE",
+                            "itemType" : "label",
+                            "actions" : [
+                                {
+                                    "actionKey" : "alertTapped",
+                                    "uiActionType": "tap",
+                                    "navigationIDs": [
+                                        "goBack",
+                                        "asapPicker"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key" : "ZDPCANCEL",
+                            "itemType" : "label",
+                            "actions" : [
+                                {
+                                    "actionKey" : "alertTapped",
+                                    "uiActionType": "tap"
+                                    
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "uid": "zpNativeActionSheet",
+            "screenType": "actionSheet",
+            "r_uid": "zpNativeActionSheet",
+            "segments": [
+                {
+                    "segmentType" : "container",
+                    "configuration" : {
+                        "isNative" : true
+                    },
+                    "patterns" : [
+                        {
+                            "key" : "ZDPALERTTITLE",
+                            "itemType" : "label"
+                        },
+                        {
+                            "key" : "ZDPALERTMESSAGE",
+                            "itemType" : "label"
+                        }
+                    ]
+                },
+                {
+                    "segmentType" : "listItem",
+                    "patterns" : [
+                        {
+                            "key" : "ZDPDEFAULT",
+                            "itemType" : "label",
+                            "actions" : [
+                                {
+                                    "actionKey" : "alertTapped",
+                                    "uiActionType": "tap",
+                                    "navigationIDs": [
+                                        "goBack",
+                                        "asapPicker"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key" : "ZDPDESTRUCTIVE",
+                            "itemType" : "label",
+                            "actions" : [
+                                {
+                                    "actionKey" : "alertTapped",
+                                    "uiActionType": "tap",
+                                    "navigationIDs": [
+                                        "goBack",
+                                        "asapPicker"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key" : "ZDPCANCEL",
+                            "itemType" : "label"
+                        }
+                    ]
+                }
+            ]
+        },{
+            "uid": "ZPPickerViewActionSheet",
+            "screenType": "detail",
+            "r_uid": "ZPPickerViewActionSheet",
+            "segments": [
+                {
+                    "segmentType": "container",
+                    "style" : {
+                        "bgColor_id" : "ClearColor"
+                    },
+                    "patterns": [
+                        {
+                            "key": "baseStackHolder",
+                            "itemType": "zStack",
+                            "style" : {
+                                "bgColor_id" : "BGColorOpaced"
+                            },
+                            "itemSizeAttribute": {
+                                "padding": {
+                                    "all" : 0
+                                }
+                            },
+                            "items" : [
+                                {
+                                    "itemType" : "vStack",
+                                    "style": {
+                                        "cornerRadius": {
+                                            "all": 20
+                                        },
+                                        "bgColor_id": "BGColor"
+                                    },
+                                    
+                                    "itemSizeAttribute" : {
+                                        "position" : "center",
+                                        "width" : {
+                                            "valueType" : "stretchToParent",
+                                            "value" : 80
+                                        },"height" : {
+                                            "valueType" : "stretchToParent",
+                                            "value" : 50
+                                        }
+                                    },
+                                    "items" : [
+                                        {
+                                            "key": "pickerViewSheet",
+                                            "itemType": "pickerView",
+                                            "conditionalStyle_uid" : "datePickerStyleCell",
+                                            "style": {
+                                                "pickerStyle": {
+                                                    "pickerMode": "dateTime",
+                                                    "pickerType": "wheel"
+                                                }
+                                            },
+                                            "itemSizeAttribute": {
+                                                "padding": {
+                                                    "all": 0
+                                                }
+                                            },
+                                            
+                                            "actions": [
+                                                {
+                                                    "actionKey": "zpPickerAction",
+                                                    "uiActionType": "onTextChange"
+                                                },
+                                                {
+                                                    "actionKey": "zpPickerAction",
+                                                    "uiActionType": "onCreate"
+                                                }
+                                            ]
+                                        },{
+                                            "key": "zpLineSeparator",
+                                            "itemType": "separatorView",
+                                            "style": {
+                                                "separatorType": "line",
+                                                "bgColor_id": "SeparatorColor"
+                                            },
+                                            "itemSizeAttribute": {
+                                                "height": {
+                                                    "valueType": "staticValue",
+                                                    "value": 1
+                                                },
+                                                "padding": {
+                                                    "left": 10,
+                                                    "right" : 10
+                                                }
+                                            }
+                                        },{
+                                            "itemType" : "hStack",
+                                            "itemSizeAttribute" : {
+                                                "padding"  : {
+                                                    "all" : 10
+                                                }
+                                            },
+                                            "items" : [
+                                                {
+                                                    "key": "zpCancelButton",
+                                                    "itemType": "button",
+                                                    "style": {
+                                                        "textStyle": {
+                                                            "fontStyle_id":"sf-medium-17",
+                                                            "textColor_id": "PrimaryText",
+                                                            "alignment" : "center"
+                                                        }
+                                                    },
+                                                    "itemSizeAttribute" : {
+                                                        "width" : {
+                                                            "valueType" : "stretchToParent",
+                                                            "value" : 50
+                                                        },
+                                                        "height" : {
+                                                            "valueType" : "staticValue",
+                                                            "value" : 40
+                                                        }
+                                                    },
+                                                    "actions": [
+                                                        {
+                                                            "actionKey": "zpCancelAction",
+                                                            "uiActionType": "tap",
+                                                            "navigationIDs": [
+                                                                "goBack"
+                                                            ]
+                                                        }
+                                                    ]
+                                                },{
+                                                    "key": "zpDoneButton",
+                                                    "itemType": "button",
+                                                    "style": {
+                                                        "textStyle": {
+                                                            "fontStyle_id":"sf-medium-17",
+                                                            "textColor_id": "PrimaryText"
+                                                        }
+                                                    },
+                                                    "actions": [
+                                                        {
+                                                            "actionKey": "zpDoneAction",
+                                                            "uiActionType": "tap",
+                                                            "navigationIDs": [
+                                                                "goBack"
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                                
+                                            ]
+                                        }
+                                    ]
+                                }
+                                
+                                
+                            ]
+                           
+                        }
+                    ]
+                }
+            ]
+        }
+        
+    ],
+    "conditionalStyles" : [
+        {
+            "uid": "datePickerStyleCell",
+            "options": [
+                {
+                    "value": "DateType",
+                    "condition": "is",
+                    "style": {
+                        "pickerStyle": {
+                            "pickerMode": "date",
+                            "pickerType": "calender"
+                        }
+                    }
+                },
+                {
+                    "value": "DateTimeType",
+                    "condition": "is",
+                    "style": {
+                        "pickerStyle": {
+                            "pickerMode": "dateTime",
+                            "pickerType": "calender"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "navigations" : [
+        {
+            "navigation_uid": "actionSheet",
+            "navigationKey": "actionSheet",
+            "destination_id": "zpNativeActionSheet",
+            "transitionType": "present"
+        },{
+            "navigation_uid": "nativeAlert",
+            "navigationKey": "nativeAlert",
+            "destination_id": "ZPNativeAlert",
+            "transitionType": "present"
+        },{
+            "navigation_uid": "ZPPickerViewActionSheet",
+            "navigationKey": "ZPPickerViewActionSheet",
+            "transitionType": "present",
+            "presentationStyle" : "overfullscreen",
+            "transitionStyle": "crossDissolve",
+            "destination_id": "ZPPickerViewActionSheet"
+        }
+    ]
+}

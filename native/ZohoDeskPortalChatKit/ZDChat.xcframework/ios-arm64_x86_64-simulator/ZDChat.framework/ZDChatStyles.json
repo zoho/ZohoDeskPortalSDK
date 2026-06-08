@@ -1,0 +1,95 @@
+{
+    "conditionalStyles":[
+        {
+            "uid": "replyTextMsgStyle",
+            "options": [
+                {
+                    "value": "notRestricted",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "body",
+                            "textColor_id": "white",
+                            "maxLines": 0
+                        }
+                    }
+                },
+                {
+                    "value": "restricted",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "body",
+                            "textColor_id": "white",
+                            "maxLines": 4
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "textMsgStyle",
+            "options": [
+                {
+                    "value": "notRestricted",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "body",
+                            "textColor_id": "primaryTxtClr",
+                            "isEditable": false,
+                            "maxLines": 0
+                        }
+                    }
+                },
+                {
+                    "value": "restricted",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "body",
+                            "textColor_id": "primaryTxtClr",
+                            "isEditable": false,
+                            "maxLines": 4
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "chatSendBtnStyle",
+            "options": [
+                {
+                    "value": "disable",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "secondaryBG",
+                        "cornerRadius": {
+                            "all": 20
+                        },
+                        "tintColor_id": "iconColor",
+                        "imageStyle": {
+                            "contentType": "contain"
+                        }
+                    }
+                },
+                {
+                    "value": "enable",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "tintClr",
+                        "cornerRadius": {
+                            "all": 20
+                        },
+                        "imageStyle": {
+                            "contentType": "contain"
+                        },
+                        "textStyle": {
+                            "textColor_id": "white"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

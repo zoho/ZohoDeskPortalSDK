@@ -1,0 +1,2264 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "ZohoDeskPortalSalesIQ",
+    "printedName": "ZohoDeskPortalSalesIQ",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalSalesIQ",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Mobilisten",
+        "printedName": "Mobilisten",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalSalesIQ"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalAPIKit",
+        "printedName": "ZohoDeskPortalAPIKit",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalSalesIQ"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalConfiguration",
+        "printedName": "ZohoDeskPortalConfiguration",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalSalesIQ"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalSalesIQ",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalAPIKit",
+        "printedName": "ZohoDeskPortalAPIKit",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalSalesIQ"
+      },
+      {
+        "kind": "Import",
+        "name": "Mobilisten",
+        "printedName": "Mobilisten",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalSalesIQ"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalConfiguration",
+        "printedName": "ZohoDeskPortalConfiguration",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalSalesIQ"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDPortalSalesIQ",
+        "printedName": "ZDPortalSalesIQ",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "show",
+            "printedName": "show()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ(cm)show",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C4showyyFZ",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setCallbackOnInit",
+            "printedName": "setCallbackOnInit(onSuccess:onError:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ(cm)setCallbackOnInitOnSuccess:onError:",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C17setCallbackOnInit9onSuccess0K5Erroryyyc_yyctFZ",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "static": true,
+            "objc_name": "setCallbackOnInitOnSuccess:onError:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setGuestUser",
+            "printedName": "setGuestUser(email:displayName:phoneNumber:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ(cm)setGuestUserWithEmail:displayName:phoneNumber:",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C12setGuestUser5email11displayName11phoneNumberySS_SSSgAHtFZ",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "static": true,
+            "objc_name": "setGuestUserWithEmail:displayName:phoneNumber:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setLangage",
+            "printedName": "setLangage(identifier:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ(cm)setLangageWithIdentifier:",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C10setLangage10identifierySS_tFZ",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "static": true,
+            "objc_name": "setLangageWithIdentifier:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showLauncher",
+            "printedName": "showLauncher(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VisibilityMode",
+                "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ(cm)showLauncher:",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C12showLauncheryyAA20ZDPSalesIQComponentsC14VisibilityModeOFZ",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setChatVisibility",
+            "printedName": "setChatVisibility(_:visible:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ChatComponent",
+                "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ(cm)setChatVisibility:visible:",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C17setChatVisibility_7visibleyAA20ZDPSalesIQComponentsC0H9ComponentO_SbtFZ",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setConversationTitle",
+            "printedName": "setConversationTitle(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ(cm)setConversationTitle:",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C20setConversationTitleyySSFZ",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setOfflineMessage",
+            "printedName": "setOfflineMessage(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ(cm)setOfflineMessage:",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C17setOfflineMessageyySSFZ",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setKnowledgeBaseVisibility",
+            "printedName": "setKnowledgeBaseVisibility(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ(cm)setKnowledgeBaseVisibility:",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C26setKnowledgeBaseVisibilityyySbFZ",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enableDragToDismiss",
+            "printedName": "enableDragToDismiss(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ(cm)enableDragToDismiss:",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C19enableDragToDismissyySbFZ",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setConversationVisibility",
+            "printedName": "setConversationVisibility(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ(cm)setConversationVisibility:",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C25setConversationVisibilityyySbFZ",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showFeedbackAfterSkip",
+            "printedName": "showFeedbackAfterSkip(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ(cm)showFeedbackAfterSkip:",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C21showFeedbackAfterSkipyySbFZ",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hideQueueTime",
+            "printedName": "hideQueueTime(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ(cm)hideQueueTime:",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C13hideQueueTimeyySbFZ",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setLoggerEnabled",
+            "printedName": "setLoggerEnabled(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ(cm)setLoggerEnabled:",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C16setLoggerEnabledyySbFZ",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showOfflineMessage",
+            "printedName": "showOfflineMessage(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ(cm)showOfflineMessage:",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C18showOfflineMessageyySbFZ",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZDPortalSalesIQ",
+                "printedName": "ZohoDeskPortalSalesIQ.ZDPortalSalesIQ",
+                "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ(im)init",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0CACycfc",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "setColors",
+            "printedName": "setColors()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21ZohoDeskPortalSalesIQ08ZDPortaldE0C9setColorsyyFZ",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C9setColorsyyFZ",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPortalSalesIQ",
+        "mangledName": "$s21ZohoDeskPortalSalesIQ08ZDPortaldE0C",
+        "moduleName": "ZohoDeskPortalSalesIQ",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDPSalesIQService",
+        "printedName": "ZDPSalesIQService",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "showChat",
+            "printedName": "showChat()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21ZohoDeskPortalSalesIQ17ZDPSalesIQServiceC8showChatyyF",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ17ZDPSalesIQServiceC8showChatyyF",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "overriding": true,
+            "declAttributes": [
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isBussinessHours",
+            "printedName": "isBussinessHours()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21ZohoDeskPortalSalesIQ17ZDPSalesIQServiceC16isBussinessHoursSbyF",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ17ZDPSalesIQServiceC16isBussinessHoursSbyF",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "overriding": true,
+            "declAttributes": [
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZDPSalesIQService",
+                "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQService",
+                "usr": "s:21ZohoDeskPortalSalesIQ17ZDPSalesIQServiceC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21ZohoDeskPortalSalesIQ17ZDPSalesIQServiceCACycfc",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ17ZDPSalesIQServiceCACycfc",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:21ZohoDeskPortalSalesIQ17ZDPSalesIQServiceC",
+        "mangledName": "$s21ZohoDeskPortalSalesIQ17ZDPSalesIQServiceC",
+        "moduleName": "ZohoDeskPortalSalesIQ",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:27ZohoDeskPortalConfiguration6DTHomeC",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ZohoDeskPortalConfiguration.DTHome"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDPSalesIQComponents",
+        "printedName": "ZDPSalesIQComponents",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "VisibilityMode",
+            "printedName": "VisibilityMode",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "always",
+                "printedName": "always",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VisibilityMode",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VisibilityMode",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO6alwaysyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO6alwaysyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 0
+              },
+              {
+                "kind": "Var",
+                "name": "never",
+                "printedName": "never",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VisibilityMode",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VisibilityMode",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO5neveryA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO5neveryA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 1
+              },
+              {
+                "kind": "Var",
+                "name": "whenActiveChat",
+                "printedName": "whenActiveChat",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VisibilityMode",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VisibilityMode",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO14whenActiveChatyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO14whenActiveChatyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 2
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VisibilityMode",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO8rawValueAESgSi_tcfc",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO8rawValueAESgSi_tcfc",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO8rawValueSivp",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO8rawValueSivp",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO8rawValueSivg",
+                    "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO8rawValueSivg",
+                    "moduleName": "ZohoDeskPortalSalesIQ",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC14VisibilityModeO",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "enumRawTypeName": "Int",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "ChatComponent",
+            "printedName": "ChatComponent",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "conversationHistory",
+                "printedName": "conversationHistory",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO19conversationHistoryyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO19conversationHistoryyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 0
+              },
+              {
+                "kind": "Var",
+                "name": "preChatForm",
+                "printedName": "preChatForm",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO03preH4FormyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO03preH4FormyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 1
+              },
+              {
+                "kind": "Var",
+                "name": "visitorName",
+                "printedName": "visitorName",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO11visitorNameyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO11visitorNameyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 2
+              },
+              {
+                "kind": "Var",
+                "name": "attenderImageInChat",
+                "printedName": "attenderImageInChat",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO015attenderImageInH0yA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO015attenderImageInH0yA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 3
+              },
+              {
+                "kind": "Var",
+                "name": "attenderImageOnLauncher",
+                "printedName": "attenderImageOnLauncher",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO23attenderImageOnLauncheryA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO23attenderImageOnLauncheryA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 4
+              },
+              {
+                "kind": "Var",
+                "name": "screenshotOption",
+                "printedName": "screenshotOption",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO16screenshotOptionyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO16screenshotOptionyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 5
+              },
+              {
+                "kind": "Var",
+                "name": "photoLibrary",
+                "printedName": "photoLibrary",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO12photoLibraryyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO12photoLibraryyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 6
+              },
+              {
+                "kind": "Var",
+                "name": "mediaCapture",
+                "printedName": "mediaCapture",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO12mediaCaptureyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO12mediaCaptureyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 7
+              },
+              {
+                "kind": "Var",
+                "name": "fileSharing",
+                "printedName": "fileSharing",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO11fileSharingyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO11fileSharingyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 8
+              },
+              {
+                "kind": "Var",
+                "name": "inAppNotifications",
+                "printedName": "inAppNotifications",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO18inAppNotificationsyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO18inAppNotificationsyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 9
+              },
+              {
+                "kind": "Var",
+                "name": "emailTranscript",
+                "printedName": "emailTranscript",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO15emailTranscriptyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO15emailTranscriptyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 10
+              },
+              {
+                "kind": "Var",
+                "name": "rating",
+                "printedName": "rating",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO6ratingyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO6ratingyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 11
+              },
+              {
+                "kind": "Var",
+                "name": "feedback",
+                "printedName": "feedback",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO8feedbackyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO8feedbackyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 12
+              },
+              {
+                "kind": "Var",
+                "name": "reopen",
+                "printedName": "reopen",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO6reopenyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO6reopenyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 13
+              },
+              {
+                "kind": "Var",
+                "name": "end",
+                "printedName": "end",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO3endyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO3endyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 14
+              },
+              {
+                "kind": "Var",
+                "name": "endWhenInQueue",
+                "printedName": "endWhenInQueue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO14endWhenInQueueyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO14endWhenInQueueyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 15
+              },
+              {
+                "kind": "Var",
+                "name": "endWhenBotConnected",
+                "printedName": "endWhenBotConnected",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO19endWhenBotConnectedyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO19endWhenBotConnectedyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 16
+              },
+              {
+                "kind": "Var",
+                "name": "endWhenOperatorConnected",
+                "printedName": "endWhenOperatorConnected",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO24endWhenOperatorConnectedyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO24endWhenOperatorConnectedyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 17
+              },
+              {
+                "kind": "Var",
+                "name": "queuePosition",
+                "printedName": "queuePosition",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type) -> ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatComponent",
+                            "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO13queuePositionyA2EmF",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO13queuePositionyA2EmF",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "declAttributes": [
+                  "RawDocComment",
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 18
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatComponent",
+                        "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent",
+                        "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO8rawValueAESgSi_tcfc",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO8rawValueAESgSi_tcfc",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO8rawValueSivp",
+                "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO8rawValueSivp",
+                "moduleName": "ZohoDeskPortalSalesIQ",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO8rawValueSivg",
+                    "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO8rawValueSivg",
+                    "moduleName": "ZohoDeskPortalSalesIQ",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC13ChatComponentO",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "enumRawTypeName": "Int",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZDPSalesIQComponents",
+                "printedName": "ZohoDeskPortalSalesIQ.ZDPSalesIQComponents",
+                "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPSalesIQComponents"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPSalesIQComponents(im)init",
+            "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsCACycfc",
+            "moduleName": "ZohoDeskPortalSalesIQ",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ZohoDeskPortalSalesIQ@objc(cs)ZDPSalesIQComponents",
+        "mangledName": "$s21ZohoDeskPortalSalesIQ20ZDPSalesIQComponentsC",
+        "moduleName": "ZohoDeskPortalSalesIQ",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ChatWrapper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1412,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7057,
+      "length": 5,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7076,
+      "length": 14,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7572,
+      "length": 11,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7692,
+      "length": 11,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7809,
+      "length": 19,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7927,
+      "length": 23,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8076,
+      "length": 16,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8218,
+      "length": 12,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8328,
+      "length": 12,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8450,
+      "length": 1,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8561,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8674,
+      "length": 2,
+      "value": "11"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8759,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8848,
+      "length": 2,
+      "value": "13"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8976,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9095,
+      "length": 2,
+      "value": "15"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9255,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9416,
+      "length": 2,
+      "value": "17"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9591,
+      "length": 2,
+      "value": "18"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalChat\/ZohoDeskPortalChat\/ZohoDeskPortalSalesIQ.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9717,
+      "length": 2,
+      "value": "19"
+    }
+  ]
+}

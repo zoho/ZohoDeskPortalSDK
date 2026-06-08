@@ -1,0 +1,118 @@
+{
+    "fontStyles": [
+        {
+            "fontStyle_uid": "14_regular",
+            "font_name": "system",
+            "font_size": 14,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "largeTitle",
+            "font_name": "system",
+            "font_size": 34,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "title1",
+            "font_name": "system",
+            "font_size": 28,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "title2",
+            "font_name": "system",
+            "font_size": 22,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "title3",
+            "font_name": "system",
+            "font_size": 20,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "headline",
+            "font_name": "system",
+            "font_size": 17,
+            "font_weight": "semibold"
+        },
+        {
+            "fontStyle_uid": "body",
+            "font_name": "system",
+            "font_size": 17,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "callout",
+            "font_name": "system",
+            "font_size": 16,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "subhead",
+            "font_name": "system",
+            "font_size": 15,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "footnote",
+            "font_name": "system",
+            "font_size": 13,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "caption1",
+            "font_name": "system",
+            "font_size": 12,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "caption2",
+            "font_name": "system",
+            "font_size": 11,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "caption1Regular",
+            "font_name": "system",
+            "font_size": 12,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "subheadMedium",
+            "font_name": "system",
+            "font_size": 15,
+            "font_weight": "medium"
+        },
+        {
+            "fontStyle_uid": "bodySemiBold",
+            "font_name": "system",
+            "font_size": 17,
+            "font_weight": "semibold"
+        },
+        {
+            "fontStyle_uid": "bodyBold",
+            "font_name": "system",
+            "font_size": 17,
+            "font_weight": "bold"
+        },
+        {
+            "fontStyle_uid": "calloutMedium",
+            "font_name": "system",
+            "font_size": 16,
+            "font_weight": "medium"
+        },
+        {
+            "fontStyle_uid": "subheadMedium",
+            "font_name": "system",
+            "font_size": 15,
+            "font_weight": "medium"
+        },
+        {
+            "fontStyle_uid": "title2Bold",
+            "font_name": "system",
+            "font_size": 22,
+            "font_weight": "bold"
+        }
+    ]
+}

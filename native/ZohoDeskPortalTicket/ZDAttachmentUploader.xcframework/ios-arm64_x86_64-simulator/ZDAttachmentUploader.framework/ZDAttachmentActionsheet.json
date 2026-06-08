@@ -1,0 +1,281 @@
+{
+    "screens" : [
+        {
+            "uid": "ZPNativeAlert",
+            "screenType": "alert",
+            "r_uid": "zpNativeAlert",
+            "segments": [
+                {
+                    "segmentType" : "container",
+                    "configuration" : {
+                        "isNative" : true
+                    },
+                    "patterns" : [
+                        {
+                            "key" : "ZDPALERTTITLE",
+                            "itemType" : "label"
+                        },
+                        {
+                            "key" : "ZDPALERTMESSAGE",
+                            "itemType" : "label"
+                        }
+                    ]
+                },
+                {
+                    "segmentType" : "listItem",
+                    "patterns" : [
+                        {
+                            "key" : "ZDPDEFAULT",
+                            "itemType" : "label",
+                            "actions" : [
+                                {
+                                    "actionKey" : "alertTapped",
+                                    "uiActionType": "tap",
+                                    "navigationIDs": [
+                                        "goBack",
+                                        "asapPicker"
+                                    ]
+                                    
+                                }
+                            ]
+                        },
+                        {
+                            "key" : "ZDPDESTRUCTIVE",
+                            "itemType" : "label",
+                            "actions" : [
+                                {
+                                    "actionKey" : "alertTapped",
+                                    "uiActionType": "tap",
+                                    "navigationIDs": [
+                                        "goBack",
+                                        "asapPicker"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key" : "ZDPCANCEL",
+                            "itemType" : "label",
+                            "actions" : [
+                                {
+                                    "actionKey" : "alertTapped",
+                                    "uiActionType": "tap"
+                                    
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "uid": "zpNativeActionSheet",
+            "screenType": "actionSheet",
+            "r_uid": "zpNativeActionSheet",
+            "segments": [
+                {
+                    "segmentType" : "container",
+                    "configuration" : {
+                        "isNative" : true
+                    },
+                    "patterns" : [
+                        {
+                            "key" : "ZDPALERTTITLE",
+                            "itemType" : "label"
+                        },
+                        {
+                            "key" : "ZDPALERTMESSAGE",
+                            "itemType" : "label"
+                        }
+                    ]
+                },
+                {
+                    "segmentType" : "listItem",
+                    "patterns" : [
+                        {
+                            "key" : "ZDPDEFAULT",
+                            "itemType" : "label",
+                            "actions" : [
+                                {
+                                    "actionKey" : "alertTapped",
+                                    "uiActionType": "tap",
+                                    "navigationIDs": [
+                                        "goBack",
+                                        "asapPicker"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key" : "ZDPDESTRUCTIVE",
+                            "itemType" : "label",
+                            "actions" : [
+                                {
+                                    "actionKey" : "alertTapped",
+                                    "uiActionType": "tap",
+                                    "navigationIDs": [
+                                        "goBack",
+                                        "asapPicker"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key" : "ZDPCANCEL",
+                            "itemType" : "label"
+                        }
+                    ]
+                }
+            ]
+        },{
+            "uid": "ZDConfirmActionSheet",
+            "screenType": "list",
+            "r_uid": "ZDConfirmActionSheet",
+            "configuration" : {
+                "detentState" : "auto"
+            },
+            "segments": [
+                {
+                    "configuration": {
+                        "isNative": false
+                    },
+                    "segmentType": "topNavigationBar",
+                    "patterns" : [
+                        {
+                            "itemType" : "vStack",
+                            "items" : [
+                                {
+                                    "key" : "notchView",
+                                    "itemType" : "vStack",
+                                    "items" : [
+                                        
+                                        {
+                                            "itemType" : "zStack",
+                                            "items" : [
+                                                {
+                                                    "itemType" : "vStack",
+                                                    "style" : {
+                                                        "bgColor_id" : "WidgetColor",
+                                                        "cornerRadius": {
+                                                            "all": 2.5
+                                                        }
+                                                    },
+                                                    "itemSizeAttribute" : {
+                                                        "position" : "center",
+                                                        "padding" : {
+                                                            "top" : 5,
+                                                            "bottom" : 5
+                                                        },
+                                                        "width" : {
+                                                            "valueType" : "staticValue",
+                                                            "value" : 30
+                                                        },
+                                                        "height" : {
+                                                            "valueType" : "staticValue",
+                                                            "value" : 5
+                                                        }
+                                                    }
+                                                    
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "containerView",
+                                    "itemType" : "vStack",
+                                    "style": {
+                                        "bgColor_id": "WidgetColor",
+                                        "cornerRadius" : {
+                                            "topLeft" : 14,
+                                            "topRight" : 14
+                                        }
+                                    },
+                                    "items" : [
+                                        {
+                                            "key": "zpScreenTitle",
+                                            "itemType": "label",
+                                            "itemSizeAttribute" : {
+                                                "padding" : {
+                                                    "top" :  32,
+                                                    "bottom" :  8,
+                                                    "right" : 8,
+                                                    "left" : 8
+                                                }
+                                            },
+                                            "style" : {
+                                                "textStyle": {
+                                                    "fontStyle_id": "sf-semibold-16",
+                                                    "textColor_id": "PrimaryText",
+                                                    "alignment":"center"
+                                                }
+                                            }
+                                        },{
+                                            "key": "zpScreenDescription",
+                                            "itemType": "label",
+                                            "itemSizeAttribute" : {
+                                                "padding" : {
+                                                    "top" :  8,
+                                                    "bottom" :  16,
+                                                    "right" : 8,
+                                                    "left" : 8
+                                                }
+                                            },
+                                            "style" : {
+                                                "textStyle": {
+                                                    "fontStyle_id": "sf-regular-14",
+                                                    "textColor_id": "PrimaryText",
+                                                    "alignment":"center"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                                
+                            ]
+                        }
+                        
+                    ]
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id":"ClearColor"
+                    }
+                },
+                {
+                    "segmentType" : "listItem",
+                    "style": {
+                        "bgColor_id":"WidgetColor"
+                    }
+                },
+                {
+                    "segmentType": "sectionFooter",
+                    "includePattern_id" : "bottomActionView"
+                }
+            ]
+        }
+    ],
+    
+    
+    
+    "navigations" : [
+        {
+            "navigation_uid": "actionSheet",
+            "navigationKey": "actionSheet",
+            "destination_id": "zpNativeActionSheet",
+            "transitionType": "present"
+        },{
+            "navigation_uid": "ZDConfirmActionSheet",
+            "navigationKey": "ZDConfirmActionSheet",
+            "destination_id": "ZDConfirmActionSheet",
+            "presentationStyle" : "actionSheet",
+            "transitionType": "present"
+        },{
+            "navigation_uid": "nativeAlert",
+            "navigationKey": "nativeAlert",
+            "destination_id": "ZPNativeAlert",
+            "transitionType": "present"
+        }
+    ]
+}

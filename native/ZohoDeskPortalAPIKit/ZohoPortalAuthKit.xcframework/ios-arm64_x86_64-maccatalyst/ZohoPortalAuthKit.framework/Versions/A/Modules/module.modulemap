@@ -1,0 +1,6 @@
+framework module ZohoPortalAuthKit {
+  umbrella header "ZohoPortalAuthKit.h"
+  export *
+
+  module * { export * }
+}

@@ -1,0 +1,128 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ZIAMCryptKit
+import CommonCrypto
+import CryptoKit
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct ZIAMCryptConstants {
+  public static let k_version: Swift.String
+  public static let ziamAgentHeader: Swift.String
+  public static let k_serverPublicKey: Swift.String
+  public static let k_clientIDExpiry: Swift.String
+  public static let k_errorDomain: Swift.String
+  public static let k_handshakeQueue: Swift.String
+}
+final public class ZIAMRSAUtil {
+  final public let keyType: CoreFoundation.CFString
+  final public let keySizeInBits: Swift.AnyObject
+  final public let publicTag: Foundation.Data?
+  final public let privateTag: Foundation.Data?
+  final public let serverPublicTag: Foundation.Data?
+  public init(publicTag: Swift.String, privateTag: Swift.String, serverPublicTag: Swift.String, keyType: CoreFoundation.CFString = kSecAttrKeyTypeRSA, keySizeInBits: Swift.Int = 2048)
+  @objc deinit
+}
+extension ZIAMCryptKit.ZIAMRSAUtil {
+  @discardableResult
+  final public func generateKeyPair() -> ZIAMCryptKit.ZIAMCryptError?
+  @discardableResult
+  final public func saveServerKeyToKeychain(_ keyString: Swift.String) -> Darwin.OSStatus
+  final public func getServerPublicKeyData() -> Foundation.Data?
+  final public func getServerPublicKey() -> Foundation.Data?
+}
+extension ZIAMCryptKit.ZIAMRSAUtil {
+  final public func deleteOldKeys()
+}
+extension ZIAMCryptKit.ZIAMRSAUtil {
+  final public func getPublicKeyForServer() -> Swift.String?
+  final public func getPublicKeyForServer(_ publicSecKey: Security.SecKey?) -> Swift.String
+  final public func getPublicKeyForServer(_ publicKeyData: Foundation.Data?) -> Swift.String
+  final public func getPrivateKeyFrom(data: Foundation.Data) -> Security.SecKey?
+  final public func getPublicKeyFrom(data: Foundation.Data) -> Security.SecKey?
+}
+extension ZIAMCryptKit.ZIAMRSAUtil {
+  final public func getPrivateKeyRef() -> Security.SecKey?
+  final public func getPublicKeyRef() -> Security.SecKey?
+}
+final public class ZIAMCrypt {
+  public init(publickeyTag: Swift.String, privatekeyTag: Swift.String, serverPublickeyTag: Swift.String, rsaKeySize: Swift.Int = 2048)
+  public static func getConfig(publickeyTag: Swift.String, privatekeyTag: Swift.String, serverPublickeyTag: Swift.String, rsaKeySize: Swift.Int = 2048) -> ZIAMCryptKit.ZIAMCrypt
+  @objc deinit
+}
+extension ZIAMCryptKit.ZIAMCrypt {
+  final public func checkExpiryAndGetEncryptedPayload(_ dict: [Swift.String : Foundation.Data], baseURL: Swift.String, scope: Swift.String = "org", headers: [Swift.String : Swift.String]? = nil) async -> (handshakeResponse: ZIAMCryptKit.ZIAMCryptAPIResponse?, encryptedPayload: ZIAMCryptKit.ZIAMEncrpytResult?)
+  final public func checkExpiryAndGetEncryptedPayload(_ dict: [Swift.String : Foundation.Data], baseURL: Swift.String, scope: Swift.String = "org", headers: [Swift.String : Swift.String]? = nil, completion: @escaping ((_ handshakeResponse: ZIAMCryptKit.ZIAMCryptAPIResponse?, _ encryptedPayload: ZIAMCryptKit.ZIAMEncrpytResult?) -> Swift.Void))
+  final public func getDecryptedPayload(_ headerValue: Swift.String, payload: Foundation.Data) -> ZIAMCryptKit.ZIAMDecrpytResult
+  final public func deleteStoredKeyPair()
+}
+public struct ZIAMCryptUtils {
+  public static func getCurrentTimeMillis() -> Swift.Int64
+  public static var appVersion: Swift.String {
+    get
+  }
+  public static var appBuild: Swift.String {
+    get
+  }
+  public static var appBundleID: Swift.String {
+    get
+  }
+  public static var deviceName: Swift.String {
+    get
+  }
+}
+public enum ZIAMCryptDictKeys : Swift.String {
+  case queryparam
+  case paylaod
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension Swift.Dictionary where Key == Swift.String {
+  public subscript(key: ZIAMCryptKit.ZIAMCryptDictKeys) -> Value? {
+    get
+  }
+  public subscript<Enum>(key: Enum) -> Value? where Enum : Swift.RawRepresentable, Enum.RawValue == Swift.String {
+    get
+  }
+}
+extension Swift.String {
+  public func getEncodedString() -> Swift.String?
+}
+public typealias ZIAMCryptAPIResponse = Swift.Result<(json: Swift.Dictionary<Swift.String, Any>, response: Foundation.URLResponse), ZIAMCryptKit.ZIAMCryptError>
+public typealias ZIAMEncrpytResult = Swift.Result<ZIAMCryptKit.ZPayloadModel, ZIAMCryptKit.ZIAMCryptError>
+public typealias ZIAMDecrpytResult = Swift.Result<Foundation.Data, ZIAMCryptKit.ZIAMCryptError>
+public struct ZPayloadModel {
+  public let content: [Swift.String : Swift.String?]?
+  public let header: Swift.String
+  public init(content: [Swift.String : Swift.String?], header: Swift.String)
+}
+public struct ZIAMCryptError : Swift.Error {
+  public var domain: Swift.String
+  public var code: ZIAMCryptKit.ZIAMCryptErrorStatus
+  public var errorInfo: [Swift.String : Any]?
+  public init(domain: Swift.String = ZIAMCryptConstants.k_errorDomain, code: ZIAMCryptKit.ZIAMCryptErrorStatus, errorInfo: [Swift.String : Any]?)
+  public init(domain: Swift.String = ZIAMCryptConstants.k_errorDomain, code: ZIAMCryptKit.ZIAMCryptErrorStatus, desc: Swift.String?)
+}
+public enum ZIAMCryptErrorStatus {
+  case keychainError
+  case oldEncryptionKeyNotExpired
+  case apiError
+  case encryptionError
+  case decryptionError
+  public static func == (a: ZIAMCryptKit.ZIAMCryptErrorStatus, b: ZIAMCryptKit.ZIAMCryptErrorStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ZIAMCryptKit.ZIAMCryptDictKeys : Swift.Equatable {}
+extension ZIAMCryptKit.ZIAMCryptDictKeys : Swift.Hashable {}
+extension ZIAMCryptKit.ZIAMCryptDictKeys : Swift.RawRepresentable {}
+extension ZIAMCryptKit.ZIAMCryptErrorStatus : Swift.Equatable {}
+extension ZIAMCryptKit.ZIAMCryptErrorStatus : Swift.Hashable {}

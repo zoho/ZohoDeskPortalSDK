@@ -1,0 +1,4 @@
+framework module ZohoDeskPortalSalesIQ {
+  header "ZohoDeskPortalSalesIQ-Swift.h"
+  requires objc
+}

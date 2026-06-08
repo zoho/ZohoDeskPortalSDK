@@ -1,0 +1,234 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZohoDeskPlatformUIKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import Combine
+import CoreData
+import CoreGraphics
+import DeveloperToolsSupport
+import Foundation
+import MapKit
+import MobileCoreServices
+import Photos
+import PhotosUI
+import QuickLook
+import SafariServices
+import Swift
+import SwiftUI
+import UIKit.UIGestureRecognizerSubclass
+import UIKit
+import WebKit
+import ZDMediaPickerSDK
+import ZohoDeskPlatformDataBridge
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency open class ZDPlatformView : UIKit.UIView, ZohoDeskPlatformDataBridge.ZDPView, ZohoDeskPlatformDataBridge.ZDPlatformConfiguration {
+  @_Concurrency.MainActor @preconcurrency public var sessionIdentifier: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency open var identifier: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency open var ZPThemeType: ZohoDeskPlatformDataBridge.ZPBuilderThemeType {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency open var ZPEnableLog: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency open var ZPEnableSystemAccessibility: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency open var ZPLocale: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency open var ZPPrivacyOptions: ZohoDeskPlatformDataBridge.ZPPrivacySettings {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency open var ZPOverrideNavigationPopGesture: Swift.Bool {
+    get
+  }
+  @available(*, unavailable, message: "No need to override this method in child classes!")
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init(coder: Foundation.NSCoder)
+  @objc deinit
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public init(with sessionId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, unavailable, message: "Use willMove(toView: UIView?) method!")
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func willMove(toSuperview newSuperview: UIKit.UIView?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency open func willMove(toView view: UIKit.UIView?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public init(fileUrl: Foundation.URL, styleUrl: Foundation.URL? = nil)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public var accessItem: ZohoDeskPlatformDataBridge.ZPAccessor?
+  @_Concurrency.MainActor @preconcurrency open func initialize(onCompletion: (ZohoDeskPlatformDataBridge.ZPInitializeProgress) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency open func render(segment ofType: ZohoDeskPlatformDataBridge.ZPRenderSegmentType) -> ZohoDeskPlatformDataBridge.ZPRender
+  @_Concurrency.MainActor @preconcurrency open func prepareViewData(using dataItem: ZohoDeskPlatformDataBridge.ZPDataItem)
+  @_Concurrency.MainActor @preconcurrency open func doPerform(with actionKey: Swift.String, using action: ZohoDeskPlatformDataBridge.ZPActionModel)
+}
+public class ZDPBuilderSDK {
+  public var sessionIdentifier: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(includeBinder binder: (any ZohoDeskPlatformDataBridge.ZDBinderProtocol)?)
+  #endif
+  public init(withProvider binder: any ZohoDeskPlatformDataBridge.ZDBinderProtocol) async
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func prepareController(for screenId: Swift.String, _ onCompletion: ((UIKit.UIViewController) -> ())?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getController(for screenId: Swift.String) -> UIKit.UIViewController?
+  #endif
+  @objc deinit
+}
+extension ZohoDeskPlatformUIKit.ZDPBuilderSDK {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getTopControllerBinder() -> ZohoDeskPlatformDataBridge.ZBCoreBridgeBinderProtocols<Any>?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func overrideColors(colorId: Swift.String, darkColor: UIKit.UIColor? = nil, lightColor: UIKit.UIColor? = nil)
+  #endif
+  public func overrideColor(colorId: Swift.String, value: UIKit.UIColor, theme: ZohoDeskPlatformDataBridge.ZPBuilderThemeType)
+  public func overrideJsonValues(screenId screen: Swift.String = "", on segment: ZohoDeskPlatformDataBridge.ZPUISegment = .default, delegate: any ZohoDeskPlatformDataBridge.ZDPJsonOverridingDelegate)
+}
+@objc public protocol ZPRefreshDelegate {
+  @objc func refreshView()
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency final public class ZDPHeadlessElement : UIKit.UIView {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, unavailable, message: "Use willMove(toView: UIView?) method!")
+  @_Concurrency.MainActor @preconcurrency @objc override final public func willMove(toSuperview newSuperview: UIKit.UIView?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency final public func willMove(toView view: UIKit.UIView?)
+  #endif
+  @_Concurrency.MainActor @preconcurrency final public func prepare()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func layoutSubviews()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  #endif
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
+}
+extension QuartzCore.CALayer {
+  public func applyOnSublayers<T>(ofType: T.Type, closure: (T) -> ()) where T : QuartzCore.CALayer
+}
+@objc @_hasMissingDesignatedInitializers open class ZPXMLSVGParser : Foundation.XMLParser, Foundation.XMLParserDelegate {
+  open var containerLayer: ZohoDeskPlatformUIKit.ZPSVGLayer
+  #if compiler(>=5.3) && $NonescapableTypes
+  required public init(SVGData: Foundation.Data, supportedElements: ZohoDeskPlatformUIKit.ZPSVGParserSupportedElements? = ZPSVGParserSupportedElements.allSupportedElements, completion: ((ZohoDeskPlatformUIKit.ZPSVGLayer) -> ())? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc open func parser(_ parser: Foundation.XMLParser, didStartElement elementName: Swift.String, namespaceURI: Swift.String?, qualifiedName qName: Swift.String?, attributes attributeDict: [Swift.String : Swift.String])
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc open func parser(_ parser: Foundation.XMLParser, didEndElement elementName: Swift.String, namespaceURI: Swift.String?, qualifiedName qName: Swift.String?)
+  #endif
+  @objc public func parserDidEndDocument(_ parser: Foundation.XMLParser)
+  @objc public func parser(_ parser: Foundation.XMLParser, parseErrorOccurred parseError: any Swift.Error)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class ZPSVGCache {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class ZPSVGLayer : QuartzCore.CAShapeLayer {
+  @objc override dynamic public init()
+  @objc override dynamic public init(layer: Any)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
+  @objc deinit
+}
+extension ZohoDeskPlatformUIKit.ZPSVGLayer {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override dynamic open var fillColor: CoreGraphics.CGColor? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZohoDeskPlatformUIKit.ZPSVGLayer {
+  @objc override dynamic open var lineWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override dynamic open var strokeColor: CoreGraphics.CGColor? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+public struct ZPSVGParserSupportedElements {
+  public static var allSupportedElements: ZohoDeskPlatformUIKit.ZPSVGParserSupportedElements {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class ZPSVGView : UIKit.UIView {
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var ZPSVGName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
+  @objc deinit
+}
+#if compiler(>=5.3) && $NonescapableTypes
+extension Swift.Optional {
+  public func safeUnwrap(to object: inout Wrapped?)
+  public func safeUnwrap(to object: inout Wrapped)
+  public var isNil: Swift.Bool {
+    get
+  }
+}
+#endif
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class ZDPHeadlessComponent : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc override final public func layoutSubviews()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, unavailable, message: "Use willMove(toView: UIView?) method!")
+  @_Concurrency.MainActor @preconcurrency @objc override final public func willMove(toSuperview newSuperview: UIKit.UIView?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency final public func willMove(toView view: UIKit.UIView?)
+  #endif
+  @_Concurrency.MainActor @preconcurrency final public func prepare()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override final public func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+  #endif
+  @objc deinit
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  #endif
+}
+extension ZohoDeskPlatformUIKit.ZDPBuilderSDK {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func prepareView(fromScreen screenId: Swift.String, segment segmentType: ZohoDeskPlatformDataBridge.ZPScreenSegmentType, usingController controller: UIKit.UIViewController? = nil, _ onCompletion: ((ZohoDeskPlatformUIKit.ZDPHeadlessComponent) -> ())?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func prepareView(fromScreen screenId: Swift.String, on segmentType: ZohoDeskPlatformDataBridge.ZPScreenSegmentType, itemKey key: Swift.String, usingController controller: UIKit.UIViewController? = nil, _ onCompletion: ((ZohoDeskPlatformUIKit.ZDPHeadlessComponent) -> ())?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getView(fromScreen screenId: Swift.String, segment segmentType: ZohoDeskPlatformDataBridge.ZPScreenSegmentType, usingController controller: UIKit.UIViewController? = nil) -> ZohoDeskPlatformUIKit.ZDPHeadlessComponent?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getView(fromScreen screenId: Swift.String, on segmentType: ZohoDeskPlatformDataBridge.ZPScreenSegmentType, itemKey key: Swift.String, usingController controller: UIKit.UIViewController? = nil) -> ZohoDeskPlatformUIKit.ZDPHeadlessComponent?
+  #endif
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class ZDPContainerStackView : UIKit.UIStackView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+  #endif
+  @objc deinit
+}

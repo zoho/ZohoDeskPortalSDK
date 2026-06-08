@@ -1,0 +1,1463 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZohoDeskPortalTicket
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import CoreData
+import DeveloperToolsSupport
+import Foundation
+import Swift
+import SwiftUI
+import UIKit
+import ZDAttachmentUploader
+import ZDHelperKit
+import ZDLayoutKit
+import ZohoDeskPlatformDataBridge
+import ZohoDeskPlatformUIKit
+import ZohoDeskPortalAPIKit
+import ZohoDeskPortalConfiguration
+@_exported import ZohoDeskPortalTicket
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc public class ZDCustomizedTicketField : ObjectiveC.NSObject, ZDLayoutKit.ZDCCustomizedTicketField {
+  public var fieldName: Swift.String?
+  public var value: Swift.String?
+  public var isEditable: Swift.Bool?
+  @objc required public init(fieldName: Swift.String, value: Swift.String, isEditable: Swift.Bool)
+  @objc deinit
+}
+@objc public class ZDCustomizedTicketForm : ObjectiveC.NSObject, ZDLayoutKit.ZDCCustomizedTicketForm {
+  public var departmentId: Swift.String
+  public var layoutId: Swift.String
+  public var customizedTicketFields: [any ZDLayoutKit.ZDCCustomizedTicketField]?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var fields: [ZohoDeskPortalTicket.ZDCustomizedTicketField]? {
+    get
+  }
+  #endif
+  @objc required public init(departmentId: Swift.String, layoutId: Swift.String, fields: [ZohoDeskPortalTicket.ZDCustomizedTicketField])
+  @objc deinit
+}
+@objc public class ZDVisibleTicketField : ObjectiveC.NSObject, ZDLayoutKit.ZDCVisibleTicketField {
+  public var departmentId: Swift.String
+  public var layoutId: Swift.String
+  public var fieldNames: [Swift.String]
+  @objc required public init(departmentId: Swift.String, layoutId: Swift.String, fieldNames: [Swift.String])
+  @objc deinit
+}
+public class TicketSystemField : ZohoDeskPortalConfiguration.Initializeable {
+  required public init()
+  @objc deinit
+}
+public protocol ZDSubmitTicketManagerProtocol : ZDLayoutKit.ZDTicketCreationDataSource, ZDLayoutKit.ZDTicketCreationNetworkCalls {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var departmentID: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var layoutID: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var ticket: (any ZDLayoutKit.ZDCTicket)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var ticketFields: [ZohoDeskPortalAPIKit.ZDPTicket.TicketField]? { get set }
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZDPortal.ZDPAttachment : @retroactive ZDAttachmentUploader.ZDAttachmentModal {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var downloadAttachmentURL: Swift.String? {
+    get
+  }
+  #endif
+  public var attachmentSize: Swift.String {
+    get
+  }
+}
+extension Swift.Array where Element == ZohoDeskPortalAPIKit.ZDPortal.SearchResult {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var articles: [ZohoDeskPortalAPIKit.ZDPArticle]? {
+    get
+  }
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZDPortal.ZDPAccount : ZohoDeskPortalConfiguration.ZPPickerItem {
+  public var displayString: Swift.String {
+    get
+  }
+  public var UUID: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class ZDPTicketConfiguration : ObjectiveC.NSObject {
+  @objc public static var configure: ZohoDeskPortalTicket.ZDPTicketConfiguration
+  @objc public var isReplyAllowed: Swift.Bool
+  @objc public var isCommentAllowed: Swift.Bool
+  @objc public var isTicketUpdateAllowed: Swift.Bool
+  @objc public var isCommentEditAllowed: Swift.Bool
+  @objc public var isCommentDeleteAllowed: Swift.Bool
+  @objc public var isAddTicketAllowed: Swift.Bool
+  @objc public var isCustomerHappinessThreadAllowed: Swift.Bool
+  @objc public var isTicketChannelAllowed: Swift.Bool
+  @objc public var isTicketPropertiesAllowed: Swift.Bool
+  @objc public var disableTicketDetailSearch: Swift.Bool
+  @objc public var isTicketFilterAllowed: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortalSubmitTicket : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getCallbackOnCreateTicket(completion: @escaping (ZohoDeskPortalAPIKit.ZDPTicket) -> (), onError: @escaping ((any Swift.Error)?) -> ())
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func show(withTitle title: Swift.String? = nil, showSideMenu: Swift.Bool = true)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func showForm(withDepartment departmentID: Swift.String, layoutID: Swift.String, title: Swift.String? = nil)
+  #endif
+  @objc public static func setFieldsListTobeShown(fields: [ZohoDeskPortalTicket.ZDVisibleTicketField])
+  @objc public static func preFillTicketFields(forForms forms: [ZohoDeskPortalTicket.ZDCustomizedTicketForm])
+  @objc public static func setDefault(departmentID: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getAddTicketBinder() -> ZohoDeskPlatformDataBridge.ZBCoreBridgeBinderProtocols<Any>?
+  #endif
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortalTicket : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func show(withTitle title: Swift.String? = nil, navigationMode: ZohoDeskPortalConfiguration.ZDPNavigationMode = ZDPortalConfiguration.navigationMode)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getMyTicketBinder() -> ZohoDeskPlatformDataBridge.ZBCoreBridgeBinderProtocols<Any>?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getTicketListBinder(status: ZohoDeskPortalTicket.ZDPTicketStatus = .all, limit: Swift.Int = ZDPListAPILimits.five, tickets: [ZohoDeskPortalAPIKit.ZDPTicket]?) -> ZohoDeskPlatformDataBridge.ZBCoreBridgeBinderProtocols<Any>?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func show(withTitle title: Swift.String? = nil, status: ZohoDeskPortalTicket.ZDPTicketStatus = .all, navigationMode: ZohoDeskPortalConfiguration.ZDPNavigationMode = ZDPortalConfiguration.navigationMode)
+  #endif
+  @objc public static func showTicketDetail(forId ticketId: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum ZDPTicketStatus : Swift.Int {
+  case open
+  case closed
+  case onhold
+  case all
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol SecondaryContactDelegate : AnyObject {
+  func didChanged()
+  func didWarningChanged(with text: Swift.String)
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.FormLayout : @retroactive ZDLayoutKit.ZDTCLayout {
+  public var isStandard: Swift.Bool {
+    get
+    set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var moduleName: Swift.String? {
+    get
+    set
+  }
+  #endif
+  public var layoutId: Swift.String {
+    get
+    set
+  }
+  public var isDefault: Swift.Bool {
+    get
+    set
+  }
+  public var name: Swift.String {
+    get
+    set
+  }
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.TicketForm : @retroactive ZDLayoutKit.ZDTCForms {
+  public var layoutId: Swift.String {
+    get
+    set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var formSections: [any ZDLayoutKit.ZDTCSections]? {
+    get
+    set
+  }
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.FormSection : @retroactive ZDLayoutKit.ZDTCSections {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var ticketFields: [any ZDLayoutKit.ZDTCTicketField]? {
+    get
+    set
+  }
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.TicketField : @retroactive ZDLayoutKit.ZDTCTicketField {
+  final public var isRemovable: Swift.Bool {
+    get
+    set
+  }
+  final public var isSystemMandatory: Swift.Bool {
+    get
+    set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public var statusMaping: [any ZDLayoutKit.ZDTCStatusMapping]? {
+    get
+    set
+  }
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.StatusMap : @retroactive ZDLayoutKit.ZDTCStatusMapping {
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.LayoutRule : @retroactive ZDLayoutKit.ZDTCLayoutRules {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcFieldConditions: [any ZDLayoutKit.ZDTCLayoutCondition]? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcModifiedTime: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcFieldName: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcCreatedBy: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcName: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcDescription: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcCreatedTime: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcModifiedBy: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcId: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcLayoutID: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcStatus: Swift.String? {
+    get
+  }
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.LayoutFD : @retroactive ZDLayoutKit.ZDTCLayoutCondition {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var fcname: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var fcpattern: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var fieldConditions: [any ZDLayoutKit.ZDTCRuleCondition]? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var fieldActions: (any ZDLayoutKit.ZDTCLayoutActions)? {
+    get
+  }
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.RuleCondition : @retroactive ZDLayoutKit.ZDTCRuleCondition {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcDisplayValue: [Swift.String]? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcCondition: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcFieldName: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcValue: [Swift.String]? {
+    get
+  }
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.LayoutActions : @retroactive ZDLayoutKit.ZDTCLayoutActions {
+  public var sectionsToShow: [Swift.String] {
+    get
+  }
+  public var fieldsToShow: [Swift.String] {
+    get
+  }
+  public var mandatoryFields: [Swift.String] {
+    get
+  }
+}
+extension ZohoDeskPortalAPIKit.ZDPortal.ZDPProduct : @retroactive ZDLayoutKit.ZDTCProduct {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var unitPrice: Swift.String? {
+    get
+    set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var departmentIds: [Swift.String]? {
+    get
+    set
+  }
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.Template : @retroactive ZDLayoutKit.ZDTCTemplate {
+  public var templateName: Swift.String {
+    get
+    set
+  }
+  public var templateId: Swift.String {
+    get
+    set
+  }
+}
+extension ZohoDeskPortalAPIKit.ZDPortal.ZDPAccount : @retroactive ZDLayoutKit.ZDTCAccounts {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var phone: Swift.String? {
+    get
+    set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var email: Swift.String? {
+    get
+    set
+  }
+  #endif
+  public var accountName: Swift.String {
+    get
+    set
+  }
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.ValidationRule : @retroactive ZDLayoutKit.ZDTCValidationRules {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcFieldConditions: [any ZDLayoutKit.ZDTCValidationCondition]? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcModifiedTime: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcFieldName: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcCreatedBy: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcCreatedTime: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcModifiedBy: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcId: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcLayoutID: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcStatus: Swift.String? {
+    get
+  }
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.ValidationFD : @retroactive ZDLayoutKit.ZDTCValidationCondition {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var fcname: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var fcpattern: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var fieldConditions: [any ZDLayoutKit.ZDTCRuleCondition]? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var fieldActions: (any ZDLayoutKit.ZDTCValidationActions)? {
+    get
+  }
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.ValidationActions : @retroactive ZDLayoutKit.ZDTCValidationActions {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcAlert: Swift.String? {
+    get
+  }
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZDPArticle : @retroactive ZDLayoutKit.ZDTCArticle {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var articleCategory: (any ZDLayoutKit.ZDTCArticleCategory)? {
+    get
+    set
+  }
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZDPArticleCategory : @retroactive ZDLayoutKit.ZDTCArticleCategory {
+}
+extension ZohoDeskPortalAPIKit.ZDPortal.ZDPContact : @retroactive ZDLayoutKit.ZDTCContacts {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var accountCount: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcAccount: (any ZDLayoutKit.ZDTCAccounts)? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var phone: Swift.String? {
+    get
+    set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var mobile: Swift.String? {
+    get
+    set
+  }
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket : @retroactive ZDLayoutKit.ZDCTicket {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var tcAccount: (any ZDLayoutKit.ZDTCAccounts)? {
+    get
+  }
+  #endif
+  public var onHoldTime: Swift.String {
+    get
+    set(newValue)
+  }
+  public var isBluePrintApplied: Swift.Bool {
+    get
+  }
+  public var secondaryContactsDetail: [ZDLayoutKit.ZDTCAgent] {
+    get
+  }
+  public var customerResponseTime: Swift.String {
+    get
+    set(newValue)
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var productId: Swift.String? {
+    get
+    set(newValue)
+  }
+  #endif
+  public var contactId: Swift.String {
+    get
+    set(newValue)
+  }
+  public var departmentId: Swift.String {
+    get
+    set(newValue)
+  }
+  public var isRead: Swift.Bool {
+    get
+    set(newValue)
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var sentiment: Swift.String? {
+    get
+    set(newValue)
+  }
+  #endif
+  public var isArchived: Swift.Bool {
+    get
+    set(newValue)
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var assigneeId: Swift.String? {
+    get
+    set(newValue)
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var teamId: Swift.String? {
+    get
+    set(newValue)
+  }
+  #endif
+  public var webUrl: Swift.String {
+    get
+    set(newValue)
+  }
+  public var orgId: Swift.String {
+    get
+    set(newValue)
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var ticketDescription: Swift.String? {
+    get
+    set(newValue)
+  }
+  #endif
+  public var layoutId: Swift.String {
+    get
+    set(newValue)
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var ticketContact: (any ZDLayoutKit.ZDTCContacts)? {
+    get
+    set(newValue)
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var ticketProduct: (any ZDLayoutKit.ZDTCProduct)? {
+    get
+    set(newValue)
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var ticketAssignee: (any ZDLayoutKit.ZDCAssignee)? {
+    get
+    set(newValue)
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var ticketTeam: (any ZDLayoutKit.ZDCAssignee)? {
+    get
+    set(newValue)
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var ticketCustomFields: [Swift.String : Swift.AnyObject]? {
+    get
+    set(newValue)
+  }
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZDPortal.ZDPUser : @retroactive ZDLayoutKit.ZDCAssignee {
+  public var email: Swift.String {
+    get
+    set(newValue)
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var firstName: Swift.String? {
+    get
+    set(newValue)
+  }
+  #endif
+  public var lastName: Swift.String {
+    get
+    set(newValue)
+  }
+  public var following: Swift.String {
+    get
+    set(newValue)
+  }
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.AudioCaptchaData : @retroactive ZDLayoutKit.ZDTCAudioCaptchaData {
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.ImageCaptchaData : @retroactive ZDLayoutKit.ZDTCImageCaptchaData {
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.AudioCaptcha : @retroactive ZDLayoutKit.ZDTCAudioCaptcha {
+  public var captchaData: any ZDLayoutKit.ZDTCAudioCaptchaData {
+    get
+  }
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.ImageCaptcha : @retroactive ZDLayoutKit.ZDTCImageCaptcha {
+  public var captchaData: any ZDLayoutKit.ZDTCImageCaptchaData {
+    get
+  }
+}
+extension ZohoDeskPortalAPIKit.ZDPortal.ZDPAttachment : @retroactive ZDLayoutKit.ZDTCAttachments {
+}
+public typealias TicketCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class Ticket : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias TicketCoreDataPropertiesSet = Foundation.NSSet
+extension ZohoDeskPortalTicket.Ticket {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalTicket.Ticket>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var accountName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var assigneeId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var assigneeName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var assigneephotoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var channel: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var classification: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var closedTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var commentCount: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var contactId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var createdDate: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var createdTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var createdTimeDate: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var creatorName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var creatorPhotoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var departmentId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var departmentName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var dueDate: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var email: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var language: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var localStatus: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var modifiedByUserID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var modifiedByUsername: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var modifiedByUserphotoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var modifiedTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var order: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var priority: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var productId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var resolution: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var responseDueDate: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var status: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var subject: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var threadCount: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var ticketnumber: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var comment: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var threads: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZohoDeskPortalTicket.Ticket {
+  @objc(addCommentObject:) @NSManaged nonisolated dynamic public func addToComment(_ value: ZohoDeskPortalTicket.TicketComment)
+  @objc(removeCommentObject:) @NSManaged nonisolated dynamic public func removeFromComment(_ value: ZohoDeskPortalTicket.TicketComment)
+  @objc(addComment:) @NSManaged nonisolated dynamic public func addToComment(_ values: Foundation.NSSet)
+  @objc(removeComment:) @NSManaged nonisolated dynamic public func removeFromComment(_ values: Foundation.NSSet)
+}
+extension ZohoDeskPortalTicket.Ticket {
+  @objc(addThreadsObject:) @NSManaged nonisolated dynamic public func addToThreads(_ value: ZohoDeskPortalTicket.TicketThread)
+  @objc(removeThreadsObject:) @NSManaged nonisolated dynamic public func removeFromThreads(_ value: ZohoDeskPortalTicket.TicketThread)
+  @objc(addThreads:) @NSManaged nonisolated dynamic public func addToThreads(_ values: Foundation.NSSet)
+  @objc(removeThreads:) @NSManaged nonisolated dynamic public func removeFromThreads(_ values: Foundation.NSSet)
+}
+extension ZohoDeskPortalTicket.Ticket : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias TicketCommentCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class TicketComment : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias TicketCommentCoreDataPropertiesSet = Foundation.NSSet
+extension ZohoDeskPortalTicket.TicketComment {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalTicket.TicketComment>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var commentedTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var commenterId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var commenterName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var commenterphotoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var content: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var direction: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var modifiedTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var modifiedTimeDate: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var attachment: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var ticket: ZohoDeskPortalTicket.Ticket? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZohoDeskPortalTicket.TicketComment {
+  @objc(addAttachmentObject:) @NSManaged nonisolated dynamic public func addToAttachment(_ value: ZohoDeskPortalTicket.ZDPTicketAttachment)
+  @objc(removeAttachmentObject:) @NSManaged nonisolated dynamic public func removeFromAttachment(_ value: ZohoDeskPortalTicket.ZDPTicketAttachment)
+  @objc(addAttachment:) @NSManaged nonisolated dynamic public func addToAttachment(_ values: Foundation.NSSet)
+  @objc(removeAttachment:) @NSManaged nonisolated dynamic public func removeFromAttachment(_ values: Foundation.NSSet)
+}
+extension ZohoDeskPortalTicket.TicketComment : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias TicketThreadCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class TicketThread : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias TicketThreadCoreDataPropertiesSet = Foundation.NSSet
+extension ZohoDeskPortalTicket.TicketThread {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalTicket.TicketThread>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var channel: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var content: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var createdTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var createdTimeDate: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var direction: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var fromEmail: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var hasAttach: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var isDraft: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var responderName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var responderPhotoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var responsderId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var summary: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var attachment: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var ticket: ZohoDeskPortalTicket.Ticket? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZohoDeskPortalTicket.TicketThread {
+  @objc(addAttachmentObject:) @NSManaged nonisolated dynamic public func addToAttachment(_ value: ZohoDeskPortalTicket.ZDPTicketAttachment)
+  @objc(removeAttachmentObject:) @NSManaged nonisolated dynamic public func removeFromAttachment(_ value: ZohoDeskPortalTicket.ZDPTicketAttachment)
+  @objc(addAttachment:) @NSManaged nonisolated dynamic public func addToAttachment(_ values: Foundation.NSSet)
+  @objc(removeAttachment:) @NSManaged nonisolated dynamic public func removeFromAttachment(_ values: Foundation.NSSet)
+}
+extension ZohoDeskPortalTicket.TicketThread : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias ZDPDepartmentCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(ZDPDepartment) nonisolated public class ZDPDepartment : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias ZDPDepartmentCoreDataPropertiesSet = Foundation.NSSet
+extension ZohoDeskPortalTicket.ZDPDepartment {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalTicket.ZDPDepartment>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var deptDescription: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var layoutCount: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var nameInCustomerPortal: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var order: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var photoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZohoDeskPortalTicket.ZDPDepartment : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias ZDPTicketAttachmentCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class ZDPTicketAttachment : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias ZDPTicketAttachmentCoreDataPropertiesSet = Foundation.NSSet
+extension ZohoDeskPortalTicket.ZDPTicketAttachment {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalTicket.ZDPTicketAttachment>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var createdTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var filePath: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var modifiedTimeDate: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var order: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var size: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var ticketComment: ZohoDeskPortalTicket.TicketComment? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var ticketThread: ZohoDeskPortalTicket.TicketThread? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZohoDeskPortalTicket.ZDPTicketAttachment : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias ZDPTicketFieldCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(ZDPTicketField) nonisolated public class ZDPTicketField : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias ZDPTicketFieldCoreDataPropertiesSet = Foundation.NSSet
+extension ZohoDeskPortalTicket.ZDPTicketField {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalTicket.ZDPTicketField>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var allowedValues: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var allowedValuesServer: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var apiName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var captchaURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var decimals: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var defaultValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var departmentID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var dependency: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var displayLabel: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var fieldName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var fieldOrder: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var i18NLabel: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var initialValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var initialValueByClient: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var isCustomField: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isEncryptedField: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isMandatory: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isMandatoryForLocal: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isNested: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isPHI: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isReadOnly: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isReadOnlyByClient: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isValueChanged: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isVisible: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isVisibleByClient: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var layoutID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var maxLength: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var modifiedDate: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var nestedUserInput: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var precison: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var restoreOnReplyValues: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var roundingOption: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var sectionName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var sectionOrder: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var showField: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var showSection: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var sortBy: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var statusMapping: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var toolTip: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var toolTipType: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var translatedDispalyValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var translatedOptions: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var uploadAttachment: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var userInput: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var validationError: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZohoDeskPortalTicket.ZDPTicketField : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias ZDPTicketFoundationFrameworkSet = Foundation.NSSet
+public typealias ZDPTicketCoreDataFrameworkManagedObject = CoreData.NSManagedObject
+extension ZohoDeskPortalTicket.ZDPTicketStatus : Swift.Equatable {}
+extension ZohoDeskPortalTicket.ZDPTicketStatus : Swift.Hashable {}
+extension ZohoDeskPortalTicket.ZDPTicketStatus : Swift.RawRepresentable {}

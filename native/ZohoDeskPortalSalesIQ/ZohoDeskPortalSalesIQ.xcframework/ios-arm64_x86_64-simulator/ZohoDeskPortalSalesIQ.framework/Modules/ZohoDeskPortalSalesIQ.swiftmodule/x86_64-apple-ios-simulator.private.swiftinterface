@@ -1,0 +1,92 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZohoDeskPortalSalesIQ
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import Foundation
+import Mobilisten
+import Swift
+import ZohoDeskPortalAPIKit
+import ZohoDeskPortalConfiguration
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension ZohoDeskPortalSalesIQ.ZDPortalSalesIQ {
+  public static func setColors()
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortalSalesIQ : ObjectiveC.NSObject {
+  @objc public static func show()
+  @objc public static func setCallbackOnInit(onSuccess completion: @escaping () -> Swift.Void, onError failure: @escaping () -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func setGuestUser(email: Swift.String, displayName: Swift.String?, phoneNumber: Swift.String?)
+  #endif
+  @objc public static func setLangage(identifier: Swift.String)
+  @objc public static func showLauncher(_ mode: ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode)
+  @objc public static func setChatVisibility(_ component: ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent, visible: Swift.Bool)
+  @objc public static func setConversationTitle(_ title: Swift.String)
+  @objc public static func setOfflineMessage(_ message: Swift.String)
+  @objc public static func setKnowledgeBaseVisibility(_ enable: Swift.Bool)
+  @objc public static func enableDragToDismiss(_ enable: Swift.Bool)
+  @objc public static func setConversationVisibility(_ visible: Swift.Bool)
+  @objc public static func showFeedbackAfterSkip(_ show: Swift.Bool)
+  @objc public static func hideQueueTime(_ show: Swift.Bool)
+  @objc public static func setLoggerEnabled(_ enable: Swift.Bool)
+  @objc public static func showOfflineMessage(_ show: Swift.Bool)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ZDPSalesIQService : ZohoDeskPortalConfiguration.DTHome {
+  override public func showChat()
+  override public func isBussinessHours() -> Swift.Bool
+  required public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ZDPSalesIQComponents : ObjectiveC.NSObject {
+  @objc public enum VisibilityMode : Swift.Int {
+    case always
+    case never
+    case whenActiveChat
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.Int)
+    #endif
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum ChatComponent : Swift.Int {
+    case conversationHistory
+    case preChatForm
+    case visitorName
+    case attenderImageInChat
+    case attenderImageOnLauncher
+    case screenshotOption
+    case photoLibrary
+    case mediaCapture
+    case fileSharing = 9
+    case inAppNotifications = 10
+    case emailTranscript = 11
+    case rating = 12
+    case feedback = 13
+    case reopen = 14
+    case end = 15
+    case endWhenInQueue = 16
+    case endWhenBotConnected = 17
+    case endWhenOperatorConnected = 18
+    case queuePosition = 19
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.Int)
+    #endif
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode : Swift.Equatable {}
+extension ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode : Swift.Hashable {}
+extension ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.VisibilityMode : Swift.RawRepresentable {}
+extension ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent : Swift.Equatable {}
+extension ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent : Swift.Hashable {}
+extension ZohoDeskPortalSalesIQ.ZDPSalesIQComponents.ChatComponent : Swift.RawRepresentable {}

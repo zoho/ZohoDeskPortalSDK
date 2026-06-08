@@ -1,0 +1,865 @@
+{
+    "screens" : [
+        {
+            "uid": "ZDRadioButtonCustomActionSheet",
+            "screenType": "list",
+            "r_uid": "ZDRadioButtonCustomActionSheet",
+            "configuration" : {
+                "detentState" : "auto"
+            },
+            "segments": [
+                {
+                    "configuration": {
+                        "isNative": false
+                    },
+                    "segmentType": "topNavigationBar",
+                    "includePattern_id": "ZDRTopNavigation"
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id":"ClearColor"
+                    }
+                },
+                {
+                    "segmentType": "listItem",
+                    "style": {
+                        "bgColor_id":"WidgetColor"
+                    },
+                    "actions": [
+                        {
+                            "actionKey": "zdTapAction",
+                            "uiActionType": "tap",
+                            "navigationIDs": [
+                                "goBack"
+                            ]
+                        }
+                    ],
+                    "patterns": [
+                        {
+                            "key" : "ZDAccountUpdateHeader",
+                            "itemType" : "vStack",
+                            "items" : [
+                                {
+                                    "key" : "description",
+                                    "itemType" : "label",
+                                    "itemSizeAttribute" : {
+                                        "padding" : {
+                                            "top" : 4,
+                                            "bottom": 4,
+                                            "left" : 8,
+                                            "right" : 8
+                                        }
+                                    },
+                                    "style" : {
+                                        "textStyle": {
+                                            "fontStyle_id": "sf-regular-12",
+                                            "textColor_id": "PrimaryText"
+                                        }
+                                    }
+                                }
+                            ]
+                        },{
+                            "key" : "radioButtonCell",
+                            "items" : [
+                                {
+                                    "itemType": "hStack",
+                                    "itemSizeAttribute": {
+                                        "padding": {
+                                            "all": 10
+                                        }
+                                    },
+                                    "items": [
+                                        {
+                                            "itemType": "vStack",
+                                            "itemSizeAttribute": {
+                                                "width": {
+                                                    "valueType": "staticValue",
+                                                    "value": 30
+                                                }
+                                            },
+                                            "items": [
+                                                {
+                                                    "itemType": "zStack",
+                                                    "itemSizeAttribute": {
+                                                        "padding": {
+                                                            "all": 0
+                                                        }
+                                                    },
+                                                    "items": [
+                                                        {
+                                                            "key": "button",
+                                                            "itemType": "checkBoxView",
+                                                            "itemSizeAttribute": {
+                                                                "padding": {
+                                                                    "left": 0,
+                                                                    "right": 0
+                                                                },
+                                                                "width" : {
+                                                                    "valueType" : "staticValue",
+                                                                    "value" : 16
+                                                                },
+                                                                "height" : {
+                                                                    "valueType" : "staticValue",
+                                                                    "value" : 16
+                                                                },
+                                                                "position": "center"
+                                                            },
+                                                            "style": {
+                                                                "checkBoxStyle": {
+                                                                    "checkBoxType": "radioButton"
+                                                                },
+                                                                "cornerRadius" : {
+                                                                    "all" : 8
+                                                                },
+                                                                "tintColor_id": "ThemeColor"
+                                                            },
+                                                            "actions": [
+                                                                {
+                                                                    "actionKey": "zpCheckBoxAction",
+                                                                    "uiActionType": "tap"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "itemType": "vStack",
+                                            "actions": [
+                                                {
+                                                    "actionKey": "zpCheckBoxAction",
+                                                    "uiActionType": "tap"
+                                                }
+                                            ],
+                                            "itemSizeAttribute": {
+                                                "padding": {
+                                                    "left": 4
+                                                }
+                                            },
+                                            "items": [
+                                                {
+                                                    "key": "title",
+                                                    "itemType": "label",
+                                                    "style": {
+                                                        "textStyle": {
+                                                            "fontStyle_id": "sf-semibold-14",
+                                                            "textColor_id": "PrimaryText"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "key": "description",
+                                                    "itemType": "label",
+                                                    "style": {
+                                                        "textStyle": {
+                                                            "fontStyle_id": "sf-regular-12",
+                                                            "textColor_id": "PrimaryText"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                            
+                        }
+                        
+                    ]
+                },
+                {
+                    "segmentType": "sectionFooter",
+                    "includePattern_id" : "bottomActionView"
+                }
+            ]
+        },
+        {
+            "uid": "ZDConfirmActionSheet",
+            "screenType": "list",
+            "r_uid": "ZDConfirmActionSheet",
+            "configuration" : {
+                "detentState" : "auto"
+            },
+            "segments": [
+                {
+                    "configuration": {
+                        "isNative": false
+                    },
+                    "segmentType": "topNavigationBar",
+                    "patterns" : [
+                        {
+                            "itemType" : "vStack",
+                            "items" : [
+                                {
+                                    "key" : "notchView",
+                                    "itemType" : "vStack",
+                                    "items" : [
+                                        
+                                        {
+                                            "itemType" : "zStack",
+                                            "items" : [
+                                                {
+                                                    "itemType" : "vStack",
+                                                    "style" : {
+                                                        "bgColor_id" : "WidgetColor",
+                                                        "cornerRadius": {
+                                                            "all": 2.5
+                                                        }
+                                                    },
+                                                    "itemSizeAttribute" : {
+                                                        "position" : "center",
+                                                        "padding" : {
+                                                            "top" : 5,
+                                                            "bottom" : 5
+                                                        },
+                                                        "width" : {
+                                                            "valueType" : "staticValue",
+                                                            "value" : 30
+                                                        },
+                                                        "height" : {
+                                                            "valueType" : "staticValue",
+                                                            "value" : 5
+                                                        }
+                                                    }
+                                                    
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "containerView",
+                                    "itemType" : "vStack",
+                                    "style": {
+                                        "bgColor_id": "WidgetColor",
+                                        "cornerRadius" : {
+                                            "topLeft" : 14,
+                                            "topRight" : 14
+                                        }
+                                    },
+                                    "items" : [
+                                        {
+                                            "key": "zpScreenTitle",
+                                            "itemType": "label",
+                                            "itemSizeAttribute" : {
+                                                "padding" : {
+                                                    "top" :  32,
+                                                    "bottom" :  8,
+                                                    "right" : 8,
+                                                    "left" : 8
+                                                }
+                                            },
+                                            "style" : {
+                                                "textStyle": {
+                                                    "fontStyle_id": "sf-semibold-16",
+                                                    "textColor_id": "PrimaryText",
+                                                    "alignment":"center"
+                                                }
+                                            }
+                                        },{
+                                            "key": "zpScreenDescription",
+                                            "itemType": "label",
+                                            "itemSizeAttribute" : {
+                                                "padding" : {
+                                                    "top" :  8,
+                                                    "bottom" :  16,
+                                                    "right" : 8,
+                                                    "left" : 8
+                                                }
+                                            },
+                                            "style" : {
+                                                "textStyle": {
+                                                    "fontStyle_id": "sf-regular-14",
+                                                    "textColor_id": "PrimaryText",
+                                                    "alignment":"center"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                                
+                            ]
+                        }
+                        
+                    ]
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id":"ClearColor"
+                    }
+                },
+                {
+                    "segmentType" : "listItem",
+                    "style": {
+                        "bgColor_id":"WidgetColor"
+                    }
+                },
+                {
+                    "segmentType": "sectionFooter",
+                    "includePattern_id" : "bottomActionView"
+                }
+            ]
+        },
+        {
+            
+            "uid": "TicketCreationScreenCustomNav",
+            "screenType": "list",
+            "r_uid": "TicketCreationScreenCustomNav",
+            "typeOfrender": "dynamic",
+            "passOnAction": {
+                "actionKey": "passtonext",
+                "uiActionType": "passOn",
+                "navigationIDs": [
+                    "TicketEditCustom",
+                    "goRoot",
+                    "goBack",
+                    "actionSheet",
+                    "nativeAlert",
+                    "asapPicker",
+                    "ZDRadioButtonCustomActionSheet",
+                    "webEditor",
+                    "ZDConfirmActionSheet"
+                ]
+            },
+            "segments": [
+                {
+                    "configuration": {
+                        "isNative": false
+                    },
+                    "segmentType": "topNavigationBar",
+                    "style": {
+                       "bgColor_id": "WidgetColor"
+                    },
+                    "includePattern_id": "ZDRTopNavigation"
+                },
+                
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id": "WidgetColor"
+                    }
+                },
+                {
+                    "segmentType": "sectionHeader",
+                    "includePattern_id" : "TicketFormSectionHeader"
+                },
+                {
+                    "segmentType": "listItem",
+                    "includePattern_id" : "createFormCell"
+                }
+            ]
+        },
+        {
+            "uid": "LookupScreen",
+            "screenType": "detail",
+            "r_uid": "LookupScreen",
+            "passOnAction":{
+                "actionKey": "zpBackAction",
+                "uiActionType":"passOn",
+                "navigationIDs":[
+                    "goBack"
+                ]
+            },
+            "segments": [
+                {
+                    "configuration": {
+                        "isNative": false
+                    },
+                    "segmentType": "topNavigationBar",
+                    "style": {
+                       "bgColor_id": "WidgetColor"
+                    },
+                    "includePattern_id": "ZDRTopNavigation"
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id": "ZDDashboardPrimaryBG"
+                    },
+                    "segmentSizeAttribute" : {
+                        "padding" : {
+                            "all" : 10
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "key": "zdtablayoutpager",
+                            "itemType": "tabLayoutViewPager",
+                            "style": {
+                                "scrollStyle": {
+                                    "isScrollEnabled": true,
+                                    "isShowHorizontalScrollIndicator": false,
+                                    "isShowVerticalScrollIndicator": false
+                                },
+                                "cornerRadius" : {
+                                    "all" : 5
+                                }
+                            },
+                            "itemSizeAttribute" : {
+                                "padding" : {
+                                    "top" : 20,
+                                    "bottom" : 20,
+                                    "left" : 12,
+                                    "right" : 12
+                                }
+                            },
+                            "actions": [
+                                {
+                                    "actionKey": "zpPageAction",
+                                    "uiActionType": "onCreate",
+                                    "navigationIDs": [
+                                        "lookupListScreen"
+                                    ]
+                                }
+                            ],
+                            "items": [
+                                {
+                                    "itemType": "hStack",
+                                    "style":{
+                                        "bgColor_id": "tabViewColor"
+                                    },
+                                    "items":[
+                                        {
+                                            "key": "zdTabView",
+                                            "itemType": "tabView",
+                                            "actions": [
+                                                {
+                                                    "actionKey": "lookupTab",
+                                                    "uiActionType": "tap"
+                                                }
+                                            ],
+                                            "style": {
+                                                "bgColor_id": "tabViewColor",
+                                                "tabViewStyle": {
+                                                    "tabViewType": "fitInTab",
+                                                    "selectedPatternId": "tabViewSelectedCell"
+                                                }
+                                            },
+                                            "itemSizeAttribute": {
+                                                "height":{
+                                                    "valueType":"staticValue",
+                                                    "value":60
+                                                },"padding" : {
+                                                    "right" : 20
+                                                }
+                                            },
+                                            "items": [
+                                                {
+                                                    "key": "zddisplaycell",
+                                                    "itemType": "hStack",
+                                                    "items": [
+                                                        {
+                                                            "key": "zdtitle",
+                                                            "itemType": "label",
+                                                            "style": {
+                                                                "textStyle": {
+                                                                    "fontStyle_id": "sf-regular-14",
+                                                                    "maxLines": 1,
+                                                                    "textColor_id": "SecondaryText",
+                                                                    "alignment":"center"
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "key": "tabIndicator",
+                                                    "itemType": "tabViewIndicator",
+                                                    "items": [
+                                                        {
+                                                            "key": "baseStackHolder",
+                                                            "itemType": "zStack",
+                                                            "style": {
+                                                                "bgColor_id": "PrimaryText",
+                                                                "cornerRadius": {
+                                                                    "all": 2
+                                                                }
+                                                            },
+                                                            "itemSizeAttribute": {
+                                                                "width": {
+                                                                    "value": 25,
+                                                                    "valueType": "staticValue"
+                                                                },
+                                                                "height": {
+                                                                    "value": 3,
+                                                                    "valueType": "staticValue"
+                                                                },
+                                                                "position": "bottomCenter",
+                                                                "padding": {
+                                                                    "bottom": 1
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "key": "tabViewSelectedCell",
+                                                    "itemType": "hStack",
+                                                    "items": [
+                                                        {
+                                                            "key": "zdtitle",
+                                                            "itemType": "label",
+                                                            "style": {
+                                                                "textStyle": {
+                                                                    "fontStyle_id": "sf-semibold-14",
+                                                                    "maxLines": 1,
+                                                                    "textColor_id": "PrimaryText",
+                                                                    "alignment":"center"
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                        
+                        
+                    ]
+                }
+            ]
+        },
+        {
+            "uid": "lookupListScreen",
+            "screenType": "grid",
+            "r_uid": "lookupListScreen",
+            "segments" : [
+                {
+                    "segmentType": "container",
+                    
+                    "style": {
+                        "bgColor_id": "ZDDashboardCard"
+                    }
+                },{
+                    "segmentType" : "listItem",
+                    "style": {
+                        "bgColor_id": "ZDDashboardCard",
+                        "scrollStyle": {
+                            "isScrollEnabled": true,
+                            "direction": "horizontal"
+                        },
+                        
+                        "listStyle": {
+                            
+                            "layoutType": "sheet",
+                            "sheetStyle" : {
+                                "freezeRowCount": 1,
+                                "freezeColumnCount": 0
+                            }
+                    
+                        }
+                    },
+                    "includePattern_id" : "sheetViewCells"
+                },{
+                    "segmentType": "sectionFooter",
+                    "patterns": [
+                        {
+                            "itemType": "vStack",
+                            "style": {
+                                "bgColor_id": "ZDDashboardCard"
+                            },
+                            "itemSizeAttribute": {
+                                "height": {
+                                    "valueType": "wrapContent"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "uid": "PicklistScreenCustomNav",
+            "screenType": "list",
+            "module": "common",
+            "r_uid": "PicklistScreen",
+            "typeOfrender": "dynamic",
+            "passOnAction": {
+                "actionKey": "passtonext",
+                "uiActionType": "passOn",
+                "navigationIDs": [
+                    "goBack"
+                ]
+            },
+            "configuration" : {
+                "detentState" : "auto"
+            },
+            "segments": [
+                {
+                    "configuration": {
+                        "isNative": false
+                    },
+                    "segmentType": "topNavigationBar",
+                    "includePattern_id": "ZDRTopNavigation"
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id":"ClearColor"
+                    }
+                },
+                {
+                    "segmentType": "listItem",
+                    "actions": [
+                        {
+                            "actionKey": "zpListAction",
+                            "uiActionType": "tap",
+                            "navigationIDs": [
+                                "goBack",
+                                "asapPicker",
+                                "actionSheet",
+                                "nativeAlert",
+                                "ZDConfirmActionSheet"
+                            ]
+                        }
+                    ],
+                    "style": {
+                        "bgColor_id": "WidgetColor"
+                    },
+                    "includePattern_id" : "PickListCells"
+                }
+            ]
+        },{
+            "uid": "PicklistScreenFullCustomNav",
+            "screenType": "list",
+            "module": "common",
+            "r_uid": "PicklistScreen",
+            "typeOfrender": "dynamic",
+            "passOnAction": {
+                "actionKey": "passtonext",
+                "uiActionType": "passOn",
+                "navigationIDs": [
+                    "goBack"
+                ]
+            },
+            "configuration" : {
+                "detentState" : "full"
+            },
+            "segments": [
+                {
+                    "configuration": {
+                        "isNative": false
+                    },
+                    "segmentType": "topNavigationBar",
+                   
+                    "includePattern_id": "ZDRTopNavigation"
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id":"ClearColor"
+                    }
+                },
+                {
+                    "segmentType": "listItem",
+                    "actions": [
+                        {
+                            "actionKey": "zpListAction",
+                            "uiActionType": "tap",
+                            "navigationIDs": [
+                                "goBack",
+                                "asapPicker",
+                                "actionSheet",
+                                "nativeAlert",
+                                "ZDConfirmActionSheet"
+                            ]
+                        }
+                    ],
+                    "style": {
+                        "bgColor_id": "WidgetColor"
+                    },
+                    "includePattern_id" : "PickListCells"
+                }
+            ]
+        },{
+            "uid": "PicklistScreenNestedCustomNav",
+            "screenType": "list",
+            "module": "common",
+            "r_uid": "PicklistScreen",
+            "typeOfrender": "dynamic",
+            "configuration" : {
+                "detentState" : "halfExpandable" 
+            },
+            "segments": [
+                {
+                    "configuration": {
+                        "isNative": false
+                    },
+                    "segmentType": "topNavigationBar",
+                    "includePattern_id": "ZDRTopNavigation"
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id":"ClearColor"
+                    }
+                },
+                {
+                    "segmentType": "listItem",
+                    "actions": [
+                        {
+                            "actionKey": "zpListAction",
+                            "uiActionType": "tap",
+                            "navigationIDs": [
+                                "goBack",
+                                "asapPicker"
+                            ]
+                        }
+                    ],
+                    "style": {
+                        "bgColor_id": "WidgetColor"
+                    },
+                    "includePattern_id" : "PickListCells"
+                },
+                {
+                    "segmentType": "sectionHeader",
+                    "includePattern_id" : "nestedPicklistHeader"
+                }
+            ]
+        }, {
+            "uid": "WebEditorScreen",
+            "screenType": "detail",
+            "r_uid": "WebEditorScreen",
+            "passOnAction":{
+                "actionKey": "zpBackAction",
+                "uiActionType":"passOn",
+                "navigationIDs":[
+                    "goBack"
+                ]
+            },
+            "segments" : [
+                {
+                    "configuration": {
+                        "isNative": false
+                    },
+                    "segmentType": "topNavigationBar",
+                    "style": {
+                       "bgColor_id": "WidgetColor"
+                    },
+                    "includePattern_id": "ZDRTopNavigation"
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id": "ZDDashboardPrimaryBG"
+                    },
+                    "segmentSizeAttribute" : {
+                        "padding" : {
+                            "all" : 10
+                        }
+                    },
+                    "patterns" : [
+                        {
+                            "itemType" : "vStack",
+                            "itemSizeAttribute" : {
+                                "padding" : {
+                                    "all" : 0
+                                }
+                            },
+                            "items" : [
+                                {
+                                    "key": "webViewEditor",
+                                    "itemType": "webView",
+                                    "actions":[
+                                        {
+                                            "actionKey" : "webEditAction",
+                                            "uiActionType" : "onTextChange"
+                                        }
+                                    ],
+                                    "style": {
+                                        "tintColor_id": "ThemeColor",
+                                        "textStyle": {
+                                            "isEditable": true
+                                        },
+                                        "scrollStyle": {
+                                            "isScrollEnabled": true
+                                            
+                                        }
+                                    }
+                                }
+                            ]
+                            
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "navigations" : [
+        {
+            "navigation_uid": "TicketPropertiesCustom",
+            "navigationKey": "TicketPropertiesScreenCustomNav",
+            "transitionType": "push",
+            "destination_id": "TicketCreationScreenCustomNav"
+        },{
+            "navigation_uid": "TicketEditCustom",
+            "navigationKey": "TicketCreationScreenCustomNav",
+            "transitionType": "push",
+            "destination_id": "TicketCreationScreenCustomNav"
+        },
+        {
+            "navigation_uid": "ZDRadioButtonCustomActionSheet",
+            "navigationKey": "ZDRadioButtonCustomActionSheet",
+            "destination_id": "ZDRadioButtonCustomActionSheet",
+            "presentationStyle" : "actionSheet",
+            "transitionType": "present"
+        },
+        {
+            "navigation_uid": "ZDConfirmActionSheet",
+            "navigationKey": "ZDConfirmActionSheet",
+            "destination_id": "ZDConfirmActionSheet",
+            "presentationStyle" : "actionSheet",
+            "transitionType": "present"
+        },{
+            "navigation_uid": "lookupListScreen",
+            "navigationKey": "lookupListScreen",
+            "transitionType": "push",
+            "destination_id": "lookupListScreen"
+        },{
+            "navigation_uid": "LookupScreen",
+            "navigationKey": "LookupScreen",
+            "transitionType": "push",
+            "destination_id": "LookupScreen"
+        },{
+            "navigation_uid": "asapPicker",
+            "navigationKey": "PicklistScreenCustomPresent",
+            "destination_id": "PicklistScreenCustomNav",
+            "transitionType": "present"
+        },
+        {
+            "navigation_uid": "asapPicker",
+            "navigationKey": "PicklistScreenCustomPush",
+            "destination_id": "PicklistScreenCustomNav",
+            "transitionType": "push"
+        },{
+            "navigation_uid": "asapPicker",
+            "navigationKey": "PicklistScreenCustomActionSheet",
+            "destination_id": "PicklistScreenCustomNav",
+            "presentationStyle" : "actionSheet",
+            "transitionType": "present"
+        },{
+            "navigation_uid": "asapPicker",
+            "navigationKey": "PicklistScreenCustomActionSheetHalfExpand",
+            "destination_id": "PicklistScreenNestedCustomNav",
+            "presentationStyle" : "actionSheet",
+            "transitionType": "present"
+        },{
+            "navigation_uid": "asapPicker",
+            "navigationKey": "PicklistScreenCustomActionSheetFullScreen",
+            "destination_id": "PicklistScreenFullCustomNav",
+            "presentationStyle" : "actionSheet",
+            "transitionType": "present"
+        },{
+            "navigation_uid": "webEditor",
+            "navigationKey": "WebEditorScreen",
+            "destination_id": "WebEditorScreen",
+            "transitionType": "push"
+        }
+    ]
+}

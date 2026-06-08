@@ -1,0 +1,11 @@
+framework module MobilistenCallsCore {
+  umbrella header "MobilistenCallsCore.h"
+  export *
+
+  module * { export * }
+}
+
+module MobilistenCallsCore.Swift {
+  header "MobilistenCallsCore-Swift.h"
+  requires objc
+}

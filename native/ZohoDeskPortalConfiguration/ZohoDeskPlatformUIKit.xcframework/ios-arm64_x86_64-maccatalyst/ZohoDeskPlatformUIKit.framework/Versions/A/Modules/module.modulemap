@@ -1,0 +1,4 @@
+framework module ZohoDeskPlatformUIKit {
+  header "ZohoDeskPlatformUIKit-Swift.h"
+  requires objc
+}

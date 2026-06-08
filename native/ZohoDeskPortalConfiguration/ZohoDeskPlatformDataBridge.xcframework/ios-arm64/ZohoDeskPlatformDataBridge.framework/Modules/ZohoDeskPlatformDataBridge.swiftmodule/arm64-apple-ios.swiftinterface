@@ -1,0 +1,1737 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZohoDeskPlatformDataBridge
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import Combine
+import CoreData
+import Foundation
+import MobileCoreServices
+import ObjectiveC
+import Photos
+import PhotosUI
+import QuickLook
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum ZPNavigate {
+  case back
+  case root
+  public static func == (a: ZohoDeskPlatformDataBridge.ZPNavigate, b: ZohoDeskPlatformDataBridge.ZPNavigate) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public let previewRefresh: Foundation.Notification.Name
+public protocol ZPNavigationDataSource : AnyObject {
+  var navigationIdentifier: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var transition: ZohoDeskPlatformDataBridge.ZPTransition? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var modalPresentationStyle: ZohoDeskPlatformDataBridge.ZPPresentationStyle? { get }
+  #endif
+}
+extension ZohoDeskPlatformDataBridge.ZPNavigationDataSource {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var transition: ZohoDeskPlatformDataBridge.ZPTransition? {
+    get
+    set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var modalPresentationStyle: ZohoDeskPlatformDataBridge.ZPPresentationStyle? {
+    get
+    set
+  }
+  #endif
+}
+public protocol ZDInitializeDataSource : AnyObject {
+  func screenOn(state: ZohoDeskPlatformDataBridge.ZPScreenAppearState)
+  func initialize(onCompletion: @escaping (ZohoDeskPlatformDataBridge.ZPIntializeProgress) -> Swift.Void)
+  func doRender(onCompletion: @escaping (ZohoDeskPlatformDataBridge.ZPUISegment) -> Swift.Void)
+  func doRefresh(for type: ZohoDeskPlatformDataBridge.ZPRefreshType)
+}
+extension ZohoDeskPlatformDataBridge.ZDInitializeDataSource {
+  public func screenOn(state: ZohoDeskPlatformDataBridge.ZPScreenAppearState)
+  public func doRefresh(for type: ZohoDeskPlatformDataBridge.ZPRefreshType)
+}
+public protocol ZDErrorBinderDataSource : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func errorUI(datasource: (any ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource)?)
+  #endif
+}
+public protocol ZDUIRenderingDataSource : AnyObject {
+  func prepareData(of dataSourceType: ZohoDeskPlatformDataBridge.ZBDataSourceType) -> [ZohoDeskPlatformDataBridge.ZBDataItem]
+  #if compiler(>=5.3) && $NonescapableTypes
+  func render(basedOn patternType: ZohoDeskPlatformDataBridge.ZDPatternType) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func handle(loaderCompletion: ((ZohoDeskPlatformDataBridge.ZPLoaderProgress) -> Swift.Void)?)
+  #endif
+  func downloadData(fromUrl url: Swift.String, onComplete complete: @escaping (ZohoDeskPlatformDataBridge.ZPImageHandlerType) -> Swift.Void)
+}
+public enum ZPScreenAppearState {
+  case onAppear
+  case onDisAppear
+  public static func == (a: ZohoDeskPlatformDataBridge.ZPScreenAppearState, b: ZohoDeskPlatformDataBridge.ZPScreenAppearState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ZPImageHandlerType {
+  case preview(data: Foundation.Data?, ofType: ZohoDeskPlatformDataBridge.ZPDataType, conditionalStyleValue: Swift.String? = nil)
+  case skip
+}
+public enum ZPIntializeProgress {
+  case success
+  case failure(title: Swift.String?, _: Swift.String)
+  case showError(state: ZohoDeskPlatformDataBridge.ZPErrorState = ZPErrorState.noData)
+  case passOnScreen
+}
+public enum ZDPatternType {
+  case none
+  case listHeader
+  case listFooter
+  case sectionHeader(_: Swift.Int)
+  case sectionFooter(_: Swift.Int)
+  case list(_: Foundation.IndexPath)
+  case container
+  case collapsingHeader
+  case floatingHeader
+  public static var `default`: Swift.String
+}
+public enum ZPLoaderProgress {
+  case begin
+  case end
+  public static func == (a: ZohoDeskPlatformDataBridge.ZPLoaderProgress, b: ZohoDeskPlatformDataBridge.ZPLoaderProgress) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ZPUISegment {
+  case topNavigation
+  case bottomNavigation
+  case container
+  case search
+  case failure(title: Swift.String?, _: Swift.String)
+  case showError(state: ZohoDeskPlatformDataBridge.ZPErrorState = ZPErrorState.noData)
+  case `default`
+}
+public enum ZPErrorState : Swift.Int {
+  case noData
+  case dataError
+  case networkError
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum ZPTransition : Swift.Int {
+  case push
+  case present
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum ZPPresentationStyle : Swift.Int {
+  case `default`
+  case fullscreen
+  case form
+  case page
+  case currentContext
+  case overfullscreen
+  case overCurrentContext
+  case popOver
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum ZPRefreshType : Swift.Int {
+  case RTLChange
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum ZDChartUpdate {
+  case reload
+  case update
+  case error(state: ZohoDeskPlatformDataBridge.ZPErrorState = ZPErrorState.noData)
+}
+public protocol ZDChartUpdateDataSource : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func updateUI(_ onCompletion: ((ZohoDeskPlatformDataBridge.ZDChartUpdate?) -> Swift.Void)?)
+  #endif
+}
+public protocol ZBChartItemProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func prepareChartData() -> (any ZohoDeskPlatformDataBridge.ZBChartDataEntry)?
+  #endif
+  func renderChartState(_ entry: Swift.String) -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  func selectIndex(_ setSelection: ((Swift.Int?) -> Swift.Void)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getErrorDataSource(ofState state: ZohoDeskPlatformDataBridge.ZPErrorState) -> (any ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func verticalAxis(of type: ZohoDeskPlatformDataBridge.verticalAxisDatasource) -> Swift.String?
+  #endif
+}
+public enum verticalAxisDatasource {
+  case label(value: CoreFoundation.CGFloat)
+  case title
+}
+extension ZohoDeskPlatformDataBridge.ZBChartItemProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func selectIndex(_ setSelection: ((Swift.Int?) -> Swift.Void)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getErrorDataSource(ofState state: ZohoDeskPlatformDataBridge.ZPErrorState) -> (any ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func verticalAxis(of type: ZohoDeskPlatformDataBridge.verticalAxisDatasource) -> Swift.String?
+  #endif
+}
+public protocol ZBChartDataEntry {
+  var xAxisValues: [Swift.String] { get }
+  var chartEntries: [any ZohoDeskPlatformDataBridge.ZBChartEntry] { get }
+}
+public protocol ZBChartEntry {
+  var id: Swift.String { get }
+  var data: [any ZohoDeskPlatformDataBridge.ZBChartData] { get }
+}
+public protocol ZBChartData {
+  var value: Swift.Double { get }
+  var isAnamoaly: Swift.Bool { get }
+  var groupingIndex: Swift.Int { get }
+}
+extension ZohoDeskPlatformDataBridge.ZBChartDataEntry {
+  public var xAxisValues: [Swift.String] {
+    get
+  }
+}
+extension ZohoDeskPlatformDataBridge.ZBChartData {
+  public var isAnamoaly: Swift.Bool {
+    get
+  }
+  public var groupingIndex: Swift.Int {
+    get
+  }
+}
+public protocol ZDBinderUtility : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func downloadImage(for url: Swift.String, onCompletion: @escaping (UIKit.UIImage?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func downloadImageData(for url: Swift.String, onCompletion: @escaping (Foundation.Data?) -> Swift.Void)
+  #endif
+  func prepareBuilderJSONS(onCompletion: @escaping ([Foundation.Data]) -> Swift.Void)
+  func fetchJsons() async -> [Foundation.Data]
+}
+public protocol ZPFilePickerUtility : UIKit.UIDocumentPickerDelegate {
+  var documentTypes: [Swift.String] { get }
+  func documentPicker(with urls: [Foundation.URL])
+}
+extension ZohoDeskPlatformDataBridge.ZPFilePickerUtility {
+  public var documentTypes: [Swift.String] {
+    get
+  }
+}
+public protocol ZPAssetPreviewUtility {
+  var presentItemIndex: Swift.Int { get }
+  func getPreviewItems() -> [any ZohoDeskPlatformDataBridge.ZPPreviewItem]
+  func previewItemAt(index: Swift.Int)
+  func refresh()
+}
+extension ZohoDeskPlatformDataBridge.ZPAssetPreviewUtility {
+  public var presentItemIndex: Swift.Int {
+    get
+  }
+  public func previewItemAt(index: Swift.Int)
+  public func refresh()
+}
+public protocol ZPPreviewItem : QuickLook.QLPreviewItem {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var displayName: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var fileName: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var fileExtension: Swift.String? { get }
+  #endif
+  var formattedFileName: Swift.String { get }
+}
+extension ZohoDeskPlatformDataBridge.ZPPreviewItem {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var displayName: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var fileName: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var fileExtension: Swift.String? {
+    get
+  }
+  #endif
+  public var formattedFileName: Swift.String {
+    get
+  }
+}
+public protocol ZPActivityProtocol : AnyObject {
+  func getActivity() -> [Any]
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getApplicationActivities() -> [UIKit.UIActivity]?
+  #endif
+}
+extension ZohoDeskPlatformDataBridge.ZPActivityProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getApplicationActivities() -> [UIKit.UIActivity]?
+  #endif
+}
+public enum ZPInitializeProgress {
+  case success
+  case failure
+  public static func == (a: ZohoDeskPlatformDataBridge.ZPInitializeProgress, b: ZohoDeskPlatformDataBridge.ZPInitializeProgress) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ZPRenderSegmentType {
+  case segment(_: ZohoDeskPlatformDataBridge.ZPScreenSegmentType)
+  case list(_: ZohoDeskPlatformDataBridge.ZPListSegmentType)
+  case stateview(_: ZohoDeskPlatformDataBridge.ZPStateType)
+  case map(_: Swift.Int)
+}
+public enum ZPScreenSegmentType {
+  case topNavigation
+  case bottomNavigation
+  case search
+  case collapsingHeader
+  case floatingHeader
+  case container
+  case toolBar
+  public static func == (a: ZohoDeskPlatformDataBridge.ZPScreenSegmentType, b: ZohoDeskPlatformDataBridge.ZPScreenSegmentType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ZPStateType {
+  case noData
+  case dataError
+  case networkError
+  case load
+  case custom
+  public static func == (a: ZohoDeskPlatformDataBridge.ZPStateType, b: ZohoDeskPlatformDataBridge.ZPStateType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ZPScreenStateNotifier {
+  case willAppear
+  case willDisAppear
+  case RTLChange(_: Swift.String)
+  case orientationChange(_: ZohoDeskPlatformDataBridge.ZPOrientationTye)
+  case themeChange(_: ZohoDeskPlatformDataBridge.ZPAppearanceType)
+}
+public typealias ZPOrientationTye = UIKit.UIDeviceOrientation
+public typealias ZPAppearanceType = UIKit.UIUserInterfaceStyle
+public enum ZPListSegmentType {
+  case sectionHeader(_: Swift.Int)
+  case sectionFooter(_: Swift.Int)
+  case item(_: Foundation.IndexPath)
+}
+public enum ZPMapSegmentType {
+  case marker
+  public static func == (a: ZohoDeskPlatformDataBridge.ZPMapSegmentType, b: ZohoDeskPlatformDataBridge.ZPMapSegmentType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol ZPMapCoordinate {
+  var latitude: Swift.Double { get }
+  var longitude: Swift.Double { get }
+}
+public enum ZPMapType {
+  case standard
+  case satellite
+  case hybrid
+  public static func == (a: ZohoDeskPlatformDataBridge.ZPMapType, b: ZohoDeskPlatformDataBridge.ZPMapType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ZPWebViewActionNotifierType {
+  case didFinish(isLoading: Swift.Bool)
+  case didThemeChange(isDarkMode: Swift.Bool)
+  case messageHandler(name: Swift.String, body: [Swift.String : Any])
+}
+public enum ZPMapViewActionNotifierType {
+  case didFinish(isLoading: Swift.Bool)
+}
+public enum ZPRender {
+  case `default`
+  case render(Swift.String?)
+}
+public typealias ZPTransitionComplete = () -> Swift.Void
+public typealias ZPInitializer = (ZohoDeskPlatformDataBridge.ZPInitializeProgress) -> Swift.Void
+public typealias ZPDataItemKey = Swift.String
+public typealias ZPDataItemCallBack = (ZohoDeskPlatformDataBridge.ZPDataItem?) -> Swift.Void
+public typealias ZPAccessor = (_ key: ZohoDeskPlatformDataBridge.ZPDataItemKey, _ fromSegment: ZohoDeskPlatformDataBridge.ZPScreenSegmentType, _ onReturn: (ZohoDeskPlatformDataBridge.ZPDataItem?) -> Swift.Void) -> Swift.Void
+public enum ZPActionElementType {
+  case `default`
+  case list(indexPath: Foundation.IndexPath)
+  case section(section: Swift.Int)
+  case map(coordinate: any ZohoDeskPlatformDataBridge.ZPMapCoordinate)
+}
+public enum ZPActionEventType {
+  case create
+  case tap
+  case longPress
+  case doubleTap
+  case rightSwipe
+  case leftSwipe
+  case toggle(value: Swift.Bool)
+  case edit(keyword: Swift.String, state: ZohoDeskPlatformDataBridge.ZPEditorState)
+  case date(date: Foundation.Date, state: ZohoDeskPlatformDataBridge.ZPEditorState)
+  case picker(value: Foundation.IndexPath, state: ZohoDeskPlatformDataBridge.ZPEditorState)
+  case slider(value: Swift.Float, state: ZohoDeskPlatformDataBridge.ZPEditorState)
+}
+public protocol ZPActionDataSource : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func perform(with binder: ZohoDeskPlatformDataBridge.ZPBinderModel, completed: (() -> Swift.Void)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func performDismiss(isToRoot: Swift.Bool, completed: (() -> Swift.Void)?)
+  #endif
+}
+public struct ZPActionModel {
+  public var type: ZohoDeskPlatformDataBridge.ZPActionElementType
+  public var eventType: ZohoDeskPlatformDataBridge.ZPActionEventType
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(type: ZohoDeskPlatformDataBridge.ZPActionElementType, eventType: ZohoDeskPlatformDataBridge.ZPActionEventType, actionDataSource: (any ZohoDeskPlatformDataBridge.ZPActionDataSource)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func perform(with binder: ZohoDeskPlatformDataBridge.ZPBinderModel, completed: (() -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func performDismiss(toRoot: Swift.Bool = false, completed: (() -> Swift.Void)? = nil)
+  #endif
+}
+public enum ZPEditorState {
+  case begin
+  case change
+  case end
+  case done
+  case clear
+  case cancel
+  case `return`
+  case error(_: ZohoDeskPlatformDataBridge.ZPError? = nil)
+}
+public enum ZPError : Foundation.LocalizedError {
+  case editor(type: ZohoDeskPlatformDataBridge.ZPError.EditorError)
+  case custom(errorDescription: Swift.String?)
+  public enum EditorError {
+    case maxLenghtReached
+    case custom(errorCode: Swift.Int?, errorDescription: Swift.String?)
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var errorDescription: Swift.String? {
+    get
+  }
+  #endif
+}
+extension ZohoDeskPlatformDataBridge.ZPError.EditorError : Foundation.LocalizedError {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var errorDescription: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var errorCode: Swift.Int? {
+    get
+  }
+  #endif
+}
+@_hasMissingDesignatedInitializers public class ZohoDeskPlatformKit {
+  public static func initialize(_ closure: (ZohoDeskPlatformDataBridge.ZPInitConfiguration) -> Swift.Void)
+  public static func destroy(_ type: ZohoDeskPlatformDataBridge.ZDPSessionType = .current)
+  @objc deinit
+}
+public typealias ZDPlatformInitConstructor = (ZohoDeskPlatformDataBridge.ZPInitConfiguration) -> Swift.Void
+@_hasMissingDesignatedInitializers public class ZPInitConfiguration {
+  public var token: Swift.String
+  public var serializedData: Foundation.Data?
+  public var configuration: (any ZohoDeskPlatformDataBridge.ZDPlatformConfiguration)?
+  @available(*, deprecated, message: "To navigate Version1.0 screens, users need to provide this class!")
+  public var provider: (any ZohoDeskPlatformDataBridge.ZDBinderProtocol)?
+  @objc deinit
+}
+public typealias ZPHItemDataConstructor = (ZohoDeskPlatformDataBridge.ZPHItemConfiguration) -> Swift.Void
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZPHItemConfiguration : ZohoDeskPlatformDataBridge.ZPInitConfiguration {
+  public var patternId: Swift.String
+  public var viewController: UIKit.UIViewController?
+  @objc deinit
+}
+public typealias ZPHSegmentDataConstructor = (ZohoDeskPlatformDataBridge.ZPHSegmentConfiguration) -> Swift.Void
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZPHSegmentConfiguration : ZohoDeskPlatformDataBridge.ZPInitConfiguration {
+  public var segmentType: ZohoDeskPlatformDataBridge.ZPScreenSegmentType?
+  public var viewController: UIKit.UIViewController?
+  @objc deinit
+}
+public protocol ZDEditorDatasource : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func editor(content: Swift.String?, rawValue: Any?, ofState state: ZohoDeskPlatformDataBridge.ZPFieldEditorState?, fromIndexPath indexPath: Foundation.IndexPath)
+  #endif
+}
+public enum ZPFieldEditorState {
+  case begin
+  case change
+  case end
+  case done
+  case cancel
+  case `return`
+  public static func == (a: ZohoDeskPlatformDataBridge.ZPFieldEditorState, b: ZohoDeskPlatformDataBridge.ZPFieldEditorState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public typealias CompletionHandler = (ZohoDeskPlatformDataBridge.ZPImageDataValue) -> Swift.Void
+@objc open class ZPDataItem : ObjectiveC.NSObject {
+  public var key: Swift.String
+  public var value: (text: Swift.String?, attributedText: Foundation.NSAttributedString?, url: Foundation.URL?, maxLength: Swift.Int?, slider: (value: Swift.Float, min: Swift.Float, max: Swift.Float)?)
+  public var dateValue: (date: Foundation.Date?, timezone: Foundation.TimeZone?)
+  public var placeholdervalue: (text: Swift.String?, attributedText: Foundation.NSAttributedString?)
+  public var imagevalue: (type: ZohoDeskPlatformDataBridge.ZPImageType, image: UIKit.UIImage?, backgroundImage: UIKit.UIImage?, data: Foundation.Data?)
+  public var datasource: (any ZohoDeskPlatformDataBridge.ZDPItemBinderModel)?
+  public var conditionalValue: Swift.String?
+  public var isHide: Swift.Bool
+  public var isOn: Swift.Bool
+  public var badgeValue: Swift.Int
+  public var styleInput: Any?
+  public var valueUpdation: (() -> ())?
+  public var progressValue: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  public var progressValueUpdation: ((CoreFoundation.CGFloat) -> ())?
+  public init(key: Swift.String)
+  @objc deinit
+}
+extension ZohoDeskPlatformDataBridge.ZPDataItem {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var icon: Foundation.NSAttributedString? {
+    get
+    set
+  }
+  #endif
+  public func updateValue<V>(_ keyPath: Swift.ReferenceWritableKeyPath<ZohoDeskPlatformDataBridge.ZPDataItem, V>, _ value: V)
+}
+public struct ZPImageDataValue {
+  public var data: Foundation.Data? {
+    get
+  }
+  public var conditionalValue: Swift.String {
+    get
+  }
+  public var type: ZohoDeskPlatformDataBridge.ZPImageType {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(type: ZohoDeskPlatformDataBridge.ZPImageType, data: Foundation.Data?, conditionalValue: Swift.String = "")
+  #endif
+}
+public enum ZPImageType {
+  case img, svg
+  public static func == (a: ZohoDeskPlatformDataBridge.ZPImageType, b: ZohoDeskPlatformDataBridge.ZPImageType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol ZDListCountDataSource : AnyObject {
+  func numberOfSections() -> Swift.Int
+  func numberOfRows(_ section: Swift.Int) -> Swift.Int
+}
+public protocol ZDListMetaDataSource : ZohoDeskPlatformDataBridge.ZDListCountDataSource {
+  var canLoadMore: Swift.Bool { get }
+  var loadMoreIntervalCount: Swift.Int { get }
+  func loadMore(after count: Swift.Int, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  var enableMultiSelection: ((Swift.Bool) -> ())? { get set }
+  #endif
+}
+public protocol ZDPageDatasoure {
+  var showPageIndex: Swift.Int { get }
+  func numberOfPages() -> Swift.Int
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getPage(of identifier: Swift.String?, at index: Swift.Int) -> ZohoDeskPlatformDataBridge.ZBCoreBridgeBinderProtocols<Any>?
+  #endif
+  func pagingViewScrollIndex(index: Swift.Int)
+}
+public protocol ZDUpdaterDataSource : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func updateUI(_ defaultCompletion: ((ZohoDeskPlatformDataBridge.ZDListUpdate?) -> Swift.Void)?, _ dbFetchCompletion: ((ZohoDeskPlatformDataBridge.ZDListFetchedResultUpdate?) -> Swift.Void)?)
+  #endif
+}
+public protocol ZPDetailUpdaterDataSource {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func updateUI(_ onCompletion: ((ZohoDeskPlatformDataBridge.ZDDetailUpdate?) -> Swift.Void)?)
+  #endif
+}
+public enum ZDListUpdate {
+  public enum ZDEditorSectionUpdate {
+    case insert(_: [Swift.Int]?)
+    case update(_: [Swift.Int]?)
+    case delete(_: [Swift.Int]?)
+  }
+  public enum ZDEditorFieldUpdate {
+    case insert(_: [Foundation.IndexPath]?)
+    case update(_: [Foundation.IndexPath]?)
+    case delete(_: [Foundation.IndexPath]?)
+    case editing(_: Foundation.IndexPath?)
+    case move(_: Foundation.IndexPath?, newIndexPath: Foundation.IndexPath?)
+  }
+  case performSection(ZohoDeskPlatformDataBridge.ZDListUpdate.ZDEditorSectionUpdate)
+  case performItem(ZohoDeskPlatformDataBridge.ZDListUpdate.ZDEditorFieldUpdate)
+  case refresh
+  case scroll_to(Foundation.IndexPath, UIKit.UITableView.ScrollPosition)
+  case topNavigation
+  case bottomNavigation
+  case collapsingHeader
+  case floatingHeader
+  case keyboardAccessory
+  case container
+  case showError(_: Swift.Bool = true, state: ZohoDeskPlatformDataBridge.ZPErrorState = ZPErrorState.noData)
+  case search(ZohoDeskPlatformDataBridge.ZDSearchUpdate)
+}
+public enum ZDDetailUpdate {
+  case refresh
+  case topNavigation
+  case bottomNavigation
+  case collapsingHeader
+  case floatingHeader
+  case keyboardAccessory
+  case showError(_: Swift.Bool = true, state: ZohoDeskPlatformDataBridge.ZPErrorState = ZPErrorState.noData)
+  case search(ZohoDeskPlatformDataBridge.ZDSearchUpdate)
+}
+public enum ZDSearchUpdate {
+  case refresh
+  case update
+  case hide
+  public static func == (a: ZohoDeskPlatformDataBridge.ZDSearchUpdate, b: ZohoDeskPlatformDataBridge.ZDSearchUpdate) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol ZDSearchResultsUpdater : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func updateResults(forKeyword keyword: Swift.String, ofState state: ZohoDeskPlatformDataBridge.ZPFieldEditorState?, from searchBar: UIKit.UISearchBar?)
+  #endif
+}
+public enum ZDListFetchedResultUpdate {
+  case begin
+  case finish
+  case section(_: Swift.Int, _: CoreData.NSFetchedResultsChangeType)
+  case list(_: Any, _: Foundation.IndexPath?, _: CoreData.NSFetchedResultsChangeType, _: Foundation.IndexPath?)
+}
+public enum ZDBMapLayer {
+  case satellite, hybrid, standard
+  public static func == (a: ZohoDeskPlatformDataBridge.ZDBMapLayer, b: ZohoDeskPlatformDataBridge.ZDBMapLayer) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol ZDBPinLocation {
+  var latitude: Swift.Double { get }
+  var longitude: Swift.Double { get }
+  var id: Swift.String { get }
+}
+public enum MapAccessoryType {
+  case marker(location: any ZohoDeskPlatformDataBridge.ZDBPinLocation)
+  case line(sourceLocation: any ZohoDeskPlatformDataBridge.ZDBPinLocation, destinationLocation: any ZohoDeskPlatformDataBridge.ZDBPinLocation)
+  case window(location: any ZohoDeskPlatformDataBridge.ZDBPinLocation)
+}
+public protocol ZBMapItemProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func googleAPIKey() -> Swift.String?
+  #endif
+  func deviceLocation(onCompletion: @escaping (_ userLoction: any ZohoDeskPlatformDataBridge.ZDBPinLocation, _ needZoom: Swift.Bool) -> Swift.Void)
+  func showCurrentUserLocation(onCompletion: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getPins(onCompletion: @escaping ([any ZohoDeskPlatformDataBridge.ZDBPinLocation]?) -> Swift.Void)
+  #endif
+  func setLayerType() -> ZohoDeskPlatformDataBridge.ZDBMapLayer
+  #if compiler(>=5.3) && $NonescapableTypes
+  func render(basedOn mapAccessory: ZohoDeskPlatformDataBridge.MapAccessoryType) -> Swift.String?
+  #endif
+  func prepareMarkerInfoWindow(pinInfo: any ZohoDeskPlatformDataBridge.ZDBPinLocation, onCompletion: @escaping (Swift.Bool) -> Swift.Void)
+  func getRoute(onCompletion: @escaping (_ source: any ZohoDeskPlatformDataBridge.ZDBPinLocation, _ destination: any ZohoDeskPlatformDataBridge.ZDBPinLocation) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getRoutePolyStrings(source: any ZohoDeskPlatformDataBridge.ZDBPinLocation, destination: any ZohoDeskPlatformDataBridge.ZDBPinLocation, onCompletion: @escaping ([Swift.String]?) -> Swift.Void)
+  #endif
+}
+public protocol ViewBlock {
+}
+public typealias Value = (plainString: Swift.String?, placeHolderString: Swift.String?, attributedString: Foundation.NSAttributedString?, attributedPlaceHolderString: Foundation.NSAttributedString?, urlString: Swift.String?, conditionalValue: Swift.String?, date: Foundation.Date?)
+public typealias ImageValue = (image: UIKit.UIImage?, data: Foundation.Data?, asset: Photos.PHAsset?, placeHolderImage: UIKit.UIImage?, icon: Foundation.NSAttributedString?, placeHolderText: Swift.String?, type: ZohoDeskPlatformDataBridge.ZPDataType?)
+public enum ZPDataType {
+  case img
+  case svg
+  public static func == (a: ZohoDeskPlatformDataBridge.ZPDataType, b: ZohoDeskPlatformDataBridge.ZPDataType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public typealias GeneralDataSource<T> = T
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @dynamicMemberLookup public class ZBDataItem : ObjectiveC.NSObject {
+  public var viewType: Swift.String
+  public var type: ZohoDeskPlatformDataBridge.ZPItemType
+  public var key: Swift.String
+  public var value: (plainString: Swift.String?, placeHolderString: Swift.String?, attributedString: Foundation.NSAttributedString?, attributedPlaceHolderString: Foundation.NSAttributedString?, urlString: Swift.String?, conditionalValue: Swift.String?, date: Foundation.Date?)
+  public var imageValue: (image: UIKit.UIImage?, data: Foundation.Data?, asset: Photos.PHAsset?, placeHolderImage: UIKit.UIImage?, icon: Foundation.NSAttributedString?, placeHolderText: Swift.String?, type: ZohoDeskPlatformDataBridge.ZPDataType?)
+  public var listDataSource: (any ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDListCountDataSource & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource)?
+  public var pickerDataSource: (any ZohoDeskPlatformDataBridge.ZDListCountDataSource & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource)?
+  public var chartDataSource: (any ZohoDeskPlatformDataBridge.ZBChartItemProtocol & ZohoDeskPlatformDataBridge.ZDChartUpdateDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource)?
+  public var mapDataSource: (any ZohoDeskPlatformDataBridge.ZBMapItemProtocol)?
+  public var isHide: Swift.Bool
+  public var badge: Swift.Int
+  public var maxCharacter: Swift.Int
+  public var styleInput: Any?
+  public var becomesFirstResponder: Swift.Bool {
+    get
+    set
+  }
+  public var valueUpdation: (() -> ())?
+  public var triggerKeyboard: (() -> ())?
+  public var didFinishWebViewLoading: (() -> Swift.Void)?
+  public var userScript: Swift.String?
+  public var webViewMessage: [Swift.String]?
+  public var messageHandler: ((WebKit.WKScriptMessage) -> Swift.Void)?
+  public init(key: Swift.String, viewType: Swift.String, type: ZohoDeskPlatformDataBridge.ZPItemType = .UNRECOGNIZED)
+  public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, imageValue: ZohoDeskPlatformDataBridge.ImageValue, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  public func updateValue()
+  public func resignKeyboard()
+  @objc deinit
+}
+extension ZohoDeskPlatformDataBridge.ZBDataItem {
+  public subscript<T>(dynamicMember keyPath: Swift.WritableKeyPath<ZohoDeskPlatformDataBridge.Value, T>) -> T {
+    get
+    set
+  }
+  public subscript<T>(dynamicMember keyPath: Swift.WritableKeyPath<ZohoDeskPlatformDataBridge.ImageValue, T>) -> T {
+    get
+    set
+  }
+  public func updateValue<V>(_ keyPath: Swift.ReferenceWritableKeyPath<ZohoDeskPlatformDataBridge.ZBDataItem, V>, _ value: V)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZBListDataItem : ZohoDeskPlatformDataBridge.ZBDataItem {
+  override public init(key: Swift.String, viewType: Swift.String, type: ZohoDeskPlatformDataBridge.ZPItemType = super)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, imageValue: ZohoDeskPlatformDataBridge.ImageValue, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZBContextualDataItem : ZohoDeskPlatformDataBridge.ZBDataItem {
+  override public init(key: Swift.String, viewType: Swift.String, type: ZohoDeskPlatformDataBridge.ZPItemType = super)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, imageValue: ZohoDeskPlatformDataBridge.ImageValue, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZDIconDataItem : ZohoDeskPlatformDataBridge.ZBDataItem {
+  override public init(key: Swift.String, viewType: Swift.String, type: ZohoDeskPlatformDataBridge.ZPItemType = super)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, imageValue: ZohoDeskPlatformDataBridge.ImageValue, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZDSeparatorDataItem : ZohoDeskPlatformDataBridge.ZBDataItem {
+  override public init(key: Swift.String, viewType: Swift.String, type: ZohoDeskPlatformDataBridge.ZPItemType = super)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, imageValue: ZohoDeskPlatformDataBridge.ImageValue, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZBImageDataItem : ZohoDeskPlatformDataBridge.ZBDataItem {
+  override public init(key: Swift.String, viewType: Swift.String, type: ZohoDeskPlatformDataBridge.ZPItemType = super)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, imageValue: ZohoDeskPlatformDataBridge.ImageValue, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZBButtonDataItem : ZohoDeskPlatformDataBridge.ZBDataItem {
+  override public init(key: Swift.String, viewType: Swift.String, type: ZohoDeskPlatformDataBridge.ZPItemType = super)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, imageValue: ZohoDeskPlatformDataBridge.ImageValue, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZBBarButtonDataItem : ZohoDeskPlatformDataBridge.ZBDataItem {
+  override public init(key: Swift.String, viewType: Swift.String, type: ZohoDeskPlatformDataBridge.ZPItemType = super)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, imageValue: ZohoDeskPlatformDataBridge.ImageValue, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZBScrollViewDataItem : ZohoDeskPlatformDataBridge.ZBDataItem {
+  override public init(key: Swift.String, viewType: Swift.String, type: ZohoDeskPlatformDataBridge.ZPItemType = super)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, imageValue: ZohoDeskPlatformDataBridge.ImageValue, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZBTextDataItem : ZohoDeskPlatformDataBridge.ZBDataItem {
+  override public init(key: Swift.String, viewType: Swift.String, type: ZohoDeskPlatformDataBridge.ZPItemType = super)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, imageValue: ZohoDeskPlatformDataBridge.ImageValue, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZBProgressDataItem : ZohoDeskPlatformDataBridge.ZBDataItem {
+  public var progressValue: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  public var progressValueUpdation: ((CoreFoundation.CGFloat) -> ())?
+  override public init(key: Swift.String, viewType: Swift.String, type: ZohoDeskPlatformDataBridge.ZPItemType = super)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, imageValue: ZohoDeskPlatformDataBridge.ImageValue, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZDCheckBoxDataItem : ZohoDeskPlatformDataBridge.ZBDataItem {
+  public var isOn: Swift.Bool
+  override public init(key: Swift.String, viewType: Swift.String, type: ZohoDeskPlatformDataBridge.ZPItemType = super)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, imageValue: ZohoDeskPlatformDataBridge.ImageValue, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZBPickerDataItem : ZohoDeskPlatformDataBridge.ZBDataItem {
+  public var columnData: [[Swift.String]]
+  override public init(key: Swift.String, viewType: Swift.String, type: ZohoDeskPlatformDataBridge.ZPItemType = super)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, imageValue: ZohoDeskPlatformDataBridge.ImageValue, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZBChartDataItem : ZohoDeskPlatformDataBridge.ZBDataItem {
+  override public init(key: Swift.String, viewType: Swift.String, type: ZohoDeskPlatformDataBridge.ZPItemType = super)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  override public init(key: Swift.String, viewType: Swift.String, value: ZohoDeskPlatformDataBridge.Value, imageValue: ZohoDeskPlatformDataBridge.ImageValue, type: ZohoDeskPlatformDataBridge.ZPItemType, isHide: Swift.Bool)
+  @objc deinit
+}
+public typealias ZPBinderModel = ZohoDeskPlatformDataBridge.ZBCoreBridgeBinderProtocols<Any>?
+#if compiler(>=5.3) && $NonescapableTypes
+extension Swift.Optional where Wrapped == Any {
+  public func isLatestVersion() -> Swift.Bool
+  public func getIdentifier() -> Swift.String
+}
+#endif
+public protocol ZDPlatformConfiguration : ZohoDeskPlatformDataBridge.ZDPlatformFontConfiguration {
+  var ZPThemeType: ZohoDeskPlatformDataBridge.ZPBuilderThemeType { get }
+  var ZPEnableSystemAccessibility: Swift.Bool { get }
+  var ZPLocale: Swift.String { get }
+  var ZPEnableLog: Swift.Bool { get }
+  var ZPPrivacyOptions: ZohoDeskPlatformDataBridge.ZPPrivacySettings { get }
+  var ZPOverrideNavigationPopGesture: Swift.Bool { get }
+}
+public protocol ZDPlatformFontConfiguration {
+  func font(for name: Swift.String, weight: UIKit.UIFont.Weight) -> Swift.String
+}
+extension ZohoDeskPlatformDataBridge.ZDPlatformConfiguration {
+  public var ZPThemeType: ZohoDeskPlatformDataBridge.ZPBuilderThemeType {
+    get
+  }
+  public var ZPEnableLog: Swift.Bool {
+    get
+  }
+  public var ZPEnableSystemAccessibility: Swift.Bool {
+    get
+  }
+  public var ZPLocale: Swift.String {
+    get
+  }
+  public var ZPPrivacyOptions: ZohoDeskPlatformDataBridge.ZPPrivacySettings {
+    get
+  }
+  public var ZPOverrideNavigationPopGesture: Swift.Bool {
+    get
+  }
+  public func font(for name: Swift.String, weight: UIKit.UIFont.Weight) -> Swift.String
+}
+public struct ZPPrivacySettings {
+  public var disableAutoCorrection: Swift.Bool
+  public var disableCopyPaste: Swift.Bool
+  public var shouldSecureScreen: Swift.Bool
+  public var hideMediaPreviewSharing: Swift.Bool
+  public init(shouldSecureScreen: Swift.Bool = false, disableCopyPaste: Swift.Bool = false, hideMediaPreviewSharing: Swift.Bool = false, disableAutoCorrection: Swift.Bool = false)
+}
+extension ZohoDeskPlatformDataBridge.ZDListCountDataSource {
+  public func numberOfSections() -> Swift.Int
+  public func numberOfRows(_ section: Swift.Int) -> Swift.Int
+}
+extension ZohoDeskPlatformDataBridge.ZDListMetaDataSource {
+  public var loadMoreIntervalCount: Swift.Int {
+    get
+  }
+  public func loadMore(after count: Swift.Int, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var enableMultiSelection: ((Swift.Bool) -> ())? {
+    get
+    set(newValue)
+  }
+  #endif
+}
+extension ZohoDeskPlatformDataBridge.ZDPageDatasoure {
+  public var showPageIndex: Swift.Int {
+    get
+  }
+  public func numberOfPages() -> Swift.Int
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getPage(of identifier: Swift.String?, at index: Swift.Int) -> ZohoDeskPlatformDataBridge.ZBCoreBridgeBinderProtocols<Any>?
+  #endif
+  public func pagingViewScrollIndex(index: Swift.Int)
+}
+extension ZohoDeskPlatformDataBridge.ZDUpdaterDataSource {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func updateUI(_ defaultCompletion: ((ZohoDeskPlatformDataBridge.ZDListUpdate?) -> Swift.Void)?, _ dbFetchCompletion: ((ZohoDeskPlatformDataBridge.ZDListFetchedResultUpdate?) -> Swift.Void)?)
+  #endif
+}
+extension ZohoDeskPlatformDataBridge.ZPDetailUpdaterDataSource {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func updateUI(_ onCompletion: ((ZohoDeskPlatformDataBridge.ZDDetailUpdate?) -> Swift.Void)?)
+  #endif
+}
+extension ZohoDeskPlatformDataBridge.ZDSearchResultsUpdater {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func updateResults(forKeyword keyword: Swift.String, ofState state: ZohoDeskPlatformDataBridge.ZPFieldEditorState?, from searchBar: UIKit.UISearchBar?)
+  #endif
+}
+extension ZohoDeskPlatformDataBridge.ZDEditorDatasource {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func editor(content: Swift.String?, rawValue: Any?, ofState state: ZohoDeskPlatformDataBridge.ZPFieldEditorState?, fromIndexPath indexPath: Foundation.IndexPath)
+  #endif
+}
+extension ZohoDeskPlatformDataBridge.ZDBinderUtility {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func downloadImage(for url: Swift.String, onCompletion: @escaping (UIKit.UIImage?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func downloadImageData(for url: Swift.String, onCompletion: @escaping (Foundation.Data?) -> Swift.Void)
+  #endif
+  public func prepareBuilderJSON(onCompletion: @escaping (Foundation.Data) -> Swift.Void)
+  public func fetchJsons() async -> [Foundation.Data]
+}
+extension ZohoDeskPlatformDataBridge.ZDInitializeDataSource {
+  public func doRender(onCompletion: @escaping (ZohoDeskPlatformDataBridge.ZPUISegment) -> Swift.Void)
+}
+extension ZohoDeskPlatformDataBridge.ZDErrorBinderDataSource {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func errorUI(datasource: (any ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource)?)
+  #endif
+}
+extension ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func render(basedOn patternType: ZohoDeskPlatformDataBridge.ZDPatternType) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func handle(loaderCompletion: ((ZohoDeskPlatformDataBridge.ZPLoaderProgress) -> Swift.Void)?)
+  #endif
+  public func downloadData(fromUrl url: Swift.String, onComplete complete: @escaping (ZohoDeskPlatformDataBridge.ZPImageHandlerType) -> Swift.Void)
+}
+public protocol ZPMediaPickerProtocol : UIKit.UIImagePickerControllerDelegate, UIKit.UINavigationControllerDelegate {
+  var selectionLimit: Swift.Int { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var mediaType: ZohoDeskPlatformDataBridge.ZPMediaType? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var preSelectedAssets: [Photos.PHAsset]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func mediaPicker(didFinishPicking media: [Photos.PHAsset]?)
+  #endif
+  func mediaPicker(didFinishCapturing info: [UIKit.UIImagePickerController.InfoKey : Any])
+  func mediaPicker(didFailWith error: ZohoDeskPlatformDataBridge.ZPMediaPickerError)
+}
+extension ZohoDeskPlatformDataBridge.ZPMediaPickerProtocol {
+  public var selectionLimit: Swift.Int {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var mediaType: ZohoDeskPlatformDataBridge.ZPMediaType? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var preSelectedAssets: [Photos.PHAsset]? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func mediaPicker(didFinishPicking media: [Photos.PHAsset]?)
+  #endif
+  public func mediaPicker(didFinishCapturing info: [UIKit.UIImagePickerController.InfoKey : Any])
+  public func mediaPicker(didFailWith error: ZohoDeskPlatformDataBridge.ZPMediaPickerError)
+}
+public enum ZPMediaPickerError : Swift.Error {
+  case selectionLimitExceeded
+  case cameraAccessDenied
+  case photosAccessDenied
+  case cameraSourceUnavailable
+  case unableToSaveMedia(any Swift.Error)
+  case unableToScan
+  case unableToFlash
+}
+public enum ZPMediaType {
+  case image, video
+  public static func == (a: ZohoDeskPlatformDataBridge.ZPMediaType, b: ZohoDeskPlatformDataBridge.ZPMediaType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ZBDataSourceType {
+  public enum ZBSectionDataSource {
+    case getElement(_: Swift.Int, _: [ZohoDeskPlatformDataBridge.ZBDataItem])
+  }
+  public enum ZBListDataSource {
+    case getElement(_: Foundation.IndexPath, _: [ZohoDeskPlatformDataBridge.ZBDataItem])
+  }
+  public enum ZBGeneralDataSource {
+    case getElement(_: [ZohoDeskPlatformDataBridge.ZBDataItem])
+  }
+  case listHeader(ofType: ZohoDeskPlatformDataBridge.ZBDataSourceType.ZBGeneralDataSource)
+  case listFooter(ofType: ZohoDeskPlatformDataBridge.ZBDataSourceType.ZBGeneralDataSource)
+  case sectionHeader(ofType: ZohoDeskPlatformDataBridge.ZBDataSourceType.ZBSectionDataSource)
+  case sectionFooter(ofType: ZohoDeskPlatformDataBridge.ZBDataSourceType.ZBSectionDataSource)
+  case list(ofType: ZohoDeskPlatformDataBridge.ZBDataSourceType.ZBListDataSource)
+  case container(ofType: ZohoDeskPlatformDataBridge.ZBDataSourceType.ZBGeneralDataSource)
+  case keyboardAccessory(ofType: ZohoDeskPlatformDataBridge.ZBDataSourceType.ZBGeneralDataSource)
+  case navigation(ofType: ZohoDeskPlatformDataBridge.ZBDataSourceType.ZBGeneralDataSource)
+  case collapsingHeader(ofType: ZohoDeskPlatformDataBridge.ZBDataSourceType.ZBGeneralDataSource)
+  case floatingHeader(ofType: ZohoDeskPlatformDataBridge.ZBDataSourceType.ZBGeneralDataSource)
+  case search(ofType: ZohoDeskPlatformDataBridge.ZBDataSourceType.ZBGeneralDataSource)
+  case fab(ofType: ZohoDeskPlatformDataBridge.ZBDataSourceType.ZBGeneralDataSource)
+}
+public enum ZPUIBuilderAction {
+  public enum ZPSectionAction {
+    case tap(_: Swift.String?, _: Swift.Int?)
+    case longPress(_: Swift.String?, _: Swift.Int?)
+  }
+  public enum ZPListAction {
+    case tap(_: Swift.String?, _: Foundation.IndexPath?)
+    case rightSwipe(_: Swift.String?, _: Foundation.IndexPath?)
+    case leftSwipe(_: Swift.String?, _: Foundation.IndexPath?)
+    case longPress(_: Swift.String?, _: Foundation.IndexPath?)
+  }
+  public enum ZPGeneralAction {
+    case target(_: Swift.String?)
+  }
+  public enum ZPChartAction {
+    case getIndex(_: Swift.Int)
+  }
+  public enum ZPPickerAction {
+    case dateAndTime(_: Foundation.Date, state: ZohoDeskPlatformDataBridge.ZPFieldEditorState?)
+    case customValue(_: [Foundation.IndexPath], state: ZohoDeskPlatformDataBridge.ZPFieldEditorState?)
+  }
+  case section(_: ZohoDeskPlatformDataBridge.ZPUIBuilderAction.ZPSectionAction)
+  case list(_: ZohoDeskPlatformDataBridge.ZPUIBuilderAction.ZPListAction)
+  case general(_: ZohoDeskPlatformDataBridge.ZPUIBuilderAction.ZPGeneralAction)
+  case search(_: ZohoDeskPlatformDataBridge.ZPUIBuilderAction.ZPGeneralAction)
+  case error(_: ZohoDeskPlatformDataBridge.ZPUIBuilderAction.ZPGeneralAction)
+  case chart(_: ZohoDeskPlatformDataBridge.ZPUIBuilderAction.ZPChartAction)
+  case picker(_: ZohoDeskPlatformDataBridge.ZPUIBuilderAction.ZPPickerAction)
+}
+public protocol ZPBuilderActionDataSource : AnyObject, ZohoDeskPlatformDataBridge.ZPUtilActionDataSource {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, deprecated, message: "New param has added. Will remove this, once migrated to the new method.")
+  func doPerform(action: ZohoDeskPlatformDataBridge.ZPUIBuilderAction, onCompletion: @escaping (_ perform: Swift.Bool, _ navigateBinder: ZohoDeskPlatformDataBridge.ZBCoreBridgeBinderProtocols<Any>?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func doPerform(builderAction action: ZohoDeskPlatformDataBridge.ZPUIBuilderAction, onCompletion: @escaping (_ navigateBinder: ZohoDeskPlatformDataBridge.ZBCoreBridgeBinderProtocols<Any>?, _ completion: ZohoDeskPlatformDataBridge.ZPVoidCompletion?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var performAction: (() -> ())? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var moveTo: ((_ rect: CoreFoundation.CGRect?) -> Swift.Void)? { get set }
+  #endif
+  func pullToRefresh(item key: Swift.String, onCompletion handler: @escaping () -> Swift.Void)
+}
+public typealias ZPVoidCompletion = () -> Swift.Void
+public typealias ZBAlertActionItem = UIKit.UIAlertAction
+extension ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var performAction: ZohoDeskPlatformDataBridge.ZPVoidCompletion? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var moveTo: ((_ rect: CoreFoundation.CGRect?) -> Swift.Void)? {
+    get
+    set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func doPerform(action: ZohoDeskPlatformDataBridge.ZPUIBuilderAction, onCompletion: @escaping (_ perform: Swift.Bool, _ navigateBinder: ZohoDeskPlatformDataBridge.ZBCoreBridgeBinderProtocols<Any>?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func doPerform(builderAction action: ZohoDeskPlatformDataBridge.ZPUIBuilderAction, onCompletion: @escaping (_ navigateBinder: ZohoDeskPlatformDataBridge.ZBCoreBridgeBinderProtocols<Any>?, _ completion: ZohoDeskPlatformDataBridge.ZPVoidCompletion?) -> Swift.Void)
+  #endif
+  public func pullToRefresh(item key: Swift.String, onCompletion handler: @escaping () -> Swift.Void)
+}
+public protocol ZPUtilActionDataSource {
+}
+extension ZohoDeskPlatformDataBridge.ZPUtilActionDataSource {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func showAlert(title: Swift.String?, message: Swift.String?, actions: [ZohoDeskPlatformDataBridge.ZBAlertActionItem])
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func showActionSheet(title: Swift.String?, message: Swift.String?, actions: [ZohoDeskPlatformDataBridge.ZBAlertActionItem])
+  #endif
+  public func showToast(message: Swift.String, position: ZohoDeskPlatformDataBridge.ToastPosition = .bottom)
+}
+public enum ZPItemType {
+  public typealias RawValue = Swift.Int
+  case hStack
+  case vStack
+  case zStack
+  case label
+  case button
+  case textInput
+  case materialTextInput
+  case textView
+  case iconView
+  case imageView
+  case separatorView
+  case webView
+  case scrollView
+  case listView
+  case popUpView
+  case progressView
+  case checkBoxView
+  case chartView
+  case tabLayoutViewPager
+  case pagingView
+  case page
+  case tabView
+  case tabViewIndicator
+  case loader
+  case rightBarButton
+  case leftBarButton
+  case pickerView
+  case UNRECOGNIZED
+  public init()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public var rawValue: Swift.Int {
+    get
+  }
+  public static func == (a: ZohoDeskPlatformDataBridge.ZPItemType, b: ZohoDeskPlatformDataBridge.ZPItemType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol ZDPBuilderAccessor {
+  init(with sessionId: Swift.String)
+  func initialize(using model: ZohoDeskPlatformDataBridge.ZPInitConfiguration)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func generateScreen(using model: ZohoDeskPlatformDataBridge.ZPInitConfiguration, and binder: ZohoDeskPlatformDataBridge.ZPBinderModel) -> UIKit.UIViewController?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func generateSegment(using model: ZohoDeskPlatformDataBridge.ZPHSegmentConfiguration, and binder: ZohoDeskPlatformDataBridge.ZPBinderModel) -> UIKit.UIView?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func generateItem(using model: ZohoDeskPlatformDataBridge.ZPHItemConfiguration, and binder: ZohoDeskPlatformDataBridge.ZPBinderModel) -> UIKit.UIView?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func generateView(using model: ZohoDeskPlatformDataBridge.ZPHItemConfiguration, and binder: any ZohoDeskPlatformDataBridge.ZDPItemBinderModel) -> UIKit.UIView?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func convertToDat(using jsonDatas: [Foundation.Data]) -> Foundation.Data?
+  #endif
+}
+extension ZohoDeskPlatformDataBridge.ZDPItemBinderModel {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getView(_ withToken: Swift.String = (ZDPlatform.shared.currentSession ?? ""), patternId: Swift.String) -> UIKit.UIView?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getView(with closure: @escaping ZohoDeskPlatformDataBridge.ZPHItemDataConstructor) -> UIKit.UIView?
+  #endif
+}
+extension ZohoDeskPlatformDataBridge.ZDPScreen {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getController(_ withToken: Swift.String = (ZDPlatform.shared.currentSession ?? "")) -> UIKit.UIViewController?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getController(with closure: (ZohoDeskPlatformDataBridge.ZPInitConfiguration) -> Swift.Void) -> UIKit.UIViewController?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getSegment(_ withToken: Swift.String = (ZDPlatform.shared.currentSession ?? ""), segmentType: ZohoDeskPlatformDataBridge.ZPScreenSegmentType) -> UIKit.UIView?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getSegment(with closure: (ZohoDeskPlatformDataBridge.ZPHSegmentConfiguration) -> Swift.Void) -> UIKit.UIView?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getView(_ withToken: Swift.String = (ZDPlatform.shared.currentSession ?? ""), patternId: Swift.String) -> UIKit.UIView?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getView(with closure: @escaping ZohoDeskPlatformDataBridge.ZPHItemDataConstructor) -> UIKit.UIView?
+  #endif
+}
+public protocol ZDPStateModifier {
+  func render(state: ZohoDeskPlatformDataBridge.ZPStateType)
+  func hideState()
+  @available(*, deprecated, message: "Instead use `load` state in `uistates`")
+  func renderNativeLoader()
+  @available(*, deprecated, message: "Instead use `load` state in `uistates`")
+  func hideNativeLoader()
+}
+public protocol ZDPScreenModifier : ZohoDeskPlatformDataBridge.ZDPStateModifier, ZohoDeskPlatformDataBridge.ZPActionDataSource {
+  func show(segment: ZohoDeskPlatformDataBridge.ZPScreenSegmentType)
+  func hide(segment: ZohoDeskPlatformDataBridge.ZPScreenSegmentType)
+  func refresh(segment: ZohoDeskPlatformDataBridge.ZPScreenSegmentType)
+  func showToast(_ message: Swift.String)
+}
+public protocol ZDPListModifier {
+  func insertItems(at indexPaths: [Foundation.IndexPath])
+  func deleteItems(at indexPaths: [Foundation.IndexPath])
+  func reloadItems(at indexPaths: [Foundation.IndexPath])
+  func updateItem(at indexPath: Foundation.IndexPath)
+  func moveItem(at indexPath: Foundation.IndexPath, to newIndexPath: Foundation.IndexPath)
+  func scrollItem(at indexPath: Foundation.IndexPath, with position: UIKit.UITableView.ScrollPosition)
+  func insertSections(_ indexes: [Swift.Int])
+  func deleteSections(_ indexes: [Swift.Int])
+  func reloadSections(_ indexes: [Swift.Int])
+  func reload()
+  #if compiler(>=5.3) && $NonescapableTypes
+  func performBatchUpdates(isAnimated: Swift.Bool, updates: (() -> Swift.Void)?)
+  #endif
+  func beginFetchResultUpdates()
+  func endFetchResultUpdates()
+  func updateFetchResult(atSectionIndex sectionIndex: Swift.Int, for type: CoreData.NSFetchedResultsChangeType)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func updateFetchResult(at indexPath: Foundation.IndexPath?, for type: CoreData.NSFetchedResultsChangeType, newIndexPath: Foundation.IndexPath?, isEditing: Swift.Bool)
+  #endif
+}
+public protocol ZDPWebModifier {
+  func evaluateJavaScript(_ query: Swift.String)
+  func addMessageHandler(_ names: [Swift.String])
+}
+public protocol ZDPPageModifier {
+  func insert(at index: Swift.Int)
+  func delete(at index: Swift.Int)
+  func scroll(to index: Swift.Int)
+  func refresh()
+}
+public protocol ZDPMapModifier {
+  func insert(at indexes: [Swift.Int])
+  func delete(at indexes: [Swift.Int])
+  func showMyLocation(_ show: Swift.Bool)
+  func setType(_ type: ZohoDeskPlatformDataBridge.ZPMapType)
+  func zoomTo(location: (lat: Swift.Double, lon: Swift.Double), level scale: Swift.Double, animated: Swift.Bool)
+}
+public typealias ZBCoreBridgeBinderProtocols<T> = T
+public typealias ZBListProtocol = ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDErrorBinderDataSource & ZohoDeskPlatformDataBridge.ZDInitializeDataSource & ZohoDeskPlatformDataBridge.ZDListMetaDataSource & ZohoDeskPlatformDataBridge.ZDSearchResultsUpdater & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource & ZohoDeskPlatformDataBridge.ZPNavigationDataSource
+public typealias ZBDetailProtocol = ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDErrorBinderDataSource & ZohoDeskPlatformDataBridge.ZDInitializeDataSource & ZohoDeskPlatformDataBridge.ZDPageDatasoure & ZohoDeskPlatformDataBridge.ZDSearchResultsUpdater & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource & ZohoDeskPlatformDataBridge.ZPDetailUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPNavigationDataSource
+public typealias ZBReplyProtocol = ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDErrorBinderDataSource & ZohoDeskPlatformDataBridge.ZDInitializeDataSource & ZohoDeskPlatformDataBridge.ZDListCountDataSource & ZohoDeskPlatformDataBridge.ZDSearchResultsUpdater & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource & ZohoDeskPlatformDataBridge.ZPNavigationDataSource
+public typealias ZBAlertProtocol = ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDInitializeDataSource & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource & ZohoDeskPlatformDataBridge.ZPNavigationDataSource
+public typealias ZBListItemProtocol = ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDListCountDataSource & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource
+public typealias ZBChartProtocol = ZohoDeskPlatformDataBridge.ZBChartItemProtocol & ZohoDeskPlatformDataBridge.ZDChartUpdateDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource
+public typealias ZBPickerViewProtocol = ZohoDeskPlatformDataBridge.ZDListCountDataSource & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource
+public typealias ZBErrorStateProtocol = ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource
+public typealias ZBChatProtocol = ZohoDeskPlatformDataBridge.ZBListProtocol
+public typealias ZBUtilPickerProtocol = ZohoDeskPlatformDataBridge.ZPFilePickerUtility & ZohoDeskPlatformDataBridge.ZPNavigationDataSource & ZohoDeskPlatformDataBridge.ZPUtilActionDataSource
+public typealias ZBUtilPreviewProtocol = ZohoDeskPlatformDataBridge.ZPAssetPreviewUtility & ZohoDeskPlatformDataBridge.ZPNavigationDataSource
+public typealias ZBMediaPickerProtocol = ZohoDeskPlatformDataBridge.ZPMediaPickerProtocol & ZohoDeskPlatformDataBridge.ZPNavigationDataSource & ZohoDeskPlatformDataBridge.ZPUtilActionDataSource
+public typealias ZBShareActivityProtocol = ZohoDeskPlatformDataBridge.ZPActivityProtocol & ZohoDeskPlatformDataBridge.ZPNavigationDataSource
+public protocol ZDBinderProtocol : ZohoDeskPlatformDataBridge.ZDBinderUtility, ZohoDeskPlatformDataBridge.ZDFontProtocol, ZohoDeskPlatformDataBridge.ZDPlatformConfiguration {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getBinder(for identifier: Swift.String) -> ZohoDeskPlatformDataBridge.ZPBinderModel
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getDetailDataSource(_ identifier: Swift.String) -> (any ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDErrorBinderDataSource & ZohoDeskPlatformDataBridge.ZDInitializeDataSource & ZohoDeskPlatformDataBridge.ZDPageDatasoure & ZohoDeskPlatformDataBridge.ZDSearchResultsUpdater & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource & ZohoDeskPlatformDataBridge.ZPDetailUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPNavigationDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getReplayDataSource(_ identifier: Swift.String) -> (any ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDErrorBinderDataSource & ZohoDeskPlatformDataBridge.ZDInitializeDataSource & ZohoDeskPlatformDataBridge.ZDListCountDataSource & ZohoDeskPlatformDataBridge.ZDSearchResultsUpdater & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource & ZohoDeskPlatformDataBridge.ZPNavigationDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getListDataSource(_ identifier: Swift.String) -> (any ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDErrorBinderDataSource & ZohoDeskPlatformDataBridge.ZDInitializeDataSource & ZohoDeskPlatformDataBridge.ZDListMetaDataSource & ZohoDeskPlatformDataBridge.ZDSearchResultsUpdater & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource & ZohoDeskPlatformDataBridge.ZPNavigationDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getChatDataSource(_ identifier: Swift.String) -> (any ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDErrorBinderDataSource & ZohoDeskPlatformDataBridge.ZDInitializeDataSource & ZohoDeskPlatformDataBridge.ZDListMetaDataSource & ZohoDeskPlatformDataBridge.ZDSearchResultsUpdater & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource & ZohoDeskPlatformDataBridge.ZPNavigationDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getErrorDataSource(ofState state: ZohoDeskPlatformDataBridge.ZPErrorState) -> (any ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getPickerUtilDataSource() -> (any ZohoDeskPlatformDataBridge.ZPFilePickerUtility & ZohoDeskPlatformDataBridge.ZPNavigationDataSource & ZohoDeskPlatformDataBridge.ZPUtilActionDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getPreviewUtilDataSource() -> (any ZohoDeskPlatformDataBridge.ZPAssetPreviewUtility & ZohoDeskPlatformDataBridge.ZPNavigationDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getShareActivityDataSource() -> (any ZohoDeskPlatformDataBridge.ZPActivityProtocol & ZohoDeskPlatformDataBridge.ZPNavigationDataSource)?
+  #endif
+}
+extension ZohoDeskPlatformDataBridge.ZDBinderProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getDetailDataSource(_ identifier: Swift.String) -> (any ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDErrorBinderDataSource & ZohoDeskPlatformDataBridge.ZDInitializeDataSource & ZohoDeskPlatformDataBridge.ZDPageDatasoure & ZohoDeskPlatformDataBridge.ZDSearchResultsUpdater & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource & ZohoDeskPlatformDataBridge.ZPDetailUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPNavigationDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getReplayDataSource(_ identifier: Swift.String) -> (any ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDErrorBinderDataSource & ZohoDeskPlatformDataBridge.ZDInitializeDataSource & ZohoDeskPlatformDataBridge.ZDListCountDataSource & ZohoDeskPlatformDataBridge.ZDSearchResultsUpdater & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource & ZohoDeskPlatformDataBridge.ZPNavigationDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getListDataSource(_ identifier: Swift.String) -> (any ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDErrorBinderDataSource & ZohoDeskPlatformDataBridge.ZDInitializeDataSource & ZohoDeskPlatformDataBridge.ZDListMetaDataSource & ZohoDeskPlatformDataBridge.ZDSearchResultsUpdater & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource & ZohoDeskPlatformDataBridge.ZPNavigationDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getChatDataSource(_ identifier: Swift.String) -> (any ZohoDeskPlatformDataBridge.ZDEditorDatasource & ZohoDeskPlatformDataBridge.ZDErrorBinderDataSource & ZohoDeskPlatformDataBridge.ZDInitializeDataSource & ZohoDeskPlatformDataBridge.ZDListMetaDataSource & ZohoDeskPlatformDataBridge.ZDSearchResultsUpdater & ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource & ZohoDeskPlatformDataBridge.ZPBuilderActionDataSource & ZohoDeskPlatformDataBridge.ZPNavigationDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getErrorDataSource(ofState state: ZohoDeskPlatformDataBridge.ZPErrorState) -> (any ZohoDeskPlatformDataBridge.ZDUIRenderingDataSource & ZohoDeskPlatformDataBridge.ZDUpdaterDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getPickerUtilDataSource() -> (any ZohoDeskPlatformDataBridge.ZPFilePickerUtility & ZohoDeskPlatformDataBridge.ZPNavigationDataSource & ZohoDeskPlatformDataBridge.ZPUtilActionDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getPreviewUtilDataSource() -> (any ZohoDeskPlatformDataBridge.ZPAssetPreviewUtility & ZohoDeskPlatformDataBridge.ZPNavigationDataSource)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getShareActivityDataSource() -> (any ZohoDeskPlatformDataBridge.ZPActivityProtocol & ZohoDeskPlatformDataBridge.ZPNavigationDataSource)?
+  #endif
+}
+public protocol ZDFontProtocol : AnyObject {
+  func fontFile(weight: UIKit.UIFont.Weight) -> Swift.String
+}
+extension ZohoDeskPlatformDataBridge.ZDFontProtocol {
+  public func fontFile(weight: UIKit.UIFont.Weight) -> Swift.String
+}
+public enum ZDPSessionType {
+  case current
+  case some([Swift.String])
+  case all
+}
+public enum ZPBuilderThemeType : Swift.Int {
+  case system, light, dark
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol ZDPBuilderObservable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var currentSession: Swift.String? { get }
+  #endif
+  var openSessions: Swift.Set<Swift.String> { get }
+  func terminateSession(for sessionId: Swift.String)
+  func terminate()
+  #if compiler(>=5.3) && $NonescapableTypes
+  func overrideColors(for session: ZohoDeskPlatformDataBridge.ZDPSessionType, colorId color_uid: Swift.String, darkColor: UIKit.UIColor?, lightColor: UIKit.UIColor?)
+  #endif
+  func overrideColor(for session: ZohoDeskPlatformDataBridge.ZDPSessionType, colorId color_uid: Swift.String, value color: UIKit.UIColor, theme: ZohoDeskPlatformDataBridge.ZPBuilderThemeType)
+  func setLocale(for session: ZohoDeskPlatformDataBridge.ZDPSessionType, value: Swift.String)
+  func setTheme(for session: ZohoDeskPlatformDataBridge.ZDPSessionType, value: ZohoDeskPlatformDataBridge.ZPBuilderThemeType)
+  func overrideJsonValues(for session: ZohoDeskPlatformDataBridge.ZDPSessionType, screenId screen: Swift.String, on segment: ZohoDeskPlatformDataBridge.ZPUISegment, delegate: any ZohoDeskPlatformDataBridge.ZDPJsonOverridingDelegate)
+}
+@_hasMissingDesignatedInitializers public class ZDPlatformObservable {
+  public func updateInstance(observable: any ZohoDeskPlatformDataBridge.ZDPBuilderObservable)
+  public func terminateInstance()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ZDPlatform {
+  public class var shared: ZohoDeskPlatformDataBridge.ZDPlatform {
+    get
+  }
+  @objc deinit
+}
+extension ZohoDeskPlatformDataBridge.ZDPlatform {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var currentSession: Swift.String? {
+    get
+  }
+  #endif
+  public var openSessions: Swift.Set<Swift.String> {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func overrideColors(for session: ZohoDeskPlatformDataBridge.ZDPSessionType = .current, colorId color_uid: Swift.String, darkColor: UIKit.UIColor?, lightColor: UIKit.UIColor?)
+  #endif
+  public func overrideColor(for session: ZohoDeskPlatformDataBridge.ZDPSessionType = .current, colorId color_uid: Swift.String, value color: UIKit.UIColor, theme: ZohoDeskPlatformDataBridge.ZPBuilderThemeType)
+  public func setLocale(for session: ZohoDeskPlatformDataBridge.ZDPSessionType = .current, value: Swift.String)
+  public func setTheme(for session: ZohoDeskPlatformDataBridge.ZDPSessionType = .current, value: ZohoDeskPlatformDataBridge.ZPBuilderThemeType)
+  public func overrideJsonValues(for session: ZohoDeskPlatformDataBridge.ZDPSessionType = .current, screenId screen: Swift.String = "", on segment: ZohoDeskPlatformDataBridge.ZPUISegment, delegate: any ZohoDeskPlatformDataBridge.ZDPJsonOverridingDelegate)
+}
+public protocol ZDPJsonOverridingDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var prefersLargeTitles: Swift.Bool? { get }
+  #endif
+}
+extension ZohoDeskPlatformDataBridge.ZDPJsonOverridingDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var prefersLargeTitles: Swift.Bool? {
+    get
+  }
+  #endif
+}
+public protocol ZPBinderConnector {
+  func getBinder(from identifier: Swift.String) -> any ZohoDeskPlatformDataBridge.ZPSharedAPIProtocol
+}
+public protocol ZPSharedAPIProtocol {
+  func initialize(onCompletion: (ZohoDeskPlatformDataBridge.ZPInitializeProgress) -> Swift.Void)
+  func fetchImageData(fromUrl url: Foundation.URL, completion: @escaping (ZohoDeskPlatformDataBridge.ZPImageDataValue) -> Swift.Void)
+  func doPerform(with actionKey: Swift.String, using action: ZohoDeskPlatformDataBridge.ZPActionModel)
+}
+extension ZohoDeskPlatformDataBridge.ZPSharedAPIProtocol {
+  public func initialize(onCompletion: (ZohoDeskPlatformDataBridge.ZPInitializeProgress) -> Swift.Void)
+  public func fetchImageData(fromUrl url: Foundation.URL, completion: @escaping (ZohoDeskPlatformDataBridge.ZPImageDataValue) -> Swift.Void)
+}
+public protocol ZPRenderingProtocol {
+  func render(instance type: ZohoDeskPlatformDataBridge.ZPRenderSegmentType) -> ZohoDeskPlatformDataBridge.ZPRender
+}
+extension ZohoDeskPlatformDataBridge.ZPRenderingProtocol {
+  public func render(instance type: ZohoDeskPlatformDataBridge.ZPRenderSegmentType) -> ZohoDeskPlatformDataBridge.ZPRender
+}
+public protocol ZPAccessProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var accessItem: ZohoDeskPlatformDataBridge.ZPAccessor? { get set }
+  #endif
+}
+extension ZohoDeskPlatformDataBridge.ZPAccessProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var accessItem: ZohoDeskPlatformDataBridge.ZPAccessor? {
+    get
+    set
+  }
+  #endif
+}
+public protocol ZPNavigationProtocol {
+  var identifier: Swift.String { get }
+}
+public protocol ZDPScreen : ZohoDeskPlatformDataBridge.ZPAccessProtocol, ZohoDeskPlatformDataBridge.ZPNavigationProtocol, ZohoDeskPlatformDataBridge.ZPRenderingProtocol, ZohoDeskPlatformDataBridge.ZPSharedAPIProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var screenModifier: (any ZohoDeskPlatformDataBridge.ZDPScreenModifier)? { get set }
+  #endif
+  func screen(stateNotifier: ZohoDeskPlatformDataBridge.ZPScreenStateNotifier)
+  func doRender(segment: @escaping (ZohoDeskPlatformDataBridge.ZPScreenSegmentType) -> ())
+  func prepareScreenData(using dataItem: ZohoDeskPlatformDataBridge.ZPDataItem, and type: ZohoDeskPlatformDataBridge.ZPScreenSegmentType)
+  func prepareStateData(using dataItem: ZohoDeskPlatformDataBridge.ZPDataItem, and type: ZohoDeskPlatformDataBridge.ZPStateType)
+}
+extension ZohoDeskPlatformDataBridge.ZDPScreen {
+  public func screen(stateNotifier: ZohoDeskPlatformDataBridge.ZPScreenStateNotifier)
+  public func doRender(segment: @escaping (ZohoDeskPlatformDataBridge.ZPScreenSegmentType) -> ())
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var screenModifier: (any ZohoDeskPlatformDataBridge.ZDPScreenModifier)? {
+    get
+    set
+  }
+  #endif
+  public func prepareStateData(using dataItem: ZohoDeskPlatformDataBridge.ZPDataItem, and type: ZohoDeskPlatformDataBridge.ZPStateType)
+}
+public protocol ZDPListView : ZohoDeskPlatformDataBridge.ZDPItemBinderModel, ZohoDeskPlatformDataBridge.ZPAccessProtocol, ZohoDeskPlatformDataBridge.ZPNavigationProtocol, ZohoDeskPlatformDataBridge.ZPRenderingProtocol, ZohoDeskPlatformDataBridge.ZPSharedAPIProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var listModifier: (any ZohoDeskPlatformDataBridge.ZDPListModifier)? { get set }
+  #endif
+  func prepareListViewData(using dataItem: ZohoDeskPlatformDataBridge.ZPDataItem, and type: ZohoDeskPlatformDataBridge.ZPListSegmentType)
+  func numberOfSections() -> Swift.Int
+  func numberOfRows(_ section: Swift.Int) -> Swift.Int
+  var loadMoreIntervalCount: Swift.Int { get }
+  func loadMore(after count: Swift.Int, load onComplete: @escaping (Swift.Bool) -> Swift.Void)
+  func didEndScroll(with visibleIndexPaths: [Foundation.IndexPath])
+}
+extension ZohoDeskPlatformDataBridge.ZDPListView {
+  public var identifier: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var listModifier: (any ZohoDeskPlatformDataBridge.ZDPListModifier)? {
+    get
+    set
+  }
+  #endif
+  public func numberOfSections() -> Swift.Int
+  public var loadMoreIntervalCount: Swift.Int {
+    get
+  }
+  public func loadMore(after count: Swift.Int, load onComplete: @escaping (Swift.Bool) -> Swift.Void)
+  public func didEndScroll(with visibleIndexPaths: [Foundation.IndexPath])
+  public func doPerform(with actionKey: Swift.String, using action: ZohoDeskPlatformDataBridge.ZPActionModel)
+}
+public protocol ZDPView : ZohoDeskPlatformDataBridge.ZDPItemBinderModel, ZohoDeskPlatformDataBridge.ZPAccessProtocol, ZohoDeskPlatformDataBridge.ZPNavigationProtocol, ZohoDeskPlatformDataBridge.ZPRenderingProtocol, ZohoDeskPlatformDataBridge.ZPSharedAPIProtocol {
+  func prepareViewData(using dataItem: ZohoDeskPlatformDataBridge.ZPDataItem)
+}
+extension ZohoDeskPlatformDataBridge.ZDPView {
+  public var identifier: Swift.String {
+    get
+  }
+  public func doPerform(with actionKey: Swift.String, using action: ZohoDeskPlatformDataBridge.ZPActionModel)
+}
+public protocol ZDPItemBinderModel {
+}
+public typealias WKDetectorType = WebKit.WKDataDetectorTypes
+public enum ZPWebContentType {
+  case content(Swift.String)
+  case url(Foundation.URL?)
+}
+public protocol ZDPWebView : ZohoDeskPlatformDataBridge.ZDPItemBinderModel, ZohoDeskPlatformDataBridge.ZPNavigationProtocol, ZohoDeskPlatformDataBridge.ZPSharedAPIProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var webModifier: (any ZohoDeskPlatformDataBridge.ZDPWebModifier)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var dataDetectorType: ZohoDeskPlatformDataBridge.WKDetectorType? { get }
+  #endif
+  func includeHeaderTags() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getBaseURL() -> Foundation.URL?
+  #endif
+  func prepareWebViewData() -> ZohoDeskPlatformDataBridge.ZPWebContentType
+  func webview(notifier type: ZohoDeskPlatformDataBridge.ZPWebViewActionNotifierType)
+}
+extension ZohoDeskPlatformDataBridge.ZDPWebView {
+  public var identifier: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var dataDetectorType: ZohoDeskPlatformDataBridge.WKDetectorType? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var webModifier: (any ZohoDeskPlatformDataBridge.ZDPWebModifier)? {
+    get
+    set
+  }
+  #endif
+  public func webview(notifier type: ZohoDeskPlatformDataBridge.ZPWebViewActionNotifierType)
+  public func includeHeaderTags() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getBaseURL() -> Foundation.URL?
+  #endif
+  public func doPerform(with actionKey: Swift.String, using action: ZohoDeskPlatformDataBridge.ZPActionModel)
+}
+public protocol ZDPMapView : ZohoDeskPlatformDataBridge.ZDPItemBinderModel, ZohoDeskPlatformDataBridge.ZPRenderingProtocol, ZohoDeskPlatformDataBridge.ZPSharedAPIProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var mapModifier: (any ZohoDeskPlatformDataBridge.ZDPMapModifier)? { get set }
+  #endif
+  var dataSource: [any ZohoDeskPlatformDataBridge.ZPMapCoordinate] { get }
+  func mapview(notifier type: ZohoDeskPlatformDataBridge.ZPMapViewActionNotifierType)
+  func prepareMapViewData(using dataItem: ZohoDeskPlatformDataBridge.ZPDataItem, and index: Swift.Int)
+}
+extension ZohoDeskPlatformDataBridge.ZDPMapView {
+  public var identifier: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var mapModifier: (any ZohoDeskPlatformDataBridge.ZDPMapModifier)? {
+    get
+    set
+  }
+  #endif
+  public func mapview(notifier type: ZohoDeskPlatformDataBridge.ZPMapViewActionNotifierType)
+  public func doPerform(with actionKey: Swift.String, using action: ZohoDeskPlatformDataBridge.ZPActionModel)
+}
+public protocol ZPTabPageProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var onLoadIndex: Swift.Int? { get }
+  #endif
+  func didScroll(to index: Swift.Int)
+}
+extension ZohoDeskPlatformDataBridge.ZPTabPageProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var onLoadIndex: Swift.Int? {
+    get
+  }
+  #endif
+  public func didScroll(to index: Swift.Int)
+}
+public typealias ZDPTabView = ZohoDeskPlatformDataBridge.ZDPListView & ZohoDeskPlatformDataBridge.ZPTabPageProtocol
+public protocol ZDPPage : ZohoDeskPlatformDataBridge.ZDPItemBinderModel, ZohoDeskPlatformDataBridge.ZPNavigationProtocol, ZohoDeskPlatformDataBridge.ZPSharedAPIProtocol, ZohoDeskPlatformDataBridge.ZPTabPageProtocol {
+  func numberOfPages() -> Swift.Int
+  #if compiler(>=5.3) && $NonescapableTypes
+  func page(for index: Swift.Int) -> ZohoDeskPlatformDataBridge.ZPBinderModel
+  #endif
+  func preparePagerViewData(using dataItem: ZohoDeskPlatformDataBridge.ZPDataItem)
+  #if compiler(>=5.3) && $NonescapableTypes
+  var pageModifier: (any ZohoDeskPlatformDataBridge.ZDPPageModifier)? { get set }
+  #endif
+}
+extension ZohoDeskPlatformDataBridge.ZDPPage {
+  public var identifier: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var pageModifier: (any ZohoDeskPlatformDataBridge.ZDPPageModifier)? {
+    get
+    set
+  }
+  #endif
+  public func doPerform(with actionKey: Swift.String, using action: ZohoDeskPlatformDataBridge.ZPActionModel)
+}
+public typealias ZDPChat = ZohoDeskPlatformDataBridge.ZDPListView & ZohoDeskPlatformDataBridge.ZDPScreen
+public enum ZDPNativeAlert : Swift.String {
+  case title
+  case message
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZDPNativeAlertAction : Swift.String {
+  case `default`
+  case destructive
+  case cancel
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ZPToast {
+  public static let shared: ZohoDeskPlatformDataBridge.ZPToast
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func show(message: Swift.String?, duration: Foundation.TimeInterval = 2, position: ZohoDeskPlatformDataBridge.ToastPosition, style: ZohoDeskPlatformDataBridge.ToastStyle = ToastManager.shared.style)
+  #endif
+  @objc deinit
+}
+public struct ToastStyle {
+  public init()
+  public var backgroundColor: UIKit.UIColor
+  public var titleColor: UIKit.UIColor
+  public var messageColor: UIKit.UIColor
+  public var maxWidthPercentage: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  public var maxHeightPercentage: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  public var horizontalPadding: CoreFoundation.CGFloat
+  public var verticalPadding: CoreFoundation.CGFloat
+  public var cornerRadius: CoreFoundation.CGFloat
+  public var titleFont: UIKit.UIFont
+  public var messageFont: UIKit.UIFont
+  public var titleAlignment: UIKit.NSTextAlignment
+  public var messageAlignment: UIKit.NSTextAlignment
+  public var titleNumberOfLines: Swift.Int
+  public var messageNumberOfLines: Swift.Int
+  public var displayShadow: Swift.Bool
+  public var shadowColor: UIKit.UIColor
+  public var shadowOpacity: Swift.Float {
+    get
+    set
+  }
+  public var shadowRadius: CoreFoundation.CGFloat
+  public var shadowOffset: CoreFoundation.CGSize
+  public var imageSize: CoreFoundation.CGSize
+  public var activitySize: CoreFoundation.CGSize
+  public var fadeDuration: Swift.Double
+  public var activityIndicatorColor: UIKit.UIColor
+  public var activityBackgroundColor: UIKit.UIColor
+}
+@_hasMissingDesignatedInitializers public class ToastManager {
+  public static let shared: ZohoDeskPlatformDataBridge.ToastManager
+  public var style: ZohoDeskPlatformDataBridge.ToastStyle
+  public var isTapToDismissEnabled: Swift.Bool
+  public var isQueueEnabled: Swift.Bool
+  public var duration: Swift.Double
+  public var position: ZohoDeskPlatformDataBridge.ToastPosition
+  @objc deinit
+}
+public enum ToastPosition {
+  case top
+  case center
+  case bottom
+  public static func == (a: ZohoDeskPlatformDataBridge.ToastPosition, b: ZohoDeskPlatformDataBridge.ToastPosition) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ZohoDeskPlatformDataBridge.ZPNavigate : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPNavigate : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPScreenAppearState : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPScreenAppearState : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPLoaderProgress : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPLoaderProgress : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPErrorState : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPErrorState : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPErrorState : Swift.RawRepresentable {}
+extension ZohoDeskPlatformDataBridge.ZPTransition : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPTransition : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPTransition : Swift.RawRepresentable {}
+extension ZohoDeskPlatformDataBridge.ZPPresentationStyle : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPPresentationStyle : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPPresentationStyle : Swift.RawRepresentable {}
+extension ZohoDeskPlatformDataBridge.ZPRefreshType : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPRefreshType : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPRefreshType : Swift.RawRepresentable {}
+extension ZohoDeskPlatformDataBridge.ZPInitializeProgress : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPInitializeProgress : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPScreenSegmentType : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPScreenSegmentType : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPStateType : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPStateType : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPMapSegmentType : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPMapSegmentType : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPMapType : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPMapType : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPFieldEditorState : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPFieldEditorState : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPImageType : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPImageType : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZDSearchUpdate : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZDSearchUpdate : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZDBMapLayer : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZDBMapLayer : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPDataType : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPDataType : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPMediaType : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPMediaType : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPItemType : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPItemType : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPBuilderThemeType : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZPBuilderThemeType : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZPBuilderThemeType : Swift.RawRepresentable {}
+extension ZohoDeskPlatformDataBridge.ZDPNativeAlert : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZDPNativeAlert : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZDPNativeAlert : Swift.RawRepresentable {}
+extension ZohoDeskPlatformDataBridge.ZDPNativeAlertAction : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ZDPNativeAlertAction : Swift.Hashable {}
+extension ZohoDeskPlatformDataBridge.ZDPNativeAlertAction : Swift.RawRepresentable {}
+extension ZohoDeskPlatformDataBridge.ToastPosition : Swift.Equatable {}
+extension ZohoDeskPlatformDataBridge.ToastPosition : Swift.Hashable {}

@@ -1,0 +1,503 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZohoDeskPortalCommunity
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import AVFoundation
+import CoreData
+import DeveloperToolsSupport
+import Foundation
+import Swift
+import SwiftUI
+import UIKit
+import ZDHelperKit
+import ZohoDeskPlatformDataBridge
+import ZohoDeskPlatformUIKit
+import ZohoDeskPortalAPIKit
+@_exported import ZohoDeskPortalCommunity
+import ZohoDeskPortalConfiguration
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol CategoryString {
+  var follow: Swift.String { get }
+  var following: Swift.String { get }
+}
+public protocol TopicString {
+  var searchPlaceholder: Swift.String { get }
+  var topicsMissing: Swift.String { get }
+  var deleteTopicAlert: Swift.String { get }
+  var follow: Swift.String { get }
+  var followersWithCount: Swift.String { get }
+}
+public protocol TopicStatusString {
+  var needMoreInfo: Swift.String { get }
+  var answered: Swift.String { get }
+  var workingOnIt: Swift.String { get }
+  var unAnswered: Swift.String { get }
+  var implemented: Swift.String { get }
+  var underReview: Swift.String { get }
+  var willNotBeImplement: Swift.String { get }
+  var mayBeLater: Swift.String { get }
+  var notProblem: Swift.String { get }
+  var temporaryFix: Swift.String { get }
+  var solved: Swift.String { get }
+  var unSolved: Swift.String { get }
+  var analayzing: Swift.String { get }
+}
+public protocol TopicTypeString {
+  var announcement: Swift.String { get }
+  var discussion: Swift.String { get }
+  var idea: Swift.String { get }
+  var question: Swift.String { get }
+  var problem: Swift.String { get }
+}
+@_hasMissingDesignatedInitializers public class CategoryEnglish : ZohoDeskPortalCommunity.CategoryString {
+  public var follow: Swift.String {
+    get
+  }
+  public var following: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class TopicEnglish : ZohoDeskPortalCommunity.TopicString {
+  public var searchPlaceholder: Swift.String {
+    get
+  }
+  public var follow: Swift.String {
+    get
+  }
+  public var topicsMissing: Swift.String {
+    get
+  }
+  public var deleteTopicAlert: Swift.String {
+    get
+  }
+  public var followersWithCount: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class NewTopicEnglish {
+  public var contentEmpty: Swift.String {
+    get
+  }
+  public var createTopic: Swift.String {
+    get
+  }
+  public var editTopic: Swift.String {
+    get
+  }
+  public var maxTags: Swift.String {
+    get
+  }
+  public var topicAdded: Swift.String {
+    get
+  }
+  public var titleEmpty: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class TopicStatusEnglish : ZohoDeskPortalCommunity.TopicStatusString {
+  public var willNotBeImplement: Swift.String {
+    get
+  }
+  public var needMoreInfo: Swift.String {
+    get
+  }
+  public var answered: Swift.String {
+    get
+  }
+  public var workingOnIt: Swift.String {
+    get
+  }
+  public var unAnswered: Swift.String {
+    get
+  }
+  public var implemented: Swift.String {
+    get
+  }
+  public var underReview: Swift.String {
+    get
+  }
+  public var mayBeLater: Swift.String {
+    get
+  }
+  public var notProblem: Swift.String {
+    get
+  }
+  public var temporaryFix: Swift.String {
+    get
+  }
+  public var solved: Swift.String {
+    get
+  }
+  public var unSolved: Swift.String {
+    get
+  }
+  public var analayzing: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class TopicTypeEnglish : ZohoDeskPortalCommunity.TopicTypeString {
+  public var announcement: Swift.String {
+    get
+  }
+  public var discussion: Swift.String {
+    get
+  }
+  public var idea: Swift.String {
+    get
+  }
+  public var question: Swift.String {
+    get
+  }
+  public var problem: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public protocol TagsDelegate : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func didChanged(_ result: Swift.Result<[Swift.String], ZohoDeskPortalCommunity.TagValidityError>)
+  #endif
+}
+public enum TagValidityError : Swift.Error {
+  case specialCharacters
+  case minimumCharacters
+  case exceedsMaximum
+  case duplicate
+  case tagExceed
+  public static func == (a: ZohoDeskPortalCommunity.TagValidityError, b: ZohoDeskPortalCommunity.TagValidityError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ZohoDeskPortalCommunity.TagValidityError : Foundation.LocalizedError {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var errorDescription: Swift.String? {
+    get
+  }
+  #endif
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortalCommunity : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func show(withTitle title: Swift.String? = nil, navigationMode: ZohoDeskPortalConfiguration.ZDPNavigationMode = ZDPortalConfiguration.navigationMode)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func showTopic(withPermaLink permaLink: Swift.String, andTitle title: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func showTopic(withID topicID: Swift.String, withTitle title: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func showCategory(withID categoryID: Swift.String, withTitle title: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func showMyTopicList(withTitle title: Swift.String? = nil, navigationMode: ZohoDeskPortalConfiguration.ZDPNavigationMode = ZDPortalConfiguration.navigationMode)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func showTopicList(byType type: ZohoDeskPortalCommunity.ZDPTopicType, title: Swift.String? = nil, navigationMode: ZohoDeskPortalConfiguration.ZDPNavigationMode = ZDPortalConfiguration.navigationMode)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getCommunityBinder() -> ZohoDeskPlatformDataBridge.ZBCoreBridgeBinderProtocols<Any>?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getTopicFormBinder() -> ZohoDeskPlatformDataBridge.ZBCoreBridgeBinderProtocols<Any>?
+  #endif
+  public static func showTopicForm()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ZDPCommunityConfiguration : ObjectiveC.NSObject {
+  @objc public static var isTopicEditAllowed: Swift.Bool
+  @objc public static var isTopicDeleteAllowed: Swift.Bool
+  @objc public static var isReplyAllowed: Swift.Bool
+  @objc public static var isReplyEditAllowed: Swift.Bool
+  @objc public static var isReplyDeleteAllowed: Swift.Bool
+  @objc public static var isShareTopicAllowed: Swift.Bool
+  @objc public static var disableTextReader: Swift.Bool
+  @objc public static var disableKeySearcher: Swift.Bool
+  @objc public static var disableTopicDetailSearch: Swift.Bool
+  @objc public static var disableTopicLike: Swift.Bool
+  @objc public static var disableTopicComment: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum ZDPTopicType : Swift.Int, Swift.Codable {
+  case question
+  case problem
+  case idea
+  case discussion
+  case announcement
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ZohoDeskPortalAPIKit.ZDPArticle : ZohoDeskPortalConfiguration.ZPSimpleListItem {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var icon: Foundation.NSAttributedString? {
+    get
+  }
+  #endif
+  public var uuid: Swift.String {
+    get
+  }
+  public var link: Swift.String {
+    get
+  }
+}
+extension ZohoDeskPortalCommunity.ZDPTopicType : ZohoDeskPortalConfiguration.Choosable, Swift.Equatable {
+  public var displayString: Swift.String {
+    get
+  }
+}
+public typealias CDCategoryCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(CDCategory) nonisolated public class CDCategory : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias CDCategoryCoreDataPropertiesSet = Foundation.NSSet
+extension ZohoDeskPortalCommunity.CDCategory {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalCommunity.CDCategory>
+  @objc @NSManaged nonisolated dynamic public var commentCount: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var desc: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var followersCount: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var isFollowing: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isLocked: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var parentID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var permalink: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var permission: Foundation.Data? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var permissions: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var photoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var position: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var postCount: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+}
+extension ZohoDeskPortalCommunity.CDCategory : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias CDSearchCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(CDSearch) nonisolated public class CDSearch : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias CDSearchCoreDataPropertiesSet = Foundation.NSSet
+extension ZohoDeskPortalCommunity.CDSearch {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalCommunity.CDSearch>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var keyword: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var time: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZohoDeskPortalCommunity.CDSearch : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+public typealias CYTopicCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(CYTopic) nonisolated public class CYTopic : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias CYTopicCoreDataPropertiesSet = Foundation.NSSet
+extension ZohoDeskPortalCommunity.CYTopic {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalCommunity.CYTopic>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var categoryId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var commentCount: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var createdTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var latestCommentTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var likeCount: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var permalink: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var status: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var subject: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var viewCount: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var creator: ZohoDeskPortalCommunity.CYUser? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZohoDeskPortalCommunity.CYTopic : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias CYUserCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(CYUser) nonisolated public class CYUser : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias CYUserCoreDataPropertiesSet = Foundation.NSSet
+extension ZohoDeskPortalCommunity.CYUser {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZohoDeskPortalCommunity.CYUser>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var photoURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var topics: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZohoDeskPortalCommunity.CYUser {
+  @objc(addTopicsObject:) @NSManaged nonisolated dynamic public func addToTopics(_ value: ZohoDeskPortalCommunity.CYTopic)
+  @objc(removeTopicsObject:) @NSManaged nonisolated dynamic public func removeFromTopics(_ value: ZohoDeskPortalCommunity.CYTopic)
+  @objc(addTopics:) @NSManaged nonisolated dynamic public func addToTopics(_ values: Foundation.NSSet)
+  @objc(removeTopics:) @NSManaged nonisolated dynamic public func removeFromTopics(_ values: Foundation.NSSet)
+}
+extension ZohoDeskPortalCommunity.CYUser : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias ZDPCommunityFoundationFrameworkSet = Foundation.NSSet
+public typealias ZDPCommunityCoreDataFrameworkManagedObject = CoreData.NSManagedObject
+extension ZohoDeskPortalCommunity.TagValidityError : Swift.Equatable {}
+extension ZohoDeskPortalCommunity.TagValidityError : Swift.Hashable {}
+extension ZohoDeskPortalCommunity.ZDPTopicType : Swift.Hashable {}
+extension ZohoDeskPortalCommunity.ZDPTopicType : Swift.RawRepresentable {}

@@ -1,0 +1,366 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZohoPubSubSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import CommonCrypto
+import Compression
+import CoreFoundation
+import Foundation
+import Network
+import OSLog
+import Swift
+import UIKit
+@_exported import ZohoPubSubSDK
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import zlib
+public struct UserStatus {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(code: Swift.String?, message: Swift.String?)
+  #endif
+}
+public struct WMSConfig : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public static let chat_enabled: ZohoPubSubSDK.WMSConfig
+  public static let presence_chat: ZohoPubSubSDK.WMSConfig
+  public static let presence_personal: ZohoPubSubSDK.WMSConfig
+  public static let presence_org: ZohoPubSubSDK.WMSConfig
+  public static let load_balanced: ZohoPubSubSDK.WMSConfig
+  public static let multi_protocol_session_enabled: ZohoPubSubSDK.WMSConfig
+  public static let cross_prd_msg_enabled: ZohoPubSubSDK.WMSConfig
+  public static let md_parent: ZohoPubSubSDK.WMSConfig
+  public static let md_child: ZohoPubSubSDK.WMSConfig
+  public static let transient_pex: ZohoPubSubSDK.WMSConfig
+  public static let app_notify: ZohoPubSubSDK.WMSConfig
+  public typealias ArrayLiteralElement = ZohoPubSubSDK.WMSConfig
+  public typealias Element = ZohoPubSubSDK.WMSConfig
+  public typealias RawValue = Swift.Int
+}
+public enum WMSAuthTypes {
+  case DEFAULT
+  case AUTH_TOKEN(_: Swift.String, scope: Swift.String)
+  case PORTAL_USER
+  case SS_TICKET(_: Swift.String)
+  case ANNON_AUTH(_: Swift.String?)
+  case PEX_AUTH(_: Swift.String, bundleid: Swift.String)
+  case PEX_OAUTH(_: Swift.String, _: Swift.Int64, scope: ZohoPubSubSDK.WMSAuthTypes.Scopes)
+  case RTCP(_: Swift.String, userId: Swift.String)
+  case PEX_OAUTH_WITH_MDM(_: Swift.String, _: Swift.Int64, scope: ZohoPubSubSDK.WMSAuthTypes.Scopes, mdmToken: Swift.String?)
+  public struct Scopes {
+  }
+}
+public enum PexChatHandlerType : Swift.Int {
+  case CHAT
+  case COLLABORATION
+  case SERVICE_CHAT
+  case CUSTOM_CHAT
+  case PRESENCE_CHAT
+  case CHANNEL
+  case TAZ
+  case ENTITYCHAT
+  case THREADCHAT
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct WMSUrl {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(baseDomain: Swift.String, dclPfx: Swift.String? = nil, hostPrefix: Swift.String)
+  #endif
+}
+public protocol PEXChatHandlerDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onJoin(chatId chid: Swift.String?, withTitle title: Swift.String?, info addInfo: Swift.String?, count pCount: Swift.String?, andUsers users: [Any]?, isHistoryStored history: Swift.String?, messageDict messageInfo: [Swift.String : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onMessage(chatId chid: Swift.String?, withTitle title: Swift.String?, senderName sender: Swift.String?, displayName dname: Swift.String?, serverTime stime: Swift.String?, isNewChat newChat: Swift.String?, info addInfo: Swift.String?, andMessage msg: Swift.String?, andMessageID msgid: Swift.String?, isHistoryStored history: Swift.String?, muteInterval mute: Swift.String?, lastMsgTime lmTime: Swift.String?, messageDict messageInfo: [Swift.String : Any], addChatInfo chatInfo: [Swift.String : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onMembersAdded(chatId chid: Swift.String?, addedBy user: Swift.String?, addedBydName dname: Swift.String?, andUsers users: [Any]?, andTime time: Swift.String?, pcount: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onMembersDeleted(chatId chid: Swift.String?, deletedBy user: Swift.String?, deletedBydName dname: Swift.String?, andUsers users: [Any]?, andTime time: Swift.String?, pcount: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onInvite(chatId chid: Swift.String?, addedBy user: Swift.String?, addedBydName dname: Swift.String?, serverTime sTime: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onRemove(chatId chid: Swift.String?, deletedBy user: Swift.String?, deletedBydName dname: Swift.String?, serverTime sTime: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onMemberIn(chatId chid: Swift.String?, wmsId wmsid: Swift.String?, displayName dname: Swift.String?, andUserStatus status: ZohoPubSubSDK.UserStatus?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onMemberOut(chatId chid: Swift.String?, wmsId wmsid: Swift.String?, displayName dname: Swift.String?, andUserStatus status: ZohoPubSubSDK.UserStatus?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onInfoMessage(forChatId chid: Swift.String?, senderName sender: Swift.String?, displayName dname: Swift.String?, serverTime time: Swift.String?, info addInfo: Swift.String?, andMode mode: Swift.String?, lastMsgTime lmTime: Swift.String?, messageDict messageInfo: [Swift.String : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onTyping(chatId chid: Swift.String?, wmsId wmsid: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onIdle(chatId chid: Swift.String?, wmsId wmsid: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onTextEntered(chatId chid: Swift.String?, wmsId wmsid: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onAttachment(chatId chid: Swift.String?, withTitle title: Swift.String?, isHistoryStored history: Swift.String?, muteInterval mute: Swift.String?, wmsId wmsid: Swift.String?, addChatInfo chatInfo: [Swift.String : Any]?, andMessage msg: [Swift.String : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onTitleChange(chatId chid: Swift.String?, wmsId wmsid: Swift.String?, andTitle title: Any?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onMembersAddedToThread(threadChatId chid: Swift.String?, addedBy user: Swift.String?, addedBydName dname: Swift.String?, andUsers users: [Any]?, andTime time: Swift.String?, pcount: Swift.String?, messageDict messageInfo: [Swift.String : Any])
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onMembersDeletedFromThread(threadChatId chid: Swift.String?, deletedBy user: Swift.String?, deletedBydName dname: Swift.String?, andUsers users: [Any]?, andTime time: Swift.String?, pcount: Swift.String?, messageDict messageInfo: [Swift.String : Any])
+  #endif
+}
+@_hasMissingDesignatedInitializers open class WebSocket {
+  @objc deinit
+}
+public struct DeviceInfo {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(osCode: Swift.String, userAgent: Swift.String? = nil, appVersion: Swift.String?)
+  #endif
+}
+public struct PEXCredentials {
+  public struct UserInfo {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(zuid: Swift.String, dname: Swift.String? = nil, insId: Swift.String?, clientPortalId: Swift.String? = nil)
+    #endif
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(auth type: ZohoPubSubSDK.WMSAuthTypes, user: ZohoPubSubSDK.PEXCredentials.UserInfo? = nil, url: ZohoPubSubSDK.WMSUrl? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(annon user: ZohoPubSubSDK.PEXCredentials.UserInfo, token: Swift.String?, url: ZohoPubSubSDK.WMSUrl? = nil)
+  #endif
+}
+@objc @_hasMissingDesignatedInitializers open class PEXLibrary : ObjectiveC.NSObject {
+  @objc deinit
+}
+public enum WmsService : Swift.String {
+  case CRM
+  case MAIL
+  case BUSSINESS
+  case PROJECTS
+  case SHEET
+  case CHAT
+  case WRITER
+  case SHOW
+  case MEETING
+  case PLANNER
+  case NOTEBOOK
+  case FORUMS
+  case ACCOUNTS
+  case EXPLORER
+  case SHARE
+  case CALENDAR
+  case CONTACTS
+  case CREATOR
+  case PEOPLE
+  case CONNECTS
+  case STORE
+  case SEARCH
+  case ZOHOFOX
+  case VIDEOS
+  case WIKI
+  case SUPPORT
+  case CAMPAIGN
+  case DESKTOP
+  case BLOGS
+  case MOBILE
+  case REMOTE_AGENT
+  case TELE_ADAPTER
+  case ISSUE_TRACKER
+  case SERVICE_DESK
+  case OPMANAGER
+  case CONTACTS_MANAGER
+  case PULSE
+  case INTRANET
+  case SITE24_7
+  case REACH
+  case AC_SERVER
+  case LIVEDESK
+  case JABBER_SERVER
+  case PAYMENTS
+  case PIE
+  case HOME
+  case SCANNER
+  case TABLES
+  case DESK
+  case EXPENSE
+  case RTCP
+  case WHITEBOARD
+  case WORKDRIVE
+  case BACKSTAGE
+  case SOLO
+  case MAPS
+  case THEFUSEAPP
+  case NILA
+  case ARATTAI
+  case WEBINAR
+  case IOT
+  case TRAINERCENTRAL
+  case CAMPFIRE
+  case VANI
+  case ZOHO_SPEND
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol PEXContactsHandlerDelegate : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onAdd(userId zuid: Swift.String?, displayName dname: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, emailId emailid: Swift.String?, contactSType stype: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onDelete(userId zuid: Swift.String?, displayName dname: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, emailId emailid: Swift.String?, contactSType stype: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onInvite(userId zuid: Swift.String?, displayName dname: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, emailId emailid: Swift.String?, contactSType stype: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onUserAccept(userId zuid: Swift.String?, displayName dname: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, emailId emailid: Swift.String?, contactSType stype: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onAccept(userId zuid: Swift.String?, displayName dname: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, emailId emailid: Swift.String?, contactSType stype: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onRemove(userId zuid: Swift.String?, displayName dname: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, emailId emailid: Swift.String?, contactSType stype: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onPendingInvites(userId zuid: Swift.String?, displayName dname: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, emailId emailid: Swift.String?, contactSType stype: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onContactMessage(msg data: [Swift.String : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onStatusChange(userId zuid: Swift.String?, displayName dname: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, contactSType stype: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onStatusChangeV1(userId zuid: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, contactSType stype: Swift.String?, lastSeenTime: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onUpdate(dict list: [Swift.String : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onUpdate(dict list: [Swift.String : Any]?, mtype: Swift.Int)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onReInit(dict list: [Swift.String : Any]?, metaData meta: [Swift.String : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func contactsCheckSum(checkSum: Swift.String?)
+  #endif
+}
+public protocol PubSubMessageDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onCustomMessage(_ msg: Any!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onCrossProductMessage(_ prd: ZohoPubSubSDK.WmsService!, andmsg data: Any!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onZohoMessage(_ prd: ZohoPubSubSDK.WmsService!, message: Any!, url: Swift.String!, urlstring: Swift.String!, category: Swift.String!, sender: Swift.String!, attachments: Any!, params: Swift.String!, id mid: Swift.String!, dname: Swift.String!, orgs: Swift.String!, groups: Swift.String!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onACSMessage(_ type: Swift.String!, andData data: Any!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onMessage(_ msg: Any!, withType mtype: Foundation.NSNumber!)
+  #endif
+}
+public class ZDCollisionCredentials {
+  public init(tokenObj: ZohoPubSubSDK.PEXCredentials, tokenString: Swift.String)
+  @objc deinit
+}
+@objc public class AuthUser : ObjectiveC.NSObject {
+  public init(authToken: Swift.String, expiredTime: Swift.Int64, user: ZohoPubSubSDK.AnnounUser)
+  @objc deinit
+}
+@objc public class AnnounUser : ObjectiveC.NSObject {
+  public var token: Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(zuid: Swift.String, dname: Swift.String? = nil, insID: Swift.String? = nil, token: Swift.String = "", url: ZohoPubSubSDK.WMSUrl?)
+  #endif
+  @objc deinit
+}
+@objc public class ZDNetworkCalls : ObjectiveC.NSObject {
+  public var resubscribeTimer: Foundation.Timer?
+  public init(wmsId: Swift.String, authType: Swift.String, prd: Swift.String, sid: Swift.String, authId: Swift.String, dname: Swift.String, config: Swift.String, psKey: Swift.String, token: Swift.String, baseUrlStr: Swift.String, orgScope: Swift.String, userScope: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ZohoPubSub : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var connectionInfo: ZohoPubSubSDK.PexConnectionInfo? {
+    get
+  }
+  #endif
+  @objc deinit
+}
+extension ZohoPubSubSDK.ZohoPubSub {
+  public func initialize(prd: Swift.String, baseDomainURL: Swift.String, hostprefix: Swift.String, wmsConfig: ZohoPubSubSDK.WMSConfig, orgScope: Swift.String, oprScope: Swift.String, userScope: Swift.String = "", isAnnounConnection: Swift.Bool = false, deviceInfo: ZohoPubSubSDK.DeviceInfo)
+  public func setConnectionHandler(delegate: any ZohoPubSubSDK.PubsubDelegate)
+  public func setMessageHandler(delegate: any ZohoPubSubSDK.PubSubMessageDelegate)
+  public func setCollisionHandler(delegate: any ZohoPubSubSDK.PubSubMessageDelegate)
+  public func setContactHandler(delegate: any ZohoPubSubSDK.PEXContactsHandlerDelegate)
+  public func setChatHandler(type: ZohoPubSubSDK.PexChatHandlerType, chatHandler: any ZohoPubSubSDK.PEXChatHandlerDelegate)
+  public func setMessageConfig(wmsConfig: ZohoPubSubSDK.WMSConfig)
+  public func connect()
+  public func onHold() throws
+  public func onResume()
+  public func onNetworkUpdate(isConnected: Swift.Bool)
+  public func disconnect()
+  public func destroy()
+  public func isPexConnected() -> Swift.Bool
+}
+extension ZohoPubSubSDK.ZohoPubSub {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func subscribe(pskey: Swift.String, authId: Swift.String, authType: Swift.String, config: Swift.String, onComplition: ((_ responce: [[Swift.String : Swift.AnyObject]]?, _ responceData: Foundation.Data?, _ error: (any Swift.Error)?) -> ())?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func unSubscribe(pskey: Swift.String, onComplition: ((_ responce: [[Swift.String : Swift.AnyObject]]?, _ responceData: Foundation.Data?, _ error: (any Swift.Error)?) -> ())?)
+  #endif
+}
+public protocol PubsubDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onPEXConnect(_ wmsid: Swift.String, sid: Swift.String, andDname dname: Swift.String, andXA xA: Swift.String?, andEmail email: Swift.String?, andDepricated depricated: Swift.String?, andMessage messageObject: Any?)
+  #endif
+  func onPubSubMessage(_ msg: Swift.Dictionary<Swift.String, Any>, withType mtype: Foundation.NSNumber)
+  func onReconnect()
+  func onDisconnect(_ manual: Swift.Bool, andReason reason: Swift.String)
+  func onNetworkUp()
+  func getAnnounUserToken(completion: @escaping (ZohoPubSubSDK.AnnounUser) -> ())
+  func getAuthToken(completion: @escaping (ZohoPubSubSDK.AuthUser) -> ())
+}
+extension ZohoPubSubSDK.PubsubDelegate {
+  public func getAnnounUserToken(completion: (ZohoPubSubSDK.AnnounUser) -> ())
+  public func getAuthToken(completion: (ZohoPubSubSDK.AuthUser) -> ())
+}
+@_hasMissingDesignatedInitializers public class PexConnectionInfo {
+  public var sid: Swift.String
+  public var dname: Swift.String
+  public var rsid: Swift.String
+  public var messageObject: Any?
+  @objc deinit
+}
+extension ZohoPubSubSDK.PexChatHandlerType : Swift.Equatable {}
+extension ZohoPubSubSDK.PexChatHandlerType : Swift.Hashable {}
+extension ZohoPubSubSDK.PexChatHandlerType : Swift.RawRepresentable {}
+extension ZohoPubSubSDK.WmsService : Swift.Equatable {}
+extension ZohoPubSubSDK.WmsService : Swift.Hashable {}
+extension ZohoPubSubSDK.WmsService : Swift.RawRepresentable {}

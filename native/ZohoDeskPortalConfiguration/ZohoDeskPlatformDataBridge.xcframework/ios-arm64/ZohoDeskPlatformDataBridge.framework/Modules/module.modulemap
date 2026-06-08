@@ -1,0 +1,4 @@
+framework module ZohoDeskPlatformDataBridge {
+  header "ZohoDeskPlatformDataBridge-Swift.h"
+  requires objc
+}

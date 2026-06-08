@@ -1,0 +1,4 @@
+framework module ZDMediaPickerSDK {
+  header "ZDMediaPickerSDK-Swift.h"
+  requires objc
+}

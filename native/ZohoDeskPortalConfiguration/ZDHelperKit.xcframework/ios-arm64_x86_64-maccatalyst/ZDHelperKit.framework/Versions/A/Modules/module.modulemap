@@ -1,0 +1,11 @@
+framework module ZDHelperKit {
+  umbrella header "ZDHelperKit.h"
+  export *
+
+  module * { export * }
+}
+
+module ZDHelperKit.Swift {
+  header "ZDHelperKit-Swift.h"
+  requires objc
+}

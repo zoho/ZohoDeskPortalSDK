@@ -1,0 +1,4 @@
+framework module ZohoDeskPortalChatKit {
+  header "ZohoDeskPortalChatKit-Swift.h"
+  requires objc
+}

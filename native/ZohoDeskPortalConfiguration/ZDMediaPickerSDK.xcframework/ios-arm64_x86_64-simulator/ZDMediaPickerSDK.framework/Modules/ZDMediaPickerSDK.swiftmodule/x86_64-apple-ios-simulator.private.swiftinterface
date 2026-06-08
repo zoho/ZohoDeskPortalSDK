@@ -1,0 +1,136 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZDMediaPickerSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import AVKit
+import DeveloperToolsSupport
+import Foundation
+import MobileCoreServices
+import Photos
+import PhotosUI
+import Swift
+import SwiftUI
+import UIKit.UIGestureRecognizerSubclass
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum ZDMediaSource {
+  case photoLibrary
+  @available(macCatalyst 14.0, *)
+  case camera, scanner
+  public static func == (a: ZDMediaPickerSDK.ZDMediaSource, b: ZDMediaPickerSDK.ZDMediaSource) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ZDMediaType {
+  case image, video
+  public static func == (a: ZDMediaPickerSDK.ZDMediaType, b: ZDMediaPickerSDK.ZDMediaType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public class ZDMediaPicker : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(mediaPickerDelegate: (any ZDMediaPickerSDK.ZDMediaPickerProtocol)?, sourceType: ZDMediaPickerSDK.ZDMediaSource = .photoLibrary, mediaType: ZDMediaPickerSDK.ZDMediaType? = nil, shouldForceRTL: Swift.Bool = false)
+  #endif
+  public func presentPicker()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func requestAccess(_ handler: @escaping (ZDMediaPickerSDK.ZDMediaPickerError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(macCatalyst 14.0, *)
+  public func getScannerView(frame: CoreFoundation.CGRect, focusImage: UIKit.UIImage? = nil, appIcon: UIKit.UIImage? = nil) -> ZDMediaPickerSDK.ZDScannerView
+  #endif
+  @objc deinit
+}
+public protocol ZDMediaPickerProtocol : UIKit.UIImagePickerControllerDelegate, UIKit.UINavigationControllerDelegate {
+  var selectionLimit: Swift.Int { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var preSelectedAssets: [Photos.PHAsset]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func mediaPicker(didFinishPicking media: [Photos.PHAsset]?)
+  #endif
+  func mediaPicker(didFinishCapturing info: [UIKit.UIImagePickerController.InfoKey : Any])
+  func mediaPicker(didFailWith error: ZDMediaPickerSDK.ZDMediaPickerError)
+  @available(macCatalyst 14.0, *)
+  func mediaPicker(didFinishScanning info: [AVFoundation.AVMetadataObject])
+}
+extension ZDMediaPickerSDK.ZDMediaPickerProtocol {
+  public var selectionLimit: Swift.Int {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var preSelectedAssets: [Photos.PHAsset]? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func mediaPicker(didFinishPicking media: [Photos.PHAsset]?)
+  #endif
+  public func mediaPicker(didFinishCapturing info: [UIKit.UIImagePickerController.InfoKey : Any])
+  public func mediaPicker(didFailWith error: ZDMediaPickerSDK.ZDMediaPickerError)
+  @available(macCatalyst 14.0, *)
+  public func mediaPicker(didFinishScanning info: [AVFoundation.AVMetadataObject])
+}
+public enum ZDMediaPickerError : Swift.Error {
+  case selectionLimitExceeded
+  case cameraAccessDenied
+  case photosAccessDenied
+  case cameraSourceUnavailable
+  case unableToSaveMedia(any Swift.Error)
+  case unableToScan
+  case unableToFlash
+}
+extension Swift.Dictionary where Key == UIKit.UIImagePickerController.InfoKey {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var pngData: Foundation.Data? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var pngImage: UIKit.UIImage? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var jpegData: Foundation.Data? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var jpegImage: UIKit.UIImage? {
+    get
+  }
+  #endif
+}
+@objc @_hasMissingDesignatedInitializers @available(macCatalyst 14.0, *)
+@_Concurrency.MainActor @preconcurrency public class ZDScannerView : UIKit.UIView {
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency public func startSession()
+  @_Concurrency.MainActor @preconcurrency public func stopSession()
+}
+@available(macCatalyst 14.0, *)
+extension ZDMediaPickerSDK.ZDScannerView : AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func metadataOutput(_ output: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from connection: AVFoundation.AVCaptureConnection)
+}
+@available(macCatalyst 14.0, *)
+extension ZDMediaPickerSDK.ZDScannerView : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
+}
+extension ZDMediaPickerSDK.ZDMediaPicker : UIKit.UIImagePickerControllerDelegate & UIKit.UINavigationControllerDelegate, AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func imagePickerController(_ picker: UIKit.UIImagePickerController, didFinishPickingMediaWithInfo info: [UIKit.UIImagePickerController.InfoKey : Any])
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func imagePickerControllerDidCancel(_ picker: UIKit.UIImagePickerController)
+}
+public struct ZDMPVCTitles {
+}
+public struct ZDMPPreviewMenuActions {
+}
+extension ZDMediaPickerSDK.ZDMediaSource : Swift.Equatable {}
+extension ZDMediaPickerSDK.ZDMediaSource : Swift.Hashable {}
+extension ZDMediaPickerSDK.ZDMediaType : Swift.Equatable {}
+extension ZDMediaPickerSDK.ZDMediaType : Swift.Hashable {}

@@ -1,0 +1,963 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZDOneChatSDK
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import CoreData
+import Foundation
+import Network
+import SafariServices
+import Swift
+import UIKit
+import ZDChat
+import ZDHelperKit
+@_exported import ZDOneChatSDK
+import ZohoPubSubSDK
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension CoreData.NSManagedObject {
+  public class func createInContext(_ entityName: Swift.String, context: CoreData.NSManagedObjectContext) -> Swift.AnyObject
+  #if compiler(>=5.3) && $NonescapableTypes
+  public class func findAllInContext(_ entityName: Swift.String, context: CoreData.NSManagedObjectContext, id: Swift.String = "") -> [Swift.AnyObject]?
+  #endif
+}
+public typealias Parameters = [Swift.String : Any]
+public typealias Headers = [Swift.String : Swift.String]
+public enum Method : Swift.String {
+  case GET, POST, PUT, DELETE, PATCH
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ParamType : Swift.String {
+  case json, path, data, formData
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class ZDBaseRequest {
+  public var baseURL: Foundation.URL?
+  public var path: Swift.String
+  public var method: ZDOneChatSDK.Method
+  public var paramType: ZDOneChatSDK.ParamType
+  public var parameters: ZDOneChatSDK.Parameters
+  public var headers: ZDOneChatSDK.Headers
+  public var isAuthenticationRequired: Swift.Bool
+  public var genralAPI: Swift.Bool
+  public var streamData: Foundation.Data?
+  public var host: Swift.String {
+    get
+  }
+  public init(path: Swift.String, method: ZDOneChatSDK.Method = .GET, paramType: ZDOneChatSDK.ParamType = .path, parameters: ZDOneChatSDK.Parameters = [String: String](), headers: ZDOneChatSDK.Headers = ["Content-Type": "application/json"])
+  public func getBaseURL() -> Swift.String
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class BusinessMessaging : ObjectiveC.NSObject {
+  @objc public static func setContactInfo(appId: Swift.String, name: Swift.String, phone: Swift.String, email: Swift.String, additionalInfo: [Swift.String : Swift.String] = [:])
+  @objc public static func show(orgId: Swift.String, appId: Swift.String, domain: Swift.String)
+  @objc public static func setAuthDelegate(appId: Swift.String, delegate: any ZDOneChatSDK.ZDChatAuthDelegate)
+  @objc public class func setChatConfigDelegate(appId: Swift.String, delegate: any ZDOneChatSDK.ZDChatConfigDelegate)
+  @objc public class func enableLog(isLogEnabled: Swift.Bool)
+  @objc public class func setAgentTransferOptionVisibility(isVisible: Swift.Bool)
+  @objc public class func setMoreOptionVisibility(isVisible: Swift.Bool)
+  @objc public class func setSessionVariables(appId: Swift.String, sessionVariables: [[Swift.String : Any]])
+  @objc public class func updateSessionVariables(appId: Swift.String, sessionVariables: [[Swift.String : Any]])
+  @objc public class func clearData(appId: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public typealias ZDRequestMakerSuccess = ((Foundation.Data?, _ responseCode: Swift.Int) -> Swift.Void)?
+public typealias ZDRequestMakerFailure = ((_ data: Foundation.Data?, _ error: (any Swift.Error)?, _ responseCode: Swift.Int) -> Swift.Void)?
+@_hasMissingDesignatedInitializers public class ZDRequestMaker {
+  public static var sharedInstance: ZDOneChatSDK.ZDRequestMaker {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public func makeRequest(for request: ZDOneChatSDK.ZDBaseRequest, success: ZDOneChatSDK.ZDRequestMakerSuccess = nil, failure: ZDOneChatSDK.ZDRequestMakerFailure = nil) -> Foundation.URLRequest?
+  #endif
+  @objc deinit
+}
+extension ZDOneChatSDK.GCSessions : ZDChat.ZDChatSession {
+  public var isNeedNavReloadBtn: Swift.Bool {
+    get
+  }
+  public var id: Swift.String {
+    get
+  }
+  public var name: Swift.String {
+    get
+  }
+  public var service: Swift.String {
+    get
+  }
+  public var isNeedBackBtn: Swift.Bool {
+    get
+  }
+}
+extension ZDOneChatSDK.GCMessage : ZDChat.ZDChatMessage {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var previewMetaInfo: (any ZDChat.ZDPreviewMeta)? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var messagePatten: ZDChat.ZDMessagePattern? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var metaInfo: (any ZDChat.ZDMeta)? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var questionId: Swift.String? {
+    get
+  }
+  #endif
+  public var zdcreatedTime: Foundation.Date {
+    get
+  }
+  public var zdtype: ZDChat.ZDMessageType {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var zdactor: (any ZDChat.ZDActorInfo)? {
+    get
+  }
+  #endif
+  public var zdcMessageStatus: ZDChat.ZDCMessagStatus {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var zdcAttachment: (any ZDChat.ZDChatAttachment)? {
+    get
+  }
+  #endif
+  public var textMessage: Swift.String {
+    get
+  }
+  public var msgIndex: Swift.Double {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var viewLayout: (any ZDChat.ZDLayout)? {
+    get
+  }
+  #endif
+  public var isIncoming: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var externalConfigutaion: (any ZDChat.ZDExternalConfiguration)? {
+    get
+  }
+  #endif
+}
+extension ZDOneChatSDK.GCMeta : ZDChat.ZDMeta {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var attachmentDesc: Swift.String? {
+    get
+  }
+  #endif
+  public var isAttachment: Swift.Bool {
+    get
+  }
+}
+extension ZDOneChatSDK.GCActorInfo : ZDChat.ZDActorInfo {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var photoURLStr: Swift.String? {
+    get
+  }
+  #endif
+}
+extension ZDOneChatSDK.GCLayout : ZDChat.ZDLayout {
+  public var type: Swift.String {
+    get
+  }
+  public var ZDRows: [any ZDChat.ZDRows] {
+    get
+  }
+}
+extension ZDOneChatSDK.GCExternalInfo : ZDChat.ZDExternalConfiguration {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var externalConfAction: Swift.String? {
+    get
+  }
+  #endif
+}
+extension ZDOneChatSDK.GCPreviewMeta : ZDChat.ZDPreviewMeta {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var type: Swift.String? {
+    get
+  }
+  #endif
+}
+extension ZDOneChatSDK.GCRow : ZDChat.ZDRows {
+  public var ZDColumns: [any ZDChat.ZDColumns] {
+    get
+  }
+}
+extension ZDOneChatSDK.GCSource : ZDChat.ZDSource {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var sourceRows: [any ZDChat.ZDRows]? {
+    get
+  }
+  #endif
+}
+extension ZDOneChatSDK.GCCard : ZDChat.ZDCard {
+  public var cardAction: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var cardSource: (any ZDChat.ZDSource)? {
+    get
+  }
+  #endif
+  public var isSelected: Swift.Bool {
+    get
+  }
+}
+extension ZDOneChatSDK.GCColumn : ZDChat.ZDColumns {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var cardDisplay: (any ZDChat.ZDCard)? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var textDisplay: (any ZDChat.ZDCText)? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var buttonActionDisplay: (any ZDChat.ZDButtonAction)? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var mediaActionDisplay: (any ZDChat.ZDMediaAction)? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var sliderDisplay: (any ZDChat.ZDCSlider)? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var fileInputDisplay: (any ZDChat.ZDCFileInput)? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var webView: (any ZDChat.ZDWebview)? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var chatinput: (any ZDChat.ZDInput)? {
+    get
+  }
+  #endif
+  public var displayValue: Swift.String {
+    get
+  }
+  public var action: ZDChat.ZDMessageAction {
+    get
+  }
+  public var isSelected: Swift.Bool {
+    get
+  }
+}
+extension ZDOneChatSDK.GCInput : ZDChat.ZDCFileInput {
+}
+extension ZDOneChatSDK.GCInput : ZDChat.ZDInput {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var displayFormatter: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var placeHolder: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var defaultValue: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var inputLabels: [Swift.String : Swift.String]? {
+    get
+  }
+  #endif
+}
+extension ZDOneChatSDK.GCUrl : ZDChat.ZDButtonAction {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var value: Swift.String? {
+    get
+  }
+  #endif
+  public var id: Swift.String {
+    get
+  }
+  public var displayValue: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var emoji: Swift.String? {
+    get
+  }
+  #endif
+  public var isSelfSizing: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var actionSource: Swift.String? {
+    get
+  }
+  #endif
+}
+extension ZDOneChatSDK.GCButtonAction : ZDChat.ZDButtonAction {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var emoji: Swift.String? {
+    get
+  }
+  #endif
+  public var id: Swift.String {
+    get
+  }
+  public var displayValue: Swift.String {
+    get
+  }
+  public var isSelfSizing: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var actionSource: Swift.String? {
+    get
+  }
+  #endif
+}
+extension ZDOneChatSDK.GCImageAction : ZDChat.ZDMediaAction {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var emoji: Swift.String? {
+    get
+  }
+  #endif
+  public var id: Swift.String {
+    get
+  }
+  public var displayValue: Swift.String {
+    get
+  }
+  public var isSelfSizing: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var mediaSourceURL: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var actionSource: Swift.String? {
+    get
+  }
+  #endif
+}
+extension ZDOneChatSDK.GCText : ZDChat.ZDCText {
+}
+extension ZDOneChatSDK.GCInput : ZDChat.ZDCSlider {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var minimum: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var maximum: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var minDisplayValue: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var maxDisplayValue: Swift.String? {
+    get
+  }
+  #endif
+}
+extension ZDOneChatSDK.GCAttachment : ZDChat.ZDChatAttachment {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var mimeType: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var size: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var createdTime: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var downloadURL: Swift.String? {
+    get
+  }
+  #endif
+}
+@objc public protocol ZDChatAuthDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func getToken(completion: @escaping (_ ztoken: Swift.String?, _ expiredTime: Swift.Int64, _ error: (any Swift.Error)?) -> ())
+  #endif
+}
+extension ZDOneChatSDK.ZDChatAuthDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getToken(completion: @escaping (_ ztoken: Swift.String?, _ expiredTime: Swift.Int64, _ error: (any Swift.Error)?) -> ())
+  #endif
+}
+@objc public protocol ZDChatConfigDelegate {
+  @objc func isGCAnswerBotEnabled() -> Swift.Bool
+  @objc func isSalesIQChatEnabled() -> Swift.Bool
+  @objc func showLiveChat()
+  @objc func showArticle(showArticle: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func createTicket(subject: Swift.String, desc: Swift.String, completion: @escaping (_ info: [Swift.String : Swift.AnyObject]?, _ statusCode: Swift.Int, _ error: (any Swift.Error)?) -> ())
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func getFooterContent() -> Foundation.NSAttributedString?
+  #endif
+}
+@_inheritsConvenienceInitializers @objc public class ZDThemeManager : ObjectiveC.NSObject {
+  public static var shared: ZDOneChatSDK.ZDThemeManager {
+    get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension ZDOneChatSDK.ZDThemeManager {
+  @objc public static func setTheme(type theme: ZDOneChatSDK.ZDThemeType)
+  @objc public static func updateTheme(theme: any ZDOneChatSDK.ZDThemeProtocol)
+  @objc public static func updateDarkTheme(theme: any ZDOneChatSDK.ZDThemeProtocol)
+}
+public enum ZChatAPIAction {
+  case skip(messageId: Swift.String)
+  case reinitate
+  case GCanswerBotTransfer
+  case ZBMagentTransfer
+  case bmEndChat
+}
+public struct GCSessions : Swift.Decodable {
+  public let sessionId: Swift.String
+  public init(sessionId: Swift.String)
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCConversation : Swift.Decodable {
+  public var data: [ZDOneChatSDK.GCMessage]?
+  public var sessionId: Swift.String?
+  public var hasMore: Swift.Bool?
+  public var id: Swift.String?
+  public var appId: Swift.String?
+  public var scopeId: Swift.String?
+  public var user: ZDOneChatSDK.GCUser?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCInfo : Swift.Decodable {
+  public var action: Swift.String?
+  public var targets: [ZDOneChatSDK.GCInfo.GCInfoTarget]?
+  public struct GCInfoTarget : Swift.Decodable {
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCTextLayout : Swift.Decodable {
+  public var message: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCAction : Swift.Decodable {
+  public var subType: Swift.String?, type: Swift.String?, value: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCMessage : Swift.Decodable {
+  public var layout: ZDOneChatSDK.GCLayout?
+  public var actor: ZDOneChatSDK.GCActorInfo?
+  public var info: ZDOneChatSDK.GCInfo?
+  public var type: Swift.String, direction: Swift.String, status: Swift.String
+  public var displayMessage: Swift.String?, kind: Swift.String?
+  public var id: Swift.String?, createdTime: Swift.String?
+  public var text: ZDOneChatSDK.GCTextLayout?
+  public var action: ZDOneChatSDK.GCAction?
+  public var location: ZDOneChatSDK.GCLocation?
+  public var messagePattenType: Swift.String?
+  public var tempId: Swift.String?
+  public var attachment: ZDOneChatSDK.GCAttachment?
+  public var index: Swift.Double?
+  public var meta: [ZDOneChatSDK.GCMeta]?
+  public var externalInfo: ZDOneChatSDK.GCExternalInfo?
+  public var previewMeta: ZDOneChatSDK.GCPreviewMeta?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCLocation : Swift.Decodable {
+  public var latitude: Swift.String?
+  public var longitude: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCPreviewMeta : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PreviewMetaBlock : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class GCExternalInfo : Swift.Decodable {
+  public var action: Swift.String?
+  @objc deinit
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCMeta : Swift.Decodable {
+  public var name: Swift.String
+  public var value: Swift.String
+  public var displayValue: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCActorInfo : Swift.Decodable {
+  public var id: Swift.String?
+  public var name: Swift.String?, type: Swift.String?, photoURL: Swift.String?, photoUrl: Swift.String?, service: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCLayout : Swift.Decodable {
+  public var rows: [ZDOneChatSDK.GCRow]
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCRow : Swift.Decodable {
+  public var arrangement: Swift.String
+  public var columns: [ZDOneChatSDK.GCColumn]
+  public init(arrangement: Swift.String, columns: [ZDOneChatSDK.GCColumn])
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCCard : Swift.Decodable {
+  public var value: Swift.String?
+  public var text: Swift.String?
+  public var action: Swift.String?
+  public var source: ZDOneChatSDK.GCSource?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCSource : Swift.Decodable {
+  public var rows: [ZDOneChatSDK.GCRow]?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCColumn : Swift.Decodable {
+  public var html: ZDOneChatSDK.HTML?
+  public let input: ZDOneChatSDK.GCInput?
+  public var emoji: ZDOneChatSDK.GCButtonAction?
+  public var button: ZDOneChatSDK.GCButtonAction?
+  public var url_button: ZDOneChatSDK.GCButtonAction?
+  public var image: ZDOneChatSDK.GCImageAction?
+  public var video: ZDOneChatSDK.GCImageAction?
+  public var audio: ZDOneChatSDK.GCImageAction?
+  public var text: ZDOneChatSDK.GCText?
+  public var url: ZDOneChatSDK.GCUrl?
+  public var submit: ZDOneChatSDK.Confirmation?
+  public var id: Swift.String?
+  public var type: Swift.String?
+  public var card: ZDOneChatSDK.GCCard?
+  public init(id: Swift.String, type: Swift.String)
+  public init(id: Swift.String, type: Swift.String, html: ZDOneChatSDK.HTML)
+  public init(id: Swift.String, type: Swift.String, button: ZDOneChatSDK.GCButtonAction)
+  public init(id: Swift.String, type: Swift.String, submit: ZDOneChatSDK.Confirmation)
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Confirmation : Swift.Decodable {
+  public var ids: [Swift.String]?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCButtonAction : Swift.Decodable {
+  public var action: Swift.String
+  public var text: Swift.String?
+  public var value: Swift.String?
+  public var source: Swift.String?
+  public let labels: [Swift.String : Swift.String]?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCImageAction : Swift.Decodable {
+  public var source: Swift.String?
+  public var action: Swift.String {
+    get
+    set
+  }
+  public var text: Swift.String {
+    get
+    set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var value: Swift.String? {
+    get
+    set
+  }
+  #endif
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HTML : Swift.Decodable {
+  public var source: Swift.String
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCText : Swift.Decodable {
+  public var text: Swift.String
+  public var style: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCUrl : Swift.Decodable {
+  public var source: Swift.String
+  public var action: Swift.String {
+    get
+    set
+  }
+  public var text: Swift.String {
+    get
+    set
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCInput : Swift.Decodable {
+  public let type: Swift.String?
+  public let min: Swift.String?
+  public let max: Swift.String?
+  public let value: Swift.String?
+  public let step: Swift.String?
+  public let size: Swift.String?
+  public let accept: Swift.String?
+  public let labels: [Swift.String : Swift.String]?
+  public let displayFormat: Swift.String?
+  public let defaultTimeZone: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GCAttachment : Swift.Decodable {
+  public let name: Swift.String?, id: Swift.String?
+  public let gcAttachmentType: Swift.String?
+  public let type: Swift.String?
+  public let url: Swift.String?
+  public var localFilePath: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+}
+@propertyWrapper public struct StringConvertible : Swift.Codable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var wrappedValue: Swift.String? {
+    get
+  }
+  #endif
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+@objc public protocol ZDThemeProtocol {
+  @objc optional var applicationColor: UIKit.UIColor { get }
+  @objc optional var navigationBarBackgroundColor: UIKit.UIColor { get }
+  @objc optional var navigationBarTitleColor: UIKit.UIColor { get }
+  @objc optional var navigationBarButtonColor: UIKit.UIColor { get }
+  @objc optional var primaryBackgroundColor: UIKit.UIColor { get }
+  @objc optional var secondaryBackgroundColor: UIKit.UIColor { get }
+  @objc optional var tertiaryBackgroundColor: UIKit.UIColor { get }
+  @objc optional var primaryTextColor: UIKit.UIColor { get }
+  @objc optional var secondaryTextColor: UIKit.UIColor { get }
+  @objc optional var tertiaryTextColor: UIKit.UIColor { get }
+  @objc optional var errorColor: UIKit.UIColor { get }
+  @objc optional var screenBackgroundColor: UIKit.UIColor { get }
+}
+@objc public enum ZDThemeType : Swift.Int {
+  case light
+  case dark
+  case system
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @objcMembers public class GCSession : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let scopeID: Swift.String, appID: Swift.String, id: Swift.String
+  final public let user: ZDOneChatSDK.GCUser
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objcMembers public class GCBotInfo : Swift.Codable {
+  @objc final public let serverUrl: Swift.String?
+  final public let defaultLanguage: ZDOneChatSDK.GCLanguage
+  final public let languages: [ZDOneChatSDK.GCLanguage]?
+  @objc final public let name: Swift.String?, description: Swift.String?
+  final public let properties: ZDOneChatSDK.GCBotInfoProperties?
+  final public let styles: ZDOneChatSDK.GCFlowCustomisationStyle?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objcMembers public class GCFlowCustomisationStyle : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objcMembers public class GCFlowCustomisationEndOptions : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objcMembers public class GCFlowCustomisationTheme : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objcMembers public class GCLanguage : Swift.Codable {
+  @objc final public let displayName: Swift.String
+  @objc final public let code: Swift.String
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objcMembers public class GCBotInfoProperties : Swift.Codable {
+  final public let actions: [ZDOneChatSDK.GCBotInfoAction]?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objcMembers public class GCBotInfoAction : Swift.Codable {
+  @objc final public let action: Swift.String?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objcMembers public class GCUser : Swift.Codable {
+  @objc final public let wmsID: Swift.String, id: Swift.String, type: Swift.String
+  @objc final public let email: Swift.String?, wmsToken: Swift.String?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objcMembers public class GCStrings : Swift.Codable, ZDChat.ZDChati18 {
+  @objc public var strings: [Swift.String : Swift.String] {
+    @objc get
+  }
+  final public let ziaBot: ZDOneChatSDK.LabelsContainer
+  final public let imTalk: ZDOneChatSDK.LabelsContainer
+  final public let gcBot: ZDOneChatSDK.LabelsContainer
+  @objc final public let version: Swift.UInt8
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objcMembers public class GCTimeZones : Swift.Codable, ZDChat.ZDChatTimeZones {
+  @objc final public let timeZones: [Swift.String]
+  @objc final public let version: Swift.UInt8
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public class LabelsContainer : Swift.Codable {
+  final public let strings: [Swift.String : Swift.String]
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public class GCFlowParams : ObjectiveC.NSObject {
+  @objc public init(displayName: Swift.String, orgID: Swift.String, flowID: Swift.String, domain: Swift.String, sessionVariables: [Swift.String : Swift.String] = [:])
+  @objc deinit
+}
+extension ZDOneChatSDK.ZohoGC {
+  @objc public static func show(welcomeMessage: Swift.String, _ flows: [ZDOneChatSDK.GCFlowParams])
+}
+@_inheritsConvenienceInitializers @objc public class ZohoDeskAnswerBot : ObjectiveC.NSObject {
+  @objc public static func show(orgId: Swift.String, appId: Swift.String, domain: Swift.String)
+  @objc public static func setAuthDelegate(appId: Swift.String, delegate: any ZDOneChatSDK.ZDChatAuthDelegate)
+  @objc public class func setChatConfigDelegate(appId: Swift.String, delegate: any ZDOneChatSDK.ZDChatConfigDelegate)
+  @objc public class func enableLog(isLogEnabled: Swift.Bool)
+  @objc public class func clearData(appId: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public typealias APIResponce = (_ responce: (any Swift.Decodable)?, _ error: (any Swift.Error)?, _ statusCode: Swift.Int) -> Swift.Void
+public typealias onComplition = ((Swift.AnyObject) -> Swift.Void)?
+public typealias onError = ((_ error: Foundation.NSError?, _ responseCode: Swift.Int) -> Swift.Void)?
+public typealias NetworkCallBackWithData = (_ reponceData: Foundation.Data?, _ error: (any Swift.Error)?, _ statusCode: Swift.Int) -> Swift.Void
+public typealias NetworkCallBackWithDictionay = (_ jsonDic: [Swift.String : Swift.AnyObject]?, _ reponceData: Foundation.Data?, _ error: (any Swift.Error)?, _ statusCode: Swift.Int) -> Swift.Void
+public typealias NetworkCallBackWithArray = (_ jsonArray: [[Swift.String : Swift.AnyObject]]?, _ reponceData: Foundation.Data?, _ error: (any Swift.Error)?, _ statusCode: Swift.Int) -> Swift.Void
+public typealias ZDErrorCallBack = (_ error: (any Swift.Error)?, _ statusCode: Swift.Int) -> Swift.Void
+@_hasMissingDesignatedInitializers public class ZDBaseRequester {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public static func getReponceData(baseRequest: ZDOneChatSDK.ZDBaseRequest, onComplition: @escaping ZDOneChatSDK.NetworkCallBackWithData) -> Foundation.URLRequest?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getResponse<T>(with request: ZDOneChatSDK.ZDBaseRequest, onCompletion: @escaping (Swift.Result<T, any Swift.Error>) -> Swift.Void) where T : Swift.Decodable, T : Swift.Encodable
+  #endif
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ZohoGC : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func showFlow(orgId: Swift.String, flowId: Swift.String, domain: Swift.String, preferredLanguage: Swift.String? = nil)
+  #endif
+  @objc public static func showFromAppClip(orgId: Swift.String, flowId: Swift.String, domain: Swift.String, needChatScreenbackBtn: Swift.Bool)
+  @objc public static func updateLanguageIcon(isEnable: Swift.Bool)
+  @objc public class func setSessionVariables(botId: Swift.String, sessionVariables: [[Swift.String : Any]])
+  @objc public class func updateSessionVariables(botId: Swift.String, sessionVariables: [[Swift.String : Any]])
+  @objc public class func enableLog(isLogEnabled: Swift.Bool)
+  @objc public class func clearData(botId: Swift.String)
+  @objc public class func setAuthDelegate(botId: Swift.String, delegate: any ZDOneChatSDK.ZDChatAuthDelegate)
+  @objc public class func setChatConfigDelegate(botId: Swift.String, delegate: any ZDOneChatSDK.ZDChatConfigDelegate)
+  @objc public class func hideLanguageMismatchPopupWindow(isHide: Swift.Bool)
+  @objc public class func hideEndChatPopupWindow(isHide: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@_inheritsConvenienceInitializers @objc public class ZDGCDownloadManager : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public static func downloadAttachment(url: Swift.String, sessionId: Swift.String, onCompliton: @escaping (Foundation.Data?, (any Swift.Error)?, Swift.Int) -> ()) -> Foundation.URLRequest?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public static func uploadAttachement(orgId: Swift.String, appId: Swift.String, portalname: Swift.String, sessionId: Swift.String, uploadData: Foundation.Data, fileName: Swift.String, onCompletion: @escaping (_ responce: ZDOneChatSDK.GCMessage?, _ error: (any Swift.Error)?, _ statusCode: Swift.Int) -> Swift.Void) -> Foundation.URLRequest?
+  #endif
+  @objc override dynamic public init()
+  @objc deinit
+}
+public typealias KeysCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(Keys) nonisolated public class Keys : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias KeysCoreDataPropertiesSet = Foundation.NSSet
+extension ZDOneChatSDK.Keys {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDOneChatSDK.Keys>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var appId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var currentLanguageCode: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var domain: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var isWidget: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var orgId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var service: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var sessionId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var user: ZDOneChatSDK.Users? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDOneChatSDK.Keys : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+public typealias UsersCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(Users) nonisolated public class Users : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias UsersCoreDataPropertiesSet = Foundation.NSSet
+extension ZDOneChatSDK.Users {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDOneChatSDK.Users>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var email: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var wmsId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var wmsToken: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var user: ZDOneChatSDK.Keys? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDOneChatSDK.Users : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public typealias ZDChatStorageFoundationFrameworkSet = Foundation.NSSet
+public typealias ZDChatStorageCoreDataFrameworkManagedObject = CoreData.NSManagedObject
+extension ZDOneChatSDK.Method : Swift.Equatable {}
+extension ZDOneChatSDK.Method : Swift.Hashable {}
+extension ZDOneChatSDK.Method : Swift.RawRepresentable {}
+extension ZDOneChatSDK.ParamType : Swift.Equatable {}
+extension ZDOneChatSDK.ParamType : Swift.Hashable {}
+extension ZDOneChatSDK.ParamType : Swift.RawRepresentable {}
+extension ZDOneChatSDK.ZDThemeType : Swift.Equatable {}
+extension ZDOneChatSDK.ZDThemeType : Swift.Hashable {}
+extension ZDOneChatSDK.ZDThemeType : Swift.RawRepresentable {}

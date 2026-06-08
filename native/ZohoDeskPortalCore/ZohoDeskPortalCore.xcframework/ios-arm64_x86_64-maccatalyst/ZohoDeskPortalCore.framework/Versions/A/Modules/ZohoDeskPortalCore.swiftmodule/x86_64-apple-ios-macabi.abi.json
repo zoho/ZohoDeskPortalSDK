@@ -1,0 +1,3675 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "ZohoDeskPortalCore",
+    "printedName": "ZohoDeskPortalCore",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalAPIKit",
+        "printedName": "ZohoDeskPortalAPIKit",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalConfiguration",
+        "printedName": "ZohoDeskPortalConfiguration",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalAPIKit",
+        "printedName": "ZohoDeskPortalAPIKit",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalConfiguration",
+        "printedName": "ZohoDeskPortalConfiguration",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalAPIKit",
+        "printedName": "ZohoDeskPortalAPIKit",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalConfiguration",
+        "printedName": "ZohoDeskPortalConfiguration",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalKB",
+        "printedName": "ZohoDeskPortalKB",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalCommunity",
+        "printedName": "ZohoDeskPortalCommunity",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalTicket",
+        "printedName": "ZohoDeskPortalTicket",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPlatformUIKit",
+        "printedName": "ZohoDeskPlatformUIKit",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPlatformDataBridge",
+        "printedName": "ZohoDeskPlatformDataBridge",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDPortalHome",
+        "printedName": "ZDPortalHome",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZDPortalHome",
+                "printedName": "ZohoDeskPortalCore.ZDPortalHome",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPortalHome"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPortalHome(im)init",
+            "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeCACycfc",
+            "moduleName": "ZohoDeskPortalCore",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "Required",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZDPortalHome",
+                "printedName": "ZohoDeskPortalCore.ZDPortalHome",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPortalHome"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC6sharedACvpZ",
+            "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC6sharedACvpZ",
+            "moduleName": "ZohoDeskPortalCore",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZDPortalHome",
+                    "printedName": "ZohoDeskPortalCore.ZDPortalHome",
+                    "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPortalHome"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC6sharedACvgZ",
+                "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC6sharedACvgZ",
+                "moduleName": "ZohoDeskPortalCore",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "actionDelegate",
+            "printedName": "actionDelegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "(any ZohoDeskPortalCore.ZDPHomeProviderDelegate)?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC14actionDelegateAA015ZDPHomeProviderH0_pSgvp",
+            "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC14actionDelegateAA015ZDPHomeProviderH0_pSgvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any ZohoDeskPortalCore.ZDPHomeProviderDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDPHomeProviderDelegate",
+                        "printedName": "any ZohoDeskPortalCore.ZDPHomeProviderDelegate",
+                        "usr": "c:@M@ZohoDeskPortalCore@objc(pl)ZDPHomeProviderDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC14actionDelegateAA015ZDPHomeProviderH0_pSgvg",
+                "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC14actionDelegateAA015ZDPHomeProviderH0_pSgvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any ZohoDeskPortalCore.ZDPHomeProviderDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDPHomeProviderDelegate",
+                        "printedName": "any ZohoDeskPortalCore.ZDPHomeProviderDelegate",
+                        "usr": "c:@M@ZohoDeskPortalCore@objc(pl)ZDPHomeProviderDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC14actionDelegateAA015ZDPHomeProviderH0_pSgvs",
+                "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC14actionDelegateAA015ZDPHomeProviderH0_pSgvs",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC14actionDelegateAA015ZDPHomeProviderH0_pSgvM",
+                "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC14actionDelegateAA015ZDPHomeProviderH0_pSgvM",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "agentChat",
+            "printedName": "agentChat",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZohoDeskPortalConfiguration.DTHome?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DTHome",
+                    "printedName": "ZohoDeskPortalConfiguration.DTHome",
+                    "usr": "s:27ZohoDeskPortalConfiguration6DTHomeC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC9agentChat0abC13Configuration6DTHomeCSgvp",
+            "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC9agentChat0abC13Configuration6DTHomeCSgvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZohoDeskPortalConfiguration.DTHome?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DTHome",
+                        "printedName": "ZohoDeskPortalConfiguration.DTHome",
+                        "usr": "s:27ZohoDeskPortalConfiguration6DTHomeC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC9agentChat0abC13Configuration6DTHomeCSgvg",
+                "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC9agentChat0abC13Configuration6DTHomeCSgvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZohoDeskPortalConfiguration.DTHome?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DTHome",
+                        "printedName": "ZohoDeskPortalConfiguration.DTHome",
+                        "usr": "s:27ZohoDeskPortalConfiguration6DTHomeC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC9agentChat0abC13Configuration6DTHomeCSgvs",
+                "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC9agentChat0abC13Configuration6DTHomeCSgvs",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC9agentChat0abC13Configuration6DTHomeCSgvM",
+                "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC9agentChat0abC13Configuration6DTHomeCSgvM",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "gc",
+            "printedName": "gc",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZohoDeskPortalConfiguration.DTHome?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DTHome",
+                    "printedName": "ZohoDeskPortalConfiguration.DTHome",
+                    "usr": "s:27ZohoDeskPortalConfiguration6DTHomeC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC2gc0abC13Configuration6DTHomeCSgvp",
+            "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC2gc0abC13Configuration6DTHomeCSgvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZohoDeskPortalConfiguration.DTHome?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DTHome",
+                        "printedName": "ZohoDeskPortalConfiguration.DTHome",
+                        "usr": "s:27ZohoDeskPortalConfiguration6DTHomeC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC2gc0abC13Configuration6DTHomeCSgvg",
+                "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC2gc0abC13Configuration6DTHomeCSgvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZohoDeskPortalConfiguration.DTHome?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DTHome",
+                        "printedName": "ZohoDeskPortalConfiguration.DTHome",
+                        "usr": "s:27ZohoDeskPortalConfiguration6DTHomeC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC2gc0abC13Configuration6DTHomeCSgvs",
+                "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC2gc0abC13Configuration6DTHomeCSgvs",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC2gc0abC13Configuration6DTHomeCSgvM",
+                "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC2gc0abC13Configuration6DTHomeCSgvM",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "answerBot",
+            "printedName": "answerBot",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZohoDeskPortalConfiguration.DTHome?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DTHome",
+                    "printedName": "ZohoDeskPortalConfiguration.DTHome",
+                    "usr": "s:27ZohoDeskPortalConfiguration6DTHomeC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC9answerBot0abC13Configuration6DTHomeCSgvp",
+            "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC9answerBot0abC13Configuration6DTHomeCSgvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZohoDeskPortalConfiguration.DTHome?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DTHome",
+                        "printedName": "ZohoDeskPortalConfiguration.DTHome",
+                        "usr": "s:27ZohoDeskPortalConfiguration6DTHomeC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC9answerBot0abC13Configuration6DTHomeCSgvg",
+                "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC9answerBot0abC13Configuration6DTHomeCSgvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZohoDeskPortalConfiguration.DTHome?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DTHome",
+                        "printedName": "ZohoDeskPortalConfiguration.DTHome",
+                        "usr": "s:27ZohoDeskPortalConfiguration6DTHomeC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC9answerBot0abC13Configuration6DTHomeCSgvs",
+                "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC9answerBot0abC13Configuration6DTHomeCSgvs",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC9answerBot0abC13Configuration6DTHomeCSgvM",
+                "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC9answerBot0abC13Configuration6DTHomeCSgvM",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bm",
+            "printedName": "bm",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZohoDeskPortalConfiguration.DTHome?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DTHome",
+                    "printedName": "ZohoDeskPortalConfiguration.DTHome",
+                    "usr": "s:27ZohoDeskPortalConfiguration6DTHomeC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC2bm0abC13Configuration6DTHomeCSgvp",
+            "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC2bm0abC13Configuration6DTHomeCSgvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZohoDeskPortalConfiguration.DTHome?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DTHome",
+                        "printedName": "ZohoDeskPortalConfiguration.DTHome",
+                        "usr": "s:27ZohoDeskPortalConfiguration6DTHomeC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC2bm0abC13Configuration6DTHomeCSgvg",
+                "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC2bm0abC13Configuration6DTHomeCSgvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZohoDeskPortalConfiguration.DTHome?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DTHome",
+                        "printedName": "ZohoDeskPortalConfiguration.DTHome",
+                        "usr": "s:27ZohoDeskPortalConfiguration6DTHomeC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC2bm0abC13Configuration6DTHomeCSgvs",
+                "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC2bm0abC13Configuration6DTHomeCSgvs",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore12ZDPortalHomeC2bm0abC13Configuration6DTHomeCSgvM",
+                "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC2bm0abC13Configuration6DTHomeCSgvM",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "updateConfiguration",
+            "printedName": "updateConfiguration(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZDPHomeConfiguration",
+                "printedName": "ZohoDeskPortalCore.ZDPHomeConfiguration",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPortalHome(cm)updateConfigurationWith:",
+            "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC19updateConfiguration4withyAA07ZDPHomeH0C_tFZ",
+            "moduleName": "ZohoDeskPortalCore",
+            "static": true,
+            "objc_name": "updateConfigurationWith:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "show",
+            "printedName": "show(withTitle:navigationMode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZDPNavigationMode",
+                "printedName": "ZohoDeskPortalConfiguration.ZDPNavigationMode",
+                "hasDefaultArg": true,
+                "usr": "c:@M@ZohoDeskPortalConfiguration@E@ZDPNavigationMode"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPortalHome(cm)showWithTitle:navigationMode:",
+            "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC4show9withTitle14navigationModeySSSg_0abC13Configuration013ZDPNavigationK0OtFZ",
+            "moduleName": "ZohoDeskPortalCore",
+            "static": true,
+            "objc_name": "showWithTitle:navigationMode:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "openGlobalSearch",
+            "printedName": "openGlobalSearch(navigationMode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZDPNavigationMode",
+                "printedName": "ZohoDeskPortalConfiguration.ZDPNavigationMode",
+                "hasDefaultArg": true,
+                "usr": "c:@M@ZohoDeskPortalConfiguration@E@ZDPNavigationMode"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPortalHome(cm)openGlobalSearchWithNavigationMode:",
+            "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC16openGlobalSearch14navigationModey0abC13Configuration013ZDPNavigationK0O_tFZ",
+            "moduleName": "ZohoDeskPortalCore",
+            "static": true,
+            "objc_name": "openGlobalSearchWithNavigationMode:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPortalHome",
+        "mangledName": "$s18ZohoDeskPortalCore12ZDPortalHomeC",
+        "moduleName": "ZohoDeskPortalCore",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDPHomeProviderDelegate",
+        "printedName": "ZDPHomeProviderDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "backButtonTapped",
+            "printedName": "backButtonTapped()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalCore@objc(pl)ZDPHomeProviderDelegate(im)backButtonTapped",
+            "mangledName": "$s18ZohoDeskPortalCore23ZDPHomeProviderDelegateP16backButtonTappedyyF",
+            "moduleName": "ZohoDeskPortalCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZohoDeskPortalCore.ZDPHomeProviderDelegate>",
+            "sugared_genericSig": "<Self where Self : ZohoDeskPortalCore.ZDPHomeProviderDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@ZohoDeskPortalCore@objc(pl)ZDPHomeProviderDelegate",
+        "mangledName": "$s18ZohoDeskPortalCore23ZDPHomeProviderDelegateP",
+        "moduleName": "ZohoDeskPortalCore",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDPHomeConfiguration",
+        "printedName": "ZDPHomeConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "enableCommunity",
+            "printedName": "enableCommunity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(py)enableCommunity",
+            "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC15enableCommunitySbvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)enableCommunity",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC15enableCommunitySbvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)setEnableCommunity:",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC15enableCommunitySbvs",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore20ZDPHomeConfigurationC15enableCommunitySbvM",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC15enableCommunitySbvM",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "enableHelpCenter",
+            "printedName": "enableHelpCenter",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(py)enableHelpCenter",
+            "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC16enableHelpCenterSbvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)enableHelpCenter",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC16enableHelpCenterSbvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)setEnableHelpCenter:",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC16enableHelpCenterSbvs",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore20ZDPHomeConfigurationC16enableHelpCenterSbvM",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC16enableHelpCenterSbvM",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "enableMyTicket",
+            "printedName": "enableMyTicket",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(py)enableMyTicket",
+            "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC14enableMyTicketSbvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)enableMyTicket",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC14enableMyTicketSbvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)setEnableMyTicket:",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC14enableMyTicketSbvs",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore20ZDPHomeConfigurationC14enableMyTicketSbvM",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC14enableMyTicketSbvM",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "enableCreateTicket",
+            "printedName": "enableCreateTicket",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(py)enableCreateTicket",
+            "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC18enableCreateTicketSbvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)enableCreateTicket",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC18enableCreateTicketSbvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)setEnableCreateTicket:",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC18enableCreateTicketSbvs",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore20ZDPHomeConfigurationC18enableCreateTicketSbvM",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC18enableCreateTicketSbvM",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "enableAddTopic",
+            "printedName": "enableAddTopic",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(py)enableAddTopic",
+            "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC14enableAddTopicSbvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)enableAddTopic",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC14enableAddTopicSbvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)setEnableAddTopic:",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC14enableAddTopicSbvs",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore20ZDPHomeConfigurationC14enableAddTopicSbvM",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC14enableAddTopicSbvM",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "showChat",
+            "printedName": "showChat",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(py)showChat",
+            "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC8showChatSbvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)showChat",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC8showChatSbvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)setShowChat:",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC8showChatSbvs",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore20ZDPHomeConfigurationC8showChatSbvM",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC8showChatSbvM",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "showGC",
+            "printedName": "showGC",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(py)showGC",
+            "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC6showGCSbvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)showGC",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC6showGCSbvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)setShowGC:",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC6showGCSbvs",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore20ZDPHomeConfigurationC6showGCSbvM",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC6showGCSbvM",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "showAnswerBot",
+            "printedName": "showAnswerBot",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(py)showAnswerBot",
+            "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC13showAnswerBotSbvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)showAnswerBot",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC13showAnswerBotSbvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)setShowAnswerBot:",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC13showAnswerBotSbvs",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore20ZDPHomeConfigurationC13showAnswerBotSbvM",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC13showAnswerBotSbvM",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "showBM",
+            "printedName": "showBM",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(py)showBM",
+            "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC6showBMSbvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)showBM",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC6showBMSbvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)setShowBM:",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC6showBMSbvs",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore20ZDPHomeConfigurationC6showBMSbvM",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC6showBMSbvM",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "enableHeaderLogo",
+            "printedName": "enableHeaderLogo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(py)enableHeaderLogo",
+            "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC16enableHeaderLogoSbvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)enableHeaderLogo",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC16enableHeaderLogoSbvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)setEnableHeaderLogo:",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC16enableHeaderLogoSbvs",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore20ZDPHomeConfigurationC16enableHeaderLogoSbvM",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC16enableHeaderLogoSbvM",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "orderedModules",
+            "printedName": "orderedModules",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[ZohoDeskPortalAPIKit.ZDPortalModule]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ZohoDeskPortalAPIKit.ZDPortalModule]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDPortalModule",
+                        "printedName": "ZohoDeskPortalAPIKit.ZDPortalModule",
+                        "usr": "s:20ZohoDeskPortalAPIKit14ZDPortalModuleO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18ZohoDeskPortalCore20ZDPHomeConfigurationC14orderedModulesSay0abC6APIKit14ZDPortalModuleOGSgvp",
+            "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC14orderedModulesSay0abC6APIKit14ZDPortalModuleOGSgvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[ZohoDeskPortalAPIKit.ZDPortalModule]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[ZohoDeskPortalAPIKit.ZDPortalModule]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ZDPortalModule",
+                            "printedName": "ZohoDeskPortalAPIKit.ZDPortalModule",
+                            "usr": "s:20ZohoDeskPortalAPIKit14ZDPortalModuleO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore20ZDPHomeConfigurationC14orderedModulesSay0abC6APIKit14ZDPortalModuleOGSgvg",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC14orderedModulesSay0abC6APIKit14ZDPortalModuleOGSgvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[ZohoDeskPortalAPIKit.ZDPortalModule]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[ZohoDeskPortalAPIKit.ZDPortalModule]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ZDPortalModule",
+                            "printedName": "ZohoDeskPortalAPIKit.ZDPortalModule",
+                            "usr": "s:20ZohoDeskPortalAPIKit14ZDPortalModuleO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore20ZDPHomeConfigurationC14orderedModulesSay0abC6APIKit14ZDPortalModuleOGSgvs",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC14orderedModulesSay0abC6APIKit14ZDPortalModuleOGSgvs",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ZohoDeskPortalCore20ZDPHomeConfigurationC14orderedModulesSay0abC6APIKit14ZDPortalModuleOGSgvM",
+                "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC14orderedModulesSay0abC6APIKit14ZDPortalModuleOGSgvM",
+                "moduleName": "ZohoDeskPortalCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZDPHomeConfiguration",
+                "printedName": "ZohoDeskPortalCore.ZDPHomeConfiguration",
+                "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration(im)init",
+            "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationCACycfc",
+            "moduleName": "ZohoDeskPortalCore",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ZohoDeskPortalCore@objc(cs)ZDPHomeConfiguration",
+        "mangledName": "$s18ZohoDeskPortalCore20ZDPHomeConfigurationC",
+        "moduleName": "ZohoDeskPortalCore",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalConfiguration",
+        "printedName": "ZohoDeskPortalConfiguration",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPlatformDataBridge",
+        "printedName": "ZohoDeskPlatformDataBridge",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalAPIKit",
+        "printedName": "ZohoDeskPortalAPIKit",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalTicket",
+        "printedName": "ZohoDeskPortalTicket",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalKB",
+        "printedName": "ZohoDeskPortalKB",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalCommunity",
+        "printedName": "ZohoDeskPortalCommunity",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZDHelperKit",
+        "printedName": "ZDHelperKit",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalAPIKit",
+        "printedName": "ZohoDeskPortalAPIKit",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalConfiguration",
+        "printedName": "ZohoDeskPortalConfiguration",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalConfiguration",
+        "printedName": "ZohoDeskPortalConfiguration",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PortalWidgetStrings",
+        "printedName": "PortalWidgetStrings",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Navigation",
+            "printedName": "Navigation",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "cancel",
+                "printedName": "cancel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18ZohoDeskPortalCore0C13WidgetStringsV10NavigationC6cancelSSvp",
+                "mangledName": "$s18ZohoDeskPortalCore0C13WidgetStringsV10NavigationC6cancelSSvp",
+                "moduleName": "ZohoDeskPortalCore",
+                "declAttributes": [
+                  "AccessControl",
+                  "Custom"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18ZohoDeskPortalCore0C13WidgetStringsV10NavigationC6cancelSSvg",
+                    "mangledName": "$s18ZohoDeskPortalCore0C13WidgetStringsV10NavigationC6cancelSSvg",
+                    "moduleName": "ZohoDeskPortalCore",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Navigation",
+                    "printedName": "ZohoDeskPortalCore.PortalWidgetStrings.Navigation",
+                    "usr": "s:18ZohoDeskPortalCore0C13WidgetStringsV10NavigationC"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:18ZohoDeskPortalCore0C13WidgetStringsV10NavigationCAEycfc",
+                "mangledName": "$s18ZohoDeskPortalCore0C13WidgetStringsV10NavigationCAEycfc",
+                "moduleName": "ZohoDeskPortalCore",
+                "declAttributes": [
+                  "AccessControl",
+                  "Required"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Class",
+            "usr": "s:18ZohoDeskPortalCore0C13WidgetStringsV10NavigationC",
+            "mangledName": "$s18ZohoDeskPortalCore0C13WidgetStringsV10NavigationC",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Initializeable",
+                "printedName": "Initializeable",
+                "usr": "s:27ZohoDeskPortalConfiguration14InitializeableP",
+                "mangledName": "$s27ZohoDeskPortalConfiguration14InitializeableP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "List",
+            "printedName": "List",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "List",
+                    "printedName": "ZohoDeskPortalCore.PortalWidgetStrings.List",
+                    "usr": "s:18ZohoDeskPortalCore0C13WidgetStringsV4ListC"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:18ZohoDeskPortalCore0C13WidgetStringsV4ListCAEycfc",
+                "mangledName": "$s18ZohoDeskPortalCore0C13WidgetStringsV4ListCAEycfc",
+                "moduleName": "ZohoDeskPortalCore",
+                "declAttributes": [
+                  "AccessControl",
+                  "Required"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Class",
+            "usr": "s:18ZohoDeskPortalCore0C13WidgetStringsV4ListC",
+            "mangledName": "$s18ZohoDeskPortalCore0C13WidgetStringsV4ListC",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Initializeable",
+                "printedName": "Initializeable",
+                "usr": "s:27ZohoDeskPortalConfiguration14InitializeableP",
+                "mangledName": "$s27ZohoDeskPortalConfiguration14InitializeableP"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:18ZohoDeskPortalCore0C13WidgetStringsV",
+        "mangledName": "$s18ZohoDeskPortalCore0C13WidgetStringsV",
+        "moduleName": "ZohoDeskPortalCore",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalAPIKit",
+        "printedName": "ZohoDeskPortalAPIKit",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalConfiguration",
+        "printedName": "ZohoDeskPortalConfiguration",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "AppKit",
+        "printedName": "AppKit",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "Import",
+        "name": "DeveloperToolsSupport",
+        "printedName": "DeveloperToolsSupport",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalCore"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WidgetCard",
+        "printedName": "WidgetCard",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "copy",
+            "printedName": "copy()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20ZohoDeskPortalAPIKit8ZDPortalC10WidgetCardC0abC4CoreE4copyypyF",
+            "mangledName": "$s20ZohoDeskPortalAPIKit8ZDPortalC10WidgetCardC0abC4CoreE4copyypyF",
+            "moduleName": "ZohoDeskPortalCore",
+            "overriding": true,
+            "objc_name": "copy",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:20ZohoDeskPortalAPIKit8ZDPortalC10WidgetCardC",
+        "mangledName": "$s20ZohoDeskPortalAPIKit8ZDPortalC10WidgetCardC",
+        "moduleName": "ZohoDeskPortalAPIKit",
+        "declAttributes": [
+          "ObjC",
+          "ObjCMembers"
+        ],
+        "isFromExtension": true,
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDPortalModule",
+        "printedName": "ZDPortalModule",
+        "declKind": "Enum",
+        "usr": "s:20ZohoDeskPortalAPIKit14ZDPortalModuleO",
+        "mangledName": "$s20ZohoDeskPortalAPIKit14ZDPortalModuleO",
+        "moduleName": "ZohoDeskPortalAPIKit",
+        "enumRawTypeName": "String",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ZohoDeskPortalAPIKit.ZDPortalModule]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDPortalModule",
+                        "printedName": "ZohoDeskPortalAPIKit.ZDPortalModule",
+                        "usr": "s:20ZohoDeskPortalAPIKit14ZDPortalModuleO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "DPLocalizable",
+            "printedName": "DPLocalizable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "StringsType",
+                "printedName": "StringsType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "List",
+                    "printedName": "ZohoDeskPortalCore.PortalWidgetStrings.List",
+                    "usr": "s:18ZohoDeskPortalCore0C13WidgetStringsV4ListC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:27ZohoDeskPortalConfiguration13DPLocalizableP",
+            "mangledName": "$s27ZohoDeskPortalConfiguration13DPLocalizableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDPTopic",
+        "printedName": "ZDPTopic",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "title",
+            "printedName": "title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20ZohoDeskPortalAPIKit12ZDPCommunityC8ZDPTopicC0abC4CoreE5titleSSvp",
+            "mangledName": "$s20ZohoDeskPortalAPIKit12ZDPCommunityC8ZDPTopicC0abC4CoreE5titleSSvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20ZohoDeskPortalAPIKit12ZDPCommunityC8ZDPTopicC0abC4CoreE5titleSSvg",
+                "mangledName": "$s20ZohoDeskPortalAPIKit12ZDPCommunityC8ZDPTopicC0abC4CoreE5titleSSvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icon",
+            "printedName": "icon",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSAttributedString?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSAttributedString",
+                    "printedName": "Foundation.NSAttributedString",
+                    "usr": "c:objc(cs)NSAttributedString"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20ZohoDeskPortalAPIKit12ZDPCommunityC8ZDPTopicC0abC4CoreE4iconSo18NSAttributedStringCSgvp",
+            "mangledName": "$s20ZohoDeskPortalAPIKit12ZDPCommunityC8ZDPTopicC0abC4CoreE4iconSo18NSAttributedStringCSgvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSAttributedString?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSAttributedString",
+                        "printedName": "Foundation.NSAttributedString",
+                        "usr": "c:objc(cs)NSAttributedString"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20ZohoDeskPortalAPIKit12ZDPCommunityC8ZDPTopicC0abC4CoreE4iconSo18NSAttributedStringCSgvg",
+                "mangledName": "$s20ZohoDeskPortalAPIKit12ZDPCommunityC8ZDPTopicC0abC4CoreE4iconSo18NSAttributedStringCSgvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "uuid",
+            "printedName": "uuid",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20ZohoDeskPortalAPIKit12ZDPCommunityC8ZDPTopicC0abC4CoreE4uuidSSvp",
+            "mangledName": "$s20ZohoDeskPortalAPIKit12ZDPCommunityC8ZDPTopicC0abC4CoreE4uuidSSvp",
+            "moduleName": "ZohoDeskPortalCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20ZohoDeskPortalAPIKit12ZDPCommunityC8ZDPTopicC0abC4CoreE4uuidSSvg",
+                "mangledName": "$s20ZohoDeskPortalAPIKit12ZDPCommunityC8ZDPTopicC0abC4CoreE4uuidSSvg",
+                "moduleName": "ZohoDeskPortalCore",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:20ZohoDeskPortalAPIKit12ZDPCommunityC8ZDPTopicC",
+        "mangledName": "$s20ZohoDeskPortalAPIKit12ZDPCommunityC8ZDPTopicC",
+        "moduleName": "ZohoDeskPortalAPIKit",
+        "declAttributes": [
+          "ObjC"
+        ],
+        "isFromExtension": true,
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ZPSimpleListItem",
+            "printedName": "ZPSimpleListItem",
+            "usr": "s:27ZohoDeskPortalConfiguration16ZPSimpleListItemP",
+            "mangledName": "$s27ZohoDeskPortalConfiguration16ZPSimpleListItemP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NSImage",
+        "printedName": "NSImage",
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSImage",
+        "moduleName": "AppKit",
+        "intro_iOS": "13.0",
+        "objc_name": "NSImage",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "ObjC",
+          "NonSendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Domain\/ZDPortalUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 281,
+      "length": 9,
+      "value": "\"MODULES\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Domain\/ZDPortalUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 315,
+      "length": 16,
+      "value": "\"CUSTOM_WIDGETS\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Domain\/ZDPortalUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 358,
+      "length": 17,
+      "value": "\"RECENT_ARTICLES\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Domain\/ZDPortalUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 401,
+      "length": 21,
+      "value": "\"MOST_LIKED_ARTICLES\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Domain\/ZDPortalUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 449,
+      "length": 22,
+      "value": "\"MOST_VIEWED_ARTICLES\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Domain\/ZDPortalUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 493,
+      "length": 12,
+      "value": "\"NEW_SEARCH\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Domain\/ZDPortalUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 531,
+      "length": 16,
+      "value": "\"POPULAR_TOPICS\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Domain\/ZDPortalUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 575,
+      "length": 23,
+      "value": "\"MOST_DISCUSSED_TOPICS\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Domain\/ZDPortalUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 623,
+      "length": 25,
+      "value": "\"COMMUNITY_ANNOUNCEMENTS\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Domain\/ZDPortalUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 673,
+      "length": 15,
+      "value": "\"RECENT_TOPICS\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Domain\/ZDPortalUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 712,
+      "length": 14,
+      "value": "\"STICKY_POSTS\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Domain\/ZDPortalUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 3867,
+      "length": 4,
+      "value": "\"-1\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Domain\/ZDPortalUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 3886,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/ZohoDeskPortal.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3457,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/ZohoDeskPortal.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3509,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/ZohoDeskPortal.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3559,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/ZohoDeskPortal.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3613,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/ZohoDeskPortal.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3662,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/ZohoDeskPortal.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3706,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/ZohoDeskPortal.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3747,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/ZohoDeskPortal.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3795,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/ZohoDeskPortal.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3836,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/ZohoDeskPortal.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3887,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/CustomWidgetBinder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3323,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/CustomWidgetBinder.swift",
+      "kind": "StringLiteral",
+      "offset": 3355,
+      "length": 10,
+      "value": "\"assignee\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Data\/WidgetNetworkService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2480,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Data\/WidgetNetworkService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2496,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Data\/WidgetNetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 3057,
+      "length": 12,
+      "value": "\"-likeCount\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Data\/WidgetNetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 3100,
+      "length": 14,
+      "value": "\"-createdTime\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Data\/WidgetNetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 3147,
+      "length": 12,
+      "value": "\"-viewCount\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Data\/WidgetNetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 5415,
+      "length": 10,
+      "value": "\"QUESTION\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Data\/WidgetNetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 5449,
+      "length": 9,
+      "value": "\"PROBLEM\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Data\/WidgetNetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 5479,
+      "length": 6,
+      "value": "\"IDEA\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Data\/WidgetNetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 5512,
+      "length": 12,
+      "value": "\"DISCUSSION\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Data\/WidgetNetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 5607,
+      "length": 14,
+      "value": "\"ANNOUNCEMENT\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 371,
+      "length": 20,
+      "value": "\"ticketSectionTitle\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 421,
+      "length": 11,
+      "value": "\"zpViewAll\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 466,
+      "length": 17,
+      "value": "\"zpTicketsHolder\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 509,
+      "length": 12,
+      "value": "\"widgetIcon\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 547,
+      "length": 11,
+      "value": "\"cardTitle\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 590,
+      "length": 17,
+      "value": "\"cardDescription\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 634,
+      "length": 13,
+      "value": "\"zpBotButton\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 887,
+      "length": 15,
+      "value": "\"zpHeaderTitle\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 925,
+      "length": 8,
+      "value": "\"zpIcon\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 956,
+      "length": 9,
+      "value": "\"zpTitle\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 1056,
+      "length": 13,
+      "value": "\"zpMyTickets\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 1213,
+      "length": 35,
+      "value": "\"DeskPortal.Navigation.Home.cancel\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 1416,
+      "length": 42,
+      "value": "\"DeskPortal.Dashboard.addticket.homeTitle\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 1533,
+      "length": 48,
+      "value": "\"DeskPortal.Dashboard.addticket.homeDescription\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 1662,
+      "length": 38,
+      "value": "\"DeskPortal.Dashboard.community.title\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 1775,
+      "length": 48,
+      "value": "\"DeskPortal.Dashboard.community.homeDescription\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 1904,
+      "length": 39,
+      "value": "\"DeskPortal.Dashboard.helpcenter.title\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 2011,
+      "length": 49,
+      "value": "\"DeskPortal.Dashboard.helpcenter.homeDescription\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 2134,
+      "length": 37,
+      "value": "\"DeskPortal.Dashboard.myticket.title\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 2245,
+      "length": 41,
+      "value": "\"DeskPortal.Dashboard.livechat.homeTitle\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 2360,
+      "length": 47,
+      "value": "\"DeskPortal.Dashboard.livechat.homeDescription\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 2487,
+      "length": 35,
+      "value": "\"DeskPortal.Dashboard.gc.homeTitle\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 2590,
+      "length": 41,
+      "value": "\"DeskPortal.Dashboard.gc.homeDescription\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 2705,
+      "length": 28,
+      "value": "\"DeskPortal.Dashboard.title\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 2799,
+      "length": 36,
+      "value": "\"DeskPortal.Dashboard.recentTickets\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 2909,
+      "length": 44,
+      "value": "\"DeskPortal.Dashboard.recentTickets.viewAll\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 3021,
+      "length": 37,
+      "value": "\"DeskPortal.Community.addTopic.title\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 3132,
+      "length": 47,
+      "value": "\"DeskPortal.Community.addTopic.homeDescription\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 3259,
+      "length": 38,
+      "value": "\"DeskPortal.Dashboard.addTopic.button\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 3372,
+      "length": 39,
+      "value": "\"DeskPortal.Dashboard.addticket.button\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 3490,
+      "length": 34,
+      "value": "\"DeskPortal.Dashboard.chat.button\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 3593,
+      "length": 49,
+      "value": "\"DeskPortal.Dashboard.answer_bot.homeDescription\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 3719,
+      "length": 41,
+      "value": "\"DeskPortal.Dashboard.bm.homeDescription\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 3945,
+      "length": 48,
+      "value": "\"DeskPortal.Helpcenter.articles.recent_articles\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 4068,
+      "length": 45,
+      "value": "\"DeskPortal.Helpcenter.home.mostReadArticles\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 4190,
+      "length": 49,
+      "value": "\"DeskPortal.Helpcenter.articles.popular_articles\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 4315,
+      "length": 55,
+      "value": "\"DeskPortal.Community.topic_type_most_discussed_topics\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 4450,
+      "length": 42,
+      "value": "\"DeskPortal.Helpcenter.home.popularTopics\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 4566,
+      "length": 41,
+      "value": "\"DeskPortal.Helpcenter.home.recentTopics\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 4680,
+      "length": 40,
+      "value": "\"DeskPortal.Community.Label.sticky_post\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZohoDeskPortal\/ZohoDeskPortalCore\/Binders\/BinderStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 4792,
+      "length": 47,
+      "value": "\"DeskPortal.Community.topic_type_announcements\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/Library\/Developer\/Xcode\/DerivedData\/ZohoDeskPortalCore-dljastqtwatwuhepklhuiioszhvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ZohoDeskPortalCore\/IntermediateBuildFilesPath\/ZohoDeskPortalCore.build\/Release-maccatalyst\/ZohoDeskPortalCore.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 731,
+      "length": 11,
+      "value": "\"community\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/Library\/Developer\/Xcode\/DerivedData\/ZohoDeskPortalCore-dljastqtwatwuhepklhuiioszhvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ZohoDeskPortalCore\/IntermediateBuildFilesPath\/ZohoDeskPortalCore.build\/Release-maccatalyst\/ZohoDeskPortalCore.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 872,
+      "length": 12,
+      "value": "\"helpCenter\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/Library\/Developer\/Xcode\/DerivedData\/ZohoDeskPortalCore-dljastqtwatwuhepklhuiioszhvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ZohoDeskPortalCore\/IntermediateBuildFilesPath\/ZohoDeskPortalCore.build\/Release-maccatalyst\/ZohoDeskPortalCore.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1014,
+      "length": 12,
+      "value": "\"liveChatGC\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/Library\/Developer\/Xcode\/DerivedData\/ZohoDeskPortalCore-dljastqtwatwuhepklhuiioszhvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ZohoDeskPortalCore\/IntermediateBuildFilesPath\/ZohoDeskPortalCore.build\/Release-maccatalyst\/ZohoDeskPortalCore.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1154,
+      "length": 11,
+      "value": "\"myTickets\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/Library\/Developer\/Xcode\/DerivedData\/ZohoDeskPortalCore-dljastqtwatwuhepklhuiioszhvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ZohoDeskPortalCore\/IntermediateBuildFilesPath\/ZohoDeskPortalCore.build\/Release-maccatalyst\/ZohoDeskPortalCore.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1301,
+      "length": 15,
+      "value": "\"submitTickets\""
+    }
+  ]
+}

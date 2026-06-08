@@ -1,0 +1,2322 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "ZohoDeskPortalChatKit",
+    "printedName": "ZohoDeskPortalChatKit",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalChatKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZDChat",
+        "printedName": "ZDChat",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalChatKit"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalAPIKit",
+        "printedName": "ZohoDeskPortalAPIKit",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalChatKit"
+      },
+      {
+        "kind": "Import",
+        "name": "ZohoDeskPortalConfiguration",
+        "printedName": "ZohoDeskPortalConfiguration",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalChatKit"
+      },
+      {
+        "kind": "Import",
+        "name": "ZDOneChatSDK",
+        "printedName": "ZDOneChatSDK",
+        "declKind": "Import",
+        "moduleName": "ZohoDeskPortalChatKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDPortalGCConfiguration",
+        "printedName": "ZDPortalGCConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "enabelLanguagePicker",
+            "printedName": "enabelLanguagePicker",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21ZohoDeskPortalChatKit23ZDPortalGCConfigurationC20enabelLanguagePickerSbvpZ",
+            "mangledName": "$s21ZohoDeskPortalChatKit23ZDPortalGCConfigurationC20enabelLanguagePickerSbvpZ",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ZohoDeskPortalChatKit23ZDPortalGCConfigurationC20enabelLanguagePickerSbvgZ",
+                "mangledName": "$s21ZohoDeskPortalChatKit23ZDPortalGCConfigurationC20enabelLanguagePickerSbvgZ",
+                "moduleName": "ZohoDeskPortalChatKit",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ZohoDeskPortalChatKit23ZDPortalGCConfigurationC20enabelLanguagePickerSbvsZ",
+                "mangledName": "$s21ZohoDeskPortalChatKit23ZDPortalGCConfigurationC20enabelLanguagePickerSbvsZ",
+                "moduleName": "ZohoDeskPortalChatKit",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ZohoDeskPortalChatKit23ZDPortalGCConfigurationC20enabelLanguagePickerSbvMZ",
+                "mangledName": "$s21ZohoDeskPortalChatKit23ZDPortalGCConfigurationC20enabelLanguagePickerSbvMZ",
+                "moduleName": "ZohoDeskPortalChatKit",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZDPortalGCConfiguration",
+                "printedName": "ZohoDeskPortalChatKit.ZDPortalGCConfiguration",
+                "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalGCConfiguration"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalGCConfiguration(im)init",
+            "mangledName": "$s21ZohoDeskPortalChatKit23ZDPortalGCConfigurationCACycfc",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalGCConfiguration",
+        "mangledName": "$s21ZohoDeskPortalChatKit23ZDPortalGCConfigurationC",
+        "moduleName": "ZohoDeskPortalChatKit",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDPortalBMConfiguration",
+        "printedName": "ZDPortalBMConfiguration",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "setMoreOptionVisibility",
+            "printedName": "setMoreOptionVisibility(isVisible:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalBMConfiguration(cm)setMoreOptionVisibilityWithIsVisible:",
+            "mangledName": "$s21ZohoDeskPortalChatKit23ZDPortalBMConfigurationC23setMoreOptionVisibility9isVisibleySb_tFZ",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "static": true,
+            "objc_name": "setMoreOptionVisibilityWithIsVisible:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZDPortalBMConfiguration",
+                "printedName": "ZohoDeskPortalChatKit.ZDPortalBMConfiguration",
+                "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalBMConfiguration"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalBMConfiguration(im)init",
+            "mangledName": "$s21ZohoDeskPortalChatKit23ZDPortalBMConfigurationCACycfc",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalBMConfiguration",
+        "mangledName": "$s21ZohoDeskPortalChatKit23ZDPortalBMConfigurationC",
+        "moduleName": "ZohoDeskPortalChatKit",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDPortalChatKit",
+        "printedName": "ZDPortalChatKit",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "syncGCLanguage",
+            "printedName": "syncGCLanguage(disable:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit(cm)syncGCLanguageWithDisable:",
+            "mangledName": "$s21ZohoDeskPortalChatKit08ZDPortaldE0C14syncGCLanguage7disableySb_tFZ",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "static": true,
+            "objc_name": "syncGCLanguageWithDisable:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hideEndChatPopupWindow",
+            "printedName": "hideEndChatPopupWindow(disable:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit(cm)hideEndChatPopupWindowWithDisable:",
+            "mangledName": "$s21ZohoDeskPortalChatKit08ZDPortaldE0C07hideEndD11PopupWindow7disableySb_tFZ",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "static": true,
+            "objc_name": "hideEndChatPopupWindowWithDisable:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateGCSessionVariable",
+            "printedName": "updateGCSessionVariable(sessionVariables:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit(cm)updateGCSessionVariableWithSessionVariables:",
+            "mangledName": "$s21ZohoDeskPortalChatKit08ZDPortaldE0C23updateGCSessionVariable16sessionVariablesySaySDySSypGG_tFZ",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "static": true,
+            "objc_name": "updateGCSessionVariableWithSessionVariables:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setGCSessionVariable",
+            "printedName": "setGCSessionVariable(sessionVariables:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit(cm)setGCSessionVariableWithSessionVariables:",
+            "mangledName": "$s21ZohoDeskPortalChatKit08ZDPortaldE0C20setGCSessionVariable16sessionVariablesySaySDySSypGG_tFZ",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "static": true,
+            "objc_name": "setGCSessionVariableWithSessionVariables:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setContactInfo",
+            "printedName": "setContactInfo(name:phone:email:additionalInfo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit(cm)setContactInfoWithName:phone:email:additionalInfo:",
+            "mangledName": "$s21ZohoDeskPortalChatKit08ZDPortaldE0C14setContactInfo4name5phone5email010additionalI0ySS_S2SSDyS2SGtFZ",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "static": true,
+            "objc_name": "setContactInfoWithName:phone:email:additionalInfo:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateBMSessionVariable",
+            "printedName": "updateBMSessionVariable(sessionVariables:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit(cm)updateBMSessionVariableWithSessionVariables:",
+            "mangledName": "$s21ZohoDeskPortalChatKit08ZDPortaldE0C23updateBMSessionVariable16sessionVariablesySaySDySSypGG_tFZ",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "static": true,
+            "objc_name": "updateBMSessionVariableWithSessionVariables:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setBMSessionVariable",
+            "printedName": "setBMSessionVariable(sessionVariables:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit(cm)setBMSessionVariableWithSessionVariables:",
+            "mangledName": "$s21ZohoDeskPortalChatKit08ZDPortaldE0C20setBMSessionVariable16sessionVariablesySaySDySSypGG_tFZ",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "static": true,
+            "objc_name": "setBMSessionVariableWithSessionVariables:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showGC",
+            "printedName": "showGC()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit(cm)showGC",
+            "mangledName": "$s21ZohoDeskPortalChatKit08ZDPortaldE0C6showGCyyFZ",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showAnswerBot",
+            "printedName": "showAnswerBot()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit(cm)showAnswerBot",
+            "mangledName": "$s21ZohoDeskPortalChatKit08ZDPortaldE0C13showAnswerBotyyFZ",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showBM",
+            "printedName": "showBM()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit(cm)showBM",
+            "mangledName": "$s21ZohoDeskPortalChatKit08ZDPortaldE0C6showBMyyFZ",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disableBMAgentTransfer",
+            "printedName": "disableBMAgentTransfer(isdisable:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit(cm)disableBMAgentTransferWithIsdisable:",
+            "mangledName": "$s21ZohoDeskPortalChatKit08ZDPortaldE0C22disableBMAgentTransfer9isdisableySb_tFZ",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "static": true,
+            "objc_name": "disableBMAgentTransferWithIsdisable:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clearGCData",
+            "printedName": "clearGCData()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit(cm)clearGCData",
+            "mangledName": "$s21ZohoDeskPortalChatKit08ZDPortaldE0C11clearGCDatayyFZ",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clearAnswerBotData",
+            "printedName": "clearAnswerBotData()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit(cm)clearAnswerBotData",
+            "mangledName": "$s21ZohoDeskPortalChatKit08ZDPortaldE0C18clearAnswerBotDatayyFZ",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clearBMData",
+            "printedName": "clearBMData()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit(cm)clearBMData",
+            "mangledName": "$s21ZohoDeskPortalChatKit08ZDPortaldE0C11clearBMDatayyFZ",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZDPortalChatKit",
+                "printedName": "ZohoDeskPortalChatKit.ZDPortalChatKit",
+                "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit(im)init",
+            "mangledName": "$s21ZohoDeskPortalChatKit08ZDPortaldE0CACycfc",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ZohoDeskPortalChatKit@objc(cs)ZDPortalChatKit",
+        "mangledName": "$s21ZohoDeskPortalChatKit08ZDPortaldE0C",
+        "moduleName": "ZohoDeskPortalChatKit",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDPortalGCService",
+        "printedName": "ZDPortalGCService",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "showChat",
+            "printedName": "showChat()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21ZohoDeskPortalChatKit17ZDPortalGCServiceC04showD0yyF",
+            "mangledName": "$s21ZohoDeskPortalChatKit17ZDPortalGCServiceC04showD0yyF",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "overriding": true,
+            "declAttributes": [
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isBussinessHours",
+            "printedName": "isBussinessHours()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21ZohoDeskPortalChatKit17ZDPortalGCServiceC16isBussinessHoursSbyF",
+            "mangledName": "$s21ZohoDeskPortalChatKit17ZDPortalGCServiceC16isBussinessHoursSbyF",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "overriding": true,
+            "declAttributes": [
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZDPortalGCService",
+                "printedName": "ZohoDeskPortalChatKit.ZDPortalGCService",
+                "usr": "s:21ZohoDeskPortalChatKit17ZDPortalGCServiceC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21ZohoDeskPortalChatKit17ZDPortalGCServiceCACycfc",
+            "mangledName": "$s21ZohoDeskPortalChatKit17ZDPortalGCServiceCACycfc",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:21ZohoDeskPortalChatKit17ZDPortalGCServiceC",
+        "mangledName": "$s21ZohoDeskPortalChatKit17ZDPortalGCServiceC",
+        "moduleName": "ZohoDeskPortalChatKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:27ZohoDeskPortalConfiguration6DTHomeC",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ZohoDeskPortalConfiguration.DTHome"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDPortalAnswerBotService",
+        "printedName": "ZDPortalAnswerBotService",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "showChat",
+            "printedName": "showChat()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21ZohoDeskPortalChatKit24ZDPortalAnswerBotServiceC04showD0yyF",
+            "mangledName": "$s21ZohoDeskPortalChatKit24ZDPortalAnswerBotServiceC04showD0yyF",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "overriding": true,
+            "declAttributes": [
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isBussinessHours",
+            "printedName": "isBussinessHours()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21ZohoDeskPortalChatKit24ZDPortalAnswerBotServiceC16isBussinessHoursSbyF",
+            "mangledName": "$s21ZohoDeskPortalChatKit24ZDPortalAnswerBotServiceC16isBussinessHoursSbyF",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "overriding": true,
+            "declAttributes": [
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZDPortalAnswerBotService",
+                "printedName": "ZohoDeskPortalChatKit.ZDPortalAnswerBotService",
+                "usr": "s:21ZohoDeskPortalChatKit24ZDPortalAnswerBotServiceC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21ZohoDeskPortalChatKit24ZDPortalAnswerBotServiceCACycfc",
+            "mangledName": "$s21ZohoDeskPortalChatKit24ZDPortalAnswerBotServiceCACycfc",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:21ZohoDeskPortalChatKit24ZDPortalAnswerBotServiceC",
+        "mangledName": "$s21ZohoDeskPortalChatKit24ZDPortalAnswerBotServiceC",
+        "moduleName": "ZohoDeskPortalChatKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:27ZohoDeskPortalConfiguration6DTHomeC",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ZohoDeskPortalConfiguration.DTHome"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDPortalBMService",
+        "printedName": "ZDPortalBMService",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "showChat",
+            "printedName": "showChat()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21ZohoDeskPortalChatKit17ZDPortalBMServiceC04showD0yyF",
+            "mangledName": "$s21ZohoDeskPortalChatKit17ZDPortalBMServiceC04showD0yyF",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "overriding": true,
+            "declAttributes": [
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isBussinessHours",
+            "printedName": "isBussinessHours()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21ZohoDeskPortalChatKit17ZDPortalBMServiceC16isBussinessHoursSbyF",
+            "mangledName": "$s21ZohoDeskPortalChatKit17ZDPortalBMServiceC16isBussinessHoursSbyF",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "overriding": true,
+            "declAttributes": [
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZDPortalBMService",
+                "printedName": "ZohoDeskPortalChatKit.ZDPortalBMService",
+                "usr": "s:21ZohoDeskPortalChatKit17ZDPortalBMServiceC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21ZohoDeskPortalChatKit17ZDPortalBMServiceCACycfc",
+            "mangledName": "$s21ZohoDeskPortalChatKit17ZDPortalBMServiceCACycfc",
+            "moduleName": "ZohoDeskPortalChatKit",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:21ZohoDeskPortalChatKit17ZDPortalBMServiceC",
+        "mangledName": "$s21ZohoDeskPortalChatKit17ZDPortalBMServiceC",
+        "moduleName": "ZohoDeskPortalChatKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:27ZohoDeskPortalConfiguration6DTHomeC",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ZohoDeskPortalConfiguration.DTHome"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1150,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "Dictionary",
+      "offset": 2869,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6749,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8024,
+      "length": 4,
+      "value": "26.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8029,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8040,
+      "length": 5,
+      "value": "112.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8046,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8056,
+      "length": 4,
+      "value": "99.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8061,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8072,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8174,
+      "length": 4,
+      "value": "26.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8179,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8190,
+      "length": 5,
+      "value": "112.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8196,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8206,
+      "length": 4,
+      "value": "99.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8211,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8222,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8322,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8328,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8340,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8346,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8357,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8363,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8375,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8481,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8487,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8499,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8505,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8516,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8522,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8534,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8635,
+      "length": 5,
+      "value": "246.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8641,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8653,
+      "length": 5,
+      "value": "248.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8659,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8670,
+      "length": 5,
+      "value": "251.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8676,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8688,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8793,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8799,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8811,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8817,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8828,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8834,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8846,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8946,
+      "length": 5,
+      "value": "246.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8952,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8964,
+      "length": 5,
+      "value": "248.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8970,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8981,
+      "length": 5,
+      "value": "251.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8987,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 8999,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 9096,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9100,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 9112,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9116,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 9127,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9131,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 9143,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 9244,
+      "length": 4,
+      "value": "63.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9249,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 9261,
+      "length": 4,
+      "value": "76.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9266,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 9277,
+      "length": 4,
+      "value": "94.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9282,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 9294,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 9381,
+      "length": 5,
+      "value": "222.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9387,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 9399,
+      "length": 4,
+      "value": "53.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9404,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 9415,
+      "length": 4,
+      "value": "53.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9420,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 9432,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 9989,
+      "length": 4,
+      "value": "26.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9994,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10005,
+      "length": 5,
+      "value": "112.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10011,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10021,
+      "length": 4,
+      "value": "99.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10026,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10037,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10134,
+      "length": 4,
+      "value": "26.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10139,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10150,
+      "length": 5,
+      "value": "112.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10156,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10166,
+      "length": 4,
+      "value": "99.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10171,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10182,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10277,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10283,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10295,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10301,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10312,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10318,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10330,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10431,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10437,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10449,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10455,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10466,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10472,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10484,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10580,
+      "length": 4,
+      "value": "27.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10585,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10597,
+      "length": 4,
+      "value": "33.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10602,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10613,
+      "length": 4,
+      "value": "43.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10618,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10630,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10730,
+      "length": 4,
+      "value": "35.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10735,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10747,
+      "length": 4,
+      "value": "43.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10752,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10763,
+      "length": 4,
+      "value": "56.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10768,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10780,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10875,
+      "length": 4,
+      "value": "27.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10880,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10892,
+      "length": 4,
+      "value": "33.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10897,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10908,
+      "length": 4,
+      "value": "43.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10913,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 10925,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 11017,
+      "length": 5,
+      "value": "226.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11023,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 11035,
+      "length": 5,
+      "value": "228.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11041,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 11052,
+      "length": 5,
+      "value": "230.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11058,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 11070,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 11166,
+      "length": 5,
+      "value": "168.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11172,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 11184,
+      "length": 5,
+      "value": "176.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11190,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 11201,
+      "length": 5,
+      "value": "189.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11207,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 11219,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 11301,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11307,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 11319,
+      "length": 5,
+      "value": "107.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11325,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 11336,
+      "length": 5,
+      "value": "107.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11342,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_29_2026\/ASAP_IOS_WITH_PLATFORM\/13557294\/MACSRC\/build\/ASAP_IOS_WITH_PLATFORM\/ZDPortalGC\/ZDGC\/Source\/ZohoDeskPortalChatKit.swift",
+      "kind": "FloatLiteral",
+      "offset": 11354,
+      "length": 4,
+      "value": "1.00"
+    }
+  ]
+}

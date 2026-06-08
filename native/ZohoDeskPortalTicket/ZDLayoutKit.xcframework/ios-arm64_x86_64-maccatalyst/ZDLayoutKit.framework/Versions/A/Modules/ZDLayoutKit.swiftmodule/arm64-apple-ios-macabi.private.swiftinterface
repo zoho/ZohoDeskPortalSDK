@@ -1,0 +1,2116 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZDLayoutKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import AVFoundation
+import Combine
+import CoreData
+import Foundation
+import Swift
+import UIKit
+import ZDAttachmentUploader
+import ZDHelperKit
+import ZohoDeskPlatformDataBridge
+import ZohoDeskPlatformUIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @objc(ZDLayoutFields) nonisolated public class ZDLayoutFields : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+extension ZDLayoutKit.ZDLayoutFields {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDLayoutKit.ZDLayoutFields>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var defaultValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var dependency: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var fieldId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var fieldOrder: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var initialValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var initialValueByClient: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var isMandatory: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isMandatoryForLocal: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isNested: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isValueChanged: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var layoutId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var modifiedDate: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var nestedUserInput: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var sectionName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var sectionOrder: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var decimals: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var showField: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var showSection: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var statusMapping: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var userInput: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var validationError: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var allowedValues: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var allowedValuesServer: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var sortBy: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var fieldProperties: ZDLayoutKit.ZDOrgFields? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var layout: ZDLayoutKit.ZDOrgLayouts? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+public protocol ZDTicketCreationNetworkCalls : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var apiModifier: (any ZDLayoutKit.ZDTicketCreationNetworkDataSource)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var captchaModifier: (any ZDLayoutKit.ZDCaptchaNetworkDataSource)? { get set }
+  #endif
+  var apiLimit: Swift.Int { get }
+  func getDepartments(of orgId: Swift.String, from: Swift.Int)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getLayouts(departmentId: Swift.String, from: Swift.Int, keyword: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func editContact(email: Swift.String, contactId: Swift.String?, phone: Swift.String?)
+  #endif
+  func associatedAccounts(of contactId: Swift.String)
+  func updateTicketsAccounts(of contactId: Swift.String, accountId: Swift.String)
+  func updateContacts(of contactId: Swift.String, accountId: Swift.String)
+  func getLookupField(of layoutId: Swift.String)
+  func availableFields(from module: ZDLayoutKit.ZDTCModules, departmentId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getLookupData(of layoutId: Swift.String, fieldId: Swift.String, module: (any ZDLayoutKit.ZDCLookUpModule)?, searchQuery: Swift.String?, from: Swift.Int, filterData: Swift.Bool)
+  #endif
+  func getFeaturePermission(of module: ZDLayoutKit.ZDTCModules)
+  func dependencyMapping(of layoutId: Swift.String)
+  func getStatusMapping(of layoutId: Swift.String)
+  func layoutDetail(departmentId: Swift.String, of layoutId: Swift.String)
+  func getLayoutRule(departmentId: Swift.String, of layoutId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getProducts(departmentId: Swift.String, from: Swift.Int, keyword: Swift.String?)
+  #endif
+  func getTemplates(departmentId: Swift.String, layoutId: Swift.String, from: Swift.Int)
+  func getTemplateDetail(departmentId: Swift.String, templateId: Swift.String, layoutId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getAccounts(from: Swift.Int, keyword: Swift.String?)
+  #endif
+  func getValidationRule(departmentId: Swift.String, layoutId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func globalSearch(for keyword: Swift.String?, module: ZDLayoutKit.GlobalSearchModules, id: Swift.String?, locale: Swift.String, from: Swift.Int)
+  #endif
+  func getContact(contact: ZDLayoutKit.GetContact)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func createContact(email: Swift.String, contactName: Swift.String?, accountId: Swift.String?, phone: Swift.String?)
+  #endif
+  func createTicket(departmentId: Swift.String, fields: [Swift.String : Any])
+  func getTranslatedValues(for language: Swift.String)
+  func editTicket(departmentId: Swift.String, ticketId: Swift.String, fields: [Swift.String : Any])
+  func getAllTicketFields(departmentId: Swift.String, layoutId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func fetchImage(from url: Foundation.URL, completion: ((Foundation.Data?) -> ())?)
+  #endif
+  func getTicketDetail(id: Swift.String)
+  func createTicketWithCaptcha(departmentId: Swift.String, fields: [Swift.String : Any])
+  func getContacts(ids: [Swift.String])
+  func getAttachments(ticketId: Swift.String)
+  func generateImageCaptcha(language: Swift.String)
+  func generateAudioCaptcha(language: Swift.String)
+  var dropDownFields: [ZDLayoutKit.ZDCTicketFields] { get }
+  var ignoreReadOnlyFields: Swift.Bool { get }
+  var unAllowedFieldsForTemplates: [ZDLayoutKit.ZDCTicketFields] { get }
+  var fieldsToSkipForCreate: [ZDLayoutKit.ZDCTicketFields] { get }
+  var fieldsToSkipForPreview: [ZDLayoutKit.ZDCTicketFields] { get }
+  var fieldsToSkipForEdit: [ZDLayoutKit.ZDCTicketFields] { get }
+  var contactFieldApiName: ZDLayoutKit.ZDCTicketFields { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var actionDelegate: (any ZDLayoutKit.ZDCActionDelegate)? { get }
+  #endif
+}
+extension ZDLayoutKit.ZDTicketCreationNetworkCalls {
+  public var apiLimit: Swift.Int {
+    get
+  }
+  public var unAllowedFieldsForTemplates: [ZDLayoutKit.ZDCTicketFields] {
+    get
+  }
+  public var contactFieldApiName: ZDLayoutKit.ZDCTicketFields {
+    get
+  }
+  public func associatedAccounts(of contactId: Swift.String)
+  public func updateTicketsAccounts(of contactId: Swift.String, accountId: Swift.String)
+  public func updateContacts(of contactId: Swift.String, accountId: Swift.String)
+  public func getDepartments(of orgId: Swift.String, from: Swift.Int)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getLayouts(departmentId: Swift.String, from: Swift.Int, keyword: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func editContact(email: Swift.String, contactId: Swift.String?, phone: Swift.String?)
+  #endif
+  public func getLookupField(of layoutId: Swift.String)
+  public func availableFields(from module: ZDLayoutKit.ZDTCModules, departmentId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getLookupData(of layoutId: Swift.String, fieldId: Swift.String, module: (any ZDLayoutKit.ZDCLookUpModule)?, searchQuery: Swift.String?, from: Swift.Int, filterData: Swift.Bool)
+  #endif
+  public func getFeaturePermission(of module: ZDLayoutKit.ZDTCModules)
+  public func dependencyMapping(of layoutId: Swift.String)
+  public func getStatusMapping(of layoutId: Swift.String)
+  public func getContacts(ids: [Swift.String])
+  public func getAttachments(ticketId: Swift.String)
+  public func createTicketWithCaptcha(departmentId: Swift.String, fields: [Swift.String : Any])
+  public func generateImageCaptcha(language: Swift.String)
+  public func generateAudioCaptcha(language: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var captchaModifier: (any ZDLayoutKit.ZDCaptchaNetworkDataSource)? {
+    get
+    set
+  }
+  #endif
+}
+public protocol ZDTicketCreationNetworkDataSource : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func myLayouts(from: Swift.Int, keyword: Swift.String?, layouts: [any ZDLayoutKit.ZDTCLayout]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func allDepartments(from: Swift.Int, data: [ZDLayoutKit.DPDepartment]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func layoutDetail(of layoutId: Swift.String, form: (any ZDLayoutKit.ZDTCForms)?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func templates(from: Swift.Int, layoutId: Swift.String, data: [any ZDLayoutKit.ZDTCTemplate]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func layoutRules(layoutId: Swift.String, rules: [any ZDLayoutKit.ZDTCLayoutRules]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func accountsList(from: Swift.Int, keyword: Swift.String?, accounts: [any ZDLayoutKit.ZDTCAccounts]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func translatedValues(language: Swift.String, data: Foundation.Data?, values: [Swift.String : Any]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func allProducts(from: Swift.Int, products: [any ZDLayoutKit.ZDTCProduct]?, keyword: Swift.String?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func dependencyMapping(of layoutId: Swift.String, dependency: [any ZDLayoutKit.ZDTCDependencyMapping]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func lookupFields(of layoutId: Swift.String, lookupField: [any ZDLayoutKit.ZDCLookupField]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func lookupData(fieldId: Swift.String, module: (any ZDLayoutKit.ZDCLookUpModule)?, searchQuery: Swift.String?, from: Swift.Int, data: [Swift.String : Any]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func availableFields(module: ZDLayoutKit.ZDTCModules, fields: [any ZDLayoutKit.ZDTCAvailableField]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func templateDetails(of templateId: Swift.String, layoutId: Swift.String, template: [Swift.String : Any]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func ticketStatusMapping(of layoutId: Swift.String, statusMapping: [any ZDLayoutKit.ZDCStatusMapping]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func validationRule(rules: [any ZDLayoutKit.ZDTCValidationRules]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func articleList(keyword: Swift.String, articles: [any ZDLayoutKit.ZDTCArticle]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func contactsList(from: Swift.Int, for keyword: Swift.String?, contacts: [any ZDLayoutKit.ZDTCContacts]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func contactDetail(for id: Swift.String, contact: (any ZDLayoutKit.ZDTCContacts)?, isCreated: Swift.Bool, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func associatedAccounts(for contactId: Swift.String, accounts: [any ZDLayoutKit.ZDTCAccounts]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func updatedTicketsAccounts(of contactId: Swift.String, accountId: Swift.String, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func updatedContact(of contactId: Swift.String, contact: (any ZDLayoutKit.ZDTCContacts)?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func ticketCreated(ticketId: Swift.String, ticket: (any ZDLayoutKit.ZDCTicket)?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func ticketEdited(ticketId: Swift.String, ticket: (any ZDLayoutKit.ZDCTicket)?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func featurePermission(permission: [any ZDLayoutKit.ZDTCFeaturePermissions]?, error: (any Swift.Error)?)
+  #endif
+  func clearDB()
+  #if compiler(>=5.3) && $NonescapableTypes
+  func contactsDetail(for ids: [Swift.String], contacts: [any ZDLayoutKit.ZDTCContacts]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func allTicketFields(of layoutId: Swift.String, fields: [any ZDLayoutKit.ZDTCTicketField]?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func ticketDetail(id: Swift.String, ticket: (any ZDLayoutKit.ZDCTicket)?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func ticketAttachments(ticketId: Swift.String, attachments: [any ZDLayoutKit.ZDTCAttachments]?, error: (any Swift.Error)?)
+  #endif
+}
+public protocol ZDCaptchaNetworkDataSource : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func imageCaptcha(data: (any ZDLayoutKit.ZDTCImageCaptcha)?, error: (any Swift.Error)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func audioCaptcha(data: (any ZDLayoutKit.ZDTCAudioCaptcha)?, error: (any Swift.Error)?)
+  #endif
+}
+@_inheritsConvenienceInitializers @objc(ZDOrgFields) nonisolated public class ZDOrgFields : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+extension ZDLayoutKit.ZDOrgFields {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDLayoutKit.ZDOrgFields>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var apiName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var fieldName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var displaylabel: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var isCustomField: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isReadOnly: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isReadOnlyByClient: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isVisible: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var maxLength: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isPHI: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var toolTip: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var toolTipType: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var isEncryptedField: Swift.Bool {
+    @objc get
+    @objc set
+  }
+}
+public typealias ZDCBinderModel = ZohoDeskPlatformDataBridge.ZBCoreBridgeBinderProtocols<Any>?
+public protocol ZDCActionDelegate : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func ticketCreated(departmentId: Swift.String, ticketId: Swift.String, ticket: (any ZDLayoutKit.ZDCTicket)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func ticketEdited(departmentId: Swift.String, ticketId: Swift.String, ticket: (any ZDLayoutKit.ZDCTicket)?)
+  #endif
+  func onTapArticle(article: any ZDLayoutKit.ZDTCArticle)
+  func onDismiss(screen: ZDLayoutKit.ZDCScreens)
+  #if compiler(>=5.3) && $NonescapableTypes
+  var actionModifier: (any ZDLayoutKit.ZDCActionModifier)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var propertiesActionModifier: (any ZDLayoutKit.ZDCPropertiesActionModifier)? { get set }
+  #endif
+  func ownerPicker(module: ZDLayoutKit.ZDTCModules, id: Swift.String, agentId: Swift.String, teamId: Swift.String, type: ZDLayoutKit.ZDCActionType)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func openTagsScreen(for ticket: (any ZDLayoutKit.ZDCTicket)?)
+  #endif
+}
+extension ZDLayoutKit.ZDCActionDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var actionModifier: (any ZDLayoutKit.ZDCActionModifier)? {
+    get
+    set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var propertiesActionModifier: (any ZDLayoutKit.ZDCPropertiesActionModifier)? {
+    get
+    set
+  }
+  #endif
+  public func onTapArticle(article: any ZDLayoutKit.ZDTCArticle)
+  public func onDismiss(screen: ZDLayoutKit.ZDCScreens)
+}
+public protocol ZDCActionModifier : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func pickedOwner(module: ZDLayoutKit.ZDTCModules, model: ZDLayoutKit.ZDCOwner?)
+  #endif
+}
+public protocol ZDCPropertiesActionModifier : AnyObject {
+  func selectedTags(tags: [Swift.String])
+  #if compiler(>=5.3) && $NonescapableTypes
+  func pickedOwner(module: ZDLayoutKit.ZDTCModules, model: ZDLayoutKit.ZDCOwner?)
+  #endif
+  func updateField(apiName: Swift.String, value: Swift.String, id: Swift.String)
+  func updateTicket(ticket: any ZDLayoutKit.ZDCTicket)
+}
+public protocol ZDTicketCreationDataSource : AnyObject {
+  var orgId: Swift.String { get }
+  var departmentId: Swift.String { get }
+  var selectedLayoutId: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var localeWithRegion: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var languageCode: Swift.String? { get }
+  #endif
+  var lightThemeColors: any ZDLayoutKit.ZDLayoutThemeProtocol { get }
+  var darkThemeColors: any ZDLayoutKit.ZDLayoutThemeProtocol { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var customFont: Swift.String? { get }
+  #endif
+  var actionType: ZDLayoutKit.ZDCActionSheetType { get }
+  var navigationType: ZDLayoutKit.ZDCNavigationType { get }
+  var fieldStyle: ZDLayoutKit.ZDCFieldStyle { get }
+  var isAccessibilityEnabled: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var actionDelegate: (any ZDLayoutKit.ZDCActionDelegate)? { get }
+  #endif
+  var isAuthenticateduser: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var profile: ZDLayoutKit.ZDTCAgent? { get }
+  #endif
+  var theme: ZDLayoutKit.ZDCThemeType { get }
+  var attachmentDelegate: any ZDLayoutKit.ZDAttachmentDelegate { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var timePreference: (any ZDLayoutKit.ZDCTimePreferences)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var ticketfieldsHeader: [ZDLayoutKit.ZDCTicketFields]? { get }
+  #endif
+  var showCConTop: Swift.Bool { get }
+  var hidePoweredByLabel: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getUIJson() -> [Foundation.Data]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func localizeString(key: ZDLayoutKit.ZDCStringsKeys?, language: Swift.String) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func recordEvents(eventName: Swift.String, withGroupName: Swift.String, info: [Swift.String : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func noDataImage(for type: ZDLayoutKit.ZDCErrorStates) -> UIKit.UIImage?
+  #endif
+  func getModuleName(of module: ZDLayoutKit.ZDTCModules, isSingular: Swift.Bool) -> Swift.String
+  func modulePermission(of module: ZDLayoutKit.ZDTCModules) -> Swift.Bool
+  func editPermission(of module: ZDLayoutKit.ZDTCModules) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  func navigateTicketDetail(ticketId: Swift.String, ticket: (any ZDLayoutKit.ZDCTicket)?) -> ZDLayoutKit.ZDCBinderModel?
+  #endif
+  func presentationStyle(for screen: ZDLayoutKit.ZDCScreens) -> ZDLayoutKit.PresentationStyle
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getDeparments(orgId: Swift.String, from: Swift.Int) -> [ZDLayoutKit.DPDepartment]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getAgent(of agentId: Swift.String) -> ZDLayoutKit.ZDTCAgent?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getTeam(of teamId: Swift.String) -> ZDLayoutKit.ZDTCAgent?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getCurrentUser() -> ZDLayoutKit.ZDTCAgent?
+  #endif
+}
+extension ZDLayoutKit.ZDTicketCreationDataSource {
+  public func presentationStyle(for screen: ZDLayoutKit.ZDCScreens) -> ZDLayoutKit.PresentationStyle
+  public var fieldStyle: ZDLayoutKit.ZDCFieldStyle {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var customFont: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var languageCode: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getDeparments(orgId: Swift.String, from: Swift.Int) -> [ZDLayoutKit.DPDepartment]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getAgent(of agentId: Swift.String) -> ZDLayoutKit.ZDTCAgent?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getTeam(of teamId: Swift.String) -> ZDLayoutKit.ZDTCAgent?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var timePreference: (any ZDLayoutKit.ZDCTimePreferences)? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getUIJson() -> [Foundation.Data]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func localizeString(key: Swift.String, language: Swift.String) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func recordEvents(eventName: Swift.String, withGroupName: Swift.String, info: [Swift.String : Any]?)
+  #endif
+  public var selectedLayoutId: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func openTagsScreen(for ticket: (any ZDLayoutKit.ZDCTicket)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func navigateTicketDetail(ticketId: Swift.String, ticket: (any ZDLayoutKit.ZDCTicket)?) -> ZDLayoutKit.ZDCBinderModel?
+  #endif
+  public var isAuthenticateduser: Swift.Bool {
+    get
+  }
+  public var showCConTop: Swift.Bool {
+    get
+  }
+  public var hidePoweredByLabel: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var profile: ZDLayoutKit.ZDTCAgent? {
+    get
+  }
+  #endif
+  public func getModuleName(of module: ZDLayoutKit.ZDTCModules, isSingular: Swift.Bool) -> Swift.String
+}
+public protocol ZDAttachmentDelegate {
+  var maximumCountLimit: Swift.Int { get }
+  var maximumSizeLimit: Swift.Int { get }
+  var eachSizeLimit: Swift.Int { get }
+  var needThumbnailImage: Swift.Bool { get }
+}
+public enum ZDCScreens : Swift.String {
+  case create, edit, properties, picklist, attachment
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZDCThemeType : Swift.Int {
+  case system, light, dark
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol ZDLayoutThemeProtocol {
+  @objc optional var themeColor: UIKit.UIColor { get set }
+  @objc optional var primaryBackgroundColor: UIKit.UIColor { get set }
+  @objc optional var secondaryBackgroundColor: UIKit.UIColor { get set }
+  @objc optional var primaryTextColor: UIKit.UIColor { get set }
+  @objc optional var secondaryTextColor: UIKit.UIColor { get set }
+  @objc optional var iconColor: UIKit.UIColor { get set }
+  @objc optional var borderColor: UIKit.UIColor { get set }
+  @objc optional var separatorColor: UIKit.UIColor { get set }
+  @objc optional var selectedColor: UIKit.UIColor { get set }
+  @objc optional var navigationBarBackgroundColor: UIKit.UIColor { get set }
+  @objc optional var navigationBarTextColor: UIKit.UIColor { get set }
+  @objc optional var navigationBarButtonColor: UIKit.UIColor { get set }
+  @objc optional var failureColor: UIKit.UIColor { get set }
+  @objc optional var searchBGColor: UIKit.UIColor { get set }
+  @objc optional var UISegmentTextSelected: UIKit.UIColor { get set }
+  @objc optional var UISegmentBGSelected: UIKit.UIColor { get set }
+  @objc optional var UISegmentBGUnselected: UIKit.UIColor { get set }
+}
+public enum ZDCFieldStyle {
+  case custom, native
+  public static func == (a: ZDLayoutKit.ZDCFieldStyle, b: ZDLayoutKit.ZDCFieldStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ZDCActionType {
+  case properties, edit, create
+  public static func == (a: ZDLayoutKit.ZDCActionType, b: ZDLayoutKit.ZDCActionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol ZDCTimePreferences : ZDHelperKit.ZDTimePreferences {
+}
+public enum PresentationStyle {
+  case present
+  case push
+  case actionSheet
+  public static func == (a: ZDLayoutKit.PresentationStyle, b: ZDLayoutKit.PresentationStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum BinderActions {
+  public enum ZPActionIdentifier : Swift.String {
+    case zpLanguageAction, zpCloseTicket, zpMenuAction, zpTapAction, zpFollowerTapAction, zpDownArrowFilterAction, zpReloadAction
+    case passtonext
+    case pasteAction
+    case zpBackAction
+    case zpSearchAction
+    case zpAddAction
+    case zpPageAction
+    case zpListAction
+    case zpShowMoreAction
+    case zpReplyAction
+    case zpMoreAction
+    case zpPreviewAction
+    case zpFollowAction
+    case zpTopicStatusAction
+    case zpBubbleAction
+    case zpTagAction
+    case zpChipAction
+    case zpDownloadAllAction
+    case zpShareAction
+    case zpFaceBookShareAction
+    case zpTwitterShareAction
+    case zpLinkedInShareAction
+    case zpUpLikeAction
+    case zpDownLikeAction
+    case zpCommentAction
+    case zpDismissAction
+    case zpPostAction
+    case zpSectionAction
+    case zpAttachmentAction
+    case zpSendAction
+    case zpDoneAction
+    case zpWarningAction
+    case zpDeleteAction
+    case zpCancelAction
+    case zpAction
+    case zpSubmitAction
+    case zpLookUpAction
+    case zpMultiselectAction
+    case zpDisabledAction
+    case zpCheckBoxAction
+    case zpFilterAction
+    case zpParticipantsPresent
+    case zpSelect
+    case zpPicklistAction
+    case zpDatePickerAction
+    case zpSubmitTicketAction
+    case zptapOne
+    case zptapTwo
+    case listenAction
+    case playAction
+    case changeRate
+    case resetAction
+    case cancelAction
+    case moveUp
+    case moveDown
+    case addData
+    case webEditorAction
+    case pickTicket
+    case ZDTagsAction
+    case zpEditAction
+    case zpInfoAction
+    case assignAction
+    case reloadData
+    case reloadCaptcha
+    case tabViewAction
+    case zpAudioButtonAction
+    case playbackRateAction
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.String)
+    #endif
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+public enum DatePickerMode {
+  case date
+  case dateTime
+  public static func == (a: ZDLayoutKit.DatePickerMode, b: ZDLayoutKit.DatePickerMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum GetContact {
+  case id(Swift.String)
+  case email(Swift.String)
+}
+public enum ZDCTicketFields {
+  case departmentID, layoutID, productID, contactID, contactName, uploads, customFieldPrefix, email, subject, phone, mobile, channel, description, classification, language, priority, customFields, category, subCategory, accountId, secondaryContacts, resolution, skills, status, dueDate, assigneeId, ticketId, createdTime, onHoldTime, closedTime, tags, captcha
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public static func == (a: ZDLayoutKit.ZDCTicketFields, b: ZDLayoutKit.ZDCTicketFields) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ZDCActionSheetType {
+  case actionSheet(ZDLayoutKit.ZDCNavigationType)
+  case alert
+}
+public enum ZDCNavigationType {
+  case native
+  case custom
+  public static func == (a: ZDLayoutKit.ZDCNavigationType, b: ZDLayoutKit.ZDCNavigationType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc(ZDCAccounts) nonisolated public class ZDCAccounts : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+extension ZDLayoutKit.ZDCAccounts {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDLayoutKit.ZDCAccounts>
+  @objc @NSManaged nonisolated dynamic public var accountName: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var mappingType: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var orgId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var phone: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var email: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var createdTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+@_inheritsConvenienceInitializers @objc(ZDCProducts) nonisolated public class ZDCProducts : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+extension ZDLayoutKit.ZDCProducts {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDLayoutKit.ZDCProducts>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var departmentId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var orgId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var productCode: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var productDescription: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var productName: Swift.String {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var createdTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var unitPrice: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension CoreData.NSPersistentContainer {
+  public var privateContext: CoreData.NSManagedObjectContext {
+    get
+  }
+  public var mainContext: CoreData.NSManagedObjectContext {
+    get
+  }
+}
+public enum ZDCStringsKeys : Swift.String {
+  case alertAccept
+  case alertReject
+  case done
+  case cancel
+  case serverErrorGeneral
+  case discardConfirmation
+  case discard
+  case tryAgain
+  case noInternet
+  case backButton
+  case accessDenied
+  case permissionDeniedDescription
+  case templateDiscardConfirmation
+  case enterValidValue
+  case valueCannotBeBlank
+  case contactName
+  case ticketSubject
+  case descriptionLabel
+  case ticketPriority
+  case ticketClassification
+  case email
+  case ticketMobile
+  case ticketPhone
+  case ticketLanguage
+  case ticketDepartment
+  case ticketLayout
+  case ticketStatus
+  case ticketChannel
+  case ticketCategory
+  case ticketSubCategory
+  case ticketInformation
+  case additionalInformation
+  case ticketID
+  case ticketEPHI
+  case enterContactOrMail
+  case send
+  case save
+  case submitTicketTitle
+  case submit
+  case searching
+  case invalidEmail
+  case addTicketFailure
+  case updateSuccess
+  case updateTicketFailure
+  case uploadingAttachment
+  case validationFailure
+  case chooseTemplate
+  case ticketTemplate
+  case noData
+  case noDataKeyword
+  case updateAccountName
+  case updateAccountNameAllRequests
+  case updateAccountNameExisting
+  case updateAccountNameIgnore
+  case selectLookup
+  case allLookups
+  case validationSwitchAlert
+  case switchToEdit
+  case unassigned
+  case assigned
+  case dueDateOnHold
+  case poweredByASAP
+  case search
+  case add
+  case update
+  case ignore
+  case createTitle
+  case editTitle
+  case propertiesTitle
+  case ticket
+  case ccsTooltip
+  case productCode
+  case unitPrice
+  case sortCreatedTime
+  case editOption
+  case blueprintPermission
+  case onHoldTime
+  case closedTime
+  case noDueDate
+  case tags
+  case operationNotAllowed
+  case lateByHour
+  case lateByYear
+  case lateByMin
+  case lateByDay
+  case lateByHours
+  case lateByMonth
+  case lateByMonths
+  case lateByDays
+  case lateByYears
+  case lateByMins
+  case secAgo
+  case ephiTooltip
+  case inYear
+  case inYears
+  case inMonth
+  case inMonths
+  case inWeek
+  case inWeeks
+  case inDay
+  case inDays
+  case inHour
+  case inHours
+  case inMin
+  case inMins
+  case captchaFieldName
+  case alert
+  case maxAttachmentLimit
+  case camera
+  case attachmentPhotos
+  case attachmentFiles
+  case attachmentsLabel
+  case cameraUnavailable
+  case uploadFail
+  case attachmentAlreadyExists
+  case uploadAttachmentSizeExceeded
+  case storagePermissionMessage
+  case cameraPermissionMessage
+  case noAttachments
+  case attachmentLimitReached
+  case totalAttachmentLimitReached
+  case dataErrorDescription
+  case ccs
+  case reload
+  case imageCaptch
+  case imageCaptchDesc
+  case audioCaptch
+  case audioCaptchDesc
+  case captchInput
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class ZohoDeskTicketCreation {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(dataSource: any ZDLayoutKit.ZDTicketCreationDataSource, network: any ZDLayoutKit.ZDTicketCreationNetworkCalls, ticket: (any ZDLayoutKit.ZDCTicket)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getCreateTicketScreen(title: Swift.String? = nil, onCompletion: ((UIKit.UIViewController) -> ())?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getEditTicketScreen(ticket: (any ZDLayoutKit.ZDCTicket)?, onCompletion: ((UIKit.UIViewController) -> ())?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getTicketProperties() -> UIKit.UIViewController?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getTicketPropertiesSegment() -> UIKit.UIView?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getCreateTicketBinder(title: Swift.String? = nil) -> ZohoDeskPlatformDataBridge.ZPBinderModel
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getTicketPropertiesBinder(ticket: any ZDLayoutKit.ZDCTicket) -> ZohoDeskPlatformDataBridge.ZPBinderModel
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func ticketPropertiesBinder(ticket: any ZDLayoutKit.ZDCTicket) -> ZohoDeskPlatformDataBridge.ZPBinderModel
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getEditTicketBinder(ticket: any ZDLayoutKit.ZDCTicket) -> ZohoDeskPlatformDataBridge.ZPBinderModel
+  #endif
+  public func getCreateTicketJsons() -> [Foundation.Data]
+  public static func clearDB()
+  public static func setFieldsListTobeShown(fields: [any ZDLayoutKit.ZDCVisibleTicketField])
+  public static func preFillTicketFields(forForms forms: [any ZDLayoutKit.ZDCCustomizedTicketForm])
+  @objc deinit
+}
+public struct ZDCLookupDataModel {
+}
+public protocol SecondaryContactDelegate : AnyObject {
+  func didChanged()
+  func didWarningChanged(with text: Swift.String)
+}
+public enum ZDCErrorStates : Swift.Equatable {
+  case noData, noNetwork, permissionDenied, dataError, loader, noDataSearch(keyword: Swift.String), clearLoader
+  public static func == (a: ZDLayoutKit.ZDCErrorStates, b: ZDLayoutKit.ZDCErrorStates) -> Swift.Bool
+}
+extension ZDLayoutKit.ZDCProducts : ZDLayoutKit.ZDTCProduct {
+  #if compiler(>=5.3) && $NonescapableTypes
+  nonisolated public var departmentIds: [Swift.String]? {
+    get
+    set
+  }
+  #endif
+}
+extension ZDLayoutKit.ZDCAccounts : ZDLayoutKit.ZDTCAccounts {
+}
+extension ZDLayoutKit.ZDCTemplates {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDLayoutKit.ZDCTemplates>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var layoutId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var templateId: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var templateName: Swift.String {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var createdTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDLayoutKit.ZDCTemplates : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+@_inheritsConvenienceInitializers @objc(ZDCTemplates) nonisolated public class ZDCTemplates : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public protocol ZDTCLayout {
+  var isStandard: Swift.Bool { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var moduleName: Swift.String? { get set }
+  #endif
+  var layoutId: Swift.String { get set }
+  var isDefault: Swift.Bool { get set }
+  var name: Swift.String { get set }
+}
+public protocol ZDTCTemplate {
+  var templateName: Swift.String { get set }
+  var templateId: Swift.String { get set }
+}
+extension ZDLayoutKit.ZDCTemplates : ZDLayoutKit.ZDTCTemplate {
+}
+public protocol ZDTCForms {
+  var layoutId: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var formSections: [any ZDLayoutKit.ZDTCSections]? { get set }
+  #endif
+}
+public protocol ZDTCSections {
+  var sectionName: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var ticketFields: [any ZDLayoutKit.ZDTCTicketField]? { get set }
+  #endif
+}
+public protocol ZDTCTicketField {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var id: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var allowedValues: [Swift.String]? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var defaultValue: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var displayLabel: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var i18NLabel: Swift.String? { get set }
+  #endif
+  var isCustomField: Swift.Bool { get set }
+  var isMandatory: Swift.Bool { get set }
+  var isReadOnly: Swift.Bool { get set }
+  var isRemovable: Swift.Bool { get set }
+  var isSystemMandatory: Swift.Bool { get set }
+  var maxLength: Swift.Int { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var name: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var restoreOnReplyValues: [Swift.String]? { get set }
+  #endif
+  var type: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var sortBy: Swift.String? { get set }
+  #endif
+  var isEncryptedField: Swift.Bool { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var toolTipType: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var toolTip: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var apiName: Swift.String? { get set }
+  #endif
+  var isPHI: Swift.Bool { get set }
+  var isNested: Swift.Bool { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var roundingOption: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var fieldName: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var uploadAttachment: Swift.String? { get set }
+  #endif
+  var isVisible: Swift.Bool { get set }
+  var decimals: Swift.Int { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var dependency: ZDLayoutKit.Dependency? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var statusMaping: [any ZDLayoutKit.ZDTCStatusMapping]? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var audioCaptchaurl: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var imageCaptchaurl: Swift.String? { get }
+  #endif
+}
+public protocol ZDTCStatusMapping {
+  var mappingValue: Swift.String { get set }
+  var name: Swift.String { get set }
+}
+public protocol ZDCStatusMapping {
+  var type: ZDLayoutKit.ZDCStatusType { get set }
+  var name: Swift.String { get set }
+}
+public enum ZDCStatusType : Swift.String {
+  case Open, Closed
+  case onHold
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol ZDTCProduct {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var departmentIds: [Swift.String]? { get set }
+  #endif
+  var productName: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var productDescription: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var productCode: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var unitPrice: Swift.String? { get set }
+  #endif
+  var id: Swift.String { get set }
+}
+public protocol ZDTCLayoutActions {
+  var sectionsToShow: [Swift.String] { get }
+  var fieldsToShow: [Swift.String] { get }
+  var mandatoryFields: [Swift.String] { get }
+}
+public protocol ZDTCRuleCondition {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcDisplayValue: [Swift.String]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcCondition: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcFieldName: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcValue: [Swift.String]? { get }
+  #endif
+}
+public protocol ZDTCLayoutCondition {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var fcname: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var fcpattern: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var fieldConditions: [any ZDLayoutKit.ZDTCRuleCondition]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var fieldActions: (any ZDLayoutKit.ZDTCLayoutActions)? { get }
+  #endif
+}
+public protocol ZDTCLayoutRules {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcFieldConditions: [any ZDLayoutKit.ZDTCLayoutCondition]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcModifiedTime: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcFieldName: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcCreatedBy: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcName: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcDescription: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcCreatedTime: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcModifiedBy: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcId: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcLayoutID: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcStatus: Swift.String? { get }
+  #endif
+}
+public protocol ZDTCAccounts {
+  var accountName: Swift.String { get set }
+  var id: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var phone: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var email: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var mappingType: Swift.String? { get set }
+  #endif
+}
+public protocol ZDTCValidationRules {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcFieldConditions: [any ZDLayoutKit.ZDTCValidationCondition]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcModifiedTime: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcFieldName: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcCreatedBy: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcCreatedTime: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcModifiedBy: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcId: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcLayoutID: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcStatus: Swift.String? { get }
+  #endif
+}
+public protocol ZDTCValidationCondition {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var fcname: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var fcpattern: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var fieldConditions: [any ZDLayoutKit.ZDTCRuleCondition]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var fieldActions: (any ZDLayoutKit.ZDTCValidationActions)? { get }
+  #endif
+}
+public protocol ZDTCValidationActions {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcAlert: Swift.String? { get }
+  #endif
+}
+public protocol ZDTCContacts {
+  var name: Swift.String { get set }
+  var id: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var photoUrl: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var email: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var phone: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var mobile: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var accountCount: Swift.String? { get }
+  #endif
+  var agentModel: ZDLayoutKit.ZDTCAgent { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcAccount: (any ZDLayoutKit.ZDTCAccounts)? { get }
+  #endif
+}
+public protocol ZDTCArticle {
+  var summary: Swift.String { get set }
+  var id: Swift.String { get set }
+  var title: Swift.String { get set }
+  var categoryID: Swift.String { get set }
+  var permalink: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var articleCategory: (any ZDLayoutKit.ZDTCArticleCategory)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var createdTime: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var modifiedTime: Swift.String? { get set }
+  #endif
+  var webURL: Swift.String { get set }
+  var translationID: Swift.String { get set }
+  var rootCategoryID: Swift.String { get set }
+  var locale: Swift.String { get set }
+}
+public protocol ZDTCArticleCategory {
+  var name: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var locale: Swift.String? { get set }
+  #endif
+  var id: Swift.String { get set }
+}
+public protocol ZDTCDependencyMapping {
+  var parentNode: any ZDLayoutKit.ZDTCDependencyNode { get }
+  var mappings: [Swift.String : [Swift.String]] { get }
+  var id: Swift.String { get }
+  var childId: Swift.String { get }
+  var layoutId: Swift.String { get }
+  var parentId: Swift.String { get }
+  var childNode: any ZDLayoutKit.ZDTCDependencyNode { get }
+}
+public protocol ZDTCDependencyNode : Swift.Decodable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var displayLabel: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var allowedValues: [Swift.String]? { get }
+  #endif
+  var id: Swift.String { get }
+}
+public protocol ZDCLookupField : Swift.Decodable, Swift.Encodable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var displayLabel: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var lookUp: (any ZDLayoutKit.ZDCLookup)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var apiName: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var isCustomField: Swift.Bool? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var i18NLabel: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var name: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var isEncryptedField: Swift.Bool? { get }
+  #endif
+  var id: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var type: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var maxLength: Swift.Int? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var isMandatory: Swift.Bool? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var toolTip: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var toolTipType: Swift.String? { get }
+  #endif
+}
+public protocol ZDCLookup : Swift.Decodable, Swift.Encodable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var lookupFilter: (any ZDLayoutKit.ZDCLookupFilter)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var selectFields: [Swift.String]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var relatedListLabel: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var lookupModule: (any ZDLayoutKit.ZDCLookUpModule)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var sortField: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var searchFields: [Swift.String]? { get }
+  #endif
+}
+public protocol ZDCLookupFilter : Swift.Decodable, Swift.Encodable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var filterPreference: ZDLayoutKit.ZDCLookupFilterPreference? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var filterName: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var messageIfLookupDataEmpty: Swift.String? { get }
+  #endif
+}
+public enum ZDCLookupFilterPreference : Swift.String, Swift.Codable {
+  case all
+  case allAndFilter
+  case filter
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol ZDCLookUpModule : Swift.Decodable, Swift.Encodable {
+  var apiName: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var nameField: Swift.String? { get }
+  #endif
+  var id: Swift.String { get }
+}
+public protocol ZDTCAvailableField {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var displayLabel: Swift.String? { get }
+  #endif
+  var isCustomField: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var i18NLabel: Swift.String? { get }
+  #endif
+  var type: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var name: Swift.String? { get }
+  #endif
+  var id: Swift.String { get }
+}
+extension ZDLayoutKit.ZDTCContacts {
+  public var agentModel: ZDLayoutKit.ZDTCAgent {
+    get
+  }
+}
+extension ZDLayoutKit.ZDTCAccounts {
+  public var agentModel: ZDLayoutKit.ZDTCAgent {
+    get
+  }
+}
+extension ZDLayoutKit.ZDTCProduct {
+  public var agentModel: ZDLayoutKit.ZDTCAgent {
+    get
+  }
+}
+extension ZDLayoutKit.ZDTCArticle {
+  public var agentModel: ZDLayoutKit.ZDTCAgent {
+    get
+  }
+}
+public protocol ZDTCFeaturePermissions {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var feature: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var featurepermissions: [any ZDLayoutKit.ZDTCFeaturePermission]? { get }
+  #endif
+}
+public protocol ZDTCFeaturePermission {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var departmentIds: [Swift.String]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var name: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var value: Swift.Bool? { get }
+  #endif
+}
+public protocol ZDTCImageCaptcha {
+  var captchaData: any ZDLayoutKit.ZDTCImageCaptchaData { get }
+}
+public protocol ZDTCImageCaptchaData {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var background: Swift.String? { get }
+  #endif
+  var id: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var options: [Swift.String : Swift.String]? { get }
+  #endif
+}
+public protocol ZDTCAudioCaptcha {
+  var captchaData: any ZDLayoutKit.ZDTCAudioCaptchaData { get }
+}
+public protocol ZDTCAudioCaptchaData {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var base64: Swift.String? { get }
+  #endif
+  var id: Swift.String { get }
+}
+public typealias Dependency = [Swift.String : [Swift.String : [Swift.String]]]
+public struct DPDepartment {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(name: Swift.String, id: Swift.String, photoURL: Swift.String? = nil, deptDescription: Swift.String? = nil, layoutCount: Swift.Int64, isDefault: Swift.Bool = false)
+  #endif
+}
+public enum GlobalSearchModules : Swift.String {
+  case contacts
+  case solutions
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class ZDTCAgent {
+  public var agentId: Swift.String
+  public var photoUrl: Swift.String?
+  public var name: Swift.String
+  public var email: Swift.String
+  public var phone: Swift.String?
+  public var account: ZDLayoutKit.ZDTCAgent?
+  public var accountCount: Swift.Int?
+  public var agentPlaceHolder: Foundation.NSAttributedString {
+    get
+  }
+  public var isSelected: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(agentId: Swift.String, photoUrl: Swift.String? = nil, name: Swift.String, email: Swift.String? = nil, phone: Swift.String? = nil, isSelected: Swift.Bool = false, account: ZDLayoutKit.ZDTCAgent? = nil, accountCount: Swift.Int? = nil)
+  #endif
+  @objc deinit
+}
+extension ZDLayoutKit.ZDTCAgent : ZDLayoutKit.ZDTCArticle {
+  public var summary: Swift.String {
+    get
+    set
+  }
+  public var id: Swift.String {
+    get
+    set
+  }
+  public var title: Swift.String {
+    get
+    set
+  }
+  public var categoryID: Swift.String {
+    get
+    set
+  }
+  public var permalink: Swift.String {
+    get
+    set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var articleCategory: (any ZDLayoutKit.ZDTCArticleCategory)? {
+    get
+    set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var createdTime: Swift.String? {
+    get
+    set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var modifiedTime: Swift.String? {
+    get
+    set
+  }
+  #endif
+  public var webURL: Swift.String {
+    get
+    set
+  }
+  public var translationID: Swift.String {
+    get
+    set
+  }
+  public var rootCategoryID: Swift.String {
+    get
+    set
+  }
+  public var locale: Swift.String {
+    get
+    set
+  }
+}
+extension ZDLayoutKit.ZDTCAgent : ZDLayoutKit.ZDCAssignee {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var firstName: Swift.String? {
+    get
+    set
+  }
+  #endif
+  public var lastName: Swift.String {
+    get
+    set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var photoURL: Swift.String? {
+    get
+    set
+  }
+  #endif
+  public var following: Swift.String {
+    get
+    set
+  }
+}
+public protocol ZDCTicket {
+  var ticketNumber: Swift.String { get set }
+  var customerResponseTime: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var productId: Swift.String? { get set }
+  #endif
+  var contactId: Swift.String { get set }
+  var subject: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var dueDate: Swift.String? { get set }
+  #endif
+  var departmentId: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var channel: Swift.String? { get set }
+  #endif
+  var threadCount: Swift.String { get set }
+  var isRead: Swift.Bool { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var sentiment: Swift.String? { get set }
+  #endif
+  var isArchived: Swift.Bool { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var priority: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var assigneeId: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var closedTime: Swift.String? { get set }
+  #endif
+  var commentCount: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var phone: Swift.String? { get set }
+  #endif
+  var createdTime: Swift.String { get set }
+  var id: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var email: Swift.String? { get set }
+  #endif
+  var status: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var category: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var subCategory: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var teamId: Swift.String? { get set }
+  #endif
+  var webUrl: Swift.String { get set }
+  var orgId: Swift.String { get set }
+  var onHoldTime: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var ticketDescription: Swift.String? { get set }
+  #endif
+  var layoutId: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var ticketContact: (any ZDLayoutKit.ZDTCContacts)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var ticketProduct: (any ZDLayoutKit.ZDTCProduct)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var ticketAssignee: (any ZDLayoutKit.ZDCAssignee)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var ticketTeam: (any ZDLayoutKit.ZDCAssignee)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var ticketCustomFields: [Swift.String : Swift.AnyObject]? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var language: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var secondaryContacts: [Swift.String]? { get set }
+  #endif
+  var secondaryContactsDetail: [ZDLayoutKit.ZDTCAgent] { get }
+  var isBluePrintApplied: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var tcAccount: (any ZDLayoutKit.ZDTCAccounts)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var modifiedTime: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var resolution: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var classification: Swift.String? { get set }
+  #endif
+}
+public protocol ZDCAssignee {
+  var email: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var firstName: Swift.String? { get set }
+  #endif
+  var id: Swift.String { get set }
+  var lastName: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var photoURL: Swift.String? { get set }
+  #endif
+  var following: Swift.String { get set }
+}
+public protocol ZDTCAttachments {
+  var id: Swift.String { get }
+  var name: Swift.String { get }
+  var size: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var downloadURL: Swift.String? { get }
+  #endif
+}
+extension ZDLayoutKit.ZDOrgLayouts : ZDLayoutKit.ZDTCLayout {
+  nonisolated public var layoutId: Swift.String {
+    get
+    set
+  }
+  nonisolated public var name: Swift.String {
+    get
+    set
+  }
+}
+public enum ZDTCModules {
+  case tickets, contacts, accounts, tasks, products, calls, events
+  case custom(Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct ZDCOwner {
+  public init(agentId: Swift.String, teamId: Swift.String, agentName: Swift.String, teamName: Swift.String, agentUrl: Swift.String, teamUrl: Swift.String)
+}
+extension Swift.Array where Element == UIKit.UIAlertAction {
+  public static func yesOrNoAction(didPerformYes: @escaping () -> Swift.Void) -> [ZohoDeskPlatformDataBridge.ZBAlertActionItem]
+}
+public enum TFType : Swift.String {
+  case LookUp, Email, Phone, Text, Number, Textarea, Picklist, Percent, Decimal, Currency, Date, DateTime, URL, Boolean, Multiselect, NativePicker, PickerControl, Attachment, Captcha
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol ZDCCustomizedTicketField : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var fieldName: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var value: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var isEditable: Swift.Bool? { get set }
+  #endif
+}
+public protocol ZDCCustomizedTicketForm : AnyObject {
+  var departmentId: Swift.String { get set }
+  var layoutId: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var customizedTicketFields: [any ZDLayoutKit.ZDCCustomizedTicketField]? { get set }
+  #endif
+}
+public protocol ZDCVisibleTicketField : AnyObject {
+  var departmentId: Swift.String { get set }
+  var layoutId: Swift.String { get set }
+  var fieldNames: [Swift.String] { get set }
+}
+public struct ZDField {
+  public static let departmentID: Swift.String
+  public static let layoutID: Swift.String
+  public static let productID: Swift.String
+  public static let contactID: Swift.String
+  public static let contactName: Swift.String
+  public static let uploads: Swift.String
+  public static let customFieldPrefix: Swift.String
+  public static let email: Swift.String
+  public static let subject: Swift.String
+  public static let phone: Swift.String
+  public static let mobile: Swift.String
+  public static let channel: Swift.String
+  public static let description: Swift.String
+  public static let classification: Swift.String
+  public static let language: Swift.String
+  public static let priority: Swift.String
+  public static let customFields: Swift.String
+  public static let category: Swift.String
+  public static let subCategory: Swift.String
+  public static let accountId: Swift.String
+  public static let secondaryContacts: Swift.String
+  public static var resolution: Swift.String {
+    get
+  }
+  public static let skills: Swift.String
+  public static let reminder: Swift.String
+  public static var ticketId: Swift.String {
+    get
+  }
+  public static var assigneeId: Swift.String {
+    get
+  }
+  public static var teamId: Swift.String {
+    get
+  }
+  public static var createdTime: Swift.String {
+    get
+  }
+  public static var status: Swift.String {
+    get
+  }
+  public static var dueDate: Swift.String {
+    get
+  }
+  public static var onhold: Swift.String {
+    get
+  }
+  public static var closedTime: Swift.String {
+    get
+  }
+  public static var tagsField: Swift.String {
+    get
+  }
+  public static var captcha: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc(ZDOrgLayouts) nonisolated public class ZDOrgLayouts : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+extension ZDLayoutKit.ZDOrgLayouts {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDLayoutKit.ZDOrgLayouts>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var departmentId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var createdTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var isDefault: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var isStandard: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var layoutName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var moduleName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var orgId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var fields: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDLayoutKit.ZDOrgLayouts {
+  @objc(addFieldsObject:) @NSManaged nonisolated dynamic public func addToFields(_ value: ZDLayoutKit.ZDLayoutFields)
+  @objc(removeFieldsObject:) @NSManaged nonisolated dynamic public func removeFromFields(_ value: ZDLayoutKit.ZDLayoutFields)
+  @objc(addFields:) @NSManaged nonisolated dynamic public func addToFields(_ values: Foundation.NSSet)
+  @objc(removeFields:) @NSManaged nonisolated dynamic public func removeFromFields(_ values: Foundation.NSSet)
+}
+public typealias ZDFieldTranslationCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(ZDFieldTranslation) nonisolated public class ZDFieldTranslation : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias ZDFieldTranslationCoreDataPropertiesSet = Foundation.NSSet
+extension ZDLayoutKit.ZDFieldTranslation {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZDLayoutKit.ZDFieldTranslation>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var data: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var languageCode: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var orgId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension ZDLayoutKit.ZDFieldTranslation : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+public typealias ZDCTicketFoundationFrameworkSet = Foundation.NSSet
+public typealias ZDCTicketCoreDataFrameworkManagedObject = CoreData.NSManagedObject
+extension ZDLayoutKit.ZDCScreens : Swift.Equatable {}
+extension ZDLayoutKit.ZDCScreens : Swift.Hashable {}
+extension ZDLayoutKit.ZDCScreens : Swift.RawRepresentable {}
+extension ZDLayoutKit.ZDCThemeType : Swift.Equatable {}
+extension ZDLayoutKit.ZDCThemeType : Swift.Hashable {}
+extension ZDLayoutKit.ZDCThemeType : Swift.RawRepresentable {}
+extension ZDLayoutKit.ZDCFieldStyle : Swift.Equatable {}
+extension ZDLayoutKit.ZDCFieldStyle : Swift.Hashable {}
+extension ZDLayoutKit.ZDCActionType : Swift.Equatable {}
+extension ZDLayoutKit.ZDCActionType : Swift.Hashable {}
+extension ZDLayoutKit.PresentationStyle : Swift.Equatable {}
+extension ZDLayoutKit.PresentationStyle : Swift.Hashable {}
+extension ZDLayoutKit.BinderActions.ZPActionIdentifier : Swift.Equatable {}
+extension ZDLayoutKit.BinderActions.ZPActionIdentifier : Swift.Hashable {}
+extension ZDLayoutKit.BinderActions.ZPActionIdentifier : Swift.RawRepresentable {}
+extension ZDLayoutKit.DatePickerMode : Swift.Equatable {}
+extension ZDLayoutKit.DatePickerMode : Swift.Hashable {}
+extension ZDLayoutKit.ZDCTicketFields : Swift.Equatable {}
+extension ZDLayoutKit.ZDCTicketFields : Swift.Hashable {}
+extension ZDLayoutKit.ZDCNavigationType : Swift.Equatable {}
+extension ZDLayoutKit.ZDCNavigationType : Swift.Hashable {}
+extension ZDLayoutKit.ZDCStringsKeys : Swift.Equatable {}
+extension ZDLayoutKit.ZDCStringsKeys : Swift.Hashable {}
+extension ZDLayoutKit.ZDCStringsKeys : Swift.RawRepresentable {}
+extension ZDLayoutKit.ZDCStatusType : Swift.Equatable {}
+extension ZDLayoutKit.ZDCStatusType : Swift.Hashable {}
+extension ZDLayoutKit.ZDCStatusType : Swift.RawRepresentable {}
+extension ZDLayoutKit.ZDCLookupFilterPreference : Swift.Equatable {}
+extension ZDLayoutKit.ZDCLookupFilterPreference : Swift.Hashable {}
+extension ZDLayoutKit.ZDCLookupFilterPreference : Swift.RawRepresentable {}
+extension ZDLayoutKit.GlobalSearchModules : Swift.Equatable {}
+extension ZDLayoutKit.GlobalSearchModules : Swift.Hashable {}
+extension ZDLayoutKit.GlobalSearchModules : Swift.RawRepresentable {}
+extension ZDLayoutKit.TFType : Swift.Equatable {}
+extension ZDLayoutKit.TFType : Swift.Hashable {}
+extension ZDLayoutKit.TFType : Swift.RawRepresentable {}

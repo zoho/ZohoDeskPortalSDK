@@ -1,0 +1,723 @@
+{
+    "uiPatterns" : [
+        {
+            "pattern_uid": "ZDAttachmentTopNavigation",
+            "patterns" : [
+                {
+                    "itemType" : "vStack",
+                    "items" : [
+                        {
+                            "key": "containerView",
+                            "itemType": "hStack",
+                            "itemSizeAttribute": {
+                                "height": {
+                                    "valueType": "staticValue",
+                                    "value": 50
+                                }
+                            },
+                            "style": {
+                                "bgColor_id": "ZDDashboardCard",
+                                "shadowStyle": {
+                                    "shadowColor_id": "bg_gray_clr",
+                                    "shadowRadius": 2,
+                                    "shadowOpacity": 0.1,
+                                    "offset": {
+                                        "width": 0,
+                                        "height": 2
+                                    }
+                                }
+                            },
+                            
+                            "items": [
+                                {
+                                    "key": "zpCustomBackIcon",
+                                    "itemType": "iconView",
+                                    "conditionalStyle_uid" : "topNavigationTitle",
+                                    "itemSizeAttribute": {
+                                        "padding": {
+                                            "top": 12,
+                                            "bottom": 12,
+                                            "left": 20,
+                                            "right": 14
+                                        },
+                                        "height": {
+                                            "valueType": "staticValue",
+                                            "value": 26
+                                        },
+                                        "width": {
+                                            "valueType": "staticValue",
+                                            "value": 35
+                                        }
+                                        
+                                    },
+                                    "actions": [
+                                        {
+                                            "actionKey": "zpBackAction",
+                                            "uiActionType": "tap",
+                                            "navigationIDs": [
+                                                "goBack",
+                                                "goRoot",
+                                                "nativeAlert",
+                                                "actionSheet",
+                                                "ZDConfirmActionSheet"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "zpScreenTitle",
+                                    "itemType": "label",
+                                    "style" : {
+                                        "textStyle": {
+                                            "fontStyle_id": "sf-semibold-16",
+                                            "textColor_id": "ThemeColor"
+                                        }
+                                    }
+                                },
+                                
+                                {
+                                    "key": "zpDoneButton",
+                                    "itemType": "button",
+                                    "style" : {
+                                        "textStyle": {
+                                            "fontStyle_id": "sf-regular-14",
+                                            "textColor_id": "ThemeColor"
+                                        }
+                                    },
+                                    "itemSizeAttribute" : {
+                                        "padding" : {
+                                            "right" : 25,
+                                            "left" : 25
+                                        }
+                                    },
+                                    "actions": [
+                                        {
+                                            "actionKey": "zpDoneAction",
+                                            "uiActionType": "tap",
+                                            "navigationIDs": [
+                                                "goBack"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    
+                        
+                    ]
+                }
+            ]
+        },
+        {
+            "pattern_uid" : "sectionHeaderViews",
+            "patterns" : [
+                {
+                    "key": "maximumAttachmentTextHolder",
+                    "itemType":"vStack",
+                    "style":{
+                        "bgColor_id":"BGColor"
+                    },
+                    "itemSizeAttribute" :{
+                        "padding":{
+                            "bottom":10
+                        }
+                    },
+                    "items":[
+                        {
+                            "key":"baseStackHolder",
+                            "itemType":"hStack",
+                            "itemSizeAttribute" :{
+                                "padding":{
+                                    "all":15
+                                }
+                            },
+                            "items":[
+                                {
+                                    "key": "zpIcon",
+                                    "itemType": "iconView",
+                                    "style": {
+                                        "textStyle": {
+                                            "textColor_id": "IconColor",
+                                            "isEditable": false,
+                                            "alignment": "center"
+                                        },
+                                        "imageStyle": {
+                                            "contentType": "cover"
+                                        }
+                                    },
+                                    "itemSizeAttribute": {
+                                        "padding": {
+                                            "right": 10,
+                                            "left" : 10
+                                        }
+                                    }
+                                },
+                                {
+                                    "key":"maximumAttachmentCountLabel",
+                                    "itemType":"label",
+                                    "style": {
+                                        "textStyle": {
+                                            "fontStyle_id": "sf-semibold-13",
+                                            "textColor_id": "SecondaryText"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "key": "zplineseparator",
+                            "itemType": "separatorView",
+                            "style": {
+                                "separatorType": "line",
+                                "bgColor_id": "SeparatorColor"
+                            },
+                            "itemSizeAttribute": {
+                                "height": {
+                                    "valueType": "staticValue",
+                                    "value": 1
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pattern_uid" : "listItemViews",
+            "patterns" : [
+                {
+                    "key" : "attachmentcell",
+                    "itemType" : "vStack",
+                    "style": {
+                        "bgColor_id": "WidgetColor"
+                    },
+                    "items" : [
+                        {
+                            "key": "baseHolder",
+                            "itemType": "vStack",
+                            "itemSizeAttribute": {
+                                "padding": {
+                                    "top":5,
+                                    "left": 15,
+                                    "right": 15,
+                                    "bottom":5
+                                }
+                            },
+                            "style": {
+                                "bgColor_id":"WidgetColor",
+                                "borderStyle": {
+                                    "borderColor_id": "SeparatorColor",
+                                    "borderWidth": 1
+                                },
+                                "cornerRadius": {
+                                    "all": 6
+                                }
+                            },
+                            "items": [
+                                {
+                                    "key": "baseStackHolder",
+                                    "itemType": "hStack",
+                                    "itemSizeAttribute": {
+                                        "padding":{
+                                            "all":14
+                                        }
+                                    },
+                                    "items": [
+                                        {
+                                            "key": "baseStackHolder",
+                                            "itemType": "vStack",
+                                            "itemSizeAttribute": {
+                                                
+                                                "width":{
+                                                    "value":46,
+                                                    "valueType":"staticValue"
+                                                }
+                                            },
+                                            "items": [
+                                                {
+                                                    "key": "baseStackHolder",
+                                                    "itemType": "zStack",
+                                                    "itemSizeAttribute": {
+                                                        "padding":{
+                                                            "all":0
+                                                        }
+                                                    },
+                                                    "items": [
+                                                        {
+                                                            "key": "zpAttachmentImage",
+                                                            "itemType": "imageView",
+                                                            "style": {
+                                                                "imageStyle": {
+                                                                    "contentType": "contain"
+                                                                },
+                                                                "cornerRadius": {
+                                                                    "all": 8
+                                                                },
+                                                                "textStyle": {
+                                                                    "textColor_id": "PrimaryText",
+                                                                    "alignment": "center"
+                                                                }
+                                                            },"itemSizeAttribute": {
+                                                                "position": "center",
+                                                                "height": {
+                                                                    "valueType":"staticValue",
+                                                                    "value": 44
+                                                                },
+                                                                "width":{
+                                                                    "value":44,
+                                                                    "valueType":"staticValue"
+                                                                }
+                                                            }
+                                                            
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "baseStackHolder",
+                                            "itemType": "vStack",
+                                            "itemSizeAttribute": {
+                                                "padding":{
+                                                    "left": 14,
+                                                    "right" : 14
+                                                }
+                                            },
+                                            "items": [
+                                                {
+                                                    "key": "zpAttachmentName",
+                                                    "itemType": "label",
+                                                    "style": {
+                                                        "textStyle": {
+                                                            "fontStyle_id": "sf-semibold-15",
+                                                            "textColor_id": "PrimaryText",
+                                                            "alignment": "left"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "key": "zpErrorHolder",
+                                                    "itemType": "vStack",
+                                                    "items": [
+                                                        {
+                                                            "key": "zpErrorLabel",
+                                                            "itemType": "label",
+                                                            "itemSizeAttribute": {
+                                                                "padding": {
+                                                                    "top": 4
+                                                                }
+                                                            },
+                                                            "style": {
+                                                                "textStyle": {
+                                                                    "fontStyle_id": "sf-regular-14",
+                                                                    "textColor_id": "Red"
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "zpSpacer",
+                                            "itemType": "hStack"
+                                        },
+                                        {
+                                           "key": "reloadIcon",
+                                            "items" : [
+                                                {
+                                                    "key": "reloadIcon",
+                                                    "itemType": "iconView",
+                                                    "conditionalStyle_uid": "iconStyles",
+                                                    "itemSizeAttribute": {
+                                                        "padding":{
+                                                            "left":14
+                                                        }
+                                                    },
+                                                    "actions":[
+                                                        {
+                                                            "actionKey": "zpReloadAction",
+                                                            "uiActionType": "tap"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "zpIcon",
+                                            "items" : [
+                                                {
+                                                    "key": "zpIcon",
+                                                    "itemType": "iconView",
+                                                    "conditionalStyle_uid": "iconStyles",
+                                                    "itemSizeAttribute": {
+                                                        "padding":{
+                                                            "left":14
+                                                        }
+                                                    },
+                                                    "actions":[
+                                                        {
+                                                            "actionKey": "zpDeleteAction",
+                                                            "uiActionType": "tap"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "zpProgressView",
+                                    "itemType": "progressView",
+                                    "conditionalStyle_uid": "progressBarStyle"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },{
+            "pattern_uid" : "bottomNavigationViews",
+            "patterns" : [
+                {
+                    "key": "baseStackHolder",
+                    "itemType": "vStack",
+                    "itemSizeAttribute": {
+                        "padding": {
+                            "left": 0,
+                            "right": 0,
+                            "top": 10
+                        }
+                    },
+                    "items": [
+                        {
+                            "key": "zpAssetActionCollectionView",
+                            "itemType": "listView",
+                            "style": {
+                                "listStyle": {
+                                    "gridColumnCount": 3,
+                                    "layoutType":"grid"
+                                }
+                            },
+                            "itemSizeAttribute": {
+                                "height":{
+                                    "valueType":"wrapContent"
+                                }
+                            },
+                            "items": [
+                                {
+                                    "key": "baseStackHolder",
+                                    "itemType": "vStack",
+                                    "actions":[
+                                        {
+                                            "actionKey": "zpListAction",
+                                            "uiActionType": "tap",
+                                            "navigationIDs":[
+                                                "zpImagePicker",
+                                                "zpCameraPicker",
+                                                "zpDocumentPicker"
+                                            ]
+                                        }
+                                    ],
+                                    "items": [
+                                        {
+                                            "key": "zpAssetActionIcon",
+                                            "itemType": "iconView",
+                                            "style": {
+                                                "textStyle": {
+                                                    "textColor_id": "IconColor",
+                                                    "isEditable": false,
+                                                    "alignment": "center"
+                                                },
+                                                "imageStyle": {
+                                                    "contentType": "cover"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "key": "zpAssetActionTitle",
+                                            "itemType": "label",
+                                            "style": {
+                                                "textStyle": {
+                                                    "fontStyle_id": "sf-medium-12",
+                                                    "textColor_id": "IconColor",
+                                                    "alignment": "center"
+                                                }
+                                            },
+                                            "itemSizeAttribute": {
+                                                "padding": {
+                                                    "top": 6
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },{
+            "pattern_uid" : "bottomActionView",
+            "patterns" : [
+                {
+                    "key" : "bottomActionButtons",
+                    "itemType": "hStack",
+                    "itemSizeAttribute": {
+                        "padding": {
+                            "left": 20,
+                            "right": 20,
+                            "bottom": 0,
+                            "top" : 0
+                        }
+                    },
+                    "items": [
+                        {
+                            "key": "baseStack",
+                            "itemType": "hStack",
+                            "itemSizeAttribute": {
+                                "width": {
+                                    "valueType": "stretchToParent",
+                                    "value": 50
+                                },"height":{
+                                    "valueType": "staticValue",
+                                    "value":62
+                                }
+                            },
+                            "items": [
+                                {
+                                    "key": "zdfirstbutton",
+                                    "itemType": "button",
+                                    "style": {
+                                        "bgColor_id": "CustomActionButtonBg",
+                                        "textStyle": {
+                                            "fontStyle_id": "sf-semibold-14",
+                                            "textColor_id": "SecondaryText",
+                                            "alignment": "center"
+                                        },
+                                        "cornerRadius": {
+                                            "all": 21
+                                        }
+                                    },
+                                    "itemSizeAttribute": {
+                                        "padding": {
+                                            "all": 10
+                                        }
+                                    },
+                                    "actions": [
+                                        {
+                                            "actionKey": "zdFirstButtonClicked",
+                                            "uiActionType": "tap",
+                                            "navigationIDs": [
+                                                "goBack"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "baseStack",
+                            "itemType": "hStack",
+                            "itemSizeAttribute": {
+                                "width": {
+                                    "valueType": "stretchToParent",
+                                    "value": 50
+                                }
+                            },
+                            "items": [
+                                {
+                                    "key": "zdsecondbutton",
+                                    "itemType": "button",
+                                    "conditionalStyle_uid" : "confirmActionSheetButtonStyle",
+                                    "itemSizeAttribute": {
+                                        "padding": {
+                                            "all": 10
+                                        }
+                                    },
+                                    "actions": [
+                                        {
+                                            "actionKey": "zdSecondButtonClicked",
+                                            "uiActionType": "tap",
+                                            "navigationIDs": [
+                                                "goBack"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ],
+    "conditionalStyles" : [
+        {
+            "uid": "iconStyles",
+            "options": [
+                {
+                    "value": "succeed",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "textColor_id": "IconColor",
+                            "alignment": "center"
+                        },
+                        "imageStyle": {
+                            "contentType": "cover"
+                        }
+                    }
+                },
+                {
+                    "value": "failed",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "textColor_id": "Red",
+                            "alignment": "center"
+                        },
+                        "imageStyle": {
+                            "contentType": "cover"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "progressBarStyle",
+            "options": [
+                {
+                    "value": "succeed",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "BGColor",
+                        "tintColor_id": "Blue"
+                    }
+                },
+                {
+                    "value": "failed",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "Red_stroke",
+                        "tintColor_id": "Red"
+                    }
+                }
+            ]
+        },
+        {
+            "uid" : "topNavigationTitle",
+            "options" : [
+                {
+                    "value" : "themeColor",
+                    "condition" : "is",
+                    
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "sf-semibold-14",
+                            "textColor_id": "ZDRThemeColor",
+                            "maxLines": 2,
+                            "alignment": "left"
+                        }
+                    }
+                },{
+                    "value" : "primaryColor",
+                    "condition" : "is",
+                    "style": {
+                        "textStyle": {
+                            "textColor_id": "PrimaryText",
+                            "alignment": "center"
+                        }
+                    }
+                }
+            ]
+        },{
+            "uid": "confirmActionSheetButtonStyle",
+            "options": [
+                {
+                    "value": "discard",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "Red",
+                        "textStyle": {
+                            "fontStyle_id": "sf-semibold-14",
+                            "textColor_id": "White",
+                            "alignment": "center"
+                        },
+                        "cornerRadius": {
+                            "all": 21
+                        }
+                    }
+                },
+                {
+                    "value": "normal",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "CustomActionButtonBg",
+                        "textStyle": {
+                            "fontStyle_id": "sf-semibold-14",
+                            "textColor_id": "SecondaryText",
+                            "alignment": "center"
+                        },
+                        "cornerRadius": {
+                            "all": 21
+                        }
+                    }
+                },
+                {
+                    "value": "themeColor",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "ThemeColor",
+                        "textStyle": {
+                            "fontStyle_id": "sf-semibold-14",
+                            "textColor_id": "White",
+                            "alignment": "center"
+                        },
+                        "cornerRadius": {
+                            "all": 21
+                        }
+                    }
+                }
+            ]
+            
+        }
+    ],
+    "navigations" : [
+        {
+            "navigation_uid": "ZDAttachmentScreen",
+            "navigationKey": "ZDAttachmentScreen",
+            "transitionType": "present",
+            "destination_id": "ZDAttachmentScreen"
+        },
+        {
+            "navigation_uid": "ZDAttachmentScreen",
+            "navigationKey": "ZDAttachmentScreen",
+            "transitionType": "push",
+            "destination_id": "ZDAttachmentScreen"
+        },
+        {
+            "navigation_uid": "zpImagePicker",
+            "navigationKey": "zpImagePicker",
+            "transitionType": "present",
+            "destination_id": "ZPImagePicker"
+        },
+        {
+            "navigation_uid": "zpCameraPicker",
+            "navigationKey": "zpCameraPicker",
+            "transitionType": "present",
+            "destination_id": "ZPCameraPicker"
+        },
+        {
+            "navigation_uid": "zpDocumentPicker",
+            "navigationKey": "zpDocumentPicker",
+            "transitionType": "present",
+            "destination_id": "ZPDocumentPicker"
+        },{
+            "navigation_uid": "goBack",
+            "navigationKey": "zpBack",
+            "transitionType": "backward"
+        }
+    ]
+}

@@ -1,0 +1,526 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name MobilistenCore
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import Foundation
+@_exported import MobilistenCore
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public typealias ZSIQResultCompletion = (_ error: (any MobilistenCore.SIQError)?, _ success: Swift.Bool) -> Swift.Void
+public typealias ZSIQCallCompletion = (_ error: (any MobilistenCore.SIQError)?, _ conversation: MobilistenCore.SalesIQConversation?) -> Swift.Void
+@objc public enum APNSMode : Swift.Int {
+  case sandbox
+  case production
+  public func description() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ChatStatus : Swift.Int {
+  case open
+  case triggered
+  case proactive
+  case connected
+  case waiting
+  case missed
+  case closed
+  case ended
+  case all
+  public var stringValue: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum ErrorModule {
+  case chat
+  case resource
+  case call
+  public static func == (a: MobilistenCore.ErrorModule, b: MobilistenCore.ErrorModule) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum SalesIQConversationAttributes : Swift.Hashable {
+  case name(Swift.String?)
+  case displayImage(UIKit.UIImage?)
+  case additionalInfo(Swift.String?)
+  case departments([MobilistenCore.SIQDepartment])
+  public static func == (a: MobilistenCore.SalesIQConversationAttributes, b: MobilistenCore.SalesIQConversationAttributes) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public enum SIQCommunicationMode : Swift.Int {
+  case chat
+  case call
+  case chatAndCall
+  case none
+  public var stringValue: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class ChatError : ObjectiveC.NSObject {
+  @objc public var code: Swift.Int {
+    @objc get
+  }
+  @objc public var message: Swift.String {
+    @objc get
+  }
+  @objc public init(error: MobilistenCore.ChatErrorCode, customMessage: Swift.String = "")
+  @objc deinit
+}
+@objc public enum ChatErrorCode : Swift.Int {
+  case creationFailed
+  case formSyncFailed
+  case triggerTimedOut
+  case messagesSyncFailed
+  case triggerFailed
+  case socketConnectionFailed
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol SIQError {
+  @objc var code: Swift.Int { get }
+  @objc var message: Swift.String { get }
+}
+@objc public class APIErrorWrapper : ObjectiveC.NSObject, MobilistenCore.SIQError {
+  public init(errorEnum: MobilistenCore.APIError)
+  @objc public var code: Swift.Int {
+    @objc get
+  }
+  @objc public var message: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc final public class ResourceError : ObjectiveC.NSObject {
+  @objc final public var code: Swift.Int {
+    @objc get
+  }
+  @objc final public var message: Swift.String {
+    @objc get
+  }
+  @objc public init(error: MobilistenCore.ResourceErrorCode, customMessage: Swift.String = "")
+  @objc deinit
+}
+@objc public enum ResourceErrorCode : Swift.Int {
+  case articleCatergorySyncFailed
+  case articleSyncFailed
+  case articleSearchFailed
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum APIError : Foundation.CustomNSError, Foundation.LocalizedError, Swift.Equatable {
+  case inactivePortal
+  case userNotAllowed
+  case notInitialized
+  case outdatedVersion
+  case invalidCredentials
+  case mobilistenDisabled
+  case noNetworkConnection
+  case initializationFailure
+  case invalidChatId
+  case ipBlocked
+  case brandDisabled
+  case chatNotEnabled
+  case inBusinessHour
+  case embedNotAllowed
+  case operatorNotAvailable
+  case invalidAttender
+  case noChatFoundForID
+  case invalidVisitorID
+  case invalidArticleID
+  case invalidCategoryID
+  case invalidDepartmentID
+  case custom(code: Swift.Int, message: Swift.String)
+  case brandOfflineWithHideWhenOfflineEnabled
+  case conversationAlreadyExistsWithTheSameAcknowledgementKey
+  case cannotStartChatMoreThanOneChatWithConversationFormType
+  case chatAlreadyExistsWithParallelConversationsDisabled
+  case tabIsMandatoryWhenIdWasProvided
+  case brandOutSideBussinessHours
+  case cannotStartChatWithPreChatFormEnabled
+  case departmentNotProvidedForStartChat
+  case openConversationAlreadyExists
+  case noBotsAvailable
+  case invalidConversationId
+  case chatIsDisabledInOfflineMode
+  case invalidDepartment
+  case botsTriggerFailed
+  case cannotStartMoreThanOneChatWithConversationFormType
+  case invalidTabProvided
+  case reopenChatDisabledUnableDoWithStartChat
+  case knowledgebaseDisabled
+  case conversationHistoryDisabled
+  case departmentOnline
+  case errorSyncingForms
+  case emailFieldMandatory
+  case phoneNumberFieldMandatory
+  case unknown
+  case databaseClearFailed
+  case concurrentRequestsEncounteredError
+  case knowledgeBase(MobilistenCore.SIQKnowledgeBaseError)
+  case chatIdAlreadyExists
+  case customIDRequiredWhenChatIsOngoing
+  case noBotsAvailableForCustomAction
+  case screenNameNotAvailable
+  case urlParsingFailed
+  case jsonDecodingFailed
+  case callDisabled
+  case noOngoingCall
+  case notFoundAVCall
+  case activeCallExists
+  case callNotAllowedForEndedConversation
+  case callNotAllowedForBotConversation
+  case callDisabledForConnectedOperator
+  case declinedRecordingConsent
+  case chatConsentDeclined
+  case activeCallDisplayed
+  case failureForInvalidDepartment
+  case callOfflineConsentDeclined
+  case unableToInitiateCall
+  case thisChatHasNotBeenAssociatedWithAnyOperator
+  case cannotOpenEndedOrMissedCall
+  case callDepartmentsNotAvailable
+  case common(error: Swift.String?)
+  case actionAlreadyInProgress
+  public static var errorDomain: Swift.String {
+    get
+  }
+  public static func getNSError(error: MobilistenCore.APIError) -> Foundation.NSError
+  public var error: Foundation.NSError {
+    get
+  }
+  public var errorCode: Swift.Int {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var errorDescription: Swift.String? {
+    get
+  }
+  #endif
+  public var errorMessage: Swift.String {
+    get
+  }
+  public static func == (a: MobilistenCore.APIError, b: MobilistenCore.APIError) -> Swift.Bool
+}
+public enum SIQKnowledgeBaseError : Swift.Int {
+  case invalidDepartmentID
+  case invalidParentCategoryID
+  case languageNotEnabled
+  case invalidDepartmentId
+  case permissionDenied
+  case invalidCategoryId
+  case invalidOperatorId
+  case invalidParam
+  case invalidArticleLanguageId
+  case invalidLanguageCode
+  case resourceLimitReached
+  case invalidResource
+  case unsupportedLanguageCode
+  case articleNotEnabled
+  case unknown
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum MessageStatus : Foundation.NSNumber {
+  case save
+  case sent
+  case fail
+  case receive
+  case resent
+  case unsent
+  case failedPendingWMSConfirmation
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Foundation.NSNumber)
+  #endif
+  public typealias RawValue = Foundation.NSNumber
+  public var rawValue: Foundation.NSNumber {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class SalesIQConversation : ObjectiveC.NSObject {
+  @objc open var id: Swift.String?
+  @objc open var customConversationId: Swift.String?
+  @objc open var question: Swift.String?
+  @objc open var attenderId: Swift.String?
+  @objc open var attenderName: Swift.String?
+  @objc open var attenderEmail: Swift.String?
+  @objc open var departmentName: Swift.String?
+  @objc open var feedback: Swift.String?
+  @objc open var rating: Swift.String?
+  @objc open var queuePosition: Swift.Int
+  @objc open var media: MobilistenCore.SalesIQMedia?
+  @objc public func toDictionary() -> [Swift.String : Any]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SalesIQChat : MobilistenCore.SalesIQConversation {
+  @objc open var isBotAttender: Swift.Bool
+  @objc open var unreadCount: Swift.Int
+  @objc open var lastMessage: MobilistenCore.SalesIQLastMessage?
+  @objc open var status: MobilistenCore.ChatStatus
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SalesIQLastMessage : ObjectiveC.NSObject {
+  @objc open var id: Swift.String?
+  @objc open var text: Swift.String?
+  @objc open var sender: MobilistenCore.SalesIQSenderDetail?
+  @objc open var time: Foundation.Date?
+  @objc open var isRead: Swift.Bool
+  @objc open var sentByUser: Swift.Bool
+  @objc open var isEdited: Swift.Bool
+  @objc open var isDeleted: Swift.Bool
+  @objc open var file: MobilistenCore.SalesIQFile?
+  @objc open var status: MobilistenCore.SalesIQMessageStatus
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SalesIQSenderDetail : ObjectiveC.NSObject {
+  @objc open var id: Swift.String?
+  @objc open var name: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SalesIQFile : ObjectiveC.NSObject {
+  @objc open var name: Swift.String?
+  @objc open var contentType: Swift.String?
+  @objc open var comment: Swift.String?
+  @objc open var size: Swift.Int
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SalesIQCall : MobilistenCore.SalesIQConversation {
+  @objc open var status: MobilistenCore.SalesIQCallConversationStatus
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SalesIQMedia : ObjectiveC.NSObject {
+  @objc open var id: Swift.String?
+  @objc open var endTime: Swift.String?
+  @objc open var initiatedBy: MobilistenCore.UserType
+  @objc open var pickupTime: Swift.String?
+  @objc open var connectedTime: Swift.String?
+  @objc open var status: MobilistenCore.SalesIQMediaStatus
+  @objc open var endedBy: MobilistenCore.UserType
+  @objc open var type: Swift.String?
+  @objc open var createdTime: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum UserType : Swift.Int {
+  case none
+  case user
+  case agent
+  public var stringValue: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum SalesIQMessageStatus : Swift.Int {
+  case sending = 0
+  case uploading = 1
+  case sent = 2
+  case failed = 3
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getStatus(_ rawValue: Foundation.NSNumber?) -> MobilistenCore.SalesIQMessageStatus?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum SalesIQCallConversationStatus : Swift.Int {
+  case none
+  case waiting
+  case connected
+  case missed
+  case closed
+  public var stringValue: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum SalesIQMediaStatus : Swift.Int {
+  case none
+  case ended
+  case rejected
+  case missed
+  case cancelled
+  case connected
+  case invited
+  case initiated
+  case accepted
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getStatus(_ type: Swift.String?) -> MobilistenCore.SalesIQMediaStatus?
+  #endif
+  public var stringValue: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class SIQCallInfo : ObjectiveC.NSObject {
+  @objc public var name: Swift.String?
+  @objc public var additionalInfo: Swift.String?
+  @objc public var departments: [MobilistenCore.SIQDepartment]
+  @objc public var displayImage: UIKit.UIImage?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(name: Swift.String? = nil, departments: [MobilistenCore.SIQDepartment] = [], additionalInfo: Swift.String? = nil, displayImage: UIKit.UIImage? = nil)
+  #endif
+  @objc deinit
+}
+@objc public class SIQDepartment : ObjectiveC.NSObject {
+  @objc open var id: Swift.String
+  @objc open var name: Swift.String
+  @objc open var available: Swift.Bool
+  @objc open var mode: MobilistenCore.SIQCommunicationMode
+  @objc public init(id: Swift.String, name: Swift.String, available: Swift.Bool, mode: MobilistenCore.SIQCommunicationMode)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc convenience public init(id: Swift.String? = nil, name: Swift.String? = nil, mode: MobilistenCore.SIQCommunicationMode)
+  #endif
+  @objc deinit
+}
+extension Swift.Array where Element == MobilistenCore.SIQDepartment {
+  public var chat: [MobilistenCore.SIQDepartment] {
+    get
+  }
+  public var call: [MobilistenCore.SIQDepartment] {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class SIQVisitorChat : ObjectiveC.NSObject {
+  @objc open var attenderEmail: Swift.String?
+  @objc open var attenderID: Swift.String?
+  @objc open var attenderName: Swift.String?
+  @objc open var departmentName: Swift.String?
+  @objc open var feedback: Swift.String?
+  @objc open var isBotAttender: Swift.Bool
+  @objc open var lastMessage: MobilistenCore.SIQVisitorMessage
+  @objc open var question: Swift.String?
+  @objc open var rating: Swift.String?
+  @objc open var referenceID: Swift.String?
+  @objc open var status: MobilistenCore.ChatStatus
+  @objc open var unreadCount: Swift.Int
+  @objc open var queuePosition: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQVisitorMessage : ObjectiveC.NSObject {
+  @objc open var time: Foundation.Date?
+  @objc open var sender: Swift.String?
+  @objc open var text: Swift.String?
+  @objc open var isRead: Swift.Bool
+  @objc open var isEdited: Swift.Bool
+  @objc open var isDeleted: Swift.Bool
+  @objc open var file: MobilistenCore.SIQVisitorFile?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class SIQVisitorFile : ObjectiveC.NSObject {
+  @objc open var name: Swift.String
+  @objc open var size: Swift.Int
+  @objc open var contentType: Swift.String
+  @objc open var comment: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public init(name: Swift.String, size: Swift.Int, contentType: Swift.String, comment: Swift.String? = nil)
+  #endif
+  @objc deinit
+}
+extension MobilistenCore.APNSMode : Swift.Equatable {}
+extension MobilistenCore.APNSMode : Swift.Hashable {}
+extension MobilistenCore.APNSMode : Swift.RawRepresentable {}
+extension MobilistenCore.ChatStatus : Swift.Equatable {}
+extension MobilistenCore.ChatStatus : Swift.Hashable {}
+extension MobilistenCore.ChatStatus : Swift.RawRepresentable {}
+extension MobilistenCore.ErrorModule : Swift.Equatable {}
+extension MobilistenCore.ErrorModule : Swift.Hashable {}
+extension MobilistenCore.SIQCommunicationMode : Swift.Equatable {}
+extension MobilistenCore.SIQCommunicationMode : Swift.Hashable {}
+extension MobilistenCore.SIQCommunicationMode : Swift.RawRepresentable {}
+extension MobilistenCore.ChatErrorCode : Swift.Equatable {}
+extension MobilistenCore.ChatErrorCode : Swift.Hashable {}
+extension MobilistenCore.ChatErrorCode : Swift.RawRepresentable {}
+extension MobilistenCore.ResourceErrorCode : Swift.Equatable {}
+extension MobilistenCore.ResourceErrorCode : Swift.Hashable {}
+extension MobilistenCore.ResourceErrorCode : Swift.RawRepresentable {}
+extension MobilistenCore.SIQKnowledgeBaseError : Swift.Equatable {}
+extension MobilistenCore.SIQKnowledgeBaseError : Swift.Hashable {}
+extension MobilistenCore.SIQKnowledgeBaseError : Swift.RawRepresentable {}
+extension MobilistenCore.MessageStatus : Swift.Equatable {}
+extension MobilistenCore.MessageStatus : Swift.Hashable {}
+extension MobilistenCore.MessageStatus : Swift.RawRepresentable {}
+extension MobilistenCore.UserType : Swift.Equatable {}
+extension MobilistenCore.UserType : Swift.Hashable {}
+extension MobilistenCore.UserType : Swift.RawRepresentable {}
+extension MobilistenCore.SalesIQMessageStatus : Swift.Equatable {}
+extension MobilistenCore.SalesIQMessageStatus : Swift.Hashable {}
+extension MobilistenCore.SalesIQMessageStatus : Swift.RawRepresentable {}
+extension MobilistenCore.SalesIQCallConversationStatus : Swift.Equatable {}
+extension MobilistenCore.SalesIQCallConversationStatus : Swift.Hashable {}
+extension MobilistenCore.SalesIQCallConversationStatus : Swift.RawRepresentable {}
+extension MobilistenCore.SalesIQMediaStatus : Swift.Equatable {}
+extension MobilistenCore.SalesIQMediaStatus : Swift.Hashable {}
+extension MobilistenCore.SalesIQMediaStatus : Swift.RawRepresentable {}

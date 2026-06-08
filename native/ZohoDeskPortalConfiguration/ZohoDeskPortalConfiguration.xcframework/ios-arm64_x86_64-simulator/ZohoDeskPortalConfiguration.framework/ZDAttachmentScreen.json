@@ -1,0 +1,134 @@
+{
+    "screens" : [
+        {
+            "uid": "ZDAttachmentScreen",
+            "screenType": "list",
+            "r_uid": "ZDAttachmentScreen",
+            "passOnAction": {
+                "actionKey": "passtonext",
+                "uiActionType": "passOn",
+                "navigationIDs": [
+                    "goBack"
+                ]
+            },
+            "segments": [
+                {
+                    "configuration":{
+                        "isNative":true
+                    },
+                    "segmentType": "topNavigationBar",
+                    "style": {
+                        "bgColor_id":"HeaderColor",
+                        "tintColor_id": "BarButtonColor",
+                        "shadowStyle": {
+                            "shadowColor_id": "NavBottomColor"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "key": "zpLiquidBackIcon",
+                            "itemType": "leftBarButton",
+                            "actions": [
+                                {
+                                    "actionKey": "zpBackAction",
+                                    "uiActionType": "tap",
+                                    "navigationIDs":[
+                                        "goBack",
+                                        "actionSheet",
+                                        "nativeAlert",
+                                        "ZDConfirmActionSheet"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "zpScreenTitle",
+                            "itemType": "label",
+                            "style": {
+                                "textStyle": {
+                                    "textColor_id": "NavTitleColor"
+                                }
+                            }
+                        },
+                        {
+                            "key": "zpLiquidDoneButton",
+                            "itemType": "rightBarButton",
+                            "style": {
+                                "textStyle": {
+                                    "fontStyle_id": "66a7b5df-c764-49d5-892c-b55001dc723c"
+                                }
+                            },
+                            "actions": [
+                                {
+                                    "actionKey": "zpDoneAction",
+                                    "uiActionType": "tap",
+                                    "navigationIDs":[
+                                        "goBack"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id":"WidgetColor"
+                    }
+                },
+                {
+                    "segmentType":"floatingHeader",
+                    "includePattern_id" : "sectionHeaderViews"
+                },
+                {
+                    "segmentType": "listItem",
+                    "includePattern_id" : "listItemViews"
+                },
+                {
+                    "segmentType": "bottomNavigationBar",
+                    "style": {
+                        "bgColor_id": "WidgetColor"
+                    },
+                    "includePattern_id" : "bottomNavigationViews"
+                }
+            ]
+        },
+        {
+            "uid": "ZPImagePicker",
+            "screenType": "imagePicker",
+            "r_uid": "zpImagePicker",
+            "typeOfrender": "dynamic"
+        },{
+            "uid": "ZPCameraPicker",
+            "screenType": "liveCameraPicker",
+            "r_uid": "zpCameraPicker",
+            "typeOfrender": "dynamic"
+        },{
+            "uid": "ZPDocumentPicker",
+            "screenType": "documentPicker",
+            "r_uid": "zpDocumentPicker",
+            "typeOfrender": "dynamic"
+        },
+        {
+            "uid": "zpDocumentPreviewer",
+            "screenType": "documentPreview",
+            "r_uid": "zpDocumentPreviewer",
+            "typeOfrender": "dynamic"
+
+        }
+    ],
+    "navigations" : [
+        {
+            "navigation_uid": "ZDAttachmentScreen",
+            "navigationKey": "ZDAttachmentScreen",
+            "transitionType": "present",
+            "destination_id": "ZDAttachmentScreen"
+        },
+        {
+            "navigation_uid": "zpDocumentPreviewer",
+            "navigationKey": "zpDocumentPreviewer",
+            "transitionType": "present",
+            "destination_id": "zpDocumentPreviewer"
+        }
+    ]
+}

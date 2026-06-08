@@ -1,0 +1,335 @@
+{
+    "lightColors": [
+        {
+            "color_uid": "screenBg",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "primaryBG",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "secondaryBG",
+            "r": 244,
+            "g": 247,
+            "b": 250,
+            "a": 1
+        },
+        {
+            "color_uid": "separatorClr",
+            "r": 198,
+            "g": 198,
+            "b": 200,
+            "a": 1
+        },
+        {
+            "color_uid": "tintClr",
+            "r": 10,
+            "g": 122,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "navigationBgClr",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "navigationBtnTint",
+            "r": 10,
+            "g": 122,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "navigationTitleTint",
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 1
+        },
+        {
+            "color_uid": "primaryTxtClr",
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 1
+        },
+        {
+            "color_uid": "secondaryTxtClr",
+            "r": 138,
+            "g": 138,
+            "b": 142,
+            "a": 1
+        },
+        {
+            "color_uid": "teritaryText",
+            "r": 197,
+            "g": 197,
+            "b": 199,
+            "a": 1
+        },
+        {
+            "color_uid": "teritaryBG",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "iconColor",
+            "r": 239,
+            "g": 239,
+            "b": 240,
+            "a": 1
+        },
+        {
+            "color_uid": "shadowClr",
+            "r": 120,
+            "g": 120,
+            "b": 128,
+            "a": 0.12
+        },
+        {
+            "color_uid": "elementShadowClr",
+            "r": 120,
+            "g": 120,
+            "b": 128,
+            "a": 1
+        },
+        {
+            "color_uid": "white",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "disableTxtClr",
+            "r": 197,
+            "g": 197,
+            "b": 199,
+            "a": 1
+        },
+        {
+            "color_uid": "disableClr",
+            "r": 239,
+            "g": 239,
+            "b": 240,
+            "a": 1
+        },
+        {
+            "color_uid": "error",
+            "r": 255,
+            "g": 59,
+            "b": 48,
+            "a": 1
+        },
+        {
+            "color_uid": "secondaryBlack",
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.5
+        },
+        {
+            "color_uid": "black0.35",
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.35
+        },
+        {
+            "color_uid": "borderColor",
+            "r": 118,
+            "g": 118,
+            "b": 128,
+            "a": 0.12
+        },
+        {
+            "color_uid": "disableBG",
+            "r": 148,
+            "g": 148,
+            "b": 148,
+            "a": 0.5
+        },
+        {
+            "color_uid": "clearColor",
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0
+        }
+    ],
+    "darkColors": [
+        {
+            "color_uid": "disableBG",
+            "r": 82,
+            "g": 84,
+            "b": 83,
+            "a": 0.5
+        },
+        {
+            "color_uid": "screenBg",
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 1
+        },
+        {
+            "color_uid": "primaryBG",
+            "r": 44,
+            "g": 44,
+            "b": 46,
+            "a": 1
+        },
+        {
+            "color_uid": "secondaryBG",
+            "r": 28,
+            "g": 28,
+            "b": 30,
+            "a": 1
+        },
+        {
+            "color_uid": "separatorClr",
+            "r": 56,
+            "g": 56,
+            "b": 58,
+            "a": 1
+        },
+        {
+            "color_uid": "tintClr",
+            "r": 10,
+            "g": 132,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "navigationBgClr",
+            "r": 44,
+            "g": 44,
+            "b": 46,
+            "a": 1
+        },
+        {
+            "color_uid": "navigationBtnTint",
+            "r": 10,
+            "g": 132,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "navigationTitleTint",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "primaryTxtClr",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "secondaryTxtClr",
+            "r": 235,
+            "g": 235,
+            "b": 245,
+            "a": 0.60
+        },
+        {
+            "color_uid": "teritaryText",
+            "r": 197,
+            "g": 197,
+            "b": 199,
+            "a": 1
+        },
+        {
+            "color_uid": "teritaryBG",
+            "r": 28,
+            "g": 28,
+            "b": 30,
+            "a": 1
+        },
+        {
+            "color_uid": "iconColor",
+            "r": 239,
+            "g": 239,
+            "b": 240,
+            "a": 1
+        },
+        {
+            "color_uid": "shadowClr",
+            "r": 128,
+            "g": 128,
+            "b": 128,
+            "a": 0.12
+        },
+        {
+            "color_uid": "white",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "disableTxtClr",
+            "r": 235,
+            "g": 235,
+            "b": 299,
+            "a": 1
+        },
+        {
+            "color_uid": "disableClr",
+            "r": 118,
+            "g": 118,
+            "b": 128,
+            "a": 0.12
+        },
+        {
+            "color_uid": "error",
+            "r": 255,
+            "g": 69,
+            "b": 58,
+            "a": 1
+        },
+        {
+            "color_uid": "secondaryBlack",
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.5
+        },
+        {
+            "color_uid": "black0.35",
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.35
+        },
+        {
+            "color_uid": "borderColor",
+            "r": 118,
+            "g": 118,
+            "b": 128,
+            "a": 0.24
+        },
+        {
+            "color_uid": "clearColor",
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0
+        }
+    ]
+}

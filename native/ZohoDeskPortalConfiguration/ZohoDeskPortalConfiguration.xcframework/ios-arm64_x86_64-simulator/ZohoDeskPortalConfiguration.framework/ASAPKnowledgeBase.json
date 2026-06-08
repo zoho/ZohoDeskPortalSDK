@@ -1,0 +1,2123 @@
+{
+    "screens": [
+        {
+            "uid": "f45dc22e-033b-4dc6-b6d1-4be2f9177975",
+            "screenType": "detail",
+            "module": "KB",
+            "r_uid": "kbCategoryListScreen",
+            "passOnAction": {
+                "actionKey": "passtonext",
+                "uiActionType":"passOn",
+                "navigationIDs": [
+                    "goBack",
+                    "simpleList"
+                ]
+            },
+            "segments": [
+                {
+                    "segmentType": "topNavigationBar",
+                    "configuration": {
+                        "isNative": true,
+                        "prefersLargeTitles": true
+                    },
+                    "style": {
+                        "bgColor_id":"HeaderColor",
+                        "tintColor_id": "BarButtonColor",
+                        "shadowStyle": {
+                            "shadowColor_id": "NavBottomColor"
+                        }
+                    },
+                    "includePattern_id": "topNavigationBar-pattern"
+                },
+                {
+                    "segmentType": "search",
+                    "configuration": {
+                        "isNative": true,
+                        "hidesSearchBarWhenScrolling": true
+                    },
+                    "actions": [
+                        {
+                            "actionKey": "zpSearchAction",
+                            "uiActionType": "onCreate",
+                            "navigationIDs": [
+                                "asapGlobalSearch"
+                            ]
+                        }
+                    ],
+                    "patterns": [
+                        {
+                            "key": "zpSearchField",
+                            "itemType": "textInput",
+                            "style": {
+                                "bgColor_id": "SearchBGColor",
+                                "tintColor_id": "ThemeColor",
+                                "textStyle": {
+                                    "textColor_id": "PrimaryText",
+                                    "isEditable": true,
+                                    "alignment": "left"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id":"BGColor"
+                    },
+                    "patterns": [
+                        {
+                            "key": "zpTabLayoutPager",
+                            "itemType": "tabLayoutViewPager",
+                            "style": {
+                                "scrollStyle": {
+                                    "isScrollEnabled": false,
+                                    "isShowHorizontalScrollIndicator": false,
+                                    "isShowVerticalScrollIndicator": false
+                                }
+                            },
+                            "actions": [
+                                {
+                                    "actionKey": "zpPageAction",
+                                    "uiActionType": "onCreate",
+                                    "navigationIDs":[
+                                        "kbCategoryListScreen",
+                                        "simpleList",
+                                        "kbSubCategoryListScreen"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "bottomNavigationBar",
+                    "style":{
+                        "bgColor_id":"WidgetColor"
+                    },
+                    "segmentSizeAttribute": {
+                        "height": {
+                            "valueType": "wrapContent"
+                        }
+                    },
+                    "includePattern_id": "39f203b7-eed9-4024-ae11-e102830ed809"
+                }
+            ]
+        },
+        {
+            "uid": "fd3d378f-4317-4dda-915c-e56c2bcb9a1z",
+            "screenType": "list",
+            "module": "KB",
+            "r_uid": "kbSubCategoryListScreen",
+            "passOnAction":{
+                "actionKey": "passtonext",
+                "uiActionType":"passOn",
+                "navigationIDs":[
+                    "simpleList"
+                ]
+            },
+            "segments":[
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id":"BGColor"
+                    }
+                },
+                {
+                    "segmentType": "sectionHeader",
+                    "patterns": [
+                        {
+                            "key": "zpIconStateHeader",
+                            "itemType": "vStack",
+                            "style": {
+                                "bgColor_id":"WidgetColor"
+                            },
+                            "items": [
+                                {
+                                    "key": "zpIconStateHeader",
+                                    "itemType": "hStack",
+                                    "itemSizeAttribute": {
+                                        "padding":{
+                                            "all":16
+                                        }
+                                    },
+                                    "items": [
+                                        {
+                                            "key": "zpSectionTitle",
+                                            "itemType": "label",
+                                            "style": {
+                                                "textStyle": {
+                                                    "fontStyle_id": "b0c75f88-6e53-42bd-b193-3b548d1caa73",
+                                                    "textColor_id": "PrimaryText",
+                                                    "isEditable": false,
+                                                    "maxLines": 1
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "zpLineSeparator",
+                                    "itemType": "separatorView",
+                                    "style": {
+                                        "separatorType": "line",
+                                        "bgColor_id": "SeparatorColor"
+                                    },
+                                    "itemSizeAttribute": {
+                                        "height": {
+                                            "valueType": "staticValue",
+                                            "value": 1
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "listItem",
+                    "actions": [
+                        {
+                            "actionKey": "zpListAction",
+                            "uiActionType": "tap",
+                            "navigationIDs":[
+                                "goBack",
+                                "kbSubCategoryListScreen",
+                                "kbCategoryListScreen",
+                                "kbArticleDetailScreen",
+                                "simpleList"
+                            ]
+                        }
+                    ],
+                    "patterns": [
+                        {
+                            "key": "zpCommunityCell",
+                            "itemType": "vStack",
+                            "items": [
+                                {
+                                    "key": "baseStackHolder",
+                                    "itemType": "vStack",
+                                    "style": {
+                                        "bgColor_id":"BGColor",
+                                        "shadowStyle":{
+                                            "shadowColor_id": "ShadowColor",
+                                            "shadowRadius": 2,
+                                            "shadowOpacity": 0.2
+                                        }
+                                    },
+                                    "itemSizeAttribute": {
+                                        "padding":{
+                                            "bottom":10
+                                        }
+                                    },
+                                    "items": [
+                                        {
+                                            "key": "baseStackHolder",
+                                            "itemType": "hStack",
+                                            "style": {
+                                                "bgColor_id":"WidgetColor"
+                                            },
+                                            "items": [
+                                                {
+                                                    "key": "baseStackHolder",
+                                                    "itemType": "hStack",
+                                                    "itemSizeAttribute": {
+                                                        "padding": {
+                                                            "all": 15
+                                                        }
+                                                    },
+                                                    "items": [
+                                                        {
+                                                            "key": "baseStackHolder",
+                                                            "itemType": "hStack",
+                                                            "itemSizeAttribute": {
+                                                                "width":{
+                                                                    "value": 36,
+                                                                    "valueType":"staticValue"
+                                                                }
+                                                            },
+                                                            "items": [
+                                                                {
+                                                                    "key": "baseStackHolder",
+                                                                    "itemType": "zStack",
+                                                                    "itemSizeAttribute": {
+                                                                        "padding":{
+                                                                            "all":0
+                                                                        }
+                                                                    },
+                                                                    "items": [
+                                                                        {
+                                                                            "key": "categoryImage",
+                                                                            "itemType": "imageView",
+                                                                            "style": {
+                                                                                "bgColor_id": "AttachmentBoxColor",
+                                                                                "cornerRadius":{
+                                                                                    "all":5
+                                                                                },
+                                                                                "imageStyle": {
+                                                                                    "contentType": "cover"
+                                                                                },
+                                                                                "borderStyle":{
+                                                                                    "borderColor_id":"BoxColorBorder",
+                                                                                    "borderWidth":1
+                                                                                },
+                                                                                "textStyle":{
+                                                                                    "fontStyle_id":"861ddda8-b9ce-49ce-bdfe-f9facd2438f2",
+                                                                                    "alignment":"center",
+                                                                                    "maxLines":1,
+                                                                                    "textColor_id":"PrimaryText"
+                                                                                }
+                                                                            },
+                                                                            "conditionalStyle_uid": "da450e63-c18a-4e59-b827-1ad23266fbci",
+                                                                            "itemSizeAttribute": {
+                                                                                "width": {
+                                                                                    "value": 36,
+                                                                                    "valueType":"staticValue"
+                                                                                },
+                                                                                "height": {
+                                                                                    "value": 36,
+                                                                                    "valueType":"staticValue"
+                                                                                },
+                                                                                "position":"topCenter"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "key": "baseStackHolder",
+                                                            "itemType": "vStack",
+                                                            "itemSizeAttribute":{
+                                                                "padding":{
+                                                                    "left":16
+                                                                }
+                                                            },
+                                                            "items": [
+                                                                {
+                                                                    "key": "categoryTitle",
+                                                                    "itemType": "label",
+                                                                    "style": {
+                                                                        "textStyle": {
+                                                                            "fontStyle_id": "b0c75f88-6e53-42bd-b193-3b548d1caa73",
+                                                                            "textColor_id": "PrimaryText",
+                                                                            "maxLines": 2
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "key": "categoryDescContainer",
+                                                                    "itemType": "hStack",
+                                                                    "items": [
+                                                                        {
+                                                                            "key": "categoryDesc",
+                                                                            "itemType": "label",
+                                                                            "style": {
+                                                                                "textStyle": {
+                                                                                    "fontStyle_id": "0f8080ca-d994-457b-ac28-d7e1f936a429",
+                                                                                    "textColor_id": "SecondaryText",
+                                                                                    "isEditable": false,
+                                                                                    "maxLines": 5
+                                                                                }
+                                                                            },
+                                                                            "itemSizeAttribute": {
+                                                                                "padding":{
+                                                                                    "top":6,
+                                                                                    "bottom":6
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "key": "baseStackHolder",
+                                                                    "itemType": "hStack",
+                                                                    "itemSizeAttribute": {
+                                                                        "padding":{
+                                                                            "top":10
+                                                                        }
+                                                                    },
+                                                                    "items": [
+                                                                        {
+                                                                            "key": "baseStackHolder",
+                                                                            "itemType": "vStack",
+                                                                            "itemSizeAttribute": {
+                                                                                "minWidth": {
+                                                                                    "value":64,
+                                                                                    "valueType":"staticValue"
+                                                                                }
+                                                                            },
+                                                                            "items": [
+                                                                                {
+                                                                                    "key": "posts_placeHolder",
+                                                                                    "itemType": "label",
+                                                                                    "style": {
+                                                                                        "textStyle": {
+                                                                                            "fontStyle_id": "0f8080ca-d994-457b-ac28-d7e1f936a429",
+                                                                                            "textColor_id": "SecondaryText",
+                                                                                            "isEditable": false,
+                                                                                            "maxLines": 1
+                                                                                        }
+                                                                                    },
+                                                                                    "itemSizeAttribute":{
+                                                                                        "padding":{
+                                                                                            "bottom":4
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                {
+                                                                                    "key": "posts_noOfPosts",
+                                                                                    "itemType": "label",
+                                                                                    "style": {
+                                                                                        "textStyle": {
+                                                                                            "fontStyle_id": "fd20843d-837b-49e3-aa13-d818538bf958",
+                                                                                            "textColor_id": "PrimaryText",
+                                                                                            "isEditable": false,
+                                                                                            "maxLines": 1
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "key": "baseStackHolder",
+                                                                            "itemType": "vStack",
+                                                                            "itemSizeAttribute": {
+                                                                                "minWidth": {
+                                                                                    "value":70,
+                                                                                    "valueType":"staticValue"
+                                                                                },
+                                                                                "padding":{
+                                                                                    "left": 24
+                                                                                }
+                                                                            },
+                                                                            "items": [
+                                                                                {
+                                                                                    "key": "replies_placeHolder",
+                                                                                    "itemType": "label",
+                                                                                    "style": {
+                                                                                        "textStyle": {
+                                                                                            "fontStyle_id": "0f8080ca-d994-457b-ac28-d7e1f936a429",
+                                                                                            "textColor_id": "SecondaryText",
+                                                                                            "isEditable": false,
+                                                                                            "maxLines": 1
+                                                                                        }
+                                                                                    },
+                                                                                    "itemSizeAttribute":{
+                                                                                        "padding":{
+                                                                                            "bottom":4
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                {
+                                                                                    "key": "replies_noOfReplies",
+                                                                                    "itemType": "label",
+                                                                                    "style": {
+                                                                                        "textStyle": {
+                                                                                            "fontStyle_id": "fd20843d-837b-49e3-aa13-d818538bf958",
+                                                                                            "textColor_id": "PrimaryText",
+                                                                                            "isEditable": false,
+                                                                                            "maxLines": 1
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "key": "zpSpacer",
+                                                                            "itemType": "vStack"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "zpSimpleListCell",
+                            "itemType": "vStack",
+                            "style": {
+                                "bgColor_id":"WidgetColor"
+                            },
+                            "includePattern_id": "087b10ea-d656-470f-b1c3-4a701e95d8e8"
+                        }
+                    ]
+                },
+                {
+                    "segmentType":"sectionFooter",
+                    "includePattern_id": "6762b1ef-85c4-4679-ab29-9e61ba11aeeb"
+                }
+            ]
+        },
+        {
+            "uid":"29b7c7d7-66e8-4333-8f45-e2b3156824fb",
+            "screenType":"list",
+            "module":"KB",
+            "r_uid": "kbArticleCommentListScreen",
+            "segments":[
+                {
+                    "segmentType": "topNavigationBar",
+                    "configuration": {
+                        "isNative": true,
+                        "prefersLargeTitles": false
+                    },
+                    "style": {
+                        "bgColor_id":"HeaderColor",
+                        "tintColor_id": "BarButtonColor",
+                        "shadowStyle": {
+                            "shadowColor_id": "NavBottomColor"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "key": "zpBackIcon",
+                            "itemType": "leftBarButton",
+                            "style": {
+                                "textStyle": {
+                                    "textColor_id": "White"
+                                }
+                            },
+                            "actions": [
+                                {
+                                    "actionKey": "zpBackAction",
+                                    "uiActionType": "tap",
+                                    "navigationIDs":[
+                                        "goBack"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "zpScreenTitle",
+                            "itemType": "label",
+                            "style": {
+                                "textStyle": {
+                                    "textColor_id": "NavTitleColor"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id":"BGColor"
+                    }
+                },
+                {
+                    "segmentType":"listItem",
+                    "actions":[
+                        {
+                            "actionKey": "zpListAction",
+                            "uiActionType": "tap"
+                        }
+                    ],
+                    "patterns":[
+                        {
+                            "key":"baseStackHolder",
+                            "itemType":"vStack",
+                            "style": {
+                                "bgColor_id":"WidgetColor",
+                                "cornerRadius":{
+                                    "all":8
+                                }
+                            },
+                            "itemSizeAttribute": {
+                                "padding":{
+                                    "left": 15,
+                                    "right": 15,
+                                    "bottom": 4,
+                                    "top": 6
+                                }
+                            },
+                            "items":[
+                                {
+                                    "key": "baseStackHolder",
+                                    "itemType": "vStack",
+                                    "itemSizeAttribute": {
+                                        "padding":{
+                                            "all": 15
+                                        }
+                                    },
+                                    "items": [
+                                        {
+                                            "key": "baseStackHolder",
+                                            "itemType": "hStack",
+                                            "items": [
+                                                {
+                                                    "key": "baseStackHolder",
+                                                    "itemType": "hStack",
+                                                    "itemSizeAttribute": {
+                                                        "width":{
+                                                            "value": 40,
+                                                            "valueType":"staticValue"
+                                                        }
+                                                    },
+                                                    "items": [
+                                                        {
+                                                            "key": "baseStackHolder",
+                                                            "itemType": "zStack",
+                                                            "itemSizeAttribute": {
+                                                                "padding":{
+                                                                    "all":0
+                                                                }
+                                                            },
+                                                            "items": [
+                                                                {
+                                                                    "key": "zpProfileImage",
+                                                                    "itemType": "imageView",
+                                                                    "style": {
+                                                                        "bgColor_id":"AttachmentBoxColor",
+                                                                        "imageStyle": {
+                                                                            "contentType": "contain"
+                                                                        },
+                                                                        "cornerRadius":{
+                                                                            "all":20
+                                                                        },
+                                                                        "textStyle":{
+                                                                            "fontStyle_id":"861ddda8-b9ce-49ce-bdfe-f9facd2438f2",
+                                                                            "alignment":"center",
+                                                                            "maxLines":1,
+                                                                            "textColor_id":"PrimaryText"
+                                                                        }
+                                                                    },
+                                                                    "itemSizeAttribute": {
+                                                                        "width": {
+                                                                            "value": 40,
+                                                                            "valueType":"staticValue"
+                                                                        },
+                                                                        "height": {
+                                                                            "value": 40,
+                                                                            "valueType":"staticValue"
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "key": "baseStackHolder",
+                                                    "itemType": "vStack",
+                                                    "itemSizeAttribute": {
+                                                        "padding":{
+                                                            "left":14
+                                                        }
+                                                    },
+                                                    "items": [
+                                                        {
+                                                            "key": "zpCommentTitle",
+                                                            "itemType": "label",
+                                                            "style": {
+                                                                "textStyle": {
+                                                                    "fontStyle_id": "742767a0-7f61-40d9-9cc6-89a363f692c3",
+                                                                    "textColor_id": "PrimaryText",
+                                                                    "isEditable": false,
+                                                                    "maxLines": 1
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "key": "zpCommentTime",
+                                                            "itemType": "label",
+                                                            "itemSizeAttribute": {
+                                                                "padding":{
+                                                                    "top": 6
+                                                                }
+                                                            },
+                                                            "style": {
+                                                                "textStyle": {
+                                                                    "fontStyle_id": "0f8080ca-d994-457b-ac28-d7e1f936a429",
+                                                                    "textColor_id": "SecondaryText",
+                                                                    "isEditable": false,
+                                                                    "maxLines": 1
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "baseStackHolder",
+                                            "itemType": "vStack",
+                                            "itemSizeAttribute": {
+                                                "padding":{
+                                                    "top": 12
+                                                }
+                                            },
+                                            "items": [
+                                                {
+                                                    "key": "zpWebView",
+                                                    "itemType": "webView",
+                                                    "style": {
+                                                        "scrollStyle": {
+                                                            "isScrollEnabled": false,
+                                                            "isShowHorizontalScrollIndicator": false,
+                                                            "isShowVerticalScrollIndicator": false
+                                                        },
+                                                        "textStyle":{
+                                                            "fontStyle_id":"66a7b5df-c764-49d5-892c-b55001dc723c",
+                                                            "textColor_id":"SecondaryText"
+                                                        }
+                                                    },
+                                                    "itemSizeAttribute": {
+                                                        "height": {
+                                                            "value": 0,
+                                                            "valueType": "wrapContent"
+                                                        }
+                                                    },
+                                                    "animation":{
+                                                        "animationType":"vector",
+                                                        "configuration": {
+                                                            "duration":0.3
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "bottomNavigationBar",
+                    "style":{
+                        "bgColor_id":"WidgetColor"
+                    },
+                    "segmentSizeAttribute": {
+                        "height": {
+                            "valueType": "staticValue",
+                            "value": 40
+                        }
+                    },
+                    "includePattern_id": "39f203b7-eed9-4024-ae11-e102830ed809"
+                }
+            ]
+        },
+        {
+            "uid": "00f72790-3dc7-4464-bfd0-0b47cb01508j",
+            "screenType": "detail",
+            "module": "KB",
+            "r_uid": "kbArticleDetailScreen",
+            "typeOfrender": "dynamic",
+            "passOnAction":{
+                "actionKey": "passtonext",
+                "uiActionType":"passOn",
+                "navigationIDs":[
+                    "goBack",
+                    "kbArticleFeedbackScreen",
+                    "zpShareActivityPicker",
+                    "kbArticleCommentListScreen",
+                    "zpShareActivityPicker"
+                ]
+            },
+            "segments":[
+                {
+                    "configuration": {
+                        "isNative": true,
+                        "prefersLargeTitles": true,
+                        "hidesSearchBarWhenScrolling": true
+                    },
+                    "segmentType": "topNavigationBar",
+                    "style": {
+                        "bgColor_id":"HeaderColor",
+                        "tintColor_id": "BarButtonColor",
+                        "shadowStyle": {
+                            "shadowColor_id": "NavBottomColor"
+                        }
+                    },
+                    "includePattern_id": "topNavigationBar-pattern"
+                },
+                {
+                    "segmentType": "search",
+                    "configuration": {
+                        "isNative": true,
+                        "hidesSearchBarWhenScrolling": true
+                    },
+                    "actions": [
+                        {
+                            "actionKey": "zpSearchAction",
+                            "uiActionType": "onCreate",
+                            "navigationIDs": [
+                                "asapGlobalSearch"
+                            ]
+                        }
+                    ],
+                    "patterns": [
+                        {
+                            "key": "zpSearchField",
+                            "itemType": "textInput",
+                            "style": {
+                                "bgColor_id": "SearchBGColor",
+                                "tintColor_id": "ThemeColor",
+                                "textStyle": {
+                                    "textColor_id": "PrimaryText",
+                                    "isEditable": true
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id": "WidgetColor",
+                        "scrollStyle": {
+                            "isShowVerticalScrollIndicator": true
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "key": "baseStackHolder",
+                            "itemType": "vStack",
+                            "items": [
+                                {
+                                    "key": "baseStackHolder",
+                                    "itemType": "vStack",
+                                    "itemSizeAttribute": {
+                                        "padding":{
+                                            "all":15
+                                        }
+                                    },
+                                    "items": [
+                                        {
+                                            "key": "topicSubject",
+                                            "itemType": "label",
+                                            "style": {
+                                                "textStyle": {
+                                                    "fontStyle_id": "5e58eed5-7270-43b6-8178-23c4745570f7",
+                                                    "textColor_id": "PrimaryText",
+                                                    "isEditable": false,
+                                                    "maxLines": 0
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "key": "zpTopicContentContainer",
+                                            "itemType": "vStack",
+                                            "items": [
+                                                {
+                                                    "key": "topicContent",
+                                                    "itemType": "webView",
+                                                    "animation":{
+                                                        "animationType":"vector",
+                                                        "configuration": {
+                                                            "duration":0.3
+                                                        }
+                                                    },
+                                                    "style": {
+                                                        "scrollStyle": {
+                                                            "isScrollEnabled": true,
+                                                            "isShowHorizontalScrollIndicator": false,
+                                                            "isShowVerticalScrollIndicator": false
+                                                        },
+                                                        "textStyle":{
+                                                            "fontStyle_id":"66a7b5df-c764-49d5-892c-b55001dc723c",
+                                                            "textColor_id":"SecondaryText"
+                                                        }
+                                                    },
+                                                    "itemSizeAttribute": {
+                                                        "height": {
+                                                            "value": 0,
+                                                            "valueType": "wrapContent"
+                                                        },
+                                                        "padding":{
+                                                            "top":8,
+                                                            "bottom":8
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "articleProperty",
+                                            "itemType": "vStack",
+                                            "items": [
+                                                {
+                                                    "key": "zpTagViewContainer",
+                                                    "itemType": "vStack",
+                                                    "items": [
+                                                        {
+                                                            "key": "zpSeperatorTwo",
+                                                            "itemType": "vStack",
+                                                            "items": [
+                                                                {
+                                                                    "key": "zpLineSeparator",
+                                                                    "itemType": "separatorView",
+                                                                    "itemSizeAttribute": {
+                                                                        "height": {
+                                                                            "valueType": "staticValue",
+                                                                            "value": 1
+                                                                        },
+                                                                        "padding":{
+                                                                            "top": 10,
+                                                                            "bottom": 10
+                                                                        }
+                                                                    },
+                                                                    "style": {
+                                                                        "separatorType": "line",
+                                                                        "bgColor_id": "SeparatorColor"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "key": "baseStackHolder",
+                                                            "itemType": "vStack",
+                                                            "includePattern_id": "e2cee4d2-c46a-4246-af85-3504c01f9dfb"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "key": "zpAttachmentContainer",
+                                                    "itemType": "vStack",
+                                                    "items": [
+                                                        {
+                                                            "key": "zpSeperatorThree",
+                                                            "itemType": "vStack",
+                                                            "items": [
+                                                                {
+                                                                    "key": "zpLineSeparator",
+                                                                    "itemType": "separatorView",
+                                                                    "style": {
+                                                                        "separatorType": "line",
+                                                                        "bgColor_id": "SeparatorColor"
+                                                                    },
+                                                                    "itemSizeAttribute": {
+                                                                        "height": {
+                                                                            "valueType": "staticValue",
+                                                                            "value": 1
+                                                                        },
+                                                                        "padding":{
+                                                                            "top": 10
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "key": "baseStackHolder",
+                                                            "itemType": "vStack",
+                                                            "includePattern_id": "830c0ef3-6cf1-4a19-8d34-341b341847fd"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "key": "zpOwnerContainer",
+                                                    "itemType": "vStack",
+                                                    "items": [
+                                                        {
+                                                            "key": "baseStackHolder",
+                                                            "itemType": "hStack",
+                                                            "itemSizeAttribute": {
+                                                                "padding":{
+                                                                    "top":20
+                                                                }
+                                                            },
+                                                            "items": [
+                                                                {
+                                                                    "key": "zpOwnerImageContainer",
+                                                                    "itemType": "hStack",
+                                                                    "items": [
+                                                                        {
+                                                                            "key": "baseStackHolder",
+                                                                            "itemType": "zStack",
+                                                                            "itemSizeAttribute": {
+                                                                                "padding":{
+                                                                                    "top":0,
+                                                                                    "bottom": 0,
+                                                                                    "left": 0,
+                                                                                    "right": 10
+                                                                                },
+                                                                                "width": {
+                                                                                    "value":44,
+                                                                                    "valueType":"staticValue"
+                                                                                },
+                                                                                "minHeight": {
+                                                                                    "value":44,
+                                                                                    "valueType":"staticValue"
+                                                                                }
+                                                                            },
+                                                                            "items": [
+                                                                                {
+                                                                                    "key": "zpOwnerImage",
+                                                                                    "itemType": "imageView",
+                                                                                    "style": {
+                                                                                        "bgColor_id":"AttachmentBoxColor",
+                                                                                        "imageStyle": {
+                                                                                            "contentType": "contain"
+                                                                                        },
+                                                                                        "cornerRadius":{
+                                                                                            "all":22
+                                                                                        },
+                                                                                        "textStyle":{
+                                                                                            "fontStyle_id":"861ddda8-b9ce-49ce-bdfe-f9facd2438f2",
+                                                                                            "alignment":"center",
+                                                                                            "maxLines":1,
+                                                                                            "textColor_id":"PrimaryText"
+                                                                                        }
+                                                                                    },
+                                                                                    "itemSizeAttribute": {
+                                                                                        "width": {
+                                                                                            "value":44,
+                                                                                            "valueType":"staticValue"
+                                                                                        },
+                                                                                        "height": {
+                                                                                            "value":44,
+                                                                                            "valueType":"staticValue"
+                                                                                        },
+                                                                                        "position": "center"
+                                                                                    }
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "key": "baseStackHolder",
+                                                                    "itemType": "vStack",
+                                                                    "itemSizeAttribute": {
+                                                                        "padding":{
+                                                                            "left": 0,
+                                                                            "right":10,
+                                                                            "top":4,
+                                                                            "bottom":4
+                                                                        }
+                                                                    },
+                                                                    "items": [
+                                                                        {
+                                                                            "key": "zpOwnerNameContainer",
+                                                                            "itemType": "hStack",
+                                                                            "items": [
+                                                                                {
+                                                                                    "key": "zpOwnerName",
+                                                                                    "itemType": "label",
+                                                                                    "style": {
+                                                                                        "textStyle": {
+                                                                                            "fontStyle_id": "f5c69523-a932-48d4-9530-1bb3d9968535",
+                                                                                            "textColor_id": "PrimaryText",
+                                                                                            "isEditable": false,
+                                                                                            "maxLines": 1
+                                                                                        }
+                                                                                    },
+                                                                                    "itemSizeAttribute": {
+                                                                                        "huggingPriority": "Low",
+                                                                                        "resistentPriority": "Low"
+                                                                                    }
+                                                                                },
+                                                                                {
+                                                                                    "key": "zpUserTypeContainer",
+                                                                                    "itemType": "vStack",
+                                                                                    "style": {
+                                                                                        "bgColor_id": "Green",
+                                                                                        "cornerRadius": {
+                                                                                            "all": 6
+                                                                                        }
+                                                                                    },
+                                                                                    "itemSizeAttribute": {
+                                                                                        "huggingPriority": "High",
+                                                                                        "resistentPriority": "Low",
+                                                                                        "padding": {
+                                                                                            "left": 12
+                                                                                        }
+                                                                                    },
+                                                                                    "items": [
+                                                                                        {
+                                                                                            "key": "zpUserType",
+                                                                                            "itemType": "label",
+                                                                                            "style": {
+                                                                                                "textStyle": {
+                                                                                                    "textColor_id": "White",
+                                                                                                    "fontStyle_id": "38ccc4e3-f535-4bdd-afb0-5caee7634d75",
+                                                                                                    "isEditable": false,
+                                                                                                    "maxLines": 1
+                                                                                                }
+                                                                                            },
+                                                                                            "itemSizeAttribute": {
+                                                                                                "padding": {
+                                                                                                    "left": 8,
+                                                                                                    "right": 8,
+                                                                                                    "top": 4,
+                                                                                                    "bottom": 4
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "itemType": "hStack",
+                                                                                    "key": "zpSpacer"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "key": "zpCreatedDate",
+                                                                            "itemType": "label",
+                                                                            "style": {
+                                                                                "textStyle": {
+                                                                                    "fontStyle_id": "0f8080ca-d994-457b-ac28-d7e1f936a429",
+                                                                                    "textColor_id": "SecondaryText",
+                                                                                    "isEditable": false,
+                                                                                    "maxLines": 1
+                                                                                }
+                                                                            },
+                                                                            "itemSizeAttribute": {
+                                                                                "padding": {
+                                                                                    "top": 4
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "sublistContainer",
+                                    "itemType": "vStack",
+                                    "items": [
+                                        {
+                                            "key": "zpPreviousNextArticlesContainer",
+                                            "itemType": "vStack",
+                                            "style":{
+                                                "bgColor_id": "BGColor"
+                                            },
+                                            "items": [
+                                                {
+                                                    "key": "zpPreviousNextArticles",
+                                                    "itemType": "listView",
+                                                    "style": {
+                                                        "scrollStyle": {
+                                                            "isShowHorizontalScrollIndicator": false,
+                                                            "isScrollEnabled": false
+                                                        }
+                                                    },
+                                                    "itemSizeAttribute": {
+                                                        "height":{
+                                                            "valueType":"wrapContent",
+                                                            "value":0
+                                                        }
+                                                    },
+                                                    "includePattern_id": "4cd0955b-11c8-4103-b463-75504bd83867"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "zpRelatedArticlesContainer",
+                                            "itemType": "vStack",
+                                            "style":{
+                                                "bgColor_id": "BGColor"
+                                            },
+                                            "items": [
+                                                {
+                                                    "key": "zpRelatedArticles",
+                                                    "itemType": "listView",
+                                                    "style": {
+                                                        "scrollStyle": {
+                                                            "isShowHorizontalScrollIndicator": false,
+                                                            "isScrollEnabled": false
+                                                        }
+                                                    },
+                                                    "itemSizeAttribute": {
+                                                        "height":{
+                                                            "valueType":"wrapContent",
+                                                            "value":0
+                                                        }
+                                                    },
+                                                    "includePattern_id": "4cd0955b-11c8-4103-b463-75504bd83867"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "zpBotContainer",
+                                            "itemType": "vStack",
+                                            "style": {
+                                                "bgColor_id":"BGColor"
+                                            },
+                                            "includePattern_id": "45895330-9b5e-4355-96c4-b0dcab9afb51"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "zpSpacer",
+                                    "itemType": "hStack"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "speechButton",
+                            "itemType": "hStack",
+                            "style": {
+                                "bgColor_id": "ThemeColor",
+                                "buttonStyle": {
+                                    "buttonType": "fab"
+                                },
+                                "borderStyle": {
+                                    "borderColor_id": "ShadowColor",
+                                    "borderWidth": 3
+                                },
+                                "cornerRadius": {
+                                    "all": 20
+                                }
+                            },
+                            "itemSizeAttribute": {
+                                "padding": {
+                                    "right": 10,
+                                    "bottom": 10
+                                }
+                            },
+                            "items": [
+                                {
+                                    "itemType": "hStack",
+                                    "key": "holder",
+                                    "items": [
+                                        {
+                                            "key": "listenButton",
+                                            "itemType": "button",
+                                            "animation": {
+                                                "animationType": "vector",
+                                                "configuration": {
+                                                    "duration": 0.3,
+                                                    "alpha": 1
+                                                }
+                                            },
+                                            "itemSizeAttribute": {
+                                                "padding": {
+                                                    "top": 12,
+                                                    "bottom": 12,
+                                                    "left": 6,
+                                                    "right": 6
+                                                }
+                                            },
+                                            "style": {
+                                                "textStyle": {
+                                                    "fontStyle_id": "d2599ac7-3700-4ca6-b687-82b700ac1a9b",
+                                                    "textColor_id": "ButtonTextColor",
+                                                    "maxLines": 1,
+                                                    "alignment": "center"
+                                                }
+                                            },
+                                            "actions": [
+                                                {
+                                                    "actionKey": "listenAction",
+                                                    "uiActionType": "tap"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "playContainer",
+                                    "itemType": "hStack",
+                                    "animation": {
+                                        "animationType": "vector",
+                                        "configuration": {
+                                            "duration": 0.3,
+                                            "alpha": 1
+                                        }
+                                    },
+                                    "items": [
+                                        {
+                                            "key": "holder1",
+                                            "itemType": "hStack",
+                                            "itemSizeAttribute": {
+                                                "padding": {
+                                                    "all": 5
+                                                }
+                                            },
+                                            "items": [
+                                                {
+                                                    "key": "playButton",
+                                                    "itemType": "button",
+                                                    "style": {
+                                                        "textStyle": {
+                                                            "fontStyle_id": "d2599ac7-3700-4ca6-b687-82b700ac1a9b",
+                                                            "textColor_id": "ButtonTextColor",
+                                                            "maxLines": 1,
+                                                            "alignment": "center"
+                                                        },
+                                                        "imageStyle": {
+                                                            "contentType": "cover"
+                                                        },
+                                                        "bgColor_id": "PaleWhite",
+                                                        "cornerRadius": {
+                                                            "all": 16
+                                                        }
+                                                    },
+                                                    "animation": {
+                                                        "animationType": "vector",
+                                                        "configuration": {
+                                                            "duration": 0.3,
+                                                            "alpha": 1
+                                                        }
+                                                    },
+                                                    "actions": [
+                                                        {
+                                                            "actionKey": "playAction",
+                                                            "uiActionType": "tap"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "itemType": "hStack",
+                                                    "items": [
+                                                        {
+                                                            "itemType": "zStack",
+                                                            "key": "holder",
+                                                            "itemSizeAttribute": {
+                                                                "padding": {
+                                                                    "all": 0
+                                                                },
+                                                                "height": {
+                                                                    "valueType": "staticValue",
+                                                                    "value": 32
+                                                                }
+                                                            },
+                                                            "items": [
+                                                                {
+                                                                    "itemType": "hStack",
+                                                                    "itemSizeAttribute": {
+                                                                        "position": "center",
+                                                                        "padding": {
+                                                                            "left": 0
+                                                                        }
+                                                                    },
+                                                                    "items": [
+                                                                        {
+                                                                            "itemType": "hStack",
+                                                                            "items": [
+                                                                                {
+                                                                                    "includePattern_id": "View-Separator-BarLine"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "key": "speechRate",
+                                                                            "itemType": "button",
+                                                                            "style": {
+                                                                                "textStyle": {
+                                                                                    "fontStyle_id": "d2599ac7-3700-4ca6-b687-82b700ac1a9b",
+                                                                                    "textColor_id": "ButtonTextColor",
+                                                                                    "maxLines": 1,
+                                                                                    "alignment": "center"
+                                                                                },
+                                                                                "imageStyle": {
+                                                                                    "contentType": "cover"
+                                                                                }
+                                                                            },
+                                                                            "actions": [
+                                                                                {
+                                                                                    "actionKey": "speechRateAction",
+                                                                                    "uiActionType": "tap"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "itemType": "hStack",
+                                                                            "items": [
+                                                                                {
+                                                                                    "includePattern_id": "View-Separator-BarLine"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "key": "resetSpeech",
+                                                                            "itemType": "button",
+                                                                            "style": {
+                                                                                "textStyle": {
+                                                                                    "fontStyle_id": "d2599ac7-3700-4ca6-b687-82b700ac1a9b",
+                                                                                    "textColor_id": "ButtonTextColor",
+                                                                                    "maxLines": 1,
+                                                                                    "alignment": "center"
+                                                                                },
+                                                                                "imageStyle": {
+                                                                                    "contentType": "cover"
+                                                                                }
+                                                                            },
+                                                                            "actions": [
+                                                                                {
+                                                                                    "actionKey": "resetAction",
+                                                                                    "uiActionType": "tap"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "itemType": "hStack",
+                                                                            "items": [
+                                                                                {
+                                                                                    "includePattern_id": "View-Separator-BarLine"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "key": "cancelButton",
+                                                                            "itemType": "button",
+                                                                            "style": {
+                                                                                "textStyle": {
+                                                                                    "fontStyle_id": "d2599ac7-3700-4ca6-b687-82b700ac1a9b",
+                                                                                    "textColor_id": "ButtonTextColor",
+                                                                                    "maxLines": 1,
+                                                                                    "alignment": "center"
+                                                                                },
+                                                                                "imageStyle": {
+                                                                                    "contentType": "cover"
+                                                                                }
+                                                                            },
+                                                                            "animation": {
+                                                                                "animationType": "vector",
+                                                                                "configuration": {
+                                                                                    "duration": 0.3,
+                                                                                    "alpha": 1
+                                                                                }
+                                                                            },
+                                                                            "actions": [
+                                                                                {
+                                                                                    "actionKey": "cancelAction",
+                                                                                    "uiActionType": "tap"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "keyboardAccessoryView",
+                    "style": {
+                        "bgColor_id": "WidgetColor"
+                    },
+                    "patterns": [
+                        {
+                            "includePattern_id": "keyboard-search-accessory"
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "bottomNavigationBar",
+                    "style":{
+                        "bgColor_id":"WidgetColor"
+                    },
+                    "patterns": [
+                        {
+                            "key": "baseStackHolder",
+                            "itemType": "vStack",
+                            "items": [
+                                {
+                                    "itemType":"vStack",
+                                    "includePattern_id": "BottomBarButtons"
+                                },
+                                {
+                                    "key": "baseStackHolder",
+                                    "itemType": "vStack",
+                                    "items": [
+                                        {
+                                            "key": "zpLineSeparator-overlap",
+                                            "itemType": "separatorView",
+                                            "style": {
+                                                "separatorType": "line",
+                                                "bgColor_id": "SeparatorColor"
+                                            },
+                                            "itemSizeAttribute": {
+                                                "height": {
+                                                    "valueType": "staticValue",
+                                                    "value": 1
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "key": "zpPoweredByLabel",
+                                            "itemType": "label",
+                                            "style": {
+                                                "textStyle":{
+                                                    "alignment":"center",
+                                                    "fontStyle_id":"0f8080ca-d994-457b-ac28-d7e1f936a429",
+                                                    "textColor_id":"SecondaryText",
+                                                    "maxLines":1
+                                                }
+                                            },
+                                            "itemSizeAttribute": {
+                                                "height": {
+                                                    "valueType": "staticValue",
+                                                    "value": 34
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "zpSpacer",
+                                    "itemType": "vStack"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "uid": "eba78b78-e46e-11eb-ba80-0242ac130004",
+            "r_uid": "kbArticleFeedbackScreen",
+            "module": "Ticket",
+            "screenType": "list",
+            "typeOfrender": "dynamic",
+            "segments":[
+                {
+                    "configuration": {
+                        "isNative": true,
+                        "prefersLargeTitles": false,
+                        "hidesSearchBarWhenScrolling": true
+                    },
+                    "segmentType": "topNavigationBar",
+                    "style": {
+                        "bgColor_id":"HeaderColor",
+                        "tintColor_id": "BarButtonColor",
+                        "shadowStyle": {
+                            "shadowColor_id": "NavBottomColor"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "key": "zpBackIcon",
+                            "itemType": "leftBarButton",
+                            "actions": [
+                                {
+                                    "actionKey": "zpDismissAction",
+                                    "uiActionType": "tap",
+                                    "navigationIDs": [
+                                        "goBack"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "title",
+                            "itemType": "label",
+                            "style": {
+                                "textStyle": {
+                                    "textColor_id": "NavTitleColor"
+                                }
+                            }
+                        },
+                        {
+                            "key": "zpSendButton",
+                            "itemType": "rightBarButton",
+                            "actions": [
+                                {
+                                    "actionKey": "zpPostAction",
+                                    "uiActionType": "tap",
+                                    "navigationIDs": [
+                                        "goBack"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "sectionHeader",
+                    "style": {
+                        "bgColor_id":"BGColor"
+                    },
+                    "patterns":[{
+                        "key": "baseStackHolder",
+                        "itemType": "vStack",
+                        "itemSizeAttribute": {
+                            "height":{
+                                "value":150,
+                                "valueType":"staticValue"
+                            }
+                        },
+                        "items": [
+                            {
+                                "key": "baseStackHolder",
+                                "itemType": "hStack",
+                                "items": [
+                                    {
+                                        "key": "baseStackHolder",
+                                        "itemType": "vStack",
+                                        "itemSizeAttribute": {
+                                            "width":{
+                                                "value":165,
+                                                "valueType":"staticValue"
+                                            }
+                                        },
+                                        "items": [
+                                            {
+                                                "key": "zpSectionImage",
+                                                "itemType": "imageView",
+                                                "style": {
+                                                    "imageStyle": {
+                                                        "contentType": "cover"
+                                                    }
+                                                },
+                                                "itemSizeAttribute": {
+                                                    "padding":{
+                                                        "top":28,
+                                                        "bottom":14,
+                                                        "left":18,
+                                                        "right":18
+                                                    },
+                                                    "position":"center"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "key": "baseStackHolder",
+                                        "itemType": "vStack",
+                                        "itemSizeAttribute": {
+                                            "padding":{
+                                                "top":28,
+                                                "bottom":30
+                                            }
+                                        },
+                                        "items": [
+                                            {
+                                                "key": "baseStackHolder",
+                                                "itemType": "hStack",
+                                                "items": [
+                                                    {
+                                                        "key": "zpHelpTitle",
+                                                        "itemType": "label",
+                                                        "style": {
+                                                            "textStyle": {
+                                                                "fontStyle_id": "5e58eed5-7270-43b6-8178-23c4745570f7",
+                                                                "textColor_id": "PrimaryText",
+                                                                "isEditable": false
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "key": "zpSpacer",
+                                                        "itemType": "hStack",
+                                                        "items":null
+                                                    }
+                                                ]
+                                                
+                                            },
+                                            {
+                                                "key": "zphelpDec",
+                                                "itemType": "label",
+                                                "style": {
+                                                    "textStyle": {
+                                                        "fontStyle_id": "0f8080ca-d994-457b-ac28-d7e1f936a429",
+                                                        "textColor_id": "SecondaryText",
+                                                        "isEditable": false
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "key": "zpLineSeparator",
+                                "itemType": "separatorView",
+                                "style": {
+                                    "separatorType": "line",
+                                    "bgColor_id": "SeparatorColor"
+                                },
+                                "itemSizeAttribute": {
+                                    "height": {
+                                        "valueType": "staticValue",
+                                        "value": 1
+                                    },
+                                    "padding":{
+                                        "all":0
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                    ]
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id":"WidgetColor"
+                    },
+                    "segmentSizeAttribute": null,
+                    "actions": null,
+                    "patterns": null
+                },
+                {
+                    "segmentType": "listItem",
+                    "patterns": [
+                        {
+                            "key": "textInput",
+                            "itemType": "hStack",
+                            "items": [
+                                {
+                                    "key": "baseStackHolder",
+                                    "itemType": "vStack",
+                                    "itemSizeAttribute": {
+                                        "padding":{
+                                            "top": 20,
+                                            "left": 20,
+                                            "right": 20
+                                        }
+                                    },
+                                    "items": [
+                                        {
+                                            "key": "fieldTitle",
+                                            "itemType": "label",
+                                            "itemSizeAttribute": {
+                                                "padding":{
+                                                    "bottom": 8
+                                                }
+                                            },
+                                            "style":{
+                                                "textStyle": {
+                                                    "fontStyle_id": "5fd88d1e-ed87-42bb-8c5f-8507738446d2",
+                                                    "textColor_id": "SecondaryText",
+                                                    "maxLines": 1,
+                                                    "alignment": "left"
+                                                }
+                                            },
+                                            "items":null
+                                        },
+                                        {
+                                            "key": "baseStackHolder",
+                                            "itemType": "hStack",
+                                            "style":{
+                                                "borderStyle": {
+                                                    "borderColor_id": "FieldBorderColor",
+                                                    "borderWidth": 1
+                                                },
+                                                "cornerRadius": {
+                                                    "all": 6
+                                                }
+                                            },
+                                            "items": [
+                                                {
+                                                    "key": "zpEditField",
+                                                    "itemType": "textInput",
+                                                    "style": {
+                                                        "textStyle": {
+                                                            "fontStyle_id": "66a7b5df-c764-49d5-892c-b55001dc723c",
+                                                            "textColor_id": "PrimaryText",
+                                                            "isEditable": true,
+                                                            "maxLines": 1
+                                                        }
+                                                    },
+                                                    "input": {
+                                                        "inputType": "email"
+                                                    },
+                                                    "itemSizeAttribute": {
+                                                        "padding": {
+                                                            "all": 12
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "zpSpacer",
+                                            "itemType": "hStack",
+                                            "items":null
+                                        }
+                                    ]
+                                }
+                            ]
+                            
+                        },
+                        {
+                            "key":"errorInfoHolder",
+                            "itemType":"vStack",
+                            "itemSizeAttribute": {
+                                "padding":{
+                                    "top":6,
+                                    "bottom": 6,
+                                    "left":25
+                                }
+                            },
+                            "items":[
+                                {
+                                    "key": "errorInfoLabel",
+                                    "itemType": "label",
+                                    "style":{
+                                        "textStyle": {
+                                            "fontStyle_id": "b99a3914-eccb-4a6c-a18b-f5b8940d245b",
+                                            "textColor_id": "Red",
+                                            "maxLines": 1
+                                        }
+                                    },
+                                    "items":null
+                                }
+                            ]
+                        },
+                        {
+                            "key": "webInput",
+                            "itemType": "vStack",
+                            "items": [
+                                {
+                                    "key": "baseStackHolder",
+                                    "itemType": "vStack",
+                                    "itemSizeAttribute": {
+                                        "padding":{
+                                            "top": 20,
+                                            "left": 20,
+                                            "right": 20
+                                        }
+                                    },
+                                    "items": [
+                                        {
+                                            "key": "fieldTitle",
+                                            "itemType": "label",
+                                            "itemSizeAttribute": {
+                                                "padding":{
+                                                    "bottom": 8
+                                                }
+                                            },
+                                            "style":{
+                                                "textStyle": {
+                                                    "fontStyle_id": "5fd88d1e-ed87-42bb-8c5f-8507738446d2",
+                                                    "textColor_id": "SecondaryText",
+                                                    "maxLines": 1
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "key": "baseStackHolder",
+                                            "itemType": "hStack",
+                                            "style":{
+                                                "borderStyle": {
+                                                    "borderColor_id": "FieldBorderColor",
+                                                    "borderWidth": 1
+                                                },
+                                                "cornerRadius": {
+                                                    "all": 6
+                                                }
+                                            },
+                                            "items": [
+                                                {
+                                                    "key": "zpWebView",
+                                                    "itemType": "textView",
+                                                    "style": {
+                                                        "scrollStyle": {
+                                                            "isScrollEnabled": true,
+                                                            "isShowHorizontalScrollIndicator": false,
+                                                            "isShowVerticalScrollIndicator": false
+                                                        },
+                                                        "textStyle":{
+                                                            "fontStyle_id": "66a7b5df-c764-49d5-892c-b55001dc723c",
+                                                            "isEditable": true,
+                                                            "maxLines":260
+                                                        }
+                                                    },
+                                                    "itemSizeAttribute": {
+                                                        "height": {
+                                                            "value": 160,
+                                                            "valueType": "staticValue"
+                                                        },
+                                                        "padding": {
+                                                            "all": 12
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "zpSpacer",
+                                            "itemType": "hStack",
+                                            "items":null
+                                        }
+                                    ]
+                                    
+                                },
+                                {
+                                    "key": "maximumDescription",
+                                    "itemType": "label",
+                                    "style":{
+                                        "textStyle": {
+                                            "fontStyle_id": "b99a3914-eccb-4a6c-a18b-f5b8940d245b",
+                                            "textColor_id": "Red",
+                                            "maxLines": 1
+                                        }
+                                    },
+                                    "itemSizeAttribute": {
+                                        "padding":{
+                                            "top": 6,
+                                            "bottom": 6,
+                                            "left":25
+                                        }
+                                    }
+                                }
+                            ]
+                            
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "uid": "068ffb60-f7b0-42a0-8461-cdcbf7156393",
+            "screenType": "list",
+            "module": "ASAP",
+            "r_uid": "kbTagsListScreen",
+            "segments": [
+                {
+                    "segmentType": "topNavigationBar",
+                    "configuration": {
+                        "isNative": true,
+                        "prefersLargeTitles": true,
+                        "hidesSearchBarWhenScrolling":true
+                    },
+                    "style": {
+                        "bgColor_id":"HeaderColor",
+                        "tintColor_id": "BarButtonColor",
+                        "shadowStyle": {
+                            "shadowColor_id": "NavBottomColor"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "key": "title",
+                            "itemType": "label",
+                            "style": {
+                                "textStyle": {
+                                    "textColor_id": "NavTitleColor"
+                                }
+                            }
+                        },
+                        {
+                            "key":"zpBackIcon",
+                            "itemType":"leftBarButton",
+                            "style":{
+                                "textStyle":{
+                                    "textColor_id":"White"
+                                }
+                            },
+                            "actions":[
+                                {
+                                    "actionKey":"zpBackAction",
+                                    "uiActionType":"tap",
+                                    "navigationIDs":[
+                                        "goBack"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "zpLanguageIcon",
+                            "itemType": "rightBarButton",
+                            "actions": [
+                                {
+                                    "actionKey": "zpLanguageAction",
+                                    "uiActionType": "tap",
+                                    "navigationIDs": [
+                                        "languageScreen"
+                                    ]
+                                }
+                            ],
+                            "style": {
+                                "textStyle": {
+                                    "textColor_id": "White"
+                                }
+                            }
+                        },
+                        {
+                            "key": "zpMenuIcon",
+                            "itemType": "rightBarButton",
+                            "actions": [
+                                {
+                                    "actionKey": "zpMenuAction",
+                                    "uiActionType": "tap",
+                                    "navigationIDs": [
+                                        "asapRightMenuScreen"
+                                    ]
+                                }
+                            ],
+                            "style": {
+                                "textStyle": {
+                                    "textColor_id": "White"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "search",
+                    "configuration": {
+                        "isNative": true,
+                        "hidesSearchBarWhenScrolling": true
+                    },
+                    "actions": [
+                        {
+                            "actionKey": "zpSearchAction",
+                            "uiActionType": "onCreate",
+                            "navigationIDs": [
+                                "asapGlobalSearch"
+                            ]
+                        }
+                    ],
+                    "patterns": [
+                        {
+                            "key": "zpSearchField",
+                            "itemType": "textInput",
+                            "style": {
+                                "bgColor_id": "SearchBGColor",
+                                "tintColor_id": "ThemeColor",
+                                "textStyle": {
+                                    "textColor_id": "PrimaryText",
+                                    "isEditable": true,
+                                    "alignment": "left"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "sectionHeader",
+                    "style": {
+                        "bgColor_id":"WidgetColor"
+                    },
+                    "patterns": [
+                        {
+                            "key": "baseStackHolder",
+                            "itemType": "vStack",
+                            "items": [
+                                {
+                                    "key": "baseStackHolder",
+                                    "itemType": "hStack",
+                                    "itemSizeAttribute": {
+                                        "padding":{
+                                            "all":16
+                                        }
+                                    },
+                                    "items": [
+                                        {
+                                            "key": "zpSectionTitle",
+                                            "itemType":"label",
+                                            "style": {
+                                                "textStyle": {
+                                                    "fontStyle_id": "95232ac7-70e7-4a3e-9a60-a1d23bed1d92",
+                                                    "textColor_id": "PrimaryText",
+                                                    "isEditable": false,
+                                                    "maxLines": 0
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "zpLineSeparator",
+                                    "itemType": "separatorView",
+                                    "style": {
+                                        "separatorType": "line",
+                                        "bgColor_id": "SeparatorColor"
+                                    },
+                                    "itemSizeAttribute": {
+                                        "height": {
+                                            "valueType": "staticValue",
+                                            "value": 1
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id":"BGColor"
+                    }
+                },
+                {
+                    "segmentType": "listItem",
+                    "style":{
+                        "bgColor_id":"WidgetColor"
+                    },
+                    "actions": [
+                        {
+                            "actionKey": "zpListAction",
+                            "uiActionType": "tap",
+                            "navigationIDs":[
+                                "goBack",
+                                "kbSubCategoryListScreen",
+                                "kbArticleDetailScreen"
+                            ]
+                        }
+                    ],
+                    "patterns": [
+                        {
+                            "key": "baseStackHolder",
+                            "includePattern_id": "087b10ea-d656-470f-b1c3-4a701e95d8e8"
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "bottomNavigationBar",
+                    "style":{
+                        "bgColor_id":"WidgetColor"
+                    },
+                    "segmentSizeAttribute": {
+                        "height": {
+                            "valueType": "staticValue",
+                            "value": 40
+                        }
+                    },
+                    "includePattern_id": "39f203b7-eed9-4024-ae11-e102830ed809"
+                }
+            ]
+        }
+    ],
+    "navigations": [
+        {
+            "navigation_uid": "kbCategoryListScreen",
+            "navigationKey":"kbCategoryListScreen",
+            "transitionType":"push",
+            "destination_id":"f45dc22e-033b-4dc6-b6d1-4be2f9177975"
+        },
+        {
+            "navigation_uid": "kbArticleDetailScreen",
+            "navigationKey": "kbArticleDetailScreen",
+            "transitionType": "push",
+            "destination_id": "00f72790-3dc7-4464-bfd0-0b47cb01508j"
+        },
+        {
+            "navigation_uid": "kbArticleCommentListScreen",
+            "navigationKey": "kbArticleCommentListScreen",
+            "transitionType": "push",
+            "destination_id": "29b7c7d7-66e8-4333-8f45-e2b3156824fb"
+        },
+        {
+            "navigation_uid": "kbArticleFeedbackScreen",
+            "navigationKey": "kbArticleFeedbackScreen",
+            "transitionType": "present",
+            "destination_id": "eba78b78-e46e-11eb-ba80-0242ac130004"
+        },
+        {
+            "navigation_uid": "kbTagsListScreen",
+            "navigationKey": "kbTagsListScreen",
+            "transitionType": "push",
+            "destination_id": "068ffb60-f7b0-42a0-8461-cdcbf7156393"
+        }
+    ]
+}

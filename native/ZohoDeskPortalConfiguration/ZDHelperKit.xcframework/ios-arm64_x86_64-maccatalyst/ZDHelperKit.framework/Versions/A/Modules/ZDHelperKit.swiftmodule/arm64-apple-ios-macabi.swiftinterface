@@ -1,0 +1,1551 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZDHelperKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import AVFoundation
+import Foundation
+import MapKit
+import Photos
+import SafariServices
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import UserNotifications
+import WebKit
+@_exported import ZDHelperKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension CoreFoundation.CGRect {
+  public var center: CoreFoundation.CGPoint {
+    get
+  }
+}
+extension Foundation.URL : ZDHelperKit.ZDHelperURL {
+}
+public protocol ZDHelperURL {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func openWithSafariController(over baseController: UIKit.UIViewController?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var datafromURL: Foundation.Data? { get }
+  #endif
+  var size: Swift.Double { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getQueryParamValue(param: Swift.String) -> Swift.String?
+  #endif
+}
+extension ZDHelperKit.ZDHelperURL where Self == Foundation.URL {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func openWithSafariController(over baseController: UIKit.UIViewController? = UIApplication.getTopController)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var datafromURL: Foundation.Data? {
+    get
+  }
+  #endif
+  public var size: Swift.Double {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getQueryParamValue(param: Swift.String) -> Swift.String?
+  #endif
+}
+@_hasMissingDesignatedInitializers final public class ZDReachability {
+  public static func isConnectedToNetwork() -> Swift.Bool
+  @objc deinit
+}
+extension Swift.String : ZDHelperKit.ZDHelperLogger {
+}
+public protocol ZDHelperLogger {
+  func log()
+}
+extension ZDHelperKit.ZDHelperLogger where Self == Swift.String {
+  public func log()
+}
+public let IMAGES_FOLDER: Swift.String
+public let FILES_FOlDER: Swift.String
+@objc @_inheritsConvenienceInitializers public class ZDFileManager : ObjectiveC.NSObject {
+  @discardableResult
+  public static func writeDataIntoFile(data: Foundation.Data, fileName: Swift.String, pathAfterDocumentFolder: Swift.String = "") -> Swift.Bool
+  public static func creatingSubFolders(pathAfterDocumentFolder: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getFullLocalURL(pathAfterDocumentFolder: Swift.String) -> Foundation.URL?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getFileData(pathAfterDocumentFolder: Swift.String) -> Foundation.Data?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func save(_ image: UIKit.UIImage, withName imageName: Swift.String, inFolder folderName: Swift.String = IMAGES_FOLDER) -> Foundation.URL?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func save(_ data: Foundation.Data, withName fileName: Swift.String, inFolder folderName: Swift.String = FILES_FOlDER) -> Foundation.URL?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getImage(withName fileName: Swift.String, inFolder folderName: Swift.String = IMAGES_FOLDER) -> UIKit.UIImage?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func url(withFileName fileName: Swift.String, folderName: Swift.String) -> Foundation.URL?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func fileExists(atURL url: Foundation.URL?) -> Swift.Bool
+  #endif
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum HttpMethod<RequestBody> {
+  case get
+  case post(RequestBody)
+  case put(RequestBody)
+  case delete
+  case formData(ZDHelperKit.FormData)
+}
+public struct FormData {
+}
+public struct FormDataFile {
+}
+public enum ApiError : Swift.Error {
+  case invalidUrl
+  case httpError(statusCode: Swift.Int)
+  case networkError(error: any Swift.Error)
+  case invalidResponse
+  case decodingError(error: any Swift.Error)
+}
+@_hasMissingDesignatedInitializers public class ApiHelper {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func sendRequest<RequestBody, ResponseBody>(urlPath: Swift.String, method: ZDHelperKit.HttpMethod<RequestBody>, headers: [Swift.String : Swift.String] = [String: String](), completion: @escaping (Swift.Result<ResponseBody, ZDHelperKit.ApiError>) -> Swift.Void) where RequestBody : Swift.Encodable, ResponseBody : Swift.Decodable
+  #endif
+  @objc deinit
+}
+extension UIKit.UITextField {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var placeHolderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+extension UIKit.UILabel {
+  @_Concurrency.MainActor @preconcurrency public func setEmptyString()
+}
+public struct Bytes {
+  public static let inMB: Swift.Int
+}
+extension Photos.PHAsset : ZDHelperKit.ZDHelperPHAssetExtension {
+}
+public protocol ZDHelperPHAssetExtension {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func toImage(for size: CoreFoundation.CGSize, onCompletion handler: @escaping (UIKit.UIImage?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var _fileName: Swift.String? { get }
+  #endif
+  var _fileSize: Swift.Float { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  func data(_ completion: @escaping (Foundation.Data?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func image(targetSize: CoreFoundation.CGSize, contentMode: Photos.PHImageContentMode, options: Photos.PHImageRequestOptions?) -> UIKit.UIImage
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func thumbnailImage(targetSize: CoreFoundation.CGSize, contentMode: Photos.PHImageContentMode) -> UIKit.UIImage?
+  #endif
+}
+extension ZDHelperKit.ZDHelperPHAssetExtension where Self : Photos.PHAsset {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func toImage(for size: CoreFoundation.CGSize, onCompletion handler: @escaping (UIKit.UIImage?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var _fileName: Swift.String? {
+    get
+  }
+  #endif
+  public var _fileSize: Swift.Float {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func data(_ completion: @escaping (Foundation.Data?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func image(targetSize: CoreFoundation.CGSize, contentMode: Photos.PHImageContentMode, options: Photos.PHImageRequestOptions?) -> UIKit.UIImage
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func thumbnailImage(targetSize: CoreFoundation.CGSize = CGSize(width: 100, height: 100), contentMode: Photos.PHImageContentMode = .default) -> UIKit.UIImage?
+  #endif
+}
+extension UIKit.UIColor : ZDHelperKit.ZDHelperUIColor {
+  #if compiler(>=5.3) && $NonescapableTypes
+  convenience public init?(hex: Swift.String?, alpha: CoreFoundation.CGFloat = 1.0)
+  #endif
+}
+public protocol ZDHelperUIColor {
+  static var _random: UIKit.UIColor { get }
+  var _hex: Swift.String { get }
+}
+extension ZDHelperKit.ZDHelperUIColor where Self : UIKit.UIColor {
+  public static var _random: UIKit.UIColor {
+    get
+  }
+  public var _hex: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ZAPIConstant {
+  @objc deinit
+}
+open class ZDHCahe<Key, Value> where Key : Swift.Hashable {
+  public init()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func value(for key: Key) -> Value?
+  #endif
+  public func insert(_ value: Value, for key: Key, expireAfter minutes: Swift.Int = 30)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ZDHImageCache : ZDHelperKit.ZDHCahe<Swift.String, UIKit.UIImage> {
+  override public init()
+  @objc deinit
+}
+public protocol ZDHImageCachable {
+  var imageCache: ZDHelperKit.ZDHImageCache { get }
+}
+extension ZDHelperKit.ZDHImageCachable {
+  public var imageCache: ZDHelperKit.ZDHImageCache {
+    get
+  }
+}
+@available(iOS 13.0, *)
+extension SwiftUICore.View {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func navigationBarSearch(_ searchText: SwiftUICore.Binding<Swift.String>, placeholder: Swift.String? = nil, hidesNavigationBarDuringPresentation: Swift.Bool = true, hidesSearchBarWhenScrolling: Swift.Bool = true, cancelClicked: @escaping () -> Swift.Void = {}, searchClicked: @escaping () -> Swift.Void = {}) -> some SwiftUICore.View
+  
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func navigationBarSearch<ResultContent>(_ searchText: SwiftUICore.Binding<Swift.String>, placeholder: Swift.String? = nil, hidesNavigationBarDuringPresentation: Swift.Bool = true, hidesSearchBarWhenScrolling: Swift.Bool = true, cancelClicked: @escaping () -> Swift.Void = {}, searchClicked: @escaping () -> Swift.Void = {}, @SwiftUICore.ViewBuilder resultContent: @escaping (Swift.String) -> ResultContent) -> some SwiftUICore.View where ResultContent : SwiftUICore.View
+  
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func dismissKeyboardWhileScroll() -> some SwiftUICore.View
+  
+}
+public protocol Defaultable {
+  static var _defaultValue: Self { get }
+}
+#if compiler(>=5.3) && $NonescapableTypes
+extension Swift.Optional where Wrapped : ZDHelperKit.Defaultable {
+  public var isNotNil: Swift.Bool {
+    get
+  }
+  public var forceWrap: Wrapped {
+    get
+  }
+  public var _safelyUnwrap: Wrapped {
+    get
+  }
+  public func _safelyUnwrap(with val: @autoclosure () -> Wrapped) -> Wrapped
+}
+#endif
+extension Swift.Int : ZDHelperKit.Defaultable {
+  public static var _defaultValue: Swift.Int {
+    get
+  }
+}
+extension CoreFoundation.CGFloat : ZDHelperKit.Defaultable {
+  public static var _defaultValue: CoreFoundation.CGFloat {
+    get
+  }
+}
+extension Swift.String : ZDHelperKit.Defaultable {
+  public static var _defaultValue: Swift.String {
+    get
+  }
+}
+extension Swift.Substring : ZDHelperKit.Defaultable {
+  public static var _defaultValue: Swift.Substring {
+    get
+  }
+}
+extension Swift.Bool : ZDHelperKit.Defaultable {
+  public static var _defaultValue: Swift.Bool {
+    get
+  }
+}
+extension Foundation.Date : ZDHelperKit.Defaultable {
+  public static var _defaultValue: Foundation.Date {
+    get
+  }
+}
+extension Swift.Double : ZDHelperKit.Defaultable {
+  public static var _defaultValue: Swift.Double {
+    get
+  }
+}
+extension CoreFoundation.CGRect : ZDHelperKit.Defaultable {
+  public static var _defaultValue: CoreFoundation.CGRect {
+    get
+  }
+}
+extension CoreFoundation.CGSize : ZDHelperKit.Defaultable {
+  public static var _defaultValue: CoreFoundation.CGSize {
+    get
+  }
+}
+extension Swift.Int16 : ZDHelperKit.Defaultable {
+  public static var _defaultValue: Swift.Int16 {
+    get
+  }
+}
+extension Swift.Float : ZDHelperKit.Defaultable {
+  public static var _defaultValue: Swift.Float {
+    get
+  }
+}
+extension Swift.Character : ZDHelperKit.Defaultable {
+  public static var _defaultValue: Swift.Character {
+    get
+  }
+}
+extension Foundation.IndexPath : ZDHelperKit.Defaultable {
+  public static var _defaultValue: Foundation.IndexPath {
+    get
+  }
+  public static func defaultSection(row at: Swift.Int) -> Foundation.IndexPath
+  public static func emptySection(at section: Swift.Int) -> Foundation.IndexPath
+}
+extension Swift.Array : ZDHelperKit.Defaultable {
+  public static var _defaultValue: Swift.Array<Element> {
+    get
+  }
+}
+extension Swift.Array where Element : Swift.Equatable {
+  public func removeDuplicates() -> [Element]
+}
+extension Foundation.NSAttributedString {
+  public static var defaultValue: Foundation.NSAttributedString {
+    get
+  }
+}
+extension UIKit.UIColor : ZDHelperKit.Defaultable {
+  public static var _defaultValue: Self {
+    get
+  }
+}
+extension CoreGraphics.CGColor : ZDHelperKit.Defaultable {
+  public static var _defaultValue: Self {
+    get
+  }
+}
+extension Swift.Collection {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public subscript(safe index: Self.Index?) -> Self.Iterator.Element? {
+    get
+  }
+  #endif
+}
+extension Swift.Bool {
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public class func fromNib<T>() -> T where T : UIKit.UIView
+}
+extension UIKit.UIStackView : ZDHelperKit.ZDHelperStackView {
+}
+public protocol ZDHelperStackView {
+  func customize(corners: UIKit.UIRectCorner, backgroundColor: UIKit.UIColor, radiusSize: CoreFoundation.CGFloat, reduceHeight: CoreFoundation.CGFloat)
+  func removeAllSubview()
+}
+extension ZDHelperKit.ZDHelperStackView where Self : UIKit.UIStackView {
+  public func customize(corners: UIKit.UIRectCorner = .allCorners, backgroundColor: UIKit.UIColor = .clear, radiusSize: CoreFoundation.CGFloat = 0, reduceHeight: CoreFoundation.CGFloat = 0)
+  public func removeAllSubview()
+}
+extension Swift.Error {
+  public var _errorCode: Swift.Int {
+    get
+  }
+}
+extension Foundation.FileManager {
+  public class func tempDirectoryPath() -> Swift.String
+  public class func ZDclearAllFiles()
+  @discardableResult
+  public class func createDirectory(_ folderFullPath: Swift.String) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  public class func saveFile(subFolder: Swift.String, fileName: Swift.String, fileData: Foundation.Data) -> Foundation.URL?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public class func isFileExist(subFolder: Swift.String, fileName: Swift.String) -> Foundation.URL?
+  #endif
+}
+extension Foundation.FileManager : ZDHelperKit.ZDHelperFieldManager {
+}
+public protocol ZDHelperFieldManager {
+  func clearDocumentDirectory()
+  func clearAllContentInsideFolder(path: Swift.String)
+}
+extension ZDHelperKit.ZDHelperFieldManager {
+  public func clearDocumentDirectory()
+  public func clearAllContentInsideFolder(path: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class ZDWKWebViewIBWrapper : WebKit.WKWebView {
+  @_Concurrency.MainActor @preconcurrency public var preventTextCopy: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect, configuration: WebKit.WKWebViewConfiguration)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  #endif
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func buildMenu(with builder: any UIKit.UIMenuBuilder)
+  @objc deinit
+}
+extension UIKit.UIAlertController : ZDHelperKit.ZDHelperAlertController {
+}
+public protocol ZDHelperAlertController {
+  #if compiler(>=5.3) && $NonescapableTypes
+  static func showActionsheet(title: Swift.String?, message: Swift.String?, actions: [(Swift.String, UIKit.UIAlertAction.Style)], selectedTitle: Swift.String, completion: @escaping (_ index: Swift.Int, _ title: Swift.String) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  static func showAlertController(title: Swift.String?, message: Swift.String, actions: [(Swift.String, UIKit.UIAlertAction.Style)], completion: @escaping (_ option: Swift.String) -> Swift.Void)
+  #endif
+}
+extension ZDHelperKit.ZDHelperAlertController where Self : UIKit.UIAlertController {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func showActionsheet(title: Swift.String?, message: Swift.String?, actions: [(Swift.String, UIKit.UIAlertAction.Style)], selectedTitle: Swift.String, completion: @escaping (_ index: Swift.Int, _ title: Swift.String) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func showAlertController(title: Swift.String? = nil, message: Swift.String, actions: [(Swift.String, UIKit.UIAlertAction.Style)], completion: @escaping (_ option: Swift.String) -> Swift.Void)
+  #endif
+}
+@available(iOS 13.0, *)
+@_Concurrency.MainActor @preconcurrency public struct Toast : SwiftUICore.ViewModifier {
+  @_Concurrency.MainActor @preconcurrency public static let short: Swift.Double
+  @_Concurrency.MainActor @preconcurrency public static let long: Swift.Double
+  @_Concurrency.MainActor @preconcurrency public func body(content: ZDHelperKit.Toast.Content) -> some SwiftUICore.View
+  
+  public struct Config {
+  }
+  @available(iOS 13.0, *)
+  public typealias Body = @_opaqueReturnTypeOf("$s11ZDHelperKit5ToastV4body7contentQr7SwiftUI21_ViewModifier_ContentVyACG_tF", 0) __
+}
+@available(iOS 13.0, *)
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func toast(message: Swift.String, isShowing: SwiftUICore.Binding<Swift.Bool>, config: ZDHelperKit.Toast.Config) -> some SwiftUICore.View
+  
+  @_Concurrency.MainActor @preconcurrency public func toast(message: Swift.String, isShowing: SwiftUICore.Binding<Swift.Bool>, duration: Foundation.TimeInterval) -> some SwiftUICore.View
+  
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class ZDMenuItem : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @objc deinit
+}
+extension Swift.Array {
+  public var isNotEmpty: Swift.Bool {
+    get
+  }
+  public var isSingular: Swift.Bool {
+    get
+  }
+  public var isPlural: Swift.Bool {
+    get
+  }
+  public static var empty: Swift.Array<Element> {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public subscript(safe index: Swift.Int) -> Element? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func element(at index: Swift.Int) -> Element?
+  #endif
+  public mutating func safelyRemove(at index: Swift.Int)
+  public func seperate(by condition: (Element) -> Swift.Bool) -> ([Element], [Element])
+  @inlinable public mutating func move(_ currentIndex: Swift.Int, to newIndex: Swift.Int) {
+      let element = remove(at: currentIndex)
+      insert(element, at: newIndex)
+    }
+}
+extension Swift.Array where Element == Foundation.IndexPath {
+  public static func defaultSection(rows at: Swift.Int...) -> [Foundation.IndexPath]
+  public static func defaultSection(rows at: [Swift.Int]) -> [Foundation.IndexPath]
+}
+extension Swift.Array where Element : Swift.Equatable {
+  public mutating func removeObject(_ obj: Element)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func firstMatch(of element: Element) -> Element?
+  #endif
+  public func isSameAs(_ other: [Element]) -> Swift.Bool
+  public mutating func removeFirstOccurence(of item: Element)
+  public mutating func removeDuplicates()
+}
+extension Swift.Array where Element : Swift.Hashable {
+  public var hasDuplicates: Swift.Bool {
+    get
+  }
+}
+extension Swift.Array {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func _convertToData() -> Foundation.Data?
+  #endif
+}
+extension Foundation.Data {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func _convertToArray<Element>() -> [Element]?
+  #endif
+}
+public protocol TraversableTree {
+  var childNodes: [Self] { get }
+}
+extension Swift.Array where Element : ZDHelperKit.TraversableTree {
+  public func removeFirstNodeIfNeeded() -> Swift.Array<Element>
+}
+extension Swift.Dictionary {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func value(forKey key: Key) -> Value?
+  #endif
+}
+public protocol ZDHelperReusableView {
+  static var helperReuseIdentifier: Swift.String { get }
+}
+extension ZDHelperKit.ZDHelperReusableView {
+  public static var helperReuseIdentifier: Swift.String {
+    get
+  }
+}
+extension UIKit.UITableViewCell : ZDHelperKit.ZDHelperReusableView {
+}
+extension UIKit.UICollectionViewCell : ZDHelperKit.ZDHelperReusableView {
+}
+extension UIKit.UITableView {
+  @_Concurrency.MainActor @preconcurrency public func dequeueCell<T>(at indexPath: Foundation.IndexPath) -> T where T : UIKit.UITableViewCell
+}
+extension UIKit.UICollectionView {
+  @_Concurrency.MainActor @preconcurrency public func dequeueCell<T>(at indexPath: Foundation.IndexPath) -> T where T : UIKit.UICollectionViewCell
+}
+extension Swift.String {
+  public func toInt() -> Swift.Int
+  public func toDouble() -> Swift.Double
+  public func applyRegex(with pattern: Swift.String) -> [Swift.String]
+  public var hexToUIColor: UIKit.UIColor {
+    get
+  }
+  public func isValidEmail() -> Swift.Bool
+  public var isNumber: Swift.Bool {
+    get
+  }
+  public func isValidURL() -> Swift.Bool
+  public var underLined: Foundation.NSAttributedString {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func slice(from: Swift.String, to: Swift.String) -> Swift.String?
+  #endif
+  public var isPercent: Swift.Bool {
+    get
+  }
+  public func isDecimal(_ decimalPlace: Swift.Int) -> Swift.Bool
+  public var isInteger: Swift.Bool {
+    get
+  }
+  public var isPhoneNumber: Swift.Bool {
+    get
+  }
+  public var isURL: Swift.Bool {
+    get
+  }
+  public func isDouble(_ input: Swift.Double) -> Swift.Bool
+  public var isBlank: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var url: Foundation.URL? {
+    get
+  }
+  #endif
+  public func nsRange(of string: Swift.String) -> Foundation.NSRange
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func trimSpaces() -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var base64ToData: Foundation.Data? {
+    get
+  }
+  #endif
+}
+extension Swift.String {
+  public var isNotEmpty: Swift.Bool {
+    get
+  }
+  public var capitalizeFirstLetter: Swift.String {
+    get
+  }
+  public var updateAsAttributedString: Foundation.NSAttributedString {
+    get
+  }
+  public var updateAsMutableAttributedString: Foundation.NSMutableAttributedString {
+    get
+  }
+  public func getImageViewInitialLetter() -> Swift.String
+  public func stringByReplacingFirstOccurrenceOfString(target: Swift.String, withString replaceString: Swift.String) -> Swift.String
+  public func stringToDate(dateFormat: Swift.String = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z", timeZone: Swift.String = TimeZone.current.identifier) -> Foundation.Date
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getOptionalDate(dateFormat: Swift.String = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z", timeZone: Swift.String = TimeZone.current.identifier) -> Foundation.Date?
+  #endif
+  public func getDate() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getDate(preference: (any ZDHelperKit.ZDTimePreferences)?) -> Swift.String
+  #endif
+  public func removeYear() -> Swift.String
+  public func getDetailedDate() -> Swift.String
+  public func convertHtml() -> Swift.String
+  public func decodeHtml() -> Swift.String
+  public func extractEmailAddress() -> [Swift.String]
+  public mutating func replaceUnwantedString(_ replcaeCharacter: Swift.String) -> Swift.String
+  public func log(file: Swift.String = #file, functionName: Swift.String = #function, lineNumber: Swift.Int = #line)
+  public func assertFailure(file: Swift.String = #file, functionName: Swift.String = #function, lineNumber: Swift.Int = #line)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var encoded: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getAttributedString(font: UIKit.UIFont, color: UIKit.UIColor? = nil) -> Foundation.NSMutableAttributedString
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func toJson() -> [Swift.String : Swift.AnyObject]?
+  #endif
+  public func highlight(text highlightText: Swift.String, color: UIKit.UIColor) -> Foundation.NSAttributedString
+}
+extension Swift.DefaultStringInterpolation {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @inlinable public mutating func appendInterpolation<Type>(_ value: Type?) where Type : Swift.CustomStringConvertible {
+    appendInterpolation(value ?? "" as CustomStringConvertible)
+  }
+  #endif
+}
+extension Foundation.NSMutableAttributedString {
+  public func addLetterSpacing(space: Swift.Double)
+  public func addLineSpacing(space: CoreFoundation.CGFloat)
+}
+extension UIKit.NSTextAttachment {
+  public func setImageHeight(height: CoreFoundation.CGFloat)
+}
+extension Swift.Array where Element == Swift.String {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getAttributedString(fonts: [UIKit.UIFont], colors: [UIKit.UIColor]? = nil, offsets: [CoreFoundation.CGFloat]? = nil) -> Foundation.NSMutableAttributedString
+  #endif
+  public func isHtml(_ value: Swift.String) -> Swift.Bool
+  public mutating func removeFirstOccurence(of item: Element)
+}
+extension Swift.String {
+  public func middleTruncate(to maxLength: Swift.Int) -> Swift.String
+  public func tailTruncate(to maxLength: Swift.Int, freezeLast: Swift.Int) -> Swift.String
+  public var extn: Swift.String {
+    get
+  }
+  public func encodeFileName() -> Swift.String
+  public func getLabelHeightAndNoofLines(for label: UIKit.UILabel) -> (size: CoreFoundation.CGSize, numberOfLines: Swift.Int)
+}
+extension Foundation.Bundle {
+  public func installIconFile(name fileName: Swift.String, extension fileExtension: Swift.String = "ttf") -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func convertDataFromJSONFile(fileName jsonFileName: Swift.String) -> Foundation.Data?
+  #endif
+}
+public protocol NumberFormatProvider {
+  func formatNumber() -> Foundation.NSNumber
+  func format(_ formatter: any ZDHelperKit.NumberFormatterLocale) -> Swift.String
+  func format(_ formatter: any ZDHelperKit.NumberFormatterCustomLocaleAvailable, locale: Foundation.Locale) -> Swift.String
+}
+extension ZDHelperKit.NumberFormatProvider {
+  public func format(_ formatter: any ZDHelperKit.NumberFormatterLocale) -> Swift.String
+  public func format(_ formatter: any ZDHelperKit.NumberFormatterCustomLocaleAvailable, locale: Foundation.Locale) -> Swift.String
+}
+extension CoreFoundation.CGFloat : ZDHelperKit.NumberFormatProvider {
+  public func formatNumber() -> Foundation.NSNumber
+}
+extension Swift.Bool : ZDHelperKit.NumberFormatProvider {
+  public func formatNumber() -> Foundation.NSNumber
+}
+extension Swift.Double : ZDHelperKit.NumberFormatProvider {
+  public func formatNumber() -> Foundation.NSNumber
+}
+extension Swift.Float : ZDHelperKit.NumberFormatProvider {
+  public func formatNumber() -> Foundation.NSNumber
+}
+extension Swift.Int : ZDHelperKit.NumberFormatProvider {
+  public func formatNumber() -> Foundation.NSNumber
+}
+extension Swift.Int16 : ZDHelperKit.NumberFormatProvider {
+  public func formatNumber() -> Foundation.NSNumber
+}
+extension Swift.Int32 : ZDHelperKit.NumberFormatProvider {
+  public func formatNumber() -> Foundation.NSNumber
+}
+extension Swift.Int64 : ZDHelperKit.NumberFormatProvider {
+  public func formatNumber() -> Foundation.NSNumber
+}
+extension Swift.UInt : ZDHelperKit.NumberFormatProvider {
+  public func formatNumber() -> Foundation.NSNumber
+}
+extension Swift.UInt16 : ZDHelperKit.NumberFormatProvider {
+  public func formatNumber() -> Foundation.NSNumber
+}
+extension Swift.UInt32 : ZDHelperKit.NumberFormatProvider {
+  public func formatNumber() -> Foundation.NSNumber
+}
+extension Swift.UInt64 : ZDHelperKit.NumberFormatProvider {
+  public func formatNumber() -> Foundation.NSNumber
+}
+extension UIKit.UIImage {
+  public func getQRUrl() -> Swift.String
+}
+extension Foundation.Bundle {
+  public enum ZPPropertyKey {
+    case custom(key: Swift.String)
+    case disableLiquidGlass
+  }
+  public func propertyValue<T>(_ key: Foundation.Bundle.ZPPropertyKey) -> T where T : ZDHelperKit.Defaultable
+}
+public struct ZDLocalNotificationContents {
+  public init(id: Swift.String, title: Swift.String, subTitle: Swift.String = ._defaultValue, body: Swift.String, userInfo: [Swift.String : Any] = [:])
+}
+public struct ZDLocalNotificationConfigurations {
+  public init(sound: UserNotifications.UNNotificationSound = .default, isDaily: Swift.Bool = false, alertOptions: UserNotifications.UNAuthorizationOptions = [.alert,.sound], hour: Swift.Int, minute: Swift.Int, badgeCount: Foundation.NSNumber = 1)
+}
+@_hasMissingDesignatedInitializers public class ZDLocalNotificationManager {
+  public static func triggerNotification(_ obj: ZDHelperKit.ZDLocalNotificationContents, _ config: ZDHelperKit.ZDLocalNotificationConfigurations)
+  public static func removeLocalNotification(ids: [Swift.String])
+  @objc deinit
+}
+extension UserNotifications.UNNotificationAttachment : ZDHelperKit.ZDHelperNotificationAttachment {
+}
+public protocol ZDHelperNotificationAttachment {
+  #if compiler(>=5.3) && $NonescapableTypes
+  static func create(identifier: Swift.String, image: UIKit.UIImage, options: [ObjectiveC.NSObject : Swift.AnyObject]?) -> UserNotifications.UNNotificationAttachment?
+  #endif
+}
+extension ZDHelperKit.ZDHelperNotificationAttachment where Self : UserNotifications.UNNotificationAttachment {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func create(identifier: Swift.String, image: UIKit.UIImage, options: [ObjectiveC.NSObject : Swift.AnyObject]?) -> UserNotifications.UNNotificationAttachment?
+  #endif
+}
+extension UIKit.UIView {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public func g_pin(on type1: UIKit.NSLayoutConstraint.Attribute, view: UIKit.UIView? = nil, on type2: UIKit.NSLayoutConstraint.Attribute? = nil, constant: CoreFoundation.CGFloat = 0, priority: Swift.Float? = nil) -> UIKit.NSLayoutConstraint?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func g_pinEdges(view: UIKit.UIView? = nil)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func g_pin(size: CoreFoundation.CGSize)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public func g_pin(width: CoreFoundation.CGFloat) -> UIKit.NSLayoutConstraint?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public func g_pin(height: CoreFoundation.CGFloat) -> UIKit.NSLayoutConstraint?
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func g_pin(greaterThanHeight height: CoreFoundation.CGFloat)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func g_pinHorizontally(view: UIKit.UIView? = nil, padding: CoreFoundation.CGFloat)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func g_pinVertically(view: UIKit.UIView? = nil, padding: CoreFoundation.CGFloat)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func g_pinUpward(view: UIKit.UIView? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func g_pinDownward(view: UIKit.UIView? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func g_pinCenter(view: UIKit.UIView? = nil)
+  #endif
+}
+@propertyWrapper final public class Delegated<Input> {
+  public init()
+  final public var wrappedValue: (Input) -> Swift.Void {
+    get
+  }
+  final public var projectedValue: ZDHelperKit.Delegated<Input> {
+    get
+  }
+  final public func delegate<Target>(to target: Target, with callback: @escaping (Target, Input) -> Swift.Void) where Target : AnyObject
+  final public func nullify()
+  @objc deinit
+}
+extension UIKit.UIImageView : ZDHelperKit.ZDHelperImageView {
+}
+public protocol ZDHelperImageView {
+  func setImageColor(color: UIKit.UIColor)
+}
+extension ZDHelperKit.ZDHelperImageView where Self : UIKit.UIImageView {
+  public func setImageColor(color: UIKit.UIColor)
+}
+#if compiler(>=5.3) && $NonescapableTypes
+extension Swift.Optional {
+  public var _isNil: Swift.Bool {
+    get
+  }
+  public mutating func nullify()
+  public func safeUnwrap(to object: inout Wrapped)
+}
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
+extension Swift.Optional where Wrapped == AnyObject {
+  public func toString() -> Swift.String
+  public func toInt() -> Swift.Int
+  public func toBool() -> Swift.Bool
+  public func toCGFloat() -> CoreFoundation.CGFloat
+}
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
+extension Swift.Optional where Wrapped == Any {
+  public func toString() -> Swift.String
+  public func toInt() -> Swift.Int
+  public func toBool() -> Swift.Bool
+  public func toCGFloat() -> CoreFoundation.CGFloat
+}
+#endif
+extension UIKit.UIApplication {
+  @_Concurrency.MainActor @preconcurrency public static func dismissKeyboard()
+}
+@available(iOS 13.0, *)
+extension UIKit.UIApplication {
+  @_Concurrency.MainActor @preconcurrency public static var safeAreaInsets: UIKit.UIEdgeInsets {
+    get
+  }
+}
+@available(iOS 13.0, *)
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func cornerRadius(radius: CoreFoundation.CGFloat, corners: UIKit.UIRectCorner) -> some SwiftUICore.View
+  
+}
+public enum Currency : Swift.String, ZDHelperKit.NumberFormatterLocale, ZDHelperKit.NumberFormatterCustomLocaleAvailable {
+  case ADP
+  case AED
+  case AFN
+  case ALL
+  case AMD
+  case ANG
+  case AOA
+  case ARS
+  case AUD
+  case AWG
+  case AZN
+  case BAD
+  case BAM
+  case BAN
+  case BBD
+  case BDT
+  case BGN
+  case BHD
+  case BIF
+  case BMD
+  case BND
+  case BOB
+  case BRL
+  case BSD
+  case BTC
+  case BTN
+  case BWP
+  case BYR
+  case BZD
+  case CAD
+  case CDF
+  case CHF
+  case CLP
+  case CNY
+  case COP
+  case CRC
+  case CUC
+  case CUP
+  case CVE
+  case CZK
+  case DJF
+  case DKK
+  case DOP
+  case DZD
+  case EGP
+  case ERN
+  case ETB
+  case EUR
+  case FJD
+  case FKP
+  case GBP
+  case GEL
+  case GHS
+  case GIP
+  case GMD
+  case GNF
+  case GTQ
+  case GYD
+  case HKD
+  case HNL
+  case HRK
+  case HTG
+  case HUF
+  case IDR
+  case ILS
+  case INR
+  case IQD
+  case IRR
+  case ISK
+  case JMD
+  case JOD
+  case JPY
+  case KES
+  case KGS
+  case KHR
+  case KMF
+  case KPW
+  case KRW
+  case KWD
+  case KYD
+  case KZT
+  case LAK
+  case LBP
+  case LKR
+  case LRD
+  case LSL
+  case LYD
+  case MAD
+  case MDL
+  case MGA
+  case MKD
+  case MMK
+  case MNT
+  case MOP
+  case MRO
+  case MUR
+  case MVR
+  case MWK
+  case MXN
+  case MYR
+  case MZN
+  case NAD
+  case NGN
+  case NIO
+  case NOK
+  case NPR
+  case NZD
+  case OMR
+  case PAB
+  case PEN
+  case PGK
+  case PHP
+  case PKR
+  case PLN
+  case PYG
+  case QAR
+  case RON
+  case RSD
+  case RUB
+  case RWF
+  case SAR
+  case SBD
+  case SCR
+  case SDG
+  case SEK
+  case SGD
+  case SHP
+  case SLL
+  case SOS
+  case SRD
+  case STD
+  case SVC
+  case SYP
+  case SZL
+  case THB
+  case TJS
+  case TMT
+  case TND
+  case TOP
+  case TRY
+  case TTD
+  case TWD
+  case TZS
+  case UAH
+  case UGX
+  case USD
+  case UYU
+  case UZS
+  case VEF
+  case VND
+  case VUV
+  case WST
+  case XAF
+  case XCD
+  case XDR
+  case XOF
+  case XPF
+  case YER
+  case ZAR
+  case ZMW
+  public var modifier: Swift.String {
+    get
+  }
+  public var type: ZDHelperKit.NumberFormatterType {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var style: Foundation.NumberFormatter.Style? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum NumberFormatterType {
+  case currency
+  case decimal
+  case general
+  case mass
+  public static func == (a: ZDHelperKit.NumberFormatterType, b: ZDHelperKit.NumberFormatterType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol NumberFormatterLocale {
+  var modifier: Swift.String { get }
+  var type: ZDHelperKit.NumberFormatterType { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var style: Foundation.NumberFormatter.Style? { get }
+  #endif
+}
+public protocol NumberFormatterCustomLocaleAvailable : ZDHelperKit.NumberFormatterLocale {
+}
+@_hasMissingDesignatedInitializers open class NumberFormatLocale {
+  open func format(_ number: Foundation.NSNumber, formatter: any ZDHelperKit.NumberFormatterLocale) -> Swift.String
+  open func format(_ number: Foundation.NSNumber, formatter: any ZDHelperKit.NumberFormatterCustomLocaleAvailable, locale: Foundation.Locale) -> Swift.String
+  @objc deinit
+}
+@objc public protocol ZDPUploaderDelegate {
+  @objc func uploaded(fraction: Swift.Float)
+}
+public enum ZDPError : Swift.Error {
+  case badURL
+  case noInternet(Foundation.NSError)
+  case internalServerError(Foundation.NSError)
+  case badRequest(Foundation.NSError)
+  case timedOut(Foundation.NSError)
+  case notFound(Foundation.NSError)
+  case accessDenied(Foundation.NSError)
+  case badResponse(Foundation.NSError)
+  case noData(Foundation.NSError)
+  case invalidStatusCode(Swift.Int)
+  case decodingFailed(Foundation.Data, any Swift.Error)
+  case unknownError(Foundation.NSError)
+  case noDataForLanguage
+}
+extension ZDHelperKit.ZDPError {
+  public static var _decodingFailed: Foundation.NSError {
+    get
+  }
+  public static let _noData: Foundation.NSError
+  public static let _badResponse: Foundation.NSError
+  public static let _badURL: Foundation.NSError
+  public static let _accessDenied: Foundation.NSError
+  public static func _invalidStatusCode(_ code: Swift.Int) -> Foundation.NSError
+}
+public enum ZDHLogEvent : Swift.String {
+  case e
+  case i
+  case d
+  case v
+  case w
+  case s
+  case c
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ZDHLog {
+  public static var isEnabled: Swift.Bool
+  public class func e<T>(_ object: T, filename: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, funcName: Swift.String = #function)
+  public class func i<T>(_ object: T, filename: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, funcName: Swift.String = #function)
+  public class func d<T>(_ object: T, filename: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, funcName: Swift.String = #function)
+  public class func v<T>(_ object: T, filename: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, funcName: Swift.String = #function)
+  public class func w<T>(_ object: T, filename: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, funcName: Swift.String = #function)
+  public class func s<T>(_ object: T, filename: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, funcName: Swift.String = #function)
+  public class func c<T>(_ object: T, filename: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, funcName: Swift.String = #function)
+  @objc deinit
+}
+extension Foundation.Date {
+  public func isBetween(_ date1: Foundation.Date, and date2: Foundation.Date) -> Swift.Bool
+  public func relativeTime(in locale: Foundation.Locale) -> Swift.String
+  public func timeAgoSinceDate(_ currentDate: Foundation.Date = Date(), numericDates: Swift.Bool = false) -> (Swift.String, Swift.Bool)
+  public static var UTCTimeStringWithFractionalSecs: Swift.String {
+    get
+  }
+}
+extension Foundation.Date {
+  public func isGreaterThanDate(_ dateToCompare: Foundation.Date) -> Swift.Bool
+  public func addMinutes(_ minutesToAdd: Swift.Int) -> Foundation.Date
+}
+extension Foundation.Date {
+  public func checkYear() -> Swift.Bool
+  public func getDetailedDate() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func convert(_ format: Swift.String, timeZone: Foundation.TimeZone? = nil, locale: Swift.String = "") -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getUserFormat(preference: (any ZDHelperKit.ZDTimePreferences)?, dateOnly: Swift.Bool = false, needTime: Swift.Bool = false, needDate: Swift.Bool = false) -> Swift.String
+  #endif
+  public func feedDateToString() -> Swift.String
+  public var UTCServerTime: Swift.String {
+    get
+  }
+  public func isInSameWeek() -> Swift.Bool
+  public func isInSameMonth() -> Swift.Bool
+  public func isInSameYear() -> Swift.Bool
+  public func isInSameDay() -> Swift.Bool
+  public var isInThisWeek: Swift.Bool {
+    get
+  }
+  public var isInToday: Swift.Bool {
+    get
+  }
+  public var isInTomorrow: Swift.Bool {
+    get
+  }
+  public var isInTheFuture: Swift.Bool {
+    get
+  }
+  public var isInThePast: Swift.Bool {
+    get
+  }
+  public var startOfTheDay: Swift.String {
+    get
+  }
+  public var endOfTheDay: Swift.String {
+    get
+  }
+  public var serverTimeFormat: Swift.String {
+    get
+  }
+  public func toString() -> Swift.String
+}
+@objc public protocol ZDTimePreferences {
+  @objc var dateAndTimeFormat: Swift.String { get }
+  @objc var timePattern: Swift.String { get }
+  @objc var dateFormat: Swift.String { get }
+  @objc var shortTime: Swift.Bool { get }
+  @objc var timeZone: Foundation.TimeZone { get }
+  @objc var isDeviceTimeZone: Swift.Bool { get }
+}
+public struct TimeIntervalConstants {
+  public static let minute: Swift.Double
+  public static let hour: Swift.Double
+  public static let day: Swift.Double
+  public static let week: Swift.Double
+  public static let month: Swift.Double
+  public static let year: Swift.Double
+  public static let serverTimeFormat: Swift.String
+  public static func getServerTimeForNow() -> Swift.String
+}
+extension Foundation.Data : ZDHelperKit.ZDHelperData {
+}
+public protocol ZDHelperData {
+  func printString()
+  var _sizeInMB: Swift.Float { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var _jsonData: [Swift.String : Any]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func decode<T>() -> T? where T : Swift.Decodable
+  #endif
+  func decode<T>() throws -> T where T : Swift.Decodable
+}
+extension ZDHelperKit.ZDHelperData where Self == Foundation.Data {
+  public func printString()
+  public var _sizeInMB: Swift.Float {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var _jsonData: [Swift.String : Any]? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func decode<T>() -> T? where T : Swift.Decodable
+  #endif
+  public func decode<T>() throws -> T where T : Swift.Decodable
+}
+#if compiler(>=5.3) && $NonescapableTypes
+@inlinable public func associate<Val, Root>(_ value: Val, to keyPath: Swift.ReferenceWritableKeyPath<Root, Val>?, at observer: Root) {
+  guard let keyPath = keyPath else { return}
+  observer[keyPath: keyPath] = value
+}
+#endif
+@inlinable public func == <Root, Val>(lhs: Swift.KeyPath<Root, Val>, rhs: Val) -> (Root) -> Swift.Bool where Val : Swift.Comparable {
+  return { $0[keyPath: lhs] == rhs }
+}
+@inlinable public func != <Root, Val>(lhs: Swift.KeyPath<Root, Val>, rhs: Val) -> (Root) -> Swift.Bool where Val : Swift.Comparable {
+  { $0[keyPath: lhs] != rhs }
+}
+infix operator !! : DefaultPrecedence
+@inlinable public func !! (lhs: Swift.Bool, rhs: @autoclosure () -> any Swift.Error) throws {
+   guard lhs else { throw rhs() }
+}
+#if compiler(>=5.3) && $NonescapableTypes
+@inlinable public func !! <Wrapped>(lhs: Swift.Optional<Wrapped>, rhs: @autoclosure () -> any Swift.Error) throws -> Wrapped {
+  switch lhs {
+  case let .some(wrappedValue):
+    return wrappedValue
+  case .none:
+    throw rhs()
+  }
+}
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
+extension Swift.Optional : @retroactive Swift.Comparable where Wrapped : Swift.Equatable {
+  public static func < (lhs: Swift.Optional<Wrapped>, rhs: Swift.Optional<Wrapped>) -> Swift.Bool
+}
+#endif
+extension Foundation.NSAttributedString {
+  public static func + (left: Foundation.NSAttributedString, right: Foundation.NSAttributedString) -> Foundation.NSAttributedString
+}
+@dynamicMemberLookup public struct ZDRDynamicMemberLookup {
+  public subscript(dynamicMember key: Swift.String) -> Swift.AnyObject {
+    get
+  }
+  public init(jsonDict: [Swift.String : Swift.AnyObject])
+}
+extension ZDHelperKit.ZDRDynamicMemberLookup : Swift._ObjectiveCBridgeable {
+  public typealias _ObjectiveCType = Foundation.NSDictionary
+  public func _bridgeToObjectiveC() -> ZDHelperKit.ZDRDynamicMemberLookup._ObjectiveCType
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func _forceBridgeFromObjectiveC(_ source: ZDHelperKit.ZDRDynamicMemberLookup._ObjectiveCType, result: inout ZDHelperKit.ZDRDynamicMemberLookup?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func _conditionallyBridgeFromObjectiveC(_ source: ZDHelperKit.ZDRDynamicMemberLookup._ObjectiveCType, result: inout ZDHelperKit.ZDRDynamicMemberLookup?) -> Swift.Bool
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: ZDHelperKit.ZDRDynamicMemberLookup._ObjectiveCType?) -> ZDHelperKit.ZDRDynamicMemberLookup
+  #endif
+}
+public struct DataTypeParser {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func parse<T>(_ rawValue: Swift.AnyObject) -> T?
+  #endif
+}
+@available(iOS 13.0, *)
+@_Concurrency.MainActor @preconcurrency public struct BlurView : SwiftUI.UIViewRepresentable {
+  @_Concurrency.MainActor @preconcurrency public init(style: UIKit.UIBlurEffect.Style)
+  @_Concurrency.MainActor @preconcurrency public func makeUIView(context: SwiftUI.UIViewRepresentableContext<ZDHelperKit.BlurView>) -> UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency public func updateUIView(_ uiView: UIKit.UIView, context: SwiftUI.UIViewRepresentableContext<ZDHelperKit.BlurView>)
+  @available(iOS 13.0, *)
+  public typealias Body = Swift.Never
+  @available(iOS 13.0, *)
+  public typealias Coordinator = Swift.Void
+  @available(iOS 13.0, *)
+  public typealias UIViewType = UIKit.UIView
+}
+extension Foundation.NotificationCenter : ZDHelperKit.ZDHelperNotificationExtension {
+}
+public protocol ZDHelperNotificationExtension {
+  func addObserver(_ name: Foundation.Notification.Name, using block: @escaping (Foundation.Notification) -> Swift.Void) -> any ObjectiveC.NSObjectProtocol
+}
+extension ZDHelperKit.ZDHelperNotificationExtension where Self : Foundation.NotificationCenter {
+  public func addObserver(_ name: Foundation.Notification.Name, using block: @escaping (Foundation.Notification) -> Swift.Void) -> any ObjectiveC.NSObjectProtocol
+}
+@objc public class ZDNotificationObserver : ObjectiveC.NSObject {
+  required public init(_ notificationCenter: Foundation.NotificationCenter = NotificationCenter.default, name: Foundation.Notification.Name, handler: @escaping (Foundation.Notification) -> Swift.Void)
+  @objc deinit
+}
+@propertyWrapper public struct UDStorage<T> {
+  public init(key: Swift.String, defaultValue: T)
+  public var wrappedValue: T {
+    get
+    set
+  }
+}
+public struct ZDKeyPath {
+}
+extension ZDHelperKit.ZDKeyPath {
+  public init(_ string: Swift.String, separator: Swift.String = ".")
+}
+extension ZDHelperKit.ZDKeyPath : Swift.ExpressibleByStringLiteral {
+  public init(stringLiteral value: Swift.String)
+  public init(unicodeScalarLiteral value: Swift.String)
+  public init(extendedGraphemeClusterLiteral value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+public protocol ZDStringProtocol {
+  init(string s: Swift.String)
+}
+extension Swift.String : ZDHelperKit.ZDStringProtocol {
+  public init(string s: Swift.String)
+}
+extension Swift.Dictionary where Key : ZDHelperKit.ZDStringProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public subscript(keyPath keyPath: ZDHelperKit.ZDKeyPath) -> Any? {
+    get
+    set
+  }
+  #endif
+}
+extension Swift.Dictionary where Key : ZDHelperKit.ZDStringProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public subscript(string keyPath: ZDHelperKit.ZDKeyPath) -> Swift.String? {
+    get
+    set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public subscript(dict keyPath: ZDHelperKit.ZDKeyPath) -> [Key : Any]? {
+    get
+    set
+  }
+  #endif
+}
+extension Swift.Dictionary {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var _data: Foundation.Data? {
+    get
+  }
+  #endif
+}
+extension UIKit.UIApplication : ZDHelperKit.ZDHelperApplication {
+}
+public protocol ZDHelperApplication {
+  #if compiler(>=5.3) && $NonescapableTypes
+  static var getTopController: UIKit.UIViewController? { get }
+  #endif
+  static func enableHapticFeedBack(force: UIKit.UIImpactFeedbackGenerator.FeedbackStyle)
+  static func selectionHaptic()
+}
+extension ZDHelperKit.ZDHelperApplication where Self : UIKit.UIApplication {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static var getTopController: UIKit.UIViewController? {
+    get
+  }
+  #endif
+  @available(iOS 10.0, *)
+  public static func enableHapticFeedBack(force: UIKit.UIImpactFeedbackGenerator.FeedbackStyle = .light)
+  public static func selectionHaptic()
+}
+extension UIKit.UIViewController : ZDHelperKit.ZDHelperViewController {
+}
+public protocol ZDHelperViewController {
+  static var identifier: Swift.String { get }
+  static func initializeController<T>(with nib: UIKit.UINib, index: Swift.Int) -> T where T : UIKit.UIViewController
+  static func initializeController<T>(with storyBoard: UIKit.UIStoryboard) -> T where T : UIKit.UIViewController
+  func presentController()
+  func pushController()
+}
+extension ZDHelperKit.ZDHelperViewController where Self : UIKit.UIViewController {
+  public static var identifier: Swift.String {
+    get
+  }
+  public static func initializeController<T>(with nib: UIKit.UINib, index: Swift.Int = .zero) -> T where T : ZDHelperKit.ZDHelperViewController
+  public static func initializeController<T>(with storyBoard: UIKit.UIStoryboard) -> T where T : ZDHelperKit.ZDHelperViewController
+  public static func initializeController<T>(with storyBoardName: Swift.String, at bundle: Foundation.Bundle = .main) -> T where T : ZDHelperKit.ZDHelperViewController
+  public func presentController()
+  public func pushController()
+}
+extension UIKit.UINavigationController : ZDHelperKit.ZDHelperNavigationController {
+}
+public protocol ZDHelperNavigationController {
+  func pushViewController(_ viewController: UIKit.UIViewController, animated: Swift.Bool, completion: @escaping () -> Swift.Void)
+  func popViewController(animated: Swift.Bool, completion: @escaping () -> Swift.Void)
+}
+extension ZDHelperKit.ZDHelperNavigationController where Self : UIKit.UINavigationController {
+  public func pushViewController(_ viewController: UIKit.UIViewController, animated: Swift.Bool, completion: @escaping () -> Swift.Void)
+  public func popViewController(animated: Swift.Bool, completion: @escaping () -> Swift.Void)
+}
+extension Swift.Int {
+  public static var one: Swift.Int {
+    get
+  }
+  public static var two: Swift.Int {
+    get
+  }
+  public static var three: Swift.Int {
+    get
+  }
+  public static var four: Swift.Int {
+    get
+  }
+  public static var five: Swift.Int {
+    get
+  }
+  public static var six: Swift.Int {
+    get
+  }
+  public static var seven: Swift.Int {
+    get
+  }
+  public static var eight: Swift.Int {
+    get
+  }
+  public static var nine: Swift.Int {
+    get
+  }
+  public static var ten: Swift.Int {
+    get
+  }
+}
+extension Swift.Int {
+  public mutating func reduceIfPossible(by count: Swift.Int)
+}
+extension Swift.Numeric {
+  public func increase(by increment: Self = 1) -> Self
+  public func decrease(by decrement: Self = 1) -> Self
+}
+extension Swift.Comparable {
+  public func isEquals(to item2: Self...) -> Swift.Bool
+  public func isGreaterThan(_ item2: Self) -> Swift.Bool
+  public func isLessThan(_ item2: Self) -> Swift.Bool
+}
+extension CoreFoundation.CGFloat {
+  public var value: Swift.Int {
+    get
+  }
+  public var getDecimalFloatvalue: Swift.String {
+    get
+  }
+  public init(_ value: Swift.String)
+}
+extension Swift.Int {
+  public var isZero: Swift.Bool {
+    get
+  }
+  public var leadingZero: Swift.String {
+    get
+  }
+  public func leadingZero(count: Swift.Int = 2) -> Swift.String
+  public func removeIfZero() -> Swift.String
+  public func convertDurationFormat(format: Swift.String = "hh:mm:ss") -> Swift.String
+  public var isSucceed: Swift.Bool {
+    get
+  }
+  public var isSingular: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func inWords(singular: Swift.String, plural: Swift.String) -> Swift.String?
+  #endif
+}
+extension Swift.Numeric {
+  public func toString() -> Swift.String
+}
+extension Swift.Double {
+  public func formattedCurrenyNumber(currencyValue: Swift.String) -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func toInt() -> Swift.Int?
+  #endif
+  public func convertFileSizeFormat() -> Swift.String
+  public func durationFormat(style: Foundation.DateComponentsFormatter.UnitsStyle, allowedUnits: Foundation.NSCalendar.Unit = [.hour, .minute, .second]) -> Swift.String
+}
+extension Swift.Sequence where Self.Element : Swift.AdditiveArithmetic {
+  public func sum() -> Self.Element
+}
+extension CoreFoundation.CGFloat {
+  public func rounded(decimalPoint: Swift.Int) -> CoreFoundation.CGFloat
+}
+extension Foundation.IndexPath {
+  public static var zero: Foundation.IndexPath {
+    get
+  }
+}
+public enum ZDSoundType {
+  case tap, message, failure
+  public static func == (a: ZDHelperKit.ZDSoundType, b: ZDHelperKit.ZDSoundType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ZDSystemSoundManager {
+  public static func play(sound: ZDHelperKit.ZDSoundType)
+  public static func playSound(code: Swift.UInt32)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ZDSystemFeedback {
+  public static func add(_ type: UIKit.UIImpactFeedbackGenerator.FeedbackStyle)
+  @objc deinit
+}
+extension UIKit.UIView : ZDHelperKit.ZDHelperViewExtension {
+}
+public protocol ZDHelperViewExtension {
+  func setRoundedCorners()
+  func setCornerRadius(at radius: CoreFoundation.CGFloat)
+  func setVisibility(_ visibility: Swift.Bool)
+  static func initialize<T>(withNibName nibName: Swift.String, index: Swift.Int, at bundle: Foundation.Bundle) -> T where T : UIKit.UIView
+  func setBorder(color: UIKit.UIColor, lineWidth: CoreFoundation.CGFloat, opacity: Swift.Float)
+  var safeAreaWidth: CoreFoundation.CGFloat { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  func roundCorners(_ corners: UIKit.UIRectCorner, radius: CoreFoundation.CGFloat) -> QuartzCore.CAShapeLayer?
+  #endif
+  func transformAnimation(duration: Foundation.TimeInterval, bounceLength: CoreFoundation.CGFloat, onCompletion: @escaping () -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  var parentViewController: UIKit.UIViewController? { get }
+  #endif
+  func flip()
+  func addShadow(location: UIKit.UIControl.ContentVerticalAlignment, color: UIKit.UIColor, opacity: Swift.Float, radius: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat)
+  func applyLoadingAnimation()
+}
+extension ZDHelperKit.ZDHelperViewExtension where Self : UIKit.UIView {
+  public func setRoundedCorners()
+  public func setCornerRadius(at radius: CoreFoundation.CGFloat)
+  public func setVisibility(_ visibility: Swift.Bool)
+  public static func initialize<T>(withNibName nibName: Swift.String, index: Swift.Int = .zero, at bundle: Foundation.Bundle = .main) -> T where T : UIKit.UIView
+  public func setBorder(color: UIKit.UIColor, lineWidth: CoreFoundation.CGFloat = 1, opacity: Swift.Float = 1)
+  public func setShadow(on corners: UIKit.UIRectCorner, color: UIKit.UIColor, opacity: Swift.Float = 1, radius: CoreFoundation.CGFloat, offset: CoreFoundation.CGSize = .zero)
+  public var safeAreaWidth: CoreFoundation.CGFloat {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public func roundCorners(_ corners: UIKit.UIRectCorner, radius: CoreFoundation.CGFloat) -> QuartzCore.CAShapeLayer?
+  #endif
+  public func transformAnimation(duration: Foundation.TimeInterval, bounceLength: CoreFoundation.CGFloat, onCompletion: @escaping () -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var parentViewController: UIKit.UIViewController? {
+    get
+  }
+  #endif
+  public func flip()
+  public func addShadow(location: UIKit.UIControl.ContentVerticalAlignment, color: UIKit.UIColor = .black, opacity: Swift.Float = 0.5, radius: CoreFoundation.CGFloat = 5.0, height: CoreFoundation.CGFloat = 10)
+  public func addShadow(offset: CoreFoundation.CGSize, color: UIKit.UIColor = .black, opacity: Swift.Float = 0.5, radius: CoreFoundation.CGFloat = 5.0)
+  public func applyLoadingAnimation()
+}
+public protocol Nullable {
+  func nullify()
+}
+extension UIKit.UILabel : ZDHelperKit.Nullable {
+  @_Concurrency.MainActor @preconcurrency public func nullify()
+}
+extension UIKit.UINib {
+  @_Concurrency.MainActor @preconcurrency public static func with(name: Swift.String, at bundle: Foundation.Bundle = .main) -> UIKit.UINib
+}
+@available(iOS 13.0, *)
+extension ZDHelperKit.Toast : Swift.Sendable {}
+extension ZDHelperKit.Currency : Swift.Equatable {}
+extension ZDHelperKit.Currency : Swift.Hashable {}
+extension ZDHelperKit.Currency : Swift.RawRepresentable {}
+extension ZDHelperKit.NumberFormatterType : Swift.Equatable {}
+extension ZDHelperKit.NumberFormatterType : Swift.Hashable {}
+extension ZDHelperKit.ZDHLogEvent : Swift.Equatable {}
+extension ZDHelperKit.ZDHLogEvent : Swift.Hashable {}
+extension ZDHelperKit.ZDHLogEvent : Swift.RawRepresentable {}
+@available(iOS 13.0, *)
+extension ZDHelperKit.BlurView : Swift.Sendable {}
+extension ZDHelperKit.ZDSoundType : Swift.Equatable {}
+extension ZDHelperKit.ZDSoundType : Swift.Hashable {}

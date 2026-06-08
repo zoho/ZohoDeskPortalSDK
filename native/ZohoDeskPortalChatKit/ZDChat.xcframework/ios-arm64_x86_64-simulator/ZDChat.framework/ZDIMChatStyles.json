@@ -1,0 +1,127 @@
+{
+    "conditionalStyles":[
+        {
+            "uid": "navBarBtnStyles",
+            "options": [
+                {
+                    "value": "disable",
+                    "condition": "is",
+                    "style": {
+                        "isHide": true,
+                        "tintColor_id": "error",
+                        "textStyle": {
+                            "textColor_id": "error",
+                            "fontStyle_id":"headline",
+                            "isEditable": false
+                        }
+                    }
+                },
+                {
+                    "value": "enable",
+                    "condition": "is",
+                    "style": {
+                        "isHide": false,
+                        "tintColor_id": "navigationBtnTint",
+                        "textStyle": {
+                            "textColor_id": "navigationBtnTint",
+                            "fontStyle_id":"headline",
+                            "isEditable": false
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "replyTextMsgStyle",
+            "options": [
+                {
+                    "value": "notRestricted",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "body",
+                            "textColor_id": "white",
+                            "maxLines": 0
+                        }
+                    }
+                },
+                {
+                    "value": "restricted",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "body",
+                            "textColor_id": "white",
+                            "maxLines": 4
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "textMsgStyle",
+            "options": [
+                {
+                    "value": "notRestricted",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "body",
+                            "textColor_id": "primaryTxtClr",
+                            "isEditable": false,
+                            "maxLines": 0
+                        }
+                    }
+                },
+                {
+                    "value": "restricted",
+                    "condition": "is",
+                    "style": {
+                        "textStyle": {
+                            "fontStyle_id": "body",
+                            "textColor_id": "primaryTxtClr",
+                            "isEditable": false,
+                            "maxLines": 4
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "uid": "chatSendBtnStyle",
+            "options": [
+                {
+                    "value": "disable",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "disableBG",
+                        "cornerRadius": {
+                            "all": 15
+                        },
+                        "tintColor_id": "disableClr",
+                        "imageStyle": {
+                            "contentType": "contain"
+                        }
+                    }
+                },
+                {
+                    "value": "enable",
+                    "condition": "is",
+                    "style": {
+                        "bgColor_id": "tintClr",
+                        "cornerRadius": {
+                            "all": 15
+                        },
+                        "imageStyle": {
+                            "contentType": "contain"
+                        },
+                        "textStyle": {
+                            "textColor_id": "white"
+                        },
+                        "tintColor_id": "white"
+                    }
+                }
+            ]
+        }
+    ]
+}

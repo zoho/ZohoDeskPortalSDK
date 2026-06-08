@@ -1,0 +1,480 @@
+{
+    "screens" : [
+        {
+            "uid": "TicketCreationScreen",
+            "screenType": "list",
+            "r_uid": "TicketCreationScreen",
+            "typeOfrender": "dynamic",
+            "passOnAction": {
+                "actionKey": "passtonext",
+                "uiActionType": "passOn",
+                "navigationIDs": [
+                    "asapTicketDetail",
+                    "goRoot",
+                    "goBack",
+                    "actionSheet",
+                    "nativeAlert",
+                    "asapPicker",
+                    "ZDRadioButtonCustomActionSheet"
+                ]
+            },
+            "segments": [
+                {
+                    "configuration": {
+                        "isNative": true
+                    },
+                    "segmentType": "topNavigationBar",
+                    "style": {
+                        "bgColor_id": "HeaderColor",
+                        "tintColor_id": "BarButtonColor"
+                    },
+                    "patterns": [
+                        {
+                            "key": "zpBackIcon",
+                            "itemType": "leftBarButton",
+                            "style": {
+                                "textStyle": {
+                                    "textColor_id": "White"
+                                }
+                            },
+                            "actions": [
+                                {
+                                    "actionKey": "zpBackAction",
+                                    "uiActionType": "tap",
+                                    "navigationIDs":[
+                                        "goBack",
+                                        "goRoot",
+                                        "nativeAlert",
+                                        "actionSheet"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "zpScreenTitle",
+                            "itemType": "label",
+                            "style": {
+                                "textStyle": {
+                                    "textColor_id": "NavTitleColor"
+                                }
+                            }
+                        },
+                        {
+                            "key": "zpAttachmentIcon",
+                            "itemType": "rightBarButton",
+                            "style": {
+                                "textStyle": {
+                                    "textColor_id": "White"
+                                }
+                            },
+                            "actions": [
+                                {
+                                    "actionKey": "zpAttachmentAction",
+                                    "uiActionType": "tap",
+                                    "navigationIDs": [
+                                        "ZDAttachmentScreen"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "zpSendButton",
+                            "itemType": "rightBarButton",
+                            "style": {
+                                "textStyle": {
+                                    "textColor_id": "White",
+                                    "fontStyle_id": "sf-regular-17",
+                                    "alignment": "right"
+                                }
+                            },
+                            "actions": [
+                                {
+                                    "actionKey": "zpSendAction",
+                                    "uiActionType": "tap",
+                                    "navigationIDs": [
+                                        "goRoot",
+                                        "goBack",
+                                        "asapTicketDetail",
+                                        "TicketPropertiesNative"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },{
+                    "segmentType" : "collapsingHeader",
+                    "patterns" : [
+                        {
+                            "key" : "picklistContainer",
+                            "itemType": "vStack",
+                            "items" : [
+                                {
+                                    "key": "Picklist",
+                                    "itemType": "vStack",
+                                    "itemSizeAttribute": {
+                                        "padding": {
+                                            "top": 15,
+                                            "right":15,
+                                            "left": 15,
+                                            "bottom": 5
+                                        }
+                                    },
+                                    "items": [
+                                        {
+                                            "key": "baseStackHolder",
+                                            "itemType": "hStack",
+                                            "itemSizeAttribute": {
+                                                "padding": {
+                                                    "bottom": 4
+                                                }
+                                            },
+                                            "includePattern_id": "ZPTicketFieldHeader"
+                                        },
+                                        {
+                                            "key": "baseStackHolder",
+                                            "itemType": "vStack",
+                                            "style": {
+                                                "borderStyle": {
+                                                    "borderColor_id": "FieldBorderColor",
+                                                    "borderWidth": 1
+                                                },
+                                                "cornerRadius": {
+                                                    "all": 10
+                                                }
+                                            },
+                                            "actions": [
+                                                {
+                                                    "actionKey": "zpPicklistAction",
+                                                    "uiActionType": "tap",
+                                                    "navigationIDs": [
+                                                        "asapPicker",
+                                                        "nativeAlert",
+                                                        "actionSheet",
+                                                        "ZDConfirmActionSheet"
+                                                    ]
+                                                }
+                                            ],
+                                            "items": [
+                                                {
+                                                    "key": "baseStackHolder",
+                                                    "itemType": "hStack",
+                                                    "itemSizeAttribute": {
+                                                        "padding": {
+                                                            "top":12,
+                                                            "bottom":12,
+                                                            "left": 15,
+                                                            "right": 15
+                                                        }
+                                                    },
+                                                    "items": [
+                                                        {
+                                                            "key": "zpEditField",
+                                                            "itemType": "textInput",
+                                                            "style": {
+                                                                "textStyle": {
+                                                                    "fontStyle_id": "sf-medium-15",
+                                                                    "textColor_id": "PrimaryText"
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "key": "zpDetailIcon",
+                                                            "itemType": "iconView",
+                                                            "style": {
+                                                                "textStyle": {
+                                                                    "textColor_id": "IconColor",
+                                                                    "alignment": "center"
+                                                                }
+                                                            },
+                                                            "itemSizeAttribute": {
+                                                                "padding": {
+                                                                    "left": 8,
+                                                                    "right": 0
+                                                                },
+                                                                "width": {
+                                                                    "valueType": "staticValue",
+                                                                    "value": 20
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "zpWarningContainer",
+                                            "itemType": "vStack",
+                                            "includePattern_id": "ZPWarningView"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id": "WidgetColor"
+                    }
+                },
+                {
+                    "segmentType": "sectionHeader",
+                    "includePattern_id" : "TicketFormSectionHeader"
+                },
+                {
+                    "segmentType": "listItem",
+                    "includePattern_id" : "createFormCells"
+                },
+                {
+                    "segmentType": "bottomNavigationBar",
+                    "style": {
+                        "bgColor_id": "WidgetColor"
+                    },
+                    "segmentSizeAttribute": {
+                        "height": {
+                            "valueType": "staticValue",
+                            "value": 40
+                        }
+                    },
+                    "includePattern_id": "PoweredByView"
+                }
+            ]
+        },
+        {
+            "uid": "TicketPropertieScreen",
+            "screenType": "list",
+            "r_uid": "TicketPropertieScreen",
+            "typeOfrender": "dynamic",
+            "passOnAction": {
+                "actionKey": "passtonext",
+                "uiActionType": "passOn",
+                "navigationIDs": [
+                    "goRoot",
+                    "goBack",
+                    "TicketPropertiesNative"
+                ]
+            },
+            "segments": [
+                {
+                    "configuration": {
+                        "isNative": true
+                    },
+                    "segmentType": "topNavigationBar",
+                    "style": {
+                        "bgColor_id": "HeaderColor",
+                        "tintColor_id": "BarButtonColor"
+                    },
+                    "patterns": [
+                        {
+                            "key": "zpBackIcon",
+                            "itemType": "leftBarButton",
+                            "style": {
+                                "textStyle": {
+                                    "textColor_id": "White"
+                                }
+                            },
+                            "actions": [
+                                {
+                                    "actionKey": "zpBackAction",
+                                    "uiActionType": "tap",
+                                    "navigationIDs":[
+                                        "goBack",
+                                        "goRoot",
+                                        "nativeAlert",
+                                        "actionSheet"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "zpScreenTitle",
+                            "itemType": "label",
+                            "style": {
+                                "textStyle": {
+                                    "textColor_id": "NavTitleColor"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id": "WidgetColor"
+                    }
+                },
+                {
+                    "segmentType": "sectionHeader",
+                    "includePattern_id" : "TicketFormSectionHeader"
+                },
+                {
+                    "segmentType": "listItem",
+                    "includePattern_id" : "propertiesFormCells"
+                },
+                {
+                    "segmentType": "bottomNavigationBar",
+                    "style": {
+                        "bgColor_id": "WidgetColor"
+                    },
+                    "segmentSizeAttribute": {
+                        "height": {
+                            "valueType": "staticValue",
+                            "value": 40
+                        }
+                    },
+                    "includePattern_id": "PoweredByView"
+                }
+            ]
+        },
+        {
+            "uid": "PicklistScreen",
+            "screenType": "list",
+            "module": "common",
+            "r_uid": "PicklistScreen",
+            "typeOfrender": "dynamic",
+            "passOnAction": {
+                "actionKey": "passtonext",
+                "uiActionType": "passOn",
+                "navigationIDs": [
+                    "goBack"
+                ]
+            },
+            "segments": [
+                {
+                    "configuration":{
+                        "isNative":true
+                    },
+                    "segmentType": "topNavigationBar",
+                    "style": {
+                        "bgColor_id": "HeaderColor",
+                        "tintColor_id": "BarButtonColor"
+                    },
+                    "patterns": [
+                        {
+                            "key": "zpBackIcon",
+                            "itemType": "leftBarButton",
+                            "style": {
+                                "textStyle": {
+                                    "textColor_id": "White"
+                                }
+                            },
+                            "actions": [
+                                {
+                                    "actionKey": "zpBackAction",
+                                    "uiActionType": "tap",
+                                    "navigationIDs":[
+                                        "goBack"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "zpScreenTitle",
+                            "itemType": "label",
+                            "style": {
+                                "textStyle": {
+                                    "textColor_id": "NavTitleColor"
+                                }
+                            }
+                        },
+                        {
+                            "key": "zpDoneButton",
+                            "itemType": "rightBarButton",
+                            "style" : {
+                                "textStyle": {
+                                    "textColor_id": "White"
+                                }
+                            },
+                            "actions": [
+                                {
+                                    "actionKey": "zpSendAction",
+                                    "uiActionType": "tap",
+                                    "navigationIDs": [
+                                        "goBack"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "segmentType": "search",
+                    "configuration": {
+                        "hidesSearchBarWhenScrolling": true
+                    },
+                    "includePattern_id" : "NativeSearchView"
+                },
+                {
+                    "segmentType": "container",
+                    "style": {
+                        "bgColor_id":"BGColor"
+                    }
+                },
+                {
+                    "segmentType": "listItem",
+                    "actions": [
+                        {
+                            "actionKey": "zpListAction",
+                            "uiActionType": "tap",
+                            "navigationIDs": [
+                                "goBack",
+                                "asapPicker",
+                                "actionSheet",
+                                "nativeAlert"
+                            ]
+                        }
+                    ],
+                    "style": {
+                        "bgColor_id": "WidgetColor"
+                    },
+                    "includePattern_id" : "PickListCells"
+                },
+                {
+                    "segmentType": "bottomNavigationBar",
+                    "style":{
+                        "bgColor_id":"WidgetColor"
+                    },
+                    "segmentSizeAttribute": {
+                        "height": {
+                            "valueType": "staticValue",
+                            "value": 40
+                        }
+                    },
+                    "includePattern_id": "PoweredByView"
+                },
+                {
+                    "segmentType": "floatingHeader",
+                    "includePattern_id" : "nestedPicklistHeader"
+                }
+            ]
+        }
+        
+    ],
+    "navigations" : [
+        {
+            "navigation_uid": "asapPicker",
+            "navigationKey": "PicklistScreenNativePresent",
+            "destination_id": "PicklistScreen",
+            "transitionType": "present"
+        },{
+            "navigation_uid": "asapPicker",
+            "navigationKey": "PicklistScreenNativePush",
+            "destination_id": "PicklistScreen",
+            "transitionType": "push"
+        }, {
+            "navigation_uid": "TicketPropertiesNative",
+            "navigationKey": "TicketPropertiesScreen",
+            "transitionType": "push",
+            "destination_id": "TicketPropertieScreen"
+        },
+       
+        {
+            "navigation_uid": "TicketEditNative",
+            "navigationKey": "TicketCreationScreen",
+            "transitionType": "push",
+            "destination_id": "TicketCreationScreen"
+        }
+    ]
+    
+}

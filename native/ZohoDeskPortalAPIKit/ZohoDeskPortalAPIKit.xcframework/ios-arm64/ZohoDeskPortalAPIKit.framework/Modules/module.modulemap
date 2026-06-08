@@ -1,0 +1,4 @@
+framework module ZohoDeskPortalAPIKit {
+  header "ZohoDeskPortalAPIKit-Swift.h"
+  requires objc
+}

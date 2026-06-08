@@ -1,0 +1,4 @@
+framework module ZDLayoutKit {
+  header "ZDLayoutKit-Swift.h"
+  requires objc
+}

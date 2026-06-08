@@ -1,0 +1,2317 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZohoDeskPortalAPIKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import Foundation
+import Swift
+import SystemConfiguration
+import UIKit
+import WebKit
+import ZIAMCryptKit
+import ZohoPortalAuthKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers @objcMembers public class ZohoDeskPortalSDK : ObjectiveC.NSObject {
+  @objc public static func initialize(orgID: Swift.String, appID: Swift.String, dataCenter: ZohoDeskPortalAPIKit.ZDPDataCenter = .US)
+  @objc public static var isUserLoggedIn: Swift.Bool {
+    @objc get
+  }
+  @_inheritsConvenienceInitializers @objc(ZohoDeskPortalSDKArticle) public class Article : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers @objc(ZohoDeskPortalSDKTicket) public class Ticket : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers @objc(ZohoDeskPortalSDKCommunity) public class Community : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc deinit
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension ZohoDeskPortalAPIKit.ZohoDeskPortalSDK {
+  @objc public static func enableLogs()
+  @objc public static func login(withJWTToken identifier: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func signIn(onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func signUp(inLanguage languageCode: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getUserInformation(onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPortal.ZDPProfile?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func updateUserInformation(with dict: [Swift.String : Swift.String], onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPortal.ZDPProfile?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  @objc public static func logout(onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func clearAllLocalData()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getDepartments(onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPortal.Department]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getProducts(inDepartmentID deptID: Swift.String, params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPortal.ZDPProduct]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getContent(from url: Swift.String, onCompletion handler: @escaping (Foundation.Data?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func syncSettings(onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPortal.ZDPSettings?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  @objc public static func enablePushNotification(deviceToken: Swift.String, isTestDevice: Swift.Bool = false, mode: ZohoDeskPortalAPIKit.APNSmode)
+  @objc public static func disablePushNotifications(deviceToken: Swift.String, mode: ZohoDeskPortalAPIKit.APNSmode, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getContactsBy(email emailID: Swift.String, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPortal.ZDPContact?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getContactsBy(ids params: [Swift.String : Swift.String], onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPortal.ZDPContact]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func searchContactsBy(text params: [Swift.String : Swift.String], onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPortal.ZDPContact]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getAccounts(text params: [Swift.String : Swift.String], onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPortal.ZDPAccount]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZohoDeskPortalSDK.Article {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func get(forID articleID: Swift.String, locale: Swift.String?, with params: [Swift.String : Any]?, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPArticleDetail?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getList(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPArticle]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func get(withLink permalink: Swift.String, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPArticleDetail?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getRelated(forArticleID articleID: Swift.String, inLocale locale: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPArticle]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getAttachments(forArticleID articleID: Swift.String, inLocale locale: Swift.String?, _ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPArticleAttachment]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getContent(ofAttachmentID attachmentID: Swift.String, inArticleID articleID: Swift.String, inLocale locale: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Foundation.Data?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  @objc public static func like(_ articleID: Swift.String, locale: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func dislike(_ articleID: Swift.String, locale: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func post(_ feedback: ZohoDeskPortalAPIKit.ZDPArticle.KBFeedback, forArticleID articleID: Swift.String, inLocale locale: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func search(_ keyword: Swift.String, inCategoryID categoryID: Swift.String?, _ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPArticle]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getCategories(forCategoryID categoryID: Swift.String, with params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPArticle.CategoryDetail]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getCategoriesByPermalink(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPArticle.CategoryDetail?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getCategoryTree(forCategoryId categoryId: Swift.String, with params: [Swift.String : Any]?, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPArticle.CategoryDetail?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getArticleComments(forArticleId articleId: Swift.String, andLocale locale: Swift.String, params: [Swift.String : Any], onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPArticleComment]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZohoDeskPortalSDK.Ticket {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getLayouts(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPTicket.FormLayout]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getForm(_ params: [Swift.String : Any]?, headers: [Swift.String : Swift.String]?, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPTicket.TicketForm?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getTemplates(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPTicket.Template]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getTemplate(withID templateID: Swift.String, onCompletion handler: @escaping ([Swift.String : Any]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getFields(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPTicket.TicketField]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getLayoutRules(params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPTicket.LayoutRule]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getValidationRules(params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPTicket.ValidationRule]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func add(withFields fields: [Swift.String : Any], onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPTicket?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func updateTicket(withID id: Swift.String, params: [Swift.String : Any], onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPTicket?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getList(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPTicket]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getAttachment(forID ticketID: Swift.String, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPortal.ZDPAttachment]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func searchTickets(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPTicket]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func get(forID ticketID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPTicket?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getThreads(forTicketID ticketID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping ([[Swift.String : Any]]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getThread(withID threadID: Swift.String, forTicketID ticketID: Swift.String, onCompletion handler: @escaping ([Swift.String : Any]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func reply(_ thread: [Swift.String : Any], toTicketID ticketID: Swift.String, onCompletion handler: @escaping ([Swift.String : Any]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func edit(_ thread: [Swift.String : Any], withID threadID: Swift.String, inTicketID ticketID: Swift.String, onCompletion handler: @escaping ([Swift.String : Any]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getConversations(forTicketID ticketID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping ([[Swift.String : Any]]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getComments(forTicketID ticketID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping ([[Swift.String : Any]]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func add(_ comment: [Swift.String : Any], toTicketID ticketID: Swift.String, onCompletion handler: @escaping ([Swift.String : Any]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func edit(_ comment: [Swift.String : Any], withID commentID: Swift.String, toTicketID ticketID: Swift.String, onCompletion handler: @escaping ([Swift.String : Any]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func addAttachment(with data: Foundation.Data, andName fileName: Swift.String, using delegate: (any ZohoDeskPortalAPIKit.ZDPUploaderDelegate)? = nil, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPortal.ZDPAttachment?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  @objc public static func deleteAttachment(withID attachmentID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getContent(ofAttachmentID attachmentID: Swift.String, forCommentID commentID: Swift.String, inTicketID ticketID: Swift.String, onCompletion handler: @escaping (Foundation.Data?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getContent(ofAttachmentID attachmentID: Swift.String, forthreadID threadID: Swift.String, inTicketID ticketID: Swift.String, onCompletion handler: @escaping (Foundation.Data?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  @objc public static func deleteComment(withID commentID: Swift.String, forTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getResolution(_ ticketID: Swift.String, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPTicket.Resolution?, Foundation.NSError?) -> Swift.Void)
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZohoDeskPortalSDK.Community {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getCategories(onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPCommunityCategoryDetail]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  @objc public static func followCategory(withID categoryID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func unfollowCategory(withID categoryID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getTopics(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getMostDisuccedTopics(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getMostPopularTopics(_ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getTopic(withID topicID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func add(_ topic: ZohoDeskPortalAPIKit.ZDPCommunity.TopicData, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  @objc public static func moveDraft(withID topicID: Swift.String, toCategoryID categoryID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func edit(_ topic: ZohoDeskPortalAPIKit.ZDPCommunity.TopicData, withID topicID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  @objc public static func followTopic(withID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func unfollowTopic(withID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func likeTopic(withID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func deleteTopic(withID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getTopicDrafts(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.Drafts?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getComments(ofTopicID topicID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPCommunity.TopicComment]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func postComment(_ comment: ZohoDeskPortalAPIKit.ZDPCommunityCommentData, forTopicID topicID: Swift.String, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.TopicComment?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func updateComment(_ comment: ZohoDeskPortalAPIKit.ZDPCommunityCommentData, withID id: Swift.String, forTopicID topicID: Swift.String, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.TopicComment?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  @objc public static func deleteComment(withID id: Swift.String, forTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func postReply(_ data: ZohoDeskPortalAPIKit.ZDPCommunityCommentData, forCommentID commentID: Swift.String, inTopicID topicID: Swift.String, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.TopicComment?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func updateReply(_ comment: ZohoDeskPortalAPIKit.ZDPCommunityCommentData, withID id: Swift.String, forCommentID commentID: Swift.String, inTopicID topicID: Swift.String, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.TopicComment?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  @objc public static func deleteReply(withID id: Swift.String, forCommentID commentID: Swift.String, inTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func addAttachment(with data: Foundation.Data, andName fileName: Swift.String, using delegate: (any ZohoDeskPortalAPIKit.ZDPUploaderDelegate)? = nil, onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPortal.ZDPAttachment?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  @objc public static func deleteAttachment(withID attachmentID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getContent(ofAttachmentID attachmentID: Swift.String, forCommentID commentID: Swift.String?, inTopicID topicID: Swift.String, onCompletion handler: @escaping (Foundation.Data?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func searchTopics(keyword: Swift.String, otherParams: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getPreferences(onCompletion handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.TopicPreferences?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getTopic(withPermaLink permaLink: Swift.String, _ params: [Swift.String : Any]?, handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getCommunityCategory(withCategoryId categoryId: Swift.String, handler: @escaping (ZohoDeskPortalAPIKit.ZDPCommunityCategoryDetail?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getTopContributors(params: [Swift.String : Any]?, handler: @escaping ([ZohoDeskPortalAPIKit.ZDPortal.ZDPUser]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getParticipants(ofTopic topicID: Swift.String, params: [Swift.String : Any]?, handler: @escaping ([ZohoDeskPortalAPIKit.ZDPortal.ZDPUser]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func getUnRepliedTopics(params: [Swift.String : Any]?, onCompletion handler: @escaping ([ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic]?, Foundation.NSError?) -> Swift.Void)
+  #endif
+}
+@_hasMissingDesignatedInitializers final public class ZDPReachability {
+  final public class func isConnectedToNetwork() -> Swift.Bool
+  @objc deinit
+}
+@objc public class ZDPTicket : ObjectiveC.NSObject, Swift.Codable {
+  public typealias Dependency = [Swift.String : [Swift.String : [Swift.String]]]
+  @objc public var ticketNumber: Swift.String
+  @objc public var modifiedTime: Swift.String?
+  @objc public var creator: ZohoDeskPortalAPIKit.ZDPortal.ZDPUser?
+  @objc public var subject: Swift.String
+  @objc public var dueDate: Swift.String?
+  @objc public var departmentID: Swift.String, threadCount: Swift.String
+  @objc public var channel: Swift.String?
+  @objc public var onholdTime: Swift.String?
+  @objc public var priority: Swift.String?
+  @objc public var closedTime: Swift.String?
+  @objc public var assignee: ZohoDeskPortalAPIKit.ZDPortal.ZDPUser?
+  @objc public var commentCount: Swift.String, createdTime: Swift.String, id: Swift.String, status: Swift.String
+  public var cf: [Swift.String : Swift.String?]?
+  @objc public var secondaryContacts: [Swift.String]?
+  @objc public var tickeDescription: Swift.String?
+  @objc public var resolution: Swift.String?, responseDueDate: Swift.String?
+  @objc public var modifiedBy: ZohoDeskPortalAPIKit.ZDPortal.ZDPUser?
+  @objc public var email: Swift.String?
+  @objc public var productID: Swift.String?
+  @objc public var contactID: Swift.String?, classification: Swift.String?, language: Swift.String?
+  @objc public var teamID: Swift.String?
+  @objc public var layoutDetails: ZohoDeskPortalAPIKit.ZDPortal.LayoutDetails?
+  @objc public var phone: Swift.String?
+  @objc public var category: Swift.String?
+  @objc public var subCategory: Swift.String?
+  @objc public var account: ZohoDeskPortalAPIKit.ZDPortal.ZDPAccount?
+  @objc public var product: ZohoDeskPortalAPIKit.ZDPortal.ZDPProduct?
+  @objc public var hasBlueprint: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(ticketNumber: Swift.String, modifiedTime: Swift.String, creator: ZohoDeskPortalAPIKit.ZDPortal.ZDPUser?, subject: Swift.String, dueDate: Swift.String?, departmentID: Swift.String, channel: Swift.String, threadCount: Swift.String, onholdTime: Swift.String?, priority: Swift.String, closedTime: Swift.String?, commentCount: Swift.String, createdTime: Swift.String, id: Swift.String, status: Swift.String, tickeDescription: Swift.String?, resolution: Swift.String?, responseDueDate: Swift.String?, modifiedBy: ZohoDeskPortalAPIKit.ZDPortal.ZDPUser?, email: Swift.String?, productID: Swift.String?, contactID: Swift.String?, classification: Swift.String?, teamID: Swift.String?, assignee: ZohoDeskPortalAPIKit.ZDPortal.ZDPUser?, hasBlueprint: Swift.Bool?, layoutDetails: ZohoDeskPortalAPIKit.ZDPortal.LayoutDetails?, cf: [Swift.String : Swift.String?]?, secondaryContacts: [Swift.String]?, category: Swift.String?, subCategory: Swift.String?, language: Swift.String?, account: ZohoDeskPortalAPIKit.ZDPortal.ZDPAccount?, phone: Swift.String?, product: ZohoDeskPortalAPIKit.ZDPortal.ZDPProduct?)
+  #endif
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket {
+  @_inheritsConvenienceInitializers @objc public class StatusTypeCount : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var statusType: [ZohoDeskPortalAPIKit.ZDPTicket.CountbyStatus]?
+    @objc override dynamic public init()
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @_inheritsConvenienceInitializers @objc public class CountbyStatus : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var count: Swift.String?
+    @objc public var value: Swift.String?
+    @objc override dynamic public init()
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ZDPData : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var departmentID: Swift.String, subject: Swift.String
+    @objc public var productID: Swift.String?, phone: Swift.String?
+    @objc public var ticketDescription: Swift.String?, priority: Swift.String?, classification: Swift.String?
+    public init(subject: Swift.String, departmentID: Swift.String)
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(productID: Swift.String?, phone: Swift.String?, subject: Swift.String, departmentID: Swift.String, ticketDescription: Swift.String?, priority: Swift.String?, classification: Swift.String?)
+    #endif
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @_hasMissingDesignatedInitializers @objc public class TicketForm : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var sections: [ZohoDeskPortalAPIKit.ZDPTicket.FormSection]
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class FormSection : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var sectionName: Swift.String
+    @objc public var fields: [ZohoDeskPortalAPIKit.ZDPTicket.TicketField]
+    public init(sectionName: Swift.String, fields: [ZohoDeskPortalAPIKit.ZDPTicket.TicketField])
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc(ZDTicketField) final public class TicketField : ObjectiveC.NSObject {
+    @objc final public var displayLabel: Swift.String?
+    @objc final public var i18NLabel: Swift.String?, apiName: Swift.String?
+    @objc final public var id: Swift.String?
+    @objc final public var name: Swift.String?
+    @objc final public var type: Swift.String
+    @objc final public var isMandatory: Swift.Bool
+    @objc final public var allowedValues: [Swift.String]?
+    @objc final public var dependency: ZohoDeskPortalAPIKit.ZDPTicket.Dependency?
+    @objc final public var defaultValue: Swift.String?, toolTip: Swift.String?, toolTipType: Swift.String?, sortBy: Swift.String?
+    @objc final public var statusMapping: [ZohoDeskPortalAPIKit.ZDPTicket.StatusMap]?
+    @objc final public var restoreOnReplyValues: [Swift.String]?
+    @objc final public var roundingOption: Swift.String?
+    @objc final public var fieldName: Swift.String?
+    @objc final public var uploadAttachment: Swift.String?, captchaURL: Swift.String?
+    @objc final public var isPHI: Swift.Bool
+    @objc final public var isEncryptedField: Swift.Bool
+    @objc final public var isNested: Swift.Bool
+    @objc final public var audioCaptchaurl: Swift.String?
+    @objc final public var imageCaptchaurl: Swift.String?
+    @objc final public var isVisible: Swift.Bool {
+      @objc get
+      @objc set
+    }
+    @objc final public var maxLength: Swift.Int {
+      @objc get
+      @objc set
+    }
+    @objc final public var precison: Swift.Int {
+      @objc get
+      @objc set
+    }
+    @objc final public var decimals: Swift.Int {
+      @objc get
+      @objc set
+    }
+    @objc final public var isReadOnly: Swift.Bool {
+      @objc get
+      @objc set
+    }
+    @objc final public var isCustomField: Swift.Bool {
+      @objc get
+      @objc set
+    }
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(displayLabel: Swift.String?, apiName: Swift.String?, isReadOnly: Swift.Bool?, isCustomField: Swift.Bool?, i18NLabel: Swift.String?, name: Swift.String?, id: Swift.String?, isVisible: Swift.Bool?, type: Swift.String, maxLength: Swift.Int?, isMandatory: Swift.Bool, allowedValues: [Swift.String]?, dependency: ZohoDeskPortalAPIKit.ZDPTicket.Dependency?, defaultValue: Swift.String?, toolTip: Swift.String?, toolTipType: Swift.String?, sortBy: Swift.String?, statusMapping: [ZohoDeskPortalAPIKit.ZDPTicket.StatusMap]?, restoreOnReplyValues: [Swift.String]?, roundingPrecision: Swift.Int?, decimalPlaces: Swift.Int?, roundingOption: Swift.String?, uploadAttachment: Swift.String?, captchaURL: Swift.String?, fieldName: Swift.String?, isPHI: Swift.Bool?, isEncrypted: Swift.Bool?, isNested: Swift.Bool?, imageCaptchaUrl: Swift.String?, audioCaptchaUrl: Swift.String?)
+    #endif
+    public init(type: Swift.String, isMandatory: Swift.Bool)
+    public init(displayLabel: Swift.String, apiName: Swift.String, type: Swift.String, isMandatory: Swift.Bool = false)
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers @objc public class StatusMap : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var mappingValue: Swift.String
+    @objc public var name: Swift.String
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class Template : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var ticketTemplateName: Swift.String, id: Swift.String
+    public init(ticketTemplateName: Swift.String, id: Swift.String)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @_inheritsConvenienceInitializers @objc public class Resolution : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var modifiedBy: ZohoDeskPortalAPIKit.ZDPortal.ZDPUser?
+    @objc public var content: Swift.String?
+    @objc public var modifiedTime: Swift.String?
+    @objc override dynamic public init()
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class TemplateDetail : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var customFields: [Swift.String : Swift.String]?
+    @objc public var productID: Swift.String?, contactID: Swift.String?, subject: Swift.String?
+    @objc public var departmentID: Swift.String
+    @objc public var dueDate: Swift.String?, channel: Swift.String?, templateDescription: Swift.String?
+    @objc public var priority: Swift.String
+    @objc public var assigneeID: Swift.String?, resolution: Swift.String?, teamID: Swift.String?
+    @objc public var email: Swift.String, status: Swift.String
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(customFields: [Swift.String : Swift.String]?, productID: Swift.String?, contactID: Swift.String?, subject: Swift.String?, departmentID: Swift.String, dueDate: Swift.String?, channel: Swift.String?, templateDescription: Swift.String?, priority: Swift.String, assigneeID: Swift.String?, resolution: Swift.String?, teamID: Swift.String?, email: Swift.String, status: Swift.String)
+    #endif
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public enum CommentContentType : Swift.Int {
+    case html
+    case plainText
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.Int)
+    #endif
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public class FormLayout : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var departmentID: Swift.String
+    @objc public var hasLogo: Swift.Bool
+    @objc public var id: Swift.String
+    @objc public var isDefaultLayout: Swift.Bool, isStandardLayout: Swift.Bool
+    @objc public var layoutDesc: Swift.String, layoutName: Swift.String, module: Swift.String
+    public init(departmentID: Swift.String, hasLogo: Swift.Bool, id: Swift.String, isDefaultLayout: Swift.Bool, isStandardLayout: Swift.Bool, layoutDesc: Swift.String, layoutName: Swift.String, module: Swift.String)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class AudioCaptcha : ObjectiveC.NSObject, Swift.Decodable {
+    public var data: ZohoDeskPortalAPIKit.ZDPTicket.AudioCaptchaData
+    @objc deinit
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class AudioCaptchaData : ObjectiveC.NSObject, Swift.Decodable {
+    public var base64: Swift.String?
+    public var id: Swift.String
+    @objc deinit
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ImageCaptcha : ObjectiveC.NSObject, Swift.Decodable {
+    public var data: ZohoDeskPortalAPIKit.ZDPTicket.ImageCaptchaData
+    @objc deinit
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ImageCaptchaData : ObjectiveC.NSObject, Swift.Decodable {
+    public var background: Swift.String?
+    public var id: Swift.String
+    public var options: [Swift.String : Swift.String]?
+    @objc deinit
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.TicketField : Swift.Codable {
+  final public func encode(to encoder: any Swift.Encoder) throws
+  convenience public init(from decoder: any Swift.Decoder) throws
+}
+@objc public enum ZDPDataCenter : Swift.Int {
+  case US
+  case CN
+  case IN
+  case EU
+  case AU
+  case JP
+  case CA
+  case SA
+  case SG
+  case INEC, UAE
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ZDPNotification {
+  public static var userLoggedOut: Foundation.Notification {
+    get
+  }
+  public static var userLoggedIn: Foundation.Notification {
+    get
+  }
+  @objc deinit
+}
+public struct PNConstants {
+  public static var refererName: Swift.String
+}
+public struct ZDPIcon {
+  public static var fontNameNew: Swift.String {
+    get
+  }
+}
+@objc public enum APNSmode : Swift.Int {
+  case sandbox
+  case production
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ZDPCache {
+  public static var profile: ZohoDeskPortalAPIKit.ZDPortal.ZDPProfile?
+  public static var settings: ZohoDeskPortalAPIKit.ZDPortal.ZDPSettings?
+  public static var helpcenterPreferences: ZohoDeskPortalAPIKit.ZDPortal.HelpCenterPreferences?
+  public static var auth: ZohoDeskPortalAPIKit.DPAuthenticator?
+  public static var cipher: ZohoDeskPortalAPIKit.ZDCipher?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getToken(handler: @escaping (Swift.Result<Swift.String, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getTokenForTimer(handler: @escaping (_ token: Swift.String?, _ timer: Swift.Int?, _ error: (any Swift.Error)?) -> Swift.Void)
+  #endif
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class ZDPDefaults : ObjectiveC.NSObject {
+  public static var shared: ZohoDeskPortalAPIKit.ZDPDefaults
+  @ZohoDeskPortalAPIKit.ZDPDefault public var isForumsVisible: Swift.Bool {
+    get
+    set
+    _modify
+  }
+  @ZohoDeskPortalAPIKit.ZDPDefault public var isTagsVisible: Swift.Bool {
+    get
+    set
+    _modify
+  }
+  @ZohoDeskPortalAPIKit.ZDPDefault public var isKBvisible: Swift.Bool {
+    get
+    set
+    _modify
+  }
+  @ZohoDeskPortalAPIKit.ZDPDefault public var isHelpCenterPublic: Swift.Bool {
+    get
+    set
+    _modify
+  }
+  @ZohoDeskPortalAPIKit.ZDPDefault public var hideSubmitTicket: Swift.Bool {
+    get
+    set
+    _modify
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @ZohoDeskPortalAPIKit.ZDPDefault public var userID: Swift.String? {
+    get
+    set
+    _modify
+  }
+  #endif
+  public var isFirstLaunchCompleted: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @ZohoDeskPortalAPIKit.ZDPDefault public var appID: Swift.String? {
+    get
+    set
+    _modify
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @ZohoDeskPortalAPIKit.ZDPDefault public var orgID: Swift.String? {
+    get
+    set
+    _modify
+  }
+  #endif
+  @ZohoDeskPortalAPIKit.ZDPDefault public var locales: [Swift.String] {
+    get
+    set
+    _modify
+  }
+  @ZohoDeskPortalAPIKit.ZDPDefault public var primaryLocale: Swift.String {
+    get
+    set
+    _modify
+  }
+  @ZohoDeskPortalAPIKit.ZDPDefault public var articleTimeVisible: Swift.Bool {
+    get
+    set
+    _modify
+  }
+  @ZohoDeskPortalAPIKit.ZDPDefault public var articleAuthorInfoVisible: Swift.Bool {
+    get
+    set
+    _modify
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @ZohoDeskPortalAPIKit.ZDPDefault public var isMultilingualEnabled: Swift.Bool? {
+    get
+    set
+    _modify
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @ZohoDeskPortalAPIKit.ZDPDefault public var helpCenterId: Swift.String? {
+    get
+    set
+    _modify
+  }
+  #endif
+  @ZohoDeskPortalAPIKit.ZDPDefault public var logInAfterScopeEnhanced: Swift.Bool {
+    get
+    set
+    _modify
+  }
+  @ZohoDeskPortalAPIKit.ZDPDefault public var isKBBotEnabled: Swift.Bool {
+    get
+    set
+    _modify
+  }
+  @ZohoDeskPortalAPIKit.ZDPDefault public var isGCChatEnabled: Swift.Bool {
+    get
+    set
+    _modify
+  }
+  @ZohoDeskPortalAPIKit.ZDPDefault public var isBMChatEnabled: Swift.Bool {
+    get
+    set
+    _modify
+  }
+  @ZohoDeskPortalAPIKit.ZDPDefault public var communityLandingPage: Swift.Int {
+    get
+    set
+    _modify
+  }
+  @ZohoDeskPortalAPIKit.ZDPDefault public var isPayloadEncryptionEnabled: Swift.Bool {
+    get
+    set
+    _modify
+  }
+  @ZohoDeskPortalAPIKit.ZDPDefault public var scopeMigration: Swift.Int {
+    get
+    set
+    _modify
+  }
+  public var canShowCommunity: Swift.Bool {
+    get
+  }
+  public var canShowKB: Swift.Bool {
+    get
+  }
+  public var canShowMyTicket: Swift.Bool {
+    get
+  }
+  public var canShowHelpCenter: Swift.Bool {
+    get
+  }
+  public var dataCenter: ZohoDeskPortalAPIKit.ZDPDataCenter {
+    get
+    set
+  }
+  public var articleFeedbackConfiguration: ZohoDeskPortalAPIKit.ZDPortal.ArticleFeedbackFormConfiguration {
+    get
+  }
+  public var isTNapp: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+@propertyWrapper public struct ZDPDefault<T> {
+  public init(wrappedValue value: T, _ key: Swift.String)
+  public var wrappedValue: T {
+    get
+    set
+  }
+}
+public class DPAuthenticator {
+  public init(clientID: Swift.String, clientSecret: Swift.String, portalID: Swift.String, scope: [Swift.String], urlScheme: Swift.String, accountsPortalURL: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func presentSignUpVC(atURL urlString: Swift.String, onCompletion handler: @escaping (Swift.Result<Swift.String, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func presentLoginVC(onCompletion handler: @escaping (Swift.Result<Swift.String, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getFirstTimeToken(withUserToken identifier: Swift.String, tokenType: ZohoPortalAuthKit.ZohoPortalAuthRemoteLoginType, onCompletion handler: @escaping (Swift.Result<Swift.String, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getOAuthToken(onCompletion handler: @escaping (Swift.Result<Swift.String, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  public func isUserLoggedIn() -> Swift.Bool
+  public func logout(onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
+}
+@objc public protocol ZDPLoggable {
+  @objc func log(_ message: Swift.String)
+}
+@_hasMissingDesignatedInitializers public class ZDPLogger : ZohoDeskPortalAPIKit.ZDPLoggable {
+  public static var shared: any ZohoDeskPortalAPIKit.ZDPLoggable
+  @objc public func log(_ message: Swift.String)
+  @objc deinit
+}
+final public class DPNotification<Type> {
+  public init(notificationName: Foundation.Notification.Name)
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func subscribe(onReceiveNotificaiton: ((Type?) -> Swift.Void)?)
+  #endif
+  final public func post(_ value: Type)
+  final public func unSubscribe()
+  @objc deinit
+}
+@_functionBuilder public struct _List<InputType> {
+  public typealias Components = [InputType]
+  public static func buildBlock(_ components: ZohoDeskPortalAPIKit._List<InputType>.Components...) -> ZohoDeskPortalAPIKit._List<InputType>.Components
+  public static func buildEither(first component: ZohoDeskPortalAPIKit._List<InputType>.Components) -> ZohoDeskPortalAPIKit._List<InputType>.Components
+  public static func buildEither(second component: ZohoDeskPortalAPIKit._List<InputType>.Components) -> ZohoDeskPortalAPIKit._List<InputType>.Components
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func buildOptional(_ component: ZohoDeskPortalAPIKit._List<InputType>.Components?) -> ZohoDeskPortalAPIKit._List<InputType>.Components
+  #endif
+  public static func buildArray(_ components: [ZohoDeskPortalAPIKit._List<InputType>.Components]) -> ZohoDeskPortalAPIKit._List<InputType>.Components
+  public static func buildExpression(_ expression: InputType) -> ZohoDeskPortalAPIKit._List<InputType>.Components
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func buildExpression(_ expression: InputType?) -> ZohoDeskPortalAPIKit._List<InputType>.Components
+  #endif
+}
+extension Foundation.Thread {
+  public static func parseAsMainThread(_ action: @escaping () -> Swift.Void)
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket {
+  @objc public class LayoutRule : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let fieldConditions: [ZohoDeskPortalAPIKit.ZDPTicket.LayoutFD]
+    @objc final public let modifiedTime: Swift.String, fieldName: Swift.String, createdBy: Swift.String, name: Swift.String
+    @objc final public let datumDescription: Swift.String, createdTime: Swift.String, modifiedBy: Swift.String, id: Swift.String
+    @objc final public let layoutID: Swift.String, status: Swift.String
+    public init(fieldConditions: [ZohoDeskPortalAPIKit.ZDPTicket.LayoutFD], modifiedTime: Swift.String, fieldName: Swift.String, createdBy: Swift.String, name: Swift.String, datumDescription: Swift.String, createdTime: Swift.String, modifiedBy: Swift.String, id: Swift.String, layoutID: Swift.String, status: Swift.String)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ValidationRule : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let fieldConditions: [ZohoDeskPortalAPIKit.ZDPTicket.ValidationFD]
+    @objc final public let modifiedTime: Swift.String, fieldName: Swift.String, createdBy: Swift.String, createdTime: Swift.String
+    @objc final public let modifiedBy: Swift.String, id: Swift.String, layoutID: Swift.String, status: Swift.String
+    public init(fieldConditions: [ZohoDeskPortalAPIKit.ZDPTicket.ValidationFD], modifiedTime: Swift.String, fieldName: Swift.String, createdBy: Swift.String, createdTime: Swift.String, modifiedBy: Swift.String, id: Swift.String, layoutID: Swift.String, status: Swift.String)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class LayoutFD : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let name: Swift.String, pattern: Swift.String
+    @objc final public let conditions: [ZohoDeskPortalAPIKit.ZDPTicket.RuleCondition]
+    @objc final public let actions: ZohoDeskPortalAPIKit.ZDPTicket.LayoutActions
+    public init(name: Swift.String, pattern: Swift.String, conditions: [ZohoDeskPortalAPIKit.ZDPTicket.RuleCondition], actions: ZohoDeskPortalAPIKit.ZDPTicket.LayoutActions)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ValidationFD : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let name: Swift.String, pattern: Swift.String
+    @objc final public let conditions: [ZohoDeskPortalAPIKit.ZDPTicket.RuleCondition]
+    @objc final public let actions: ZohoDeskPortalAPIKit.ZDPTicket.ValidationActions
+    public init(name: Swift.String, pattern: Swift.String, conditions: [ZohoDeskPortalAPIKit.ZDPTicket.RuleCondition], actions: ZohoDeskPortalAPIKit.ZDPTicket.ValidationActions)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class LayoutActions : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let showSections: [Swift.String], showFields: [Swift.String], setMandatoryFields: [Swift.String]
+    public init(showSections: [Swift.String], showFields: [Swift.String], setMandatoryFields: [Swift.String])
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ValidationActions : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let alert: Swift.String
+    public init(alert: Swift.String)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class RuleCondition : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let displayValue: [Swift.String]
+    @objc final public let condition: Swift.String, fieldName: Swift.String
+    @objc final public let value: [Swift.String]
+    public init(displayValue: [Swift.String], condition: Swift.String, fieldName: Swift.String, value: [Swift.String])
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+}
+@_inheritsConvenienceInitializers @objc public class ZDPCommunity : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension ZohoDeskPortalAPIKit.ZDPCommunity {
+  @objc public class TopicData : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var categoryID: Swift.String, subject: Swift.String, content: Swift.String
+    @objc public var attachmentIDs: [Swift.String]?
+    @objc public var tags: [Swift.String]?
+    @objc public var topicType: ZohoDeskPortalAPIKit.ZDPCTopicType {
+      @objc get
+      @objc set
+    }
+    @objc public var isDraft: Swift.Bool {
+      @objc get
+      @objc set
+    }
+    @objc public var notifyMe: Swift.Bool {
+      @objc get
+      @objc set
+    }
+    public init(subject: Swift.String, content: Swift.String, type: ZohoDeskPortalAPIKit.ZDPCTopicType, categoryID: Swift.String)
+    public init(subject: Swift.String, isDraft: Swift.Bool, attachmentIDS: [Swift.String], type: ZohoDeskPortalAPIKit.ZDPCTopicType, content: Swift.String, categoryID: Swift.String, tags: [Swift.String], notifyMe: Swift.Bool)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class DraftTopic : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var id: Swift.String, subject: Swift.String, type: Swift.String
+    public init(id: Swift.String, subject: Swift.String, type: Swift.String)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ZDPTopic : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var id: Swift.String, subject: Swift.String, content: Swift.String
+    @objc public var creator: ZohoDeskPortalAPIKit.ZDPortal.ZDPUser
+    @objc public var status: Swift.String, label: Swift.String, permalink: Swift.String, type: Swift.String
+    @objc public var createdTime: Swift.String
+    @objc public var commentCount: Swift.String?, likeCount: Swift.String?
+    @objc public var isVoted: Swift.Bool {
+      @objc get
+    }
+    @objc public var categoryID: Swift.String
+    @objc public var lastCommenter: ZohoDeskPortalAPIKit.ZDPortal.ZDPUser?
+    @objc public var latestCommentTime: Swift.String?
+    @objc public var webUrl: Swift.String?
+    @objc public var bestCommentId: Swift.String?
+    @objc public var mentions: ZohoDeskPortalAPIKit.ZDPortal.ZDPMentions?
+    @objc public var attachments: [ZohoDeskPortalAPIKit.ZDPortal.ZDPAttachment] {
+      @objc get
+      @objc set
+    }
+    @objc public var viewCount: Swift.String?
+    @objc public var followersCount: Swift.String?
+    @objc public var isFollowing: Swift.Bool {
+      @objc get
+    }
+    @objc public var isSticky: Swift.Bool {
+      @objc get
+    }
+    @objc public var isDraft: Swift.Bool {
+      @objc get
+    }
+    @objc public var isLocked: Swift.Bool {
+      @objc get
+    }
+    @objc public var notifyMe: Swift.Bool {
+      @objc get
+    }
+    @objc public var ticket: ZohoDeskPortalAPIKit.ZDPCTicket?
+    @objc public var tags: [ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTag] {
+      @objc get
+      @objc set
+    }
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(id: Swift.String, subject: Swift.String, content: Swift.String, mentions: ZohoDeskPortalAPIKit.ZDPortal.ZDPMentions?, creator: ZohoDeskPortalAPIKit.ZDPortal.ZDPUser, status: Swift.String, label: Swift.String, permalink: Swift.String, type: Swift.String, createdTime: Swift.String, latestCommentTime: Swift.String, commentCount: Swift.String?, likeCount: Swift.String?, isVoted: Swift.Bool?, categoryID: Swift.String, lastCommenter: ZohoDeskPortalAPIKit.ZDPortal.ZDPUser, attachments: [ZohoDeskPortalAPIKit.ZDPortal.ZDPAttachment], isSticky: Swift.Bool?, isLocked: Swift.Bool?, bestCommentID: Swift.String?, ticket: ZohoDeskPortalAPIKit.ZDPCTicket?)
+    #endif
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class TopicCommentTrend : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var commentTrend: [ZohoDeskPortalAPIKit.ZDPCommunity.Trend], postTrend: [ZohoDeskPortalAPIKit.ZDPCommunity.Trend]
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class Trend : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var date: Swift.String, count: Swift.String
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class GameLevel : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var name: Swift.String, id: Swift.String
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class GameNextLevel : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var pointsToReach: Swift.String, name: Swift.String
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class GameAchievements : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var badgeCount: Swift.String, points: Swift.String
+    @objc public var level: ZohoDeskPortalAPIKit.ZDPCommunity.GameLevel?
+    @objc public var nextLevel: ZohoDeskPortalAPIKit.ZDPCommunity.GameNextLevel?
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class Badges : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var name: Swift.String, id: Swift.String, badgesDescription: Swift.String
+    @objc public var iconUrl: Swift.String?
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ScoreBoard : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var pointsEarned: Swift.String, name: Swift.String, scoreBoardDescription: Swift.String
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ZDPTag : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var name: Swift.String, permalink: Swift.String
+    public init(name: Swift.String, permalink: Swift.String)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class TopicComment : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var id: Swift.String, status: Swift.String
+    @objc public var content: Swift.String, createdTime: Swift.String
+    @objc public var topicId: Swift.String?, subject: Swift.String?, modifiedTime: Swift.String?, type: Swift.String?, topicPermalink: Swift.String?
+    @objc public var attachments: [ZohoDeskPortalAPIKit.ZDPortal.ZDPAttachment] {
+      @objc get
+      @objc set
+    }
+    @objc public var creator: ZohoDeskPortalAPIKit.ZDPortal.ZDPUser
+    @objc public var replies: [ZohoDeskPortalAPIKit.ZDPCommunity.TopicComment] {
+      @objc get
+      @objc set
+    }
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(id: Swift.String, status: Swift.String, replies: [ZohoDeskPortalAPIKit.ZDPCommunity.TopicComment]?, content: Swift.String, createdTime: Swift.String, modifiedTime: Swift.String, attachments: [ZohoDeskPortalAPIKit.ZDPortal.ZDPAttachment], creator: ZohoDeskPortalAPIKit.ZDPortal.ZDPUser)
+    #endif
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class TopicPreferences : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var defaultTopicType: Swift.String
+    @objc public var topicTypes: [Swift.String]
+    public init(defaultTopicType: Swift.String, topicTypes: [Swift.String])
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class Drafts : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var data: [ZohoDeskPortalAPIKit.ZDPCommunity.DraftTopic]
+    @objc public var count: Swift.String
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ParticipantStatistics : ObjectiveC.NSObject, Swift.Codable {
+    public var isFollowing: Swift.Bool
+    public var postCount: Swift.String, followersCount: Swift.String, commentCount: Swift.String
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+}
+@objc public class ZDPCommunityCommentData : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var attachmentIDs: [Swift.String]
+  @objc public var content: Swift.String
+  public init(attachmentIDs: [Swift.String], content: Swift.String)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public class ZDPCommunityCategory : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var name: Swift.String, id: Swift.String
+  @objc public var photoUrl: Swift.String?, categoryDescription: Swift.String?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public class ZDPCommunityCategoryDetail : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var isFollowing: Swift.Bool
+  @objc public var categoryDescription: Swift.String, commentCount: Swift.String
+  @objc public var photoURL: Swift.String?
+  @objc public var isLocked: Swift.Bool
+  @objc public var name: Swift.String, postCount: Swift.String
+  @objc public var parentCategoryID: Swift.String?
+  @objc public var id: Swift.String, position: Swift.String, followersCount: Swift.String, permalink: Swift.String
+  @objc public var subCategories: [ZohoDeskPortalAPIKit.ZDPCommunityCategoryDetail]
+  @objc public var permissions: [Swift.String]
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(isFollowing: Swift.Bool, categoryDescription: Swift.String, commentCount: Swift.String, photoURL: Swift.String?, isLocked: Swift.Bool, name: Swift.String, postCount: Swift.String, parentCategoryID: Swift.String?, id: Swift.String, position: Swift.String, followersCount: Swift.String, permalink: Swift.String, child: [ZohoDeskPortalAPIKit.ZDPCommunityCategoryDetail], permissions: [Swift.String])
+  #endif
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public enum ZDPCTopicType : Swift.Int, Swift.Codable {
+  case question
+  case problem
+  case idea
+  case discussion
+  case announcement
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class ZDPCTicket : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var number: Swift.String, id: Swift.String
+  public init(number: Swift.String, id: Swift.String)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+open class ZDPortalBase {
+  required public init()
+  public static var shared: ZohoDeskPortalAPIKit.ZDPortalBase {
+    get
+  }
+  public var knowledgeBase: ZohoDeskPortalAPIKit.ZDPortalBase?
+  public var community: ZohoDeskPortalAPIKit.ZDPortalBase?
+  public var configuration: ZohoDeskPortalAPIKit.ZDPortalBase?
+  public var chat: ZohoDeskPortalAPIKit.ZDPortalBase?
+  public var ticket: ZohoDeskPortalAPIKit.ZDPortalBase?
+  public var liveChatGC: ZohoDeskPortalAPIKit.ZDPortalBase?
+  public var asapHome: ZohoDeskPortalAPIKit.ZDPortalBase?
+  open func configure()
+  open func clearData()
+  #if compiler(>=5.3) && $NonescapableTypes
+  open func initializeChat(onCompletion handler: (() -> Swift.Void)?)
+  #endif
+  open func openAgentChat()
+  open func setLanguage()
+  open func updateThemeInChat()
+  open func didUpdateUserInformation()
+  open func enableChatNotification(deviceToken: Swift.String, isTestDevice: Swift.Bool, mode: ZohoDeskPortalAPIKit.APNSmode)
+  #if compiler(>=5.3) && $NonescapableTypes
+  open func showAddTicketForm(with subject: Swift.String?, desc: Swift.String?, showSideMenu: Swift.Bool = true, completion: @escaping (ZohoDeskPortalAPIKit.ZDPTicket) -> (), onError: @escaping ((any Swift.Error)?) -> ())
+  #endif
+  open func show(by permalink: Swift.String, showSideMenu: Swift.Bool = true)
+  @objc deinit
+}
+extension Swift.String {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getClassFromBundle(withID bundleID: Swift.String) -> Swift.AnyClass?
+  #endif
+}
+public enum ASAPModule {
+  public typealias AvailableModules = [ZohoDeskPortalAPIKit.ASAPModule]
+  case knowledgeBase, community, addTicket, myTickets, chat
+  public static func == (a: ZohoDeskPortalAPIKit.ASAPModule, b: ZohoDeskPortalAPIKit.ASAPModule) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol ZDPUploaderDelegate {
+  @objc func uploaded(fraction: Swift.Float)
+}
+@objc public class ZDPArticle : ObjectiveC.NSObject, Swift.Codable {
+  public var summary: Swift.String, id: Swift.String, title: Swift.String, categoryID: Swift.String
+  public var permalink: Swift.String
+  @objc public var category: ZohoDeskPortalAPIKit.ZDPArticleCategory?
+  @objc public var createdTime: Swift.String?, modifiedTime: Swift.String?
+  @objc public var webURL: Swift.String
+  @objc public var translationID: Swift.String
+  @objc public var rootCategoryID: Swift.String
+  @objc public var locale: Swift.String
+  public init(summary: Swift.String, id: Swift.String, title: Swift.String, categoryID: Swift.String, permalink: Swift.String, category: ZohoDeskPortalAPIKit.ZDPArticleCategory, createdTime: Swift.String, modifiedTime: Swift.String, webURL: Swift.String, translationID: Swift.String, rootCategoryID: Swift.String, locale: Swift.String)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+extension ZohoDeskPortalAPIKit.ZDPArticle {
+  @_hasMissingDesignatedInitializers @objc public class CategoryDetail : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var articlesCount: Swift.String?
+    @objc public var sectionsCount: Swift.String?
+    @objc public var translatedName: Swift.String?
+    @objc public var logoURL: Swift.String?
+    @objc public var articleViewType: Swift.String?
+    @objc public var name: Swift.String
+    @objc public var visibility: Swift.String
+    @objc public var permalink: Swift.String?
+    @objc public var webURL: Swift.String?
+    @objc public var locale: Swift.String?
+    @objc public var categoryDescription: Swift.String?
+    @objc public var id: Swift.String
+    @objc public var parentCategoryID: Swift.String?
+    @objc public var allArticleCount: Swift.String?
+    @objc public var rootCategoryId: Swift.String?
+    @objc public var associatedDepartments: [Swift.String] {
+      @objc get
+      @objc set
+    }
+    @objc public var subCategories: [ZohoDeskPortalAPIKit.ZDPArticle.CategoryDetail] {
+      @objc get
+      @objc set
+    }
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class KBFeedback : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var message: Swift.String
+    @objc public var email: Swift.String?
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(message: Swift.String, email: Swift.String?)
+    #endif
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+}
+@objc public class ZDPArticleDetail : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var modifiedTime: Swift.String
+  @objc public var myVote: Swift.String?
+  @objc public var author: ZohoDeskPortalAPIKit.ZDPortal.ZDPUser?
+  @objc public var departmentID: Swift.String
+  @objc public var dislikeCount: Swift.String, likeCount: Swift.String, commentCount: Swift.String, title: Swift.String
+  @objc public var tags: [Swift.String]
+  @objc public var answer: Swift.String
+  @objc public var webURL: Swift.String
+  @objc public var createdTime: Swift.String, id: Swift.String, permalink: Swift.String
+  @objc public var seo: ZohoDeskPortalAPIKit.SearchEngineOptimisation?
+  @objc public var categoryID: Swift.String
+  @objc public var summary: Swift.String
+  @objc public var locale: Swift.String
+  @objc public var rootCategoryID: Swift.String
+  @objc public var translationID: Swift.String
+  @objc public var category: ZohoDeskPortalAPIKit.ZDPArticleCategory
+  @objc public var locales: [ZohoDeskPortalAPIKit.ZDPArticleDetail.Locale]?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(modifiedTime: Swift.String, myVote: Swift.String?, author: ZohoDeskPortalAPIKit.ZDPortal.ZDPUser, departmentID: Swift.String, dislikeCount: Swift.String, likeCount: Swift.String, commentCount: Swift.String, title: Swift.String, tags: [Swift.String], answer: Swift.String, webURL: Swift.String, createdTime: Swift.String, id: Swift.String, permalink: Swift.String, seo: ZohoDeskPortalAPIKit.SearchEngineOptimisation, categoryID: Swift.String, summary: Swift.String, locale: Swift.String, rootCategoryID: Swift.String, locales: [ZohoDeskPortalAPIKit.ZDPArticleDetail.Locale]?, translationID: Swift.String, category: ZohoDeskPortalAPIKit.ZDPArticleCategory)
+  #endif
+  @objc public class Locale : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var apiURL: Swift.String, webURL: Swift.String
+    @objc public var permalink: Swift.String, locale: Swift.String
+    public init(apiURL: Swift.String, webURL: Swift.String, permalink: Swift.String, locale: Swift.String)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class SearchEngineOptimisation : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var keywords: Swift.String?, seoDescription: Swift.String?, title: Swift.String?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public class ZDPArticleAttachment : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var contentURL: Swift.String
+  @objc public var size: Swift.String, name: Swift.String
+  @objc public var createdTime: Swift.String?
+  @objc public var inlineURL: Swift.String
+  @objc public var id: Swift.String
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public class ZDPArticleCategory : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var name: Swift.String, id: Swift.String
+  @objc public var locale: Swift.String?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public class ZDPArticleComment : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var modifiedTime: Swift.String?
+  @objc public var commentedTime: Swift.String
+  @objc public var id: Swift.String
+  @objc public var contentType: Swift.String
+  @objc public var content: Swift.String
+  @objc public var commenter: ZohoDeskPortalAPIKit.ZDPortal.ZDPUser
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+extension ZohoDeskPortalAPIKit.ZDPArticle {
+  @objc @objcMembers public class PreviousNextArticles : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var previousArticles: [ZohoDeskPortalAPIKit.ZDPArticle]
+    @objc public var nextArticles: [ZohoDeskPortalAPIKit.ZDPArticle]
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+}
+public enum ZDPError : Swift.Error {
+  case badURL
+  case noInternet(Foundation.NSError)
+  case internalServerError(Foundation.NSError)
+  case badRequest(Foundation.NSError)
+  case timedOut(Foundation.NSError)
+  case notFound(Foundation.NSError)
+  case accessDenied(Foundation.NSError)
+  case badResponse(Foundation.NSError)
+  case noData(Foundation.NSError)
+  case invalidStatusCode(Swift.Int)
+  case decodingFailed(Foundation.Data, any Swift.Error)
+  case unknownError(Foundation.NSError)
+  case noDataForLanguage
+  case captchaError(Foundation.NSError, Swift.String?, Swift.String?)
+}
+extension ZohoDeskPortalAPIKit.ZDPError {
+  public var rawError: Foundation.NSError {
+    get
+  }
+}
+extension ZohoDeskPortalAPIKit.ZDPError {
+  public static var _decodingFailed: Foundation.NSError {
+    get
+  }
+  public static let _noData: Foundation.NSError
+  public static let _badResponse: Foundation.NSError
+  public static let _badURL: Foundation.NSError
+  public static let _accessDenied: Foundation.NSError
+  public static func _invalidStatusCode(_ code: Swift.Int) -> Foundation.NSError
+}
+@_hasMissingDesignatedInitializers public class ZohoDeskPortalKit {
+  public static func setAuthDetails(clientID: Swift.String, clientSecret: Swift.String, portalID: Swift.String, urlScheme: Swift.String)
+  public static func initialize(orgID: Swift.String, appID: Swift.String, dataCenter: ZohoDeskPortalAPIKit.ZDPDataCenter = .US)
+  @objc deinit
+}
+extension ZohoDeskPortalAPIKit.ZohoDeskPortalKit {
+  public static var isLogEnabled: Swift.Bool
+  public static func enableLogs()
+  public static func login(withJWTToken token: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  public static func signIn(onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  public static func signUp(inLanguage languageCode: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  public static var isUserLoggedIn: Swift.Bool {
+    get
+  }
+  public static func logout(onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  public static func clearAllLocalData()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getUserInformation(onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPortal.ZDPProfile, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func updateUserInformation(with dict: [Swift.String : Swift.String], onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPortal.ZDPProfile, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getDepartments(onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPortal.Department], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getProducts(inDepartmentID deptID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPortal.ZDPProduct], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getContent(from url: Swift.String, onCompletion handler: @escaping (Swift.Result<Foundation.Data, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func syncSettings(onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPortal.ZDPSettings, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  public static var pushDeviceToken: Swift.String
+  public static func enablePushNotifications(deviceToken: Swift.String, isTestDevice: Swift.Bool = false, mode: ZohoDeskPortalAPIKit.APNSmode)
+  public static func disablePushNotifications(deviceToken: Swift.String, mode: ZohoDeskPortalAPIKit.APNSmode, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func addContactsBy(email params: [Swift.String : Swift.String], onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPortal.ZDPContact, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getContactBy(email emailID: Swift.String, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPortal.ZDPContact, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getContactsBy(ids params: [Swift.String : Swift.String], onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPortal.ZDPContact], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func searchContactsBy(text params: [Swift.String : Swift.String], onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPortal.ZDPContact], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getAccounts(params: [Swift.String : Swift.String], onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPortal.ZDPAccount], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getHelpCenterPreference(forHelpCenterId helpcenterId: Swift.String, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPortal.HelpCenterPreferences, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getTranslatedValues(for language: Swift.String, onCompletion handler: @escaping (Swift.Result<[Swift.String : Any], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZohoDeskPortalKit {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func searchProduct(of departmentID: Swift.String, _ params: [Swift.String : Any], onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPortal.ZDPProduct], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+}
+extension ZohoDeskPortalAPIKit.ZohoDeskPortalKit {
+  @_hasMissingDesignatedInitializers public class Article {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func get(forID articleID: Swift.String, locale: Swift.String? = nil, with params: [Swift.String : Any]? = nil, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPArticleDetail, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getList(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPArticle], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func get(withLink permalink: Swift.String, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPArticleDetail, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getRelated(forArticleID articleID: Swift.String, inLocale locale: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPArticle], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getAttachments(forArticleID articleID: Swift.String, inLocale locale: Swift.String? = nil, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPArticleAttachment], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getContent(ofAttachmentID attachmentID: Swift.String, inArticleID articleID: Swift.String, inLocale locale: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<Foundation.Data, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    public static func like(articleID: Swift.String, locale: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func dislike(articleID: Swift.String, locale: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func post(_ feedback: ZohoDeskPortalAPIKit.ZDPArticle.KBFeedback, forArticleID articleID: Swift.String, inLocale locale: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func search(keyword: Swift.String, inCategoryID categoryID: Swift.String?, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPArticle], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getSubCategories(forCategoryID categoryID: Swift.String, with params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPArticle.CategoryDetail], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getRootCategories(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPArticle.CategoryDetail], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getCategoriesByPermalink(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPArticle.CategoryDetail, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getCategoryTree(forCategoryId categoryId: Swift.String, with params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPArticle.CategoryDetail, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getArticleComments(forArticleId articleId: Swift.String, andLocale locale: Swift.String, params: [Swift.String : Any], onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPArticleComment], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getArticles(byTag tag: Swift.String, params: [Swift.String : Any], onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPArticle], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getPreviousNextArticle(articleId: Swift.String, locale: Swift.String, params: [Swift.String : Any], onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPArticle.PreviousNextArticles, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    @objc deinit
+  }
+}
+extension ZohoDeskPortalAPIKit.ZohoDeskPortalKit {
+  @_hasMissingDesignatedInitializers public class Ticket {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getTicketsCountByFieldValues(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPTicket.StatusTypeCount, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getLayouts(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPTicket.FormLayout], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getForm(_ params: [Swift.String : Any]?, headers: [Swift.String : Swift.String]?, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPTicket.TicketForm, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getTemplates(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPTicket.Template], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getTemplate(withID templateID: Swift.String, onCompletion handler: @escaping (Swift.Result<[Swift.String : Any], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getFields(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPTicket.TicketField], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getLayoutRules(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPTicket.LayoutRule], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getValidationRules(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPTicket.ValidationRule], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func add(withFields fields: [Swift.String : Any], onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPTicket, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func updateTicket(withID id: Swift.String, params: [Swift.String : Any], onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPTicket, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getList(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPTicket], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func searchTickets(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPTicket], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func get(forID ticketID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPTicket, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getAttachment(forID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPortal.ZDPAttachment], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getThreads(forTicketID ticketID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[[Swift.String : Any]], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getThread(withID threadID: Swift.String, forTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Result<[Swift.String : Any], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func reply(_ body: [Swift.String : Any], toTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Result<[Swift.String : Any], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func edit(_ body: [Swift.String : Any], withID threadID: Swift.String, inTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Result<[Swift.String : Any], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getConversations(forTicketID ticketID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[[Swift.String : Any]], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getComments(forTicketID ticketID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[[Swift.String : Any]], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func add(_ comment: [Swift.String : Any], toTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Result<[Swift.String : Any], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func edit(_ comment: [Swift.String : Any], withID commentID: Swift.String, toTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Result<[Swift.String : Any], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func addAttachment(with data: Foundation.Data, andName fileName: Swift.String, using delegate: (any ZohoDeskPortalAPIKit.ZDPUploaderDelegate)? = nil, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPortal.ZDPAttachment, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    public static func deleteAttachment(withID attachmentID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getContent(ofAttachmentID attachmentID: Swift.String, forCommentID commentID: Swift.String, inTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Result<Foundation.Data, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getContent(ofAttachmentID attachmentID: Swift.String, forthreadID threadID: Swift.String, inTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Result<Foundation.Data, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    public static func deleteComment(withID commentID: Swift.String, forTicketID ticketID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getResolution(_ ticketID: Swift.String, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPTicket.Resolution, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func generateImageCaptcha(params: [Swift.String : Any]? = nil, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPTicket.ImageCaptcha, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func generateAudioCaptcha(params: [Swift.String : Any]? = nil, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPTicket.AudioCaptcha, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func addTickets(withFields fields: [Swift.String : Any], onCompletion handler: @escaping (Swift.Result<Swift.String, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func composeTickets(params: [Swift.String : Any]?, withFields fields: [Swift.String : Any], onCompletion handler: @escaping (Swift.Result<Swift.String, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    @objc deinit
+  }
+}
+extension ZohoDeskPortalAPIKit.ZohoDeskPortalKit {
+  @_hasMissingDesignatedInitializers public class Community {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getCategories(onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunityCategoryDetail], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    public static func followCategory(withID categoryID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func unfollowCategory(withID categoryID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getTopics(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getTopicsBy(userId: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getCommentsBy(userId: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.TopicComment], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getTopicCommentTrendBy(userId: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.TopicCommentTrend, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getGameAchievementsBy(userId: Swift.String, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.GameAchievements, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getBadgesBy(userId: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.Badges], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getScoreBoardBy(userId: Swift.String, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.ScoreBoard], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getRelatedArticles(topicId: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPArticle], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getMostDiscussedTopics(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getMostPopularTopics(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func searchTopics(keyword: Swift.String, otherParams: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getTopic(withID topicID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func add(_ topic: ZohoDeskPortalAPIKit.ZDPCommunity.TopicData, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    public static func moveDraft(withID topicID: Swift.String, toCategoryID categoryID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func edit(_ topic: ZohoDeskPortalAPIKit.ZDPCommunity.TopicData, withID topicID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    public static func followTopic(withID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func unfollowTopic(withID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func likeTopic(withID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func deleteTopic(withID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getTopicDrafts(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.Drafts, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getFollowedCategories(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunityCategory], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getComments(ofTopicID topicID: Swift.String, _ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.TopicComment], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func postComment(_ comment: ZohoDeskPortalAPIKit.ZDPCommunityCommentData, forTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.TopicComment, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func updateComment(_ comment: ZohoDeskPortalAPIKit.ZDPCommunityCommentData, withID id: Swift.String, forTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.TopicComment, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    public static func deleteComment(withID id: Swift.String, forTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func postReply(_ data: ZohoDeskPortalAPIKit.ZDPCommunityCommentData, forCommentID commentID: Swift.String, inTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.TopicComment, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func updateReply(_ comment: ZohoDeskPortalAPIKit.ZDPCommunityCommentData, withID id: Swift.String, forCommentID commentID: Swift.String, inTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.TopicComment, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    public static func deleteReply(withID id: Swift.String, forCommentID commentID: Swift.String, inTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func addAttachment(with data: Foundation.Data, andName fileName: Swift.String, using delegate: (any ZohoDeskPortalAPIKit.ZDPUploaderDelegate)? = nil, onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPortal.ZDPAttachment, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    public static func deleteAttachment(withID attachmentID: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getContent(ofAttachmentID attachmentID: Swift.String, forCommentID commentID: Swift.String?, inTopicID topicID: Swift.String, onCompletion handler: @escaping (Swift.Result<Foundation.Data, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getPreferences(onCompletion handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.TopicPreferences, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getTopic(withPermaLink permaLink: Swift.String, _ params: [Swift.String : Any]?, handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getCommunityCategory(withCategoryId categoryId: Swift.String, handler: @escaping (Swift.Result<ZohoDeskPortalAPIKit.ZDPCommunityCategoryDetail, ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getTopContributors(params: [Swift.String : Any]?, handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPortal.ZDPUser], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getCategoriesFollowers(of categoryId: Swift.String, params: [Swift.String : Any]?, handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPortal.ZDPUser], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getParticipants(ofTopic topicID: Swift.String, params: [Swift.String : Any]?, handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPortal.ZDPUser], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getUnRepliedTopics(params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    public static func followUser(userId: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    public static func unFollowUser(userId: Swift.String, onCompletion handler: @escaping (Swift.Bool) -> Swift.Void)
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getMyFollowedCategories(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunityCategory], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getMyFollowedForums(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunityCategory], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getMyFollowedUsers(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPortal.ZDPUser], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getMyFollowedTopics(_ params: [Swift.String : Any]?, onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    @objc deinit
+  }
+}
+extension ZohoDeskPortalAPIKit.ZohoDeskPortalKit {
+  @_hasMissingDesignatedInitializers public class Widget {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func getWidget(_ params: [Swift.String : Any], onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPortal.WidgetCard], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+    #endif
+    @objc deinit
+  }
+}
+public struct ZDPCaptchError : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension ZohoDeskPortalAPIKit.ZohoDeskPortalKit {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func search(across modules: [ZohoDeskPortalAPIKit.ASAPModule], withKeyword keyword: Swift.String, params: [Swift.String : Any], onCompletion handler: @escaping (Swift.Result<[ZohoDeskPortalAPIKit.ZDPortal.SearchResult], ZohoDeskPortalAPIKit.ZDPError>) -> Swift.Void)
+  #endif
+}
+@_hasMissingDesignatedInitializers public class ZDCipher {
+  public var ziamCrypt: ZIAMCryptKit.ZIAMCrypt
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func encrypt(request: Foundation.URLRequest, baseUrl: Swift.String, onCompletion handler: @escaping (Swift.Result<Foundation.URLRequest, ZIAMCryptKit.ZIAMCryptError>) -> Swift.Void)
+  #endif
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class PEDefaults : ObjectiveC.NSObject {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ZDPortal : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension ZohoDeskPortalAPIKit.ZDPortal {
+  @objc public class ZDPProfile : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var displayName: Swift.String
+    @objc public var facebook: Swift.String?, mobile: Swift.String?
+    @objc public var timeZone: Swift.String, fullName: Swift.String, emailID: Swift.String, countryLocale: Swift.String
+    @objc public var photoURL: Swift.String?, twitter: Swift.String?, phone: Swift.String?
+    @objc public var joiningTime: Swift.String?
+    @objc public var groupIDS: [Swift.String]
+    @objc public var id: Swift.String
+    @objc public var email: [ZohoDeskPortalAPIKit.ZDPortal.ZDPEmail]
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(displayName: Swift.String, facebook: Swift.String?, mobile: Swift.String?, timeZone: Swift.String, fullName: Swift.String, emailID: Swift.String, countryLocale: Swift.String, photoURL: Swift.String?, twitter: Swift.String?, phone: Swift.String?, joiningTime: Swift.String, groupIDS: [Swift.String], id: Swift.String, email: [ZohoDeskPortalAPIKit.ZDPortal.ZDPEmail])
+    #endif
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ZDPEmail : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var emailAddress: Swift.String
+    @objc public var isVerified: Swift.Bool, isPrimary: Swift.Bool
+    public init(emailAddress: Swift.String, isVerified: Swift.Bool, isPrimary: Swift.Bool)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class Department : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var photoURL: Swift.String?, deptDescription: Swift.String?
+    @objc public var name: Swift.String, id: Swift.String, nameInCustomerPortal: Swift.String
+    @objc public var layoutCount: Swift.Int64
+    public init(photoURL: Swift.String, name: Swift.String, deptDescription: Swift.String, id: Swift.String, nameInCustomerPortal: Swift.String, layoutCount: Swift.Int64)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ZDPMentions : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var users: [ZohoDeskPortalAPIKit.ZDPortal.ZDPUser]
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ZDPUser : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var photoURL: Swift.String?, type: Swift.String?, name: Swift.String?
+    @objc public var id: Swift.String
+    @objc public var zuid: Swift.String?
+    @objc public var label: ZohoDeskPortalAPIKit.ZDPortal.ZDPLabel?
+    @objc public var photoUrl: Swift.String?
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(photoURL: Swift.String?, name: Swift.String, id: Swift.String, zuid: Swift.String?, type: Swift.String?, label: ZohoDeskPortalAPIKit.ZDPortal.ZDPLabel?)
+    #endif
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc @objcMembers public class ZDPLabel : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var name: Swift.String?, logoURL: Swift.String?, id: Swift.String?
+    @objc public var preferences: ZohoDeskPortalAPIKit.ZDPortal.LabelPreferences?
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc public init(name: Swift.String?, logoURL: Swift.String?, id: Swift.String?, labelPreferences: ZohoDeskPortalAPIKit.ZDPortal.LabelPreferences?)
+    #endif
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc @objcMembers public class LabelPreferences : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var textColor: Swift.String?, shape: Swift.String?, bgColor: Swift.String?
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc public init(textColor: Swift.String?, shape: Swift.String?, bgColor: Swift.String?)
+    #endif
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ZDPProduct : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var departmentIDS: [Swift.String]?
+    @objc public var productName: Swift.String
+    @objc public var productDescription: Swift.String?, productCode: Swift.String?
+    @objc public var id: Swift.String
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(departmentIDS: [Swift.String], productName: Swift.String, productDescription: Swift.String?, productCode: Swift.String?, id: Swift.String)
+    #endif
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ZDPAttachment : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var id: Swift.String, name: Swift.String, size: Swift.String
+    public var attachmentType: ZohoDeskPortalAPIKit.ZDPortal.ZDPAttachment.AttachmentCategory?
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc public var downloadURL: Swift.String? {
+      @objc get
+      @objc set
+    }
+    #endif
+    public enum AttachmentCategory : Swift.Codable {
+      case ticket(id: Swift.String, attachmentID: Swift.String)
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public init(id: Swift.String, name: Swift.String, size: Swift.String)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc @objcMembers public class LayoutDetails : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var id: Swift.String?, layoutName: Swift.String?
+    @objc public init(id: Swift.String, layoutName: Swift.String)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id, name, size
+    case downloadURL
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.String)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(stringValue: Swift.String)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(intValue: Swift.Int)
+    #endif
+    public typealias RawValue = Swift.String
+    #if compiler(>=5.3) && $NonescapableTypes
+    public var intValue: Swift.Int? {
+      get
+    }
+    #endif
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  @_hasMissingDesignatedInitializers @objc public class ZDPContact : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var name: Swift.String, id: Swift.String
+    @objc public var photoUrl: Swift.String?, email: Swift.String?
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ZDPAccount : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var name: Swift.String, id: Swift.String
+    @objc public var mappingType: Swift.String?
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(name: Swift.String, id: Swift.String, mappingType: Swift.String?)
+    #endif
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+}
+extension ZohoDeskPortalAPIKit.ZDPortal {
+  @objc public class ZDPSettings : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var communityRootCategoryIds: [Swift.String]?
+    @objc public var preferences: ZohoDeskPortalAPIKit.ZDPortal.Preferences
+    @objc public var asapApp: ZohoDeskPortalAPIKit.ZDPortal.ASAPApp
+    @objc public var pushNotificationConfiguration: Swift.Bool
+    @objc public var rootKBCategoryIDs: [Swift.String] {
+      @objc get
+      @objc set
+    }
+    @objc public var asapPreferences: ZohoDeskPortalAPIKit.ZDPortal.ASAPApp?
+    @objc public var ziaSkillSetInfo: [Swift.String : Swift.String]?
+    @objc public var ziaPortalID: Swift.String?
+    @objc public var chatPreferences: ZohoDeskPortalAPIKit.ZDPortal.ChatKitSettings?
+    @objc public var helpCenterURL: Swift.String?
+    @objc public var helpCenterId: Swift.String?
+    @objc public var primaryLocaleObj: ZohoDeskPortalAPIKit.ZDPortal.ZDPLanguage
+    @objc public var locales: [ZohoDeskPortalAPIKit.ZDPortal.ZDPLanguage]
+    @objc public var imDomain: Swift.String
+    @objc public var portalName: Swift.String
+    @objc public var staticVersion: Swift.String
+    @objc public var deskDomain: Swift.String?
+    @objc public var portalId: Swift.String
+    @objc public var clientAuthDomain: Swift.String?
+    @objc public var staticPath: Swift.String?
+    @objc public var appSecretId: Swift.String
+    @objc public var gcDomain: Swift.String
+    @objc public var primaryLocale: Swift.String
+    @objc public var appId: Swift.String?
+    @objc public var chatAppKeyWithDC: ZohoDeskPortalAPIKit.ZDPortal.ChatKitKey?
+    @objc public var businessHours: ZohoDeskPortalAPIKit.ZDPortal.BusinessHours?
+    required public init(from decoder: any Swift.Decoder) throws
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc public var forumCategoryID: Swift.String? {
+      @objc get
+      @objc set
+    }
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc public var kbCategoryID: Swift.String? {
+      @objc get
+      @objc set
+    }
+    #endif
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+  }
+  @objcMembers @objc final public class ASAPApp : ObjectiveC.NSObject, Swift.Codable {
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem final public var modifiedTime: Swift.String {
+      @objc get
+    }
+    @objc final public var mobilePrivacySettings: ZohoDeskPortalAPIKit.ZDPortal.MobilePrivacySettings?
+    @objc final public var botAppearence: ZohoDeskPortalAPIKit.ZDPortal.ASAPAppearance?
+    @objc final public var asapMobileChatConfig: ZohoDeskPortalAPIKit.ZDPortal.ASAPMobileChatConfig?
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem final public var name: Swift.String {
+      @objc get
+    }
+    @objc final public var defaultWelcomeMessages: ZohoDeskPortalAPIKit.ZDPortal.WelcomeNote
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem final public var id: Swift.String {
+      @objc get
+    }
+    @objc final public var departmentId: Swift.String?
+    @objc final public var modules: [ZohoDeskPortalAPIKit.ZDPortal.Module]
+    @objc deinit
+    final public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  @_inheritsConvenienceInitializers @objcMembers @objc final public class WelcomeNote : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public var introMessage: Swift.String?
+    @objc final public var greetingMessage: Swift.String?
+    @objc override dynamic public init()
+    @objc deinit
+    final public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  @objcMembers @objc public class MobilePrivacySettings : ObjectiveC.NSObject, Swift.Codable {
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var clientId: Swift.String {
+      @objc get
+    }
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isJWTEnabled: Swift.Bool {
+      @objc get
+    }
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var clientSecret: Swift.String {
+      @objc get
+    }
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isAnonymousEnabled: Swift.Bool {
+      @objc get
+    }
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @_inheritsConvenienceInitializers @objcMembers @objc public class ASAPMobileChatConfig : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var chatAppKey: Swift.String?
+    @objc public var chatAccessKey: Swift.String?
+    @objc override dynamic public init()
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @_inheritsConvenienceInitializers @objcMembers @objc final public class ASAPAppearance : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public var mobileAppAppearence: ZohoDeskPortalAPIKit.ZDPortal.ASAPMobileAppearance?
+    @objc override dynamic public init()
+    @objc deinit
+    final public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  @objcMembers @objc final public class ASAPMobileAppearance : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public var wallpaperUrl: Swift.String
+    @objc final public var headerLogoUrl: Swift.String
+    @objc final public var themeColor: Swift.String
+    @objc final public var wallpaperType: Swift.String
+    @objc final public var showZohoTag: Swift.Bool
+    @objc deinit
+    final public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  @objcMembers @objc final public class Module : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public var tabProperties: ZohoDeskPortalAPIKit.ZDPortal.TabProperties?
+    @objc final public var clients: [Swift.String]
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem final public var displayName: Swift.String {
+      @objc get
+    }
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem final public var name: Swift.String {
+      @objc get
+    }
+    @objc final public var status: Swift.Bool
+    @objc deinit
+    final public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  @_inheritsConvenienceInitializers @objcMembers @objc public class TabProperties : ObjectiveC.NSObject, Swift.Codable {
+    public var isAgentTransfer: Swift.Bool?
+    @objc public var chatAppKey: Swift.String?
+    @objc public var chatAccessKey: Swift.String?
+    @objc public var widgetId: Swift.String?
+    @objc public var botId: Swift.String?
+    @objc public var orgId: Swift.String?
+    @objc override dynamic public init()
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ZDPLanguage : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var name: Swift.String, identifier: Swift.String, localeWithRegion: Swift.String
+    public init(name: Swift.String, locale: Swift.String, localeWithRegion: Swift.String)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class BusinessHours : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var timeZone: Swift.String
+    @objc public var holidayList: [Swift.String]
+    @objc public var isActive: Swift.Bool
+    @objc public var type: Swift.String
+    @objc public var timeDetails: [Swift.String : Swift.String]?
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(timeZone: Swift.String, holidayList: [Swift.String], isActive: Swift.Bool, type: Swift.String, timeDetails: [Swift.String : Swift.String]?)
+    #endif
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ChatKitSettings : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var ios: ZohoDeskPortalAPIKit.ZDPortal.ChatSettings?, android: ZohoDeskPortalAPIKit.ZDPortal.ChatSettings?
+    public init(ios: ZohoDeskPortalAPIKit.ZDPortal.ChatSettings, android: ZohoDeskPortalAPIKit.ZDPortal.ChatSettings)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ChatSettings : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var isAgentPhotoEnabled: Swift.Int, isPushNotificationEnabled: Swift.Int, isChatEnabled: Swift.Int
+    public init(isAgentPhotoEnabled: Swift.Int, isPushNotificationEnabled: Swift.Int, isChatEnabled: Swift.Int)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ChatKitKey : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var ios: Swift.String?, android: Swift.String?
+    public init(ios: Swift.String, android: Swift.String)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @_inheritsConvenienceInitializers @objc final public class Preferences : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public var isHelpCenterPublic: Swift.Bool, isForumsVisible: Swift.Bool, isSelfSignUpEnabled: Swift.Bool, isAccountTicketsVisible: Swift.Bool, isSecondaryContactsEnabled: Swift.Bool
+    @objc final public var isTagsVisible: Swift.Bool, isKBVisible: Swift.Bool
+    @objc final public var searchScope: Swift.String?
+    public init(isHelpCenterPublic: Swift.Bool, isForumsVisible: Swift.Bool, isSelfSignUpEnabled: Swift.Bool, isAccountTicketsVisible: Swift.Bool, isTagsVisible: Swift.Bool, isKBVisible: Swift.Bool, isSecondaryContactsEnabled: Swift.Bool)
+    @objc override dynamic public init()
+    @objc deinit
+    final public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public enum ArticleFeedbackFormConfiguration : Swift.Int, Swift.Codable {
+    case none, anonymous, hide, show
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.Int)
+    #endif
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum SearchResult : Swift.Codable {
+    public func encode(to encoder: any Swift.Encoder) throws
+    case community(ZohoDeskPortalAPIKit.ZDPCommunity.ZDPTopic)
+    case knowledgeBase(ZohoDeskPortalAPIKit.ZDPArticle)
+    case ticket(ZohoDeskPortalAPIKit.ZDPTicket)
+    case none
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc public class ZiaDetails : ObjectiveC.NSObject, Swift.Codable {
+    public var isEnabled: Swift.Bool?
+    public init(isEnabled: Swift.Bool)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+  @objcMembers @objc public class HelpCenterPreferences : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var preferences: ZohoDeskPortalAPIKit.ZDPortal.HelpCenterPreferences.Preferences
+    @objc public var configurations: ZohoDeskPortalAPIKit.ZDPortal.HelpCenterPreferences.Configurations
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var logoLinkBackUrl: Swift.String {
+      @objc get
+    }
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var departmentIds: [Swift.String] {
+      @objc get
+    }
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var activeLocales: [ZohoDeskPortalAPIKit.ZDPortal.HelpCenterPreferences.ActiveLocale] {
+      @objc get
+    }
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var locale: Swift.String {
+      @objc get
+    }
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var logoUrl: Swift.String {
+      @objc get
+    }
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var url: Swift.String {
+      @objc get
+    }
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var accountId: Swift.String {
+      @objc get
+    }
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var locales: [Swift.String] {
+      @objc get
+    }
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var portalId: Swift.String {
+      @objc get
+    }
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var name: Swift.String {
+      @objc get
+    }
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var favIconUrl: Swift.String {
+      @objc get
+    }
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var id: Swift.String {
+      @objc get
+    }
+    @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var primaryLocale: Swift.String {
+      @objc get
+    }
+    @objcMembers @objc(ZDPPreferences) public class Preferences : ObjectiveC.NSObject, Swift.Codable {
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isAccountTicketViewable: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isArticleUpdatedTimeVisible: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isMultiLayoutGridViewEnabled: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isSignUpFormCustomized: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var showFeedbackFormOnDislike: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isArticleAuthorInfoVisible: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isSelfSignUp: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isCommunityEnabled: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isTocEnabled: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isClientDebuggingEnabled: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isUserDeletionEnabled: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isSEOSetAcrossAllPages: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isHelpCenterPublic: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isMultilingualEnabled: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isKBEnabled: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isSecondaryContactsEnabled: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isOnHoldEnabled: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isContactAccountMultiMappingEnabled: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isOTPBasedAuthenticationEnabled: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isGamificationEnabled: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isTagsEnabled: Swift.Bool {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var articleFeedbackFormOnDislike: Swift.String {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var tocPosition: Swift.String {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var signupFormLayout: Swift.String {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var searchScope: Swift.String {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var communityLandingPage: Swift.String {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isPayloadEncryptionEnabled: Swift.Bool {
+        @objc get
+      }
+      @objc public var guestUserAccessRestriction: ZohoDeskPortalAPIKit.ZDPortal.HelpCenterPreferences.Preferences.GuestUserAccessRestriction
+      @objcMembers @objc public class GuestUserAccessRestriction : ObjectiveC.NSObject, Swift.Codable {
+        @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var submitTicket: Swift.Bool {
+          @objc get
+        }
+        @objc deinit
+        public func encode(to encoder: any Swift.Encoder) throws
+        required public init(from decoder: any Swift.Decoder) throws
+      }
+      @objc public var articleFeedbackFormConfiguration: ZohoDeskPortalAPIKit.ZDPortal.ArticleFeedbackFormConfiguration {
+        @objc get
+      }
+      @objc deinit
+      public func encode(to encoder: any Swift.Encoder) throws
+      required public init(from decoder: any Swift.Decoder) throws
+    }
+    @_inheritsConvenienceInitializers @objcMembers @objc public class Configurations : ObjectiveC.NSObject, Swift.Codable {
+      @objcMembers @objc public class GoogleAnalytics : ObjectiveC.NSObject, Swift.Codable {
+        @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var trackerId: Swift.String {
+          @objc get
+        }
+        @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var domainName: Swift.String {
+          @objc get
+        }
+        @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isEnabled: Swift.Bool {
+          @objc get
+        }
+        @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var analyticsType: Swift.String {
+          @objc get
+        }
+        @objc deinit
+        public func encode(to encoder: any Swift.Encoder) throws
+        required public init(from decoder: any Swift.Decoder) throws
+      }
+      @objcMembers @objc public class Seo : ObjectiveC.NSObject, Swift.Codable {
+        @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var isEnabled: Swift.Bool {
+          @objc get
+        }
+        @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var metaKeyWord: Swift.String {
+          @objc get
+        }
+        @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var title: Swift.String {
+          @objc get
+        }
+        @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var metaDescription: Swift.String {
+          @objc get
+        }
+        @objc deinit
+        public func encode(to encoder: any Swift.Encoder) throws
+        required public init(from decoder: any Swift.Decoder) throws
+      }
+      @objc override dynamic public init()
+      @objc deinit
+      public func encode(to encoder: any Swift.Encoder) throws
+      required public init(from decoder: any Swift.Decoder) throws
+    }
+    @objcMembers @objc public class ActiveLocale : ObjectiveC.NSObject, Swift.Codable {
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var i18nLocaleName: Swift.String {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var name: Swift.String {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var locale: Swift.String {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var type: Swift.String {
+        @objc get
+      }
+      @objc @ZohoDeskPortalAPIKit.DPLoosyCodableItem public var status: Swift.String {
+        @objc get
+      }
+      @objc deinit
+      public func encode(to encoder: any Swift.Encoder) throws
+      required public init(from decoder: any Swift.Decoder) throws
+    }
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+}
+extension ZohoDeskPortalAPIKit.ZDPortal {
+  @objcMembers @objc public class WidgetCard : ObjectiveC.NSObject, Swift.Codable {
+    @objc public var id: Swift.String?
+    @objc public var type: Swift.String?
+    @objc public var name: Swift.String?
+    @objc public var content: Swift.String?
+    public var order: Swift.Int?
+    public typealias Initializer = (ZohoDeskPortalAPIKit.ZDPortal.WidgetCard) -> ()
+    required public init(from decoder: any Swift.Decoder) throws
+    @objc public init(initializer: (ZohoDeskPortalAPIKit.ZDPortal.WidgetCard) -> ())
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+  }
+}
+extension ZohoDeskPortalAPIKit.ZDPortal.Preferences : ZohoDeskPortalAPIKit.DPDefaultable {
+  public static var defaultValue: ZohoDeskPortalAPIKit.ZDPortal.Preferences {
+    get
+  }
+}
+public protocol DPDefaultable {
+  static var defaultValue: Self { get }
+}
+extension Swift.String : ZohoDeskPortalAPIKit.DPDefaultable {
+  public static var defaultValue: Swift.String {
+    get
+  }
+}
+extension Swift.Int : ZohoDeskPortalAPIKit.DPDefaultable {
+  public static var defaultValue: Swift.Int {
+    get
+  }
+}
+extension Swift.Double : ZohoDeskPortalAPIKit.DPDefaultable {
+  public static var defaultValue: Swift.Double {
+    get
+  }
+}
+extension Swift.Bool : ZohoDeskPortalAPIKit.DPDefaultable {
+  public static var defaultValue: Swift.Bool {
+    get
+  }
+}
+extension Swift.Array : ZohoDeskPortalAPIKit.DPDefaultable {
+  public static var defaultValue: Swift.Array<Element> {
+    get
+  }
+}
+public typealias DPLoosyCodable = ZohoDeskPortalAPIKit.DPDefaultable & Swift.Codable
+@propertyWrapper public struct DPLoosyCodableItem<Type> : Swift.Codable where Type : Swift.Decodable, Type : Swift.Encodable, Type : ZohoDeskPortalAPIKit.DPDefaultable {
+  public var wrappedValue: Type {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension ZohoDeskPortalAPIKit.ZDPortal.ZDPSettings {
+  public static var initCallSynced: ZohoDeskPortalAPIKit.DPNotification<ZohoDeskPortalAPIKit.ZDPortal.ZDPSettings>
+}
+public enum ZDPortalModule : Swift.String, Swift.CaseIterable {
+  case kb
+  case community
+  case addTopic
+  case addTicket
+  case ticket
+  case chat
+  case liveChatGC
+  case answerBot
+  case bm
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias AllCases = [ZohoDeskPortalAPIKit.ZDPortalModule]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [ZohoDeskPortalAPIKit.ZDPortalModule] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+#if compiler(>=5.3) && $NonescapableTypes
+extension Swift.Optional where Wrapped == ZohoDeskPortalAPIKit.ZDPortal.ASAPApp {
+  public func canShow(module: ZohoDeskPortalAPIKit.ZDPortalModule) -> Swift.Bool
+}
+#endif
+extension Swift.Array where Element == ZohoDeskPortalAPIKit.ZDPortal.Module {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public subscript(moduleType: ZohoDeskPortalAPIKit.ZDPortalModule) -> Element? {
+    get
+  }
+  #endif
+}
+extension Foundation.NSNotification.Name : Swift.ExpressibleByStringLiteral {
+  public typealias StringLiteralType = Swift.String
+  public init(stringLiteral value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Foundation.NSNotification.Name.StringLiteralType
+  public typealias UnicodeScalarLiteralType = Foundation.NSNotification.Name.StringLiteralType
+}
+extension ZohoDeskPortalAPIKit.ZDPTicket.CommentContentType : Swift.Equatable {}
+extension ZohoDeskPortalAPIKit.ZDPTicket.CommentContentType : Swift.Hashable {}
+extension ZohoDeskPortalAPIKit.ZDPTicket.CommentContentType : Swift.RawRepresentable {}
+extension ZohoDeskPortalAPIKit.ZDPDataCenter : Swift.Equatable {}
+extension ZohoDeskPortalAPIKit.ZDPDataCenter : Swift.Hashable {}
+extension ZohoDeskPortalAPIKit.ZDPDataCenter : Swift.RawRepresentable {}
+extension ZohoDeskPortalAPIKit.APNSmode : Swift.Equatable {}
+extension ZohoDeskPortalAPIKit.APNSmode : Swift.Hashable {}
+extension ZohoDeskPortalAPIKit.APNSmode : Swift.RawRepresentable {}
+extension ZohoDeskPortalAPIKit.ZDPCTopicType : Swift.Equatable {}
+extension ZohoDeskPortalAPIKit.ZDPCTopicType : Swift.Hashable {}
+extension ZohoDeskPortalAPIKit.ZDPCTopicType : Swift.RawRepresentable {}
+extension ZohoDeskPortalAPIKit.ASAPModule : Swift.Equatable {}
+extension ZohoDeskPortalAPIKit.ASAPModule : Swift.Hashable {}
+extension ZohoDeskPortalAPIKit.ZDPortal.CodingKeys : Swift.Equatable {}
+extension ZohoDeskPortalAPIKit.ZDPortal.CodingKeys : Swift.Hashable {}
+extension ZohoDeskPortalAPIKit.ZDPortal.CodingKeys : Swift.RawRepresentable {}
+extension ZohoDeskPortalAPIKit.ZDPortal.ArticleFeedbackFormConfiguration : Swift.Equatable {}
+extension ZohoDeskPortalAPIKit.ZDPortal.ArticleFeedbackFormConfiguration : Swift.Hashable {}
+extension ZohoDeskPortalAPIKit.ZDPortal.ArticleFeedbackFormConfiguration : Swift.RawRepresentable {}
+extension ZohoDeskPortalAPIKit.ZDPortalModule : Swift.Equatable {}
+extension ZohoDeskPortalAPIKit.ZDPortalModule : Swift.Hashable {}
+extension ZohoDeskPortalAPIKit.ZDPortalModule : Swift.RawRepresentable {}

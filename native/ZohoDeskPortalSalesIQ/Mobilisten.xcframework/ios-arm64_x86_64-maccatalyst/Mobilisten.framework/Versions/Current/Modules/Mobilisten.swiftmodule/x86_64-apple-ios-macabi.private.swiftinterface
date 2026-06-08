@@ -1,0 +1,2117 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target x86_64-apple-ios14.0-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name Mobilisten
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+import AVCallKitBridge
+import AVFoundation
+import AVKit
+import AddressBook
+import AppKit
+import AudioToolbox
+import Contacts
+import CoreData
+import CoreGraphics
+import CoreLocation
+import CoreMedia
+import CoreServices
+import CoreTelephony
+import DeveloperToolsSupport
+import Dispatch
+import EventKit
+import Foundation
+import ImageIO
+import Intents
+import MapKit
+import MediaPlayer
+import MobileCoreServices
+@_exported import Mobilisten
+import MobilistenCallsCore
+import MobilistenCore
+import NaturalLanguage
+import ObjectiveC
+import Photos
+import QuartzCore
+import QuickLook
+import SafariServices
+import Swift
+import SwiftUI
+import UIKit.UIGestureRecognizerSubclass
+import UIKit
+import UniformTypeIdentifiers
+import UserNotifications
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers nonisolated public class BookingAppointmentEntity : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class SIQFAQCategory : ObjectiveC.NSObject {
+  @objc open var id: Swift.String
+  @objc open var name: Swift.String
+  @objc open var order: Swift.Int
+  @objc open var level: Swift.Int
+  @objc open var hasChildren: Swift.Bool
+  @objc open var articleCount: Swift.Int
+  @objc open var parentCategoryID: Swift.String?
+  @objc deinit
+}
+extension Swift.String {
+  public func urlEncode() -> Swift.String
+}
+extension UIKit.UIWindow {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public var visibleViewControllerFromWindow: UIKit.UIViewController? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public static func getVisibleViewControllerfromParent(_ vc: UIKit.UIViewController?) -> UIKit.UIViewController?
+  #endif
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class LCSharedHandler : ObjectiveC.NSObject {
+  @objc weak public var delegate: (any Mobilisten.ZohoSalesIQChatDelegate)? {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func setTitle(_ title: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func setTitle(online: Swift.String? = nil, offline: Swift.String? = nil)
+  #endif
+  @objc public func hideQueueTime(_ show: Swift.Bool)
+  @objc public func clearMessages()
+  @objc public func clearData()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func setQuestion(_ question: Swift.String?)
+  #endif
+  @objc public func startChat(question: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func start(question: Swift.String, chatID: Swift.String? = nil, department: Swift.String? = nil, secretFields: [Swift.String : Any]? = nil, completion: Mobilisten.ZSIQResultCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, deprecated, message: "Use startWithTrigger (actionName:chatID:department:completion:) instead.")
+  @objc public func startWithTrigger(chatID: Swift.String? = nil, department: Swift.String? = nil, completion: Mobilisten.ZSIQResultCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func startWithTrigger(actionName: Swift.String, chatID: Swift.String? = nil, department: Swift.String? = nil, secretFields: [Swift.String : Any]? = nil, completion: Mobilisten.ZSIQResultCompletionBlock? = nil)
+  #endif
+  @objc public var isEnabled: Swift.Bool {
+    @objc get
+  }
+  @objc public func setWaitingTime(upTo duration: Swift.Int)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func get(chatID: Swift.String, completion: Mobilisten.ZSIQGetChatCompletionBlock?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func setAgentEmail(_ email: Swift.String?)
+  #endif
+  @objc public func setLanguage(_ language: Mobilisten.Language)
+  @objc public func setLanguageWithCode(_ languageCode: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func getList(filter: MobilistenCore.ChatStatus = .all, completion: Mobilisten.ConversationListFetchCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func getDepartments(completion: Mobilisten.DepartmentListFetchCompletionBlock? = nil)
+  #endif
+  @objc public var multipleOpenRestricted: Swift.Bool {
+    @objc get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func setDepartment(_ department: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func setDepartments(_ departments: [Swift.String]?)
+  #endif
+  @objc public func showFeedbackAfterSkip(_ show: Swift.Bool)
+  @objc public func showFeedback(uptoDuration: Swift.Double)
+  @objc public func setVisibility(_ component: Mobilisten.ChatComponent, visible: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func setMessage(_ type: Mobilisten.SystemMessage, message: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func setCustomChatIcon(image: UIKit.UIImage?, isTemplateImage: Swift.Bool = true)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(iOS, unavailable, message: "This method has been depricated.")
+  @objc public func setVisitorImage(_ image: UIKit.UIImage?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, deprecated, message: "Customize the themeColor using `customTheme.themeColor` property in object from ZohoSalesIQ.Theme.baseTheme and set the custom theme using the ZohoSalesIQ.Theme.setTheme method")
+  @objc public func setThemeColor(_ color: UIKit.UIColor?)
+  #endif
+  @available(*, deprecated, message: "Customize in theme object using `customTheme.Navigation.backgroundColor` from ZohoSalesIQ.Theme.baseTheme and set the theme using the ZohoSalesIQ.Theme.setTheme method.")
+  @objc public func setBarColor(_ color: UIKit.UIColor)
+  @available(*, deprecated, message: "Customize in theme object using `customTheme.Navigation.tintColor` from ZohoSalesIQ.Theme.baseTheme and set the theme using the ZohoSalesIQ.Theme.setTheme method.")
+  @objc public func setBarTintColor(_ color: UIKit.UIColor)
+  @available(*, deprecated, message: "Customize in theme object using `customTheme.Navigation.titleColor` from ZohoSalesIQ.Theme.baseTheme and set the theme using the ZohoSalesIQ.Theme.setTheme method.")
+  @objc public func setBarTitleColor(_ color: UIKit.UIColor)
+  @available(*, deprecated)
+  @objc public func setSearchTintColor(_ color: UIKit.UIColor)
+  @available(iOS, unavailable, message: "This API is under construction.")
+  @objc public func setBarTitleFont(_ font: UIKit.UIFont)
+  @available(*, deprecated, message: "Customize in theme object using `customTheme.Chat.backgroundColor` from ZohoSalesIQ.Theme.baseTheme and set the customized theme using the ZohoSalesIQ.Theme.setTheme method.")
+  @objc public func setMessageWindowBackgroundColor(_ color: UIKit.UIColor)
+  @available(*, deprecated, message: "Customize in theme object using `customTheme.Chat.Message.Common.incomingBackgroundColor` from ZohoSalesIQ.Theme.baseTheme and set the customized theme using the ZohoSalesIQ.Theme.setTheme method.")
+  @objc public func setIncommingMessageBackgroundColor(_ color: UIKit.UIColor)
+  @available(*, deprecated, message: "Customize in theme object using `customTheme.Chat.Message.Common.outgoingBackgroundColor` from ZohoSalesIQ.Theme.baseTheme and set the customized theme using the ZohoSalesIQ.Theme.setTheme method.")
+  @objc public func setOutgoingMessageBackgroundColor(_ color: UIKit.UIColor)
+  @available(iOS, unavailable, message: "This method has been depricated.")
+  @objc public func setTimeDisplayStyle(_ style: Mobilisten.TimeStyle)
+  @objc public func getUnreadMessageCount() -> Swift.Int
+  @objc public func endSession(referenceID: Swift.String)
+  @objc public func showOfflineMessage(_ show: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func setOfflineMessage(_ message: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func fetchAttenderImage(chat: MobilistenCore.SIQVisitorChat, fetchDefaultImage: Swift.Bool = true, completion: Mobilisten.AttenderImageFetchCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func show(referenceID: Swift.String? = nil, new: Swift.Bool = false)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func open(with payload: Mobilisten.SalesIQNotificationPayload? = nil)
+  #endif
+  @objc deinit
+}
+public enum ShowinListType {
+  case `default`
+  case selected
+  case both
+  public static func == (a: Mobilisten.ShowinListType, b: Mobilisten.ShowinListType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class SIQSheetViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public var childViewController: UIKit.UIViewController! {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency final public let containerView: UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency final public let pullBarView: UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency final public let handleView: UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency public var handleColor: UIKit.UIColor {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var handleSize: CoreFoundation.CGSize
+  @_Concurrency.MainActor @preconcurrency public var handleTopEdgeInset: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public var handleBottomEdgeInset: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public var dismissOnBackgroundTap: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public var dismissOnPan: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public var controllerAppeared: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public var dismissable: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var extendBackgroundBehindHandle: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var adjustForBottomSafeArea: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public var blurBottomSafeArea: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public var solidBottomSafeArea: UIKit.UIColor?
+  @_Concurrency.MainActor @preconcurrency public var topCornersRadius: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var overlayColor: UIKit.UIColor {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var willDismiss: ((Mobilisten.SIQSheetViewController) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var didDismiss: ((Mobilisten.SIQSheetViewController) -> Swift.Void)?
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, deprecated, message: "Use the init(controller:, sizes:) initializer")
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
+  @_Concurrency.MainActor @preconcurrency convenience public init(controller: UIKit.UIViewController, sizes: [Mobilisten.SheetSize] = [])
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func setSizes(_ sizes: [Mobilisten.SheetSize], animated: Swift.Bool = true)
+  @_Concurrency.MainActor @preconcurrency public func resize(to size: Mobilisten.SheetSize, animated: Swift.Bool = true)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func closeSheet(completion: (() -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func dismiss(animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func handleScrollView(_ scrollView: UIKit.UIScrollView)
+  @objc deinit
+}
+extension Mobilisten.SIQSheetViewController : UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldReceive touch: UIKit.UITouch) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+}
+extension Mobilisten.LiveChatViewController : UIKit.UITextViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func textView(_ textView: UIKit.UITextView, shouldChangeTextIn range: Foundation.NSRange, replacementText text: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func textViewDidChange(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func textViewDidBeginEditing(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func textViewDidChangeSelection(_ textView: UIKit.UITextView)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+  #endif
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class LiveChatViewController : Mobilisten.SIQViewController, UIKit.UIViewControllerTransitioningDelegate, UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var title: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @_Concurrency.MainActor @preconcurrency public var attributedTitle: Foundation.NSAttributedString? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var preferredInterfaceOrientationForPresentation: UIKit.UIInterfaceOrientation {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var shouldAutorotate: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didReceiveMemoryWarning()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor @preconcurrency @objc public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc public func animationController(forDismissed dismissed: UIKit.UIViewController) -> (any UIKit.UIViewControllerAnimatedTransitioning)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc public func animationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController, source: UIKit.UIViewController) -> (any UIKit.UIViewControllerAnimatedTransitioning)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didMove(toParent parent: UIKit.UIViewController?)
+  #endif
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc public func textViewDidEndEditing(_ textView: UIKit.UITextView)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
+}
+extension Mobilisten.LiveChatViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+}
+extension Mobilisten.LiveChatViewController : UIKit.UIPopoverPresentationControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController) -> Swift.Bool
+}
+extension Mobilisten.LiveChatViewController : UIKit.UIDocumentPickerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func documentPicker(_ controller: UIKit.UIDocumentPickerViewController, didPickDocumentsAt urls: [Foundation.URL])
+}
+@_hasMissingDesignatedInitializers @objc public class SIQAuth : ObjectiveC.NSObject {
+  @objc deinit
+}
+@objc public enum SIQTabBarComponent : Swift.Int, Swift.CaseIterable {
+  case conversation = 0
+  case knowledgeBase = 1
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias AllCases = [Mobilisten.SIQTabBarComponent]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [Mobilisten.SIQTabBarComponent] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum VisibilityMode : Swift.Int {
+  case always
+  case never
+  case whenActiveChat
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum BubbleStyle : Swift.Int {
+  case curveLess
+  case roundedCurve
+  case boxUpperCurve
+  case boxLowerCurve
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum TimeStyle : Swift.Int {
+  case inside
+  case outsideSlide
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ChatComponent : Swift.Int {
+  @available(*, deprecated, message: "Use ZohoSalesIQ.Conversation.setVisibility API")
+  case conversationHistory
+  case preChatForm
+  case visitorName
+  case attenderImageInChat
+  case attenderImageOnLauncher
+  case screenshotOption
+  case photoLibrary
+  case mediaCapture
+  @available(*, unavailable, message: "Toggling the voice messages function using the ZohoSalesIQ.setVisibility API is no longer supported. To enable voice messages, navigate to Brand configurations on the SalesIQ Portal and enable the toggle for \"Voice Notes\" if supported by your current plan.")
+  case voiceMessages
+  case fileSharing
+  case inAppNotifications
+  case emailTranscript
+  case rating
+  case feedback
+  case reopen
+  case end
+  case endWhenInQueue
+  case endWhenBotConnected
+  case endWhenOperatorConnected
+  case queuePosition
+  case callIcon
+  case attachmentIconWhenBotConnected
+  case voiceNoteIconWhenBotConnected
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum SuggestionStyle : Swift.Int {
+  case vertical = 0
+  case horizontal = 1
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum CallFilter : Swift.Int {
+  case all
+  case ongoing
+  case missed
+  case offline
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum SystemMessage : Swift.Int {
+  case chatCompleted
+  case chatMissed
+  case ratingCompleted
+  case feedbackCompleted
+  case ratingAndFeedbackCompleted
+  case inputQuestionPlaceholder
+  case inputMessagePlaceholder
+  case typingIndicatorMessage
+  case networkWaitingMessage
+  case chatWaiting
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum SIQArticleRatedType : Swift.Int {
+  case liked
+  case disliked
+  case none
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum SIQResourceType : Swift.Int {
+  case articles
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum SIQDebugLogLevel : Swift.Int {
+  case info
+  case warning
+  case error
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum Language : Swift.Int {
+  case english
+  case french
+  case german
+  case spanish
+  case dutch
+  case norwegian
+  case turkish
+  case russian
+  case portuguese
+  case italian
+  case korean
+  case japanese
+  case danish
+  case polish
+  case arabic
+  case hungarian
+  case chinese
+  case hebrew
+  case irish
+  case romanian
+  case thai
+  case swedish
+  case greek
+  case czech
+  case slovak
+  case slovenian
+  case croatian
+  case bulgarian
+  case vietnamese
+  case chineseTraditional
+  case filipino
+  case finnish
+  case indonesian
+  case georgian
+  case armenian
+  case persian
+  case tamil
+  case kannada
+  case bengali
+  case hindi
+  case gujarati
+  case marathi
+  case telugu
+  case punjabi
+  case oriya
+  case malayalam
+  case catalan
+  public func languageCodeName() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class LanguageCode : ObjectiveC.NSObject {
+  @objc public class func name(_ language: Mobilisten.Language) -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIKit.UIImage {
+  #if compiler(>=5.3) && $NonescapableTypes
+  convenience public init?(color: UIKit.UIColor, size: CoreFoundation.CGSize = CGSize(width: 1, height: 1))
+  #endif
+}
+@objc @_inheritsConvenienceInitializers open class NotificationLinkHandler : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQJWTAuth : Mobilisten.SIQAuth {
+  public init(token: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQActionRegistry : ObjectiveC.NSObject {
+  @objc final public func register(action: Mobilisten.SIQChatAction)
+  @objc final public func unregisterWithName(name: Swift.String)
+  @objc final public func unregisterAll()
+  @objc final public func setTimeout(_ timeout: Swift.Double)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class SIQChatAction : ObjectiveC.NSObject {
+  @objc public init(name: Swift.String, action: @escaping (_ arguments: Mobilisten.SIQChatActionArguments, _ handler: Mobilisten.SIQActionHandler) -> Swift.Void)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class SIQChatActionArguments : ObjectiveC.NSObject {
+  @objc public var type: Swift.String
+  @objc public var label: Swift.String
+  @objc public var identifier: Swift.String
+  @objc public var elementID: Swift.String?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class SIQActionHandler : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func success(message: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func faliure(message: Swift.String? = nil)
+  #endif
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor public class ZohoSalesIQCallsImpl : ObjectiveC.NSObject, MobilistenCallsCore.ZohoSalesIQCallsProtocol {
+  @_Concurrency.MainActor public var isEnabled: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor public var currentState: MobilistenCallsCore.SalesIQCallState {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public var currentCallID: Swift.String? {
+    get
+  }
+  #endif
+  @_Concurrency.MainActor public func switchToFloatingScreen()
+  @_Concurrency.MainActor public func switchToFullScreen()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func end(completion: MobilistenCore.ZSIQCallCompletion?)
+  #endif
+  @_Concurrency.MainActor public func setVisibility(_ component: MobilistenCallsCore.CallComponent, visible: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func start(id: Swift.String?, attributes: [MobilistenCore.SalesIQConversationAttributes]?, displayActiveCall: Swift.Bool, completion: MobilistenCore.ZSIQCallCompletion?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func start(id: Swift.String?, name: Swift.String?, additionalInfo: Swift.String?, displayImage: Any?, departments: [MobilistenCore.SIQDepartment], displayActiveCall: Swift.Bool, completion: MobilistenCore.ZSIQCallCompletion?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func getList(completion: @escaping ((any MobilistenCore.SIQError)?, [MobilistenCore.SalesIQConversation]) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func setTitle(online: Swift.String?, offline: Swift.String?)
+  #endif
+  @_Concurrency.MainActor public func enableVoIP(_ token: Swift.String, isTestDevice: Swift.Bool, mode: MobilistenCore.APNSMode)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func handleVOIPNotificationAction(_ info: [Swift.AnyHashable : Any]?, completion: @escaping () -> Swift.Void)
+  #endif
+  @_Concurrency.MainActor public func setCallKitIcon(icon: Any)
+  @_Concurrency.MainActor @objc override dynamic public init()
+  @objc deinit
+}
+extension UIKit.UIViewController {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public var sheetViewController: Mobilisten.SIQSheetViewController? {
+    get
+  }
+  #endif
+}
+extension Mobilisten.SIQViewController : CoreData.NSFetchedResultsControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func controllerWillChangeContent(_ controller: CoreData.NSFetchedResultsController<any CoreData.NSFetchRequestResult>)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func controller(_ controller: CoreData.NSFetchedResultsController<any CoreData.NSFetchRequestResult>, didChange anObject: Any, at indexPath: Foundation.IndexPath?, for type: CoreData.NSFetchedResultsChangeType, newIndexPath: Foundation.IndexPath?)
+  #endif
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func controller(_ controller: CoreData.NSFetchedResultsController<any CoreData.NSFetchRequestResult>, didChange sectionInfo: any CoreData.NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Swift.Int, for type: CoreData.NSFetchedResultsChangeType)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func controllerDidChangeContent(_ controller: CoreData.NSFetchedResultsController<any CoreData.NSFetchRequestResult>)
+}
+@_inheritsConvenienceInitializers @objc public class MobilistenConfigurationManager : ObjectiveC.NSObject {
+  @objc public static func refresh()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum MobilistenFlag : Swift.Int, Swift.CaseIterable {
+  case neutralRatingDisabled
+  case trackStorageSpace
+  case trackAppInstalledTime
+  case trackAppUpdatedTime
+  case showEndSessionInAppNotification
+  case inputCarouselCardOrientation
+  case showInputCarouselCardImage
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias AllCases = [Mobilisten.MobilistenFlag]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [Mobilisten.MobilistenFlag] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SheetSize {
+  case fixed(CoreFoundation.CGFloat)
+  case halfScreen
+  case fullScreen
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SIQViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var shouldAutorotate: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  #endif
+  @objc deinit
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
+}
+@_inheritsConvenienceInitializers @objc open class SIQNotification : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func getPayload(_ info: [Swift.AnyHashable : Any]?, completion: @escaping (Mobilisten.SalesIQNotificationPayload?) -> Swift.Void)
+  #endif
+  @objc public func isSDKActionAllowed() -> Swift.Bool
+  @objc public func setAction(with source: Mobilisten.ZohoSalesIQ.ActionSource)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class SIQFAQClass : ObjectiveC.NSObject {
+  @objc weak public var delegate: (any Mobilisten.ZohoSalesIQFAQDelegate)?
+  @available(iOS, deprecated, message: "Use ZohoSalesIQ.KnowledgeBase.isEnabled instead.")
+  @objc public var isEnabled: Swift.Bool {
+    @objc get
+  }
+  @available(iOS, deprecated, message: "Use ZohoSalesIQ.KnowledgeBase.setRecentShowLimit instead.")
+  @objc public func setRecentShowLimit(_ limit: Swift.Int)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(iOS, deprecated, message: "Use ZohoSalesIQ.KnowledgeBase.getCategories instead.")
+  @objc public func getCategories(departmentIDS: [Swift.String]? = nil, _ completion: Mobilisten.FAQCategoryListFetchCompletionBlock? = nil)
+  #endif
+  @available(iOS, deprecated, message: "Use ZohoSalesIQ.KnowledgeBase.setVisibility instead.")
+  @objc public func setVisibility(_ visible: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(iOS, deprecated, message: "Use ZohoSalesIQ.KnowledgeBase.getResources instead.")
+  @objc public func getArticles(categoryID: Swift.String? = nil, _ completion: Mobilisten.FAQArticleListFetchCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(iOS, deprecated, message: "Use ZohoSalesIQ.KnowledgeBase.open instead.")
+  @objc public func openArticle(articleID: Swift.String, _ completion: Mobilisten.FAQArticleOpenCompletionBlock? = nil)
+  #endif
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Mobilisten.FAQCategoryEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<Mobilisten.FAQCategoryEntity>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var hint: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var enabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var order: Foundation.NSNumber {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var parent_id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var created_time: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var modified_time: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var article_modified_time: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  #endif
+  @objc @NSManaged nonisolated dynamic public var child_count: Foundation.NSNumber {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged nonisolated dynamic public var article_count: Foundation.NSNumber {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var department_id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+public enum ObserveType {
+  case updated
+  case inserted
+  case deleted
+  case refreshed
+  public static func == (a: Mobilisten.ObserveType, b: Mobilisten.ObserveType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc open class SIQConversationsClass : ObjectiveC.NSObject {
+  @objc public func setVisibility(_ visible: Swift.Bool)
+  @objc public func setTitle(_ title: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func getDepartments(_ completion: Mobilisten.ZSIQDepartmentListCompletion?)
+  #endif
+  public func setAttribute(_ attributes: Swift.Set<MobilistenCore.SalesIQConversationAttributes>)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func setName(_ name: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func setDisplayPicture(_ image: Any?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func setAdditionalInfo(_ info: Swift.String?)
+  #endif
+  @objc public func setDepartment(_ departments: [MobilistenCore.SIQDepartment])
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct SIQSizeUnits {
+  public let bytes: Swift.Int64
+  public var kilobytes: Swift.Double {
+    get
+  }
+  public var megabytes: Swift.Double {
+    get
+  }
+  public var gigabytes: Swift.Double {
+    get
+  }
+  public init(bytes: Swift.Int64)
+  public func getReadableUnit() -> Swift.String
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor @preconcurrency open class SIQTextView : UIKit.UITextView {
+  @_Concurrency.MainActor @preconcurrency final public let placeholderLabel: UIKit.UILabel
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var placeholder: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var placeholderColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var font: UIKit.UIFont! {
+    @objc get
+    @objc set
+  }
+  #endif
+  @_Concurrency.MainActor @preconcurrency open var placeholderFont: UIKit.UIFont? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var textAlignment: UIKit.NSTextAlignment {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var text: Swift.String! {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var attributedText: Foundation.NSAttributedString! {
+    @objc get
+    @objc set
+  }
+  #endif
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var textContainerInset: UIKit.UIEdgeInsets {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect, textContainer: UIKit.NSTextContainer?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
+  @objc deinit
+}
+extension Mobilisten.BookingStaffListEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<Mobilisten.BookingStaffListEntity>
+}
+@objc @_inheritsConvenienceInitializers public class VisitorObject : ObjectiveC.NSObject {
+  open var name: Swift.String?
+  open var email: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers nonisolated public class FAQCategoryEntity : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+extension UIKit.UIColor {
+  #if compiler(>=5.3) && $NonescapableTypes
+  convenience public init?(_ r: CoreFoundation.CGFloat, _ g: CoreFoundation.CGFloat, _ b: CoreFoundation.CGFloat, alpha: CoreFoundation.CGFloat = 1)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  convenience public init?(hex: Swift.String)
+  #endif
+}
+@objc @_inheritsConvenienceInitializers open class TrackingClass : ObjectiveC.NSObject {
+  @objc open func setPageTitle(_ title: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, deprecated, message: "Use setCustomAction(_:) instead")
+  @objc open func setCustomAction(_ actionname: Swift.String?, shouldOpenChatWindow: Swift.Bool = false)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc open func setCustomAction(_ actionname: Swift.String?)
+  #endif
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class VisitorTrackingInterface : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class VisitorClass : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc open func setName(_ name: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func setLocation(_ location: Mobilisten.SIQVisitorLocation?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc open func setEmail(_ email: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc open func setContactNumber(_ number: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc open func addInfo(_ key: Swift.String?, value: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc open func setQuestion(_ question: Swift.String?)
+  #endif
+  @objc open func performCustomAction(_ name: Swift.String)
+  @available(*, deprecated, message: "Use performCustomAction(_:) instead")
+  @objc open func performCustomAction(_ name: Swift.String, shouldOpenChatWindow: Swift.Bool = false)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class SIQLauncher : ObjectiveC.NSObject {
+  @objc public func show(_ mode: Mobilisten.VisibilityMode)
+  @objc public func enableDragToDismiss(_ enable: Swift.Bool)
+  @objc public func setVisibilityModeToCustomLauncher(_ mode: Mobilisten.VisibilityMode)
+  @objc public func minimumPressDuration(_ duration: Swift.Double)
+  @_Concurrency.MainActor public func setIcon(_ image: Any, for type: Mobilisten.ActionIconType)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum ActionIconType : Swift.Int {
+  case conversation
+  case conversationAction
+  case call
+  case chat
+  case close
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers nonisolated public class BookingStaffListEntity : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+public typealias ZSIQGetRestConversationCompletionBlock = (_ success: Swift.Bool, _ data: [Swift.String : Swift.AnyObject]?, _ error: (any MobilistenCore.SIQError)?) -> Swift.Void
+public typealias ZSIQActionCompletionBlock = (_ success: Swift.Bool) -> Swift.Void
+public typealias ZSIQActionErrorCompletionBlock = (_ error: Foundation.NSError?) -> Swift.Void
+public typealias ConversationListFetchCompletionBlock = (_ error: Foundation.NSError?, _ chats: [MobilistenCore.SIQVisitorChat]?) -> Swift.Void
+public typealias DepartmentListFetchCompletionBlock = (_ error: Foundation.NSError?, _ departments: [MobilistenCore.SIQDepartment]?) -> Swift.Void
+public typealias FAQCategoryListFetchCompletionBlock = (_ error: Foundation.NSError?, _ categories: [Mobilisten.SIQFAQCategory]?) -> Swift.Void
+public typealias FAQArticleListFetchCompletionBlock = (_ error: Foundation.NSError?, _ articles: [Mobilisten.SIQFAQArticle]?) -> Swift.Void
+public typealias FAQArticleOpenCompletionBlock = (_ error: Foundation.NSError?) -> Swift.Void
+public typealias AttenderImageFetchCompletionBlock = (_ error: Foundation.NSError?, _ image: UIKit.UIImage?) -> Swift.Void
+public typealias ZSIQResultCompletionBlock = (_ error: (any MobilistenCore.SIQError)?, _ success: MobilistenCore.SIQVisitorChat?) -> Swift.Void
+public typealias ZSIQErrorCompletionBlock = (_ error: (any MobilistenCore.SIQError)?) -> Swift.Void
+public typealias ZSIQGetChatCompletionBlock = (_ error: (any MobilistenCore.SIQError)?, _ chat: MobilistenCore.SIQVisitorChat?) -> Swift.Void
+public typealias ZSIQStartCallCompletion = (_ error: (any MobilistenCore.SIQError)?, _ conversation: MobilistenCore.SalesIQConversation?) -> Swift.Void
+public typealias ZSIQDepartmentListCompletion = (_ error: (any MobilistenCore.SIQError)?, _ departments: [MobilistenCore.SIQDepartment]) -> Swift.Void
+@objc public protocol ZohoSalesIQFAQDelegate : ObjectiveC.NSObjectProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func articleOpened(id: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func articleClosed(id: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func articleLiked(id: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func articleDisliked(id: Swift.String?)
+  #endif
+}
+@objc public protocol ZohoSalesIQChatDelegate : ObjectiveC.NSObjectProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func chatOpened(chat: MobilistenCore.SIQVisitorChat?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func chatAttended(chat: MobilistenCore.SIQVisitorChat?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func chatMissed(chat: MobilistenCore.SIQVisitorChat?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func chatClosed(chat: MobilistenCore.SIQVisitorChat?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func chatReopened(chat: MobilistenCore.SIQVisitorChat?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func chatRatingRecieved(chat: MobilistenCore.SIQVisitorChat?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func chatFeedbackRecieved(chat: MobilistenCore.SIQVisitorChat?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func chatQueuePositionChanged(chat: MobilistenCore.SIQVisitorChat?)
+  #endif
+  @objc func unreadCountChanged(_ count: Swift.Int)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func shouldOpenURL(_ url: Foundation.URL, in chat: MobilistenCore.SIQVisitorChat?) -> Swift.Bool
+  #endif
+  @objc optional func handleNotificationAction(payload: [Swift.String : Any])
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc optional func handleNotificationAction(_ payload: Mobilisten.SalesIQNotificationPayload?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc optional func didFailWithError(chat: MobilistenCore.SIQVisitorChat?, error: MobilistenCore.ChatError)
+  #endif
+}
+@objc public protocol ZohoSalesIQDelegate : ObjectiveC.NSObjectProtocol {
+  @objc func agentsOnline()
+  @objc func agentsOffline()
+  @objc func supportOpened()
+  @objc func supportClosed()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func chatViewOpened(id: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func chatViewClosed(id: Swift.String?)
+  #endif
+  @objc func homeViewOpened()
+  @objc func homeViewClosed()
+  @objc func visitorIPBlocked()
+  @objc func handleTrigger(name: Swift.String, visitorInformation: Mobilisten.SIQVisitor)
+  @objc func handleBotTrigger()
+  @objc optional func handleCustomLauncherVisibility(_ visible: Swift.Bool)
+  @objc optional func renewAuth(completion: @escaping (Mobilisten.SIQAuth) -> Swift.Void)
+  @objc optional func handleAuthRenewalError(error: any MobilistenCore.SIQError)
+  @objc func shouldReRegisterPushNotification()
+}
+@objc public protocol ZohoSalesIQKnowledgeBaseDelegate : ObjectiveC.NSObjectProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func handleResourceOpened(_ type: Mobilisten.SIQResourceType, resource: Mobilisten.SIQKnowledgeBaseResource?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func handleResourceClosed(_ type: Mobilisten.SIQResourceType, resource: Mobilisten.SIQKnowledgeBaseResource?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func handleResourceLiked(_ type: Mobilisten.SIQResourceType, resource: Mobilisten.SIQKnowledgeBaseResource?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func handleResourceDisliked(_ type: Mobilisten.SIQResourceType, resource: Mobilisten.SIQKnowledgeBaseResource?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc optional func didFailWithError(_ type: Mobilisten.SIQResourceType, resource: Mobilisten.SIQKnowledgeBaseResource?, error: MobilistenCore.ResourceError)
+  #endif
+}
+@objc @_inheritsConvenienceInitializers open class ZohoSalesIQ : ObjectiveC.NSObject {
+  @objc public static var Chat: Mobilisten.LCSharedHandler
+  @objc public static var Admin: Mobilisten.LCAdminHandler
+  @objc public static var Visitor: Mobilisten.VisitorClass
+  @objc public static var Tracking: Mobilisten.TrackingClass
+  @objc public static var Theme: Mobilisten.ThemeConfig
+  @objc public static var ChatActions: Mobilisten.SIQActionRegistry
+  @objc public static var FAQ: Mobilisten.SIQFAQClass
+  @objc public static var Conversation: Mobilisten.SIQConversationsClass
+  @objc public static var Logger: Mobilisten.SIQLogger
+  @objc public static var KnowledgeBase: Mobilisten.SIQKnowledgeBase
+  @objc public static var Launcher: Mobilisten.SIQLauncher
+  @objc public static var Notification: Mobilisten.SIQNotification
+  @objc public static var apiDefinedPageTitle: Swift.String?
+  @objc weak public static var delegate: (any Mobilisten.ZohoSalesIQDelegate)?
+  public static var embedInTab: Swift.Bool {
+    get
+    set
+  }
+  @objc public static var deviceToken: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public static func dismissUI()
+  @objc public static var getCommunicationMode: MobilistenCore.SIQCommunicationMode {
+    @objc get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func registerVisitor(_ id: Swift.String?, completion: Mobilisten.ZSIQActionCompletionBlock? = nil)
+  #endif
+  @objc public static func clearMessagesTable()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func unregisterVisitor(completion: Mobilisten.ZSIQActionCompletionBlock? = nil)
+  #endif
+  @objc public static var running_platform: Swift.String {
+    @objc get
+    @objc set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func setPlatform(platform: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func removeAuthToken(completion: Mobilisten.ZSIQErrorCompletionBlock? = nil)
+  #endif
+  public static func disableTracking()
+  public static func enableTracking()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func initWithAppKey(_ appKey: Swift.String, accessKey: Swift.String, authProvider: Mobilisten.SIQAuth? = nil, completion: Mobilisten.ZSIQErrorCompletionBlock? = nil)
+  #endif
+  @objc public static func updateConfigurationFlag(_ forKey: Mobilisten.MobilistenFlag, value: Any)
+  @available(*, unavailable, renamed: "showLauncher")
+  @objc public static func showLiveChat(_ show: Swift.Bool)
+  @available(iOS, deprecated, message: "Use ZohoSalesIQ.Launcher.show instead.")
+  @objc public static func showLauncher(_ show: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func present(tabBarItem: Any? = nil, referenceID: Swift.String? = nil, shouldShowListView: Swift.Bool = true, completion: MobilistenCore.ZSIQResultCompletion? = nil)
+  #endif
+  @objc public static func registerLocalizationFile(with tableName: Swift.String)
+  @objc public static func refreshLauncher()
+  @objc public static func enablePush(_ regid: Swift.String, isTestDevice: Swift.Bool, mode: MobilistenCore.APNSMode)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func processNotificationWithInfo(_ info: [Swift.AnyHashable : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @objc public static func handlePushNotificationAction(actionIdentifier: Swift.String? = nil, userInfo: [Swift.AnyHashable : Any], responseText: Swift.String? = nil, completion: @escaping () -> Swift.Void)
+  #endif
+  @objc public static func reregisterPushNotification()
+  @objc public static func registerNotificationListener(_ enable: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func handleNotificationResponse(_ info: [Swift.AnyHashable : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func isMobilistenNotification(_ info: [Swift.AnyHashable : Any]?) -> Swift.Bool
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func handleNotificationAction(_ userInfo: [Swift.AnyHashable : Any]?, response: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @objc public static func handleCallNotificationAction(_ action: MobilistenCallsCore.SIQCallAction, info: [Swift.AnyHashable : Any]?)
+  #endif
+  @objc public static func openURL(_ url: Foundation.URL)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func setVisitorTrackingInterfaceHandler(_ handler: Mobilisten.VisitorTrackingInterface?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func setNotificationLinkHandler(_ handler: Mobilisten.NotificationLinkHandler?)
+  #endif
+  @objc public static func setTabOrder(_ tabBarItems: [Any])
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func showInAppNotification(title: Swift.String, subtitle: Swift.String, duration: Swift.Double = 3.65, image: UIKit.UIImage?, action: @escaping () -> Swift.Void)
+  #endif
+  @objc public static func setNotificationCustomID(_ customID: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Mobilisten.ZohoSalesIQ {
+  @objc public enum ActionSource : Swift.Int {
+    case app = 1
+    case sdk = 2
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.Int)
+    #endif
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+}
+@available(iOS 10.0, *)
+extension Mobilisten.ZohoSalesIQ : UserNotifications.UNUserNotificationCenterDelegate {
+  @available(iOS 10.0, *)
+  @objc dynamic public func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, didReceive response: UserNotifications.UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void)
+  @objc dynamic public func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, willPresent notification: UserNotifications.UNNotification, withCompletionHandler completionHandler: @escaping (UserNotifications.UNNotificationPresentationOptions) -> Swift.Void)
+}
+@objc @_inheritsConvenienceInitializers open class LCAdminHandler : ObjectiveC.NSObject {
+  @available(*, unavailable, message: "Use ZohoSalesIQDelegate [ZohoSalesIQ.delegate] for tracking events.")
+  @objc public func setChatHandler(_ handler: Mobilisten.ChatActivityHandler)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public typealias ZSIQVoidCompletion = () -> ()
+public typealias ZSIQBoolCompletion = (Swift.Bool) -> ()
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class SIQFAQArticle : ObjectiveC.NSObject {
+  @objc open var id: Swift.String
+  @objc open var name: Swift.String
+  @objc open var isRated: Swift.Bool
+  @objc open var viewCount: Swift.Int
+  @objc open var likeCount: Swift.Int
+  @objc open var dislikeCount: Swift.Int
+  @objc open var categoryName: Swift.String
+  @objc open var categoryID: Swift.String
+  @objc open var departmentID: Swift.String
+  @objc open var createdTime: Foundation.Date?
+  @objc open var lastModifiedTime: Foundation.Date?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQVisitor : ObjectiveC.NSObject {
+  @objc open var name: Swift.String?
+  @objc open var email: Swift.String?
+  @objc open var phone: Swift.String?
+  @objc open var browser: Swift.String?
+  @objc open var os: Swift.String?
+  @objc open var ip: Swift.String?
+  @objc open var countryCode: Swift.String?
+  @objc open var searchEngine: Swift.String?
+  @objc open var searchQuery: Swift.String?
+  @objc open var region: Swift.String?
+  @objc open var state: Swift.String?
+  @objc open var city: Swift.String?
+  @objc open var numberOfChats: Foundation.NSNumber?
+  @objc open var numberOfVisits: Foundation.NSNumber?
+  @objc open var noOfDaysVisited: Foundation.NSNumber?
+  @objc open var totalTimeSpent: Foundation.NSNumber?
+  @objc open var firstVisitTime: Foundation.Date?
+  @objc open var lastVisitTime: Foundation.Date?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQVisitorLocation : ObjectiveC.NSObject {
+  @objc open var countryCode: Swift.String?
+  @objc open var latitude: Foundation.NSNumber?
+  @objc open var longitude: Foundation.NSNumber?
+  @objc open var city: Swift.String?
+  @objc open var zipCode: Swift.String?
+  @objc open var state: Swift.String?
+  @objc open var country: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQKnowledgeBaseResource : ObjectiveC.NSObject {
+  @objc open var id: Swift.String?
+  @objc open var category: Mobilisten.SIQArticleCategory?
+  @objc open var title: Swift.String?
+  @objc open var departmentId: Swift.String?
+  @objc open var language: Mobilisten.SIQArticleLanguage?
+  @objc open var creator: Mobilisten.SIQArticleUser?
+  @objc open var modifier: Mobilisten.SIQArticleUser?
+  @objc open var createdTime: Foundation.Date?
+  @objc open var modifiedTime: Foundation.Date?
+  @objc open var publicUrl: Swift.String?
+  @objc open var stats: Mobilisten.SIQArticleStats?
+  @objc open var content: Swift.String?
+  @objc open var ratedType: Mobilisten.SIQArticleRatedType
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class SIQArticleCategory : ObjectiveC.NSObject {
+  @objc open var id: Swift.String?
+  @objc open var name: Swift.String?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class SIQArticleLanguage : ObjectiveC.NSObject {
+  @objc open var id: Swift.String?
+  @objc open var code: Swift.String?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class SIQArticleUser : ObjectiveC.NSObject {
+  @objc open var id: Swift.String?
+  @objc open var name: Swift.String?
+  @objc open var email: Swift.String?
+  @objc open var displayName: Swift.String?
+  @objc open var imageUrl: Swift.String?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class SIQArticleStats : ObjectiveC.NSObject {
+  @objc open var liked: Foundation.NSNumber?
+  @objc open var disliked: Foundation.NSNumber?
+  @objc open var used: Foundation.NSNumber?
+  @objc open var viewed: Foundation.NSNumber?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQKnowledgeBaseCategory : ObjectiveC.NSObject {
+  @objc open var id: Swift.String?
+  @objc open var name: Swift.String?
+  @objc open var departmentId: Swift.String?
+  @objc open var count: Foundation.NSNumber?
+  @objc open var childrenCount: Foundation.NSNumber?
+  @objc open var order: Foundation.NSNumber?
+  @objc open var parentCategoryId: Swift.String?
+  @objc open var resourceModifiedTime: Foundation.Date?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class SIQResourceDepartment : ObjectiveC.NSObject {
+  @objc open var id: Swift.String?
+  @objc open var name: Swift.String?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class SIQChat : ObjectiveC.NSObject {
+  @objc open var uuid: Swift.String?
+  @objc open var referenceID: Swift.String?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SalesIQNotificationPayload : ObjectiveC.NSObject {
+  @objc public func toDictionary() -> [Swift.String : Any]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SalesIQChatNotificationPayload : Mobilisten.SalesIQNotificationPayload {
+  @objc open var userId: Swift.String?
+  @objc open var chatId: Swift.String?
+  @objc open var senderName: Swift.String?
+  @objc open var previousMessageUID: Swift.String?
+  @objc open var messageUID: Swift.String?
+  @objc open var sender: Swift.String?
+  @objc open var title: Swift.String?
+  @objc open var message: Swift.String?
+  @objc open var department: Mobilisten.SalesIQDepartmentNotificationPlayload?
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override public func toDictionary() -> [Swift.String : Any]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SalesIQEndChatNotificationPayload : Mobilisten.SalesIQNotificationPayload {
+  @objc open var message: Swift.String?
+  @objc open var userId: Swift.String?
+  @objc open var chatId: Swift.String?
+  @objc open var title: Swift.String?
+  @objc open var department: Mobilisten.SalesIQDepartmentNotificationPlayload?
+  @objc override public func toDictionary() -> [Swift.String : Any]
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SalesIQVisitorHistoryNotificationPayload : Mobilisten.SalesIQNotificationPayload {
+  @objc open var imagePath: Swift.String?
+  @objc open var targetLink: Swift.String?
+  @objc open var title: Swift.String?
+  @objc open var message: Swift.String?
+  @objc override public func toDictionary() -> [Swift.String : Any]
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class SalesIQDepartmentNotificationPlayload : ObjectiveC.NSObject {
+  @objc open var id: Swift.String?
+  @objc open var name: Swift.String?
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc public func toDictionary() -> [Swift.String : Any]
+  @objc deinit
+}
+@objc public enum HomepageConfigurationMode : Swift.Int {
+  case chat
+  case call
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Mobilisten.BookingServiceListEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<Mobilisten.BookingServiceListEntity>
+}
+@objc @_inheritsConvenienceInitializers nonisolated public class BookingServiceListEntity : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class SIQKnowledgeBase : ObjectiveC.NSObject {
+  @objc weak public var delegate: (any Mobilisten.ZohoSalesIQKnowledgeBaseDelegate)?
+  @objc public func isEnabled(_ resource: Mobilisten.SIQResourceType) -> Swift.Bool
+  @objc public func setRecentShowLimit(_ limit: Swift.Int)
+  @objc public func combineDepartments(_ resource: Mobilisten.SIQResourceType, enable: Swift.Bool)
+  @objc public func categorize(_ resource: Mobilisten.SIQResourceType, enable: Swift.Bool)
+  @objc public func setVisibility(_ resource: Mobilisten.SIQResourceType, enable: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func getSingleResource(_ resource: Mobilisten.SIQResourceType, id: Swift.String, completion: @escaping (_ success: Swift.Bool, _ error: (any MobilistenCore.SIQError)?, _ resource: Mobilisten.SIQKnowledgeBaseResource?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func open(_ resource: Mobilisten.SIQResourceType, id: Swift.String, completion: @escaping (_ success: Swift.Bool, _ error: (any MobilistenCore.SIQError)?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func getResources(_ resource: Mobilisten.SIQResourceType, departmentId: Swift.String? = nil, parentCategoryId: Swift.String? = nil, searchKey: Swift.String? = nil, page: Swift.Int = 1, limit: Swift.Int = 99, completion: @escaping (_ success: Swift.Bool, _ error: (any MobilistenCore.SIQError)?, _ resources: [Mobilisten.SIQKnowledgeBaseResource]?, _ moreDataAvailable: Swift.Bool) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func getCategories(_ resource: Mobilisten.SIQResourceType, departmentId: Swift.String? = nil, parentCategoryId: Swift.String? = nil, completion: @escaping (_ success: Swift.Bool, _ error: (any MobilistenCore.SIQError)?, _ resourceCategories: [Mobilisten.SIQKnowledgeBaseCategory]?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func getResourceDepartments(completion: @escaping (_ error: (any MobilistenCore.SIQError)?, _ departments: [Mobilisten.SIQResourceDepartment]?) -> Swift.Void)
+  #endif
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQTheme : ObjectiveC.NSObject {
+  @objc public var themeColor: UIKit.UIColor!
+  @objc public var Launcher: Mobilisten.SIQLauncherTheme
+  @objc public var TabBar: Mobilisten.SIQTabBarTheme
+  @objc public var Navigation: Mobilisten.SIQNavigationTheme
+  @objc public var EmptyView: Mobilisten.SIQEmptyViewTheme
+  @objc public var OfflineBanner: Mobilisten.SIQOfflineBannerTheme
+  @objc public var NetworkWaitingBanner: Mobilisten.SIQNoNetworkBannnerTheme
+  @objc public var Conversation: Mobilisten.SIQConversationTheme
+  @objc public var FAQ: Mobilisten.SIQFAQTheme
+  @objc public var Chat: Mobilisten.SIQChatWindowTheme
+  @objc public var Form: Mobilisten.SIQChatFormTheme
+  @objc public var Feedback: Mobilisten.SIQFeedbackTheme
+  @objc public var InAppNotification: Mobilisten.SIQInAppNotificationTheme
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc convenience public init(colors: [Swift.String : Any]?)
+  #endif
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQLauncherUnreadBadgeTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var textColor: UIKit.UIColor!
+  @objc public var borderColor: UIKit.UIColor!
+  @objc public var borderWidth: Foundation.NSNumber!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQOfflineBannerTheme : ObjectiveC.NSObject {
+  @objc public var textColor: UIKit.UIColor!
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQEmptyViewTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var chatButtonBackgroundColor: UIKit.UIColor!
+  @objc public var chatButtonTitleColor: UIKit.UIColor!
+  @objc public var textColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQNavigationTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var titleColor: UIKit.UIColor!
+  @objc public var tintColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQTabBarTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var activeTabColor: UIKit.UIColor!
+  @objc public var inactiveTabColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQLauncherTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var iconColor: UIKit.UIColor!
+  @objc public var UnreadBadge: Mobilisten.SIQLauncherUnreadBadgeTheme
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQFeedbackTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var primaryTextColor: UIKit.UIColor!
+  @objc public var secondaryTextColor: UIKit.UIColor!
+  @objc public var skipButtonTextColor: UIKit.UIColor!
+  @objc public var submitButtonTextColor: UIKit.UIColor!
+  @objc public var submitButtonBackgroundColor: UIKit.UIColor!
+  @objc public var feedbackTextFieldTintColor: UIKit.UIColor!
+  @objc public var feedbackPlaceholderTextColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQConversationTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var ListItem: Mobilisten.SIQConversationListItemTheme
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQFAQTheme : ObjectiveC.NSObject {
+  @objc public var ListItem: Mobilisten.SIQFAQListItemTheme
+  @objc public var headerTextColor: UIKit.UIColor!
+  @objc public var Article: Mobilisten.SIQArticleTheme
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQArticleTheme : ObjectiveC.NSObject {
+  @objc public var Toolbar: Mobilisten.SIQFAQBottomBarTheme
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQFAQBottomBarTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var LikeButton: Mobilisten.SIQButtonTheme
+  @objc public var DislikeButton: Mobilisten.SIQButtonTheme
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQButtonTheme : ObjectiveC.NSObject {
+  @objc public enum SIQButtonState : Swift.Int {
+    case selected = 0
+    case normal = 1
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.Int)
+    #endif
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func getColor(forState status: Mobilisten.SIQButtonTheme.SIQButtonState) -> UIKit.UIColor?
+  #endif
+  @objc public func setColor(_ newColor: UIKit.UIColor, forState status: Mobilisten.SIQButtonTheme.SIQButtonState)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQChatWindowTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var backgroundImage: UIKit.UIImage!
+  @objc public var Message: Mobilisten.SIQMessageTheme
+  @objc public var HandOffBanner: Mobilisten.SIQHandOffBannerTheme
+  @objc public var Banner: Mobilisten.SIQBannerTheme
+  @objc public var QueueBanner: Mobilisten.SIQQueueBannerTheme
+  @objc public var Input: Mobilisten.SIQChatInputTheme
+  @objc public var AttachmentsSheet: Mobilisten.SIQAttachmentSheetTheme
+  @objc public var ScrollButton: Mobilisten.SIQChatScrollButtonTheme
+  @objc public var EmailTranscript: Mobilisten.SIQEmailTranscriptTheme
+  @objc public var DebugLog: Mobilisten.SIQLogViewTheme
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQChatInputTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var audioRecordHintBackgroundColor: UIKit.UIColor!
+  @objc public var audioRecordHintTextColor: UIKit.UIColor!
+  @objc public var textFieldBorderColor: UIKit.UIColor!
+  @objc public var textFieldTintColor: UIKit.UIColor!
+  @objc public var textFieldBackgroundColor: UIKit.UIColor!
+  @objc public var textFieldPlaceholderColor: UIKit.UIColor!
+  @objc public var textFieldTextColor: UIKit.UIColor!
+  @objc public var attachmentButtonBackgroundColor: UIKit.UIColor!
+  @objc public var recordButtonBackgroundColor: UIKit.UIColor!
+  @objc public var recordSoundPulseBackgroundColor: UIKit.UIColor!
+  @objc public var sendButtonBackgroundColor: UIKit.UIColor!
+  @objc public var buttonDisabledBackgroundColor: UIKit.UIColor!
+  @objc public var recordTimerBackgroundColor: UIKit.UIColor!
+  @objc public var recordTimerTextColor: UIKit.UIColor!
+  @objc public var recordTimerIndicatorColor: UIKit.UIColor!
+  @objc public var recordSlideTextColor: UIKit.UIColor!
+  @objc public var recordSlideIconColor: UIKit.UIColor!
+  @objc public var recordCancelTextColor: UIKit.UIColor!
+  @objc public var moreIconColor: UIKit.UIColor!
+  @objc public var sendIconColor: UIKit.UIColor!
+  @objc public var recordIconColor: UIKit.UIColor!
+  public var blurEffectStyle: UIKit.UIBlurEffect.Style!
+  @objc public var Reply: Mobilisten.SIQReplyViewTheme
+  @objc public var Edit: Mobilisten.SIQReplyViewTheme
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQAttachmentSheetTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var overlayColor: UIKit.UIColor!
+  @objc public var tintColor: UIKit.UIColor!
+  @objc public var separatorColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQChatScrollButtonTheme : ObjectiveC.NSObject {
+  @objc public var iconColor: UIKit.UIColor!
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var UnreadBadge: Mobilisten.SIQLauncherUnreadBadgeTheme
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQEmailTranscriptTheme : ObjectiveC.NSObject {
+  @objc public var textFieldTintColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQChatFormTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var textFieldBackgroundColor: UIKit.UIColor!
+  @objc public var textFieldTextColor: UIKit.UIColor!
+  @objc public var textFieldTintColor: UIKit.UIColor!
+  @objc public var textFieldPlaceholderColor: UIKit.UIColor!
+  @objc public var textFieldTitleColor: UIKit.UIColor!
+  @objc public var textFieldRequiredIndicatorColor: UIKit.UIColor!
+  @objc public var errorColor: UIKit.UIColor!
+  @objc public var submitButtonBackgroundColor: UIKit.UIColor!
+  @objc public var submitButtonTextColor: UIKit.UIColor!
+  @objc public var campaignOptInTextColor: UIKit.UIColor!
+  @objc public var checkboxCheckedColor: UIKit.UIColor!
+  @objc public var checkboxUncheckedColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQNoNetworkBannnerTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var textColor: UIKit.UIColor!
+  @objc public var loaderColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQConversationListItemTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var timerTextColor: UIKit.UIColor!
+  @objc public var timerIconColor: UIKit.UIColor!
+  @objc public var titleTextColor: UIKit.UIColor!
+  @objc public var subtitleTextColor: UIKit.UIColor!
+  @objc public var timeTextColor: UIKit.UIColor!
+  @objc public var openBadgeBackgroundColor: UIKit.UIColor!
+  @objc public var openBadgeBorderColor: UIKit.UIColor!
+  @objc public var openBadgeTextColor: UIKit.UIColor!
+  @objc public var separatorColor: UIKit.UIColor!
+  @objc public var UnreadBadge: Mobilisten.SIQLauncherUnreadBadgeTheme
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQFAQListItemTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var titleTextColor: UIKit.UIColor!
+  @objc public var subtitleTextColor: UIKit.UIColor!
+  @objc public var subtitlePartitionColor: UIKit.UIColor!
+  @objc public var likePendingColor: UIKit.UIColor!
+  @objc public var likedColor: UIKit.UIColor!
+  @objc public var separatorColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQMessageTheme : ObjectiveC.NSObject {
+  @objc public var Common: Mobilisten.SIQMessageCommonTheme
+  @objc public var Suggestion: Mobilisten.SIQSuggestionTheme
+  @objc public var SkipActionButton: Mobilisten.SIQSkipActionButtonTheme
+  @objc public var AudioPlayer: Mobilisten.SIQAudioPlayerTheme
+  @objc public var Selection: Mobilisten.SIQSelectionComponentTheme
+  @objc public var InputCard: Mobilisten.SIQInputCardTheme
+  @objc public var Slider: Mobilisten.SIQSliderCardTheme
+  @objc public var InfoMessage: Mobilisten.SIQInfoMessageTheme
+  @objc public var Article: Mobilisten.SIQArticleMessageTheme
+  @objc public var File: Mobilisten.SIQFileMessageTheme
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQInfoMessageTheme : ObjectiveC.NSObject {
+  @objc public var textColor: UIKit.UIColor!
+  @objc public var lineColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQInAppNotificationTheme : ObjectiveC.NSObject {
+  @objc public var titleColor: UIKit.UIColor!
+  @objc public var subtitleColor: UIKit.UIColor!
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var imageBackgroundColor: UIKit.UIColor!
+  @objc public var cornerRadius: Foundation.NSNumber!
+  @objc public var imageCornerRadius: Foundation.NSNumber!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQFileMessageTheme : ObjectiveC.NSObject {
+  @objc public var incomingTitleColor: UIKit.UIColor!
+  @objc public var incomingSubTitleColor: UIKit.UIColor!
+  @objc public var outgoingTitleColor: UIKit.UIColor!
+  @objc public var outgoingSubTitleColor: UIKit.UIColor!
+  @objc public var incomingFileViewBackgroundColor: UIKit.UIColor!
+  @objc public var outgoingFileViewBackgroundColor: UIKit.UIColor!
+  @objc public var incomingCommentBackgoundColor: UIKit.UIColor!
+  @objc public var outgoingCommentBackgoundColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQAudioPlayerTheme : ObjectiveC.NSObject {
+  @objc public var thumbColor: UIKit.UIColor!
+  @objc public var playButtonBackgroundColor: UIKit.UIColor!
+  @objc public var incomingTrackColor: UIKit.UIColor!
+  @objc public var outgoingTrackColor: UIKit.UIColor!
+  @objc public var incomingButtonIconColor: UIKit.UIColor!
+  @objc public var outgoingButtonIconColor: UIKit.UIColor!
+  @objc public var outgoingDurationTextColor: UIKit.UIColor!
+  @objc public var incomingDurationTextColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQSelectionComponentTheme : ObjectiveC.NSObject {
+  @objc public var textColor: UIKit.UIColor!
+  @objc public var accessoryColor: UIKit.UIColor!
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var selectionBackgroundColor: UIKit.UIColor!
+  @objc public var buttonTextColor: UIKit.UIColor!
+  @objc public var buttonBackgroundColor: UIKit.UIColor!
+  @objc public var linkTextColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQInputCardTheme : ObjectiveC.NSObject {
+  @objc public var titleColor: UIKit.UIColor!
+  @objc public var textFieldTextColor: UIKit.UIColor!
+  @objc public var textFieldBackgroundColor: UIKit.UIColor!
+  @objc public var textFieldPlaceholderColor: UIKit.UIColor!
+  @objc public var sendButtonBackgroundColor: UIKit.UIColor!
+  @objc public var sendButtonIconColor: UIKit.UIColor!
+  @objc public var separatorColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQSliderCardTheme : ObjectiveC.NSObject {
+  @objc public var thumbBorderColor: UIKit.UIColor!
+  @objc public var selectedTrackColor: UIKit.UIColor!
+  @objc public var selectedValueTextColor: UIKit.UIColor!
+  @objc public var unSelectedTrackColor: UIKit.UIColor!
+  @objc public var thumbBackgroundColor: UIKit.UIColor!
+  @objc public var minRangeTextColor: UIKit.UIColor!
+  @objc public var maxRangeTextColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQQueueBannerTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var titleColor: UIKit.UIColor!
+  @objc public var subtitleColor: UIKit.UIColor!
+  @objc public var subtitleTimeColor: UIKit.UIColor!
+  @objc public var positionTextColor: UIKit.UIColor!
+  @objc public var positionSubtitleColor: UIKit.UIColor!
+  @objc public var positionContainerBackgroundColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQHandOffBannerTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var textColor: UIKit.UIColor!
+  @objc public var buttonTitleColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQBannerTheme : ObjectiveC.NSObject {
+  @objc public enum SIQBannerStatus : Swift.Int {
+    case success = 0
+    case info = 1
+    case failure = 2
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.Int)
+    #endif
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func getBackgroundColor(forState status: Mobilisten.SIQBannerTheme.SIQBannerStatus) -> UIKit.UIColor?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func getTextColor(forState status: Mobilisten.SIQBannerTheme.SIQBannerStatus) -> UIKit.UIColor?
+  #endif
+  @objc public func setBackgroundColor(_ newColor: UIKit.UIColor, forState status: Mobilisten.SIQBannerTheme.SIQBannerStatus)
+  @objc public func setTextColor(_ newColor: UIKit.UIColor, forState status: Mobilisten.SIQBannerTheme.SIQBannerStatus)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQBannerColorTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var textColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQMessageCommonTheme : ObjectiveC.NSObject {
+  @objc public var botTypingIndicatorStyle: Foundation.NSNumber!
+  @objc public var messageSenderNameColor: UIKit.UIColor!
+  @objc public var outgoingBackgroundColor: UIKit.UIColor!
+  @objc public var outgoingTextColor: UIKit.UIColor!
+  @objc public var outgoingBorderColor: UIKit.UIColor!
+  @objc public var outgoingTimeTextColor: UIKit.UIColor!
+  @objc public var outgoingTimeIconColor: UIKit.UIColor!
+  @objc public var incomingBackgroundColor: UIKit.UIColor!
+  @objc public var incomingTextColor: UIKit.UIColor!
+  @objc public var incomingBorderColor: UIKit.UIColor!
+  @objc public var incomingTimeTextColor: UIKit.UIColor!
+  @objc public var incomingTimeIconColor: UIKit.UIColor!
+  @objc public var incomingTextTimeColor: UIKit.UIColor!
+  @objc public var outgoingTextTimeColor: UIKit.UIColor!
+  @objc public var messageStatusIconColor: UIKit.UIColor!
+  @objc public var incomingProgressButton: Mobilisten.SIQProgressButtonTheme
+  @objc public var outgoingProgressButton: Mobilisten.SIQProgressButtonTheme
+  @objc public var outgoingRepliedMessage: Mobilisten.SIQReplyViewTheme
+  @objc public var incomingRepliedMessage: Mobilisten.SIQReplyViewTheme
+  @objc public var incomingMessageEditedTagColor: UIKit.UIColor!
+  @objc public var outgoingMessageEditedTagColor: UIKit.UIColor!
+  @objc public var incomingMessageTimeStampColor: UIKit.UIColor!
+  @objc public var outgoingMessageTimeStampColor: UIKit.UIColor!
+  @objc public var incomingDeletedMessageColor: UIKit.UIColor!
+  @objc public var outgoingDeletedMessageColor: UIKit.UIColor!
+  @objc public var deletingMessageTitleColor: UIKit.UIColor!
+  @objc public var deliveryStatusIconColor: UIKit.UIColor!
+  @objc public var repliedMessageHighLightColor: UIKit.UIColor!
+  @objc public var incomingMessageReplyIconColor: UIKit.UIColor!
+  @objc public var outgoingMessageReplyIconColor: UIKit.UIColor!
+  @objc public var LoadMore: Mobilisten.SIQLoadMoreViewTheme
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQLoadMoreViewTheme : ObjectiveC.NSObject {
+  @objc public var titleColor: UIKit.UIColor!
+  @objc public var viewBorderColor: UIKit.UIColor!
+  @objc public var separatorLineColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQSkipActionButtonTheme : ObjectiveC.NSObject {
+  @objc public var textColor: UIKit.UIColor!
+  @objc public var borderColor: UIKit.UIColor!
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var cornerRadius: Foundation.NSNumber!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQSuggestionTheme : ObjectiveC.NSObject {
+  @objc public var textColor: UIKit.UIColor!
+  @objc public var borderColor: UIKit.UIColor!
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var cornerRadius: Foundation.NSNumber!
+  @objc public var displayStyle: Foundation.NSNumber!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQArticleMessageTheme : ObjectiveC.NSObject {
+  @objc public var cardTitleColor: UIKit.UIColor!
+  @objc public var articleTitleColor: UIKit.UIColor!
+  @objc public var authorTextColor: UIKit.UIColor!
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQProgressButtonTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var tintColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQReplyViewTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var titleColor: UIKit.UIColor!
+  @objc public var subtitleColor: UIKit.UIColor!
+  @objc public var verticalLine: UIKit.UIColor!
+  @objc public var messageTypeIconColor: UIKit.UIColor!
+  @objc public var closeButton: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SIQLogViewTheme : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor!
+  @objc public var titleColor: UIKit.UIColor!
+  @objc public var textViewColor: UIKit.UIColor!
+  @objc public var textViewBackgroundColor: UIKit.UIColor!
+  @objc public var textViewTopShadowColor: [UIKit.UIColor]!
+  @objc public var textViewBottomShadowColor: [UIKit.UIColor]!
+  @objc public var sendTitleColor: UIKit.UIColor!
+  @objc public var sendBackgroundColor: UIKit.UIColor!
+  @objc public var cancelTitleColor: UIKit.UIColor!
+  @objc convenience public init(dictionary: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class SIQLogger : ObjectiveC.NSObject {
+  @objc public var isEnabled: Swift.Bool {
+    @objc get
+  }
+  @objc public func setPath(_ directory: Foundation.URL)
+  @objc public func setEnabled(_ enable: Swift.Bool)
+  @objc public func clear()
+  @objc public func enableMobilistenLogs(_ enable: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func write(_ log: Swift.String, logLevel: Mobilisten.SIQDebugLogLevel, file: Swift.String? = #file, line: Foundation.NSNumber? = #line, function: Swift.String? = #function, fileID: Swift.String? = #fileID, filePath: Swift.String? = #filePath, column: Foundation.NSNumber? = #column, success: Mobilisten.ZSIQActionCompletionBlock? = nil)
+  #endif
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Mobilisten.BookingAppointmentEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<Mobilisten.BookingAppointmentEntity>
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var bookedon: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var bookingtype: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var cost: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var costpaid: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var currency: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var customeremail: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var customername: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var duration: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var endtime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var link: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var serviceInfo: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var staffInfo: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var starttime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var status: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var timezone: Swift.String? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var staff: Mobilisten.BookingStaffListEntity? {
+    @objc get
+    @objc set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var service: Mobilisten.BookingServiceListEntity? {
+    @objc get
+    @objc set
+  }
+  #endif
+}
+@objc @_inheritsConvenienceInitializers open class ChatActivityHandler : ObjectiveC.NSObject {
+  @objc open func handleWidgetAction(isOpen: Swift.Bool)
+  @objc open func handleVisitorAttended(visitor: MobilistenCore.SIQVisitorChat)
+  @objc open func handleVisitorMissed(visitor: MobilistenCore.SIQVisitorChat)
+  @objc open func handleAgentsOffline()
+  @objc open func handleAgentsOnline()
+  @objc open func handleChatComplete(visitor: MobilistenCore.SIQVisitorChat)
+  @objc open func handleChatReopen(visitor: MobilistenCore.SIQVisitorChat)
+  @objc open func handleRating(visitor: MobilistenCore.SIQVisitorChat)
+  @objc open func handleFeedback(visitor: MobilistenCore.SIQVisitorChat)
+  @objc open func updateUnreadMessages(count: Swift.Int)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class ThemeConfig : ObjectiveC.NSObject {
+  @objc public var baseTheme: Mobilisten.SIQTheme {
+    @objc get
+  }
+  @objc public var currentCustomTheme: Mobilisten.SIQTheme {
+    @objc get
+  }
+  @available(iOS 13.0, *)
+  @objc public func forceUserInterfaceStyle(style: UIKit.UIUserInterfaceStyle)
+  @objc public func setTheme(theme: Mobilisten.SIQTheme)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Mobilisten.ShowinListType : Swift.Equatable {}
+extension Mobilisten.ShowinListType : Swift.Hashable {}
+extension Mobilisten.SIQTabBarComponent : Swift.Equatable {}
+extension Mobilisten.SIQTabBarComponent : Swift.Hashable {}
+extension Mobilisten.SIQTabBarComponent : Swift.RawRepresentable {}
+extension Mobilisten.VisibilityMode : Swift.Equatable {}
+extension Mobilisten.VisibilityMode : Swift.Hashable {}
+extension Mobilisten.VisibilityMode : Swift.RawRepresentable {}
+extension Mobilisten.BubbleStyle : Swift.Equatable {}
+extension Mobilisten.BubbleStyle : Swift.Hashable {}
+extension Mobilisten.BubbleStyle : Swift.RawRepresentable {}
+extension Mobilisten.TimeStyle : Swift.Equatable {}
+extension Mobilisten.TimeStyle : Swift.Hashable {}
+extension Mobilisten.TimeStyle : Swift.RawRepresentable {}
+extension Mobilisten.ChatComponent : Swift.Equatable {}
+extension Mobilisten.ChatComponent : Swift.Hashable {}
+extension Mobilisten.ChatComponent : Swift.RawRepresentable {}
+extension Mobilisten.SuggestionStyle : Swift.Equatable {}
+extension Mobilisten.SuggestionStyle : Swift.Hashable {}
+extension Mobilisten.SuggestionStyle : Swift.RawRepresentable {}
+extension Mobilisten.CallFilter : Swift.Equatable {}
+extension Mobilisten.CallFilter : Swift.Hashable {}
+extension Mobilisten.CallFilter : Swift.RawRepresentable {}
+extension Mobilisten.SystemMessage : Swift.Equatable {}
+extension Mobilisten.SystemMessage : Swift.Hashable {}
+extension Mobilisten.SystemMessage : Swift.RawRepresentable {}
+extension Mobilisten.SIQArticleRatedType : Swift.Equatable {}
+extension Mobilisten.SIQArticleRatedType : Swift.Hashable {}
+extension Mobilisten.SIQArticleRatedType : Swift.RawRepresentable {}
+extension Mobilisten.SIQResourceType : Swift.Equatable {}
+extension Mobilisten.SIQResourceType : Swift.Hashable {}
+extension Mobilisten.SIQResourceType : Swift.RawRepresentable {}
+extension Mobilisten.SIQDebugLogLevel : Swift.Equatable {}
+extension Mobilisten.SIQDebugLogLevel : Swift.Hashable {}
+extension Mobilisten.SIQDebugLogLevel : Swift.RawRepresentable {}
+extension Mobilisten.Language : Swift.Equatable {}
+extension Mobilisten.Language : Swift.Hashable {}
+extension Mobilisten.Language : Swift.RawRepresentable {}
+extension Mobilisten.ZohoSalesIQCallsImpl : Swift.Sendable {}
+extension Mobilisten.MobilistenFlag : Swift.Equatable {}
+extension Mobilisten.MobilistenFlag : Swift.Hashable {}
+extension Mobilisten.MobilistenFlag : Swift.RawRepresentable {}
+extension Mobilisten.ObserveType : Swift.Equatable {}
+extension Mobilisten.ObserveType : Swift.Hashable {}
+extension Mobilisten.ActionIconType : Swift.Equatable {}
+extension Mobilisten.ActionIconType : Swift.Hashable {}
+extension Mobilisten.ActionIconType : Swift.RawRepresentable {}
+extension Mobilisten.ZohoSalesIQ.ActionSource : Swift.Equatable {}
+extension Mobilisten.ZohoSalesIQ.ActionSource : Swift.Hashable {}
+extension Mobilisten.ZohoSalesIQ.ActionSource : Swift.RawRepresentable {}
+extension Mobilisten.HomepageConfigurationMode : Swift.Equatable {}
+extension Mobilisten.HomepageConfigurationMode : Swift.Hashable {}
+extension Mobilisten.HomepageConfigurationMode : Swift.RawRepresentable {}
+extension Mobilisten.SIQButtonTheme.SIQButtonState : Swift.Equatable {}
+extension Mobilisten.SIQButtonTheme.SIQButtonState : Swift.Hashable {}
+extension Mobilisten.SIQButtonTheme.SIQButtonState : Swift.RawRepresentable {}
+extension Mobilisten.SIQBannerTheme.SIQBannerStatus : Swift.Equatable {}
+extension Mobilisten.SIQBannerTheme.SIQBannerStatus : Swift.Hashable {}
+extension Mobilisten.SIQBannerTheme.SIQBannerStatus : Swift.RawRepresentable {}

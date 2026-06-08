@@ -1,0 +1,577 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AVCallKitBridge
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import CallKit
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc public class ZSIQMeetingParticipant : ObjectiveC.NSObject, @unchecked Swift.Sendable {
+  public var isHost: Swift.Bool?
+  public var isSelf: Swift.Bool?
+  public var meetingConferenceId: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(isHost: Swift.Bool? = nil, isSelf: Swift.Bool? = nil, meetingConferenceId: Swift.String? = nil)
+  #endif
+  @objc deinit
+}
+public typealias ZSIQAVErrorCompletionBlock = @Sendable (_ error: AVCallKitBridge.ZSIQAVErrorType?) -> Swift.Void
+public typealias ZSIQAVCompletionBlock = @_Concurrency.MainActor @Sendable (Swift.Result<Swift.Bool, AVCallKitBridge.ZSIQAVErrorType>) -> Swift.Void
+public enum ZSIQAVErrorType : Foundation.CustomNSError, Foundation.LocalizedError, Swift.Equatable, Swift.Sendable {
+  case callInProgress
+  case noOngoingCall
+  case failedToStart
+  case noInternet
+  case microphonePermissionDenied
+  case wrongCallID
+  case callKitNotAllowed
+  case directCallAcceptFailed
+  case custom(Foundation.NSError?)
+  case unknown
+  public var errorCode: Swift.Int {
+    get
+  }
+  public var errorMessage: Swift.String {
+    get
+  }
+  public static func == (a: AVCallKitBridge.ZSIQAVErrorType, b: AVCallKitBridge.ZSIQAVErrorType) -> Swift.Bool
+}
+public enum ZSIQAVCallType : Swift.Equatable, Swift.Sendable {
+  case audio(recording: Swift.Bool)
+  case direct(recording: Swift.Bool)
+  public var description: Swift.String {
+    get
+  }
+  public var recordingEnabled: Swift.Bool {
+    get
+  }
+  public static func == (a: AVCallKitBridge.ZSIQAVCallType, b: AVCallKitBridge.ZSIQAVCallType) -> Swift.Bool
+}
+@objc @_Concurrency.MainActor public class ZSIQAVCallTransferInfo : ObjectiveC.NSObject, Swift.Sendable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public var senderId: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public var chid: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public init(_senderId: Swift.String? = nil, _chid: Swift.String? = nil)
+  #endif
+  @objc deinit
+}
+public enum ZSIQAVStatus : Swift.String, Swift.Sendable, Swift.Equatable {
+  case notStarted
+  case connected
+  case connecting
+  case calling
+  case ringing
+  case reconnecting
+  case disconnected
+  case userBusy
+  case ended
+  case failed
+  case missed
+  case inqueue
+  public var isCallActive: Swift.Bool {
+    get
+  }
+  public var callBackEnabled: Swift.Bool {
+    get
+  }
+  public var isCallRinging: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZSIQAVCallWebStatus : Swift.String {
+  case invite
+  case initiate
+  case accept
+  case connected
+  case ended
+  case cancel
+  case missed
+  case reject
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SIQAVCallEndType {
+  case terminated
+  case missed
+  case disconnected
+  case endbyClient
+  case endByMe
+  case other
+  public static func == (a: AVCallKitBridge.SIQAVCallEndType, b: AVCallKitBridge.SIQAVCallEndType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ZSIQAVCallAction : Swift.Int, Swift.Sendable {
+  case invite
+  case accept
+  case cancel
+  case miss
+  case reject
+  case end
+  case connected
+  public var actionName: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum ZSIQTransferStatus {
+  case inProgress
+  case success
+  case failed
+  public static func == (a: AVCallKitBridge.ZSIQTransferStatus, b: AVCallKitBridge.ZSIQTransferStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public class ZSIQAVMetaData : ObjectiveC.NSObject, @unchecked Swift.Sendable {
+  public var uuid: Foundation.UUID {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var callID: Swift.String? {
+    get
+  }
+  #endif
+  public var conversationID: Swift.String {
+    get
+  }
+  public var localUserID: Swift.String {
+    get
+  }
+  public var localUserName: Swift.String {
+    get
+  }
+  public var remoteUserID: Swift.String {
+    get
+  }
+  public var remoteUserName: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var remoteUserImage: UIKit.UIImage? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var email: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var information: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var callRingingDuration: CoreFoundation.CGFloat? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var callRingingMissedDuration: CoreFoundation.CGFloat? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var queueCount: Swift.Int? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var acknowledgementKey: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var callTransferInfo: AVCallKitBridge.ZSIQAVCallTransferInfo? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var meetingParticipants: [AVCallKitBridge.ZSIQMeetingParticipant]? {
+    get
+  }
+  #endif
+  public var incomingCallRingingDuration: Swift.Double {
+    get
+  }
+  public var incomingCallAutoReject: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var callTransferDuration: Swift.Double? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var callTransferStatus: AVCallKitBridge.ZSIQTransferStatus? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var callTransferEndTimerMessage: Swift.String? {
+    get
+  }
+  #endif
+  public var isDepartmentTransfer: Swift.Bool {
+    get
+  }
+  public var canHold: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor public func setConversationID(id: Swift.String)
+  @_Concurrency.MainActor public func setLocalUserID(id: Swift.String)
+  @_Concurrency.MainActor public func setLocalUserName(name: Swift.String)
+  @_Concurrency.MainActor public func setRemoteUserID(id: Swift.String)
+  @_Concurrency.MainActor public func setRemoteUserName(name: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func setCallId(id: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func setRemoteUserImage(image: UIKit.UIImage?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func setEmail(email: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func setInformation(info: Swift.String?)
+  #endif
+  @_Concurrency.MainActor public func setCallRingingDuration(duration: CoreFoundation.CGFloat)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func setCallTransferDuration(duration: Swift.Double?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func setCallTransferStatus(status: AVCallKitBridge.ZSIQTransferStatus?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func setCallTransferEndTimerMessage(message: Swift.String?)
+  #endif
+  @_Concurrency.MainActor public func setIsDepartmentTransfer(status: Swift.Bool)
+  @_Concurrency.MainActor public func setQueueCount(count: Swift.Int)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func setCallTransferInfo(callTransferInfo: AVCallKitBridge.ZSIQAVCallTransferInfo?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func setMeetingParticipants(meetingParticipants: [AVCallKitBridge.ZSIQMeetingParticipant]?)
+  #endif
+  @_Concurrency.MainActor public func setIncomingCallAutoReject(autoReject: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func setAcknowledgementKey(key: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(conversationID: Swift.String, localUserID: Swift.String, localUserName: Swift.String, remoteUserID: Swift.String, remoteUserName: Swift.String, information: Swift.String?, email: Swift.String? = nil, remoteUserImage: UIKit.UIImage? = nil, callId: Swift.String? = nil, callRingingDuration: CoreFoundation.CGFloat? = 60.0, callRingingMissedDuration: CoreFoundation.CGFloat? = nil, incomingCallRingingDuration: Swift.Double? = 30, acknowledgementKey: Swift.String? = nil, callTransferInfo: AVCallKitBridge.ZSIQAVCallTransferInfo? = nil, canHold: Swift.Bool = false)
+  #endif
+  @objc deinit
+}
+@_Concurrency.MainActor public enum ZSIQAVCallButtons {
+  case chat(tintColor: UIKit.UIColor? = nil, selectedColor: UIKit.UIColor? = nil, icon: UIKit.UIImage? = nil, labelText: Swift.String? = nil)
+  case mute(tintColor: UIKit.UIColor? = nil, selectedColor: UIKit.UIColor? = nil, icon: UIKit.UIImage? = nil, labelText: Swift.String? = nil)
+  case hold(tintColor: UIKit.UIColor? = nil, selectedColor: UIKit.UIColor? = nil, icon: UIKit.UIImage? = nil, labelText: Swift.String? = nil)
+  case end(tintColor: UIKit.UIColor? = nil, selectedColor: UIKit.UIColor? = nil, icon: UIKit.UIImage? = nil, labelText: Swift.String? = nil)
+  case audio(tintColor: UIKit.UIColor? = nil, selectedColor: UIKit.UIColor? = nil, icon: UIKit.UIImage? = nil, labelText: Swift.String? = nil)
+  case call(tintColor: UIKit.UIColor? = nil, selectedColor: UIKit.UIColor? = nil, icon: UIKit.UIImage? = nil, labelText: Swift.String? = nil)
+  case missCallChat(tintColor: UIKit.UIColor? = nil, selectedColor: UIKit.UIColor? = nil, icon: UIKit.UIImage? = nil, labelText: Swift.String? = nil)
+  @_Concurrency.MainActor public var tag: Swift.Int {
+    get
+  }
+  @_Concurrency.MainActor public init(tag: Swift.Int)
+}
+public enum ZSIQCallActionButtonPriority {
+  case priority(_: [AVCallKitBridge.ZSIQAVCallButtons])
+  case `default`
+}
+public enum ZSIQAVCallActionUIButtonUpdateProps {
+  case tintColor(color: UIKit.UIColor)
+  case setImage(_: UIKit.UIImage?, state: UIKit.UIControl.State)
+  case labelText(text: Swift.String)
+}
+public enum AVCallUpdateMetaDataOptions {
+  case calleeName(Swift.String?)
+  case information(Swift.String?)
+  case email(Swift.String?)
+  case calleeImage(UIKit.UIImage?)
+  case callId(Swift.String?)
+  case conversationId(Swift.String?)
+  case queueCount(Swift.Int?)
+  case callTransferInfo(AVCallKitBridge.ZSIQAVCallTransferInfo?)
+  case acknowledgementKey(Swift.String?)
+  case callTransferDuration(Swift.Double?)
+  case callTransferStatus(AVCallKitBridge.ZSIQTransferStatus?)
+  case isDepartmentTransfer(Swift.Bool)
+  case callTransferEndTimerMessage(Swift.String?)
+  case localUserID(Swift.String)
+  case localUserName(Swift.String)
+}
+public enum ZSIQCallInterfaceState {
+  case none
+  case pip
+  case full
+  public static func == (a: AVCallKitBridge.ZSIQCallInterfaceState, b: AVCallKitBridge.ZSIQCallInterfaceState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum AVCallActionButtons {
+  case chat(Swift.Bool)
+  case mute(Swift.Bool)
+  case hold(Swift.Bool)
+  case end(Swift.Bool)
+  case audio(Swift.Bool)
+  case call(Swift.Bool)
+  case missCallChat(Swift.Bool)
+}
+public protocol ZSIQAVCallHandlerDelegate : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var applicationKeyWindow: UIKit.UIWindow? { get }
+  #endif
+}
+@_Concurrency.MainActor public protocol ZSIQAVCallServiceProtocol : Swift.Sendable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func startCall(type: AVCallKitBridge.ZSIQAVCallType, metaData: AVCallKitBridge.ZSIQAVMetaData, completion: AVCallKitBridge.ZSIQAVCompletionBlock?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func showIncomingCall(type: AVCallKitBridge.ZSIQAVCallType, metaData: AVCallKitBridge.ZSIQAVMetaData, completion: AVCallKitBridge.ZSIQAVCompletionBlock?)
+  #endif
+  @_Concurrency.MainActor func updateMeta(data: AVCallKitBridge.AVCallUpdateMetaDataOptions)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func updateMeta(calleeName: Swift.String?, information: Swift.String?, email: Swift.String?, calleeImage: UIKit.UIImage?, callId: Swift.String?, conversationId: Swift.String?, completion: AVCallKitBridge.ZSIQAVErrorCompletionBlock?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func initiateRTCP(userId: Swift.String, confKey: Swift.String, clientOTP: Swift.String, baseURL: Swift.String, bundleID: Swift.String, authToken: Swift.String, appName: Swift.String, domain: Swift.String, prefix: Swift.String, acknowledgementKey: Swift.String?)
+  #endif
+  @_Concurrency.MainActor func updateCallType(_ type: AVCallKitBridge.ZSIQAVCallType)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func displayAcceptedDirectCall(type: AVCallKitBridge.ZSIQAVCallType, metaData: AVCallKitBridge.ZSIQAVMetaData, completion: AVCallKitBridge.ZSIQAVCompletionBlock?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func setCallAction(_ actionType: AVCallKitBridge.ZSIQAVCallAction, callId: Swift.String?, reason: CallKit.CXCallEndedReason?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func handleIncomingCallFromExternalSession(id: Swift.String, reason: CallKit.CXCallEndedReason?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func endCall(id: Swift.String, fromOtherSession: Swift.Bool, completion: AVCallKitBridge.ZSIQAVCompletionBlock?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func answerCall(completion: AVCallKitBridge.ZSIQAVCompletionBlock?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func setLanguage(usingCode code: Swift.String, tableName: Swift.String?)
+  #endif
+  @_Concurrency.MainActor func setNetworkStatus(isConnected: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func displayAcceptedCall(type: AVCallKitBridge.ZSIQAVCallType, metaData: AVCallKitBridge.ZSIQAVMetaData, completion: AVCallKitBridge.ZSIQAVCompletionBlock?)
+  #endif
+  @_Concurrency.MainActor func rejectIncomingCall(fromApplicationWith metaData: AVCallKitBridge.ZSIQAVMetaData)
+  @_Concurrency.MainActor func applyTheme(_ color: UIKit.UIColor)
+  @_Concurrency.MainActor func updatePIPWindowTheme(style: UIKit.UIUserInterfaceStyle)
+  @_Concurrency.MainActor func startPIPMode()
+  @_Concurrency.MainActor func stopPIPMode()
+  @_Concurrency.MainActor func checkMultipleSessionCalls(callId: Swift.String, callStatus: Swift.String)
+  @_Concurrency.MainActor func updateCallStatus(callStatus: AVCallKitBridge.ZSIQAVStatus)
+  @_Concurrency.MainActor func updateCallInfoMessage(message: Swift.String)
+  @_Concurrency.MainActor func updatePipWindowLevel(level: UIKit.UIWindow.Level)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func dismissPipKit(animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  #endif
+  @_Concurrency.MainActor func showOrHideCallActionsButton(callActionButton: AVCallKitBridge.AVCallActionButtons)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor func updateCallInfoLabel(text: Swift.String?)
+  #endif
+  @_Concurrency.MainActor func enableAVTransfer(isEnabled: Swift.Bool)
+  @_Concurrency.MainActor func enableTransferEndedActions(enabled: Swift.Bool)
+  @_Concurrency.MainActor func setPipIconsColor(_ color: UIKit.UIColor)
+  @_Concurrency.MainActor func putCallOnHold(onHold: Swift.Bool)
+  @_Concurrency.MainActor func shouldShowQueueCountLabel(show: Swift.Bool)
+  @_Concurrency.MainActor func setAppDetails(appIcon icon: UIKit.UIImage)
+  nonisolated(unsafe) func getAllLogsUrl() -> [Foundation.URL]
+  #if compiler(>=5.3) && $NonescapableTypes
+  nonisolated(unsafe) var ongoingCallID: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  nonisolated(unsafe) var ongoingCallConversationID: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var ongoingCallAckKey: Swift.String? { get }
+  #endif
+  @_Concurrency.MainActor var recordingEnabled: Swift.Bool { get }
+  nonisolated(unsafe) var callTypeDescription: Swift.String { get }
+  nonisolated(unsafe) var callType: AVCallKitBridge.ZSIQAVCallType { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var callStatus: AVCallKitBridge.ZSIQAVStatus? { get }
+  #endif
+  @_Concurrency.MainActor var isIncomingCall: Swift.Bool { get }
+  nonisolated(unsafe) var isCallActive: Swift.Bool { get }
+  nonisolated(unsafe) var isCallRinging: Swift.Bool { get }
+  @_Concurrency.MainActor var isInFullScreenMode: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var callHandlerDelegate: (any AVCallKitBridge.ZSIQAVCallHandlerDelegate)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var supportedOrientations: UIKit.UIInterfaceOrientationMask? { get set }
+  #endif
+  @_Concurrency.MainActor var callActionButtonsPriority: AVCallKitBridge.ZSIQCallActionButtonPriority { get set }
+  @_Concurrency.MainActor var callBackActionButtonsPriority: AVCallKitBridge.ZSIQCallActionButtonPriority { get set }
+  @_Concurrency.MainActor var callKitAllowed: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var meetingPrimaryAdminId: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var ongoingCallInfo: AVCallKitBridge.ZSIQAVMetaData? { get }
+  #endif
+  @_Concurrency.MainActor var shouldAllowCallKit: Swift.Bool { get set }
+  @_Concurrency.MainActor var isCallOnHold: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var onUpdateCallAction: (@_Concurrency.MainActor @Sendable (AVCallKitBridge.ZSIQAVCallAction, AVCallKitBridge.ZSIQAVMetaData) -> Swift.Void)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var onCallAction: (@Sendable (AVCallKitBridge.ZSIQAVMetaData) -> Swift.Void)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var onChatAction: (@Sendable (AVCallKitBridge.ZSIQAVMetaData) -> Swift.Void)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var onHoldAction: (@_Concurrency.MainActor @Sendable (Swift.Bool, AVCallKitBridge.ZSIQAVMetaData) -> Swift.Void)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var onDismiss: (@_Concurrency.MainActor @Sendable () -> Swift.Void)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var didCallInterfaceStateChanged: (@_Concurrency.MainActor @Sendable (AVCallKitBridge.ZSIQCallInterfaceState) -> Swift.Void)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var onUpdateFirstResponderIfNeeded: (@_Concurrency.MainActor @Sendable () -> Swift.Void)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var onPiPModeInteratcionEnd: (@_Concurrency.MainActor @Sendable () -> Swift.Void)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var onUpdateCallStatus: (@Sendable (AVCallKitBridge.ZSIQAVMetaData?, AVCallKitBridge.ZSIQAVStatus) -> Swift.Void)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var onSecondCallAccepted: (@Sendable (AVCallKitBridge.ZSIQAVMetaData?) -> Swift.Void)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var onUpdateDirectCallStatus: (@Sendable (AVCallKitBridge.ZSIQAVCallAction, AVCallKitBridge.ZSIQAVMetaData?, AVCallKitBridge.ZSIQAVCompletionBlock?) -> Swift.Void)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var onMicrophoneAccessDisabled: (() -> Swift.Void)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var onTransferCallClicked: ((Swift.Bool) -> Swift.Void)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor var onTransferTimerEnded: (() -> Swift.Void)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  nonisolated(unsafe) var getLogFileURL: ((Foundation.URL) -> Swift.Void)? { get set }
+  #endif
+}
+public struct ZSIQAVCallService {
+  @_Concurrency.MainActor public static var apis: (any AVCallKitBridge.ZSIQAVCallServiceProtocol)?
+}
+public struct AVDataModel : Swift.Codable {
+  public var type: Swift.String?
+  public var conversationId: Swift.String?
+  public var mode: Swift.String?
+  public var action: Swift.String?
+  public var mediaId: Swift.String?
+  public var negotiationType: Swift.String?
+  public var isupstream: Swift.Bool?
+  public var operation: Swift.String?
+  public var recordingType: Swift.String?
+  public var rtcpCredential: AVCallKitBridge.AVDataModel.RTCPCredentials?
+  public var url: Swift.String?
+  public var opreationUser: AVCallKitBridge.AVDataModel.OpreationUser?
+  public var recordingEnabled: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(type: Swift.String? = nil, conversationId: Swift.String? = nil, mode: Swift.String? = nil, action: Swift.String? = nil, mediaId: Swift.String? = nil, negotiationType: Swift.String? = nil, isupstream: Swift.Bool? = nil, rtcpCredential: AVCallKitBridge.AVDataModel.RTCPCredentials? = nil)
+  #endif
+  public struct RTCPCredentials : Swift.Codable {
+    public var clientOtp: Swift.String?
+    public var conferencekey: Swift.String?
+    public var userid: Swift.String?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct OpreationUser : Swift.Codable {
+    public var dname: Swift.String?
+    public var id: Swift.String?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func convertToDataModel(from response: [Swift.String : Swift.AnyObject]) -> AVCallKitBridge.AVDataModel?
+  #endif
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum ZSIQCallAction : Swift.String {
+  case invite
+  case accept
+  case cancel
+  case miss
+  case reject
+  case end
+  case init_transfer
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension AVCallKitBridge.ZSIQAVStatus : Swift.Hashable {}
+extension AVCallKitBridge.ZSIQAVStatus : Swift.RawRepresentable {}
+extension AVCallKitBridge.ZSIQAVCallWebStatus : Swift.Equatable {}
+extension AVCallKitBridge.ZSIQAVCallWebStatus : Swift.Hashable {}
+extension AVCallKitBridge.ZSIQAVCallWebStatus : Swift.RawRepresentable {}
+extension AVCallKitBridge.SIQAVCallEndType : Swift.Equatable {}
+extension AVCallKitBridge.SIQAVCallEndType : Swift.Hashable {}
+extension AVCallKitBridge.ZSIQAVCallAction : Swift.Equatable {}
+extension AVCallKitBridge.ZSIQAVCallAction : Swift.Hashable {}
+extension AVCallKitBridge.ZSIQAVCallAction : Swift.RawRepresentable {}
+extension AVCallKitBridge.ZSIQTransferStatus : Swift.Equatable {}
+extension AVCallKitBridge.ZSIQTransferStatus : Swift.Hashable {}
+extension AVCallKitBridge.ZSIQAVCallButtons : Swift.Sendable {}
+extension AVCallKitBridge.ZSIQCallInterfaceState : Swift.Equatable {}
+extension AVCallKitBridge.ZSIQCallInterfaceState : Swift.Hashable {}
+extension AVCallKitBridge.ZSIQCallAction : Swift.Equatable {}
+extension AVCallKitBridge.ZSIQCallAction : Swift.Hashable {}
+extension AVCallKitBridge.ZSIQCallAction : Swift.RawRepresentable {}

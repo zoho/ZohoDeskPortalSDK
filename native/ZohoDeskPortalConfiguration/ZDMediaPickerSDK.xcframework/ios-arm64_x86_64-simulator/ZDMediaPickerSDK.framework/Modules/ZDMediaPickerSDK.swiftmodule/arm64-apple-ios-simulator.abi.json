@@ -1,0 +1,3429 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "ZDMediaPickerSDK",
+    "printedName": "ZDMediaPickerSDK",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PhotosUI",
+        "printedName": "PhotosUI",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "MobileCoreServices",
+        "printedName": "MobileCoreServices",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDMediaSource",
+        "printedName": "ZDMediaSource",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "photoLibrary",
+            "printedName": "photoLibrary",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZDMediaPickerSDK.ZDMediaSource.Type) -> ZDMediaPickerSDK.ZDMediaSource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZDMediaSource",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaSource",
+                    "usr": "s:16ZDMediaPickerSDK0A6SourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaSource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDMediaSource",
+                        "printedName": "ZDMediaPickerSDK.ZDMediaSource",
+                        "usr": "s:16ZDMediaPickerSDK0A6SourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16ZDMediaPickerSDK0A6SourceO12photoLibraryyA2CmF",
+            "mangledName": "$s16ZDMediaPickerSDK0A6SourceO12photoLibraryyA2CmF",
+            "moduleName": "ZDMediaPickerSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "camera",
+            "printedName": "camera",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZDMediaPickerSDK.ZDMediaSource.Type) -> ZDMediaPickerSDK.ZDMediaSource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZDMediaSource",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaSource",
+                    "usr": "s:16ZDMediaPickerSDK0A6SourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaSource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDMediaSource",
+                        "printedName": "ZDMediaPickerSDK.ZDMediaSource",
+                        "usr": "s:16ZDMediaPickerSDK0A6SourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16ZDMediaPickerSDK0A6SourceO6camerayA2CmF",
+            "mangledName": "$s16ZDMediaPickerSDK0A6SourceO6camerayA2CmF",
+            "moduleName": "ZDMediaPickerSDK",
+            "declAttributes": [
+              "Available"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "scanner",
+            "printedName": "scanner",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZDMediaPickerSDK.ZDMediaSource.Type) -> ZDMediaPickerSDK.ZDMediaSource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZDMediaSource",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaSource",
+                    "usr": "s:16ZDMediaPickerSDK0A6SourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaSource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDMediaSource",
+                        "printedName": "ZDMediaPickerSDK.ZDMediaSource",
+                        "usr": "s:16ZDMediaPickerSDK0A6SourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16ZDMediaPickerSDK0A6SourceO7scanneryA2CmF",
+            "mangledName": "$s16ZDMediaPickerSDK0A6SourceO7scanneryA2CmF",
+            "moduleName": "ZDMediaPickerSDK",
+            "declAttributes": [
+              "Available"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZDMediaSource",
+                "printedName": "ZDMediaPickerSDK.ZDMediaSource",
+                "usr": "s:16ZDMediaPickerSDK0A6SourceO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZDMediaSource",
+                "printedName": "ZDMediaPickerSDK.ZDMediaSource",
+                "usr": "s:16ZDMediaPickerSDK0A6SourceO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK0A6SourceO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16ZDMediaPickerSDK0A6SourceO2eeoiySbAC_ACtFZ",
+            "moduleName": "ZDMediaPickerSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16ZDMediaPickerSDK0A6SourceO9hashValueSivp",
+            "mangledName": "$s16ZDMediaPickerSDK0A6SourceO9hashValueSivp",
+            "moduleName": "ZDMediaPickerSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16ZDMediaPickerSDK0A6SourceO9hashValueSivg",
+                "mangledName": "$s16ZDMediaPickerSDK0A6SourceO9hashValueSivg",
+                "moduleName": "ZDMediaPickerSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK0A6SourceO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s16ZDMediaPickerSDK0A6SourceO4hash4intoys6HasherVz_tF",
+            "moduleName": "ZDMediaPickerSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16ZDMediaPickerSDK0A6SourceO",
+        "mangledName": "$s16ZDMediaPickerSDK0A6SourceO",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDMediaType",
+        "printedName": "ZDMediaType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "image",
+            "printedName": "image",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZDMediaPickerSDK.ZDMediaType.Type) -> ZDMediaPickerSDK.ZDMediaType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZDMediaType",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaType",
+                    "usr": "s:16ZDMediaPickerSDK0A4TypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDMediaType",
+                        "printedName": "ZDMediaPickerSDK.ZDMediaType",
+                        "usr": "s:16ZDMediaPickerSDK0A4TypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16ZDMediaPickerSDK0A4TypeO5imageyA2CmF",
+            "mangledName": "$s16ZDMediaPickerSDK0A4TypeO5imageyA2CmF",
+            "moduleName": "ZDMediaPickerSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "video",
+            "printedName": "video",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZDMediaPickerSDK.ZDMediaType.Type) -> ZDMediaPickerSDK.ZDMediaType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZDMediaType",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaType",
+                    "usr": "s:16ZDMediaPickerSDK0A4TypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDMediaType",
+                        "printedName": "ZDMediaPickerSDK.ZDMediaType",
+                        "usr": "s:16ZDMediaPickerSDK0A4TypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16ZDMediaPickerSDK0A4TypeO5videoyA2CmF",
+            "mangledName": "$s16ZDMediaPickerSDK0A4TypeO5videoyA2CmF",
+            "moduleName": "ZDMediaPickerSDK"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZDMediaType",
+                "printedName": "ZDMediaPickerSDK.ZDMediaType",
+                "usr": "s:16ZDMediaPickerSDK0A4TypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZDMediaType",
+                "printedName": "ZDMediaPickerSDK.ZDMediaType",
+                "usr": "s:16ZDMediaPickerSDK0A4TypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK0A4TypeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16ZDMediaPickerSDK0A4TypeO2eeoiySbAC_ACtFZ",
+            "moduleName": "ZDMediaPickerSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16ZDMediaPickerSDK0A4TypeO9hashValueSivp",
+            "mangledName": "$s16ZDMediaPickerSDK0A4TypeO9hashValueSivp",
+            "moduleName": "ZDMediaPickerSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16ZDMediaPickerSDK0A4TypeO9hashValueSivg",
+                "mangledName": "$s16ZDMediaPickerSDK0A4TypeO9hashValueSivg",
+                "moduleName": "ZDMediaPickerSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK0A4TypeO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s16ZDMediaPickerSDK0A4TypeO4hash4intoys6HasherVz_tF",
+            "moduleName": "ZDMediaPickerSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16ZDMediaPickerSDK0A4TypeO",
+        "mangledName": "$s16ZDMediaPickerSDK0A4TypeO",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDMediaPicker",
+        "printedName": "ZDMediaPicker",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(mediaPickerDelegate:sourceType:mediaType:shouldForceRTL:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZDMediaPicker",
+                "printedName": "ZDMediaPickerSDK.ZDMediaPicker",
+                "usr": "c:@M@ZDMediaPickerSDK@objc(cs)ZDMediaPicker"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any ZDMediaPickerSDK.ZDMediaPickerProtocol)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZDMediaPickerProtocol",
+                    "printedName": "any ZDMediaPickerSDK.ZDMediaPickerProtocol",
+                    "usr": "s:16ZDMediaPickerSDK0aB8ProtocolP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZDMediaSource",
+                "printedName": "ZDMediaPickerSDK.ZDMediaSource",
+                "hasDefaultArg": true,
+                "usr": "s:16ZDMediaPickerSDK0A6SourceO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZDMediaPickerSDK.ZDMediaType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZDMediaType",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaType",
+                    "usr": "s:16ZDMediaPickerSDK0A4TypeO"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16ZDMediaPickerSDK0aB0C05mediaB8Delegate10sourceType0dG014shouldForceRTLAcA0aB8Protocol_pSg_AA0A6SourceOAA0aG0OSgSbtcfc",
+            "mangledName": "$s16ZDMediaPickerSDK0aB0C05mediaB8Delegate10sourceType0dG014shouldForceRTLAcA0aB8Protocol_pSg_AA0A6SourceOAA0aG0OSgSbtcfc",
+            "moduleName": "ZDMediaPickerSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "presentPicker",
+            "printedName": "presentPicker()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK0aB0C07presentB0yyF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB0C07presentB0yyF",
+            "moduleName": "ZDMediaPickerSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "requestAccess",
+            "printedName": "requestAccess(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZDMediaPickerSDK.ZDMediaPickerError?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaPickerError?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDMediaPickerError",
+                        "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                        "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK0aB0C13requestAccessyyyAA0aB5ErrorOSgcFZ",
+            "mangledName": "$s16ZDMediaPickerSDK0aB0C13requestAccessyyyAA0aB5ErrorOSgcFZ",
+            "moduleName": "ZDMediaPickerSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getScannerView",
+            "printedName": "getScannerView(frame:focusImage:appIcon:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZDScannerView",
+                "printedName": "ZDMediaPickerSDK.ZDScannerView",
+                "usr": "c:@M@ZDMediaPickerSDK@objc(cs)ZDScannerView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK0aB0C14getScannerView5frame10focusImage7appIconAA09ZDScannerF0CSo6CGRectV_So7UIImageCSgANtF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB0C14getScannerView5frame10focusImage7appIconAA09ZDScannerF0CSo6CGRectV_So7UIImageCSgANtF",
+            "moduleName": "ZDMediaPickerSDK",
+            "declAttributes": [
+              "AccessControl",
+              "Available"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZDMediaPicker",
+                "printedName": "ZDMediaPickerSDK.ZDMediaPicker",
+                "usr": "c:@M@ZDMediaPickerSDK@objc(cs)ZDMediaPicker"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZDMediaPickerSDK@objc(cs)ZDMediaPicker(im)init",
+            "mangledName": "$s16ZDMediaPickerSDK0aB0CACycfc",
+            "moduleName": "ZDMediaPickerSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "imagePickerController",
+            "printedName": "imagePickerController(_:didFinishPickingMediaWithInfo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIImagePickerController",
+                "printedName": "UIKit.UIImagePickerController",
+                "usr": "c:objc(cs)UIImagePickerController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[UIKit.UIImagePickerController.InfoKey : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "InfoKey",
+                    "printedName": "UIKit.UIImagePickerController.InfoKey",
+                    "usr": "c:@T@UIImagePickerControllerInfoKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ZDMediaPickerSDK@objc(cs)ZDMediaPicker(im)imagePickerController:didFinishPickingMediaWithInfo:",
+            "mangledName": "$s16ZDMediaPickerSDK0aB0C05imageB10Controller_29didFinishPickingMediaWithInfoySo07UIImagebE0C_SDySo0lbeK3KeyaypGtF",
+            "moduleName": "ZDMediaPickerSDK",
+            "objc_name": "imagePickerController:didFinishPickingMediaWithInfo:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "imagePickerControllerDidCancel",
+            "printedName": "imagePickerControllerDidCancel(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIImagePickerController",
+                "printedName": "UIKit.UIImagePickerController",
+                "usr": "c:objc(cs)UIImagePickerController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ZDMediaPickerSDK@objc(cs)ZDMediaPicker(im)imagePickerControllerDidCancel:",
+            "mangledName": "$s16ZDMediaPickerSDK0aB0C05imageB19ControllerDidCancelyySo07UIImagebE0CF",
+            "moduleName": "ZDMediaPickerSDK",
+            "objc_name": "imagePickerControllerDidCancel:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ZDMediaPickerSDK@objc(cs)ZDMediaPicker",
+        "mangledName": "$s16ZDMediaPickerSDK0aB0C",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDMediaPickerProtocol",
+        "printedName": "ZDMediaPickerProtocol",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "selectionLimit",
+            "printedName": "selectionLimit",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16ZDMediaPickerSDK0aB8ProtocolP14selectionLimitSivp",
+            "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolP14selectionLimitSivp",
+            "moduleName": "ZDMediaPickerSDK",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16ZDMediaPickerSDK0aB8ProtocolP14selectionLimitSivg",
+                "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolP14selectionLimitSivg",
+                "moduleName": "ZDMediaPickerSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+                "sugared_genericSig": "<Self where Self : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "preSelectedAssets",
+            "printedName": "preSelectedAssets",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Photos.PHAsset]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Photos.PHAsset]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PHAsset",
+                        "printedName": "Photos.PHAsset",
+                        "usr": "c:objc(cs)PHAsset"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16ZDMediaPickerSDK0aB8ProtocolP17preSelectedAssetsSaySo7PHAssetCGSgvp",
+            "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolP17preSelectedAssetsSaySo7PHAssetCGSgvp",
+            "moduleName": "ZDMediaPickerSDK",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Photos.PHAsset]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Photos.PHAsset]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "PHAsset",
+                            "printedName": "Photos.PHAsset",
+                            "usr": "c:objc(cs)PHAsset"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16ZDMediaPickerSDK0aB8ProtocolP17preSelectedAssetsSaySo7PHAssetCGSgvg",
+                "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolP17preSelectedAssetsSaySo7PHAssetCGSgvg",
+                "moduleName": "ZDMediaPickerSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+                "sugared_genericSig": "<Self where Self : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "mediaPicker",
+            "printedName": "mediaPicker(didFinishPicking:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Photos.PHAsset]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Photos.PHAsset]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PHAsset",
+                        "printedName": "Photos.PHAsset",
+                        "usr": "c:objc(cs)PHAsset"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK0aB8ProtocolP05mediaB016didFinishPickingySaySo7PHAssetCGSg_tF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolP05mediaB016didFinishPickingySaySo7PHAssetCGSg_tF",
+            "moduleName": "ZDMediaPickerSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+            "sugared_genericSig": "<Self where Self : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "mediaPicker",
+            "printedName": "mediaPicker(didFinishCapturing:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[UIKit.UIImagePickerController.InfoKey : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "InfoKey",
+                    "printedName": "UIKit.UIImagePickerController.InfoKey",
+                    "usr": "c:@T@UIImagePickerControllerInfoKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK0aB8ProtocolP05mediaB018didFinishCapturingySDySo07UIImageB17ControllerInfoKeyaypG_tF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolP05mediaB018didFinishCapturingySDySo07UIImageB17ControllerInfoKeyaypG_tF",
+            "moduleName": "ZDMediaPickerSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+            "sugared_genericSig": "<Self where Self : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "mediaPicker",
+            "printedName": "mediaPicker(didFailWith:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZDMediaPickerError",
+                "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK0aB8ProtocolP05mediaB011didFailWithyAA0aB5ErrorO_tF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolP05mediaB011didFailWithyAA0aB5ErrorO_tF",
+            "moduleName": "ZDMediaPickerSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+            "sugared_genericSig": "<Self where Self : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "mediaPicker",
+            "printedName": "mediaPicker(didFinishScanning:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[AVFoundation.AVMetadataObject]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVMetadataObject",
+                    "printedName": "AVFoundation.AVMetadataObject",
+                    "usr": "c:objc(cs)AVMetadataObject"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK0aB8ProtocolP05mediaB017didFinishScanningySaySo16AVMetadataObjectCG_tF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolP05mediaB017didFinishScanningySaySo16AVMetadataObjectCG_tF",
+            "moduleName": "ZDMediaPickerSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+            "sugared_genericSig": "<Self where Self : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Available"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "selectionLimit",
+            "printedName": "selectionLimit",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16ZDMediaPickerSDK0aB8ProtocolPAAE14selectionLimitSivp",
+            "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolPAAE14selectionLimitSivp",
+            "moduleName": "ZDMediaPickerSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16ZDMediaPickerSDK0aB8ProtocolPAAE14selectionLimitSivg",
+                "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolPAAE14selectionLimitSivg",
+                "moduleName": "ZDMediaPickerSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+                "sugared_genericSig": "<Self where Self : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "preSelectedAssets",
+            "printedName": "preSelectedAssets",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Photos.PHAsset]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Photos.PHAsset]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PHAsset",
+                        "printedName": "Photos.PHAsset",
+                        "usr": "c:objc(cs)PHAsset"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16ZDMediaPickerSDK0aB8ProtocolPAAE17preSelectedAssetsSaySo7PHAssetCGSgvp",
+            "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolPAAE17preSelectedAssetsSaySo7PHAssetCGSgvp",
+            "moduleName": "ZDMediaPickerSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Photos.PHAsset]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Photos.PHAsset]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "PHAsset",
+                            "printedName": "Photos.PHAsset",
+                            "usr": "c:objc(cs)PHAsset"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16ZDMediaPickerSDK0aB8ProtocolPAAE17preSelectedAssetsSaySo7PHAssetCGSgvg",
+                "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolPAAE17preSelectedAssetsSaySo7PHAssetCGSgvg",
+                "moduleName": "ZDMediaPickerSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+                "sugared_genericSig": "<Self where Self : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "mediaPicker",
+            "printedName": "mediaPicker(didFinishPicking:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Photos.PHAsset]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Photos.PHAsset]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PHAsset",
+                        "printedName": "Photos.PHAsset",
+                        "usr": "c:objc(cs)PHAsset"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK0aB8ProtocolPAAE05mediaB016didFinishPickingySaySo7PHAssetCGSg_tF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolPAAE05mediaB016didFinishPickingySaySo7PHAssetCGSg_tF",
+            "moduleName": "ZDMediaPickerSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+            "sugared_genericSig": "<Self where Self : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "mediaPicker",
+            "printedName": "mediaPicker(didFinishCapturing:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[UIKit.UIImagePickerController.InfoKey : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "InfoKey",
+                    "printedName": "UIKit.UIImagePickerController.InfoKey",
+                    "usr": "c:@T@UIImagePickerControllerInfoKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK0aB8ProtocolPAAE05mediaB018didFinishCapturingySDySo07UIImageB17ControllerInfoKeyaypG_tF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolPAAE05mediaB018didFinishCapturingySDySo07UIImageB17ControllerInfoKeyaypG_tF",
+            "moduleName": "ZDMediaPickerSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+            "sugared_genericSig": "<Self where Self : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "mediaPicker",
+            "printedName": "mediaPicker(didFailWith:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZDMediaPickerError",
+                "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK0aB8ProtocolPAAE05mediaB011didFailWithyAA0aB5ErrorO_tF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolPAAE05mediaB011didFailWithyAA0aB5ErrorO_tF",
+            "moduleName": "ZDMediaPickerSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+            "sugared_genericSig": "<Self where Self : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "mediaPicker",
+            "printedName": "mediaPicker(didFinishScanning:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[AVFoundation.AVMetadataObject]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVMetadataObject",
+                    "printedName": "AVFoundation.AVMetadataObject",
+                    "usr": "c:objc(cs)AVMetadataObject"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK0aB8ProtocolPAAE05mediaB017didFinishScanningySaySo16AVMetadataObjectCG_tF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolPAAE05mediaB017didFinishScanningySaySo16AVMetadataObjectCG_tF",
+            "moduleName": "ZDMediaPickerSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+            "sugared_genericSig": "<Self where Self : ZDMediaPickerSDK.ZDMediaPickerProtocol>",
+            "declAttributes": [
+              "Available"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16ZDMediaPickerSDK0aB8ProtocolP",
+        "mangledName": "$s16ZDMediaPickerSDK0aB8ProtocolP",
+        "moduleName": "ZDMediaPickerSDK",
+        "genericSig": "<τ_0_0 : UIKit.UIImagePickerControllerDelegate, τ_0_0 : UIKit.UINavigationControllerDelegate>",
+        "sugared_genericSig": "<Self : UIKit.UIImagePickerControllerDelegate, Self : UIKit.UINavigationControllerDelegate>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDMediaPickerError",
+        "printedName": "ZDMediaPickerError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "selectionLimitExceeded",
+            "printedName": "selectionLimitExceeded",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZDMediaPickerSDK.ZDMediaPickerError.Type) -> ZDMediaPickerSDK.ZDMediaPickerError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZDMediaPickerError",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                    "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaPickerError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDMediaPickerError",
+                        "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                        "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16ZDMediaPickerSDK0aB5ErrorO22selectionLimitExceededyA2CmF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB5ErrorO22selectionLimitExceededyA2CmF",
+            "moduleName": "ZDMediaPickerSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "cameraAccessDenied",
+            "printedName": "cameraAccessDenied",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZDMediaPickerSDK.ZDMediaPickerError.Type) -> ZDMediaPickerSDK.ZDMediaPickerError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZDMediaPickerError",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                    "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaPickerError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDMediaPickerError",
+                        "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                        "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16ZDMediaPickerSDK0aB5ErrorO18cameraAccessDeniedyA2CmF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB5ErrorO18cameraAccessDeniedyA2CmF",
+            "moduleName": "ZDMediaPickerSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "photosAccessDenied",
+            "printedName": "photosAccessDenied",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZDMediaPickerSDK.ZDMediaPickerError.Type) -> ZDMediaPickerSDK.ZDMediaPickerError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZDMediaPickerError",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                    "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaPickerError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDMediaPickerError",
+                        "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                        "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16ZDMediaPickerSDK0aB5ErrorO18photosAccessDeniedyA2CmF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB5ErrorO18photosAccessDeniedyA2CmF",
+            "moduleName": "ZDMediaPickerSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "cameraSourceUnavailable",
+            "printedName": "cameraSourceUnavailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZDMediaPickerSDK.ZDMediaPickerError.Type) -> ZDMediaPickerSDK.ZDMediaPickerError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZDMediaPickerError",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                    "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaPickerError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDMediaPickerError",
+                        "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                        "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16ZDMediaPickerSDK0aB5ErrorO23cameraSourceUnavailableyA2CmF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB5ErrorO23cameraSourceUnavailableyA2CmF",
+            "moduleName": "ZDMediaPickerSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "unableToSaveMedia",
+            "printedName": "unableToSaveMedia",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZDMediaPickerSDK.ZDMediaPickerError.Type) -> (any Swift.Error) -> ZDMediaPickerSDK.ZDMediaPickerError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(any Swift.Error) -> ZDMediaPickerSDK.ZDMediaPickerError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDMediaPickerError",
+                        "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                        "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaPickerError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDMediaPickerError",
+                        "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                        "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16ZDMediaPickerSDK0aB5ErrorO17unableToSaveMediayACs0D0_pcACmF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB5ErrorO17unableToSaveMediayACs0D0_pcACmF",
+            "moduleName": "ZDMediaPickerSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "unableToScan",
+            "printedName": "unableToScan",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZDMediaPickerSDK.ZDMediaPickerError.Type) -> ZDMediaPickerSDK.ZDMediaPickerError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZDMediaPickerError",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                    "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaPickerError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDMediaPickerError",
+                        "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                        "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16ZDMediaPickerSDK0aB5ErrorO12unableToScanyA2CmF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB5ErrorO12unableToScanyA2CmF",
+            "moduleName": "ZDMediaPickerSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "unableToFlash",
+            "printedName": "unableToFlash",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZDMediaPickerSDK.ZDMediaPickerError.Type) -> ZDMediaPickerSDK.ZDMediaPickerError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZDMediaPickerError",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                    "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZDMediaPickerSDK.ZDMediaPickerError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZDMediaPickerError",
+                        "printedName": "ZDMediaPickerSDK.ZDMediaPickerError",
+                        "usr": "s:16ZDMediaPickerSDK0aB5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16ZDMediaPickerSDK0aB5ErrorO13unableToFlashyA2CmF",
+            "mangledName": "$s16ZDMediaPickerSDK0aB5ErrorO13unableToFlashyA2CmF",
+            "moduleName": "ZDMediaPickerSDK"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16ZDMediaPickerSDK0aB5ErrorO",
+        "mangledName": "$s16ZDMediaPickerSDK0aB5ErrorO",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVKit",
+        "printedName": "AVKit",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDScannerView",
+        "printedName": "ZDScannerView",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "startSession",
+            "printedName": "startSession()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK13ZDScannerViewC12startSessionyyF",
+            "mangledName": "$s16ZDMediaPickerSDK13ZDScannerViewC12startSessionyyF",
+            "moduleName": "ZDMediaPickerSDK",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stopSession",
+            "printedName": "stopSession()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16ZDMediaPickerSDK13ZDScannerViewC11stopSessionyyF",
+            "mangledName": "$s16ZDMediaPickerSDK13ZDScannerViewC11stopSessionyyF",
+            "moduleName": "ZDMediaPickerSDK",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZDScannerView",
+                "printedName": "ZDMediaPickerSDK.ZDScannerView",
+                "usr": "c:@M@ZDMediaPickerSDK@objc(cs)ZDScannerView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZDMediaPickerSDK@objc(cs)ZDScannerView(im)initWithFrame:",
+            "mangledName": "$s16ZDMediaPickerSDK13ZDScannerViewC5frameACSo6CGRectV_tcfc",
+            "moduleName": "ZDMediaPickerSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithFrame:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "metadataOutput",
+            "printedName": "metadataOutput(_:didOutput:from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVCaptureMetadataOutput",
+                "printedName": "AVFoundation.AVCaptureMetadataOutput",
+                "usr": "c:objc(cs)AVCaptureMetadataOutput"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[AVFoundation.AVMetadataObject]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVMetadataObject",
+                    "printedName": "AVFoundation.AVMetadataObject",
+                    "usr": "c:objc(cs)AVMetadataObject"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVCaptureConnection",
+                "printedName": "AVFoundation.AVCaptureConnection",
+                "usr": "c:objc(cs)AVCaptureConnection"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ZDMediaPickerSDK@objc(cs)ZDScannerView(im)captureOutput:didOutputMetadataObjects:fromConnection:",
+            "mangledName": "$s16ZDMediaPickerSDK13ZDScannerViewC14metadataOutput_03didG04fromySo017AVCaptureMetadataG0C_SaySo16AVMetadataObjectCGSo0J10ConnectionCtF",
+            "moduleName": "ZDMediaPickerSDK",
+            "objc_name": "captureOutput:didOutputMetadataObjects:fromConnection:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "captureOutput",
+            "printedName": "captureOutput(_:didOutput:from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVCaptureOutput",
+                "printedName": "AVFoundation.AVCaptureOutput",
+                "usr": "c:objc(cs)AVCaptureOutput"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMSampleBuffer",
+                "printedName": "CoreMedia.CMSampleBuffer",
+                "usr": "c:@T@CMSampleBufferRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVCaptureConnection",
+                "printedName": "AVFoundation.AVCaptureConnection",
+                "usr": "c:objc(cs)AVCaptureConnection"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ZDMediaPickerSDK@objc(cs)ZDScannerView(im)captureOutput:didOutputSampleBuffer:fromConnection:",
+            "mangledName": "$s16ZDMediaPickerSDK13ZDScannerViewC13captureOutput_03didG04fromySo09AVCaptureG0C_So17CMSampleBufferRefaSo0J10ConnectionCtF",
+            "moduleName": "ZDMediaPickerSDK",
+            "objc_name": "captureOutput:didOutputSampleBuffer:fromConnection:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ZDMediaPickerSDK@objc(cs)ZDScannerView",
+        "mangledName": "$s16ZDMediaPickerSDK13ZDScannerViewC",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "Available",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIView",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit.UIGestureRecognizerSubclass",
+        "printedName": "UIKit.UIGestureRecognizerSubclass",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Photos",
+        "printedName": "Photos",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Photos",
+        "printedName": "Photos",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PhotosUI",
+        "printedName": "PhotosUI",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "MobileCoreServices",
+        "printedName": "MobileCoreServices",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Photos",
+        "printedName": "Photos",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PhotosUI",
+        "printedName": "PhotosUI",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "MobileCoreServices",
+        "printedName": "MobileCoreServices",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PhotosUI",
+        "printedName": "PhotosUI",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDMPVCTitles",
+        "printedName": "ZDMPVCTitles",
+        "declKind": "Struct",
+        "usr": "s:16ZDMediaPickerSDK12ZDMPVCTitlesV",
+        "mangledName": "$s16ZDMediaPickerSDK12ZDMPVCTitlesV",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZDMPPreviewMenuActions",
+        "printedName": "ZDMPPreviewMenuActions",
+        "declKind": "Struct",
+        "usr": "s:16ZDMediaPickerSDK22ZDMPPreviewMenuActionsV",
+        "mangledName": "$s16ZDMediaPickerSDK22ZDMPPreviewMenuActionsV",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PhotosUI",
+        "printedName": "PhotosUI",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "MobileCoreServices",
+        "printedName": "MobileCoreServices",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PhotosUI",
+        "printedName": "PhotosUI",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "MobileCoreServices",
+        "printedName": "MobileCoreServices",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PhotosUI",
+        "printedName": "PhotosUI",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "PhotosUI",
+        "printedName": "PhotosUI",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVKit",
+        "printedName": "AVKit",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "DeveloperToolsSupport",
+        "printedName": "DeveloperToolsSupport",
+        "declKind": "Import",
+        "moduleName": "ZDMediaPickerSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Dictionary",
+        "printedName": "Dictionary",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "pngData",
+            "printedName": "pngData",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:SD16ZDMediaPickerSDKSo07UIImageB17ControllerInfoKeyaRszrlE7pngData10Foundation0I0VSgvp",
+            "mangledName": "$sSD16ZDMediaPickerSDKSo07UIImageB17ControllerInfoKeyaRszrlE7pngData10Foundation0I0VSgvp",
+            "moduleName": "ZDMediaPickerSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:SD16ZDMediaPickerSDKSo07UIImageB17ControllerInfoKeyaRszrlE7pngData10Foundation0I0VSgvg",
+                "mangledName": "$sSD16ZDMediaPickerSDKSo07UIImageB17ControllerInfoKeyaRszrlE7pngData10Foundation0I0VSgvg",
+                "moduleName": "ZDMediaPickerSDK",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 == UIKit.UIImagePickerController.InfoKey>",
+                "sugared_genericSig": "<Key, Value where Key == UIKit.UIImagePickerController.InfoKey>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pngImage",
+            "printedName": "pngImage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:SD16ZDMediaPickerSDKSo07UIImageB17ControllerInfoKeyaRszrlE8pngImageSo0D0CSgvp",
+            "mangledName": "$sSD16ZDMediaPickerSDKSo07UIImageB17ControllerInfoKeyaRszrlE8pngImageSo0D0CSgvp",
+            "moduleName": "ZDMediaPickerSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIImage?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImage",
+                        "printedName": "UIKit.UIImage",
+                        "usr": "c:objc(cs)UIImage"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:SD16ZDMediaPickerSDKSo07UIImageB17ControllerInfoKeyaRszrlE8pngImageSo0D0CSgvg",
+                "mangledName": "$sSD16ZDMediaPickerSDKSo07UIImageB17ControllerInfoKeyaRszrlE8pngImageSo0D0CSgvg",
+                "moduleName": "ZDMediaPickerSDK",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 == UIKit.UIImagePickerController.InfoKey>",
+                "sugared_genericSig": "<Key, Value where Key == UIKit.UIImagePickerController.InfoKey>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "jpegData",
+            "printedName": "jpegData",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:SD16ZDMediaPickerSDKSo07UIImageB17ControllerInfoKeyaRszrlE8jpegData10Foundation0I0VSgvp",
+            "mangledName": "$sSD16ZDMediaPickerSDKSo07UIImageB17ControllerInfoKeyaRszrlE8jpegData10Foundation0I0VSgvp",
+            "moduleName": "ZDMediaPickerSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:SD16ZDMediaPickerSDKSo07UIImageB17ControllerInfoKeyaRszrlE8jpegData10Foundation0I0VSgvg",
+                "mangledName": "$sSD16ZDMediaPickerSDKSo07UIImageB17ControllerInfoKeyaRszrlE8jpegData10Foundation0I0VSgvg",
+                "moduleName": "ZDMediaPickerSDK",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 == UIKit.UIImagePickerController.InfoKey>",
+                "sugared_genericSig": "<Key, Value where Key == UIKit.UIImagePickerController.InfoKey>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "jpegImage",
+            "printedName": "jpegImage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:SD16ZDMediaPickerSDKSo07UIImageB17ControllerInfoKeyaRszrlE9jpegImageSo0D0CSgvp",
+            "mangledName": "$sSD16ZDMediaPickerSDKSo07UIImageB17ControllerInfoKeyaRszrlE9jpegImageSo0D0CSgvp",
+            "moduleName": "ZDMediaPickerSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIImage?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImage",
+                        "printedName": "UIKit.UIImage",
+                        "usr": "c:objc(cs)UIImage"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:SD16ZDMediaPickerSDKSo07UIImageB17ControllerInfoKeyaRszrlE9jpegImageSo0D0CSgvg",
+                "mangledName": "$sSD16ZDMediaPickerSDKSo07UIImageB17ControllerInfoKeyaRszrlE9jpegImageSo0D0CSgvg",
+                "moduleName": "ZDMediaPickerSDK",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 == UIKit.UIImagePickerController.InfoKey>",
+                "sugared_genericSig": "<Key, Value where Key == UIKit.UIImagePickerController.InfoKey>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:SD",
+        "mangledName": "$sSD",
+        "moduleName": "Swift",
+        "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable>",
+        "sugared_genericSig": "<Key, Value where Key : Swift.Hashable>",
+        "declAttributes": [
+          "EagerMove",
+          "Frozen"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sequence",
+            "printedName": "Sequence",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(key: τ_0_0, value: τ_0_1)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "Swift.Dictionary<τ_0_0, τ_0_1>.Iterator",
+                    "usr": "s:SD8IteratorV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:ST",
+            "mangledName": "$sST"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Collection",
+            "printedName": "Collection",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(key: τ_0_0, value: τ_0_1)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Index",
+                "printedName": "Index",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Index",
+                    "printedName": "Swift.Dictionary<τ_0_0, τ_0_1>.Index",
+                    "usr": "s:SD5IndexV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "Swift.Dictionary<τ_0_0, τ_0_1>.Iterator",
+                    "usr": "s:SD8IteratorV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Slice",
+                    "printedName": "Swift.Slice<[τ_0_0 : τ_0_1]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[τ_0_0 : τ_0_1]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_1"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:s5SliceV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Indices",
+                "printedName": "Indices",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultIndices",
+                    "printedName": "Swift.DefaultIndices<[τ_0_0 : τ_0_1]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[τ_0_0 : τ_0_1]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_1"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:SI"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sl",
+            "mangledName": "$sSl"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByDictionaryLiteral",
+            "printedName": "ExpressibleByDictionaryLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Key",
+                "printedName": "Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Value",
+                "printedName": "Value",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s30ExpressibleByDictionaryLiteralP",
+            "mangledName": "$ss30ExpressibleByDictionaryLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_HasCustomAnyHashableRepresentation",
+            "printedName": "_HasCustomAnyHashableRepresentation",
+            "usr": "s:s35_HasCustomAnyHashableRepresentationP",
+            "mangledName": "$ss35_HasCustomAnyHashableRepresentationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSDictionary",
+                    "printedName": "Foundation.NSDictionary",
+                    "usr": "c:objc(cs)NSDictionary"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/ZDMediaPicker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1374,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/ZDMediaPicker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1680,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 792,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 828,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1465,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerView.swift",
+      "kind": "StringLiteral",
+      "offset": 1609,
+      "length": 12,
+      "value": "\"qr_scanner\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerView.swift",
+      "kind": "StringLiteral",
+      "offset": 1729,
+      "length": 13,
+      "value": "\"video_input\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1916,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14791,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14930,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14936,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14950,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14984,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerView.swift",
+      "kind": "Array",
+      "offset": 15096,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 15108,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerView.swift",
+      "kind": "FloatLiteral",
+      "offset": 15387,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPGesture.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2421,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPGesture.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2426,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPGesture.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2475,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPGesture.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2480,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPGesture.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2529,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPGesture.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2534,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPGesture.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2584,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPGesture.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2589,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPGesture.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2636,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPGesture.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2641,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPGesture.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5200,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPGesture.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5325,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPGesture.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5456,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/ZDMediaPickerExtension.swift",
+      "kind": "BooleanLiteral",
+      "offset": 326,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/ViewControllers\/ZDMPPhotosViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 432,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/ViewControllers\/ZDMPPhotosViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 468,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 174,
+      "length": 24,
+      "value": "\"ZDAlbumsViewController\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 233,
+      "length": 24,
+      "value": "\"ZDPhotosViewController\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 292,
+      "length": 21,
+      "value": "\"ZDScannerController\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 383,
+      "length": 25,
+      "value": "\"ZDMediaPickerStoryBoard\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 464,
+      "length": 17,
+      "value": "\"ZDAlbumListCell\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 516,
+      "length": 13,
+      "value": "\"ZDPhotoCell\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 595,
+      "length": 8,
+      "value": "\"Albums\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 638,
+      "length": 12,
+      "value": "\"All Photos\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 725,
+      "length": 8,
+      "value": "\"Select\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 769,
+      "length": 10,
+      "value": "\"Deselect\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 813,
+      "length": 8,
+      "value": "\"Cancel\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 870,
+      "length": 21,
+      "value": "\"No Photos or Videos\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 912,
+      "length": 11,
+      "value": "\"No Photos\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 944,
+      "length": 11,
+      "value": "\"No Videos\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 1022,
+      "length": 65,
+      "value": "\"You've given access to only a selected number of photos. Manage\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPStrings.swift",
+      "kind": "StringLiteral",
+      "offset": 1125,
+      "length": 8,
+      "value": "\"Manage\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/ViewControllers\/ZDMPController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 604,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDCameraPicker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1330,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/ViewControllers\/ZDMPAlbumsViewController.swift",
+      "kind": "Array",
+      "offset": 759,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/ViewControllers\/ZDMPAlbumsViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1149,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/ViewControllers\/ZDMPAlbumsViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1184,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/ViewControllers\/ZDMPAlbumsViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1274,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/ViewControllers\/ZDMPAlbumsViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5181,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPExtensions.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1890,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Extensions\/ZDMPFlowLayout.swift",
+      "kind": "BooleanLiteral",
+      "offset": 246,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 621,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1403,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1547,
+      "length": 12,
+      "value": "\"qr_scanner\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/May_27_2026\/ZDMEDIAPICKER\/13532589\/MACSRC\/native\/ZDMediaPicker\/ZDMediaPicker\/Scanner\/ZDScannerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1667,
+      "length": 13,
+      "value": "\"video_input\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/Library\/Developer\/Xcode\/DerivedData\/ZDMediaPickerSDK-fipwhxbzgflctmbrrzrznuedhlpy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ZDMediaPickerSDK\/IntermediateBuildFilesPath\/ZDMediaPickerSDK.build\/Release-iphonesimulator\/ZDMediaPickerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 727,
+      "length": 9,
+      "value": "\"QRFocus\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/Library\/Developer\/Xcode\/DerivedData\/ZDMediaPickerSDK-fipwhxbzgflctmbrrzrznuedhlpy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ZDMediaPickerSDK\/IntermediateBuildFilesPath\/ZDMediaPickerSDK.build\/Release-iphonesimulator\/ZDMediaPickerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 869,
+      "length": 16,
+      "value": "\"checkMarkImage\""
+    }
+  ]
+}

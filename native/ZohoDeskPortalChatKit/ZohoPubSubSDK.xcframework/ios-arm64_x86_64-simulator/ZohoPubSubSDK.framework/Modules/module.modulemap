@@ -1,0 +1,11 @@
+framework module ZohoPubSubSDK {
+  umbrella header "ZohoPubSubSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module ZohoPubSubSDK.Swift {
+  header "ZohoPubSubSDK-Swift.h"
+  requires objc
+}

@@ -1,0 +1,4250 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "MobilistenCallsCore",
+    "printedName": "MobilistenCallsCore",
+    "children": [
+      {
+        "kind": "TypeDecl",
+        "name": "CallErrorAction",
+        "printedName": "CallErrorAction",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "end",
+            "printedName": "end",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.CallErrorAction.Type) -> MobilistenCallsCore.CallErrorAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallErrorAction",
+                    "printedName": "MobilistenCallsCore.CallErrorAction",
+                    "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.CallErrorAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CallErrorAction",
+                        "printedName": "MobilistenCallsCore.CallErrorAction",
+                        "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction@CallErrorActionEnd",
+            "mangledName": "$s19MobilistenCallsCore15CallErrorActionO3endyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "accept",
+            "printedName": "accept",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.CallErrorAction.Type) -> MobilistenCallsCore.CallErrorAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallErrorAction",
+                    "printedName": "MobilistenCallsCore.CallErrorAction",
+                    "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.CallErrorAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CallErrorAction",
+                        "printedName": "MobilistenCallsCore.CallErrorAction",
+                        "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction@CallErrorActionAccept",
+            "mangledName": "$s19MobilistenCallsCore15CallErrorActionO6acceptyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "reject",
+            "printedName": "reject",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.CallErrorAction.Type) -> MobilistenCallsCore.CallErrorAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallErrorAction",
+                    "printedName": "MobilistenCallsCore.CallErrorAction",
+                    "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.CallErrorAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CallErrorAction",
+                        "printedName": "MobilistenCallsCore.CallErrorAction",
+                        "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction@CallErrorActionReject",
+            "mangledName": "$s19MobilistenCallsCore15CallErrorActionO6rejectyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.CallErrorAction.Type) -> MobilistenCallsCore.CallErrorAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallErrorAction",
+                    "printedName": "MobilistenCallsCore.CallErrorAction",
+                    "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.CallErrorAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CallErrorAction",
+                        "printedName": "MobilistenCallsCore.CallErrorAction",
+                        "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction@CallErrorActionNone",
+            "mangledName": "$s19MobilistenCallsCore15CallErrorActionO4noneyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MobilistenCallsCore.CallErrorAction?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallErrorAction",
+                    "printedName": "MobilistenCallsCore.CallErrorAction",
+                    "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19MobilistenCallsCore15CallErrorActionO8rawValueACSgSi_tcfc",
+            "mangledName": "$s19MobilistenCallsCore15CallErrorActionO8rawValueACSgSi_tcfc",
+            "moduleName": "MobilistenCallsCore",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19MobilistenCallsCore15CallErrorActionO8rawValueSivp",
+            "mangledName": "$s19MobilistenCallsCore15CallErrorActionO8rawValueSivp",
+            "moduleName": "MobilistenCallsCore",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore15CallErrorActionO8rawValueSivg",
+                "mangledName": "$s19MobilistenCallsCore15CallErrorActionO8rawValueSivg",
+                "moduleName": "MobilistenCallsCore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction",
+        "mangledName": "$s19MobilistenCallsCore15CallErrorActionO",
+        "moduleName": "MobilistenCallsCore",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CallError",
+        "printedName": "CallError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "action",
+            "printedName": "action",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CallErrorAction",
+                "printedName": "MobilistenCallsCore.CallErrorAction",
+                "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MobilistenCallsCore@objc(cs)CallError(py)action",
+            "mangledName": "$s19MobilistenCallsCore9CallErrorC6actionAA0dE6ActionOvp",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallErrorAction",
+                    "printedName": "MobilistenCallsCore.CallErrorAction",
+                    "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MobilistenCallsCore@objc(cs)CallError(im)action",
+                "mangledName": "$s19MobilistenCallsCore9CallErrorC6actionAA0dE6ActionOvg",
+                "moduleName": "MobilistenCallsCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "code",
+            "printedName": "code",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MobilistenCallsCore@objc(cs)CallError(py)code",
+            "mangledName": "$s19MobilistenCallsCore9CallErrorC4codeSivp",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MobilistenCallsCore@objc(cs)CallError(im)code",
+                "mangledName": "$s19MobilistenCallsCore9CallErrorC4codeSivg",
+                "moduleName": "MobilistenCallsCore",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "message",
+            "printedName": "message",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MobilistenCallsCore@objc(cs)CallError(py)message",
+            "mangledName": "$s19MobilistenCallsCore9CallErrorC7messageSSvp",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MobilistenCallsCore@objc(cs)CallError(im)message",
+                "mangledName": "$s19MobilistenCallsCore9CallErrorC7messageSSvg",
+                "moduleName": "MobilistenCallsCore",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(error:customMessage:action:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CallError",
+                "printedName": "MobilistenCallsCore.CallError",
+                "usr": "c:@M@MobilistenCallsCore@objc(cs)CallError"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CallErrorCode",
+                "printedName": "MobilistenCallsCore.CallErrorCode",
+                "usr": "c:@M@MobilistenCallsCore@E@CallErrorCode"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CallErrorAction",
+                "printedName": "MobilistenCallsCore.CallErrorAction",
+                "hasDefaultArg": true,
+                "usr": "c:@M@MobilistenCallsCore@E@CallErrorAction"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MobilistenCallsCore@objc(cs)CallError(im)initWithError:customMessage:action:",
+            "mangledName": "$s19MobilistenCallsCore9CallErrorC5error13customMessage6actionAcA0dE4CodeO_SSAA0dE6ActionOtcfc",
+            "moduleName": "MobilistenCallsCore",
+            "objc_name": "initWithError:customMessage:action:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CallError",
+                "printedName": "MobilistenCallsCore.CallError",
+                "usr": "c:@M@MobilistenCallsCore@objc(cs)CallError"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MobilistenCallsCore@objc(cs)CallError(im)init",
+            "mangledName": "$s19MobilistenCallsCore9CallErrorCACycfc",
+            "moduleName": "MobilistenCallsCore",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@MobilistenCallsCore@objc(cs)CallError",
+        "mangledName": "$s19MobilistenCallsCore9CallErrorC",
+        "moduleName": "MobilistenCallsCore",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CallErrorCode",
+        "printedName": "CallErrorCode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "creationFailed",
+            "printedName": "creationFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.CallErrorCode.Type) -> MobilistenCallsCore.CallErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallErrorCode",
+                    "printedName": "MobilistenCallsCore.CallErrorCode",
+                    "usr": "c:@M@MobilistenCallsCore@E@CallErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.CallErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CallErrorCode",
+                        "printedName": "MobilistenCallsCore.CallErrorCode",
+                        "usr": "c:@M@MobilistenCallsCore@E@CallErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@CallErrorCode@CallErrorCodeCreationFailed",
+            "mangledName": "$s19MobilistenCallsCore13CallErrorCodeO14creationFailedyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "actionFailed",
+            "printedName": "actionFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.CallErrorCode.Type) -> MobilistenCallsCore.CallErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallErrorCode",
+                    "printedName": "MobilistenCallsCore.CallErrorCode",
+                    "usr": "c:@M@MobilistenCallsCore@E@CallErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.CallErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CallErrorCode",
+                        "printedName": "MobilistenCallsCore.CallErrorCode",
+                        "usr": "c:@M@MobilistenCallsCore@E@CallErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@CallErrorCode@CallErrorCodeActionFailed",
+            "mangledName": "$s19MobilistenCallsCore13CallErrorCodeO12actionFailedyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MobilistenCallsCore.CallErrorCode?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallErrorCode",
+                    "printedName": "MobilistenCallsCore.CallErrorCode",
+                    "usr": "c:@M@MobilistenCallsCore@E@CallErrorCode"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19MobilistenCallsCore13CallErrorCodeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s19MobilistenCallsCore13CallErrorCodeO8rawValueACSgSi_tcfc",
+            "moduleName": "MobilistenCallsCore",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19MobilistenCallsCore13CallErrorCodeO8rawValueSivp",
+            "mangledName": "$s19MobilistenCallsCore13CallErrorCodeO8rawValueSivp",
+            "moduleName": "MobilistenCallsCore",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore13CallErrorCodeO8rawValueSivg",
+                "mangledName": "$s19MobilistenCallsCore13CallErrorCodeO8rawValueSivg",
+                "moduleName": "MobilistenCallsCore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@MobilistenCallsCore@E@CallErrorCode",
+        "mangledName": "$s19MobilistenCallsCore13CallErrorCodeO",
+        "moduleName": "MobilistenCallsCore",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MobilistenCallsCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MobilistenCore",
+        "printedName": "MobilistenCore",
+        "declKind": "Import",
+        "moduleName": "MobilistenCallsCore"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZohoSalesIQCallDelegate",
+        "printedName": "ZohoSalesIQCallDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "queuePositionDidChange",
+            "printedName": "queuePositionDidChange(for:position:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MobilistenCallsCore@objc(pl)ZohoSalesIQCallDelegate(im)queuePositionDidChangeFor:position:",
+            "mangledName": "$s19MobilistenCallsCore23ZohoSalesIQCallDelegateP22queuePositionDidChange3for8positionySS_SitF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallDelegate>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callStateDidChange",
+            "printedName": "callStateDidChange(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SalesIQCallState",
+                "printedName": "MobilistenCallsCore.SalesIQCallState",
+                "usr": "c:@M@MobilistenCallsCore@objc(cs)SalesIQCallState"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MobilistenCallsCore@objc(pl)ZohoSalesIQCallDelegate(im)callStateDidChangeFor:",
+            "mangledName": "$s19MobilistenCallsCore23ZohoSalesIQCallDelegateP18callStateDidChange3foryAA0efI0C_tF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallDelegate>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callScreenDidAppear",
+            "printedName": "callScreenDidAppear()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MobilistenCallsCore@objc(pl)ZohoSalesIQCallDelegate(im)callScreenDidAppear",
+            "mangledName": "$s19MobilistenCallsCore23ZohoSalesIQCallDelegateP19callScreenDidAppearyyF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallDelegate>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callScreenDidDisappear",
+            "printedName": "callScreenDidDisappear()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MobilistenCallsCore@objc(pl)ZohoSalesIQCallDelegate(im)callScreenDidDisappear",
+            "mangledName": "$s19MobilistenCallsCore23ZohoSalesIQCallDelegateP22callScreenDidDisappearyyF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallDelegate>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callScreenDidEnterPiPMode",
+            "printedName": "callScreenDidEnterPiPMode()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MobilistenCallsCore@objc(pl)ZohoSalesIQCallDelegate(im)callScreenDidEnterPiPMode",
+            "mangledName": "$s19MobilistenCallsCore23ZohoSalesIQCallDelegateP25callScreenDidEnterPiPModeyyF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallDelegate>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callScreenDidEnterFullScreenMode",
+            "printedName": "callScreenDidEnterFullScreenMode()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MobilistenCallsCore@objc(pl)ZohoSalesIQCallDelegate(im)callScreenDidEnterFullScreenMode",
+            "mangledName": "$s19MobilistenCallsCore23ZohoSalesIQCallDelegateP022callScreenDidEnterFullI4ModeyyF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallDelegate>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didFailWithError",
+            "printedName": "didFailWithError(call:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MobilistenCore.SIQVisitorChat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIQVisitorChat",
+                    "printedName": "MobilistenCore.SIQVisitorChat",
+                    "usr": "c:@M@MobilistenCore@objc(cs)SIQVisitorChat"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CallError",
+                "printedName": "MobilistenCallsCore.CallError",
+                "usr": "c:@M@MobilistenCallsCore@objc(cs)CallError"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MobilistenCallsCore@objc(pl)ZohoSalesIQCallDelegate(im)didFailWithErrorWithCall:error:",
+            "mangledName": "$s19MobilistenCallsCore23ZohoSalesIQCallDelegateP16didFailWithError4call5errory0aC014SIQVisitorChatCSg_AA04CallK0CtF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallDelegate>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallDelegate>",
+            "protocolReq": true,
+            "objc_name": "didFailWithErrorWithCall:error:",
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@MobilistenCallsCore@objc(pl)ZohoSalesIQCallDelegate",
+        "mangledName": "$s19MobilistenCallsCore23ZohoSalesIQCallDelegateP",
+        "moduleName": "MobilistenCallsCore",
+        "genericSig": "<τ_0_0 : ObjectiveC.NSObjectProtocol>",
+        "sugared_genericSig": "<Self : ObjectiveC.NSObjectProtocol>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CallComponent",
+        "printedName": "CallComponent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "operatorName",
+            "printedName": "operatorName",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.CallComponent.Type) -> MobilistenCallsCore.CallComponent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallComponent",
+                    "printedName": "MobilistenCallsCore.CallComponent",
+                    "usr": "c:@M@MobilistenCallsCore@E@CallComponent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.CallComponent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CallComponent",
+                        "printedName": "MobilistenCallsCore.CallComponent",
+                        "usr": "c:@M@MobilistenCallsCore@E@CallComponent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@CallComponent@CallComponentOperatorName",
+            "mangledName": "$s19MobilistenCallsCore13CallComponentO12operatorNameyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "operatorImage",
+            "printedName": "operatorImage",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.CallComponent.Type) -> MobilistenCallsCore.CallComponent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallComponent",
+                    "printedName": "MobilistenCallsCore.CallComponent",
+                    "usr": "c:@M@MobilistenCallsCore@E@CallComponent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.CallComponent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CallComponent",
+                        "printedName": "MobilistenCallsCore.CallComponent",
+                        "usr": "c:@M@MobilistenCallsCore@E@CallComponent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@CallComponent@CallComponentOperatorImage",
+            "mangledName": "$s19MobilistenCallsCore13CallComponentO13operatorImageyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "preChatForm",
+            "printedName": "preChatForm",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.CallComponent.Type) -> MobilistenCallsCore.CallComponent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallComponent",
+                    "printedName": "MobilistenCallsCore.CallComponent",
+                    "usr": "c:@M@MobilistenCallsCore@E@CallComponent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.CallComponent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CallComponent",
+                        "printedName": "MobilistenCallsCore.CallComponent",
+                        "usr": "c:@M@MobilistenCallsCore@E@CallComponent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@CallComponent@CallComponentPreChatForm",
+            "mangledName": "$s19MobilistenCallsCore13CallComponentO11preChatFormyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "queuePosition",
+            "printedName": "queuePosition",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.CallComponent.Type) -> MobilistenCallsCore.CallComponent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallComponent",
+                    "printedName": "MobilistenCallsCore.CallComponent",
+                    "usr": "c:@M@MobilistenCallsCore@E@CallComponent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.CallComponent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CallComponent",
+                        "printedName": "MobilistenCallsCore.CallComponent",
+                        "usr": "c:@M@MobilistenCallsCore@E@CallComponent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@CallComponent@CallComponentQueuePosition",
+            "mangledName": "$s19MobilistenCallsCore13CallComponentO13queuePositionyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MobilistenCallsCore.CallComponent?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallComponent",
+                    "printedName": "MobilistenCallsCore.CallComponent",
+                    "usr": "c:@M@MobilistenCallsCore@E@CallComponent"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19MobilistenCallsCore13CallComponentO8rawValueACSgSi_tcfc",
+            "mangledName": "$s19MobilistenCallsCore13CallComponentO8rawValueACSgSi_tcfc",
+            "moduleName": "MobilistenCallsCore",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19MobilistenCallsCore13CallComponentO8rawValueSivp",
+            "mangledName": "$s19MobilistenCallsCore13CallComponentO8rawValueSivp",
+            "moduleName": "MobilistenCallsCore",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore13CallComponentO8rawValueSivg",
+                "mangledName": "$s19MobilistenCallsCore13CallComponentO8rawValueSivg",
+                "moduleName": "MobilistenCallsCore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@MobilistenCallsCore@E@CallComponent",
+        "mangledName": "$s19MobilistenCallsCore13CallComponentO",
+        "moduleName": "MobilistenCallsCore",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MobilistenCallsCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MobilistenCore",
+        "printedName": "MobilistenCore",
+        "declKind": "Import",
+        "moduleName": "MobilistenCallsCore"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SalesIQCallStatus",
+        "printedName": "SalesIQCallStatus",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SalesIQCallStatus.Type) -> MobilistenCallsCore.SalesIQCallStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallStatus",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQCallStatus",
+                        "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus@SalesIQCallStatusNone",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO4noneyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "calling",
+            "printedName": "calling",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SalesIQCallStatus.Type) -> MobilistenCallsCore.SalesIQCallStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallStatus",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQCallStatus",
+                        "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus@SalesIQCallStatusCalling",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO7callingyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "ringing",
+            "printedName": "ringing",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SalesIQCallStatus.Type) -> MobilistenCallsCore.SalesIQCallStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallStatus",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQCallStatus",
+                        "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus@SalesIQCallStatusRinging",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO7ringingyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "connecting",
+            "printedName": "connecting",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SalesIQCallStatus.Type) -> MobilistenCallsCore.SalesIQCallStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallStatus",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQCallStatus",
+                        "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus@SalesIQCallStatusConnecting",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO10connectingyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "connected",
+            "printedName": "connected",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SalesIQCallStatus.Type) -> MobilistenCallsCore.SalesIQCallStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallStatus",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQCallStatus",
+                        "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus@SalesIQCallStatusConnected",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO9connectedyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
+            "name": "reconnecting",
+            "printedName": "reconnecting",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SalesIQCallStatus.Type) -> MobilistenCallsCore.SalesIQCallStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallStatus",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQCallStatus",
+                        "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus@SalesIQCallStatusReconnecting",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO12reconnectingyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 5
+          },
+          {
+            "kind": "Var",
+            "name": "ended",
+            "printedName": "ended",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SalesIQCallStatus.Type) -> MobilistenCallsCore.SalesIQCallStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallStatus",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQCallStatus",
+                        "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus@SalesIQCallStatusEnded",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO5endedyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 6
+          },
+          {
+            "kind": "Var",
+            "name": "missed",
+            "printedName": "missed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SalesIQCallStatus.Type) -> MobilistenCallsCore.SalesIQCallStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallStatus",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQCallStatus",
+                        "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus@SalesIQCallStatusMissed",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO6missedyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 7
+          },
+          {
+            "kind": "Var",
+            "name": "cancelled",
+            "printedName": "cancelled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SalesIQCallStatus.Type) -> MobilistenCallsCore.SalesIQCallStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallStatus",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQCallStatus",
+                        "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus@SalesIQCallStatusCancelled",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO9cancelledyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 8
+          },
+          {
+            "kind": "Var",
+            "name": "declined",
+            "printedName": "declined",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SalesIQCallStatus.Type) -> MobilistenCallsCore.SalesIQCallStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallStatus",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQCallStatus",
+                        "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus@SalesIQCallStatusDeclined",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO8declinedyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 9
+          },
+          {
+            "kind": "Var",
+            "name": "failed",
+            "printedName": "failed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SalesIQCallStatus.Type) -> MobilistenCallsCore.SalesIQCallStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallStatus",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQCallStatus",
+                        "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus@SalesIQCallStatusFailed",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO6failedyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 10
+          },
+          {
+            "kind": "Var",
+            "name": "queue",
+            "printedName": "queue",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SalesIQCallStatus.Type) -> MobilistenCallsCore.SalesIQCallStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallStatus",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQCallStatus",
+                        "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus@SalesIQCallStatusQueue",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO5queueyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 11
+          },
+          {
+            "kind": "Var",
+            "name": "invalid",
+            "printedName": "invalid",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SalesIQCallStatus.Type) -> MobilistenCallsCore.SalesIQCallStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallStatus",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQCallStatus",
+                        "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus@SalesIQCallStatusInvalid",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO7invalidyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 12
+          },
+          {
+            "kind": "Var",
+            "name": "stringValue",
+            "printedName": "stringValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19MobilistenCallsCore17SalesIQCallStatusO11stringValueSSvp",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO11stringValueSSvp",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore17SalesIQCallStatusO11stringValueSSvg",
+                "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO11stringValueSSvg",
+                "moduleName": "MobilistenCallsCore",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isCallActive",
+            "printedName": "isCallActive",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19MobilistenCallsCore17SalesIQCallStatusO12isCallActiveSbvp",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO12isCallActiveSbvp",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore17SalesIQCallStatusO12isCallActiveSbvg",
+                "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO12isCallActiveSbvg",
+                "moduleName": "MobilistenCallsCore",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MobilistenCallsCore.SalesIQCallStatus?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallStatus",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19MobilistenCallsCore17SalesIQCallStatusO8rawValueACSgSi_tcfc",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO8rawValueACSgSi_tcfc",
+            "moduleName": "MobilistenCallsCore",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19MobilistenCallsCore17SalesIQCallStatusO8rawValueSivp",
+            "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO8rawValueSivp",
+            "moduleName": "MobilistenCallsCore",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore17SalesIQCallStatusO8rawValueSivg",
+                "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO8rawValueSivg",
+                "moduleName": "MobilistenCallsCore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus",
+        "mangledName": "$s19MobilistenCallsCore17SalesIQCallStatusO",
+        "moduleName": "MobilistenCallsCore",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SIQCallAction",
+        "printedName": "SIQCallAction",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "accept",
+            "printedName": "accept",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SIQCallAction.Type) -> MobilistenCallsCore.SIQCallAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIQCallAction",
+                    "printedName": "MobilistenCallsCore.SIQCallAction",
+                    "usr": "c:@M@MobilistenCallsCore@E@SIQCallAction"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SIQCallAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SIQCallAction",
+                        "printedName": "MobilistenCallsCore.SIQCallAction",
+                        "usr": "c:@M@MobilistenCallsCore@E@SIQCallAction"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SIQCallAction@SIQCallActionAccept",
+            "mangledName": "$s19MobilistenCallsCore13SIQCallActionO6acceptyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "decline",
+            "printedName": "decline",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SIQCallAction.Type) -> MobilistenCallsCore.SIQCallAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIQCallAction",
+                    "printedName": "MobilistenCallsCore.SIQCallAction",
+                    "usr": "c:@M@MobilistenCallsCore@E@SIQCallAction"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SIQCallAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SIQCallAction",
+                        "printedName": "MobilistenCallsCore.SIQCallAction",
+                        "usr": "c:@M@MobilistenCallsCore@E@SIQCallAction"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SIQCallAction@SIQCallActionDecline",
+            "mangledName": "$s19MobilistenCallsCore13SIQCallActionO7declineyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MobilistenCallsCore.SIQCallAction?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIQCallAction",
+                    "printedName": "MobilistenCallsCore.SIQCallAction",
+                    "usr": "c:@M@MobilistenCallsCore@E@SIQCallAction"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19MobilistenCallsCore13SIQCallActionO8rawValueACSgSi_tcfc",
+            "mangledName": "$s19MobilistenCallsCore13SIQCallActionO8rawValueACSgSi_tcfc",
+            "moduleName": "MobilistenCallsCore",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19MobilistenCallsCore13SIQCallActionO8rawValueSivp",
+            "mangledName": "$s19MobilistenCallsCore13SIQCallActionO8rawValueSivp",
+            "moduleName": "MobilistenCallsCore",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore13SIQCallActionO8rawValueSivg",
+                "mangledName": "$s19MobilistenCallsCore13SIQCallActionO8rawValueSivg",
+                "moduleName": "MobilistenCallsCore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@MobilistenCallsCore@E@SIQCallAction",
+        "mangledName": "$s19MobilistenCallsCore13SIQCallActionO",
+        "moduleName": "MobilistenCallsCore",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MobilistenCore",
+        "printedName": "MobilistenCore",
+        "declKind": "Import",
+        "moduleName": "MobilistenCallsCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZohoSalesIQCallsProtocol",
+        "printedName": "ZohoSalesIQCallsProtocol",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isEnabled",
+            "printedName": "isEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP9isEnabledSbvp",
+            "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP9isEnabledSbvp",
+            "moduleName": "MobilistenCallsCore",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP9isEnabledSbvg",
+                "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP9isEnabledSbvg",
+                "moduleName": "MobilistenCallsCore",
+                "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+                "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "switchToFloatingScreen",
+            "printedName": "switchToFloatingScreen()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP22switchToFloatingScreenyyF",
+            "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP22switchToFloatingScreenyyF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "switchToFullScreen",
+            "printedName": "switchToFullScreen()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP18switchToFullScreenyyF",
+            "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP18switchToFullScreenyyF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "end",
+            "printedName": "end(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(((any MobilistenCore.SIQError)?, MobilistenCore.SalesIQConversation?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "((any MobilistenCore.SIQError)?, MobilistenCore.SalesIQConversation?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "((any MobilistenCore.SIQError)?, MobilistenCore.SalesIQConversation?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "(any MobilistenCore.SIQError)?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "SIQError",
+                                "printedName": "any MobilistenCore.SIQError",
+                                "usr": "c:@M@MobilistenCore@objc(pl)SIQError"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "MobilistenCore.SalesIQConversation?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "SalesIQConversation",
+                                "printedName": "MobilistenCore.SalesIQConversation",
+                                "usr": "c:@M@MobilistenCore@objc(cs)SalesIQConversation"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP3end10completionyy0aC08SIQError_pSg_AF0E14IQConversationCSgtcSg_tF",
+            "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP3end10completionyy0aC08SIQError_pSg_AF0E14IQConversationCSgtcSg_tF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setVisibility",
+            "printedName": "setVisibility(_:visible:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CallComponent",
+                "printedName": "MobilistenCallsCore.CallComponent",
+                "usr": "c:@M@MobilistenCallsCore@E@CallComponent"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP13setVisibility_7visibleyAA13CallComponentO_SbtF",
+            "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP13setVisibility_7visibleyAA13CallComponentO_SbtF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "currentState",
+            "printedName": "currentState",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SalesIQCallState",
+                "printedName": "MobilistenCallsCore.SalesIQCallState",
+                "usr": "c:@M@MobilistenCallsCore@objc(cs)SalesIQCallState"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP12currentStateAA0e6IQCallI0Cvp",
+            "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP12currentStateAA0e6IQCallI0Cvp",
+            "moduleName": "MobilistenCallsCore",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallState",
+                    "printedName": "MobilistenCallsCore.SalesIQCallState",
+                    "usr": "c:@M@MobilistenCallsCore@objc(cs)SalesIQCallState"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP12currentStateAA0e6IQCallI0Cvg",
+                "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP12currentStateAA0e6IQCallI0Cvg",
+                "moduleName": "MobilistenCallsCore",
+                "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+                "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start(id:attributes:displayActiveCall:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[MobilistenCore.SalesIQConversationAttributes]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[MobilistenCore.SalesIQConversationAttributes]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQConversationAttributes",
+                        "printedName": "MobilistenCore.SalesIQConversationAttributes",
+                        "usr": "s:14MobilistenCore29SalesIQConversationAttributesO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(((any MobilistenCore.SIQError)?, MobilistenCore.SalesIQConversation?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "((any MobilistenCore.SIQError)?, MobilistenCore.SalesIQConversation?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "((any MobilistenCore.SIQError)?, MobilistenCore.SalesIQConversation?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "(any MobilistenCore.SIQError)?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "SIQError",
+                                "printedName": "any MobilistenCore.SIQError",
+                                "usr": "c:@M@MobilistenCore@objc(pl)SIQError"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "MobilistenCore.SalesIQConversation?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "SalesIQConversation",
+                                "printedName": "MobilistenCore.SalesIQConversation",
+                                "usr": "c:@M@MobilistenCore@objc(cs)SalesIQConversation"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP5start2id10attributes17displayActiveCall10completionySSSg_Say0aC00E24IQConversationAttributesOGSgSbyAJ8SIQError_pSg_AJ0eO0CSgtcSgtF",
+            "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP5start2id10attributes17displayActiveCall10completionySSSg_Say0aC00E24IQConversationAttributesOGSgSbyAJ8SIQError_pSg_AJ0eO0CSgtcSgtF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start(id:name:additionalInfo:displayImage:departments:displayActiveCall:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[MobilistenCore.SIQDepartment]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIQDepartment",
+                    "printedName": "MobilistenCore.SIQDepartment",
+                    "usr": "c:@M@MobilistenCore@objc(cs)SIQDepartment"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(((any MobilistenCore.SIQError)?, MobilistenCore.SalesIQConversation?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "((any MobilistenCore.SIQError)?, MobilistenCore.SalesIQConversation?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "((any MobilistenCore.SIQError)?, MobilistenCore.SalesIQConversation?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "(any MobilistenCore.SIQError)?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "SIQError",
+                                "printedName": "any MobilistenCore.SIQError",
+                                "usr": "c:@M@MobilistenCore@objc(pl)SIQError"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "MobilistenCore.SalesIQConversation?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "SalesIQConversation",
+                                "printedName": "MobilistenCore.SalesIQConversation",
+                                "usr": "c:@M@MobilistenCore@objc(cs)SalesIQConversation"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP5start2id4name14additionalInfo12displayImage11departments0M10ActiveCall10completionySSSg_A2LypSgSay0aC013SIQDepartmentCGSbyAN8SIQError_pSg_AN0E14IQConversationCSgtcSgtF",
+            "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP5start2id4name14additionalInfo12displayImage11departments0M10ActiveCall10completionySSSg_A2LypSgSay0aC013SIQDepartmentCGSbyAN8SIQError_pSg_AN0E14IQConversationCSgtcSgtF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getList",
+            "printedName": "getList(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "((any MobilistenCore.SIQError)?, [MobilistenCore.SalesIQConversation]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "((any MobilistenCore.SIQError)?, [MobilistenCore.SalesIQConversation])",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "(any MobilistenCore.SIQError)?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SIQError",
+                            "printedName": "any MobilistenCore.SIQError",
+                            "usr": "c:@M@MobilistenCore@objc(pl)SIQError"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[MobilistenCore.SalesIQConversation]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SalesIQConversation",
+                            "printedName": "MobilistenCore.SalesIQConversation",
+                            "usr": "c:@M@MobilistenCore@objc(cs)SalesIQConversation"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP7getList10completionyy0aC08SIQError_pSg_SayAF0E14IQConversationCGtc_tF",
+            "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP7getList10completionyy0aC08SIQError_pSg_SayAF0E14IQConversationCGtc_tF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setTitle",
+            "printedName": "setTitle(online:offline:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP8setTitle6online7offlineySSSg_AGtF",
+            "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP8setTitle6online7offlineySSSg_AGtF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "currentCallID",
+            "printedName": "currentCallID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP13currentCallIDSSSgvp",
+            "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP13currentCallIDSSSgvp",
+            "moduleName": "MobilistenCallsCore",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP13currentCallIDSSSgvg",
+                "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP13currentCallIDSSSgvg",
+                "moduleName": "MobilistenCallsCore",
+                "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+                "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "enableVoIP",
+            "printedName": "enableVoIP(_:isTestDevice:mode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APNSMode",
+                "printedName": "MobilistenCore.APNSMode",
+                "usr": "c:@M@MobilistenCore@E@APNSMode"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP10enableVoIP_12isTestDevice4modeySS_Sb0aC08APNSModeOtF",
+            "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP10enableVoIP_12isTestDevice4modeySS_Sb0aC08APNSModeOtF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handleVOIPNotificationAction",
+            "printedName": "handleVOIPNotificationAction(_:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.AnyHashable : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.AnyHashable : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyHashable",
+                        "printedName": "Swift.AnyHashable",
+                        "usr": "s:s11AnyHashableV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP28handleVOIPNotificationAction_10completionySDys11AnyHashableVypGSg_yyctF",
+            "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP28handleVOIPNotificationAction_10completionySDys11AnyHashableVypGSg_yyctF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setCallKitIcon",
+            "printedName": "setCallKitIcon(icon:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP14setCallKitIcon4iconyyp_tF",
+            "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP14setCallKitIcon4iconyyp_tF",
+            "moduleName": "MobilistenCallsCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "sugared_genericSig": "<Self where Self : MobilistenCallsCore.ZohoSalesIQCallsProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:19MobilistenCallsCore24ZohoSalesIQCallsProtocolP",
+        "mangledName": "$s19MobilistenCallsCore24ZohoSalesIQCallsProtocolP",
+        "moduleName": "MobilistenCallsCore",
+        "declAttributes": [
+          "AccessControl",
+          "Custom"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZohoSalesIQCallsService",
+        "printedName": "ZohoSalesIQCallsService",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any MobilistenCallsCore.ZohoSalesIQCallDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZohoSalesIQCallDelegate",
+                    "printedName": "any MobilistenCallsCore.ZohoSalesIQCallDelegate",
+                    "usr": "c:@M@MobilistenCallsCore@objc(pl)ZohoSalesIQCallDelegate"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19MobilistenCallsCore23ZohoSalesIQCallsServiceC8delegateAA0dE14IQCallDelegate_pSgvpZ",
+            "mangledName": "$s19MobilistenCallsCore23ZohoSalesIQCallsServiceC8delegateAA0dE14IQCallDelegate_pSgvpZ",
+            "moduleName": "MobilistenCallsCore",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any MobilistenCallsCore.ZohoSalesIQCallDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZohoSalesIQCallDelegate",
+                        "printedName": "any MobilistenCallsCore.ZohoSalesIQCallDelegate",
+                        "usr": "c:@M@MobilistenCallsCore@objc(pl)ZohoSalesIQCallDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore23ZohoSalesIQCallsServiceC8delegateAA0dE14IQCallDelegate_pSgvgZ",
+                "mangledName": "$s19MobilistenCallsCore23ZohoSalesIQCallsServiceC8delegateAA0dE14IQCallDelegate_pSgvgZ",
+                "moduleName": "MobilistenCallsCore",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any MobilistenCallsCore.ZohoSalesIQCallDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZohoSalesIQCallDelegate",
+                        "printedName": "any MobilistenCallsCore.ZohoSalesIQCallDelegate",
+                        "usr": "c:@M@MobilistenCallsCore@objc(pl)ZohoSalesIQCallDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore23ZohoSalesIQCallsServiceC8delegateAA0dE14IQCallDelegate_pSgvsZ",
+                "mangledName": "$s19MobilistenCallsCore23ZohoSalesIQCallsServiceC8delegateAA0dE14IQCallDelegate_pSgvsZ",
+                "moduleName": "MobilistenCallsCore",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore23ZohoSalesIQCallsServiceC8delegateAA0dE14IQCallDelegate_pSgvMZ",
+                "mangledName": "$s19MobilistenCallsCore23ZohoSalesIQCallsServiceC8delegateAA0dE14IQCallDelegate_pSgvMZ",
+                "moduleName": "MobilistenCallsCore",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19MobilistenCallsCore23ZohoSalesIQCallsServiceC",
+        "mangledName": "$s19MobilistenCallsCore23ZohoSalesIQCallsServiceC",
+        "moduleName": "MobilistenCallsCore",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SalesIQCallState",
+        "printedName": "SalesIQCallState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SalesIQCallStatus",
+                "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MobilistenCallsCore@objc(cs)SalesIQCallState(py)status",
+            "mangledName": "$s19MobilistenCallsCore16SalesIQCallStateC6statusAA0dE6StatusOvp",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallStatus",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MobilistenCallsCore@objc(cs)SalesIQCallState(im)status",
+                "mangledName": "$s19MobilistenCallsCore16SalesIQCallStateC6statusAA0dE6StatusOvg",
+                "moduleName": "MobilistenCallsCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallStatus",
+                    "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MobilistenCallsCore@objc(cs)SalesIQCallState(im)setStatus:",
+                "mangledName": "$s19MobilistenCallsCore16SalesIQCallStateC6statusAA0dE6StatusOvs",
+                "moduleName": "MobilistenCallsCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore16SalesIQCallStateC6statusAA0dE6StatusOvM",
+                "mangledName": "$s19MobilistenCallsCore16SalesIQCallStateC6statusAA0dE6StatusOvM",
+                "moduleName": "MobilistenCallsCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "direction",
+            "printedName": "direction",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SalesIQCallDirection",
+                "printedName": "MobilistenCallsCore.SalesIQCallDirection",
+                "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallDirection"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MobilistenCallsCore@objc(cs)SalesIQCallState(py)direction",
+            "mangledName": "$s19MobilistenCallsCore16SalesIQCallStateC9directionAA0dE9DirectionOvp",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallDirection",
+                    "printedName": "MobilistenCallsCore.SalesIQCallDirection",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallDirection"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MobilistenCallsCore@objc(cs)SalesIQCallState(im)direction",
+                "mangledName": "$s19MobilistenCallsCore16SalesIQCallStateC9directionAA0dE9DirectionOvg",
+                "moduleName": "MobilistenCallsCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallDirection",
+                    "printedName": "MobilistenCallsCore.SalesIQCallDirection",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallDirection"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MobilistenCallsCore@objc(cs)SalesIQCallState(im)setDirection:",
+                "mangledName": "$s19MobilistenCallsCore16SalesIQCallStateC9directionAA0dE9DirectionOvs",
+                "moduleName": "MobilistenCallsCore",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore16SalesIQCallStateC9directionAA0dE9DirectionOvM",
+                "mangledName": "$s19MobilistenCallsCore16SalesIQCallStateC9directionAA0dE9DirectionOvM",
+                "moduleName": "MobilistenCallsCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(status:direction:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SalesIQCallState",
+                "printedName": "MobilistenCallsCore.SalesIQCallState",
+                "usr": "c:@M@MobilistenCallsCore@objc(cs)SalesIQCallState"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SalesIQCallStatus",
+                "printedName": "MobilistenCallsCore.SalesIQCallStatus",
+                "hasDefaultArg": true,
+                "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallStatus"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MobilistenCallsCore.SalesIQCallDirection?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallDirection",
+                    "printedName": "MobilistenCallsCore.SalesIQCallDirection",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallDirection"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19MobilistenCallsCore16SalesIQCallStateC6status9directionAcA0dE6StatusO_AA0dE9DirectionOSgtcfc",
+            "mangledName": "$s19MobilistenCallsCore16SalesIQCallStateC6status9directionAcA0dE6StatusO_AA0dE9DirectionOSgtcfc",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SalesIQCallState",
+                "printedName": "MobilistenCallsCore.SalesIQCallState",
+                "usr": "c:@M@MobilistenCallsCore@objc(cs)SalesIQCallState"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MobilistenCallsCore@objc(cs)SalesIQCallState(im)init",
+            "mangledName": "$s19MobilistenCallsCore16SalesIQCallStateCACycfc",
+            "moduleName": "MobilistenCallsCore",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@MobilistenCallsCore@objc(cs)SalesIQCallState",
+        "mangledName": "$s19MobilistenCallsCore16SalesIQCallStateC",
+        "moduleName": "MobilistenCallsCore",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SalesIQCallDirection",
+        "printedName": "SalesIQCallDirection",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "incoming",
+            "printedName": "incoming",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SalesIQCallDirection.Type) -> MobilistenCallsCore.SalesIQCallDirection",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallDirection",
+                    "printedName": "MobilistenCallsCore.SalesIQCallDirection",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallDirection"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SalesIQCallDirection.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQCallDirection",
+                        "printedName": "MobilistenCallsCore.SalesIQCallDirection",
+                        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallDirection"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallDirection@SalesIQCallDirectionIncoming",
+            "mangledName": "$s19MobilistenCallsCore20SalesIQCallDirectionO8incomingyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "outgoing",
+            "printedName": "outgoing",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SalesIQCallDirection.Type) -> MobilistenCallsCore.SalesIQCallDirection",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallDirection",
+                    "printedName": "MobilistenCallsCore.SalesIQCallDirection",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallDirection"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SalesIQCallDirection.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQCallDirection",
+                        "printedName": "MobilistenCallsCore.SalesIQCallDirection",
+                        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallDirection"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallDirection@SalesIQCallDirectionOutgoing",
+            "mangledName": "$s19MobilistenCallsCore20SalesIQCallDirectionO8outgoingyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MobilistenCallsCore.SalesIQCallDirection.Type) -> MobilistenCallsCore.SalesIQCallDirection",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallDirection",
+                    "printedName": "MobilistenCallsCore.SalesIQCallDirection",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallDirection"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MobilistenCallsCore.SalesIQCallDirection.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SalesIQCallDirection",
+                        "printedName": "MobilistenCallsCore.SalesIQCallDirection",
+                        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallDirection"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallDirection@SalesIQCallDirectionNone",
+            "mangledName": "$s19MobilistenCallsCore20SalesIQCallDirectionO4noneyA2CmF",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "stringValue",
+            "printedName": "stringValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19MobilistenCallsCore20SalesIQCallDirectionO11stringValueSSvp",
+            "mangledName": "$s19MobilistenCallsCore20SalesIQCallDirectionO11stringValueSSvp",
+            "moduleName": "MobilistenCallsCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore20SalesIQCallDirectionO11stringValueSSvg",
+                "mangledName": "$s19MobilistenCallsCore20SalesIQCallDirectionO11stringValueSSvg",
+                "moduleName": "MobilistenCallsCore",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MobilistenCallsCore.SalesIQCallDirection?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SalesIQCallDirection",
+                    "printedName": "MobilistenCallsCore.SalesIQCallDirection",
+                    "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallDirection"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19MobilistenCallsCore20SalesIQCallDirectionO8rawValueACSgSi_tcfc",
+            "mangledName": "$s19MobilistenCallsCore20SalesIQCallDirectionO8rawValueACSgSi_tcfc",
+            "moduleName": "MobilistenCallsCore",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19MobilistenCallsCore20SalesIQCallDirectionO8rawValueSivp",
+            "mangledName": "$s19MobilistenCallsCore20SalesIQCallDirectionO8rawValueSivp",
+            "moduleName": "MobilistenCallsCore",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19MobilistenCallsCore20SalesIQCallDirectionO8rawValueSivg",
+                "mangledName": "$s19MobilistenCallsCore20SalesIQCallDirectionO8rawValueSivg",
+                "moduleName": "MobilistenCallsCore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@MobilistenCallsCore@E@SalesIQCallDirection",
+        "mangledName": "$s19MobilistenCallsCore20SalesIQCallDirectionO",
+        "moduleName": "MobilistenCallsCore",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/Error\/CallError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 158,
+      "length": 6,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/Error\/CallError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 174,
+      "length": 6,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/Error\/CallError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 190,
+      "length": 4,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/Error\/CallError.swift",
+      "kind": "StringLiteral",
+      "offset": 595,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/Error\/CallError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 834,
+      "length": 12,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallDelegate + Components.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1625,
+      "length": 13,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallDelegate + Components.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1720,
+      "length": 11,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallDelegate + Components.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1841,
+      "length": 13,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallStatusEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 380,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallStatusEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 401,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallStatusEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 422,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallStatusEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 446,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallStatusEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 469,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallStatusEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 495,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallStatusEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 514,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallStatusEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 534,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallStatusEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 557,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallStatusEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 579,
+      "length": 1,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallStatusEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 599,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallStatusEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 619,
+      "length": 2,
+      "value": "11"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallStatusEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 641,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/SIQCallStatusEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1526,
+      "length": 7,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/ZohoSalesIQCallsProtocol.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1933,
+      "length": 8,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/venkat-12517\/Documents\/Woking project\/mobilisten-ios-calls-core\/MobilistenCallsCore\/ZohoSalesIQCallsProtocol.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1951,
+      "length": 4,
+      "value": "2"
+    }
+  ]
+}

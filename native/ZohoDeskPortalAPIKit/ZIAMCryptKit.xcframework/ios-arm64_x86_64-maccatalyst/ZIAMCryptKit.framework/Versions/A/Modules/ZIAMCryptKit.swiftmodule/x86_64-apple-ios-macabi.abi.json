@@ -1,0 +1,4342 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "ZIAMCryptKit",
+    "printedName": "ZIAMCryptKit",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZIAMCryptKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZIAMCryptConstants",
+        "printedName": "ZIAMCryptConstants",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "k_version",
+            "printedName": "k_version",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit0A9ConstantsV9k_versionSSvpZ",
+            "mangledName": "$s12ZIAMCryptKit0A9ConstantsV9k_versionSSvpZ",
+            "moduleName": "ZIAMCryptKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A9ConstantsV9k_versionSSvgZ",
+                "mangledName": "$s12ZIAMCryptKit0A9ConstantsV9k_versionSSvgZ",
+                "moduleName": "ZIAMCryptKit",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ziamAgentHeader",
+            "printedName": "ziamAgentHeader",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit0A9ConstantsV15ziamAgentHeaderSSvpZ",
+            "mangledName": "$s12ZIAMCryptKit0A9ConstantsV15ziamAgentHeaderSSvpZ",
+            "moduleName": "ZIAMCryptKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A9ConstantsV15ziamAgentHeaderSSvgZ",
+                "mangledName": "$s12ZIAMCryptKit0A9ConstantsV15ziamAgentHeaderSSvgZ",
+                "moduleName": "ZIAMCryptKit",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "k_serverPublicKey",
+            "printedName": "k_serverPublicKey",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit0A9ConstantsV17k_serverPublicKeySSvpZ",
+            "mangledName": "$s12ZIAMCryptKit0A9ConstantsV17k_serverPublicKeySSvpZ",
+            "moduleName": "ZIAMCryptKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A9ConstantsV17k_serverPublicKeySSvgZ",
+                "mangledName": "$s12ZIAMCryptKit0A9ConstantsV17k_serverPublicKeySSvgZ",
+                "moduleName": "ZIAMCryptKit",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "k_clientIDExpiry",
+            "printedName": "k_clientIDExpiry",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit0A9ConstantsV16k_clientIDExpirySSvpZ",
+            "mangledName": "$s12ZIAMCryptKit0A9ConstantsV16k_clientIDExpirySSvpZ",
+            "moduleName": "ZIAMCryptKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A9ConstantsV16k_clientIDExpirySSvgZ",
+                "mangledName": "$s12ZIAMCryptKit0A9ConstantsV16k_clientIDExpirySSvgZ",
+                "moduleName": "ZIAMCryptKit",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "k_errorDomain",
+            "printedName": "k_errorDomain",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit0A9ConstantsV13k_errorDomainSSvpZ",
+            "mangledName": "$s12ZIAMCryptKit0A9ConstantsV13k_errorDomainSSvpZ",
+            "moduleName": "ZIAMCryptKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A9ConstantsV13k_errorDomainSSvgZ",
+                "mangledName": "$s12ZIAMCryptKit0A9ConstantsV13k_errorDomainSSvgZ",
+                "moduleName": "ZIAMCryptKit",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "k_handshakeQueue",
+            "printedName": "k_handshakeQueue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit0A9ConstantsV16k_handshakeQueueSSvpZ",
+            "mangledName": "$s12ZIAMCryptKit0A9ConstantsV16k_handshakeQueueSSvpZ",
+            "moduleName": "ZIAMCryptKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A9ConstantsV16k_handshakeQueueSSvgZ",
+                "mangledName": "$s12ZIAMCryptKit0A9ConstantsV16k_handshakeQueueSSvgZ",
+                "moduleName": "ZIAMCryptKit",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12ZIAMCryptKit0A9ConstantsV",
+        "mangledName": "$s12ZIAMCryptKit0A9ConstantsV",
+        "moduleName": "ZIAMCryptKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZIAMCryptKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZIAMRSAUtil",
+        "printedName": "ZIAMRSAUtil",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "keyType",
+            "printedName": "keyType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CFString",
+                "printedName": "CoreFoundation.CFString",
+                "usr": "c:@T@CFStringRef"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC7keyTypeSo11CFStringRefavp",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC7keyTypeSo11CFStringRefavp",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFString",
+                    "printedName": "CoreFoundation.CFString",
+                    "usr": "c:@T@CFStringRef"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC7keyTypeSo11CFStringRefavg",
+                "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC7keyTypeSo11CFStringRefavg",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "keySizeInBits",
+            "printedName": "keySizeInBits",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "AnyObject"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC13keySizeInBitsyXlvp",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC13keySizeInBitsyXlvp",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC13keySizeInBitsyXlvg",
+                "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC13keySizeInBitsyXlvg",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "publicTag",
+            "printedName": "publicTag",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC9publicTag10Foundation4DataVSgvp",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC9publicTag10Foundation4DataVSgvp",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC9publicTag10Foundation4DataVSgvg",
+                "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC9publicTag10Foundation4DataVSgvg",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "privateTag",
+            "printedName": "privateTag",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC10privateTag10Foundation4DataVSgvp",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC10privateTag10Foundation4DataVSgvp",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC10privateTag10Foundation4DataVSgvg",
+                "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC10privateTag10Foundation4DataVSgvg",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "serverPublicTag",
+            "printedName": "serverPublicTag",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC15serverPublicTag10Foundation4DataVSgvp",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC15serverPublicTag10Foundation4DataVSgvp",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC15serverPublicTag10Foundation4DataVSgvg",
+                "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC15serverPublicTag10Foundation4DataVSgvg",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(publicTag:privateTag:serverPublicTag:keyType:keySizeInBits:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZIAMRSAUtil",
+                "printedName": "ZIAMCryptKit.ZIAMRSAUtil",
+                "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CFString",
+                "printedName": "CoreFoundation.CFString",
+                "hasDefaultArg": true,
+                "usr": "c:@T@CFStringRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC9publicTag07privateE0012serverPublicE07keyType0I10SizeInBitsACSS_S2SSo11CFStringRefaSitcfc",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC9publicTag07privateE0012serverPublicE07keyType0I10SizeInBitsACSS_S2SSo11CFStringRefaSitcfc",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "generateKeyPair",
+            "printedName": "generateKeyPair()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZIAMCryptKit.ZIAMCryptError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZIAMCryptError",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptError",
+                    "usr": "s:12ZIAMCryptKit0A5ErrorV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC15generateKeyPairAA0A5ErrorVSgyF",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC15generateKeyPairAA0A5ErrorVSgyF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "saveServerKeyToKeychain",
+            "printedName": "saveServerKeyToKeychain(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC23saveServerKeyToKeychainys5Int32VSSF",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC23saveServerKeyToKeychainys5Int32VSSF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final",
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getServerPublicKeyData",
+            "printedName": "getServerPublicKeyData()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC22getServerPublicKeyData10Foundation0H0VSgyF",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC22getServerPublicKeyData10Foundation0H0VSgyF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getServerPublicKey",
+            "printedName": "getServerPublicKey()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC18getServerPublicKey10Foundation4DataVSgyF",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC18getServerPublicKey10Foundation4DataVSgyF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteOldKeys",
+            "printedName": "deleteOldKeys()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC13deleteOldKeysyyF",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC13deleteOldKeysyyF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPublicKeyForServer",
+            "printedName": "getPublicKeyForServer()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC21getPublicKeyForServerSSSgyF",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC21getPublicKeyForServerSSSgyF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPublicKeyForServer",
+            "printedName": "getPublicKeyForServer(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Security.SecKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecKey",
+                    "printedName": "Security.SecKey",
+                    "usr": "c:@T@SecKeyRef"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC21getPublicKeyForServerySSSo03SecF3RefaSgF",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC21getPublicKeyForServerySSSo03SecF3RefaSgF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPublicKeyForServer",
+            "printedName": "getPublicKeyForServer(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC21getPublicKeyForServerySS10Foundation4DataVSgF",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC21getPublicKeyForServerySS10Foundation4DataVSgF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPrivateKeyFrom",
+            "printedName": "getPrivateKeyFrom(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Security.SecKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecKey",
+                    "printedName": "Security.SecKey",
+                    "usr": "c:@T@SecKeyRef"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC17getPrivateKeyFrom4dataSo03SecF3RefaSg10Foundation4DataV_tF",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC17getPrivateKeyFrom4dataSo03SecF3RefaSg10Foundation4DataV_tF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPublicKeyFrom",
+            "printedName": "getPublicKeyFrom(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Security.SecKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecKey",
+                    "printedName": "Security.SecKey",
+                    "usr": "c:@T@SecKeyRef"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC16getPublicKeyFrom4dataSo03SecF3RefaSg10Foundation4DataV_tF",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC16getPublicKeyFrom4dataSo03SecF3RefaSg10Foundation4DataV_tF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPrivateKeyRef",
+            "printedName": "getPrivateKeyRef()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Security.SecKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecKey",
+                    "printedName": "Security.SecKey",
+                    "usr": "c:@T@SecKeyRef"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC16getPrivateKeyRefSo03SecfG0aSgyF",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC16getPrivateKeyRefSo03SecfG0aSgyF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPublicKeyRef",
+            "printedName": "getPublicKeyRef()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Security.SecKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecKey",
+                    "printedName": "Security.SecKey",
+                    "usr": "c:@T@SecKeyRef"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC15getPublicKeyRefSo03SecfG0aSgyF",
+            "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC15getPublicKeyRefSo03SecfG0aSgyF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12ZIAMCryptKit11ZIAMRSAUtilC",
+        "mangledName": "$s12ZIAMCryptKit11ZIAMRSAUtilC",
+        "moduleName": "ZIAMCryptKit",
+        "declAttributes": [
+          "AccessControl",
+          "Final"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZIAMCryptKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CryptoKit",
+        "printedName": "CryptoKit",
+        "declKind": "Import",
+        "moduleName": "ZIAMCryptKit"
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "ZIAMCryptKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZIAMCrypt",
+        "printedName": "ZIAMCrypt",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(publickeyTag:privatekeyTag:serverPublickeyTag:rsaKeySize:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZIAMCrypt",
+                "printedName": "ZIAMCryptKit.ZIAMCrypt",
+                "usr": "s:12ZIAMCryptKit0A0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12ZIAMCryptKit0A0C12publickeyTag010privatekeyD0015serverPublickeyD010rsaKeySizeACSS_S2SSitcfc",
+            "mangledName": "$s12ZIAMCryptKit0A0C12publickeyTag010privatekeyD0015serverPublickeyD010rsaKeySizeACSS_S2SSitcfc",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "getConfig",
+            "printedName": "getConfig(publickeyTag:privatekeyTag:serverPublickeyTag:rsaKeySize:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZIAMCrypt",
+                "printedName": "ZIAMCryptKit.ZIAMCrypt",
+                "usr": "s:12ZIAMCryptKit0A0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit0A0C9getConfig12publickeyTag010privatekeyF0015serverPublickeyF010rsaKeySizeACSS_S2SSitFZ",
+            "mangledName": "$s12ZIAMCryptKit0A0C9getConfig12publickeyTag010privatekeyF0015serverPublickeyF010rsaKeySizeACSS_S2SSitFZ",
+            "moduleName": "ZIAMCryptKit",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "checkExpiryAndGetEncryptedPayload",
+            "printedName": "checkExpiryAndGetEncryptedPayload(_:baseURL:scope:headers:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(handshakeResponse: Swift.Result<(json: [Swift.String : Any], response: Foundation.URLResponse), ZIAMCryptKit.ZIAMCryptError>?, encryptedPayload: Swift.Result<ZIAMCryptKit.ZPayloadModel, ZIAMCryptKit.ZIAMCryptError>?)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Result<(json: [Swift.String : Any], response: Foundation.URLResponse), ZIAMCryptKit.ZIAMCryptError>?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<(json: [Swift.String : Any], response: Foundation.URLResponse), ZIAMCryptKit.ZIAMCryptError>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(json: [Swift.String : Any], response: Foundation.URLResponse)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Dictionary",
+                                "printedName": "[Swift.String : Any]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "String",
+                                    "printedName": "Swift.String",
+                                    "usr": "s:SS"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "ProtocolComposition",
+                                    "printedName": "Any"
+                                  }
+                                ],
+                                "usr": "s:SD"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "URLResponse",
+                                "printedName": "Foundation.URLResponse",
+                                "usr": "c:objc(cs)NSURLResponse"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ZIAMCryptError",
+                            "printedName": "ZIAMCryptKit.ZIAMCryptError",
+                            "usr": "s:12ZIAMCryptKit0A5ErrorV"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Result<ZIAMCryptKit.ZPayloadModel, ZIAMCryptKit.ZIAMCryptError>?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<ZIAMCryptKit.ZPayloadModel, ZIAMCryptKit.ZIAMCryptError>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ZPayloadModel",
+                            "printedName": "ZIAMCryptKit.ZPayloadModel",
+                            "usr": "s:12ZIAMCryptKit13ZPayloadModelV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ZIAMCryptError",
+                            "printedName": "ZIAMCryptKit.ZIAMCryptError",
+                            "usr": "s:12ZIAMCryptKit0A5ErrorV"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Foundation.Data]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit0A0C33checkExpiryAndGetEncryptedPayload_7baseURL5scope7headerss6ResultOySDySSypG4json_So13NSURLResponseC8responsetAA0A5ErrorVGSg17handshakeResponse_AIyAA13ZPayloadModelVAPGSg09encryptedH0tSDySS10Foundation4DataVG_S2SSDyS2SGSgtYaF",
+            "mangledName": "$s12ZIAMCryptKit0A0C33checkExpiryAndGetEncryptedPayload_7baseURL5scope7headerss6ResultOySDySSypG4json_So13NSURLResponseC8responsetAA0A5ErrorVGSg17handshakeResponse_AIyAA13ZPayloadModelVAPGSg09encryptedH0tSDySS10Foundation4DataVG_S2SSDyS2SGSgtYaF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "checkExpiryAndGetEncryptedPayload",
+            "printedName": "checkExpiryAndGetEncryptedPayload(_:baseURL:scope:headers:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Foundation.Data]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(json: [Swift.String : Any], response: Foundation.URLResponse), ZIAMCryptKit.ZIAMCryptError>?, Swift.Result<ZIAMCryptKit.ZPayloadModel, ZIAMCryptKit.ZIAMCryptError>?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Result<(json: [Swift.String : Any], response: Foundation.URLResponse), ZIAMCryptKit.ZIAMCryptError>?, Swift.Result<ZIAMCryptKit.ZPayloadModel, ZIAMCryptKit.ZIAMCryptError>?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Result<(json: [Swift.String : Any], response: Foundation.URLResponse), ZIAMCryptKit.ZIAMCryptError>?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Result",
+                            "printedName": "Swift.Result<(json: [Swift.String : Any], response: Foundation.URLResponse), ZIAMCryptKit.ZIAMCryptError>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Tuple",
+                                "printedName": "(json: [Swift.String : Any], response: Foundation.URLResponse)",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Dictionary",
+                                    "printedName": "[Swift.String : Any]",
+                                    "children": [
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "String",
+                                        "printedName": "Swift.String",
+                                        "usr": "s:SS"
+                                      },
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "ProtocolComposition",
+                                        "printedName": "Any"
+                                      }
+                                    ],
+                                    "usr": "s:SD"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "URLResponse",
+                                    "printedName": "Foundation.URLResponse",
+                                    "usr": "c:objc(cs)NSURLResponse"
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ZIAMCryptError",
+                                "printedName": "ZIAMCryptKit.ZIAMCryptError",
+                                "usr": "s:12ZIAMCryptKit0A5ErrorV"
+                              }
+                            ],
+                            "usr": "s:s6ResultO"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Result<ZIAMCryptKit.ZPayloadModel, ZIAMCryptKit.ZIAMCryptError>?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Result",
+                            "printedName": "Swift.Result<ZIAMCryptKit.ZPayloadModel, ZIAMCryptKit.ZIAMCryptError>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ZPayloadModel",
+                                "printedName": "ZIAMCryptKit.ZPayloadModel",
+                                "usr": "s:12ZIAMCryptKit13ZPayloadModelV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ZIAMCryptError",
+                                "printedName": "ZIAMCryptKit.ZIAMCryptError",
+                                "usr": "s:12ZIAMCryptKit0A5ErrorV"
+                              }
+                            ],
+                            "usr": "s:s6ResultO"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit0A0C33checkExpiryAndGetEncryptedPayload_7baseURL5scope7headers10completionySDySS10Foundation4DataVG_S2SSDyS2SGSgys6ResultOySDySSypG4json_So13NSURLResponseC8responsetAA0A5ErrorVGSg_APyAA13ZPayloadModelVAWGSgtctF",
+            "mangledName": "$s12ZIAMCryptKit0A0C33checkExpiryAndGetEncryptedPayload_7baseURL5scope7headers10completionySDySS10Foundation4DataVG_S2SSDyS2SGSgys6ResultOySDySSypG4json_So13NSURLResponseC8responsetAA0A5ErrorVGSg_APyAA13ZPayloadModelVAWGSgtctF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getDecryptedPayload",
+            "printedName": "getDecryptedPayload(_:payload:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Result",
+                "printedName": "Swift.Result<Foundation.Data, ZIAMCryptKit.ZIAMCryptError>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZIAMCryptError",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptError",
+                    "usr": "s:12ZIAMCryptKit0A5ErrorV"
+                  }
+                ],
+                "usr": "s:s6ResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit0A0C19getDecryptedPayload_7payloads6ResultOy10Foundation4DataVAA0A5ErrorVGSS_AJtF",
+            "mangledName": "$s12ZIAMCryptKit0A0C19getDecryptedPayload_7payloads6ResultOy10Foundation4DataVAA0A5ErrorVGSS_AJtF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteStoredKeyPair",
+            "printedName": "deleteStoredKeyPair()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit0A0C19deleteStoredKeyPairyyF",
+            "mangledName": "$s12ZIAMCryptKit0A0C19deleteStoredKeyPairyyF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12ZIAMCryptKit0A0C",
+        "mangledName": "$s12ZIAMCryptKit0A0C",
+        "moduleName": "ZIAMCryptKit",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZIAMCryptKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZIAMCryptKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZIAMCryptUtils",
+        "printedName": "ZIAMCryptUtils",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getCurrentTimeMillis",
+            "printedName": "getCurrentTimeMillis()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit0A5UtilsV20getCurrentTimeMilliss5Int64VyFZ",
+            "mangledName": "$s12ZIAMCryptKit0A5UtilsV20getCurrentTimeMilliss5Int64VyFZ",
+            "moduleName": "ZIAMCryptKit",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "appVersion",
+            "printedName": "appVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit0A5UtilsV10appVersionSSvpZ",
+            "mangledName": "$s12ZIAMCryptKit0A5UtilsV10appVersionSSvpZ",
+            "moduleName": "ZIAMCryptKit",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A5UtilsV10appVersionSSvgZ",
+                "mangledName": "$s12ZIAMCryptKit0A5UtilsV10appVersionSSvgZ",
+                "moduleName": "ZIAMCryptKit",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "appBuild",
+            "printedName": "appBuild",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit0A5UtilsV8appBuildSSvpZ",
+            "mangledName": "$s12ZIAMCryptKit0A5UtilsV8appBuildSSvpZ",
+            "moduleName": "ZIAMCryptKit",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A5UtilsV8appBuildSSvgZ",
+                "mangledName": "$s12ZIAMCryptKit0A5UtilsV8appBuildSSvgZ",
+                "moduleName": "ZIAMCryptKit",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "appBundleID",
+            "printedName": "appBundleID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit0A5UtilsV11appBundleIDSSvpZ",
+            "mangledName": "$s12ZIAMCryptKit0A5UtilsV11appBundleIDSSvpZ",
+            "moduleName": "ZIAMCryptKit",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A5UtilsV11appBundleIDSSvgZ",
+                "mangledName": "$s12ZIAMCryptKit0A5UtilsV11appBundleIDSSvgZ",
+                "moduleName": "ZIAMCryptKit",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "deviceName",
+            "printedName": "deviceName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit0A5UtilsV10deviceNameSSvpZ",
+            "mangledName": "$s12ZIAMCryptKit0A5UtilsV10deviceNameSSvpZ",
+            "moduleName": "ZIAMCryptKit",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A5UtilsV10deviceNameSSvgZ",
+                "mangledName": "$s12ZIAMCryptKit0A5UtilsV10deviceNameSSvgZ",
+                "moduleName": "ZIAMCryptKit",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12ZIAMCryptKit0A5UtilsV",
+        "mangledName": "$s12ZIAMCryptKit0A5UtilsV",
+        "moduleName": "ZIAMCryptKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZIAMCryptDictKeys",
+        "printedName": "ZIAMCryptDictKeys",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "queryparam",
+            "printedName": "queryparam",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZIAMCryptKit.ZIAMCryptDictKeys.Type) -> ZIAMCryptKit.ZIAMCryptDictKeys",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZIAMCryptDictKeys",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptDictKeys",
+                    "usr": "s:12ZIAMCryptKit0A8DictKeysO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptDictKeys.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZIAMCryptDictKeys",
+                        "printedName": "ZIAMCryptKit.ZIAMCryptDictKeys",
+                        "usr": "s:12ZIAMCryptKit0A8DictKeysO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12ZIAMCryptKit0A8DictKeysO10queryparamyA2CmF",
+            "mangledName": "$s12ZIAMCryptKit0A8DictKeysO10queryparamyA2CmF",
+            "moduleName": "ZIAMCryptKit"
+          },
+          {
+            "kind": "Var",
+            "name": "paylaod",
+            "printedName": "paylaod",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZIAMCryptKit.ZIAMCryptDictKeys.Type) -> ZIAMCryptKit.ZIAMCryptDictKeys",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZIAMCryptDictKeys",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptDictKeys",
+                    "usr": "s:12ZIAMCryptKit0A8DictKeysO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptDictKeys.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZIAMCryptDictKeys",
+                        "printedName": "ZIAMCryptKit.ZIAMCryptDictKeys",
+                        "usr": "s:12ZIAMCryptKit0A8DictKeysO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12ZIAMCryptKit0A8DictKeysO7paylaodyA2CmF",
+            "mangledName": "$s12ZIAMCryptKit0A8DictKeysO7paylaodyA2CmF",
+            "moduleName": "ZIAMCryptKit"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZIAMCryptKit.ZIAMCryptDictKeys?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZIAMCryptDictKeys",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptDictKeys",
+                    "usr": "s:12ZIAMCryptKit0A8DictKeysO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12ZIAMCryptKit0A8DictKeysO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12ZIAMCryptKit0A8DictKeysO8rawValueACSgSS_tcfc",
+            "moduleName": "ZIAMCryptKit",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit0A8DictKeysO8rawValueSSvp",
+            "mangledName": "$s12ZIAMCryptKit0A8DictKeysO8rawValueSSvp",
+            "moduleName": "ZIAMCryptKit",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A8DictKeysO8rawValueSSvg",
+                "mangledName": "$s12ZIAMCryptKit0A8DictKeysO8rawValueSSvg",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12ZIAMCryptKit0A8DictKeysO",
+        "mangledName": "$s12ZIAMCryptKit0A8DictKeysO",
+        "moduleName": "ZIAMCryptKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZIAMCryptKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZIAMCryptKit"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZIAMCryptKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZIAMCryptKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZPayloadModel",
+        "printedName": "ZPayloadModel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "content",
+            "printedName": "content",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String?]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String?]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit13ZPayloadModelV7contentSDyS2SSgGSgvp",
+            "mangledName": "$s12ZIAMCryptKit13ZPayloadModelV7contentSDyS2SSgGSgvp",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Swift.String?]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Swift.String?]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit13ZPayloadModelV7contentSDyS2SSgGSgvg",
+                "mangledName": "$s12ZIAMCryptKit13ZPayloadModelV7contentSDyS2SSgGSgvg",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "header",
+            "printedName": "header",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit13ZPayloadModelV6headerSSvp",
+            "mangledName": "$s12ZIAMCryptKit13ZPayloadModelV6headerSSvp",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit13ZPayloadModelV6headerSSvg",
+                "mangledName": "$s12ZIAMCryptKit13ZPayloadModelV6headerSSvg",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(content:header:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZPayloadModel",
+                "printedName": "ZIAMCryptKit.ZPayloadModel",
+                "usr": "s:12ZIAMCryptKit13ZPayloadModelV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12ZIAMCryptKit13ZPayloadModelV7content6headerACSDyS2SSgG_SStcfc",
+            "mangledName": "$s12ZIAMCryptKit13ZPayloadModelV7content6headerACSDyS2SSgG_SStcfc",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12ZIAMCryptKit13ZPayloadModelV",
+        "mangledName": "$s12ZIAMCryptKit13ZPayloadModelV",
+        "moduleName": "ZIAMCryptKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZIAMCryptKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZIAMCryptError",
+        "printedName": "ZIAMCryptError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "domain",
+            "printedName": "domain",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit0A5ErrorV6domainSSvp",
+            "mangledName": "$s12ZIAMCryptKit0A5ErrorV6domainSSvp",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A5ErrorV6domainSSvg",
+                "mangledName": "$s12ZIAMCryptKit0A5ErrorV6domainSSvg",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A5ErrorV6domainSSvs",
+                "mangledName": "$s12ZIAMCryptKit0A5ErrorV6domainSSvs",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A5ErrorV6domainSSvM",
+                "mangledName": "$s12ZIAMCryptKit0A5ErrorV6domainSSvM",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "code",
+            "printedName": "code",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZIAMCryptErrorStatus",
+                "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit0A5ErrorV4codeAA0aC6StatusOvp",
+            "mangledName": "$s12ZIAMCryptKit0A5ErrorV4codeAA0aC6StatusOvp",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZIAMCryptErrorStatus",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                    "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A5ErrorV4codeAA0aC6StatusOvg",
+                "mangledName": "$s12ZIAMCryptKit0A5ErrorV4codeAA0aC6StatusOvg",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZIAMCryptErrorStatus",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                    "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A5ErrorV4codeAA0aC6StatusOvs",
+                "mangledName": "$s12ZIAMCryptKit0A5ErrorV4codeAA0aC6StatusOvs",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A5ErrorV4codeAA0aC6StatusOvM",
+                "mangledName": "$s12ZIAMCryptKit0A5ErrorV4codeAA0aC6StatusOvM",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorInfo",
+            "printedName": "errorInfo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit0A5ErrorV9errorInfoSDySSypGSgvp",
+            "mangledName": "$s12ZIAMCryptKit0A5ErrorV9errorInfoSDySSypGSgvp",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A5ErrorV9errorInfoSDySSypGSgvg",
+                "mangledName": "$s12ZIAMCryptKit0A5ErrorV9errorInfoSDySSypGSgvg",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A5ErrorV9errorInfoSDySSypGSgvs",
+                "mangledName": "$s12ZIAMCryptKit0A5ErrorV9errorInfoSDySSypGSgvs",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A5ErrorV9errorInfoSDySSypGSgvM",
+                "mangledName": "$s12ZIAMCryptKit0A5ErrorV9errorInfoSDySSypGSgvM",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(domain:code:errorInfo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZIAMCryptError",
+                "printedName": "ZIAMCryptKit.ZIAMCryptError",
+                "usr": "s:12ZIAMCryptKit0A5ErrorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZIAMCryptErrorStatus",
+                "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12ZIAMCryptKit0A5ErrorV6domain4code9errorInfoACSS_AA0aC6StatusOSDySSypGSgtcfc",
+            "mangledName": "$s12ZIAMCryptKit0A5ErrorV6domain4code9errorInfoACSS_AA0aC6StatusOSDySSypGSgtcfc",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(domain:code:desc:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZIAMCryptError",
+                "printedName": "ZIAMCryptKit.ZIAMCryptError",
+                "usr": "s:12ZIAMCryptKit0A5ErrorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZIAMCryptErrorStatus",
+                "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12ZIAMCryptKit0A5ErrorV6domain4code4descACSS_AA0aC6StatusOSSSgtcfc",
+            "mangledName": "$s12ZIAMCryptKit0A5ErrorV6domain4code4descACSS_AA0aC6StatusOSSSgtcfc",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12ZIAMCryptKit0A5ErrorV",
+        "mangledName": "$s12ZIAMCryptKit0A5ErrorV",
+        "moduleName": "ZIAMCryptKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZIAMCryptErrorStatus",
+        "printedName": "ZIAMCryptErrorStatus",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "keychainError",
+            "printedName": "keychainError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZIAMCryptKit.ZIAMCryptErrorStatus.Type) -> ZIAMCryptKit.ZIAMCryptErrorStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZIAMCryptErrorStatus",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                    "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZIAMCryptErrorStatus",
+                        "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                        "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12ZIAMCryptKit0A11ErrorStatusO08keychainC0yA2CmF",
+            "mangledName": "$s12ZIAMCryptKit0A11ErrorStatusO08keychainC0yA2CmF",
+            "moduleName": "ZIAMCryptKit"
+          },
+          {
+            "kind": "Var",
+            "name": "oldEncryptionKeyNotExpired",
+            "printedName": "oldEncryptionKeyNotExpired",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZIAMCryptKit.ZIAMCryptErrorStatus.Type) -> ZIAMCryptKit.ZIAMCryptErrorStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZIAMCryptErrorStatus",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                    "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZIAMCryptErrorStatus",
+                        "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                        "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12ZIAMCryptKit0A11ErrorStatusO26oldEncryptionKeyNotExpiredyA2CmF",
+            "mangledName": "$s12ZIAMCryptKit0A11ErrorStatusO26oldEncryptionKeyNotExpiredyA2CmF",
+            "moduleName": "ZIAMCryptKit"
+          },
+          {
+            "kind": "Var",
+            "name": "apiError",
+            "printedName": "apiError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZIAMCryptKit.ZIAMCryptErrorStatus.Type) -> ZIAMCryptKit.ZIAMCryptErrorStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZIAMCryptErrorStatus",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                    "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZIAMCryptErrorStatus",
+                        "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                        "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12ZIAMCryptKit0A11ErrorStatusO03apiC0yA2CmF",
+            "mangledName": "$s12ZIAMCryptKit0A11ErrorStatusO03apiC0yA2CmF",
+            "moduleName": "ZIAMCryptKit"
+          },
+          {
+            "kind": "Var",
+            "name": "encryptionError",
+            "printedName": "encryptionError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZIAMCryptKit.ZIAMCryptErrorStatus.Type) -> ZIAMCryptKit.ZIAMCryptErrorStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZIAMCryptErrorStatus",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                    "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZIAMCryptErrorStatus",
+                        "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                        "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12ZIAMCryptKit0A11ErrorStatusO010encryptionC0yA2CmF",
+            "mangledName": "$s12ZIAMCryptKit0A11ErrorStatusO010encryptionC0yA2CmF",
+            "moduleName": "ZIAMCryptKit"
+          },
+          {
+            "kind": "Var",
+            "name": "decryptionError",
+            "printedName": "decryptionError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZIAMCryptKit.ZIAMCryptErrorStatus.Type) -> ZIAMCryptKit.ZIAMCryptErrorStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZIAMCryptErrorStatus",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                    "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZIAMCryptErrorStatus",
+                        "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                        "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12ZIAMCryptKit0A11ErrorStatusO010decryptionC0yA2CmF",
+            "mangledName": "$s12ZIAMCryptKit0A11ErrorStatusO010decryptionC0yA2CmF",
+            "moduleName": "ZIAMCryptKit"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZIAMCryptErrorStatus",
+                "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZIAMCryptErrorStatus",
+                "printedName": "ZIAMCryptKit.ZIAMCryptErrorStatus",
+                "usr": "s:12ZIAMCryptKit0A11ErrorStatusO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit0A11ErrorStatusO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12ZIAMCryptKit0A11ErrorStatusO2eeoiySbAC_ACtFZ",
+            "moduleName": "ZIAMCryptKit",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZIAMCryptKit0A11ErrorStatusO9hashValueSivp",
+            "mangledName": "$s12ZIAMCryptKit0A11ErrorStatusO9hashValueSivp",
+            "moduleName": "ZIAMCryptKit",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZIAMCryptKit0A11ErrorStatusO9hashValueSivg",
+                "mangledName": "$s12ZIAMCryptKit0A11ErrorStatusO9hashValueSivg",
+                "moduleName": "ZIAMCryptKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZIAMCryptKit0A11ErrorStatusO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s12ZIAMCryptKit0A11ErrorStatusO4hash4intoys6HasherVz_tF",
+            "moduleName": "ZIAMCryptKit",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12ZIAMCryptKit0A11ErrorStatusO",
+        "mangledName": "$s12ZIAMCryptKit0A11ErrorStatusO",
+        "moduleName": "ZIAMCryptKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Dictionary",
+        "printedName": "Dictionary",
+        "children": [
+          {
+            "kind": "Subscript",
+            "name": "subscript",
+            "printedName": "subscript(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_1?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZIAMCryptDictKeys",
+                "printedName": "ZIAMCryptKit.ZIAMCryptDictKeys",
+                "usr": "s:12ZIAMCryptKit0A8DictKeysO"
+              }
+            ],
+            "declKind": "Subscript",
+            "usr": "s:SD12ZIAMCryptKitSSRszrlEyq_SgAA0A8DictKeysOcip",
+            "mangledName": "$sSD12ZIAMCryptKitSSRszrlEyq_SgAA0A8DictKeysOcip",
+            "moduleName": "ZIAMCryptKit",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 == Swift.String>",
+            "sugared_genericSig": "<Key, Value where Key == Swift.String>",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_0_1?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_1"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZIAMCryptDictKeys",
+                    "printedName": "ZIAMCryptKit.ZIAMCryptDictKeys",
+                    "usr": "s:12ZIAMCryptKit0A8DictKeysO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:SD12ZIAMCryptKitSSRszrlEyq_SgAA0A8DictKeysOcig",
+                "mangledName": "$sSD12ZIAMCryptKitSSRszrlEyq_SgAA0A8DictKeysOcig",
+                "moduleName": "ZIAMCryptKit",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 == Swift.String>",
+                "sugared_genericSig": "<Key, Value where Key == Swift.String>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Subscript",
+            "name": "subscript",
+            "printedName": "subscript(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_1?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              }
+            ],
+            "declKind": "Subscript",
+            "usr": "s:SD12ZIAMCryptKitSSRszrlEyq_Sgqd__cSYRd__SS8RawValueRtd__luip",
+            "mangledName": "$sSD12ZIAMCryptKitSSRszrlEyq_Sgqd__cSYRd__SS8RawValueRtd__luip",
+            "moduleName": "ZIAMCryptKit",
+            "genericSig": "<τ_0_0, τ_0_1, τ_1_0 where τ_0_0 == Swift.String, τ_1_0 : Swift.RawRepresentable, τ_1_0.RawValue == Swift.String>",
+            "sugared_genericSig": "<Key, Value, Enum where Key == Swift.String, Enum : Swift.RawRepresentable, Enum.RawValue == Swift.String>",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_0_1?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_1"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:SD12ZIAMCryptKitSSRszrlEyq_Sgqd__cSYRd__SS8RawValueRtd__luig",
+                "mangledName": "$sSD12ZIAMCryptKitSSRszrlEyq_Sgqd__cSYRd__SS8RawValueRtd__luig",
+                "moduleName": "ZIAMCryptKit",
+                "genericSig": "<τ_0_0, τ_0_1, τ_1_0 where τ_0_0 == Swift.String, τ_1_0 : Swift.RawRepresentable, τ_1_0.RawValue == Swift.String>",
+                "sugared_genericSig": "<Key, Value, Enum where Key == Swift.String, Enum : Swift.RawRepresentable, Enum.RawValue == Swift.String>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:SD",
+        "mangledName": "$sSD",
+        "moduleName": "Swift",
+        "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable>",
+        "sugared_genericSig": "<Key, Value where Key : Swift.Hashable>",
+        "declAttributes": [
+          "EagerMove",
+          "Frozen"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sequence",
+            "printedName": "Sequence",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(key: τ_0_0, value: τ_0_1)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "Swift.Dictionary<τ_0_0, τ_0_1>.Iterator",
+                    "usr": "s:SD8IteratorV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:ST",
+            "mangledName": "$sST"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Collection",
+            "printedName": "Collection",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(key: τ_0_0, value: τ_0_1)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Index",
+                "printedName": "Index",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Index",
+                    "printedName": "Swift.Dictionary<τ_0_0, τ_0_1>.Index",
+                    "usr": "s:SD5IndexV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "Swift.Dictionary<τ_0_0, τ_0_1>.Iterator",
+                    "usr": "s:SD8IteratorV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Slice",
+                    "printedName": "Swift.Slice<[τ_0_0 : τ_0_1]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[τ_0_0 : τ_0_1]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_1"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:s5SliceV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Indices",
+                "printedName": "Indices",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultIndices",
+                    "printedName": "Swift.DefaultIndices<[τ_0_0 : τ_0_1]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[τ_0_0 : τ_0_1]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_1"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:SI"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sl",
+            "mangledName": "$sSl"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByDictionaryLiteral",
+            "printedName": "ExpressibleByDictionaryLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Key",
+                "printedName": "Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Value",
+                "printedName": "Value",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s30ExpressibleByDictionaryLiteralP",
+            "mangledName": "$ss30ExpressibleByDictionaryLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_HasCustomAnyHashableRepresentation",
+            "printedName": "_HasCustomAnyHashableRepresentation",
+            "usr": "s:s35_HasCustomAnyHashableRepresentationP",
+            "mangledName": "$ss35_HasCustomAnyHashableRepresentationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSDictionary",
+                    "printedName": "Foundation.NSDictionary",
+                    "usr": "c:objc(cs)NSDictionary"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "String",
+        "printedName": "String",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getEncodedString",
+            "printedName": "getEncodedString()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:SS12ZIAMCryptKitE16getEncodedStringSSSgyF",
+            "mangledName": "$sSS12ZIAMCryptKitE16getEncodedStringSSSgyF",
+            "moduleName": "ZIAMCryptKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:SS",
+        "mangledName": "$sSS",
+        "moduleName": "Swift",
+        "declAttributes": [
+          "EagerMove",
+          "Frozen"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CodingKeyRepresentable",
+            "printedName": "CodingKeyRepresentable",
+            "usr": "s:s22CodingKeyRepresentableP",
+            "mangledName": "$ss22CodingKeyRepresentableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_HasContiguousBytes",
+            "printedName": "_HasContiguousBytes",
+            "usr": "s:s19_HasContiguousBytesP",
+            "mangledName": "$ss19_HasContiguousBytesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_CustomPlaygroundQuickLookable",
+            "printedName": "_CustomPlaygroundQuickLookable",
+            "usr": "s:s30_CustomPlaygroundQuickLookableP",
+            "mangledName": "$ss30_CustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "TextOutputStream",
+            "printedName": "TextOutputStream",
+            "usr": "s:s16TextOutputStreamP",
+            "mangledName": "$ss16TextOutputStreamP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "TextOutputStreamable",
+            "printedName": "TextOutputStreamable",
+            "usr": "s:s20TextOutputStreamableP",
+            "mangledName": "$ss20TextOutputStreamableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByBuiltinUnicodeScalarLiteral",
+            "printedName": "_ExpressibleByBuiltinUnicodeScalarLiteral",
+            "usr": "s:s41_ExpressibleByBuiltinUnicodeScalarLiteralP",
+            "mangledName": "$ss41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByBuiltinExtendedGraphemeClusterLiteral",
+            "printedName": "_ExpressibleByBuiltinExtendedGraphemeClusterLiteral",
+            "usr": "s:s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP",
+            "mangledName": "$ss51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByBuiltinStringLiteral",
+            "printedName": "_ExpressibleByBuiltinStringLiteral",
+            "usr": "s:s34_ExpressibleByBuiltinStringLiteralP",
+            "mangledName": "$ss34_ExpressibleByBuiltinStringLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByStringLiteral",
+            "printedName": "ExpressibleByStringLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "StringLiteralType",
+                "printedName": "StringLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s26ExpressibleByStringLiteralP",
+            "mangledName": "$ss26ExpressibleByStringLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "printedName": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ExtendedGraphemeClusterLiteralType",
+                "printedName": "ExtendedGraphemeClusterLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s43ExpressibleByExtendedGraphemeClusterLiteralP",
+            "mangledName": "$ss43ExpressibleByExtendedGraphemeClusterLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByUnicodeScalarLiteral",
+            "printedName": "ExpressibleByUnicodeScalarLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UnicodeScalarLiteralType",
+                "printedName": "UnicodeScalarLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
+            "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BidirectionalCollection",
+            "printedName": "BidirectionalCollection",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Character",
+                    "printedName": "Swift.Character",
+                    "usr": "s:SJ"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Index",
+                "printedName": "Index",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Index",
+                    "printedName": "Swift.String.Index",
+                    "usr": "s:SS5IndexV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Substring",
+                    "printedName": "Swift.Substring",
+                    "usr": "s:Ss"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Indices",
+                "printedName": "Indices",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultIndices",
+                    "printedName": "Swift.DefaultIndices<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SI"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SK",
+            "mangledName": "$sSK"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Collection",
+            "printedName": "Collection",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Character",
+                    "printedName": "Swift.Character",
+                    "usr": "s:SJ"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Index",
+                "printedName": "Index",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Index",
+                    "printedName": "Swift.String.Index",
+                    "usr": "s:SS5IndexV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "Swift.String.Iterator",
+                    "usr": "s:SS8IteratorV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Substring",
+                    "printedName": "Swift.Substring",
+                    "usr": "s:Ss"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Indices",
+                "printedName": "Indices",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultIndices",
+                    "printedName": "Swift.DefaultIndices<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SI"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sl",
+            "mangledName": "$sSl"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sequence",
+            "printedName": "Sequence",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Character",
+                    "printedName": "Swift.Character",
+                    "usr": "s:SJ"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "Swift.String.Iterator",
+                    "usr": "s:SS8IteratorV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:ST",
+            "mangledName": "$sST"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Comparable",
+            "printedName": "Comparable",
+            "usr": "s:SL",
+            "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "StringProtocol",
+            "printedName": "StringProtocol",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UTF8View",
+                "printedName": "UTF8View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UTF8View",
+                    "printedName": "Swift.String.UTF8View",
+                    "usr": "s:SS8UTF8ViewV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "UTF16View",
+                "printedName": "UTF16View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UTF16View",
+                    "printedName": "Swift.String.UTF16View",
+                    "usr": "s:SS9UTF16ViewV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "UnicodeScalarView",
+                "printedName": "UnicodeScalarView",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UnicodeScalarView",
+                    "printedName": "Swift.String.UnicodeScalarView",
+                    "usr": "s:SS17UnicodeScalarViewV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Substring",
+                    "printedName": "Swift.Substring",
+                    "usr": "s:Ss"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sy",
+            "mangledName": "$sSy"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByStringInterpolation",
+            "printedName": "ExpressibleByStringInterpolation",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "StringInterpolation",
+                "printedName": "StringInterpolation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultStringInterpolation",
+                    "printedName": "Swift.DefaultStringInterpolation",
+                    "usr": "s:s26DefaultStringInterpolationV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s32ExpressibleByStringInterpolationP",
+            "mangledName": "$ss32ExpressibleByStringInterpolationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LosslessStringConvertible",
+            "printedName": "LosslessStringConvertible",
+            "usr": "s:s25LosslessStringConvertibleP",
+            "mangledName": "$ss25LosslessStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RangeReplaceableCollection",
+            "printedName": "RangeReplaceableCollection",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Substring",
+                    "printedName": "Swift.Substring",
+                    "usr": "s:Ss"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sm",
+            "mangledName": "$sSm"
+          },
+          {
+            "kind": "Conformance",
+            "name": "MirrorPath",
+            "printedName": "MirrorPath",
+            "usr": "s:s10MirrorPathP",
+            "mangledName": "$ss10MirrorPathP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSString",
+                    "printedName": "Foundation.NSString",
+                    "usr": "c:objc(cs)NSString"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/Aug_14_2025\/ZIAMCrypt\/11285878\/MACSRC\/native\/Sources\/ZIAMCrypt\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 225,
+      "length": 7,
+      "value": "\"0.1.2\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/Aug_14_2025\/ZIAMCrypt\/11285878\/MACSRC\/native\/Sources\/ZIAMCrypt\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 278,
+      "length": 19,
+      "value": "\"X-ZIAMCrypt-Agent\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/Aug_14_2025\/ZIAMCrypt\/11285878\/MACSRC\/native\/Sources\/ZIAMCrypt\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 345,
+      "length": 19,
+      "value": "\"server-public-key\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/Aug_14_2025\/ZIAMCrypt\/11285878\/MACSRC\/native\/Sources\/ZIAMCrypt\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 406,
+      "length": 18,
+      "value": "\"client-id-expiry\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/Aug_14_2025\/ZIAMCrypt\/11285878\/MACSRC\/native\/Sources\/ZIAMCrypt\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 468,
+      "length": 20,
+      "value": "\"com.zoho.ziamcrypt\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/Aug_14_2025\/ZIAMCrypt\/11285878\/MACSRC\/native\/Sources\/ZIAMCrypt\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 535,
+      "length": 36,
+      "value": "\"com.zoho.ziamcrypt.handshake.queue\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/Aug_14_2025\/ZIAMCrypt\/11285878\/MACSRC\/native\/Sources\/ZIAMCrypt\/ZIAMRSAUtil.swift",
+      "kind": "IntegerLiteral",
+      "offset": 658,
+      "length": 4,
+      "value": "2048"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/Aug_14_2025\/ZIAMCrypt\/11285878\/MACSRC\/native\/Sources\/ZIAMCrypt\/ZIAMCrypt.swift",
+      "kind": "IntegerLiteral",
+      "offset": 523,
+      "length": 4,
+      "value": "2048"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/Aug_14_2025\/ZIAMCrypt\/11285878\/MACSRC\/native\/Sources\/ZIAMCrypt\/ZIAMCrypt.swift",
+      "kind": "IntegerLiteral",
+      "offset": 788,
+      "length": 4,
+      "value": "2048"
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/Aug_14_2025\/ZIAMCrypt\/11285878\/MACSRC\/native\/Sources\/ZIAMCrypt\/ZIAMCrypt.swift",
+      "kind": "StringLiteral",
+      "offset": 2074,
+      "length": 5,
+      "value": "\"org\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/Aug_14_2025\/ZIAMCrypt\/11285878\/MACSRC\/native\/Sources\/ZIAMCrypt\/ZIAMCrypt.swift",
+      "kind": "StringLiteral",
+      "offset": 2915,
+      "length": 5,
+      "value": "\"org\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/Aug_14_2025\/ZIAMCrypt\/11285878\/MACSRC\/native\/Sources\/ZIAMCrypt\/ZIAMCrypt.swift",
+      "kind": "StringLiteral",
+      "offset": 5651,
+      "length": 5,
+      "value": "\"org\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/Aug_14_2025\/ZIAMCrypt\/11285878\/MACSRC\/native\/Sources\/ZIAMCrypt\/ZIAMCrypt+Handshake.swift",
+      "kind": "StringLiteral",
+      "offset": 485,
+      "length": 5,
+      "value": "\"org\""
+    },
+    {
+      "filePath": "\/Users\/macbuild\/WH_DIR\/Aug_14_2025\/ZIAMCrypt\/11285878\/MACSRC\/native\/Sources\/ZIAMCrypt\/ZIAMCrypt+Handshake.swift",
+      "kind": "StringLiteral",
+      "offset": 5001,
+      "length": 5,
+      "value": "\"org\""
+    }
+  ]
+}

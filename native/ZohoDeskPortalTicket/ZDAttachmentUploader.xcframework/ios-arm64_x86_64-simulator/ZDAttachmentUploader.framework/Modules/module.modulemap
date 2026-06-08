@@ -1,0 +1,6 @@
+framework module ZDAttachmentUploader {
+  umbrella header "ZDAttachmentUploader.h"
+  export *
+
+  module * { export * }
+}

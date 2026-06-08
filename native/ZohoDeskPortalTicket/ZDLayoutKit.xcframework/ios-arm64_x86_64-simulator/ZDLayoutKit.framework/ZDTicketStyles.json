@@ -1,0 +1,411 @@
+{
+    "lightColors": [
+        {
+            "color_uid": "ThemeColor",
+            "r": 26,
+            "g": 112,
+            "b": 99,
+            "a": 1
+        },
+        {
+            "color_uid": "BGColor",
+            "r": 246,
+            "g": 248,
+            "b": 251,
+            "a": 1
+        },
+        {
+            "color_uid": "BGColorOpaced",
+            "r": 27,
+            "g": 33,
+            "b": 43,
+            "a": 0.7
+        },
+        
+        {
+            "color_uid": "WidgetColor",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "HeaderColor",
+            "r": 26,
+            "g": 112,
+            "b": 99,
+            "a": 1
+        },
+        {
+            "color_uid": "PrimaryText",
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 1
+        },
+        {
+            "color_uid": "SecondaryText",
+            "r": 63,
+            "g": 76,
+            "b": 94,
+            "a": 1
+        },
+        
+        {
+            "color_uid": "IconColor",
+            "r": 100,
+            "g": 113,
+            "b": 150,
+            "a": 1
+        },
+        
+        {
+            "color_uid": "SeparatorColor",
+            "r": 235,
+            "g": 238,
+            "b": 243,
+            "a": 1
+        },
+        
+       
+        {
+            "color_uid": "Red",
+            "r": 222,
+            "g": 53,
+            "b": 53,
+            "a": 1
+        },
+        {
+            "color_uid": "Green",
+            "r": 6,
+            "g": 137,
+            "b": 52,
+            "a": 1
+        },
+        
+        {
+            "color_uid": "White",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "NavTitleColor",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "BarButtonColor",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+        },
+       
+        
+        {
+            "color_uid": "SelectedColor",
+            "r": 241,
+            "g": 247,
+            "b": 254,
+            "a": 1
+        },{
+            "color_uid": "FieldBorderColor",
+            "r": 184,
+            "g": 196,
+            "b": 209,
+            "a": 1
+        },{
+            "color_uid": "FieldDisabledColor",
+            "r": 235,
+            "g": 238,
+            "b": 243,
+            "a": 1
+        },{
+            "color_uid": "ClearColor",
+            "r_uid": "Clear Color",
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0
+        }
+    ],
+    "darkColors": [
+        {
+            "color_uid": "ThemeColor",
+            "r": 26,
+            "g": 112,
+            "b": 99,
+            "a": 1
+        },
+        {
+            "color_uid": "BGColor",
+            "r": 27,
+            "g": 33,
+            "b": 43,
+            "a": 1
+        },
+        {
+            "color_uid": "BGColorOpaced",
+            "r": 246,
+            "g": 248,
+            "b": 251,
+            "a": 0.3
+        },
+        {
+            "color_uid": "WidgetColor",
+            "r": 35,
+            "g": 43,
+            "b": 56,
+            "a": 1
+        },
+        {
+            "color_uid": "HeaderColor",
+            "r": 26,
+            "g": 112,
+            "b": 99,
+            "a": 1
+        },
+        {
+            "color_uid": "PrimaryText",
+            "r": 226,
+            "g": 228,
+            "b": 230,
+            "a": 1
+        },
+        {
+            "color_uid": "SecondaryText",
+            "r": 168,
+            "g": 176,
+            "b": 189,
+            "a": 1
+        },
+        
+        {
+            "color_uid": "IconColor",
+            "r": 168,
+            "g": 176,
+            "b": 189,
+            "a": 1
+        },
+        
+        {
+            "color_uid": "SeparatorColor",
+            "r": 45,
+            "g": 55,
+            "b": 72,
+            "a": 1
+        },
+       
+        
+        {
+            "color_uid": "Red",
+            "r": 255,
+            "g": 107,
+            "b": 107,
+            "a": 1
+        },
+       
+        {
+            "color_uid": "Green",
+            "r": 74,
+            "g": 192,
+            "b": 100,
+            "a": 1
+        },
+       
+        {
+            "color_uid": "White",
+            "r_uid": "White",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "NavTitleColor",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+        },
+        {
+            "color_uid": "BarButtonColor",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+        },
+        
+       
+       
+        {
+            "color_uid": "SelectedColor",
+            "r": 44,
+            "g": 59,
+            "b": 77,
+            "a": 1
+        },{
+            "color_uid": "FieldBorderColor",
+            "r": 70,
+            "g": 81,
+            "b": 100,
+            "a": 1
+        },{
+            "color_uid": "FieldDisabledColor",
+            "r": 45,
+            "g": 55,
+            "b": 72,
+            "a": 1
+        },{
+            "color_uid": "ClearColor",
+            "r_uid": "Clear Color",
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0
+        }
+    ],
+    "fontStyles": [
+        {
+            "fontStyle_uid": "sf-semibold-22",
+            "font_name": "custom",
+            "font_size": 22,
+            "font_weight": "semibold"
+        },
+        {
+            "fontStyle_uid": "sf-semibold-20",
+            "font_name": "custom",
+            "font_size": 20,
+            "font_weight": "semibold"
+        },
+        {
+            "fontStyle_uid": "sf-semibold-18",
+            "font_name": "custom",
+            "font_size": 18,
+            "font_weight": "semibold"
+        },
+        {
+            "fontStyle_uid": "sf-semibold-12",
+            "font_name": "custom",
+            "font_size": 12,
+            "font_weight": "semibold"
+        },
+        {
+            "fontStyle_uid": "sf-semibold-17",
+            "font_name": "custom",
+            "font_size": 17,
+            "font_weight": "semibold"
+        },
+        {
+            "fontStyle_uid": "sf-medium-17",
+            "font_name": "custom",
+            "font_size": 17,
+            "font_weight": "medium"
+        },
+        {
+            "fontStyle_uid": "sf-semibold-16",
+            "font_name": "custom",
+            "font_size": 16,
+            "font_weight": "semibold"
+        },
+        {
+            "fontStyle_uid": "sf-medium-16",
+            "font_name": "custom",
+            "font_size": 16,
+            "font_weight": "medium"
+        },
+        {
+            "fontStyle_uid": "sf-semibold-15",
+            "font_name": "custom",
+            "font_size": 15,
+            "font_weight": "semibold"
+        },
+        {
+            "fontStyle_uid": "sf-medium-15",
+            "font_name": "custom",
+            "font_size": 15,
+            "font_weight": "medium"
+        },
+        {
+            "fontStyle_uid": "sf-regular-17",
+            "font_name": "custom",
+            "font_size": 17,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "sf-regular-15",
+            "font_name": "custom",
+            "font_size": 15,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "sf-bold-15",
+            "font_name": "custom",
+            "font_size": 15,
+            "font_weight": "bold"
+        },
+        {
+            "fontStyle_uid": "sf-semibold-14",
+            "font_name":"custom",
+            "font_size":14,
+            "font_weight":"semibold"
+        },
+        {
+            "fontStyle_uid": "sf-regular-14",
+            "font_name": "custom",
+            "font_size": 14,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "sf-medium-14",
+            "font_name": "custom",
+            "font_size": 14,
+            "font_weight": "medium"
+        },
+        {
+            "fontStyle_uid": "sf-semibold-13",
+            "font_name": "custom",
+            "font_size": 13,
+            "font_weight": "semibold"
+        },
+        {
+            "fontStyle_uid": "sf-medium-13",
+            "font_name": "custom",
+            "font_size": 13,
+            "font_weight": "medium"
+        },
+        {
+            "fontStyle_uid": "sf-regular-13",
+            "font_name": "custom",
+            "font_size": 13,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "sf-medium-12",
+            "font_name": "custom",
+            "font_size": 12,
+            "font_weight": "medium"
+        },
+        {
+            "fontStyle_uid": "sf-regular-12",
+            "font_name": "custom",
+            "font_size": 12,
+            "font_weight": "regular"
+        },
+        {
+            "fontStyle_uid": "sf-regular-10",
+            "font_name": "custom",
+            "font_size": 10,
+            "font_weight": "regular"
+        },{
+            "fontStyle_uid": "sf-regular-8",
+            "font_name": "custom",
+            "font_size": 8,
+            "font_weight": "regular"
+        }
+    ]
+}
